@@ -1,0 +1,30 @@
+# Project Context
+
+This is a static website portfolio hosted on Vercel.
+
+## Project Type
+- **Static Site**: No build process required
+- **Hosting**: Vercel (static file serving)
+- **Framework**: None - pure HTML/CSS/JavaScript
+
+## Project Structure
+- `index.html` - Main portfolio homepage (served at `/`)
+- `scripts/dashboard.html` - Interactive dashboard (served at `/scripts/dashboard.html`)
+- `vercel.json` - Vercel deployment configuration
+
+## Key Technologies
+- **Visualization**: Chart.js, Leaflet.js (loaded via CDN)
+- **Styling**: Inline CSS in HTML files
+- **Data**: Hardcoded in JavaScript (no external data files needed for deployment)
+
+## Deployment Notes
+- All dependencies are loaded from CDNs (no npm packages needed for runtime)
+- Large data files are gitignored and not deployed
+- Dashboard data is embedded directly in the HTML/JS
+- Vercel auto-detects static sites and serves files from root directory
+
+## Development
+- No build step required
+- Edit HTML files directly
+- Test locally by opening HTML files in browser or using a simple HTTP server
+
