@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paris Boutique Fitness Trends Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+  <style>
+    /* Same styles as dashboard.html - copy from there */
+    /* For brevity, I'll include a loading state */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #05060a;
+      color: #7dd3ff;
+      font-size: 18px;
+    }
+    .loading::after {
+      content: '...';
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+    @keyframes dots {
+      0%, 20% { content: '.'; }
+      40% { content: '..'; }
+      60%, 100% { content: '...'; }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading">Loading dashboard data</div>
+  
+  <div id="dashboard" style="display: none;">
+    <!-- Dashboard content will be inserted here -->
+  </div>
+
+  <script>
+    // Option 1: Load from Vercel Blob
+    // const DATA_URL = 'https://[your-blob-url].public.blob.vercel-storage.com/studios_consolidated_boutique_v2.json';
+    
+    // Option 2: Load from GitHub (if you commit the file)
+    // const DATA_URL = 'https://raw.githubusercontent.com/[username]/[repo]/main/data/processed/studios_consolidated_boutique_v2.json';
+    
+    // Option 3: Load from local file (for development)
+    const DATA_URL = './data/processed/studios_consolidated_boutique_v2.json';
+
+    async function loadDashboard() {
+      try {
+        const response = await fetch(DATA_URL);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        
+        // Process data and render charts (same logic as dashboard.html)
+        // For now, just hide loading and show dashboard
+        document.querySelector('.loading').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+        
+        // Initialize all charts with the loaded data
+        initializeCharts(data);
+      } catch (error) {
+        console.error('Failed to load data:', error);
+        document.querySelector('.loading').textContent = 'Failed to load data. Please check the DATA_URL.';
+      }
+    }
+
+    function initializeCharts(data) {
+      // Copy all the chart initialization code from dashboard.html
+      // but use the loaded `data` instead of hardcoded values
+      // This would require refactoring the dashboard to process the data dynamically
+    }
+
+    // Load data on page load
+    loadDashboard();
+  </script>
+</body>
+</html>
+

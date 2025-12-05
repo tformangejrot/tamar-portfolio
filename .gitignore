@@ -1,0 +1,45 @@
+# Data files (too large for GitHub)
+data/raw/**/*.json
+data/processed/*.json
+
+# Keep reference files and category mappings
+!data/reference/
+
+# Node modules
+node_modules/
+.npm-cache/
+
+# Playwright browser binaries (VERY LARGE)
+.ms-playwright/
+.playwright/
+
+# Large root-level JSON files
+store.json
+studio_data.json
+web_search_page_response.json
+
+# Package lock (can be large)
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+cursor-docs/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp

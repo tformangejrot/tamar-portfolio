@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paris Boutique Fitness – New Studios by Modality</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: #05060a;
+      color: #f5f7ff;
+    }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      background: radial-gradient(circle at top, #0b1c3a 0, #05060a 60%);
+    }
+    h1 {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #7dd3ff;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    p.subtitle {
+      max-width: 640px;
+      color: #cbd5f5;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    .card {
+      width: 100%;
+      max-width: 900px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
+      border-radius: 18px;
+      box-shadow:
+        0 0 0 1px rgba(148, 163, 255, 0.12),
+        0 35px 80px rgba(15, 23, 42, 0.8);
+      padding: 24px 28px 28px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+    .card-header h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .card-header span {
+      font-size: 12px;
+      color: #9ca3ff;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .chart-container {
+      position: relative;
+      height: 450px;
+    }
+    .note {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #9ca3ff;
+    }
+    .stat-highlight {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      color: #7dd3ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Paris Boutique Fitness</h1>
+    <h2>What's opening now?</h2>
+    <p class="subtitle">
+      New boutique studios opened in the past 16 months by modality. 
+      <span class="stat-highlight">Pilates</span> dominates new openings (68% of all new studios), 
+      while <span class="stat-highlight">reformer pilates</span> shows the highest growth rate (27% of all reformer studios are new).
+    </p>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>New Studios by Modality (Last 16 Months)</h3>
+        <span>66 new studios · % of all new studios</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="newModalityChart"></canvas>
+      </div>
+      <p class="note">
+        Shows what percentage of all new studios (66 total) each modality represents.
+        Pilates leads with 68% of all new studios, followed by reformer pilates at 47%.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Growth Rate by Modality</h3>
+        <span>% of each modality that opened recently</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="growthRateChart"></canvas>
+      </div>
+      <p class="note">
+        Shows what portion of each modality's total studios opened in the past 16 months.
+        Reformer pilates shows the highest growth rate, with over 1 in 4 studios being new.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // New studios by modality (last 16 months)
+    const newModalities = [
+      { modality: 'pilates', count: 45, pctOfModality: 14.9 },
+      { modality: 'reformer-pilates', count: 31, pctOfModality: 27.0 },
+      { modality: 'strength-training', count: 24, pctOfModality: 10.5 },
+      { modality: 'yoga', count: 23, pctOfModality: 8.2 },
+      { modality: 'hiit-bootcamp', count: 19, pctOfModality: 9.7 },
+      { modality: 'low-impact-training', count: 13, pctOfModality: 29.5 },
+      { modality: 'stretching', count: 12, pctOfModality: 17.9 },
+      { modality: 'barre', count: 9, pctOfModality: 14.5 },
+      { modality: 'dance', count: 9, pctOfModality: 9.8 },
+      { modality: 'boxing', count: 7, pctOfModality: 8.9 },
+    ];
+
+    const totalNewStudios = 66;
+
+    const labels = newModalities.map(m => m.modality.replace(/-/g, ' '));
+    const counts = newModalities.map(m => m.count);
+    const pctsOfAllNew = newModalities.map(m => +((m.count / totalNewStudios) * 100).toFixed(1));
+    const pctsOfModality = newModalities.map(m => m.pctOfModality);
+
+    // Chart 1: % of all new studios
+    const ctx1 = document.getElementById('newModalityChart').getContext('2d');
+    const gradient1 = ctx1.createLinearGradient(0, 0, 600, 0);
+    gradient1.addColorStop(0, 'rgba(139, 92, 246, 0.9)');
+    gradient1.addColorStop(1, 'rgba(236, 72, 153, 0.9)');
+
+    new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          label: 'New Studios',
+          data: counts,
+          backgroundColor: gradient1,
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const i = context.dataIndex;
+                return ` ${counts[i]} new studios (${pctsOfAllNew[i]}% of all new studios)`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#e5e7ff',
+              font: { size: 11 }
+            },
+            grid: {
+              color: 'rgba(148, 163, 255, 0.15)',
+              drawBorder: false
+            }
+          },
+          y: {
+            ticks: {
+              color: '#cbd5ff',
+              font: { size: 11 }
+            },
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+
+    // Chart 2: Growth rate (% of modality total)
+    const ctx2 = document.getElementById('growthRateChart').getContext('2d');
+    const gradient2 = ctx2.createLinearGradient(0, 0, 600, 0);
+    gradient2.addColorStop(0, 'rgba(34, 197, 94, 0.9)');
+    gradient2.addColorStop(1, 'rgba(56, 189, 248, 0.9)');
+
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          label: 'Growth Rate',
+          data: pctsOfModality,
+          backgroundColor: gradient2,
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const i = context.dataIndex;
+                return ` ${pctsOfModality[i]}% of ${labels[i]} studios are new (${counts[i]} new studios)`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#e5e7ff',
+              font: { size: 11 },
+              callback: function(value) {
+                return value + '%';
+              }
+            },
+            grid: {
+              color: 'rgba(148, 163, 255, 0.15)',
+              drawBorder: false
+            }
+          },
+          y: {
+            ticks: {
+              color: '#cbd5ff',
+              font: { size: 11 }
+            },
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paris Boutique Fitness – Spatial Distribution</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: #05060a;
+      color: #f5f7ff;
+    }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      background: radial-gradient(circle at top, #0b1c3a 0, #05060a 60%);
+    }
+    h1 {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #7dd3ff;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    p.subtitle {
+      max-width: 640px;
+      color: #cbd5f5;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    .card {
+      width: 100%;
+      max-width: 900px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
+      border-radius: 18px;
+      box-shadow:
+        0 0 0 1px rgba(148, 163, 255, 0.12),
+        0 35px 80px rgba(15, 23, 42, 0.8);
+      padding: 24px 28px 28px;
+      margin-bottom: 24px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+    .card-header h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .card-header span {
+      font-size: 12px;
+      color: #9ca3ff;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .chart-container {
+      position: relative;
+      height: 500px;
+    }
+    .map-container {
+      position: relative;
+      height: 600px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 255, 0.2);
+    }
+    .note {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #9ca3ff;
+    }
+    /* Dark theme for Leaflet */
+    .leaflet-container {
+      background: #0f172a;
+    }
+    .leaflet-tile {
+      filter: brightness(0.4) invert(1) hue-rotate(200deg) saturate(0.3) brightness(1.1) contrast(1.2);
+    }
+    .leaflet-control {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 255, 0.2);
+      color: #f5f7ff;
+    }
+    .leaflet-control-zoom a {
+      color: #f5f7ff;
+      background: rgba(15, 23, 42, 0.9);
+    }
+    .leaflet-control-zoom a:hover {
+      background: rgba(56, 189, 248, 0.2);
+    }
+    .info {
+      background: rgba(15, 23, 42, 0.95);
+      padding: 12px;
+      border-radius: 8px;
+      color: #f5f7ff;
+      font-size: 12px;
+      border: 1px solid rgba(148, 163, 255, 0.2);
+    }
+    .info h4 {
+      margin: 0 0 8px 0;
+      color: #7dd3ff;
+      font-size: 14px;
+    }
+    .legend {
+      line-height: 1.8;
+    }
+    .legend i {
+      width: 12px;
+      height: 12px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.8;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Paris Boutique Fitness</h1>
+    <h2>Where are the studios?</h2>
+    <p class="subtitle">
+      Spatial distribution of boutique fitness studios across Paris arrondissements. 
+      <span style="color: #7dd3ff;">Paris 11</span> leads with 71 studios, followed by <span style="color: #7dd3ff;">Paris 17</span> (61) and <span style="color: #7dd3ff;">Paris 09</span> (43).
+      The heatmap shows studio density, with warmer colors indicating higher concentrations.
+    </p>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Studios by Arrondissement</h3>
+        <span>Paris arrondissements only</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="arrChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Paris Heatmap</h3>
+        <span>Studio density visualization</span>
+      </div>
+      <div class="map-container" id="map"></div>
+      <p class="note">
+        Heatmap shows studio density based on arrondissement data. Warmer colors (red/orange) indicate higher studio counts.
+        Studio locations are approximated based on arrondissement centers. For precise locations, individual studio coordinates would be needed.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Arrondissement data with approximate centers
+    const arrData = [
+      { arr: 'Paris 11', count: 71, center: [48.8610, 2.3794] },
+      { arr: 'Paris 17', count: 61, center: [48.8846, 2.3222] },
+      { arr: 'Paris 09', count: 43, center: [48.8750, 2.3394] },
+      { arr: 'Paris 16', count: 40, center: [48.8500, 2.2669] },
+      { arr: 'Paris 02', count: 35, center: [48.8698, 2.3412] },
+      { arr: 'Paris 15', count: 30, center: [48.8422, 2.2995] },
+      { arr: 'Paris 10', count: 30, center: [48.8720, 2.3600] },
+      { arr: 'Paris 04', count: 21, center: [48.8546, 2.3522] },
+      { arr: 'Paris 12', count: 21, center: [48.8447, 2.3732] },
+      { arr: 'Paris 19', count: 18, center: [48.8827, 2.3742] },
+      { arr: 'Paris 08', count: 18, center: [48.8750, 2.3181] },
+      { arr: 'Paris 06', count: 17, center: [48.8449, 2.3327] },
+      { arr: 'Paris 18', count: 16, center: [48.8932, 2.3484] },
+      { arr: 'Paris 03', count: 16, center: [48.8630, 2.3622] },
+      { arr: 'Paris 14', count: 14, center: [48.8331, 2.3264] },
+      { arr: 'Paris 20', count: 13, center: [48.8630, 2.3987] },
+      { arr: 'Paris 13', count: 13, center: [48.8322, 2.3561] },
+      { arr: 'Paris 07', count: 12, center: [48.8565, 2.3122] },
+      { arr: 'Paris 01', count: 12, center: [48.8606, 2.3376] },
+      { arr: 'Paris 05', count: 8, center: [48.8440, 2.3438] }
+    ];
+
+    const arrLabels = arrData.map(d => d.arr.replace('Paris ', ''));
+    const arrCounts = arrData.map(d => d.count);
+
+    // Bar chart
+    const ctx = document.getElementById('arrChart').getContext('2d');
+    const gradient = ctx.createLinearGradient(0, 0, 600, 0);
+    gradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
+    gradient.addColorStop(1, 'rgba(139, 92, 246, 0.9)');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: arrLabels,
+        datasets: [{
+          label: 'Studios',
+          data: arrCounts,
+          backgroundColor: gradient,
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return ` ${context.parsed.x} studios`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#e5e7ff',
+              font: { size: 11 }
+            },
+            grid: {
+              color: 'rgba(148, 163, 255, 0.15)',
+              drawBorder: false
+            }
+          },
+          y: {
+            ticks: {
+              color: '#cbd5ff',
+              font: { size: 11 }
+            },
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+
+    // Map with heatmap
+    const map = L.map('map', {
+      center: [48.8566, 2.3522],
+      zoom: 12,
+      zoomControl: true,
+      attributionControl: false
+    });
+
+    // Dark tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+
+    // Generate heatmap data points
+    // Create multiple points per arrondissement weighted by studio count
+    const heatmapPoints = [];
+    const maxCount = Math.max(...arrData.map(d => d.count));
+    
+    arrData.forEach(({ arr, count, center }) => {
+      const [lat, lng] = center;
+      const intensity = count / maxCount; // Normalize to 0-1
+      
+      // Create multiple points spread around the center to create density effect
+      const pointsPerStudio = 3;
+      for (let i = 0; i < count * pointsPerStudio; i++) {
+        // Spread points in a ~1km radius around center
+        const angle = (i / count) * Math.PI * 2;
+        const radius = (Math.random() * 0.008); // ~800m max radius
+        const offsetLat = Math.cos(angle) * radius;
+        const offsetLng = Math.sin(angle) * radius;
+        
+        heatmapPoints.push([
+          lat + offsetLat + (Math.random() - 0.5) * 0.003,
+          lng + offsetLng + (Math.random() - 0.5) * 0.003,
+          intensity * 0.8 // Weight by intensity
+        ]);
+      }
+    });
+
+    // Add heatmap layer
+    const heat = L.heatLayer(heatmapPoints, {
+      radius: 25,
+      blur: 20,
+      maxZoom: 17,
+      max: 1.0,
+      gradient: {
+        0.0: 'rgba(56, 189, 248, 0)',      // Blue (transparent)
+        0.2: 'rgba(56, 189, 248, 0.4)',    // Blue
+        0.4: 'rgba(139, 92, 246, 0.6)',    // Purple
+        0.6: 'rgba(236, 72, 153, 0.7)',    // Pink
+        0.8: 'rgba(239, 68, 68, 0.8)',     // Red
+        1.0: 'rgba(251, 146, 60, 1.0)'     // Orange (hottest)
+      }
+    }).addTo(map);
+
+    // Add circle markers for each arrondissement with count labels
+    arrData.forEach(({ arr, count, center }) => {
+      const [lat, lng] = center;
+      const radius = Math.sqrt(count) * 150; // Scale radius by count
+      const opacity = Math.min(0.6, 0.3 + (count / maxCount) * 0.3);
+      
+      L.circleMarker([lat, lng], {
+        radius: Math.min(12, 4 + (count / maxCount) * 8),
+        fillColor: '#7dd3ff',
+        color: '#3b82f6',
+        weight: 2,
+        opacity: 0.8,
+        fillOpacity: opacity
+      }).bindTooltip(`${arr.replace('Paris ', '')}: ${count} studios`, {
+        permanent: false,
+        direction: 'top',
+        className: 'custom-tooltip'
+      }).addTo(map);
+    });
+
+    // Add legend
+    const legend = L.control({ position: 'bottomright' });
+    legend.onAdd = function() {
+      const div = L.DomUtil.create('div', 'info legend');
+      div.innerHTML = `
+        <h4>Studio Density</h4>
+        <div class="legend">
+          <i style="background: rgba(251, 146, 60, 1.0);"></i> 60+ studios<br/>
+          <i style="background: rgba(239, 68, 68, 0.8);"></i> 40-59 studios<br/>
+          <i style="background: rgba(236, 72, 153, 0.7);"></i> 20-39 studios<br/>
+          <i style="background: rgba(139, 92, 246, 0.6);"></i> 10-19 studios<br/>
+          <i style="background: rgba(56, 189, 248, 0.4);"></i> &lt;10 studios
+        </div>
+      `;
+      return div;
+    };
+    legend.addTo(map);
+  </script>
+</body>
+</html>

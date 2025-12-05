@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paris Boutique Fitness – Reformer Pilates Growth</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: #05060a;
+      color: #f5f7ff;
+    }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      background: radial-gradient(circle at top, #0b1c3a 0, #05060a 60%);
+    }
+    h1 {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #7dd3ff;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    p.subtitle {
+      max-width: 640px;
+      color: #cbd5f5;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    .card {
+      width: 100%;
+      max-width: 900px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
+      border-radius: 18px;
+      box-shadow:
+        0 0 0 1px rgba(148, 163, 255, 0.12),
+        0 35px 80px rgba(15, 23, 42, 0.8);
+      padding: 24px 28px 28px;
+      margin-bottom: 24px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+    .card-header h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .card-header span {
+      font-size: 12px;
+      color: #9ca3ff;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .chart-container {
+      position: relative;
+      height: 400px;
+    }
+    .note {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #9ca3ff;
+    }
+    .stat-highlight {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      color: #7dd3ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Paris Boutique Fitness</h1>
+    <h2>The Reformer Pilates Boom</h2>
+    <p class="subtitle">
+      Reformer pilates has exploded in Paris, with <span class="stat-highlight">39 new studios</span> opening in 2024 alone. 
+      The trend shows no signs of slowing, with <span class="stat-highlight">17 more</span> already planned for 2025.
+    </p>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Reformer Pilates Studios by Opening Year</h3>
+        <span>115 studios total</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="reformerChart"></canvas>
+      </div>
+      <p class="note">
+        Note: Includes lagree studios (reformer-based method). Opening dates are estimated from location pages and domain registration data.
+        Some studios may have opened earlier than estimated.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Reformer pilates growth data
+    const reformerData = [
+      { year: 1992, count: 1 },
+      { year: 2000, count: 1 },
+      { year: 2004, count: 1 },
+      { year: 2008, count: 2 },
+      { year: 2012, count: 1 },
+      { year: 2015, count: 1 },
+      { year: 2016, count: 1 },
+      { year: 2017, count: 4 },
+      { year: 2018, count: 8 },
+      { year: 2019, count: 3 },
+      { year: 2020, count: 3 },
+      { year: 2021, count: 10 },
+      { year: 2023, count: 17 },
+      { year: 2024, count: 39 },
+      { year: 2025, count: 17 }
+    ];
+
+    const labels = reformerData.map(d => d.year.toString());
+    const counts = reformerData.map(d => d.count);
+
+    const ctx = document.getElementById('reformerChart').getContext('2d');
+    
+    // Create gradient for line
+    const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+    gradient.addColorStop(0, 'rgba(56, 189, 248, 0.4)');
+    gradient.addColorStop(1, 'rgba(56, 189, 248, 0.05)');
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [{
+          label: 'New Studios',
+          data: counts,
+          borderColor: 'rgba(56, 189, 248, 1)',
+          backgroundColor: gradient,
+          borderWidth: 3,
+          fill: true,
+          tension: 0.4,
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          pointBackgroundColor: 'rgba(56, 189, 248, 1)',
+          pointBorderColor: '#05060a',
+          pointBorderWidth: 2,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return ` ${context.parsed.y} new studio${context.parsed.y !== 1 ? 's' : ''}`;
+              }
+            },
+            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+            titleColor: '#f5f7ff',
+            bodyColor: '#cbd5f5',
+            borderColor: 'rgba(148, 163, 255, 0.3)',
+            borderWidth: 1
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#e5e7ff',
+              font: { size: 11 }
+            },
+            grid: {
+              color: 'rgba(148, 163, 255, 0.15)',
+              drawBorder: false
+            }
+          },
+          y: {
+            beginAtZero: true,
+            ticks: {
+              color: '#cbd5ff',
+              font: { size: 11 },
+              stepSize: 5
+            },
+            grid: {
+              color: 'rgba(148, 163, 255, 0.15)',
+              drawBorder: false
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+

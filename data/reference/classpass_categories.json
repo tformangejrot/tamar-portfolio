@@ -1,0 +1,761 @@
+[
+  {
+    "label": "Aerial Studios in Paris",
+    "short_label": "Aerial",
+    "slug": "aerial",
+    "classpass_url": "https://classpass.com/search/paris/aerial",
+    "search_terms": [
+      "Aerial Paris",
+      "Aerial studio Paris",
+      "Aerial class Paris"
+    ]
+  },
+  {
+    "label": "Aerial/Antigravity Yoga Studios in Paris",
+    "short_label": "Aerial/Antigravity Yoga",
+    "slug": "aerial-antigravity-yoga",
+    "classpass_url": "https://classpass.com/search/paris/aerial-antigravity-yoga",
+    "search_terms": [
+      "Aerial/Antigravity Yoga Paris",
+      "Aerial/Antigravity Yoga studio Paris",
+      "Aerial/Antigravity Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Ashtanga Yoga Studios in Paris",
+    "short_label": "Ashtanga Yoga",
+    "slug": "ashtanga-yoga",
+    "classpass_url": "https://classpass.com/search/paris/ashtanga-yoga",
+    "search_terms": [
+      "Ashtanga Yoga Paris",
+      "Ashtanga Yoga studio Paris",
+      "Ashtanga Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Ballet Dance Studios in Paris",
+    "short_label": "Ballet Dance",
+    "slug": "ballet-dance",
+    "classpass_url": "https://classpass.com/search/paris/ballet-dance",
+    "search_terms": [
+      "Ballet Dance Paris",
+      "Ballet Dance studio Paris",
+      "Ballet Dance class Paris"
+    ]
+  },
+  {
+    "label": "Ballroom Dance Studios in Paris",
+    "short_label": "Ballroom Dance",
+    "slug": "ballroom-dance",
+    "classpass_url": "https://classpass.com/search/paris/ballroom-dance",
+    "search_terms": [
+      "Ballroom Dance Paris",
+      "Ballroom Dance studio Paris",
+      "Ballroom Dance class Paris"
+    ]
+  },
+  {
+    "label": "Barre Studios in Paris",
+    "short_label": "Barre",
+    "slug": "barre",
+    "classpass_url": "https://classpass.com/search/paris/barre",
+    "search_terms": [
+      "Barre Paris",
+      "Barre studio Paris",
+      "Barre class Paris"
+    ]
+  },
+  {
+    "label": "Belly Dance Studios in Paris",
+    "short_label": "Belly Dance",
+    "slug": "belly-dance",
+    "classpass_url": "https://classpass.com/search/paris/belly-dance",
+    "search_terms": [
+      "Belly Dance Paris",
+      "Belly Dance studio Paris",
+      "Belly Dance class Paris"
+    ]
+  },
+  {
+    "label": "Bollywood Dance Studios in Paris",
+    "short_label": "Bollywood Dance",
+    "slug": "bollywood-dance",
+    "classpass_url": "https://classpass.com/search/paris/bollywood-dance",
+    "search_terms": [
+      "Bollywood Dance Paris",
+      "Bollywood Dance studio Paris",
+      "Bollywood Dance class Paris"
+    ]
+  },
+  {
+    "label": "Bootcamp Studios in Paris",
+    "short_label": "Bootcamp",
+    "slug": "bootcamp",
+    "classpass_url": "https://classpass.com/search/paris/bootcamp",
+    "search_terms": [
+      "Bootcamp Paris",
+      "Bootcamp studio Paris",
+      "Bootcamp class Paris"
+    ]
+  },
+  {
+    "label": "Boxing Studios in Paris",
+    "short_label": "Boxing",
+    "slug": "boxing",
+    "classpass_url": "https://classpass.com/search/paris/boxing",
+    "search_terms": [
+      "Boxing Paris",
+      "Boxing studio Paris",
+      "Boxing class Paris"
+    ]
+  },
+  {
+    "label": "Cardio Dance Studios in Paris",
+    "short_label": "Cardio Dance",
+    "slug": "cardio-dance",
+    "classpass_url": "https://classpass.com/search/paris/cardio-dance",
+    "search_terms": [
+      "Cardio Dance Paris",
+      "Cardio Dance studio Paris",
+      "Cardio Dance class Paris"
+    ]
+  },
+  {
+    "label": "Circuit Training Studios in Paris",
+    "short_label": "Circuit Training",
+    "slug": "circuit-training",
+    "classpass_url": "https://classpass.com/search/paris/circuit-training",
+    "search_terms": [
+      "Circuit Training Paris",
+      "Circuit Training studio Paris",
+      "Circuit Training class Paris"
+    ]
+  },
+  {
+    "label": "Contemporary Dance Studios in Paris",
+    "short_label": "Contemporary Dance",
+    "slug": "contemporary-dance",
+    "classpass_url": "https://classpass.com/search/paris/contemporary-dance",
+    "search_terms": [
+      "Contemporary Dance Paris",
+      "Contemporary Dance studio Paris",
+      "Contemporary Dance class Paris"
+    ]
+  },
+  {
+    "label": "CrossFit Studios in Paris",
+    "short_label": "CrossFit",
+    "slug": "crossfit",
+    "classpass_url": "https://classpass.com/search/paris/crossfit",
+    "search_terms": [
+      "CrossFit Paris",
+      "CrossFit studio Paris",
+      "CrossFit class Paris"
+    ]
+  },
+  {
+    "label": "Cycling Studios in Paris",
+    "short_label": "Cycling",
+    "slug": "cycling",
+    "classpass_url": "https://classpass.com/search/paris/cycling",
+    "search_terms": [
+      "Cycling Paris",
+      "Cycling studio Paris",
+      "Cycling class Paris"
+    ]
+  },
+  {
+    "label": "Dance Studios in Paris",
+    "short_label": "Dance",
+    "slug": "dance",
+    "classpass_url": "https://classpass.com/search/paris/dance",
+    "search_terms": [
+      "Dance Paris",
+      "Dance studio Paris",
+      "Dance class Paris"
+    ]
+  },
+  {
+    "label": "Electrical muscle stimulation Studios in Paris",
+    "short_label": "Electrical muscle stimulation",
+    "slug": "electrical-muscle-stimulation",
+    "classpass_url": "https://classpass.com/search/paris/electrical-muscle-stimulation",
+    "search_terms": [
+      "Electrical muscle stimulation Paris",
+      "Electrical muscle stimulation studio Paris",
+      "Electrical muscle stimulation class Paris"
+    ]
+  },
+  {
+    "label": "Fitness Studios in Paris",
+    "short_label": "Fitness",
+    "slug": "fitness",
+    "classpass_url": "https://classpass.com/search/paris/fitness",
+    "search_terms": [
+      "Fitness Paris",
+      "Fitness studio Paris",
+      "Fitness class Paris"
+    ]
+  },
+  {
+    "label": "Gym Time Studios in Paris",
+    "short_label": "Gym Time",
+    "slug": "gym-time",
+    "classpass_url": "https://classpass.com/search/paris/gym-time",
+    "search_terms": [
+      "Gym Time Paris",
+      "Gym Time studio Paris",
+      "Gym Time class Paris"
+    ]
+  },
+  {
+    "label": "Hatha Yoga Studios in Paris",
+    "short_label": "Hatha Yoga",
+    "slug": "hatha-yoga",
+    "classpass_url": "https://classpass.com/search/paris/hatha-yoga",
+    "search_terms": [
+      "Hatha Yoga Paris",
+      "Hatha Yoga studio Paris",
+      "Hatha Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Heavy bag Studios in Paris",
+    "short_label": "Heavy bag",
+    "slug": "heavy-bag",
+    "classpass_url": "https://classpass.com/search/paris/heavy-bag",
+    "search_terms": [
+      "Heavy bag Paris",
+      "Heavy bag studio Paris",
+      "Heavy bag class Paris"
+    ]
+  },
+  {
+    "label": "High-intensity Pilates Studios in Paris",
+    "short_label": "High-intensity Pilates",
+    "slug": "high-intensity-pilates",
+    "classpass_url": "https://classpass.com/search/paris/high-intensity-pilates",
+    "search_terms": [
+      "High-intensity Pilates Paris",
+      "High-intensity Pilates studio Paris",
+      "High-intensity Pilates class Paris"
+    ]
+  },
+  {
+    "label": "HIIT Studios in Paris",
+    "short_label": "HIIT",
+    "slug": "hiit",
+    "classpass_url": "https://classpass.com/search/paris/hiit",
+    "search_terms": [
+      "HIIT Paris",
+      "HIIT studio Paris",
+      "HIIT class Paris"
+    ]
+  },
+  {
+    "label": "Hip Hop Dance Studios in Paris",
+    "short_label": "Hip Hop Dance",
+    "slug": "hip-hop-dance",
+    "classpass_url": "https://classpass.com/search/paris/hip-hop-dance",
+    "search_terms": [
+      "Hip Hop Dance Paris",
+      "Hip Hop Dance studio Paris",
+      "Hip Hop Dance class Paris"
+    ]
+  },
+  {
+    "label": "Hot Yoga Studios in Paris",
+    "short_label": "Hot Yoga",
+    "slug": "hot-yoga",
+    "classpass_url": "https://classpass.com/search/paris/hot-yoga",
+    "search_terms": [
+      "Hot Yoga Paris",
+      "Hot Yoga studio Paris",
+      "Hot Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Indoor Cycling Studios in Paris",
+    "short_label": "Indoor Cycling",
+    "slug": "indoor-cycling",
+    "classpass_url": "https://classpass.com/search/paris/indoor-cycling",
+    "search_terms": [
+      "Indoor Cycling Paris",
+      "Indoor Cycling studio Paris",
+      "Indoor Cycling class Paris"
+    ]
+  },
+  {
+    "label": "Iyengar Yoga Studios in Paris",
+    "short_label": "Iyengar Yoga",
+    "slug": "iyengar-yoga",
+    "classpass_url": "https://classpass.com/search/paris/iyengar-yoga",
+    "search_terms": [
+      "Iyengar Yoga Paris",
+      "Iyengar Yoga studio Paris",
+      "Iyengar Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Jazz Dance Studios in Paris",
+    "short_label": "Jazz Dance",
+    "slug": "jazz-dance",
+    "classpass_url": "https://classpass.com/search/paris/jazz-dance",
+    "search_terms": [
+      "Jazz Dance Paris",
+      "Jazz Dance studio Paris",
+      "Jazz Dance class Paris"
+    ]
+  },
+  {
+    "label": "Jiu Jitsu Studios in Paris",
+    "short_label": "Jiu Jitsu",
+    "slug": "jiu-jitsu",
+    "classpass_url": "https://classpass.com/search/paris/jiu-jitsu",
+    "search_terms": [
+      "Jiu Jitsu Paris",
+      "Jiu Jitsu studio Paris",
+      "Jiu Jitsu class Paris"
+    ]
+  },
+  {
+    "label": "Jivamukti Yoga Studios in Paris",
+    "short_label": "Jivamukti Yoga",
+    "slug": "jivamukti-yoga",
+    "classpass_url": "https://classpass.com/search/paris/jivamukti-yoga",
+    "search_terms": [
+      "Jivamukti Yoga Paris",
+      "Jivamukti Yoga studio Paris",
+      "Jivamukti Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Karate Studios in Paris",
+    "short_label": "Karate",
+    "slug": "karate",
+    "classpass_url": "https://classpass.com/search/paris/karate",
+    "search_terms": [
+      "Karate Paris",
+      "Karate studio Paris",
+      "Karate class Paris"
+    ]
+  },
+  {
+    "label": "Kickboxing Studios in Paris",
+    "short_label": "Kickboxing",
+    "slug": "kickboxing",
+    "classpass_url": "https://classpass.com/search/paris/kickboxing",
+    "search_terms": [
+      "Kickboxing Paris",
+      "Kickboxing studio Paris",
+      "Kickboxing class Paris"
+    ]
+  },
+  {
+    "label": "Krav Maga Studios in Paris",
+    "short_label": "Krav Maga",
+    "slug": "krav-maga",
+    "classpass_url": "https://classpass.com/search/paris/krav-maga",
+    "search_terms": [
+      "Krav Maga Paris",
+      "Krav Maga studio Paris",
+      "Krav Maga class Paris"
+    ]
+  },
+  {
+    "label": "Kundalini Yoga Studios in Paris",
+    "short_label": "Kundalini Yoga",
+    "slug": "kundalini-yoga",
+    "classpass_url": "https://classpass.com/search/paris/kundalini-yoga",
+    "search_terms": [
+      "Kundalini Yoga Paris",
+      "Kundalini Yoga studio Paris",
+      "Kundalini Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Lagree Studios in Paris",
+    "short_label": "Lagree",
+    "slug": "lagree",
+    "classpass_url": "https://classpass.com/search/paris/lagree",
+    "search_terms": [
+      "Lagree Paris",
+      "Lagree studio Paris",
+      "Lagree class Paris"
+    ]
+  },
+  {
+    "label": "Latin Dance Studios in Paris",
+    "short_label": "Latin Dance",
+    "slug": "latin-dance",
+    "classpass_url": "https://classpass.com/search/paris/latin-dance",
+    "search_terms": [
+      "Latin Dance Paris",
+      "Latin Dance studio Paris",
+      "Latin Dance class Paris"
+    ]
+  },
+  {
+    "label": "Low-impact Training Studios in Paris",
+    "short_label": "Low-impact Training",
+    "slug": "low-impact-training",
+    "classpass_url": "https://classpass.com/search/paris/low-impact-training",
+    "search_terms": [
+      "Low-impact Training Paris",
+      "Low-impact Training studio Paris",
+      "Low-impact Training class Paris"
+    ]
+  },
+  {
+    "label": "Martial Arts Studios in Paris",
+    "short_label": "Martial Arts",
+    "slug": "martial-arts",
+    "classpass_url": "https://classpass.com/search/paris/martial-arts",
+    "search_terms": [
+      "Martial Arts Paris",
+      "Martial Arts studio Paris",
+      "Martial Arts class Paris"
+    ]
+  },
+  {
+    "label": "Mat Pilates Studios in Paris",
+    "short_label": "Mat Pilates",
+    "slug": "mat-pilates",
+    "classpass_url": "https://classpass.com/search/paris/mat-pilates",
+    "search_terms": [
+      "Mat Pilates Paris",
+      "Mat Pilates studio Paris",
+      "Mat Pilates class Paris"
+    ]
+  },
+  {
+    "label": "Mixed Martial Arts Studios in Paris",
+    "short_label": "Mixed Martial Arts",
+    "slug": "mixed-martial-arts",
+    "classpass_url": "https://classpass.com/search/paris/mixed-martial-arts",
+    "search_terms": [
+      "Mixed Martial Arts Paris",
+      "Mixed Martial Arts studio Paris",
+      "Mixed Martial Arts class Paris"
+    ]
+  },
+  {
+    "label": "Modern Dance Studios in Paris",
+    "short_label": "Modern Dance",
+    "slug": "modern-dance",
+    "classpass_url": "https://classpass.com/search/paris/modern-dance",
+    "search_terms": [
+      "Modern Dance Paris",
+      "Modern Dance studio Paris",
+      "Modern Dance class Paris"
+    ]
+  },
+  {
+    "label": "Muay Thai Studios in Paris",
+    "short_label": "Muay Thai",
+    "slug": "muay-thai",
+    "classpass_url": "https://classpass.com/search/paris/muay-thai",
+    "search_terms": [
+      "Muay Thai Paris",
+      "Muay Thai studio Paris",
+      "Muay Thai class Paris"
+    ]
+  },
+  {
+    "label": "Outdoors Studios in Paris",
+    "short_label": "Outdoors",
+    "slug": "outdoors",
+    "classpass_url": "https://classpass.com/search/paris/outdoors",
+    "search_terms": [
+      "Outdoors Paris",
+      "Outdoors studio Paris",
+      "Outdoors class Paris"
+    ]
+  },
+  {
+    "label": "Personal Training Studios in Paris",
+    "short_label": "Personal Training",
+    "slug": "personal-training",
+    "classpass_url": "https://classpass.com/search/paris/personal-training",
+    "search_terms": [
+      "Personal Training Paris",
+      "Personal Training studio Paris",
+      "Personal Training class Paris"
+    ]
+  },
+  {
+    "label": "Pilates Studios in Paris",
+    "short_label": "Pilates",
+    "slug": "pilates",
+    "classpass_url": "https://classpass.com/search/paris/pilates",
+    "search_terms": [
+      "Pilates Paris",
+      "Pilates studio Paris",
+      "Pilates class Paris"
+    ]
+  },
+  {
+    "label": "Pole Dance Studios in Paris",
+    "short_label": "Pole Dance",
+    "slug": "pole-dance",
+    "classpass_url": "https://classpass.com/search/paris/pole-dance",
+    "search_terms": [
+      "Pole Dance Paris",
+      "Pole Dance studio Paris",
+      "Pole Dance class Paris"
+    ]
+  },
+  {
+    "label": "Postnatal Studios in Paris",
+    "short_label": "Postnatal",
+    "slug": "postnatal",
+    "classpass_url": "https://classpass.com/search/paris/postnatal",
+    "search_terms": [
+      "Postnatal Paris",
+      "Postnatal studio Paris",
+      "Postnatal class Paris"
+    ]
+  },
+  {
+    "label": "Power Yoga Studios in Paris",
+    "short_label": "Power Yoga",
+    "slug": "power-yoga",
+    "classpass_url": "https://classpass.com/search/paris/power-yoga",
+    "search_terms": [
+      "Power Yoga Paris",
+      "Power Yoga studio Paris",
+      "Power Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Prenatal Studios in Paris",
+    "short_label": "Prenatal",
+    "slug": "prenatal",
+    "classpass_url": "https://classpass.com/search/paris/prenatal",
+    "search_terms": [
+      "Prenatal Paris",
+      "Prenatal studio Paris",
+      "Prenatal class Paris"
+    ]
+  },
+  {
+    "label": "Prenatal Yoga Studios in Paris",
+    "short_label": "Prenatal Yoga",
+    "slug": "prenatal-yoga",
+    "classpass_url": "https://classpass.com/search/paris/prenatal-yoga",
+    "search_terms": [
+      "Prenatal Yoga Paris",
+      "Prenatal Yoga studio Paris",
+      "Prenatal Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Qi Gong Studios in Paris",
+    "short_label": "Qi Gong",
+    "slug": "qi-gong",
+    "classpass_url": "https://classpass.com/search/paris/qi-gong",
+    "search_terms": [
+      "Qi Gong Paris",
+      "Qi Gong studio Paris",
+      "Qi Gong class Paris"
+    ]
+  },
+  {
+    "label": "Reformer Pilates Studios in Paris",
+    "short_label": "Reformer Pilates",
+    "slug": "reformer-pilates",
+    "classpass_url": "https://classpass.com/search/paris/reformer-pilates",
+    "search_terms": [
+      "Reformer Pilates Paris",
+      "Reformer Pilates studio Paris",
+      "Reformer Pilates class Paris"
+    ]
+  },
+  {
+    "label": "Restorative Yoga Studios in Paris",
+    "short_label": "Restorative Yoga",
+    "slug": "restorative-yoga",
+    "classpass_url": "https://classpass.com/search/paris/restorative-yoga",
+    "search_terms": [
+      "Restorative Yoga Paris",
+      "Restorative Yoga studio Paris",
+      "Restorative Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Running Studios in Paris",
+    "short_label": "Running",
+    "slug": "running",
+    "classpass_url": "https://classpass.com/search/paris/running",
+    "search_terms": [
+      "Running Paris",
+      "Running studio Paris",
+      "Running class Paris"
+    ]
+  },
+  {
+    "label": "Salsa Dance Studios in Paris",
+    "short_label": "Salsa Dance",
+    "slug": "salsa-dance",
+    "classpass_url": "https://classpass.com/search/paris/salsa-dance",
+    "search_terms": [
+      "Salsa Dance Paris",
+      "Salsa Dance studio Paris",
+      "Salsa Dance class Paris"
+    ]
+  },
+  {
+    "label": "Sculpt Studios in Paris",
+    "short_label": "Sculpt",
+    "slug": "sculpt",
+    "classpass_url": "https://classpass.com/search/paris/sculpt",
+    "search_terms": [
+      "Sculpt Paris",
+      "Sculpt studio Paris",
+      "Sculpt class Paris"
+    ]
+  },
+  {
+    "label": "Shadowboxing Studios in Paris",
+    "short_label": "Shadowboxing",
+    "slug": "shadowboxing",
+    "classpass_url": "https://classpass.com/search/paris/shadowboxing",
+    "search_terms": [
+      "Shadowboxing Paris",
+      "Shadowboxing studio Paris",
+      "Shadowboxing class Paris"
+    ]
+  },
+  {
+    "label": "Strength Training Studios in Paris",
+    "short_label": "Strength Training",
+    "slug": "strength-training",
+    "classpass_url": "https://classpass.com/search/paris/strength-training",
+    "search_terms": [
+      "Strength Training Paris",
+      "Strength Training studio Paris",
+      "Strength Training class Paris"
+    ]
+  },
+  {
+    "label": "Stretching Studios in Paris",
+    "short_label": "Stretching",
+    "slug": "stretching",
+    "classpass_url": "https://classpass.com/search/paris/stretching",
+    "search_terms": [
+      "Stretching Paris",
+      "Stretching studio Paris",
+      "Stretching class Paris"
+    ]
+  },
+  {
+    "label": "Taekwondo Studios in Paris",
+    "short_label": "Taekwondo",
+    "slug": "taekwondo",
+    "classpass_url": "https://classpass.com/search/paris/taekwondo",
+    "search_terms": [
+      "Taekwondo Paris",
+      "Taekwondo studio Paris",
+      "Taekwondo class Paris"
+    ]
+  },
+  {
+    "label": "Tai Chi Studios in Paris",
+    "short_label": "Tai Chi",
+    "slug": "tai-chi",
+    "classpass_url": "https://classpass.com/search/paris/tai-chi",
+    "search_terms": [
+      "Tai Chi Paris",
+      "Tai Chi studio Paris",
+      "Tai Chi class Paris"
+    ]
+  },
+  {
+    "label": "Trampoline Studios in Paris",
+    "short_label": "Trampoline",
+    "slug": "trampoline",
+    "classpass_url": "https://classpass.com/search/paris/trampoline",
+    "search_terms": [
+      "Trampoline Paris",
+      "Trampoline studio Paris",
+      "Trampoline class Paris"
+    ]
+  },
+  {
+    "label": "TRX Studios in Paris",
+    "short_label": "TRX",
+    "slug": "trx",
+    "classpass_url": "https://classpass.com/search/paris/trx",
+    "search_terms": [
+      "TRX Paris",
+      "TRX studio Paris",
+      "TRX class Paris"
+    ]
+  },
+  {
+    "label": "Vinyasa Yoga Studios in Paris",
+    "short_label": "Vinyasa Yoga",
+    "slug": "vinyasa-yoga",
+    "classpass_url": "https://classpass.com/search/paris/vinyasa-yoga",
+    "search_terms": [
+      "Vinyasa Yoga Paris",
+      "Vinyasa Yoga studio Paris",
+      "Vinyasa Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Weightlifting Studios in Paris",
+    "short_label": "Weightlifting",
+    "slug": "weightlifting",
+    "classpass_url": "https://classpass.com/search/paris/weightlifting",
+    "search_terms": [
+      "Weightlifting Paris",
+      "Weightlifting studio Paris",
+      "Weightlifting class Paris"
+    ]
+  },
+  {
+    "label": "Yin Yoga Studios in Paris",
+    "short_label": "Yin Yoga",
+    "slug": "yin-yoga",
+    "classpass_url": "https://classpass.com/search/paris/yin-yoga",
+    "search_terms": [
+      "Yin Yoga Paris",
+      "Yin Yoga studio Paris",
+      "Yin Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Yoga Studios in Paris",
+    "short_label": "Yoga",
+    "slug": "yoga",
+    "classpass_url": "https://classpass.com/search/paris/yoga",
+    "search_terms": [
+      "Yoga Paris",
+      "Yoga studio Paris",
+      "Yoga class Paris"
+    ]
+  },
+  {
+    "label": "Yoga Nidra Studios in Paris",
+    "short_label": "Yoga Nidra",
+    "slug": "yoga-nidra",
+    "classpass_url": "https://classpass.com/search/paris/yoga-nidra",
+    "search_terms": [
+      "Yoga Nidra Paris",
+      "Yoga Nidra studio Paris",
+      "Yoga Nidra class Paris"
+    ]
+  },
+  {
+    "label": "Zumba Dance Studios in Paris",
+    "short_label": "Zumba Dance",
+    "slug": "zumba-dance",
+    "classpass_url": "https://classpass.com/search/paris/zumba-dance",
+    "search_terms": [
+      "Zumba Dance Paris",
+      "Zumba Dance studio Paris",
+      "Zumba Dance class Paris"
+    ]
+  }
+]

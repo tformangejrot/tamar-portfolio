@@ -1,0 +1,132 @@
+{
+  "mapping": {
+    "yoga": [
+      "yoga",
+      "vinyasa-yoga",
+      "hatha-yoga",
+      "ashtanga-yoga",
+      "power-yoga",
+      "yin-yoga",
+      "hot-yoga",
+      "restorative-yoga",
+      "yoga-nidra",
+      "iyengar-yoga",
+      "jivamukti-yoga",
+      "kundalini-yoga",
+      "prenatal-yoga"
+    ],
+    "pilates": [
+      "pilates",
+      "mat-pilates",
+      "high-intensity-pilates"
+    ],
+    "reformer-pilates": [
+      "reformer-pilates",
+      "lagree"
+    ],
+    "hiit-bootcamp": [
+      "hiit",
+      "bootcamp",
+      "crossfit"
+    ],
+    "dance": [
+      "dance",
+      "ballet-dance",
+      "ballroom-dance",
+      "belly-dance",
+      "bollywood-dance",
+      "cardio-dance",
+      "contemporary-dance",
+      "hip-hop-dance",
+      "jazz-dance",
+      "latin-dance",
+      "modern-dance",
+      "salsa-dance",
+      "zumba-dance"
+    ],
+    "cycling": [
+      "cycling",
+      "indoor-cycling"
+    ],
+    "boxing": [
+      "boxing",
+      "shadowboxing",
+      "heavy-bag"
+    ],
+    "martial-arts": [
+      "martial-arts",
+      "mixed-martial-arts",
+      "kickboxing",
+      "krav-maga",
+      "muay-thai",
+      "karate",
+      "jiu-jitsu",
+      "taekwondo"
+    ],
+    "strength-training": [
+      "strength-training",
+      "weightlifting",
+      "trx",
+      "circuit-training",
+      "sculpt"
+    ],
+    "aerial": [
+      "aerial",
+      "aerial-antigravity-yoga",
+      "pole-dance"
+    ],
+    "mind-body": [
+      "qi-gong",
+      "tai-chi"
+    ],
+    "prenatal-postnatal": [
+      "prenatal",
+      "postnatal"
+    ],
+    "barre": [
+      "barre"
+    ],
+    "running": [
+      "running"
+    ],
+    "electrical-muscle-stimulation": [
+      "electrical-muscle-stimulation"
+    ],
+    "personal-training": [
+      "personal-training"
+    ],
+    "outdoors": [
+      "outdoors"
+    ],
+    "trampoline": [
+      "trampoline"
+    ],
+    "stretching": [
+      "stretching"
+    ],
+    "low-impact-training": [
+      "low-impact-training"
+    ]
+  },
+  "exclude": [
+    "fitness",
+    "gym-time"
+  ],
+  "notes": {
+    "yoga": "All yoga variants consolidated into single 'yoga' category",
+    "pilates": "Standard pilates variants (mat, high-intensity) consolidated, but reformer-pilates kept separate due to popularity",
+    "reformer-pilates": "Reformer pilates and lagree consolidated (lagree is reformer-based)",
+    "hiit-bootcamp": "HIIT, bootcamp, and crossfit combined",
+    "dance": "All dance variants consolidated",
+    "cycling": "Indoor and outdoor cycling consolidated",
+    "boxing": "Boxing, shadowboxing, and heavy-bag consolidated",
+    "martial-arts": "Martial arts variants (excluding boxing) consolidated",
+    "strength-training": "Strength, weightlifting, TRX, circuit, and sculpt consolidated",
+    "aerial": "Aerial and aerial-antigravity-yoga consolidated",
+    "mind-body": "Qi-gong and tai-chi consolidated",
+    "prenatal-postnatal": "Prenatal and postnatal consolidated (prenatal-yoga goes to yoga)",
+    "fitness": "Excluded - no studios are only fitness",
+    "gym-time": "Excluded - already filtered in boutique file"
+  }
+}
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paris Boutique Fitness – Studios by Number of Locations</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: #05060a;
+      color: #f5f7ff;
+    }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      background: radial-gradient(circle at top, #0b1c3a 0, #05060a 60%);
+    }
+    h1 {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #7dd3ff;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    p.subtitle {
+      max-width: 640px;
+      color: #cbd5f5;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    .card {
+      width: 100%;
+      max-width: 900px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
+      border-radius: 18px;
+      box-shadow:
+        0 0 0 1px rgba(148, 163, 255, 0.12),
+        0 35px 80px rgba(15, 23, 42, 0.8);
+      padding: 24px 28px 28px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+    .card-header h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .card-header span {
+      font-size: 12px;
+      color: #9ca3ff;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .chart-container {
+      position: relative;
+      height: 400px;
+    }
+    .note {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #9ca3ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Paris Boutique Fitness</h1>
+    <h2>Single Studios vs. Chains</h2>
+    <p class="subtitle">
+      Distribution of studio brands by number of locations. The vast majority of boutique fitness brands operate 
+      as single-location studios, with only a handful of chains expanding beyond 5 locations.
+    </p>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Studio Brands by Number of Locations</h3>
+        <span>396 unique brands · 644 total locations</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="locationChart"></canvas>
+      </div>
+      <p class="note">
+        Studios are grouped by domain (or name if no domain). Most boutique fitness brands remain single-location operations, 
+        reflecting the personalized, neighborhood-focused nature of the industry.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Studios by number of locations
+    const locationData = [
+      { locations: 1, studioBrands: 311 },
+      { locations: 2, studioBrands: 49 },
+      { locations: 3, studioBrands: 15 },
+      { locations: 4, studioBrands: 5 },
+      { locations: 5, studioBrands: 5 },
+      { locations: 6, studioBrands: 3 },
+      { locations: 7, studioBrands: 2 },
+      { locations: 8, studioBrands: 2 },
+      { locations: 9, studioBrands: 1 },
+      { locations: 12, studioBrands: 1 },
+      { locations: 17, studioBrands: 2 },
+      { locations: 19, studioBrands: 1 },
+      { locations: 23, studioBrands: 1 }
+    ];
+
+    const labels = locationData.map(d => d.locations === 1 ? '1 location' : `${d.locations} locations`);
+    const brands = locationData.map(d => d.studioBrands);
+
+    const ctx = document.getElementById('locationChart').getContext('2d');
+    const gradient = ctx.createLinearGradient(0, 0, 600, 0);
+    gradient.addColorStop(0, 'rgba(34, 197, 94, 0.9)');
+    gradient.addColorStop(1, 'rgba(59, 130, 246, 0.9)');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          label: 'Studio Brands',
+          data: brands,
+          backgroundColor: gradient,
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return ` ${context.parsed.x} studio brand${context.parsed.x !== 1 ? 's' : ''}`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#e5e7ff',
+              font: { size: 11 }
+            },
+            grid: {
+              color: 'rgba(148, 163, 255, 0.15)',
+              drawBorder: false
+            }
+          },
+          y: {
+            ticks: {
+              color: '#cbd5ff',
+              font: { size: 11 }
+            },
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+

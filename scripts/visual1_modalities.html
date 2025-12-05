@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paris Boutique Fitness – Modality Mix</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: #05060a;
+      color: #f5f7ff;
+    }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      background: radial-gradient(circle at top, #0b1c3a 0, #05060a 60%);
+    }
+    h1 {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #7dd3ff;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    p.subtitle {
+      max-width: 640px;
+      color: #cbd5f5;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    .card {
+      width: 100%;
+      max-width: 900px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
+      border-radius: 18px;
+      box-shadow:
+        0 0 0 1px rgba(148, 163, 255, 0.12),
+        0 35px 80px rgba(15, 23, 42, 0.8);
+      padding: 24px 28px 28px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+    .card-header h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .card-header span {
+      font-size: 12px;
+      color: #9ca3ff;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .chart-container {
+      position: relative;
+      height: 500px;
+    }
+    .note {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #9ca3ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Paris Boutique Fitness</h1>
+    <h2>What are people training for?</h2>
+    <p class="subtitle">
+      Distribution of boutique studios in Paris by primary modalities – each location counts once per category.
+      Pilates and yoga dominate the landscape, with reformer pilates showing explosive growth.
+    </p>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Studios by modality</h3>
+        <span>Top 15 modalities · 644 studios total</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="modalityChart"></canvas>
+      </div>
+      <p class="note">
+        Caveats: Studios can appear in multiple modalities; counts are locations, not unique brands.
+        Categories have been consolidated (e.g., all yoga variants → "yoga", lagree → "reformer-pilates").
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Top 15 modalities (consolidated categories)
+    const modalities = [
+      { modality: 'pilates', count: 303, pct: 47.0 },
+      { modality: 'yoga', count: 279, pct: 43.3 },
+      { modality: 'strength-training', count: 228, pct: 35.4 },
+      { modality: 'hiit-bootcamp', count: 195, pct: 30.3 },
+      { modality: 'reformer-pilates', count: 115, pct: 17.9 },
+      { modality: 'dance', count: 92, pct: 14.3 },
+      { modality: 'boxing', count: 79, pct: 12.3 },
+      { modality: 'stretching', count: 67, pct: 10.4 },
+      { modality: 'cycling', count: 62, pct: 9.6 },
+      { modality: 'barre', count: 62, pct: 9.6 },
+      { modality: 'prenatal-postnatal', count: 48, pct: 7.5 },
+      { modality: 'low-impact-training', count: 44, pct: 6.8 },
+      { modality: 'martial-arts', count: 41, pct: 6.4 },
+      { modality: 'running', count: 32, pct: 5.0 },
+      { modality: 'electrical-muscle-stimulation', count: 27, pct: 4.2 },
+    ];
+
+    const labels = modalities.map(m => m.modality.replace(/-/g, ' '));
+    const counts = modalities.map(m => m.count);
+    const pcts = modalities.map(m => m.pct);
+
+    const ctx = document.getElementById('modalityChart').getContext('2d');
+    const gradient = ctx.createLinearGradient(0, 0, 600, 0);
+    gradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
+    gradient.addColorStop(1, 'rgba(59, 130, 246, 0.9)');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          label: 'Studios',
+          data: counts,
+          backgroundColor: gradient,
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const i = context.dataIndex;
+                return ` ${counts[i]} studios (${pcts[i]}%)`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#e5e7ff',
+              font: { size: 11 }
+            },
+            grid: {
+              color: 'rgba(148, 163, 255, 0.15)',
+              drawBorder: false
+            }
+          },
+          y: {
+            ticks: {
+              color: '#cbd5ff',
+              font: { size: 11 }
+            },
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+

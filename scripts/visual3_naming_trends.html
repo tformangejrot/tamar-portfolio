@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paris Boutique Fitness – Naming Trends</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: #05060a;
+      color: #f5f7ff;
+    }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      background: radial-gradient(circle at top, #0b1c3a 0, #05060a 60%);
+    }
+    h1 {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #7dd3ff;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    p.subtitle {
+      max-width: 640px;
+      color: #cbd5f5;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    .card {
+      width: 100%;
+      max-width: 900px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
+      border-radius: 18px;
+      box-shadow:
+        0 0 0 1px rgba(148, 163, 255, 0.12),
+        0 35px 80px rgba(15, 23, 42, 0.8);
+      padding: 24px 28px 28px;
+      margin-bottom: 24px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+    .card-header h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .card-header span {
+      font-size: 12px;
+      color: #9ca3ff;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .chart-container {
+      position: relative;
+      height: 300px;
+    }
+    .note {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #9ca3ff;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+      font-size: 12px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .legend-color {
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Paris Boutique Fitness</h1>
+    <h2>What's in a Name?</h2>
+    <p class="subtitle">
+      Studio naming trends reveal a mix of languages and tones. While <span style="color: #7dd3ff;">neutral/professional</span> names dominate, 
+      there's a growing trend toward <span style="color: #a78bfa;">spiritual/woowoo</span> branding, especially in yoga and pilates studios.
+    </p>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Studio Names by Language</h3>
+        <span>644 studios</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="languageChart"></canvas>
+      </div>
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-color" style="background: rgba(59, 130, 246, 0.8);"></div>
+          <span>Neutral (39%)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: rgba(139, 92, 246, 0.8);"></div>
+          <span>French (23%)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: rgba(236, 72, 153, 0.8);"></div>
+          <span>English (19%)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: rgba(34, 197, 94, 0.8);"></div>
+          <span>Mixed (19%)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Studio Names by Tone/Style</h3>
+        <span>644 studios</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="toneChart"></canvas>
+      </div>
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-color" style="background: rgba(107, 114, 128, 0.8);"></div>
+          <span>Other/Uncategorized (61%)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: rgba(59, 130, 246, 0.8);"></div>
+          <span>Neutral (26%)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: rgba(139, 92, 246, 0.8);"></div>
+          <span>Woowoo/Spiritual (5%)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: rgba(236, 72, 153, 0.8);"></div>
+          <span>Fun (3%)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: rgba(239, 68, 68, 0.8);"></div>
+          <span>Strong (3%)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background: rgba(34, 197, 94, 0.8);"></div>
+          <span>Dreamy (1%)</span>
+        </div>
+      </div>
+      <p class="note">
+        Note: Tone categorization is based on keyword analysis. "Other" includes names that don't clearly fit into specific tone categories.
+        Many studio names use neutral/professional language (e.g., "Studio", "Club", "Academy").
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Language data
+    const languageData = {
+      labels: ['Neutral', 'French', 'English', 'Mixed'],
+      datasets: [{
+        data: [251, 149, 122, 122],
+        backgroundColor: [
+          'rgba(59, 130, 246, 0.8)',
+          'rgba(139, 92, 246, 0.8)',
+          'rgba(236, 72, 153, 0.8)',
+          'rgba(34, 197, 94, 0.8)'
+        ],
+        borderColor: [
+          'rgba(59, 130, 246, 1)',
+          'rgba(139, 92, 246, 1)',
+          'rgba(236, 72, 153, 1)',
+          'rgba(34, 197, 94, 1)'
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    // Tone data
+    const toneData = {
+      labels: ['Other', 'Neutral', 'Woowoo', 'Fun', 'Strong', 'Dreamy'],
+      datasets: [{
+        data: [395, 169, 33, 22, 20, 5],
+        backgroundColor: [
+          'rgba(107, 114, 128, 0.8)',
+          'rgba(59, 130, 246, 0.8)',
+          'rgba(139, 92, 246, 0.8)',
+          'rgba(236, 72, 153, 0.8)',
+          'rgba(239, 68, 68, 0.8)',
+          'rgba(34, 197, 94, 0.8)'
+        ],
+        borderColor: [
+          'rgba(107, 114, 128, 1)',
+          'rgba(59, 130, 246, 1)',
+          'rgba(139, 92, 246, 1)',
+          'rgba(236, 72, 153, 1)',
+          'rgba(239, 68, 68, 1)',
+          'rgba(34, 197, 94, 1)'
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    const langCtx = document.getElementById('languageChart').getContext('2d');
+    new Chart(langCtx, {
+      type: 'doughnut',
+      data: languageData,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                const pct = ((context.parsed / total) * 100).toFixed(1);
+                return `${context.label}: ${context.parsed} studios (${pct}%)`;
+              }
+            },
+            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+            titleColor: '#f5f7ff',
+            bodyColor: '#cbd5f5',
+            borderColor: 'rgba(148, 163, 255, 0.3)',
+            borderWidth: 1
+          }
+        }
+      }
+    });
+
+    const toneCtx = document.getElementById('toneChart').getContext('2d');
+    new Chart(toneCtx, {
+      type: 'doughnut',
+      data: toneData,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                const pct = ((context.parsed / total) * 100).toFixed(1);
+                return `${context.label}: ${context.parsed} studios (${pct}%)`;
+              }
+            },
+            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+            titleColor: '#f5f7ff',
+            bodyColor: '#cbd5f5',
+            borderColor: 'rgba(148, 163, 255, 0.3)',
+            borderWidth: 1
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
