@@ -80,6 +80,30 @@
       margin-bottom: 40px;
     }
 
+    .nav-link {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #7dd3ff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #a78bfa;
+    }
+
+    .nav-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
     .scroll-indicator {
       position: absolute;
       bottom: 40px;
@@ -216,6 +240,12 @@
       .two-column {
         grid-template-columns: 1fr;
       }
+
+      .nav-link {
+        top: 24px;
+        left: 24px;
+        font-size: 13px;
+      }
     }
 
     /* Dark theme for Leaflet */
@@ -315,6 +345,12 @@
 <body>
   <!-- Hero Section -->
   <section class="hero">
+    <a href="/" class="nav-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Home
+    </a>
     <div class="hero-content">
       <h1>Paris Boutique Fitness</h1>
       <h2>The Paris Boutique Fitness Landscape in 2025</h2>
@@ -1115,87 +1151,104 @@
     });
 
     // Map with heatmap (initialize immediately as it's always visible)
-    const map = L.map('map', {
-      center: [48.8566, 2.3522],
-      zoom: 12,
-      zoomControl: true,
-      attributionControl: false
-    });
+    try {
+      const mapElement = document.getElementById('map');
+      if (mapElement && typeof L !== 'undefined') {
+        const map = L.map('map', {
+          center: [48.8566, 2.3522],
+          zoom: 12,
+          zoomControl: true,
+          attributionControl: false
+        });
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors',
-      maxZoom: 19
-    }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap contributors',
+          maxZoom: 19
+        }).addTo(map);
 
-    const heatmapPoints = [];
-    const maxCount = Math.max(...arrData.map(d => d.count));
-    
-    arrData.forEach(({ arr, count, center }) => {
-      const [lat, lng] = center;
-      const intensity = count / maxCount;
-      const pointsPerStudio = 3;
-      for (let i = 0; i < count * pointsPerStudio; i++) {
-        const angle = (i / count) * Math.PI * 2;
-        const radius = (Math.random() * 0.008);
-        const offsetLat = Math.cos(angle) * radius;
-        const offsetLng = Math.sin(angle) * radius;
-        heatmapPoints.push([
-          lat + offsetLat + (Math.random() - 0.5) * 0.003,
-          lng + offsetLng + (Math.random() - 0.5) * 0.003,
-          intensity * 0.8
-        ]);
+        const heatmapPoints = [];
+        const maxCount = Math.max(...arrData.map(d => d.count));
+        
+        arrData.forEach(({ arr, count, center }) => {
+          const [lat, lng] = center;
+          const intensity = count / maxCount;
+          const pointsPerStudio = 3;
+          for (let i = 0; i < count * pointsPerStudio; i++) {
+            const angle = (i / count) * Math.PI * 2;
+            const radius = (Math.random() * 0.008);
+            const offsetLat = Math.cos(angle) * radius;
+            const offsetLng = Math.sin(angle) * radius;
+            heatmapPoints.push([
+              lat + offsetLat + (Math.random() - 0.5) * 0.003,
+              lng + offsetLng + (Math.random() - 0.5) * 0.003,
+              intensity * 0.8
+            ]);
+          }
+        });
+
+        const heat = L.heatLayer(heatmapPoints, {
+          radius: 25,
+          blur: 20,
+          maxZoom: 17,
+          max: 1.0,
+          gradient: {
+            0.0: 'rgba(56, 189, 248, 0)',
+            0.2: 'rgba(56, 189, 248, 0.4)',
+            0.4: 'rgba(139, 92, 246, 0.6)',
+            0.6: 'rgba(236, 72, 153, 0.7)',
+            0.8: 'rgba(239, 68, 68, 0.8)',
+            1.0: 'rgba(251, 146, 60, 1.0)'
+          }
+        }).addTo(map);
+
+        arrData.forEach(({ arr, count, center }) => {
+          const [lat, lng] = center;
+          const radius = Math.sqrt(count) * 150;
+          const opacity = Math.min(0.6, 0.3 + (count / maxCount) * 0.3);
+          
+          L.circleMarker([lat, lng], {
+            radius: Math.min(12, 4 + (count / maxCount) * 8),
+            fillColor: '#7dd3ff',
+            color: '#3b82f6',
+            weight: 2,
+            opacity: 0.8,
+            fillOpacity: opacity
+          }).bindTooltip(`${arr.replace('Paris ', '')}: ${count} studios`, {
+            permanent: false,
+            direction: 'top'
+          }).addTo(map);
+        });
+
+        const legend = L.control({ position: 'bottomright' });
+        legend.onAdd = function() {
+          const div = L.DomUtil.create('div', 'info legend');
+          div.innerHTML = `
+            <h4>Studio Density</h4>
+            <div class="legend">
+              <i style="background: rgba(251, 146, 60, 1.0);"></i> 60+ studios<br/>
+              <i style="background: rgba(239, 68, 68, 0.8);"></i> 40-59 studios<br/>
+              <i style="background: rgba(236, 72, 153, 0.7);"></i> 20-39 studios<br/>
+              <i style="background: rgba(139, 92, 246, 0.6);"></i> 10-19 studios<br/>
+              <i style="background: rgba(56, 189, 248, 0.4);"></i> &lt;10 studios
+            </div>
+          `;
+          return div;
+        };
+        legend.addTo(map);
+      } else {
+        // If map can't be initialized (e.g., Leaflet not loaded or file:// protocol issues)
+        const mapElement = document.getElementById('map');
+        if (mapElement) {
+          mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
+        }
       }
-    });
-
-    const heat = L.heatLayer(heatmapPoints, {
-      radius: 25,
-      blur: 20,
-      maxZoom: 17,
-      max: 1.0,
-      gradient: {
-        0.0: 'rgba(56, 189, 248, 0)',
-        0.2: 'rgba(56, 189, 248, 0.4)',
-        0.4: 'rgba(139, 92, 246, 0.6)',
-        0.6: 'rgba(236, 72, 153, 0.7)',
-        0.8: 'rgba(239, 68, 68, 0.8)',
-        1.0: 'rgba(251, 146, 60, 1.0)'
+    } catch (error) {
+      console.warn('Map initialization failed:', error);
+      const mapElement = document.getElementById('map');
+      if (mapElement) {
+        mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
       }
-    }).addTo(map);
-
-    arrData.forEach(({ arr, count, center }) => {
-      const [lat, lng] = center;
-      const radius = Math.sqrt(count) * 150;
-      const opacity = Math.min(0.6, 0.3 + (count / maxCount) * 0.3);
-      
-      L.circleMarker([lat, lng], {
-        radius: Math.min(12, 4 + (count / maxCount) * 8),
-        fillColor: '#7dd3ff',
-        color: '#3b82f6',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: opacity
-      }).bindTooltip(`${arr.replace('Paris ', '')}: ${count} studios`, {
-        permanent: false,
-        direction: 'top'
-      }).addTo(map);
-    });
-
-    const legend = L.control({ position: 'bottomright' });
-    legend.onAdd = function() {
-      const div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = `
-        <h4>Studio Density</h4>
-        <div class="legend">
-          <i style="background: rgba(251, 146, 60, 1.0);"></i> 60+ studios<br/>
-          <i style="background: rgba(239, 68, 68, 0.8);"></i> 40-59 studios<br/>
-          <i style="background: rgba(236, 72, 153, 0.7);"></i> 20-39 studios<br/>
-          <i style="background: rgba(139, 92, 246, 0.6);"></i> 10-19 studios<br/>
-          <i style="background: rgba(56, 189, 248, 0.4);"></i> &lt;10 studios
-        </div>
-      `;
-      return div;
-    };
-    legend.addTo(map);
+    }
   </script>
 </body>
 </html>
