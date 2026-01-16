@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 1: Drafting Your Studio Blueprints - Studio Grow Workbook</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Sidebar Toggle Button -->
+  <button id="sidebar-toggle" class="sidebar-toggle">Make It Happen Moments</button>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar-container">
+    <div class="sidebar-header">
+      <h3>Make It Happen Moments</h3>
+      <button id="sidebar-close" class="sidebar-close">&times;</button>
+    </div>
+    <div class="sidebar-content">
+      <textarea id="sidebar-notes" placeholder="Jot down your notes and insights throughout the workshop..."></textarea>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <nav class="header-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">50 New Members in 5 Days</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="intro.html">Intro</a></li>
+        <li><a href="day1.html" class="active">Day 1</a></li>
+        <li><a href="day2.html">Day 2</a></li>
+        <li><a href="day3.html">Day 3</a></li>
+        <li><a href="day4.html">Day 4</a></li>
+        <li><a href="day5.html">Day 5</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header -->
+    <div style="display: flex; align-items: center; justify-content: space-between; margin: 40px 0 60px;">
+      <div style="background: #FF6B35; background: var(--color-bg-orange, #FF6B35); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 18px;">DAY One</div>
+      <h1 style="font-family: Georgia, serif; font-size: 56px; color: var(--color-text); font-weight: 600; margin: 0; flex: 1; text-align: center;">Drafting Your Studio Blueprints</h1>
+      <div style="width: 150px;"></div>
+    </div>
+
+    <!-- Day Navigation -->
+    <div class="day-nav">
+      <a href="index.html" class="day-nav-btn">← Home</a>
+      <div class="day-progress">Day 1 of 5</div>
+      <a href="day2.html" class="day-nav-btn">Day 2 →</a>
+    </div>
+
+    <!-- Top Section: Three Main Categories -->
+    <section style="margin: 60px 0;">
+      <div class="category-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <!-- Captivate -->
+        <div class="category-box" data-category="captivate">
+          <div class="category-title">Captivate</div>
+          <div class="category-points">
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="captivate-point-1">Reveal</button>
+              <div id="captivate-point-1" class="category-point-content reveal-content" style="display: none;">
+                2-4 high selling, high converting intro offers tested over the past year
+              </div>
+            </div>
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="captivate-point-2">Reveal</button>
+              <div id="captivate-point-2" class="category-point-content reveal-content" style="display: none;">
+                sharing intro offers consistently across range of marketing channels
+              </div>
+            </div>
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="captivate-point-3">Reveal</button>
+              <div id="captivate-point-3" class="category-point-content reveal-content" style="display: none;">
+                getting in the right number of leads
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Convert -->
+        <div class="category-box" data-category="convert">
+          <div class="category-title">Convert</div>
+          <div class="category-points">
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="convert-point-1">Reveal</button>
+              <div id="convert-point-1" class="category-point-content reveal-content" style="display: none;">
+                selling the right number of intro packs consistently and sustainably (average)
+              </div>
+            </div>
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="convert-point-2">Reveal</button>
+              <div id="convert-point-2" class="category-point-content reveal-content" style="display: none;">
+                selling the right number of memberships consistently and sustainably
+              </div>
+            </div>
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="convert-point-3">Reveal</button>
+              <div id="convert-point-3" class="category-point-content reveal-content" style="display: none;">
+                average length of membership
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Keep -->
+        <div class="category-box" data-category="keep">
+          <div class="category-title">Keep</div>
+          <div class="category-points">
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="keep-point-1">Reveal</button>
+              <div id="keep-point-1" class="category-point-content reveal-content" style="display: none;">
+                extraordinary 6-12 week member onboarding with consistent attendance
+              </div>
+            </div>
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="keep-point-2">Reveal</button>
+              <div id="keep-point-2" class="category-point-content reveal-content" style="display: none;">
+                2-4 sessions/week in right sessions with right teacher
+              </div>
+            </div>
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="keep-point-3">Reveal</button>
+              <div id="keep-point-3" class="category-point-content reveal-content" style="display: none;">
+                processes and systems to create welcoming and warming environment for every person every day
+              </div>
+            </div>
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="keep-point-4">Reveal</button>
+              <div id="keep-point-4" class="category-point-content reveal-content" style="display: none;">
+                lifetime value of average client
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Right # Of Section -->
+    <section style="margin: 60px 0;">
+      <div style="margin-bottom: 40px;">
+        <h2 style="font-size: 32px; font-weight: 600; color: var(--color-text); margin: 0;">The right numbers</h2>
+      </div>
+
+      <p style="margin-bottom: 30px; font-size: 18px; color: var(--color-text-light);">Select your studio size to see your target ranges:</p>
+
+      <!-- Studio Size Selector -->
+      <div class="studio-size-grid" style="margin-bottom: 40px;">
+        <div class="studio-size-card private" data-size="private">
+          <div class="studio-size-title" style="color: var(--color-accent-green);">PRIVATE STUDIO</div>
+          <p style="font-size: 14px; color: var(--color-text-light); margin: 10px 0;">1 spot</p>
+        </div>
+        
+        <div class="studio-size-card small" data-size="small">
+          <div class="studio-size-title" style="color: var(--color-accent-yellow);">SMALL GROUP STUDIO</div>
+          <p style="font-size: 14px; color: var(--color-text-light); margin: 10px 0;">2-9 spots</p>
+        </div>
+        
+        <div class="studio-size-card mid" data-size="mid">
+          <div class="studio-size-title" style="color: var(--color-accent-teal);">MID-SIZE STUDIO</div>
+          <p style="font-size: 14px; color: var(--color-text-light); margin: 10px 0;">10-20 spots</p>
+        </div>
+        
+        <div class="studio-size-card large" data-size="large">
+          <div class="studio-size-title" style="color: var(--color-accent-orange);">LARGE STUDIO</div>
+          <p style="font-size: 14px; color: var(--color-text-light); margin: 10px 0;">21+ spots</p>
+        </div>
+      </div>
+
+      <!-- Target Numbers Display -->
+      <div id="hex-numbers-display" class="target-numbers-container" style="display: none;">
+        <div class="target-numbers-grid">
+          <div class="target-number-item">
+            <div class="target-number-label">LEADS</div>
+            <div class="target-number-value" id="hex-leads">-</div>
+          </div>
+          <div class="target-number-item">
+            <div class="target-number-label">INTROS</div>
+            <div class="target-number-value" id="hex-intros">-</div>
+          </div>
+          <div class="target-number-item">
+            <div class="target-number-label">MEMBERSHIPS</div>
+            <div class="target-number-value" id="hex-members">-</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAP #1 and GAP #2 Section -->
+    <section style="margin: 60px 0;">
+      <div style="display: flex; justify-content: space-around; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
+        <!-- GAP #1 -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; flex: 1; max-width: 500px;">
+          <div class="gap-circle" data-gap="1">
+            <div class="gap-number">GAP #1</div>
+            <div class="gap-title">Not enough leads</div>
+          </div>
+          <div class="category-points" style="width: 100%; max-width: 400px;">
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="gap1-point-1">Reveal</button>
+              <div id="gap1-point-1" class="category-point-content reveal-content" style="display: none;">
+                Assuming every lead is in your crm
+              </div>
+            </div>
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="gap1-point-2">Reveal</button>
+              <div id="gap1-point-2" class="category-point-content reveal-content" style="display: none;">
+                Sales follow-up
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GAP #2 -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; flex: 1; max-width: 1000px;">
+          <div class="gap-circle" data-gap="2">
+            <div class="gap-number">GAP #2</div>
+            <div class="gap-title">Not enough members</div>
+          </div>
+          <div style="width: 100%; margin-top: 20px;">
+            <div class="gap-reasons" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+              <!-- Left Column -->
+              <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="gap2-point-1">Reveal</button>
+                  <div id="gap2-point-1" class="category-point-content reveal-content" style="display: none;">
+                    not pre-booking all sessions of intro pack
+                  </div>
+                </div>
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="gap2-point-2">Reveal</button>
+                  <div id="gap2-point-2" class="category-point-content reveal-content" style="display: none;">
+                    not speaking to each buyer type during intro
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Middle Column -->
+              <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="gap2-point-3">Reveal</button>
+                  <div id="gap2-point-3" class="category-point-content reveal-content" style="display: none;">
+                    not booking 1:1 conversation
+                  </div>
+                </div>
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="gap2-point-4">Reveal</button>
+                  <div id="gap2-point-4" class="category-point-content reveal-content" style="display: none;">
+                    not giving a no-brainer reason to become a member
+                  </div>
+                </div>
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="gap2-point-5">Reveal</button>
+                  <div id="gap2-point-5" class="category-point-content reveal-content" style="display: none;">
+                    not having 1:1 conversation or having the wrong one
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Right Column -->
+              <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="gap2-point-6">Reveal</button>
+                  <div id="gap2-point-6" class="category-point-content reveal-content" style="display: none;">
+                    not asking for the sale
+                  </div>
+                </div>
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="gap2-point-7">Reveal</button>
+                  <div id="gap2-point-7" class="category-point-content reveal-content" style="display: none;">
+                    not getting 3 new referrals for every new member
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUR Buyer TYPES Section -->
+    <section style="margin: 80px 0;">
+      <div style="margin-bottom: 40px;">
+        <h2 style="font-size: 36px; font-weight: 600; color: var(--color-text); margin: 0;">FOUR BUYER TYPES</h2>
+      </div>
+
+      <div class="buyer-type-grid">
+        <div class="buyer-type-card spontaneous" data-buyer="spontaneous">
+          <div class="buyer-type-icon">👤</div>
+          <div class="buyer-type-title">Spontaneous</div>
+          <div class="buyer-type-subtitle">Spontane</div>
+          <button class="reveal-trigger" data-target="buyer-spontaneous" style="margin-top: 15px; padding: 8px 16px; background: #FF6B35; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px;">Learn More</button>
+          <div id="buyer-spontaneous" class="reveal-content" style="display: none; margin-top: 15px; padding: 15px; background: #FFF4F0; border-radius: 8px; font-size: 14px; line-height: 1.6; color: var(--color-text);">
+            Spontaneous buyers make quick decisions. They respond to urgency and immediate value. Your communication should be direct, action-oriented, and create a sense of "now or never."
+          </div>
+        </div>
+
+        <div class="buyer-type-card methodical" data-buyer="methodical">
+          <div class="buyer-type-icon">👓</div>
+          <div class="buyer-type-title">Methodical</div>
+          <div class="buyer-type-subtitle">Methodical (men)</div>
+          <button class="reveal-trigger" data-target="buyer-methodical" style="margin-top: 15px; padding: 8px 16px; background: #27ae60; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px;">Learn More</button>
+          <div id="buyer-methodical" class="reveal-content" style="display: none; margin-top: 15px; padding: 15px; background: #f0f9f4; border-radius: 8px; font-size: 14px; line-height: 1.6; color: var(--color-text);">
+            Methodical buyers need information, data, and time to process. They want to understand the logic and see proof. Provide detailed FAQs, comparisons, and let them research.
+          </div>
+        </div>
+
+        <div class="buyer-type-card humanistic" data-buyer="humanistic">
+          <div class="buyer-type-icon">💬</div>
+          <div class="buyer-type-title">Humanistic</div>
+          <div class="buyer-type-subtitle">Humanistic/story (women)</div>
+          <button class="reveal-trigger" data-target="buyer-humanistic" style="margin-top: 15px; padding: 8px 16px; background: #F5A623; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px;">Learn More</button>
+          <div id="buyer-humanistic" class="reveal-content" style="display: none; margin-top: 15px; padding: 15px; background: #fffbf0; border-radius: 8px; font-size: 14px; line-height: 1.6; color: var(--color-text);">
+            Humanistic buyers connect through stories, emotions, and relationships. Share member success stories, community values, and personal connections. They want to feel part of something meaningful.
+          </div>
+        </div>
+
+        <div class="buyer-type-card competitive" data-buyer="competitive">
+          <div class="buyer-type-icon">🏆</div>
+          <div class="buyer-type-title">Competitive</div>
+          <div class="buyer-type-subtitle">Competitive (growing w/ pandemic)</div>
+          <button class="reveal-trigger" data-target="buyer-competitive" style="margin-top: 15px; padding: 8px 16px; background: #1abc9c; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px;">Learn More</button>
+          <div id="buyer-competitive" class="reveal-content" style="display: none; margin-top: 15px; padding: 15px; background: #f0fdfa; border-radius: 8px; font-size: 14px; line-height: 1.6; color: var(--color-text);">
+            Competitive buyers want to win, achieve goals, and see results. Emphasize challenges, progress tracking, achievement, and how your studio helps them outperform.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPLEMENTATION #1: 21-day intro pack -->
+    <section style="margin: 80px 0;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;">
+        <h2 style="font-size: 24px; font-weight: 600; color: var(--color-text); margin: 0;">21-day intro pack</h2>
+        <div style="background: #FF6B35; background: var(--color-bg-orange, #FF6B35); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 18px;">IMPLEMENTATION #1</div>
+      </div>
+
+      <table class="implementation-table">
+        <thead>
+          <tr>
+            <th># of Days</th>
+            <th>Type</th>
+            <th>Content</th>
+            <th>CTA</th>
+          </tr>
+        </thead>
+        <tbody id="implementation1-table-body">
+          <tr>
+            <td><input type="text" value="" class="day-input" data-row="0" placeholder="# of Days"></td>
+            <td><input type="text" value="" class="type-input" data-row="0" placeholder="Type"></td>
+            <td><input type="text" value="" class="content-input" data-row="0" placeholder="Content"></td>
+            <td><input type="text" value="" class="cta-input" data-row="0" placeholder="CTA"></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="" class="day-input" data-row="1" placeholder="# of Days"></td>
+            <td><input type="text" value="" class="type-input" data-row="1" placeholder="Type"></td>
+            <td><input type="text" value="" class="content-input" data-row="1" placeholder="Content"></td>
+            <td><input type="text" value="" class="cta-input" data-row="1" placeholder="CTA"></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="" class="day-input" data-row="2" placeholder="# of Days"></td>
+            <td><input type="text" value="" class="type-input" data-row="2" placeholder="Type"></td>
+            <td><input type="text" value="" class="content-input" data-row="2" placeholder="Content"></td>
+            <td><input type="text" value="" class="cta-input" data-row="2" placeholder="CTA"></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="" class="day-input" data-row="3" placeholder="# of Days"></td>
+            <td><input type="text" value="" class="type-input" data-row="3" placeholder="Type"></td>
+            <td><input type="text" value="" class="content-input" data-row="3" placeholder="Content"></td>
+            <td><input type="text" value="" class="cta-input" data-row="3" placeholder="CTA"></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="" class="day-input" data-row="4" placeholder="# of Days"></td>
+            <td><input type="text" value="" class="type-input" data-row="4" placeholder="Type"></td>
+            <td><input type="text" value="" class="content-input" data-row="4" placeholder="Content"></td>
+            <td><input type="text" value="" class="cta-input" data-row="4" placeholder="CTA"></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="" class="day-input" data-row="5" placeholder="# of Days"></td>
+            <td><input type="text" value="" class="type-input" data-row="5" placeholder="Type"></td>
+            <td><input type="text" value="" class="content-input" data-row="5" placeholder="Content"></td>
+            <td><input type="text" value="" class="cta-input" data-row="5" placeholder="CTA"></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="" class="day-input" data-row="6" placeholder="# of Days"></td>
+            <td><input type="text" value="" class="type-input" data-row="6" placeholder="Type"></td>
+            <td><input type="text" value="" class="content-input" data-row="6" placeholder="Content"></td>
+            <td><input type="text" value="" class="cta-input" data-row="6" placeholder="CTA"></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="" class="day-input" data-row="7" placeholder="# of Days"></td>
+            <td><input type="text" value="" class="type-input" data-row="7" placeholder="Type"></td>
+            <td><input type="text" value="" class="content-input" data-row="7" placeholder="Content"></td>
+            <td><input type="text" value="" class="cta-input" data-row="7" placeholder="CTA"></td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="add-implementation1-row" class="btn btn-secondary" style="margin-top: 20px;">+ Add Row</button>
+    </section>
+
+    <!-- GAP #3 Section -->
+    <section style="margin: 80px 0;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <div class="gap-circle" data-gap="3">
+          <div class="gap-number">GAP #3</div>
+          <div class="gap-title">Lifetime Value</div>
+        </div>
+        <div class="category-points" style="width: 100%; max-width: 1000px; margin-top: 20px;">
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="gap3-point-1">Reveal</button>
+              <div id="gap3-point-1" class="category-point-content reveal-content" style="display: none;">
+                No 6-12 week member journey
+              </div>
+            </div>
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="gap3-point-2">Reveal</button>
+              <div id="gap3-point-2" class="category-point-content reveal-content" style="display: none;">
+                No renewal process
+              </div>
+            </div>
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="gap3-point-3">Reveal</button>
+              <div id="gap3-point-3" class="category-point-content reveal-content" style="display: none;">
+                Too many m2m or short-term memberships
+              </div>
+            </div>
+            <div class="category-point-item">
+              <button class="category-point-reveal" data-target="gap3-point-4">Reveal</button>
+              <div id="gap3-point-4" class="category-point-content reveal-content" style="display: none;">
+                No non-usage processes (14 days)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPLEMENTATION #2: Retention Communication -->
+    <section style="margin: 80px 0;">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <div style="background: #FF6B35; background: var(--color-bg-orange, #FF6B35); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 18px; display: inline-block;">IMPLEMENTATION #2</div>
+      </div>
+
+      <table class="implementation-table">
+        <thead>
+          <tr>
+            <th style="width: 100px;"></th>
+            <th>When</th>
+            <th>How</th>
+            <th>What</th>
+          </tr>
+        </thead>
+        <tbody id="implementation2-table-body">
+          <tr>
+            <td style="text-align: center;">
+              <div style="width: 40px; height: 40px; border: 3px solid #FF6B35; border: 3px solid var(--color-bg-orange, #FF6B35); transform: rotate(45deg); margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                <span style="transform: rotate(-45deg); font-weight: 700; color: #FF6B35; color: var(--color-bg-orange, #FF6B35);">1</span>
+              </div>
+            </td>
+            <td><input type="text" value="" class="when-input" data-row="0" placeholder="When"></td>
+            <td><input type="text" value="" class="how-input" data-row="0" placeholder="How"></td>
+            <td><textarea class="what-input" data-row="0" style="min-height: 60px; resize: vertical;" placeholder="What"></textarea></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">
+              <div style="width: 40px; height: 40px; border: 3px solid #FF6B35; border: 3px solid var(--color-bg-orange, #FF6B35); transform: rotate(45deg); margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                <span style="transform: rotate(-45deg); font-weight: 700; color: #FF6B35; color: var(--color-bg-orange, #FF6B35);">2</span>
+              </div>
+            </td>
+            <td><input type="text" value="" class="when-input" data-row="1" placeholder="When"></td>
+            <td><input type="text" value="" class="how-input" data-row="1" placeholder="How"></td>
+            <td><textarea class="what-input" data-row="1" style="min-height: 60px; resize: vertical;" placeholder="What"></textarea></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">
+              <div style="width: 40px; height: 40px; border: 3px solid #FF6B35; border: 3px solid var(--color-bg-orange, #FF6B35); transform: rotate(45deg); margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                <span style="transform: rotate(-45deg); font-weight: 700; color: #FF6B35; color: var(--color-bg-orange, #FF6B35);">3</span>
+              </div>
+            </td>
+            <td><input type="text" value="" class="when-input" data-row="2" placeholder="When"></td>
+            <td><input type="text" value="" class="how-input" data-row="2" placeholder="How"></td>
+            <td><textarea class="what-input" data-row="2" style="min-height: 60px; resize: vertical;" placeholder="What"></textarea></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">
+              <div style="width: 40px; height: 40px; border: 3px solid #FF6B35; border: 3px solid var(--color-bg-orange, #FF6B35); transform: rotate(45deg); margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                <span style="transform: rotate(-45deg); font-weight: 700; color: #FF6B35; color: var(--color-bg-orange, #FF6B35);">4</span>
+              </div>
+            </td>
+            <td><input type="text" value="" class="when-input" data-row="3" placeholder="When"></td>
+            <td><input type="text" value="" class="how-input" data-row="3" placeholder="How"></td>
+            <td><textarea class="what-input" data-row="3" style="min-height: 60px; resize: vertical;" placeholder="What"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="add-implementation2-row" class="btn btn-secondary" style="margin-top: 20px;">+ Add Row</button>
+    </section>
+
+    <!-- Day Navigation Footer -->
+    <div class="day-nav" style="margin-top: 60px;">
+      <a href="index.html" class="day-nav-btn">← Home</a>
+      <div class="day-progress">Day 1 of 5</div>
+      <a href="day2.html" class="day-nav-btn">Day 2 →</a>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/day1.js"></script>
+</body>
+</html>

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nairobi Boutique Fitness Trends Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: #05060a;
+      color: #f5f7ff;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 24px;
+      background: radial-gradient(circle at top, #0b1c3a 0, #05060a 60%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.1) 0, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #7dd3ff;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0 0 24px;
+      background: linear-gradient(135deg, #7dd3ff 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #cbd5f5;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .nav-link {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #7dd3ff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #a78bfa;
+    }
+
+    .nav-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: #7dd3ff;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 80px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .section-label {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #7dd3ff;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 600;
+      margin: 0 0 16px;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: #cbd5f5;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Card Styles */
+    .card {
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
+      border-radius: 18px;
+      box-shadow:
+        0 0 0 1px rgba(148, 163, 255, 0.12),
+        0 35px 80px rgba(15, 23, 42, 0.8);
+      padding: 32px;
+      margin-bottom: 32px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 0 0 1px rgba(148, 163, 255, 0.2),
+        0 40px 100px rgba(15, 23, 42, 1);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 24px;
+    }
+
+    .card-header h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .card-header span {
+      font-size: 12px;
+      color: #9ca3ff;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 400px;
+    }
+
+    .chart-container-large {
+      height: 500px;
+    }
+
+    .chart-container-map {
+      height: 600px;
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #9ca3ff;
+      line-height: 1.5;
+    }
+
+    .stat-highlight {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      color: #7dd3ff;
+    }
+
+    /* Two-column layout for some sections */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-link {
+        top: 24px;
+        left: 24px;
+        font-size: 13px;
+      }
+    }
+
+    /* Dark theme for Leaflet */
+    .leaflet-container {
+      background: #0f172a;
+      border-radius: 12px;
+    }
+
+    .leaflet-tile {
+      filter: brightness(0.4) invert(1) hue-rotate(200deg) saturate(0.3) brightness(1.1) contrast(1.2);
+    }
+
+    .leaflet-control {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 255, 0.2);
+      color: #f5f7ff;
+    }
+
+    .leaflet-control-zoom a {
+      color: #f5f7ff;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .leaflet-control-zoom a:hover {
+      background: rgba(56, 189, 248, 0.2);
+    }
+
+    .info {
+      background: rgba(15, 23, 42, 0.95);
+      padding: 12px;
+      border-radius: 8px;
+      color: #f5f7ff;
+      font-size: 12px;
+      border: 1px solid rgba(148, 163, 255, 0.2);
+    }
+
+    .info h4 {
+      margin: 0 0 8px 0;
+      color: #7dd3ff;
+      font-size: 14px;
+    }
+
+    .legend {
+      line-height: 1.8;
+    }
+
+    .legend i {
+      width: 12px;
+      height: 12px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.8;
+      border-radius: 2px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(139, 92, 246, 0.1));
+      border: 1px solid rgba(148, 163, 255, 0.2);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 36px;
+      font-weight: 700;
+      color: #7dd3ff;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #cbd5f5;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 60px 24px;
+      text-align: center;
+      color: #9ca3ff;
+      font-size: 12px;
+      border-top: 1px solid rgba(148, 163, 255, 0.1);
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <a href="/" class="nav-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Home
+    </a>
+    <div class="hero-content">
+      <h1>Nairobi Boutique Fitness</h1>
+      <h2>The Nairobi Boutique Fitness Landscape in 2025</h2>
+      <p>
+        An exploration of boutique fitness trends across Nairobi. From yoga to boxing studios, 
+        discover where Nairobians are working out and how the landscape is evolving.
+      </p>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll to explore</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="section">
+    <div class="card">
+      <h3 style="margin: 0 0 16px; font-size: 24px; font-weight: 600;">What is this report?</h3>
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        Nairobi's boutique fitness scene is growing rapidly. This report provides an overview of the Nairobi boutique fitness market, the evolution of different modalities, and their geographic distribution. Unlike the Paris report which used ClassPass data, this report is based on Google Maps/Places API searches, so while exact studio counts may vary, the relative percentages and growth trends capture real insights about the fitness landscape in Kenya's capital.
+      </p>
+    </div>
+  </section>
+
+  <!-- Key Stats -->
+  <section class="section">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value" id="totalStudios">-</div>
+        <div class="stat-label">Boutique Studios</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="recentOpenings">-</div>
+        <div class="stat-label">Opened in 2024-2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="modalityCount">-</div>
+        <div class="stat-label">Modality Categories</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="pilatesPct">-</div>
+        <div class="stat-label">Offer Pilates</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modality Mix -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">What are people training for?</div>
+      <h2 class="section-title">The Modality Landscape</h2>
+      <p class="section-subtitle">
+        Distribution of boutique studios by primary modalities. 
+        <span id="modalityNote">Data will be populated once collection is complete.</span>
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Studios by Modality</h3>
+        <span id="modalitySubtitle">Top modalities · <span id="modalityTotal">-</span> studios total</span>
+      </div>
+      <div class="chart-container chart-container-large">
+        <canvas id="modalityChart"></canvas>
+      </div>
+      <p class="note">
+        Studios can appear in multiple modalities; counts are locations, not unique brands.
+        Categories have been consolidated (e.g., all yoga variants → "yoga").
+      </p>
+    </div>
+  </section>
+
+  <!-- Growth Over Time -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">The Growth Story</div>
+      <h2 class="section-title">Evolution Over Time</h2>
+      <p class="section-subtitle">
+        Boutique fitness studios opened by year. Opening dates are estimated from domain registration data, 
+        adjusted by ~2 months to account for domain registration typically preceding actual studio openings.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Studios by Opening Year</h3>
+        <span id="yearSubtitle">Studios total · Each location counted separately</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="yearChart"></canvas>
+      </div>
+      <p class="note">
+        Opening dates are estimated from domain registration (WHOIS) data, adjusted by ~2 months.
+        Multi-location studios count each location separately. Studios without websites are excluded from time-based analysis.
+      </p>
+    </div>
+  </section>
+
+  <!-- Spatial Distribution -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Where are the studios?</div>
+      <h2 class="section-title">Spatial Distribution</h2>
+      <p class="section-subtitle">
+        Spatial distribution of boutique fitness studios across Nairobi neighborhoods. 
+        <span id="neighborhoodNote">Data will show studio counts by neighborhood once collection is complete.</span>
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Studios by Neighborhood</h3>
+        <span>Nairobi neighborhoods</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="neighborhoodChart"></canvas>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Nairobi Heatmap</h3>
+        <span>Studio density visualization</span>
+      </div>
+      <div class="chart-container chart-container-map">
+        <div id="map" style="height: 100%; border-radius: 12px;"></div>
+      </div>
+      <p class="note">
+        Heatmap shows studio density based on actual coordinates from Google Places API.
+        Warmer colors indicate higher studio counts.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Nairobi Boutique Fitness Trends Dashboard</p>
+    <p>Data collected from Google Places API and domain registration records (WHOIS)</p>
+    <p style="margin-top: 8px; font-size: 11px; opacity: 0.8;">
+      Opening dates estimated from domain registration dates, adjusted by ~2 months. 
+      Methodology differs from Paris report (Google Maps vs ClassPass).
+    </p>
+  </footer>
+
+  <script>
+    // Chart.js default config
+    Chart.defaults.color = '#cbd5f5';
+    Chart.defaults.borderColor = 'rgba(148, 163, 255, 0.15)';
+
+    // Store chart instances
+    const charts = {};
+
+    // Intersection Observer for scroll-triggered animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const chartObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !charts[entry.target.id]) {
+          const chartId = entry.target.id;
+          if (chartInitFunctions[chartId]) {
+            chartInitFunctions[chartId]();
+            chartObserver.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Chart initialization functions
+    const chartInitFunctions = {};
+
+    // TODO: Replace with actual data from nairobi_studios_consolidated_boutique.json
+    // Placeholder data structure - update once data collection is complete
+    const modalities = [
+      // Example structure - replace with actual data
+      // { modality: 'pilates', count: 0, pct: 0 },
+      // { modality: 'yoga', count: 0, pct: 0 },
+    ];
+
+    const modalityLabels = modalities.map(m => m.modality.replace(/-/g, ' '));
+    const modalityCounts = modalities.map(m => m.count);
+    const modalityPcts = modalities.map(m => m.pct);
+
+    chartInitFunctions['modalityChart'] = function() {
+      if (modalities.length === 0) {
+        document.getElementById('modalityChart').parentElement.innerHTML = 
+          '<p style="text-align: center; color: #9ca3ff; padding: 40px;">Data collection in progress. Chart will appear once data is available.</p>';
+        return;
+      }
+
+      const modalityCtx = document.getElementById('modalityChart').getContext('2d');
+      const modalityGradient = modalityCtx.createLinearGradient(0, 0, 600, 0);
+      modalityGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
+      modalityGradient.addColorStop(1, 'rgba(59, 130, 246, 0.9)');
+
+      charts['modalityChart'] = new Chart(modalityCtx, {
+        type: 'bar',
+        data: {
+          labels: modalityLabels,
+          datasets: [{
+            label: 'Studios',
+            data: modalityCounts,
+            backgroundColor: modalityGradient,
+            borderRadius: 6,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const i = context.dataIndex;
+                  return ` ${modalityCounts[i]} studios (${modalityPcts[i]}%)`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: { color: '#e5e7ff', font: { size: 11 } },
+              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            },
+            y: {
+              ticks: { color: '#cbd5ff', font: { size: 11 } },
+              grid: { display: false }
+            }
+          },
+          animation: {
+            duration: 1200,
+            easing: 'easeOutQuart'
+          }
+        }
+      });
+    };
+
+    // Year Chart - TODO: Replace with actual data
+    const yearData = [
+      // Example structure - replace with actual data
+      // { year: 2020, count: 0 },
+    ];
+
+    const yearLabels = yearData.map(d => d.year.toString());
+    const yearCounts = yearData.map(d => d.count);
+
+    chartInitFunctions['yearChart'] = function() {
+      if (yearData.length === 0) {
+        document.getElementById('yearChart').parentElement.innerHTML = 
+          '<p style="text-align: center; color: #9ca3ff; padding: 40px;">Data collection in progress. Chart will appear once opening date data is available.</p>';
+        return;
+      }
+
+      const yearCtx = document.getElementById('yearChart').getContext('2d');
+      const yearGradient = yearCtx.createLinearGradient(0, 0, 0, 450);
+      yearGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
+      yearGradient.addColorStop(1, 'rgba(56, 189, 248, 0.3)');
+
+      charts['yearChart'] = new Chart(yearCtx, {
+        type: 'bar',
+        data: {
+          labels: yearLabels,
+          datasets: [{
+            label: 'New Studios',
+            data: yearCounts,
+            backgroundColor: yearGradient,
+            borderRadius: 4,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return ` ${context.parsed.y} new studio${context.parsed.y !== 1 ? 's' : ''}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#e5e7ff',
+                font: { size: 10 },
+                maxRotation: 45,
+                minRotation: 45
+              },
+              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            },
+            y: {
+              beginAtZero: true,
+              ticks: {
+                color: '#cbd5ff',
+                font: { size: 11 },
+                stepSize: 10
+              },
+              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            }
+          },
+          animation: {
+            duration: 1200,
+            easing: 'easeOutQuart'
+          }
+        }
+      });
+    };
+
+    // Neighborhood Chart - TODO: Replace with actual data
+    const neighborhoodData = [
+      // Example structure - replace with actual data
+      // { neighborhood: 'Westlands', count: 0 },
+    ];
+
+    const neighborhoodLabels = neighborhoodData.map(d => d.neighborhood);
+    const neighborhoodCounts = neighborhoodData.map(d => d.count);
+
+    chartInitFunctions['neighborhoodChart'] = function() {
+      if (neighborhoodData.length === 0) {
+        document.getElementById('neighborhoodChart').parentElement.innerHTML = 
+          '<p style="text-align: center; color: #9ca3ff; padding: 40px;">Data collection in progress. Chart will appear once neighborhood data is available.</p>';
+        return;
+      }
+
+      const neighborhoodCtx = document.getElementById('neighborhoodChart').getContext('2d');
+      const neighborhoodGradient = neighborhoodCtx.createLinearGradient(0, 0, 600, 0);
+      neighborhoodGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
+      neighborhoodGradient.addColorStop(1, 'rgba(139, 92, 246, 0.9)');
+
+      charts['neighborhoodChart'] = new Chart(neighborhoodCtx, {
+        type: 'bar',
+        data: {
+          labels: neighborhoodLabels,
+          datasets: [{
+            label: 'Studios',
+            data: neighborhoodCounts,
+            backgroundColor: neighborhoodGradient,
+            borderRadius: 6,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return ` ${context.parsed.x} studios`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: { color: '#e5e7ff', font: { size: 11 } },
+              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            },
+            y: {
+              ticks: { color: '#cbd5ff', font: { size: 11 } },
+              grid: { display: false }
+            }
+          },
+          animation: {
+            duration: 1200,
+            easing: 'easeOutQuart'
+          }
+        }
+      });
+    };
+
+    // Initialize charts when they scroll into view
+    const chartIds = ['modalityChart', 'yearChart', 'neighborhoodChart'];
+    chartIds.forEach(chartId => {
+      const chartElement = document.getElementById(chartId);
+      if (chartElement) {
+        const rect = chartElement.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        if (isVisible && chartInitFunctions[chartId]) {
+          chartInitFunctions[chartId]();
+        } else {
+          chartObserver.observe(chartElement);
+        }
+      }
+    });
+
+    // Map with heatmap - Nairobi coordinates
+    try {
+      const mapElement = document.getElementById('map');
+      if (mapElement && typeof L !== 'undefined') {
+        const map = L.map('map', {
+          center: [-1.2921, 36.8219], // Nairobi coordinates
+          zoom: 11,
+          zoomControl: true,
+          attributionControl: false
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap contributors',
+          maxZoom: 19
+        }).addTo(map);
+
+        // TODO: Replace with actual studio coordinates from data
+        const studioCoordinates = [
+          // Example: [-1.2921, 36.8219, 0.8], // [lat, lng, intensity]
+        ];
+
+        if (studioCoordinates.length > 0) {
+          const heat = L.heatLayer(studioCoordinates, {
+            radius: 25,
+            blur: 20,
+            maxZoom: 17,
+            max: 1.0,
+            gradient: {
+              0.0: 'rgba(56, 189, 248, 0)',
+              0.2: 'rgba(56, 189, 248, 0.4)',
+              0.4: 'rgba(139, 92, 246, 0.6)',
+              0.6: 'rgba(236, 72, 153, 0.7)',
+              0.8: 'rgba(239, 68, 68, 0.8)',
+              1.0: 'rgba(251, 146, 60, 1.0)'
+            }
+          }).addTo(map);
+        } else {
+          mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map will display studio locations once data collection is complete.</div>';
+        }
+      } else {
+        const mapElement = document.getElementById('map');
+        if (mapElement) {
+          mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
+        }
+      }
+    } catch (error) {
+      console.warn('Map initialization failed:', error);
+      const mapElement = document.getElementById('map');
+      if (mapElement) {
+        mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
+      }
+    }
+  </script>
+</body>
+</html>

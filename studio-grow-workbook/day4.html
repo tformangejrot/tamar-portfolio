@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 4: Profit Projections - Studio Grow Workbook</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body class="day4-page">
+  <!-- Sidebar Toggle Button -->
+  <button id="sidebar-toggle" class="sidebar-toggle">Make It Happen Moments</button>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar-container">
+    <div class="sidebar-header">
+      <h3>Make It Happen Moments</h3>
+      <button id="sidebar-close" class="sidebar-close">&times;</button>
+    </div>
+    <div class="sidebar-content">
+      <textarea id="sidebar-notes" placeholder="Jot down your notes and insights throughout the workshop..."></textarea>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <nav class="header-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">50 New Members in 5 Days</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="intro.html">Intro</a></li>
+        <li><a href="day1.html">Day 1</a></li>
+        <li><a href="day2.html">Day 2</a></li>
+        <li><a href="day3.html">Day 3</a></li>
+        <li><a href="day4.html" class="active">Day 4</a></li>
+        <li><a href="day5.html">Day 5</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Day Badge and Title -->
+    <div style="text-align: center; margin: 40px 0 60px;">
+      <div style="display: inline-block; background: #F5A623; color: white; padding: 8px 24px; border-radius: 4px; font-weight: 600; font-size: 14px; letter-spacing: 1px; margin-bottom: 20px;">DAY four</div>
+      <h1 style="font-size: 48px; font-weight: 700; color: #D4AF37; font-family: var(--font-heading); margin: 0;">Profit <i>Projections</i></h1>
+    </div>
+
+    <!-- Day Navigation -->
+    <div class="day-nav">
+      <a href="day3.html" class="day-nav-btn">← Day 3</a>
+      <div class="day-progress">Day 4 of 5</div>
+      <a href="day5.html" class="day-nav-btn">Day 5 →</a>
+    </div>
+
+    <!-- Studio Grow's Model Section -->
+    <section style="margin: 80px 0;">
+      <h2 style="font-size: 28px; font-weight: 600; color: #D4AF37; margin-bottom: 30px;">Studio Grow's Model</h2>
+      <div style="display: flex; gap: 5px; align-items: center; margin-bottom: 30px;">
+        <input type="text" value="30" style="width: 50px; text-align: center; border: 2px solid #D4AF37; border-radius: 4px; padding: 5px; font-weight: 600; color: #D4AF37;">
+        <span style="color: #D4AF37; font-size: 20px;">/</span>
+        <input type="text" value="30" style="width: 50px; text-align: center; border: 2px solid #D4AF37; border-radius: 4px; padding: 5px; font-weight: 600; color: #D4AF37;">
+        <span style="color: #D4AF37; font-size: 20px;">/</span>
+        <input type="text" value="30" style="width: 50px; text-align: center; border: 2px solid #D4AF37; border-radius: 4px; padding: 5px; font-weight: 600; color: #D4AF37;">
+      </div>
+
+      <div style="display: flex; justify-content: center; align-items: center; margin: 40px 0;">
+        <!-- Center: Pie Chart -->
+        <div style="position: relative; width: 280px; height: 280px; min-width: 280px; min-height: 280px;">
+          <canvas id="profit-pie-chart" width="280" height="280" style="display: block;"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPLEMENTATION #1: Revenue Research -->
+    <section style="margin: 80px 0;">
+      <div style="border-top: 3px solid #D4AF37; padding-top: 30px; margin-bottom: 30px;">
+        <div style="display: inline-block; background: #F5A623; color: white; padding: 6px 16px; border-radius: 4px; font-weight: 600; font-size: 12px; letter-spacing: 1px; margin-right: 15px;">IMPLEMENTATION #1</div>
+        <h2 style="display: inline; font-size: 28px; font-weight: 600; color: #D4AF37; margin: 0;">Revenue Research</h2>
+      </div>
+
+      <div style="overflow-x: auto; margin: 30px 0;">
+        <table style="width: 100%; border-collapse: separate; border-spacing: 0; background: white; border-radius: 8px; overflow: hidden;">
+          <thead>
+            <tr style="background: #D4AF37;">
+              <th style="padding: 15px; text-align: left; font-weight: 600; color: white; border: none;">Revenue streams</th>
+              <th style="padding: 15px; text-align: center; font-weight: 600; color: white; border: none;">Total monthly revenue</th>
+              <th style="padding: 15px; text-align: center; font-weight: 600; color: white; border: none;">Practitioner</th>
+              <th style="padding: 15px; text-align: center; font-weight: 600; color: white; border: none;">Gross Monthly Profits</th>
+              <th style="padding: 15px; text-align: center; font-weight: 600; color: white; border: none;">Profit Margin</th>
+            </tr>
+          </thead>
+          <tbody id="revenue-table-body">
+            <!-- Rows will be populated by JavaScript -->
+          </tbody>
+        </table>
+        <button id="add-revenue-row" style="margin-top: 20px; padding: 12px 24px; background: white; border: 2px solid #D4AF37; border-radius: 6px; color: #D4AF37; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s;">+ Add Row</button>
+      </div>
+    </section>
+
+    <!-- Profit Center Goldmines -->
+    <section style="margin: 80px 0;">
+      <h2 style="font-size: 28px; font-weight: 600; color: #D4AF37; margin-bottom: 30px;">Profit Center Goldmines</h2>
+
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; border: 2px solid #D4AF37; background: white;">
+          <thead>
+            <tr style="background: #FFFBF0;">
+              <th style="border: 2px solid #D4AF37; padding: 15px; text-align: left; font-weight: 600; color: #D4AF37;">PCG</th>
+              <th style="border: 2px solid #D4AF37; padding: 15px; text-align: center; font-weight: 600; color: #D4AF37;">Multiplier #1</th>
+              <th style="border: 2px solid #D4AF37; padding: 15px; text-align: center; font-weight: 600; color: #D4AF37;">Multiplier #2</th>
+            </tr>
+          </thead>
+          <tbody id="pcg-table-body">
+            <tr>
+              <td style="border: 2px solid #D4AF37; padding: 15px;"><input type="text" style="width: 100%; border: none; background: transparent;"></td>
+              <td style="border: 2px solid #D4AF37; padding: 15px;"><input type="text" style="width: 100%; border: none; background: transparent; text-align: center;"></td>
+              <td style="border: 2px solid #D4AF37; padding: 15px;"><input type="text" style="width: 100%; border: none; background: transparent; text-align: center;"></td>
+            </tr>
+            <tr>
+              <td style="border: 2px solid #D4AF37; padding: 15px;"><input type="text" style="width: 100%; border: none; background: transparent;"></td>
+              <td style="border: 2px solid #D4AF37; padding: 15px;"><input type="text" style="width: 100%; border: none; background: transparent; text-align: center;"></td>
+              <td style="border: 2px solid #D4AF37; padding: 15px;"><input type="text" style="width: 100%; border: none; background: transparent; text-align: center;"></td>
+            </tr>
+            <tr>
+              <td style="border: 2px solid #D4AF37; padding: 15px;"><input type="text" style="width: 100%; border: none; background: transparent;"></td>
+              <td style="border: 2px solid #D4AF37; padding: 15px;"><input type="text" style="width: 100%; border: none; background: transparent; text-align: center;"></td>
+              <td style="border: 2px solid #D4AF37; padding: 15px;"><input type="text" style="width: 100%; border: none; background: transparent; text-align: center;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Overhead Expenses to be Cut -->
+    <section style="margin: 80px 0;">
+      <h2 style="font-size: 28px; font-weight: 600; color: #D4AF37; margin-bottom: 30px;">Overhead Expenses to be Cut</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+        <div class="overhead-expense-item" style="margin-bottom: 15px;">
+          <button class="category-point-reveal" data-target="overhead-expense-1" style="margin-bottom: 10px;">Reveal</button>
+          <div id="overhead-expense-1" class="category-point-content" style="display: none; border: 2px solid #D4AF37; border-radius: 8px; padding: 15px; background: #FFFBF0;">
+            <p style="font-weight: 600; color: #D4AF37; margin: 0;">Lease</p>
+          </div>
+        </div>
+        <div class="overhead-expense-item" style="margin-bottom: 15px;">
+          <button class="category-point-reveal" data-target="overhead-expense-2" style="margin-bottom: 10px;">Reveal</button>
+          <div id="overhead-expense-2" class="category-point-content" style="display: none; border: 2px solid #D4AF37; border-radius: 8px; padding: 15px; background: #FFFBF0;">
+            <p style="font-weight: 600; color: #D4AF37; margin: 0;">Software:</p>
+          </div>
+        </div>
+        <div class="overhead-expense-item" style="margin-bottom: 15px;">
+          <button class="category-point-reveal" data-target="overhead-expense-3" style="margin-bottom: 10px;">Reveal</button>
+          <div id="overhead-expense-3" class="category-point-content" style="display: none; border: 2px solid #D4AF37; border-radius: 8px; padding: 15px; background: #FFFBF0;">
+            <p style="font-weight: 600; color: #D4AF37; margin: 0;">ACH + CC fees (negotiate every 6 months)</p>
+          </div>
+        </div>
+        <div class="overhead-expense-item" style="margin-bottom: 15px;">
+          <button class="category-point-reveal" data-target="overhead-expense-4" style="margin-bottom: 10px;">Reveal</button>
+          <div id="overhead-expense-4" class="category-point-content" style="display: none; border: 2px solid #D4AF37; border-radius: 8px; padding: 15px; background: #FFFBF0;">
+            <p style="font-weight: 600; color: #D4AF37; margin: 0;">Software: marketing</p>
+          </div>
+        </div>
+        <div class="overhead-expense-item" style="margin-bottom: 15px;">
+          <button class="category-point-reveal" data-target="overhead-expense-5" style="margin-bottom: 10px;">Reveal</button>
+          <div id="overhead-expense-5" class="category-point-content" style="display: none; border: 2px solid #D4AF37; border-radius: 8px; padding: 15px; background: #FFFBF0;">
+            <p style="font-weight: 600; color: #D4AF37; margin: 0;">Admin</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day Navigation Footer -->
+    <div class="day-nav" style="margin-top: 60px;">
+      <a href="day3.html" class="day-nav-btn">← Day 3</a>
+      <div class="day-progress">Day 4 of 5</div>
+      <a href="day5.html" class="day-nav-btn">Day 5 →</a>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/day4.js"></script>
+</body>
+</html>

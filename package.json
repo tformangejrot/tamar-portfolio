@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "dev": "cd studio-grow-workbook && npx http-server -p 8000 -o",
+    "dev:workbook": "cd studio-grow-workbook && npx http-server -p 8000 -o"
+  },
   "dependencies": {
     "playwright": "^1.48.2"
   }

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 5: Iconic Retention - Studio Grow Workbook</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="day5-page">
+  <!-- Sidebar Toggle Button -->
+  <button id="sidebar-toggle" class="sidebar-toggle">Make It Happen Moments</button>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar-container">
+    <div class="sidebar-header">
+      <h3>Make It Happen Moments</h3>
+      <button id="sidebar-close" class="sidebar-close">&times;</button>
+    </div>
+    <div class="sidebar-content">
+      <textarea id="sidebar-notes" placeholder="Jot down your notes and insights throughout the workshop..."></textarea>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <nav class="header-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">50 New Members in 5 Days</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="intro.html">Intro</a></li>
+        <li><a href="day1.html">Day 1</a></li>
+        <li><a href="day2.html">Day 2</a></li>
+        <li><a href="day3.html">Day 3</a></li>
+        <li><a href="day4.html">Day 4</a></li>
+        <li><a href="day5.html" class="active">Day 5</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Day Badge and Title -->
+    <div style="text-align: center; margin: 40px 0 60px;">
+      <div style="display: inline-block; background: #FF6B35; color: white; padding: 8px 24px; border-radius: 4px; font-weight: 600; font-size: 14px; letter-spacing: 1px; margin-bottom: 20px;">DAY five</div>
+      <h1 style="font-size: 48px; font-weight: 700; color: #FF6B35; font-family: var(--font-heading); margin: 0;">Iconic <i>Retention</i></h1>
+    </div>
+
+    <!-- Day Navigation -->
+    <div class="day-nav">
+      <a href="day4.html" class="day-nav-btn">← Day 4</a>
+      <div class="day-progress">Day 5 of 5</div>
+      <a href="index.html" class="day-nav-btn">Home →</a>
+    </div>
+
+    <!-- Communication Strategies Grid -->
+    <section style="margin: 80px 0;">
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; background: white;">
+          <tbody>
+            <tr>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px; font-weight: 500;">Automations</td>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="comm-auto-sms">Reveal</button>
+                  <div id="comm-auto-sms" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">sms/WA</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="comm-auto-messenger">Reveal</button>
+                  <div id="comm-auto-messenger" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">Messenger</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="comm-auto-email">Reveal</button>
+                  <div id="comm-auto-email" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">Email</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px; font-weight: 500;">Personal touchpoint</td>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="comm-personal-sms">Reveal</button>
+                  <div id="comm-personal-sms" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">call</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="comm-personal-messenger">Reveal</button>
+                  <div id="comm-personal-messenger" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">handwritten note</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="comm-personal-email">Reveal</button>
+                  <div id="comm-personal-email" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">connection from instructor</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px; font-weight: 500;">In-studio communication</td>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="comm-studio-sms">Reveal</button>
+                  <div id="comm-studio-sms" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">scripted pre/post-class</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="comm-studio-messenger">Reveal</button>
+                  <div id="comm-studio-messenger" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">in-studio signage</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="comm-studio-email">Reveal</button>
+                  <div id="comm-studio-email" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">milestone board</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Engagement Question -->
+    <section style="margin: 80px 0;">
+      <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+        <div style="position: relative; flex: 0 0 auto;">
+          <div style="background: #FF6B35; padding: 20px 30px; border-radius: 20px; position: relative; max-width: 300px;">
+            <p style="color: white; font-weight: 600; font-size: 20px; margin: 0;">Are you engaged?</p>
+            <div style="position: absolute; left: -15px; bottom: 20px; width: 0; height: 0; border-style: solid; border-width: 15px 15px 15px 0; border-color: transparent #FF6B35 transparent transparent;"></div>
+          </div>
+        </div>
+        <div style="flex: 1; display: flex; gap: 20px; align-items: center;">
+          <div>
+            <label style="display: block; font-weight: 600; margin-bottom: 5px; color: var(--color-text);">Y</label>
+            <div style="border-bottom: 2px solid var(--color-border); width: 200px; height: 30px;"></div>
+          </div>
+          <div>
+            <label style="display: block; font-weight: 600; margin-bottom: 5px; color: var(--color-text);">C</label>
+            <div style="border-bottom: 2px solid var(--color-border); width: 200px; height: 30px;"></div>
+          </div>
+          <div>
+            <label style="display: block; font-weight: 600; margin-bottom: 5px; color: var(--color-text);">P</label>
+            <div style="border-bottom: 2px solid var(--color-border); width: 200px; height: 30px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maximizer Strategies Grid -->
+    <section style="margin: 80px 0;">
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; background: white;">
+          <thead>
+            <tr>
+              <th style="border: 1px solid #FF6B35; padding: 15px; text-align: left; font-weight: 600; color: var(--color-text); background: #FFF4F0;"></th>
+              <th style="border: 1px solid #FF6B35; padding: 15px; text-align: center; font-weight: 600; color: var(--color-text); background: #FFF4F0;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="maximizer-header-sms">Reveal</button>
+                  <div id="maximizer-header-sms" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text); font-weight: 600;">sms/whatsapp</p>
+                  </div>
+                </div>
+              </th>
+              <th style="border: 1px solid #FF6B35; padding: 15px; text-align: center; font-weight: 600; color: var(--color-text); background: #FFF4F0;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="maximizer-header-announcements">Reveal</button>
+                  <div id="maximizer-header-announcements" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text); font-weight: 600;">pre-scripted announcements sent to instructors in</p>
+                  </div>
+                </div>
+              </th>
+              <th style="border: 1px solid #FF6B35; padding: 15px; text-align: center; font-weight: 600; color: var(--color-text); background: #FFF4F0;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="maximizer-header-touchpoints">Reveal</button>
+                  <div id="maximizer-header-touchpoints" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text); font-weight: 600;">personal touchpoints</p>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid #FF6B35; padding: 15px; background: #FFF4F0; font-weight: 500;">Maximizer 1</td>
+              <td style="border: 1px solid #FF6B35; padding: 15px; background: #FFF4F0;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="maximizer1-sms">Reveal</button>
+                  <div id="maximizer1-sms" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">2 hours after member joins from owner</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid #FF6B35; padding: 15px; background: #FFF4F0;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="maximizer1-announcements">Reveal</button>
+                  <div id="maximizer1-announcements" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">retail/teacher training/workshops</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid #FF6B35; padding: 15px; background: #FFF4F0;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="maximizer1-touchpoints">Reveal</button>
+                  <div id="maximizer1-touchpoints" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">inbound callbacks</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #FF6B35; padding: 15px; background: #FFF4F0; font-weight: 500;">Maximizer 2</td>
+              <td style="border: 1px solid #FF6B35; padding: 15px; background: #FFF4F0;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="maximizer2-sms">Reveal</button>
+                  <div id="maximizer2-sms" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">non-usage, 8 week</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid #FF6B35; padding: 15px; background: #FFF4F0;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="maximizer2-announcements">Reveal</button>
+                  <div id="maximizer2-announcements" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">reiterate in-person signage</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid #FF6B35; padding: 15px; background: #FFF4F0;">
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="maximizer2-touchpoints">Reveal</button>
+                  <div id="maximizer2-touchpoints" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">outbound text pre-call</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- WOW Moments Section -->
+    <section style="margin: 80px 0;">
+      <div style="border-top: 2px solid var(--color-border); padding-top: 20px; margin-bottom: 20px;">
+        <h2 style="font-size: 24px; font-weight: 600; color: var(--color-text); margin: 0;">
+          W <span style="border-bottom: 2px solid var(--color-border); padding: 0 5px;">O</span> W moments
+        </h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+        <div class="category-point-item">
+          <button class="category-point-reveal" data-target="wow-1">Reveal</button>
+          <div id="wow-1" class="category-point-content" style="display: none;">
+            <p style="margin: 0; color: var(--color-text); font-weight: 500;">renewal simplification</p>
+          </div>
+        </div>
+        <div class="category-point-item">
+          <button class="category-point-reveal" data-target="wow-2">Reveal</button>
+          <div id="wow-2" class="category-point-content" style="display: none;">
+            <p style="margin: 0; color: var(--color-text); font-weight: 500;">class/private booking simple</p>
+          </div>
+        </div>
+        <div class="category-point-item">
+          <button class="category-point-reveal" data-target="wow-3">Reveal</button>
+          <div id="wow-3" class="category-point-content" style="display: none;">
+            <p style="margin: 0; color: var(--color-text); font-weight: 500;">vip options (e.g. early booking)</p>
+          </div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px;">
+        <div class="category-point-item">
+          <button class="category-point-reveal" data-target="wow-4">Reveal</button>
+          <div id="wow-4" class="category-point-content" style="display: none;">
+            <p style="margin: 0; color: var(--color-text); font-weight: 500;">reward top 10%</p>
+          </div>
+        </div>
+        <div class="category-point-item">
+          <button class="category-point-reveal" data-target="wow-5">Reveal</button>
+          <div id="wow-5" class="category-point-content" style="display: none;">
+            <p style="margin: 0; color: var(--color-text); font-weight: 500;">start with the customer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segments That Stick Section -->
+    <section style="margin: 80px 0;">
+      <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="#FF6B35">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        <h2 style="font-size: 28px; font-weight: 600; color: var(--color-text); margin: 0;">
+          S<span style="text-decoration: underline;">egments</span> That S<span style="text-decoration: underline;">tick</span>
+        </h2>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="#FF6B35">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; background: white;">
+          <thead>
+            <tr>
+              <th style="border: 1px solid var(--color-border); padding: 15px; text-align: center; font-weight: 600; color: var(--color-text); background: white;">BNM</th>
+              <th style="border: 1px solid var(--color-border); padding: 15px; text-align: center; font-weight: 600; color: var(--color-text); background: white;">14-day lapsed clients</th>
+              <th style="border: 1px solid var(--color-border); padding: 15px; text-align: center; font-weight: 600; color: var(--color-text); background: white;">90 days before renewal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item" style="margin-bottom: 10px;">
+                  <button class="category-point-reveal" data-target="segments-bnm-1">Reveal</button>
+                  <div id="segments-bnm-1" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">sms 2-hour</p>
+                  </div>
+                </div>
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="segments-bnm-2">Reveal</button>
+                  <div id="segments-bnm-2" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">starter kit (less than 20$)</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item" style="margin-bottom: 10px;">
+                  <button class="category-point-reveal" data-target="segments-14day-1">Reveal</button>
+                  <div id="segments-14day-1" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">auto: to student and you</p>
+                  </div>
+                </div>
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="segments-14day-2">Reveal</button>
+                  <div id="segments-14day-2" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">notes</p>
+                  </div>
+                </div>
+              </td>
+              <td style="border: 1px solid var(--color-border); padding: 15px; background: white; border-radius: 8px;">
+                <div class="category-point-item" style="margin-bottom: 10px;">
+                  <button class="category-point-reveal" data-target="segments-90day-1">Reveal</button>
+                  <div id="segments-90day-1" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">redo: intentional</p>
+                  </div>
+                </div>
+                <div class="category-point-item">
+                  <button class="category-point-reveal" data-target="segments-90day-2">Reveal</button>
+                  <div id="segments-90day-2" class="category-point-content" style="display: none;">
+                    <p style="margin: 0; color: var(--color-text);">gift</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- IMPLEMENTATION #1: Email Draft -->
+    <section style="margin: 80px 0;">
+      <div style="border-top: 3px solid #FF6B35; padding-top: 30px; margin-bottom: 30px;">
+        <h2 style="font-size: 28px; font-weight: 700; color: #FF6B35; margin-bottom: 15px; text-transform: uppercase;">IMPLEMENTATION #1</h2>
+        <p style="font-size: 16px; color: var(--color-text); margin-bottom: 10px;">inquired but no purchase or intro but no convert in past 3 years</p>
+        <p style="font-size: 16px; color: var(--color-text); margin-bottom: 30px;">7 word email: are you still interested in yoga/pilates/personal</p>
+      </div>
+
+      <div style="border: 2px solid #FF6B35; border-radius: 8px; padding: 30px; background: #FFF4F0;">
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label class="form-label" for="email-subject" style="font-size: 18px; font-weight: 600; color: var(--color-text); margin-bottom: 10px; display: block;">Subject Line:</label>
+          <input type="text" id="email-subject" class="form-input" placeholder="Enter email subject line" style="width: 100%; padding: 12px; border: 2px solid #FF6B35; border-radius: 6px; font-size: 16px;">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label class="form-label" for="email-body" style="font-size: 18px; font-weight: 600; color: var(--color-text); margin-bottom: 10px; display: block;">Email Body:</label>
+          <textarea id="email-body" class="form-textarea" style="width: 100%; min-height: 200px; padding: 15px; border: 2px solid #FF6B35; border-radius: 6px; font-size: 16px; line-height: 1.6; resize: vertical;" placeholder="Write your email body here..."></textarea>
+          <div style="text-align: right; margin-top: 5px;">
+            <span id="character-count" style="font-size: 12px; color: var(--color-text-light);">0 characters</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+          <button id="export-email" class="btn btn-primary" style="background: #FF6B35; color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-weight: 500;">Export Email</button>
+          <button id="copy-email" class="btn btn-secondary" style="background: #FF6B35; color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-weight: 500;">Copy to Clipboard</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day Navigation Footer -->
+    <div class="day-nav" style="margin-top: 60px;">
+      <a href="day4.html" class="day-nav-btn">← Day 4</a>
+      <div class="day-progress">Day 5 of 5</div>
+      <a href="index.html" class="day-nav-btn">Home →</a>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/day5.js"></script>
+</body>
+</html>

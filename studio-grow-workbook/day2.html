@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 2: Classical Conversion - Studio Grow Workbook</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body class="day2-page">
+  <!-- Sidebar Toggle Button -->
+  <button id="sidebar-toggle" class="sidebar-toggle">Make It Happen Moments</button>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar-container">
+    <div class="sidebar-header">
+      <h3>Make It Happen Moments</h3>
+      <button id="sidebar-close" class="sidebar-close">&times;</button>
+    </div>
+    <div class="sidebar-content">
+      <textarea id="sidebar-notes" placeholder="Jot down your notes and insights throughout the workshop..."></textarea>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <nav class="header-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">50 New Members in 5 Days</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="intro.html">Intro</a></li>
+        <li><a href="day1.html">Day 1</a></li>
+        <li><a href="day2.html" class="active">Day 2</a></li>
+        <li><a href="day3.html">Day 3</a></li>
+        <li><a href="day4.html">Day 4</a></li>
+        <li><a href="day5.html">Day 5</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header -->
+    <div style="display: flex; align-items: center; justify-content: space-between; margin: 40px 0 60px;">
+      <div style="background: #04CBC2; background: var(--color-accent-teal, #04CBC2); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 18px;">DAY Two</div>
+      <h1 style="font-family: Georgia, serif; font-size: 56px; color: #04CBC2; color: var(--color-accent-teal, #04CBC2); font-weight: 600; margin: 0; flex: 1; text-align: center;">Classical <span style="font-style: italic;">Conversion</span></h1>
+      <div style="width: 150px;"></div>
+    </div>
+
+    <!-- Day Navigation -->
+    <div class="day-nav">
+      <a href="day1.html" class="day-nav-btn">← Day 1</a>
+      <div class="day-progress">Day 2 of 5</div>
+      <a href="day3.html" class="day-nav-btn">Day 3 →</a>
+    </div>
+
+    <!-- Conversion Funnel Builder -->
+    <section style="margin: 60px 0;">
+      <h2 style="font-size: 36px; font-weight: 600; color: var(--color-text); margin-bottom: 30px;">Build Your Conversion Funnel</h2>
+      <p style="font-size: 18px; color: var(--color-text-light); margin-bottom: 40px;">Use the buttons below to reveal each step's information.</p>
+
+      <!-- Timeline Layout (like homepage) -->
+      <div style="position: relative; margin: 60px 0; padding-left: 80px;">
+        <!-- Vertical timeline line -->
+        <div style="position: absolute; left: 60px; top: 0; bottom: 0; width: 4px; background: #04CBC2; background: var(--color-accent-teal, #04CBC2);"></div>
+        
+        <!-- Step 1: Discovery -->
+        <div class="funnel-step-timeline" data-step="discovery" style="margin-bottom: 80px; position: relative; z-index: 2;">
+          <div style="display: flex; align-items: flex-start; gap: 30px;">
+            <div style="flex-shrink: 0;">
+              <div style="background: #04CBC2; background: var(--color-accent-teal, #04CBC2); color: white; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; text-transform: uppercase; margin-bottom: 20px; width: 120px; text-align: center;">
+                STEP <span style="font-style: italic; font-weight: 400;">one</span>
+              </div>
+              <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #04CBC2, #03A39C); border: 4px solid white; box-shadow: 0 4px 12px rgba(4, 203, 194, 0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; font-weight: 700;">
+                1
+              </div>
+            </div>
+            <div style="flex: 1; padding-top: 10px;">
+              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                <div style="height: 2px; flex: 1; max-width: 200px; background: #04CBC2; background: var(--color-accent-teal, #04CBC2);"></div>
+              </div>
+              <div class="funnel-reveal-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <button class="reveal-btn" data-step="discovery" data-type="name" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Name</button>
+                <button class="reveal-btn" data-step="discovery" data-type="places" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Places</button>
+                <button class="reveal-btn" data-step="discovery" data-type="stages" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Stages</button>
+                <button class="reveal-btn" data-step="discovery" data-type="description" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Description</button>
+              </div>
+              <div class="funnel-revealed-content" data-step="discovery">
+                <div class="revealed-name" style="display: none; margin-bottom: 15px;">
+                  <h3 style="font-family: Georgia, serif; font-size: 36px; color: #04CBC2; color: var(--color-accent-teal, #04CBC2); font-weight: 600;">Discovery</h3>
+                </div>
+                <div class="revealed-places" style="display: none; margin-bottom: 15px;">
+                  <p style="font-size: 14px; font-weight: 600; color: #04CBC2; text-decoration: underline;">Places (IG, TikTok, Google, local)</p>
+                </div>
+                <div class="revealed-stages" style="display: none; margin-bottom: 15px;">
+                  <p style="font-size: 14px; font-weight: 600; color: #04CBC2; text-decoration: underline;">Stages (Gen Z, 45-yo mom)</p>
+                </div>
+                <div class="revealed-description" style="display: none;">
+                  <div style="font-size: 14px; line-height: 1.8; color: var(--color-text);">
+                    <p style="margin-bottom: 10px;">1. Signage: Windows, door, banners, yard signs ("a yogi lives here"), flags, and air dancers</p>
+                    <p>2. Digital channels: Google, Facebook, Instagram, WhatsApp, YouTube, TikTok, LinkedIn, plus internal and external signage, referrals, email/SMS, local events, corporate partnerships, and direct mail</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Investigation -->
+        <div class="funnel-step-timeline" data-step="investigation" style="margin-bottom: 80px; position: relative; z-index: 2;">
+          <div style="display: flex; align-items: flex-start; gap: 30px;">
+            <div style="flex-shrink: 0;">
+              <div style="background: #04CBC2; background: var(--color-accent-teal, #04CBC2); color: white; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; text-transform: uppercase; margin-bottom: 20px; width: 120px; text-align: center;">
+                STEP <span style="font-style: italic; font-weight: 400;">two</span>
+              </div>
+              <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #04CBC2, #03A39C); border: 4px solid white; box-shadow: 0 4px 12px rgba(4, 203, 194, 0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; font-weight: 700;">
+                2
+              </div>
+            </div>
+            <div style="flex: 1; padding-top: 10px;">
+              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                <div style="height: 2px; flex: 1; max-width: 200px; background: #04CBC2; background: var(--color-accent-teal, #04CBC2);"></div>
+              </div>
+              <div class="funnel-reveal-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <button class="reveal-btn" data-step="investigation" data-type="name" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Name</button>
+                <button class="reveal-btn" data-step="investigation" data-type="places" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Places</button>
+                <button class="reveal-btn" data-step="investigation" data-type="stages" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Stages</button>
+                <button class="reveal-btn" data-step="investigation" data-type="description" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Description</button>
+              </div>
+              <div class="funnel-revealed-content" data-step="investigation">
+                <div class="revealed-name" style="display: none; margin-bottom: 15px;">
+                  <h3 style="font-family: Georgia, serif; font-size: 36px; color: #04CBC2; color: var(--color-accent-teal, #04CBC2); font-weight: 600;">Investigation</h3>
+                </div>
+                <div class="revealed-places" style="display: none; margin-bottom: 15px;">
+                  <p style="font-size: 14px; font-weight: 600; color: #04CBC2; text-decoration: underline;">Places (Google reviews, Social, website)</p>
+                </div>
+                <div class="revealed-stages" style="display: none; margin-bottom: 15px;">
+                  <p style="font-size: 14px; font-weight: 600; color: #04CBC2; text-decoration: underline;">Stage</p>
+                </div>
+                <div class="revealed-description" style="display: none;">
+                  <div style="font-size: 14px; line-height: 1.8; color: var(--color-text);">
+                    <p style="margin-bottom: 10px; font-weight: 600;">Google Reviews: 250+ (Once you reach this milestone, you can typically reduce your marketing budget by half)</p>
+                    <p style="margin-bottom: 10px;">1. Back of front door: "Hey, if it's been a great session, would you mind scanning that QR code and leaving us a review? Tell us what you loved the most!"</p>
+                    <p>2. Include review request in your intro pack</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Lead Phase -->
+        <div class="funnel-step-timeline" data-step="lead-phase" style="margin-bottom: 80px; position: relative; z-index: 2;">
+          <div style="display: flex; align-items: flex-start; gap: 30px;">
+            <div style="flex-shrink: 0;">
+              <div style="background: #04CBC2; background: var(--color-accent-teal, #04CBC2); color: white; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; text-transform: uppercase; margin-bottom: 20px; width: 120px; text-align: center;">
+                STEP <span style="font-style: italic; font-weight: 400;">three</span>
+              </div>
+              <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #04CBC2, #03A39C); border: 4px solid white; box-shadow: 0 4px 12px rgba(4, 203, 194, 0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; font-weight: 700;">
+                3
+              </div>
+            </div>
+            <div style="flex: 1; padding-top: 10px;">
+              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                <div style="height: 2px; flex: 1; max-width: 200px; background: #04CBC2; background: var(--color-accent-teal, #04CBC2);"></div>
+              </div>
+              <div class="funnel-reveal-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <button class="reveal-btn" data-step="lead-phase" data-type="name" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Name</button>
+                <button class="reveal-btn" data-step="lead-phase" data-type="places" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Places</button>
+                <button class="reveal-btn" data-step="lead-phase" data-type="description" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Description</button>
+              </div>
+              <div class="funnel-revealed-content" data-step="lead-phase">
+                <div class="revealed-name" style="display: none; margin-bottom: 15px;">
+                  <h3 style="font-family: Georgia, serif; font-size: 36px; color: #04CBC2; color: var(--color-accent-teal, #04CBC2); font-weight: 600;">Lead Phase</h3>
+                </div>
+                <div class="revealed-places" style="display: none; margin-bottom: 15px;">
+                  <p style="font-size: 14px; font-weight: 600; color: #04CBC2; text-decoration: underline;">Places (website, contact, DM, account)</p>
+                  <p style="font-size: 14px; font-weight: 600; color: var(--color-text);">Capture: Name, email, phone</p>
+                </div>
+                <div class="revealed-description" style="display: none;">
+                  <div style="font-size: 14px; line-height: 1.8; color: var(--color-text);">
+                    <p style="margin-bottom: 10px; font-weight: 600;">Follow-up sequence:</p>
+                    <p style="margin-bottom: 5px;">1. Initial invitation: "I would love to invite you in / have you book a class..."</p>
+                    <p style="margin-bottom: 5px;">2. (5 minutes later) SMS/WhatsApp with the same information</p>
+                    <p style="margin-bottom: 5px;">3. (1 day later) Offer a very specific time slot (via email or SMS)</p>
+                    <p style="margin-bottom: 5px;">4. Send FAQs about the intro package</p>
+                    <p style="margin-bottom: 5px;">5. Share success stories</p>
+                    <p>6. Send two additional follow-up messages</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conversion Percentages Below Step 3 -->
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 30px; margin-bottom: 80px; margin-left: 150px; flex-wrap: wrap;">
+          <div class="conversion-field" data-location="lead-phase" data-type="traditional" style="position: relative;">
+            <div class="conversion-field-cover">
+              <span style="font-size: 14px; color: var(--color-text);">traditional conversion %: _____</span>
+            </div>
+            <div class="conversion-field-content" style="display: none;">
+              <span style="font-size: 14px; color: var(--color-text);">traditional conversion %: </span>
+              <span style="font-size: 14px; color: var(--color-text); font-weight: 600;">18%</span>
+            </div>
+          </div>
+          <div class="conversion-field" data-location="lead-phase" data-type="studio-grow" style="position: relative;">
+            <div class="conversion-field-cover">
+              <span style="font-size: 14px; color: var(--color-text);">Studio Grow conversion %: _____</span>
+            </div>
+            <div class="conversion-field-content" style="display: none;">
+              <span style="font-size: 14px; color: var(--color-text);">Studio Grow conversion %: </span>
+              <span style="font-size: 14px; color: var(--color-text); font-weight: 600;">41%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Intro Package -->
+        <div class="funnel-step-timeline" data-step="intro-package" style="margin-bottom: 80px; position: relative; z-index: 2;">
+          <div style="display: flex; align-items: flex-start; gap: 30px;">
+            <div style="flex-shrink: 0;">
+              <div style="background: #04CBC2; background: var(--color-accent-teal, #04CBC2); color: white; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; text-transform: uppercase; margin-bottom: 20px; width: 120px; text-align: center;">
+                STEP <span style="font-style: italic; font-weight: 400;">four</span>
+              </div>
+              <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #04CBC2, #03A39C); border: 4px solid white; box-shadow: 0 4px 12px rgba(4, 203, 194, 0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; font-weight: 700;">
+                4
+              </div>
+            </div>
+            <div style="flex: 1; padding-top: 10px;">
+              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                <div style="height: 2px; flex: 1; max-width: 200px; background: #04CBC2; background: var(--color-accent-teal, #04CBC2);"></div>
+              </div>
+              <div class="funnel-reveal-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <button class="reveal-btn" data-step="intro-package" data-type="name" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Name</button>
+                <button class="reveal-btn" data-step="intro-package" data-type="places" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Places</button>
+                <button class="reveal-btn" data-step="intro-package" data-type="description" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Description</button>
+              </div>
+              <div class="funnel-revealed-content" data-step="intro-package">
+                <div class="revealed-name" style="display: none; margin-bottom: 15px;">
+                  <h3 style="font-family: Georgia, serif; font-size: 36px; color: #04CBC2; color: var(--color-accent-teal, #04CBC2); font-weight: 600;">Intro <span style="font-style: italic;">Package</span></h3>
+                </div>
+                <div class="revealed-places" style="display: none; margin-bottom: 15px;">
+                  <p style="font-size: 14px; font-weight: 600; color: #04CBC2; text-decoration: underline;">Places (social, GMB, website, ads)</p>
+                </div>
+                <div class="revealed-description" style="display: none;">
+                  <div style="font-size: 14px; line-height: 1.8; color: var(--color-text);">
+                    <p style="margin-bottom: 10px;">1. Web/landing page - set clear expectations</p>
+                    <p style="margin-bottom: 10px;">2. Thank you page/email/SMS/WhatsApp confirmation</p>
+                    <p style="margin-bottom: 10px; font-weight: 600;">Website/landing page must answer:</p>
+                    <p style="margin-bottom: 5px;">1. How much does it cost?</p>
+                    <p style="margin-bottom: 5px;">2. How regularly should I attend?</p>
+                    <p style="margin-bottom: 5px;">3. What should I expect from my first session?</p>
+                    <p>4. When will you be chatting with me? (This is non-negotiable - it's part of our process)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5: Pre Session -->
+        <div class="funnel-step-timeline" data-step="pre-session" style="margin-bottom: 80px; position: relative; z-index: 2;">
+          <div style="display: flex; align-items: flex-start; gap: 30px;">
+            <div style="flex-shrink: 0;">
+              <div style="background: #04CBC2; background: var(--color-accent-teal, #04CBC2); color: white; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; text-transform: uppercase; margin-bottom: 20px; width: 120px; text-align: center;">
+                STEP <span style="font-style: italic; font-weight: 400;">five</span>
+              </div>
+              <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #04CBC2, #03A39C); border: 4px solid white; box-shadow: 0 4px 12px rgba(4, 203, 194, 0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; font-weight: 700;">
+                5
+              </div>
+            </div>
+            <div style="flex: 1; padding-top: 10px;">
+              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                <div style="height: 2px; flex: 1; max-width: 200px; background: #04CBC2; background: var(--color-accent-teal, #04CBC2);"></div>
+              </div>
+              <div class="funnel-reveal-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <button class="reveal-btn" data-step="pre-session" data-type="name" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Name</button>
+                <button class="reveal-btn" data-step="pre-session" data-type="places" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Places</button>
+                <button class="reveal-btn" data-step="pre-session" data-type="description" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Description</button>
+              </div>
+              <div class="funnel-revealed-content" data-step="pre-session">
+                <div class="revealed-name" style="display: none; margin-bottom: 15px;">
+                  <h3 style="font-family: Georgia, serif; font-size: 36px; color: #04CBC2; color: var(--color-accent-teal, #04CBC2); font-weight: 600;">Pre Session</h3>
+                </div>
+                <div class="revealed-places" style="display: none; margin-bottom: 15px;">
+                  <p style="font-size: 14px; font-weight: 600; color: #04CBC2; text-decoration: underline;">Places (in studio)</p>
+                </div>
+                <div class="revealed-description" style="display: none;">
+                  <div style="font-size: 14px; line-height: 1.8; color: var(--color-text);">
+                    <p style="margin-bottom: 10px;">1. Confirm their first session (ideally from the teacher or the front desk person that day)</p>
+                    <p style="margin-bottom: 10px;">2. Gain confidence, reduce anxiety</p>
+                    <p style="margin-bottom: 10px;">3. Signage</p>
+                    <p>4. Leave a note or share with instructors who is coming in for first time</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 6: During Session -->
+        <div class="funnel-step-timeline" data-step="during-session" style="margin-bottom: 80px; position: relative; z-index: 2;">
+          <div style="display: flex; align-items: flex-start; gap: 30px;">
+            <div style="flex-shrink: 0;">
+              <div style="background: #04CBC2; background: var(--color-accent-teal, #04CBC2); color: white; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; text-transform: uppercase; margin-bottom: 20px; width: 120px; text-align: center;">
+                STEP <span style="font-style: italic; font-weight: 400;">six</span>
+              </div>
+              <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #04CBC2, #03A39C); border: 4px solid white; box-shadow: 0 4px 12px rgba(4, 203, 194, 0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; font-weight: 700;">
+                6
+              </div>
+            </div>
+            <div style="flex: 1; padding-top: 10px;">
+              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                <div style="height: 2px; flex: 1; max-width: 200px; background: #04CBC2; background: var(--color-accent-teal, #04CBC2);"></div>
+              </div>
+              <div class="funnel-reveal-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <button class="reveal-btn" data-step="during-session" data-type="name" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Name</button>
+                <button class="reveal-btn" data-step="during-session" data-type="description" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Description</button>
+              </div>
+              <div class="funnel-revealed-content" data-step="during-session">
+                <div class="revealed-name" style="display: none; margin-bottom: 15px;">
+                  <h3 style="font-family: Georgia, serif; font-size: 36px; color: #04CBC2; color: var(--color-accent-teal, #04CBC2); font-weight: 600;">During Session</h3>
+                </div>
+                <div class="revealed-description" style="display: none;">
+                  <div style="font-size: 14px; line-height: 1.8; color: var(--color-text);">
+                    <p style="margin-bottom: 10px; font-weight: 600;">Recognizable:</p>
+                    <p style="margin-bottom: 5px;">1. Colored mat</p>
+                    <p style="margin-bottom: 5px;">2. Crystal or rock at their place</p>
+                    <p style="margin-bottom: 15px;">3. Set up for them</p>
+                    <p style="font-weight: 600;">Name: Pull a photo from IG/FB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 7: Post Session -->
+        <div class="funnel-step-timeline" data-step="post-session" style="margin-bottom: 80px; position: relative; z-index: 2;">
+          <div style="display: flex; align-items: flex-start; gap: 30px;">
+            <div style="flex-shrink: 0;">
+              <div style="background: #04CBC2; background: var(--color-accent-teal, #04CBC2); color: white; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; text-transform: uppercase; margin-bottom: 20px; width: 120px; text-align: center;">
+                STEP <span style="font-style: italic; font-weight: 400;">seven</span>
+              </div>
+              <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #04CBC2, #03A39C); border: 4px solid white; box-shadow: 0 4px 12px rgba(4, 203, 194, 0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; font-weight: 700;">
+                7
+              </div>
+            </div>
+            <div style="flex: 1; padding-top: 10px;">
+              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                <div style="height: 2px; flex: 1; max-width: 200px; background: #04CBC2; background: var(--color-accent-teal, #04CBC2);"></div>
+              </div>
+              <div class="funnel-reveal-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <button class="reveal-btn" data-step="post-session" data-type="name" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Name</button>
+                <button class="reveal-btn" data-step="post-session" data-type="places" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Places</button>
+                <button class="reveal-btn" data-step="post-session" data-type="description" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Description</button>
+              </div>
+              <div class="funnel-revealed-content" data-step="post-session">
+                <div class="revealed-name" style="display: none; margin-bottom: 15px;">
+                  <h3 style="font-family: Georgia, serif; font-size: 36px; color: #04CBC2; color: var(--color-accent-teal, #04CBC2); font-weight: 600;">Post Session</h3>
+                </div>
+                <div class="revealed-places" style="display: none; margin-bottom: 15px;">
+                  <p style="font-size: 14px; font-weight: 600; color: #04CBC2; text-decoration: underline;">Places (lobby, front desk)</p>
+                </div>
+                <div class="revealed-description" style="display: none;">
+                  <div style="font-size: 14px; line-height: 1.8; color: var(--color-text);">
+                    <p style="margin-bottom: 10px; font-style: italic;">No one asked how it was</p>
+                    <p style="margin-bottom: 5px;">1. Post session in studio</p>
+                    <p style="margin-bottom: 5px;">2. Between first session and intake (1:1):</p>
+                    <div style="margin-left: 20px; margin-bottom: 10px;">
+                      <p style="margin-bottom: 5px;">a. Feeling great: beeline, check-in: how it went, do they have next session booked and if any questions</p>
+                      <p style="margin-bottom: 5px;">b. Front desk: follow-through; Google Review</p>
+                    </div>
+                    <p style="margin-bottom: 5px;">3. Text: asks how they're doing</p>
+                    <p>4. FAQ/humanistic emails</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conversion Percentages Between Post Session and New Member -->
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 30px; margin-bottom: 80px; margin-left: 150px; flex-wrap: wrap;">
+          <div class="conversion-field" data-location="post-session" data-type="traditional" style="position: relative;">
+            <div class="conversion-field-cover">
+              <span style="font-size: 14px; color: var(--color-text);">traditional conversion %: _____</span>
+            </div>
+            <div class="conversion-field-content" style="display: none;">
+              <span style="font-size: 14px; color: var(--color-text);">traditional conversion %: 5-15%</span>
+            </div>
+          </div>
+          <div class="conversion-field" data-location="post-session" data-type="studio-grow" style="position: relative;">
+            <div class="conversion-field-cover">
+              <span style="font-size: 14px; color: var(--color-text);">Studio Grow conversion %: _____</span>
+            </div>
+            <div class="conversion-field-content" style="display: none;">
+              <span style="font-size: 14px; color: var(--color-text);">Studio Grow conversion %: 56%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 8: New Member -->
+        <div class="funnel-step-timeline" data-step="new-member" style="margin-bottom: 80px; position: relative; z-index: 2;">
+          <div style="display: flex; align-items: flex-start; gap: 30px;">
+            <div style="flex-shrink: 0;">
+              <div style="background: #04CBC2; background: var(--color-accent-teal, #04CBC2); color: white; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; text-transform: uppercase; margin-bottom: 20px; width: 120px; text-align: center;">
+                STEP <span style="font-style: italic; font-weight: 400;">eight</span>
+              </div>
+              <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #04CBC2, #03A39C); border: 4px solid white; box-shadow: 0 4px 12px rgba(4, 203, 194, 0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; font-weight: 700;">
+                8
+              </div>
+            </div>
+            <div style="flex: 1; padding-top: 10px;">
+              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                <div style="height: 2px; flex: 1; max-width: 200px; background: #04CBC2; background: var(--color-accent-teal, #04CBC2);"></div>
+              </div>
+              <div class="funnel-reveal-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <button class="reveal-btn" data-step="new-member" data-type="name" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Name</button>
+                <button class="reveal-btn" data-step="new-member" data-type="places" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Places</button>
+                <button class="reveal-btn" data-step="new-member" data-type="description" style="padding: 8px 16px; background: #04CBC2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;">Reveal Description</button>
+              </div>
+              <div class="funnel-revealed-content" data-step="new-member">
+                <div class="revealed-name" style="display: none; margin-bottom: 15px;">
+                  <h3 style="font-family: Georgia, serif; font-size: 36px; color: #04CBC2; color: var(--color-accent-teal, #04CBC2); font-weight: 600;">New Member</h3>
+                </div>
+                <div class="revealed-places" style="display: none; margin-bottom: 15px;">
+                  <p style="font-size: 14px; font-weight: 600; color: #04CBC2; text-decoration: underline;">Places (zoom, phone, text, in studio)</p>
+                </div>
+                <div class="revealed-description" style="display: none;">
+                  <div style="font-size: 14px; line-height: 1.8; color: var(--color-text);">
+                    <p style="margin-bottom: 10px; font-weight: 600;">"I want to do everything in my power to make this a success for you"</p>
+                    <p style="margin-bottom: 10px; font-weight: 600;">Referrals: POS: 3 referrals</p>
+                    <p style="margin-bottom: 10px;">"I want you to be successful and the best way to do that is to bring someone along. I've set aside 2 or 3 introductory packages for you. Who would you like to bring along?"</p>
+                    <p>To friend: "Would you like to come support them?"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Monthly Targets Calculator -->
+    <section style="margin: 80px 0;">
+      <h2 style="font-size: 36px; font-weight: 600; color: #04CBC2; color: var(--color-accent-teal, #04CBC2); margin-bottom: 30px;">Calculate Your Monthly Targets</h2>
+      <p style="font-size: 18px; color: var(--color-text-light); margin-bottom: 40px;">Select your high and low months, then input your target average monthly members to calculate targets for the full year.</p>
+
+      <div class="calculator-container" style="margin-bottom: 40px;">
+        <div class="form-group" style="margin-bottom: 30px;">
+          <label class="form-label" for="average-members" style="font-size: 18px; font-weight: 600; color: var(--color-text); margin-bottom: 15px; display: block;">Target Number of Members for Average Month:</label>
+          <input type="number" id="average-members" class="form-input" min="1" placeholder="Enter target members" style="max-width: 300px; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px;">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 30px;">
+          <label class="form-label" style="font-size: 18px; font-weight: 600; color: var(--color-text); margin-bottom: 15px; display: block;">Select 2 High Months:</label>
+          <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 15px;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="may" data-type="high">
+              <span style="font-weight: 500;">May</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="june" data-type="high">
+              <span style="font-weight: 500;">Jun</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="july" data-type="high">
+              <span style="font-weight: 500;">Jul</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="august" data-type="high">
+              <span style="font-weight: 500;">Aug</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="september" data-type="high">
+              <span style="font-weight: 500;">Sep</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="october" data-type="high">
+              <span style="font-weight: 500;">Oct</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="november" data-type="high">
+              <span style="font-weight: 500;">Nov</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="december" data-type="high">
+              <span style="font-weight: 500;">Dec</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="january" data-type="high">
+              <span style="font-weight: 500;">Jan</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="february" data-type="high">
+              <span style="font-weight: 500;">Feb</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="march" data-type="high">
+              <span style="font-weight: 500;">Mar</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="april" data-type="high">
+              <span style="font-weight: 500;">Apr</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 30px;">
+          <label class="form-label" style="font-size: 18px; font-weight: 600; color: var(--color-text); margin-bottom: 15px; display: block;">Select 2 Low Months:</label>
+          <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 15px;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="may" data-type="low">
+              <span style="font-weight: 500;">May</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="june" data-type="low">
+              <span style="font-weight: 500;">Jun</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="july" data-type="low">
+              <span style="font-weight: 500;">Jul</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="august" data-type="low">
+              <span style="font-weight: 500;">Aug</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="september" data-type="low">
+              <span style="font-weight: 500;">Sep</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="october" data-type="low">
+              <span style="font-weight: 500;">Oct</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="november" data-type="low">
+              <span style="font-weight: 500;">Nov</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="december" data-type="low">
+              <span style="font-weight: 500;">Dec</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="january" data-type="low">
+              <span style="font-weight: 500;">Jan</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="february" data-type="low">
+              <span style="font-weight: 500;">Feb</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="march" data-type="low">
+              <span style="font-weight: 500;">Mar</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px; background: white; border: 2px solid #e0e0e0; border-radius: 8px; transition: all 0.2s ease;" class="month-label">
+              <input type="checkbox" class="month-checkbox" data-month="april" data-type="low">
+              <span style="font-weight: 500;">Apr</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 30px;">
+          <label class="form-label" style="font-size: 18px; font-weight: 600; color: var(--color-text); margin-bottom: 15px; display: block;">Lead to Intro Conversion Rate: <span id="lead-to-intro-display" style="color: #04CBC2; color: var(--color-accent-teal, #04CBC2);">45%</span></label>
+          <input type="range" id="lead-to-intro-rate" class="form-input" min="0" max="100" value="45" step="1" style="max-width: 400px;">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 30px;">
+          <label class="form-label" style="font-size: 18px; font-weight: 600; color: var(--color-text); margin-bottom: 15px; display: block;">Intro to Member Conversion Rate: <span id="intro-to-member-display" style="color: #04CBC2; color: var(--color-accent-teal, #04CBC2);">50%</span></label>
+          <input type="range" id="intro-to-member-rate" class="form-input" min="0" max="100" value="50" step="1" style="max-width: 400px;">
+        </div>
+      </div>
+
+      <!-- Full Calendar Table -->
+      <div id="monthly-calendar-table" style="overflow-x: auto; margin-top: 40px;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 1200px;">
+          <thead>
+            <tr>
+              <th style="background: #04CBC2; background: var(--color-accent-teal, #04CBC2); color: white; padding: 12px; text-align: left; font-weight: 600; border: 1px solid #04CBC2;">Category</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">JAN</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">FEB</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">MAR</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">APR</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">MAY</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">JUNE</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">JULY</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">AUG</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">SEP</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">OCT</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">NOV</th>
+              <th style="background: #E8F5E9; color: var(--color-text); padding: 12px; text-align: center; font-weight: 600; border: 1px solid #BDBDBD;">DEC</th>
+              <th style="background: #04CBC2; background: var(--color-accent-teal, #04CBC2); color: white; padding: 12px; text-align: center; font-weight: 600; border: 1px solid #04CBC2;">TOTAL</th>
+            </tr>
+          </thead>
+          <tbody id="calendar-table-body">
+            <!-- Table rows will be generated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Day Navigation Footer -->
+    <div class="day-nav" style="margin-top: 60px;">
+      <a href="day1.html" class="day-nav-btn">← Day 1</a>
+      <div class="day-progress">Day 2 of 5</div>
+      <a href="day3.html" class="day-nav-btn">Day 3 →</a>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/day2.js"></script>
+</body>
+</html>
