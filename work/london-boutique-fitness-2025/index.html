@@ -1114,11 +1114,12 @@
           mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
         }
       }
-    } catch (error) {
-      console.warn('Map initialization failed:', error);
-      const mapElement = document.getElementById('map');
-      if (mapElement) {
-        mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
+      } catch (error) {
+        console.warn('Map initialization failed:', error);
+        const mapElement = document.getElementById('map');
+        if (mapElement) {
+          mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
+        }
       }
     }
 
