@@ -95,6 +95,11 @@ async function main() {
       const date = new Date(studio.estimated_opening_date);
       if (!isNaN(date.getTime())) {
         let year = date.getFullYear();
+        // Filter out dates before 2000 - boutique fitness is a recent phenomenon
+        // and dates before 2000 are likely invalid WHOIS data or platform defaults
+        if (year < 2000) {
+          return; // Skip this studio's date
+        }
         // Adjust for Nov/Dec domain registrations
         if (studio.opening_date_source === 'whois_domain_creation') {
           year = adjustYearForDomainRegistration(year, date.getMonth());
