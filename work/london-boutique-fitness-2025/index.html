@@ -1015,10 +1015,13 @@
         totalEl.textContent = stats.totalBoutiqueStudios || 0;
       }
       
-      // Recent openings (2024-2025)
+      // Recent openings (2024-2025) - show as percentage
       const recentEl = document.getElementById('stat-recent');
       if (recentEl) {
-        recentEl.textContent = stats.totalNewStudios || 0;
+        const total = stats.totalBoutiqueStudios || 0;
+        const recent = stats.totalNewStudios || 0;
+        const pct = total > 0 ? ((recent / total) * 100).toFixed(1) : 0;
+        recentEl.textContent = `${pct}%`;
       }
       
       // Modality categories
@@ -1027,12 +1030,14 @@
         modalitiesEl.textContent = stats.totalModalityCategories || modalities.length || 0;
       }
       
-      // Top modality
+      // Top modality - show as percentage
       const topModalityEl = document.getElementById('stat-top-modality');
       const topModalityLabelEl = document.getElementById('stat-top-modality-label');
       if (topModalityEl && modalities.length > 0) {
         const topModality = modalities[0];
-        topModalityEl.textContent = topModality.count || 0;
+        const total = stats.totalBoutiqueStudios || 0;
+        const pct = total > 0 ? parseFloat(topModality.pct || 0) : 0;
+        topModalityEl.textContent = `${pct}%`;
         if (topModalityLabelEl) {
           const modalityName = topModality.modality.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
           topModalityLabelEl.textContent = `Top Modality: ${modalityName}`;
