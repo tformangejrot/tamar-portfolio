@@ -603,17 +603,55 @@
     // Chart initialization functions
     const chartInitFunctions = {};
 
+    // Data loading function
+    async function loadData() {
+      try {
+        const basePath = '../../data/aggregates/london/';
+        
+        const [modalityData, newModalityData, yearData, boroughData, statsData, growthData, chainsData] = await Promise.all([
+          fetch(`${basePath}modality_mix.json`).then(r => r.json()),
+          fetch(`${basePath}recent_new_modalities.json`).then(r => r.json()),
+          fetch(`${basePath}growth_over_time.json`).then(r => r.json()),
+          fetch(`${basePath}borough_distribution.json`).then(r => r.json()),
+          fetch(`${basePath}overall_stats.json`).then(r => r.json()),
+          fetch(`${basePath}recent_growth_rate.json`).then(r => r.json()),
+          fetch(`${basePath}chains_vs_single_location.json`).then(r => r.json())
+        ]);
+
+        // Populate global data variables
+        window.modalities = modalityData;
+        window.newModalities = newModalityData;
+        window.yearData = yearData;
+        window.boroughData = boroughData;
+        window.stats = statsData;
+        window.growthData = growthData;
+        window.chainsData = chainsData;
+        window.totalNewStudios = statsData.totalNewStudios || 0;
+
+        // Initialize all charts after data is loaded
+        initializeAllCharts();
+        initializeMap();
+      } catch (error) {
+        console.error('Error loading data:', error);
+        // Fallback to empty data
+        window.modalities = [];
+        window.newModalities = [];
+        window.yearData = [];
+        window.boroughData = [];
+        window.stats = {};
+        window.growthData = [];
+        window.totalNewStudios = 0;
+        initializeAllCharts();
+      }
+    }
+
     // 1. Modality Chart - Data will be loaded from aggregates
-    // Placeholder data - will be replaced when aggregates are computed
-    const modalities = [
-      // Data will be populated from london_aggregates.json
-    ];
-
-    const modalityLabels = modalities.map(m => m.modality.replace(/-/g, ' '));
-    const modalityCounts = modalities.map(m => m.count);
-    const modalityPcts = modalities.map(m => m.pct);
-
     chartInitFunctions['modalityChart'] = function() {
+      const modalities = window.modalities || [];
+      const modalityLabels = modalities.map(m => m.modality.replace(/-/g, ' '));
+      const modalityCounts = modalities.map(m => m.count);
+      const modalityPcts = modalities.map(m => m.pct);
+
       const modalityCtx = document.getElementById('modalityChart').getContext('2d');
       const modalityGradient = modalityCtx.createLinearGradient(0, 0, 600, 0);
       modalityGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
@@ -665,17 +703,14 @@
     };
 
     // 2. New Studios Charts
-    const newModalities = [
-      // Data will be populated from london_aggregates.json
-    ];
-
-    const totalNewStudios = 0; // Will be updated from aggregates
-    const newLabels = newModalities.map(m => m.modality.replace(/-/g, ' '));
-    const newCounts = newModalities.map(m => m.count);
-    const pctsOfAllNew = newModalities.map(m => +((m.count / totalNewStudios) * 100).toFixed(1));
-    const pctsOfModality = newModalities.map(m => m.pctOfModality);
-
     chartInitFunctions['newModalityChart'] = function() {
+      const newModalities = window.newModalities || [];
+      const totalNewStudios = window.totalNewStudios || 0;
+      const newLabels = newModalities.map(m => m.modality.replace(/-/g, ' '));
+      const newCounts = newModalities.map(m => m.count);
+      const pctsOfAllNew = newModalities.map(m => totalNewStudios > 0 ? +((m.count / totalNewStudios) * 100).toFixed(1) : 0);
+      const pctsOfModality = newModalities.map(m => m.pctOfModality || 0);
+
       const newCtx = document.getElementById('newModalityChart').getContext('2d');
       const newGradient = newCtx.createLinearGradient(0, 0, 600, 0);
       newGradient.addColorStop(0, 'rgba(139, 92, 246, 0.9)');
@@ -727,6 +762,11 @@
     };
 
     chartInitFunctions['growthRateChart'] = function() {
+      const newModalities = window.newModalities || [];
+      const newLabels = newModalities.map(m => m.modality.replace(/-/g, ' '));
+      const newCounts = newModalities.map(m => m.count);
+      const pctsOfModality = newModalities.map(m => m.pctOfModality || 0);
+
       const growthCtx = document.getElementById('growthRateChart').getContext('2d');
       const growthGradient = growthCtx.createLinearGradient(0, 0, 600, 0);
       growthGradient.addColorStop(0, 'rgba(34, 197, 94, 0.9)');
@@ -784,14 +824,11 @@
     };
 
     // 3. Year Chart - Data will be loaded from aggregates
-    const yearData = [
-      // Data will be populated from london_aggregates.json
-    ];
-
-    const yearLabels = yearData.map(d => d.year.toString());
-    const yearCounts = yearData.map(d => d.count);
-
     chartInitFunctions['yearChart'] = function() {
+      const yearData = window.yearData || [];
+      const yearLabels = yearData.map(d => d.year.toString());
+      const yearCounts = yearData.map(d => d.count);
+
       const yearCtx = document.getElementById('yearChart').getContext('2d');
       const yearGradient = yearCtx.createLinearGradient(0, 0, 0, 450);
       yearGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
@@ -851,14 +888,14 @@
     };
 
     // 4. Location Chart - Data will be loaded from aggregates
-    const locationData = [
-      // Data will be populated from london_aggregates.json
-    ];
-
-    const locationLabels = locationData.map(d => d.locations === 1 ? '1 location' : `${d.locations} locations`);
-    const locationBrands = locationData.map(d => d.studioBrands);
-
     chartInitFunctions['locationChart'] = function() {
+      // Load chains vs single location data
+      const chainsData = window.chainsData || [];
+      const locationData = chainsData.slice(0, 10).filter(d => d.studioBrands > 0);
+
+      const locationLabels = locationData.map(d => d.locations === 1 ? '1 location' : `${d.locations} locations`);
+      const locationBrands = locationData.map(d => d.studioBrands);
+
       const locationCtx = document.getElementById('locationChart').getContext('2d');
       const locationGradient = locationCtx.createLinearGradient(0, 0, 600, 0);
       locationGradient.addColorStop(0, 'rgba(34, 197, 94, 0.9)');
@@ -909,14 +946,11 @@
     };
 
     // 5. Spatial Distribution - Data will be loaded from aggregates
-    const boroughData = [
-      // Data will be populated from london_aggregates.json
-    ];
-
-    const boroughLabels = boroughData.map(d => d.borough);
-    const boroughCounts = boroughData.map(d => d.count);
-
     chartInitFunctions['arrChart'] = function() {
+      const boroughData = (window.boroughData || []).slice(0, 15).sort((a, b) => b.count - a.count);
+      const boroughLabels = boroughData.map(d => d.borough);
+      const boroughCounts = boroughData.map(d => d.count);
+
       const arrCtx = document.getElementById('arrChart').getContext('2d');
       const arrGradient = arrCtx.createLinearGradient(0, 0, 600, 0);
       arrGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
@@ -966,42 +1000,46 @@
     });
     };
 
-    // Initialize charts when they scroll into view
-    const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'locationChart', 'arrChart'];
-    chartIds.forEach(chartId => {
-      const chartElement = document.getElementById(chartId);
-      if (chartElement) {
-        // Check if chart is already visible on page load
-        const rect = chartElement.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-        if (isVisible && chartInitFunctions[chartId]) {
-          chartInitFunctions[chartId]();
-        } else {
-          chartObserver.observe(chartElement);
+    // Initialize all charts function
+    function initializeAllCharts() {
+      const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'locationChart', 'arrChart'];
+      chartIds.forEach(chartId => {
+        const chartElement = document.getElementById(chartId);
+        if (chartElement && chartInitFunctions[chartId]) {
+          // Check if chart is already visible on page load
+          const rect = chartElement.getBoundingClientRect();
+          const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+          if (isVisible) {
+            chartInitFunctions[chartId]();
+          } else {
+            chartObserver.observe(chartElement);
+          }
         }
-      }
-    });
+      });
+    }
 
-    // Map with heatmap (initialize immediately as it's always visible)
-    try {
-      const mapElement = document.getElementById('map');
-      if (mapElement && typeof L !== 'undefined') {
-        const map = L.map('map', {
-          center: [51.5074, -0.1278],
-          zoom: 11,
-          zoomControl: true,
-          attributionControl: false
-        });
+    // Map initialization function
+    function initializeMap() {
+      try {
+        const mapElement = document.getElementById('map');
+        if (mapElement && typeof L !== 'undefined') {
+          const boroughData = window.boroughData || [];
+          const map = L.map('map', {
+            center: [51.5074, -0.1278],
+            zoom: 11,
+            zoomControl: true,
+            attributionControl: false
+          });
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '© OpenStreetMap contributors',
-          maxZoom: 19
-        }).addTo(map);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 19
+          }).addTo(map);
 
-        const heatmapPoints = [];
-        const maxCount = boroughData.length > 0 ? Math.max(...boroughData.map(d => d.count)) : 1;
-        
-        boroughData.forEach(({ borough, count, center }) => {
+          const heatmapPoints = [];
+          const maxCount = boroughData.length > 0 ? Math.max(...boroughData.map(d => d.count)) : 1;
+          
+          boroughData.forEach(({ borough, count, center }) => {
           const [lat, lng] = center;
           const intensity = count / maxCount;
           const pointsPerStudio = 3;
@@ -1083,6 +1121,18 @@
         mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
       }
     }
+
+    // Initialize charts when they scroll into view (for initial page load before data is ready)
+    const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'locationChart', 'arrChart'];
+    chartIds.forEach(chartId => {
+      const chartElement = document.getElementById(chartId);
+      if (chartElement) {
+        chartObserver.observe(chartElement);
+      }
+    });
+
+    // Load data when page loads
+    loadData();
   </script>
 </body>
 </html>
