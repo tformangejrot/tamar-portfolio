@@ -8,8 +8,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
-const CATEGORY_PATH = path.join(ROOT, 'data/reference/classpass_categories.json');
-const OUTPUT_DIR = path.join(ROOT, 'data/raw/classpass');
+const DEFAULT_CATEGORY_PATH = path.join(ROOT, 'data/reference/classpass_categories.json');
+const DEFAULT_OUTPUT_DIR = path.join(ROOT, 'data/raw/classpass');
 
 const API_URL = 'https://classpass.com/_api/unisearch/v1/layout/web_search_page';
 
@@ -17,6 +17,8 @@ const defaultOptions = {
   slug: null,
   dryRun: false,
   headless: true,
+  categoriesFile: DEFAULT_CATEGORY_PATH,
+  outputDir: DEFAULT_OUTPUT_DIR,
 };
 
 function parseArgs(argv) {
@@ -32,13 +34,23 @@ function parseArgs(argv) {
     } else if (arg === '--slug') {
       opts.slug = argv[i + 1];
       i += 1;
+    } else if (arg.startsWith('--categories-file=')) {
+      opts.categoriesFile = path.resolve(ROOT, arg.split('=')[1]);
+    } else if (arg === '--categories-file') {
+      opts.categoriesFile = path.resolve(ROOT, argv[i + 1]);
+      i += 1;
+    } else if (arg.startsWith('--output-dir=')) {
+      opts.outputDir = path.resolve(ROOT, arg.split('=')[1]);
+    } else if (arg === '--output-dir') {
+      opts.outputDir = path.resolve(ROOT, argv[i + 1]);
+      i += 1;
     }
   }
   return opts;
 }
 
-async function readCategories() {
-  const raw = await fs.readFile(CATEGORY_PATH, 'utf8');
+async function readCategories(categoriesFile) {
+  const raw = await fs.readFile(categoriesFile, 'utf8');
   return JSON.parse(raw);
 }
 
@@ -51,8 +63,8 @@ function filterCategories(categories, slug) {
   return [match];
 }
 
-async function ensureOutputDir() {
-  await fs.mkdir(OUTPUT_DIR, { recursive: true });
+async function ensureOutputDir(dir) {
+  await fs.mkdir(dir, { recursive: true });
 }
 
 async function dismissCookieBanner(page) {
@@ -87,16 +99,73 @@ function venueToCard(venue, category) {
 }
 
 async function fetchStoreCursor(page) {
-  const storeText = await page.evaluate(() => document.getElementById('store')?.textContent);
-  if (!storeText) throw new Error('Unable to locate store payload');
+  // Wait a bit for the page to fully render
+  await page.waitForTimeout(2000);
+  
+  let storeText = await page.evaluate(() => document.getElementById('store')?.textContent);
+  if (!storeText) {
+    // Try waiting a bit more and check again
+    await page.waitForTimeout(3000);
+    storeText = await page.evaluate(() => document.getElementById('store')?.textContent);
+    if (!storeText) {
+      throw new Error('Unable to locate store payload - page may not have loaded correctly');
+    }
+  }
+  
   const store = JSON.parse(storeText);
-  const cursor =
+  
+  // Try the standard path first
+  let cursor =
     store.entities?.searchLayoutByName?.data?.web_search_page_1?.web_search_results_01?.data?.cursor;
-  if (!cursor) throw new Error('Cursor not found in store data');
+  
+  if (!cursor) {
+    // Debug: explore the structure more deeply
+    const searchLayoutData = store.entities?.searchLayoutByName?.data;
+    if (searchLayoutData?.web_search_page_1) {
+      console.log('web_search_page_1 keys:', Object.keys(searchLayoutData.web_search_page_1));
+      const page1 = searchLayoutData.web_search_page_1;
+      // Look for any module that might contain the cursor
+      for (const key of Object.keys(page1)) {
+        if (key.includes('search_results') || key.includes('results')) {
+          console.log(`Found module: ${key}, keys:`, Object.keys(page1[key] || {}));
+          if (page1[key]?.data?.cursor) {
+            cursor = page1[key].data.cursor;
+            console.log(`Found cursor in ${key}`);
+            break;
+          }
+        }
+      }
+    }
+    
+    // Try alternative paths
+    if (!cursor) {
+      cursor = 
+        store.entities?.searchLayoutByName?.data?.web_search_page?.web_search_results_01?.data?.cursor ||
+        store.entities?.searchLayoutByName?.data?.web_search_results_01?.data?.cursor ||
+        store.entities?.searchLayoutByName?.data?.web_search_page_1?.web_search_results?.data?.cursor;
+    }
+    
+    if (!cursor) {
+      console.error('Could not find cursor. Full web_search_page_1 structure:', JSON.stringify(searchLayoutData?.web_search_page_1, null, 2).slice(0, 1000));
+      // For some pages (like some London categories), pagination cursor may not be present at all.
+      // In that case we'll fall back to using just the first response payload without pagination.
+      return null;
+    }
+  }
   return cursor;
 }
 
-async function fetchVenuePages(page, cursorBase64, category, maxPages = 10) {
+// Helper to extract venues from a unisearch payload
+function extractVenuesFromPayload(payload) {
+  if (!payload) return [];
+  const venues =
+    payload?.data?.modules?.web_search_results_01?.data?.venue_tab_items ??
+    payload?.data?.modules?.web_search_results_01?.data?.sections?.[0]?.content ??
+    [];
+  return venues;
+}
+
+async function fetchVenuePages(page, cursorBase64, category, maxPages = 20) {
   const cursorTemplate = decodeCursor(cursorBase64);
   const pageSize = cursorTemplate?.search_request?.venue_search_options?.page_size ?? 50;
   const aggregated = [];
@@ -176,10 +245,93 @@ async function fetchCategory({ classpass_url: url, slug, label }) {
   });
 
   console.log(`→ Loading ${slug} (${url})`);
+  // For some ClassPass pages (including London), waiting for full network idle can hang due to
+  // long‑lived connections and analytics. Use 'domcontentloaded' instead and rely on our own waits.
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60_000 });
   await dismissCookieBanner(page);
-  const cursor = await fetchStoreCursor(page);
-  const cards = await fetchVenuePages(page, cursor, slug);
+  
+  // Wait for the store element to be available and for initial API calls
+  try {
+    await page.waitForSelector('#store', { timeout: 15_000 });
+  } catch (err) {
+    console.warn(`Warning: #store element not found after waiting, continuing anyway...`);
+  }
+  
+  // Wait a bit for network responses to come in
+  await page.waitForTimeout(3000);
+  
+  // Try to extract cursor from network responses first (more reliable)
+  let cursor = null;
+  if (mapPayloads.length > 0) {
+    for (const payload of mapPayloads) {
+      const responseCursor = 
+        payload?.data?.modules?.web_search_results_01?.data?.cursor ||
+        payload?.data?.modules?.web_search_results?.data?.cursor;
+      if (responseCursor) {
+        cursor = responseCursor;
+        console.log('Found cursor from network response');
+        break;
+      }
+    }
+  }
+  
+  // Fall back to store if not found in network responses
+  if (!cursor) {
+    cursor = await fetchStoreCursor(page);
+  }
+  
+  let cards = [];
+  if (cursor) {
+    // Normal path: paginate using cursor
+    cards = await fetchVenuePages(page, cursor, slug);
+  } else {
+    // Fallback: no cursor available – extract venues from store's venue_tab_items
+    console.warn(`No pagination cursor found for ${slug}. Extracting venues from store data.`);
+    
+    // Extract venues from store
+    const storeText = await page.evaluate(() => document.getElementById('store')?.textContent);
+    if (storeText) {
+      const store = JSON.parse(storeText);
+      const venueTabItems = 
+        store.entities?.searchLayoutByName?.data?.web_search_page_1?.web_search_results_01?.data?.venue_tab_items ||
+        [];
+      
+      if (venueTabItems.length > 0) {
+        console.log(`Found ${venueTabItems.length} venues in store data`);
+        const seen = new Set();
+        for (const venue of venueTabItems) {
+          const card = venueToCard(venue, slug);
+          if (card.name && card.detail_url && !seen.has(card.detail_url)) {
+            cards.push(card);
+            seen.add(card.detail_url);
+          }
+        }
+      }
+    }
+    
+    // Also try network payloads as backup
+    if (cards.length === 0 && mapPayloads.length > 0) {
+      for (const payload of mapPayloads) {
+        const venues = extractVenuesFromPayload(payload);
+        if (venues.length > 0) {
+          console.log(`Found ${venues.length} venues in network payload`);
+          const seen = new Set(cards.map(c => c.detail_url).filter(Boolean));
+          for (const venue of venues) {
+            const card = venueToCard(venue, slug);
+            if (card.name && card.detail_url && !seen.has(card.detail_url)) {
+              cards.push(card);
+              seen.add(card.detail_url);
+            }
+          }
+          break; // Use first payload with venues
+        }
+      }
+    }
+    
+    if (cards.length === 0) {
+      console.warn(`No venues found for ${slug} - store data may be empty or in unexpected format`);
+    }
+  }
   await browser.close();
 
   return {
@@ -193,9 +345,10 @@ async function fetchCategory({ classpass_url: url, slug, label }) {
   };
 }
 
-async function savePayload(slug, payload) {
-  await ensureOutputDir();
-  const targetPath = path.join(OUTPUT_DIR, `${slug}.json`);
+async function savePayload(slug, payload, outputDir, suffix = '') {
+  await ensureOutputDir(outputDir);
+  const filename = suffix ? `${slug}-${suffix}.json` : `${slug}.json`;
+  const targetPath = path.join(outputDir, filename);
   await fs.writeFile(targetPath, JSON.stringify(payload, null, 2));
   console.log(`✓ Saved ${payload.total_cards} cards to ${targetPath}`);
 }
@@ -203,15 +356,19 @@ async function savePayload(slug, payload) {
 const options = parseArgs(process.argv.slice(2));
 
 async function main() {
-  const categories = await readCategories();
+  const categories = await readCategories(options.categoriesFile);
   const targets = filterCategories(categories, options.slug);
+  
+  // Detect if this is London based on categories file path
+  const isLondon = options.categoriesFile && options.categoriesFile.includes('london');
+  const fileSuffix = isLondon ? 'london' : '';
 
   for (const category of targets) {
     const payload = await fetchCategory(category);
     if (options.dryRun) {
       console.log(JSON.stringify(payload, null, 2).slice(0, 800));
     } else {
-      await savePayload(category.slug, payload);
+      await savePayload(category.slug, payload, options.outputDir, fileSuffix);
     }
   }
 }

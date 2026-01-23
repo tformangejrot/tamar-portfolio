@@ -1,0 +1,210 @@
+[
+  {
+    "borough": "Wandsworth",
+    "count": 94,
+    "center": [
+      51.4571,
+      -0.192
+    ]
+  },
+  {
+    "borough": "Islington",
+    "count": 91,
+    "center": [
+      51.5446,
+      -0.1028
+    ]
+  },
+  {
+    "borough": "Southwark",
+    "count": 91,
+    "center": [
+      51.5033,
+      -0.0814
+    ]
+  },
+  {
+    "borough": "Westminster",
+    "count": 89,
+    "center": [
+      51.5074,
+      -0.1278
+    ]
+  },
+  {
+    "borough": "Lambeth",
+    "count": 71,
+    "center": [
+      51.4952,
+      -0.112
+    ]
+  },
+  {
+    "borough": "Camden",
+    "count": 66,
+    "center": [
+      51.529,
+      -0.1255
+    ]
+  },
+  {
+    "borough": "Hackney",
+    "count": 62,
+    "center": [
+      51.5492,
+      -0.055
+    ]
+  },
+  {
+    "borough": "Hammersmith and Fulham",
+    "count": 55,
+    "center": [
+      51.4926,
+      -0.2339
+    ]
+  },
+  {
+    "borough": "Tower Hamlets",
+    "count": 53,
+    "center": [
+      51.52,
+      -0.029
+    ]
+  },
+  {
+    "borough": "Kensington and Chelsea",
+    "count": 44,
+    "center": [
+      51.4994,
+      -0.1937
+    ]
+  },
+  {
+    "borough": "City of London",
+    "count": 36,
+    "center": [
+      51.5155,
+      -0.092
+    ]
+  },
+  {
+    "borough": "Barnet",
+    "count": 35,
+    "center": [
+      51.5074,
+      -0.1278
+    ]
+  },
+  {
+    "borough": "Haringey",
+    "count": 34,
+    "center": [
+      51.5906,
+      -0.11
+    ]
+  },
+  {
+    "borough": "Lewisham",
+    "count": 34,
+    "center": [
+      51.4652,
+      -0.0136
+    ]
+  },
+  {
+    "borough": "Merton",
+    "count": 22,
+    "center": [
+      51.401,
+      -0.1958
+    ]
+  },
+  {
+    "borough": "Newham",
+    "count": 22,
+    "center": [
+      51.5255,
+      0.0352
+    ]
+  },
+  {
+    "borough": "Greenwich",
+    "count": 20,
+    "center": [
+      51.4934,
+      0.0098
+    ]
+  },
+  {
+    "borough": "Hounslow",
+    "count": 14,
+    "center": [
+      51.5074,
+      -0.1278
+    ]
+  },
+  {
+    "borough": "Brent",
+    "count": 11,
+    "center": [
+      51.5588,
+      -0.2817
+    ]
+  },
+  {
+    "borough": "Ealing",
+    "count": 11,
+    "center": [
+      51.5136,
+      -0.3048
+    ]
+  },
+  {
+    "borough": "Croydon",
+    "count": 10,
+    "center": [
+      51.5074,
+      -0.1278
+    ]
+  },
+  {
+    "borough": "Waltham Forest",
+    "count": 9,
+    "center": [
+      51.5856,
+      -0.0118
+    ]
+  },
+  {
+    "borough": "Richmond upon Thames",
+    "count": 6,
+    "center": [
+      51.4613,
+      -0.3034
+    ]
+  },
+  {
+    "borough": "Enfield",
+    "count": 5,
+    "center": [
+      51.5074,
+      -0.1278
+    ]
+  },
+  {
+    "borough": "Redbridge",
+    "count": 4,
+    "center": [
+      51.5597,
+      0.0818
+    ]
+  },
+  {
+    "borough": "Bromley",
+    "count": 4,
+    "center": [
+      51.5074,
+      -0.1278
+    ]
+  }
+]

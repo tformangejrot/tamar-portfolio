@@ -1,0 +1,57 @@
+[
+  {
+    "locations": 1,
+    "studioBrands": 714,
+    "label": "1 location"
+  },
+  {
+    "locations": 2,
+    "studioBrands": 92,
+    "label": "2 locations"
+  },
+  {
+    "locations": 3,
+    "studioBrands": 31,
+    "label": "3 locations"
+  },
+  {
+    "locations": 4,
+    "studioBrands": 11,
+    "label": "4 locations"
+  },
+  {
+    "locations": 5,
+    "studioBrands": 4,
+    "label": "5 locations"
+  },
+  {
+    "locations": 6,
+    "studioBrands": 5,
+    "label": "6 locations"
+  },
+  {
+    "locations": 10,
+    "studioBrands": 2,
+    "label": "10 locations"
+  },
+  {
+    "locations": 11,
+    "studioBrands": 1,
+    "label": "11 locations"
+  },
+  {
+    "locations": 15,
+    "studioBrands": 2,
+    "label": "15 locations"
+  },
+  {
+    "locations": 21,
+    "studioBrands": 2,
+    "label": "21 locations"
+  },
+  {
+    "locations": 38,
+    "studioBrands": 1,
+    "label": "38 locations"
+  }
+]

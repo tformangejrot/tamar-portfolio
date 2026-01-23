@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paris Boutique Fitness Trends Dashboard</title>
+  <title>London Boutique Fitness Trends Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -78,6 +78,30 @@
       color: #cbd5f5;
       line-height: 1.6;
       margin-bottom: 40px;
+    }
+
+    .nav-link {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #7dd3ff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #a78bfa;
+    }
+
+    .nav-link svg {
+      width: 16px;
+      height: 16px;
     }
 
     .scroll-indicator {
@@ -216,6 +240,12 @@
       .two-column {
         grid-template-columns: 1fr;
       }
+
+      .nav-link {
+        top: 24px;
+        left: 24px;
+        font-size: 13px;
+      }
     }
 
     /* Dark theme for Leaflet */
@@ -315,12 +345,18 @@
 <body>
   <!-- Hero Section -->
   <section class="hero">
+    <a href="/" class="nav-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Home
+    </a>
     <div class="hero-content">
-      <h1>Paris Boutique Fitness</h1>
-      <h2>The Paris Boutique Fitness Landscape in 2025</h2>
+      <h1>London Boutique Fitness</h1>
+      <h2>The London Boutique Fitness Landscape in 2025</h2>
       <p>
-        An exploration of boutique fitness trends across Paris. From reformer pilates to boxing studios, 
-        discover where Parisians are working out and how the landscape is evolving.
+        An exploration of boutique fitness trends across London. From pilates to boxing studios, 
+        discover where Londoners are working out and how the landscape is evolving.
       </p>
     </div>
     <div class="scroll-indicator">
@@ -331,25 +367,65 @@
     </div>
   </section>
 
+  <!-- Intro Section -->
+  <section class="section">
+    <div class="card">
+      <h3 style="margin: 0 0 16px; font-size: 24px; font-weight: 600;">What is this report?</h3>
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        London has been a leader in boutique fitness among European capitals. This report provides an overview of the London boutique fitness market, the evolution of different modalities, and their geographic distribution. It is based on a large representative data set. Exact studio counts are not fully accurate but relative percentages and growth numbers capture real insights.
+      </p>
+    </div>
+  </section>
+
   <!-- Key Stats -->
   <section class="section">
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-value">644</div>
+        <div class="stat-value" id="stat-total">-</div>
         <div class="stat-label">Boutique Studios</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">18.5%</div>
+        <div class="stat-value" id="stat-recent">-</div>
         <div class="stat-label">Opened in 2024-2025</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">20</div>
+        <div class="stat-value" id="stat-modalities">-</div>
         <div class="stat-label">Modality Categories</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">47.0%</div>
-        <div class="stat-label">Offer Pilates</div>
+        <div class="stat-value" id="stat-top-modality">-</div>
+        <div class="stat-label" id="stat-top-modality-label">Top Modality</div>
       </div>
+    </div>
+  </section>
+
+  <!-- Growth Over Time -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">The Growth Story</div>
+      <h2 class="section-title">Evolution Over Time</h2>
+      <p class="section-subtitle">
+        Boutique fitness studios opened by year. Dates are adjusted to account for domain registration typically preceding actual openings by ~2 months.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Studios by Opening Year</h3>
+        <span id="year-chart-subtitle">Studios total · Each location counted separately</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="yearChart"></canvas>
+      </div>
+      <p class="note">
+        Opening dates are estimated from location pages, domain registration, and other sources.
+        Dates are adjusted to account for domain registration typically preceding actual studio openings by ~2 months.
+        Multi-location studios count each location separately.
+      </p>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        London's boutique fitness scene has been growing steadily. These are openings of studios from our data set, so there are studios that opened but aren't included and also studios that may have opened but have since closed. Nonetheless, the growth patterns provide insights into how the market is evolving.
+      </p>
     </div>
   </section>
 
@@ -359,14 +435,13 @@
       <div class="section-label">What are people training for?</div>
       <h2 class="section-title">The Modality Landscape</h2>
       <p class="section-subtitle">
-        Distribution of boutique studios by primary modalities. Pilates and yoga dominate, 
-        with reformer pilates showing explosive growth.
+        Distribution of boutique studios by primary modalities across London.
       </p>
     </div>
     <div class="card">
       <div class="card-header">
         <h3>Studios by Modality</h3>
-        <span>Top 15 modalities · 644 studios total</span>
+        <span id="modality-chart-subtitle">Top modalities</span>
       </div>
       <div class="chart-container chart-container-large">
         <canvas id="modalityChart"></canvas>
@@ -376,29 +451,14 @@
         Categories have been consolidated (e.g., all yoga variants → "yoga").
       </p>
     </div>
-  </section>
-
-  <!-- Reformer Pilates Growth -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-label">The Reformer Pilates Boom</div>
-      <h2 class="section-title">Rising Star</h2>
-      <p class="section-subtitle">
-        Reformer pilates has exploded in Paris, with <span class="stat-highlight">50.4% of studios</span> opening in 2024 and 2025 alone. 
-        The trend shows no signs of slowing.
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        The London boutique fitness landscape shows a diverse mix of modalities. Multi-modality studios are common, with many studios offering complementary classes to fill extra space and time.
       </p>
     </div>
-    <div class="card">
-      <div class="card-header">
-        <h3>Reformer Pilates Studios by Opening Year</h3>
-        <span>115 studios total</span>
-      </div>
-      <div class="chart-container">
-        <canvas id="reformerChart"></canvas>
-      </div>
-      <p class="note">
-        Includes lagree studios (reformer-based method). Opening dates are estimated from location pages and domain registration data.
-        Dates are adjusted to account for domain registration typically preceding actual studio openings by ~2 months.
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        Multi-modality studios are common in London. Many studios offer complementary classes alongside their primary modality, creating hybrid concepts that fuse different exercises into one experience.
       </p>
     </div>
   </section>
@@ -409,15 +469,14 @@
       <div class="section-label">What's opening now?</div>
       <h2 class="section-title">Recent Growth</h2>
       <p class="section-subtitle">
-        New boutique studios opened in the past 16 months. Pilates dominates new openings, 
-        with reformer pilates and low-impact training showing the highest growth rates.
+        New boutique studios opened in the past 16 months.
       </p>
     </div>
     <div class="two-column">
       <div class="card">
         <div class="card-header">
           <h3>New Studios by Modality</h3>
-          <span>66 new studios</span>
+          <span id="new-studios-count">New studios</span>
         </div>
         <div class="chart-container">
           <canvas id="newModalityChart"></canvas>
@@ -439,30 +498,9 @@
         </p>
       </div>
     </div>
-  </section>
-
-  <!-- Growth Over Time -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-label">The Growth Story</div>
-      <h2 class="section-title">Evolution Over Time</h2>
-      <p class="section-subtitle">
-        Boutique fitness studios opened by year. <span class="stat-highlight">2024 was a record year</span> with 71 new studios, 
-        followed by 48 in 2025. The COVID dip in 2020 is clearly visible. Dates are adjusted to account for domain registration typically preceding actual openings by ~2 months.
-      </p>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <h3>Studios by Opening Year</h3>
-        <span>644 studios total · Each location counted separately</span>
-      </div>
-      <div class="chart-container">
-        <canvas id="yearChart"></canvas>
-      </div>
-      <p class="note">
-        Opening dates are estimated from location pages, domain registration, and other sources.
-        Dates are adjusted to account for domain registration typically preceding actual studio openings by ~2 months.
-        Multi-location studios count each location separately.
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        Recent openings show which modalities are growing fastest in London. The data reflects studios that opened in the past 16 months, though note that opening dates are estimated based on domain registration, so this is likely more accurately the past 12-14 months.
       </p>
     </div>
   </section>
@@ -480,13 +518,18 @@
     <div class="card">
       <div class="card-header">
         <h3>Studio Brands by Number of Locations</h3>
-        <span>396 unique brands · 644 total locations</span>
+        <span id="location-chart-subtitle">Unique brands · Total locations</span>
       </div>
       <div class="chart-container">
         <canvas id="locationChart"></canvas>
       </div>
       <p class="note">
         Studios are grouped by domain (or name if no domain). Most boutique fitness brands remain single-location operations.
+      </p>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        One indication of the relative newness of boutique fitness is the extreme prominence of single-location businesses. It's likely that we will start seeing greater consolidation as "winners" develop truly profitable business models and smaller studios are purchased or forced to close.
       </p>
     </div>
   </section>
@@ -497,14 +540,13 @@
       <div class="section-label">Where are the studios?</div>
       <h2 class="section-title">Spatial Distribution</h2>
       <p class="section-subtitle">
-        Spatial distribution of boutique fitness studios across Paris arrondissements. 
-        <span class="stat-highlight">Paris 11</span> leads with 71 studios, followed by <span class="stat-highlight">Paris 17</span> (61) and <span class="stat-highlight">Paris 09</span> (43).
+        Spatial distribution of boutique fitness studios across London boroughs.
       </p>
     </div>
     <div class="card">
       <div class="card-header">
-        <h3>Studios by Arrondissement</h3>
-        <span>Paris arrondissements only</span>
+        <h3>Studios by Borough</h3>
+        <span>London boroughs</span>
       </div>
       <div class="chart-container">
         <canvas id="arrChart"></canvas>
@@ -512,22 +554,22 @@
     </div>
     <div class="card">
       <div class="card-header">
-        <h3>Paris Heatmap</h3>
+        <h3>London Heatmap</h3>
         <span>Studio density visualization</span>
       </div>
       <div class="chart-container chart-container-map">
         <div id="map" style="height: 100%; border-radius: 12px;"></div>
       </div>
       <p class="note">
-        Heatmap shows studio density based on arrondissement data. Warmer colors indicate higher studio counts.
-        Studio locations are approximated based on arrondissement centers.
+        Heatmap shows studio density based on borough data. Warmer colors indicate higher studio counts.
+        Studio locations are approximated based on borough centers.
       </p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>Paris Boutique Fitness Trends Dashboard</p>
+    <p>London Boutique Fitness Trends Dashboard</p>
     <p>Data collected from multiple sources including Google Places API and domain registration records</p>
   </footer>
 
@@ -561,23 +603,10 @@
     // Chart initialization functions
     const chartInitFunctions = {};
 
-    // 1. Modality Chart
+    // 1. Modality Chart - Data will be loaded from aggregates
+    // Placeholder data - will be replaced when aggregates are computed
     const modalities = [
-      { modality: 'pilates', count: 303, pct: 47.0 },
-      { modality: 'yoga', count: 279, pct: 43.3 },
-      { modality: 'strength-training', count: 228, pct: 35.4 },
-      { modality: 'hiit-bootcamp', count: 195, pct: 30.3 },
-      { modality: 'reformer-pilates', count: 115, pct: 17.9 },
-      { modality: 'dance', count: 92, pct: 14.3 },
-      { modality: 'boxing', count: 79, pct: 12.3 },
-      { modality: 'stretching', count: 67, pct: 10.4 },
-      { modality: 'cycling', count: 62, pct: 9.6 },
-      { modality: 'barre', count: 62, pct: 9.6 },
-      { modality: 'prenatal-postnatal', count: 48, pct: 7.5 },
-      { modality: 'low-impact-training', count: 44, pct: 6.8 },
-      { modality: 'martial-arts', count: 41, pct: 6.4 },
-      { modality: 'running', count: 32, pct: 5.0 },
-      { modality: 'electrical-muscle-stimulation', count: 27, pct: 4.2 },
+      // Data will be populated from london_aggregates.json
     ];
 
     const modalityLabels = modalities.map(m => m.modality.replace(/-/g, ' '));
@@ -635,91 +664,12 @@
     });
     };
 
-    // 2. Reformer Growth Chart (dates adjusted: Nov/Dec registrations count as next year)
-    const reformerData = [
-      { year: 1992, count: 1 }, { year: 2000, count: 1 }, { year: 2004, count: 1 },
-      { year: 2008, count: 2 }, { year: 2012, count: 1 }, { year: 2015, count: 1 },
-      { year: 2016, count: 1 }, { year: 2017, count: 4 }, { year: 2018, count: 7 },
-      { year: 2019, count: 4 }, { year: 2020, count: 3 }, { year: 2021, count: 8 },
-      { year: 2022, count: 2 }, { year: 2023, count: 15 }, { year: 2024, count: 34 },
-      { year: 2025, count: 24 }
-    ];
-
-    const reformerLabels = reformerData.map(d => d.year.toString());
-    const reformerCounts = reformerData.map(d => d.count);
-
-    chartInitFunctions['reformerChart'] = function() {
-      const reformerCtx = document.getElementById('reformerChart').getContext('2d');
-      const reformerGradient = reformerCtx.createLinearGradient(0, 0, 0, 400);
-      reformerGradient.addColorStop(0, 'rgba(56, 189, 248, 0.4)');
-      reformerGradient.addColorStop(1, 'rgba(56, 189, 248, 0.05)');
-
-      charts['reformerChart'] = new Chart(reformerCtx, {
-      type: 'line',
-      data: {
-        labels: reformerLabels,
-        datasets: [{
-          label: 'New Studios',
-          data: reformerCounts,
-          borderColor: 'rgba(56, 189, 248, 1)',
-          backgroundColor: reformerGradient,
-          borderWidth: 3,
-          fill: true,
-          tension: 0.4,
-          pointRadius: 5,
-          pointHoverRadius: 7,
-          pointBackgroundColor: 'rgba(56, 189, 248, 1)',
-          pointBorderColor: '#05060a',
-          pointBorderWidth: 2,
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return ` ${context.parsed.y} new studio${context.parsed.y !== 1 ? 's' : ''}`;
-              }
-            }
-          }
-        },
-        scales: {
-          x: {
-            ticks: { color: '#e5e7ff', font: { size: 11 } },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
-          },
-          y: {
-            beginAtZero: true,
-            ticks: { color: '#cbd5ff', font: { size: 11 }, stepSize: 5 },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
-          }
-        },
-        animation: {
-          duration: 1200,
-          easing: 'easeOutQuart'
-        }
-      }
-    });
-    };
-
-    // 3. New Studios Charts
+    // 2. New Studios Charts
     const newModalities = [
-      { modality: 'pilates', count: 45, pctOfModality: 14.9 },
-      { modality: 'reformer-pilates', count: 31, pctOfModality: 27.0 },
-      { modality: 'strength-training', count: 24, pctOfModality: 10.5 },
-      { modality: 'yoga', count: 23, pctOfModality: 8.2 },
-      { modality: 'hiit-bootcamp', count: 19, pctOfModality: 9.7 },
-      { modality: 'low-impact-training', count: 13, pctOfModality: 29.5 },
-      { modality: 'stretching', count: 12, pctOfModality: 17.9 },
-      { modality: 'barre', count: 9, pctOfModality: 14.5 },
-      { modality: 'dance', count: 9, pctOfModality: 9.8 },
-      { modality: 'boxing', count: 7, pctOfModality: 8.9 },
+      // Data will be populated from london_aggregates.json
     ];
 
-    const totalNewStudios = 66;
+    const totalNewStudios = 0; // Will be updated from aggregates
     const newLabels = newModalities.map(m => m.modality.replace(/-/g, ' '));
     const newCounts = newModalities.map(m => m.count);
     const pctsOfAllNew = newModalities.map(m => +((m.count / totalNewStudios) * 100).toFixed(1));
@@ -833,19 +783,9 @@
     });
     };
 
-    // 4. Year Chart (dates adjusted: Nov/Dec registrations count as next year)
+    // 3. Year Chart - Data will be loaded from aggregates
     const yearData = [
-      { year: 1985, count: 4 }, { year: 1992, count: 4 }, { year: 1997, count: 4 },
-      { year: 1998, count: 12 }, { year: 1999, count: 3 }, { year: 2000, count: 1 },
-      { year: 2001, count: 8 }, { year: 2002, count: 2 }, { year: 2003, count: 4 },
-      { year: 2004, count: 10 }, { year: 2005, count: 4 }, { year: 2006, count: 4 },
-      { year: 2007, count: 3 }, { year: 2008, count: 6 }, { year: 2009, count: 6 },
-      { year: 2010, count: 2 }, { year: 2011, count: 34 }, { year: 2012, count: 5 },
-      { year: 2013, count: 8 }, { year: 2014, count: 16 }, { year: 2015, count: 8 },
-      { year: 2016, count: 33 }, { year: 2017, count: 19 }, { year: 2018, count: 46 },
-      { year: 2019, count: 50 }, { year: 2020, count: 18 }, { year: 2021, count: 34 },
-      { year: 2022, count: 44 }, { year: 2023, count: 46 }, { year: 2024, count: 71 },
-      { year: 2025, count: 48 }
+      // Data will be populated from london_aggregates.json
     ];
 
     const yearLabels = yearData.map(d => d.year.toString());
@@ -910,21 +850,9 @@
     });
     };
 
-    // 5. Location Chart
+    // 4. Location Chart - Data will be loaded from aggregates
     const locationData = [
-      { locations: 1, studioBrands: 311 },
-      { locations: 2, studioBrands: 49 },
-      { locations: 3, studioBrands: 15 },
-      { locations: 4, studioBrands: 5 },
-      { locations: 5, studioBrands: 5 },
-      { locations: 6, studioBrands: 3 },
-      { locations: 7, studioBrands: 2 },
-      { locations: 8, studioBrands: 2 },
-      { locations: 9, studioBrands: 1 },
-      { locations: 12, studioBrands: 1 },
-      { locations: 17, studioBrands: 2 },
-      { locations: 19, studioBrands: 1 },
-      { locations: 23, studioBrands: 1 }
+      // Data will be populated from london_aggregates.json
     ];
 
     const locationLabels = locationData.map(d => d.locations === 1 ? '1 location' : `${d.locations} locations`);
@@ -980,32 +908,13 @@
     });
     };
 
-    // 6. Spatial Distribution (ordered by arrondissement number, suburbs at end)
-    const arrData = [
-      { arr: 'Paris 01', count: 12, center: [48.8606, 2.3376] },
-      { arr: 'Paris 02', count: 35, center: [48.8698, 2.3412] },
-      { arr: 'Paris 03', count: 16, center: [48.8630, 2.3622] },
-      { arr: 'Paris 04', count: 21, center: [48.8546, 2.3522] },
-      { arr: 'Paris 05', count: 8, center: [48.8440, 2.3438] },
-      { arr: 'Paris 06', count: 17, center: [48.8449, 2.3327] },
-      { arr: 'Paris 07', count: 12, center: [48.8565, 2.3122] },
-      { arr: 'Paris 08', count: 18, center: [48.8750, 2.3181] },
-      { arr: 'Paris 09', count: 43, center: [48.8750, 2.3394] },
-      { arr: 'Paris 10', count: 30, center: [48.8720, 2.3600] },
-      { arr: 'Paris 11', count: 71, center: [48.8610, 2.3794] },
-      { arr: 'Paris 12', count: 21, center: [48.8447, 2.3732] },
-      { arr: 'Paris 13', count: 13, center: [48.8322, 2.3561] },
-      { arr: 'Paris 14', count: 14, center: [48.8331, 2.3264] },
-      { arr: 'Paris 15', count: 30, center: [48.8422, 2.2995] },
-      { arr: 'Paris 16', count: 40, center: [48.8500, 2.2669] },
-      { arr: 'Paris 17', count: 61, center: [48.8846, 2.3222] },
-      { arr: 'Paris 18', count: 16, center: [48.8932, 2.3484] },
-      { arr: 'Paris 19', count: 18, center: [48.8827, 2.3742] },
-      { arr: 'Paris 20', count: 13, center: [48.8630, 2.3987] }
+    // 5. Spatial Distribution - Data will be loaded from aggregates
+    const boroughData = [
+      // Data will be populated from london_aggregates.json
     ];
 
-    const arrLabels = arrData.map(d => d.arr.replace('Paris ', ''));
-    const arrCounts = arrData.map(d => d.count);
+    const boroughLabels = boroughData.map(d => d.borough);
+    const boroughCounts = boroughData.map(d => d.count);
 
     chartInitFunctions['arrChart'] = function() {
       const arrCtx = document.getElementById('arrChart').getContext('2d');
@@ -1016,10 +925,10 @@
       charts['arrChart'] = new Chart(arrCtx, {
       type: 'bar',
       data: {
-        labels: arrLabels,
+        labels: boroughLabels,
         datasets: [{
           label: 'Studios',
-          data: arrCounts,
+          data: boroughCounts,
           backgroundColor: arrGradient,
           borderRadius: 6,
           borderSkipped: false
@@ -1058,7 +967,7 @@
     };
 
     // Initialize charts when they scroll into view
-    const chartIds = ['modalityChart', 'reformerChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'locationChart', 'arrChart'];
+    const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'locationChart', 'arrChart'];
     chartIds.forEach(chartId => {
       const chartElement = document.getElementById(chartId);
       if (chartElement) {
@@ -1074,87 +983,106 @@
     });
 
     // Map with heatmap (initialize immediately as it's always visible)
-    const map = L.map('map', {
-      center: [48.8566, 2.3522],
-      zoom: 12,
-      zoomControl: true,
-      attributionControl: false
-    });
+    try {
+      const mapElement = document.getElementById('map');
+      if (mapElement && typeof L !== 'undefined') {
+        const map = L.map('map', {
+          center: [51.5074, -0.1278],
+          zoom: 11,
+          zoomControl: true,
+          attributionControl: false
+        });
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors',
-      maxZoom: 19
-    }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap contributors',
+          maxZoom: 19
+        }).addTo(map);
 
-    const heatmapPoints = [];
-    const maxCount = Math.max(...arrData.map(d => d.count));
-    
-    arrData.forEach(({ arr, count, center }) => {
-      const [lat, lng] = center;
-      const intensity = count / maxCount;
-      const pointsPerStudio = 3;
-      for (let i = 0; i < count * pointsPerStudio; i++) {
-        const angle = (i / count) * Math.PI * 2;
-        const radius = (Math.random() * 0.008);
-        const offsetLat = Math.cos(angle) * radius;
-        const offsetLng = Math.sin(angle) * radius;
-        heatmapPoints.push([
-          lat + offsetLat + (Math.random() - 0.5) * 0.003,
-          lng + offsetLng + (Math.random() - 0.5) * 0.003,
-          intensity * 0.8
-        ]);
+        const heatmapPoints = [];
+        const maxCount = boroughData.length > 0 ? Math.max(...boroughData.map(d => d.count)) : 1;
+        
+        boroughData.forEach(({ borough, count, center }) => {
+          const [lat, lng] = center;
+          const intensity = count / maxCount;
+          const pointsPerStudio = 3;
+          for (let i = 0; i < count * pointsPerStudio; i++) {
+            const angle = (i / count) * Math.PI * 2;
+            const radius = (Math.random() * 0.008);
+            const offsetLat = Math.cos(angle) * radius;
+            const offsetLng = Math.sin(angle) * radius;
+            heatmapPoints.push([
+              lat + offsetLat + (Math.random() - 0.5) * 0.003,
+              lng + offsetLng + (Math.random() - 0.5) * 0.003,
+              intensity * 0.8
+            ]);
+          }
+        });
+
+        if (heatmapPoints.length > 0) {
+          const heat = L.heatLayer(heatmapPoints, {
+            radius: 25,
+            blur: 20,
+            maxZoom: 17,
+            max: 1.0,
+            gradient: {
+              0.0: 'rgba(56, 189, 248, 0)',
+              0.2: 'rgba(56, 189, 248, 0.4)',
+              0.4: 'rgba(139, 92, 246, 0.6)',
+              0.6: 'rgba(236, 72, 153, 0.7)',
+              0.8: 'rgba(239, 68, 68, 0.8)',
+              1.0: 'rgba(251, 146, 60, 1.0)'
+          }
+          }).addTo(map);
+        }
+
+        boroughData.forEach(({ borough, count, center }) => {
+          const [lat, lng] = center;
+          const radius = Math.sqrt(count) * 150;
+          const opacity = Math.min(0.6, 0.3 + (count / maxCount) * 0.3);
+          
+          L.circleMarker([lat, lng], {
+            radius: Math.min(12, 4 + (count / maxCount) * 8),
+            fillColor: '#7dd3ff',
+            color: '#3b82f6',
+            weight: 2,
+            opacity: 0.8,
+            fillOpacity: opacity
+          }).bindTooltip(`${borough}: ${count} studios`, {
+            permanent: false,
+            direction: 'top'
+          }).addTo(map);
+        });
+
+        const legend = L.control({ position: 'bottomright' });
+        legend.onAdd = function() {
+          const div = L.DomUtil.create('div', 'info legend');
+          div.innerHTML = `
+            <h4>Studio Density</h4>
+            <div class="legend">
+              <i style="background: rgba(251, 146, 60, 1.0);"></i> 60+ studios<br/>
+              <i style="background: rgba(239, 68, 68, 0.8);"></i> 40-59 studios<br/>
+              <i style="background: rgba(236, 72, 153, 0.7);"></i> 20-39 studios<br/>
+              <i style="background: rgba(139, 92, 246, 0.6);"></i> 10-19 studios<br/>
+              <i style="background: rgba(56, 189, 248, 0.4);"></i> &lt;10 studios
+            </div>
+          `;
+          return div;
+        };
+        legend.addTo(map);
+      } else {
+        // If map can't be initialized (e.g., Leaflet not loaded or file:// protocol issues)
+        const mapElement = document.getElementById('map');
+        if (mapElement) {
+          mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
+        }
       }
-    });
-
-    const heat = L.heatLayer(heatmapPoints, {
-      radius: 25,
-      blur: 20,
-      maxZoom: 17,
-      max: 1.0,
-      gradient: {
-        0.0: 'rgba(56, 189, 248, 0)',
-        0.2: 'rgba(56, 189, 248, 0.4)',
-        0.4: 'rgba(139, 92, 246, 0.6)',
-        0.6: 'rgba(236, 72, 153, 0.7)',
-        0.8: 'rgba(239, 68, 68, 0.8)',
-        1.0: 'rgba(251, 146, 60, 1.0)'
+    } catch (error) {
+      console.warn('Map initialization failed:', error);
+      const mapElement = document.getElementById('map');
+      if (mapElement) {
+        mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
       }
-    }).addTo(map);
-
-    arrData.forEach(({ arr, count, center }) => {
-      const [lat, lng] = center;
-      const radius = Math.sqrt(count) * 150;
-      const opacity = Math.min(0.6, 0.3 + (count / maxCount) * 0.3);
-      
-      L.circleMarker([lat, lng], {
-        radius: Math.min(12, 4 + (count / maxCount) * 8),
-        fillColor: '#7dd3ff',
-        color: '#3b82f6',
-        weight: 2,
-        opacity: 0.8,
-        fillOpacity: opacity
-      }).bindTooltip(`${arr.replace('Paris ', '')}: ${count} studios`, {
-        permanent: false,
-        direction: 'top'
-      }).addTo(map);
-    });
-
-    const legend = L.control({ position: 'bottomright' });
-    legend.onAdd = function() {
-      const div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = `
-        <h4>Studio Density</h4>
-        <div class="legend">
-          <i style="background: rgba(251, 146, 60, 1.0);"></i> 60+ studios<br/>
-          <i style="background: rgba(239, 68, 68, 0.8);"></i> 40-59 studios<br/>
-          <i style="background: rgba(236, 72, 153, 0.7);"></i> 20-39 studios<br/>
-          <i style="background: rgba(139, 92, 246, 0.6);"></i> 10-19 studios<br/>
-          <i style="background: rgba(56, 189, 248, 0.4);"></i> &lt;10 studios
-        </div>
-      `;
-      return div;
-    };
-    legend.addTo(map);
+    }
   </script>
 </body>
 </html>

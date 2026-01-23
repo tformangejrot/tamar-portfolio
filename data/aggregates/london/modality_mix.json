@@ -1,0 +1,77 @@
+[
+  {
+    "modality": "strength-training",
+    "count": 575,
+    "pct": "46.9"
+  },
+  {
+    "modality": "hiit-bootcamp",
+    "count": 496,
+    "pct": "40.5"
+  },
+  {
+    "modality": "pilates",
+    "count": 485,
+    "pct": "39.6"
+  },
+  {
+    "modality": "yoga",
+    "count": 415,
+    "pct": "33.8"
+  },
+  {
+    "modality": "reformer-pilates",
+    "count": 227,
+    "pct": "18.5"
+  },
+  {
+    "modality": "dance",
+    "count": 190,
+    "pct": "15.5"
+  },
+  {
+    "modality": "boxing",
+    "count": 168,
+    "pct": "13.7"
+  },
+  {
+    "modality": "barre",
+    "count": 125,
+    "pct": "10.2"
+  },
+  {
+    "modality": "stretching",
+    "count": 117,
+    "pct": "9.5"
+  },
+  {
+    "modality": "prenatal-postnatal",
+    "count": 111,
+    "pct": "9.1"
+  },
+  {
+    "modality": "martial-arts",
+    "count": 103,
+    "pct": "8.4"
+  },
+  {
+    "modality": "cycling",
+    "count": 97,
+    "pct": "7.9"
+  },
+  {
+    "modality": "personal-training",
+    "count": 96,
+    "pct": "7.8"
+  },
+  {
+    "modality": "low-impact-training",
+    "count": 85,
+    "pct": "6.9"
+  },
+  {
+    "modality": "outdoors",
+    "count": 78,
+    "pct": "6.4"
+  }
+]
