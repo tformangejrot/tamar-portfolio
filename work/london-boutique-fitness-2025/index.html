@@ -628,6 +628,9 @@
         window.chainsData = chainsData;
         window.totalNewStudios = statsData.totalNewStudios || 0;
 
+        // Update summary stat cards
+        updateSummaryStats();
+
         // Initialize all charts after data is loaded
         initializeAllCharts();
         initializeMap();
@@ -641,6 +644,7 @@
         window.stats = {};
         window.growthData = [];
         window.totalNewStudios = 0;
+        updateSummaryStats();
         initializeAllCharts();
       }
     }
@@ -999,6 +1003,42 @@
       }
     });
     };
+
+    // Update summary statistics
+    function updateSummaryStats() {
+      const stats = window.stats || {};
+      const modalities = window.modalities || [];
+      
+      // Total boutique studios
+      const totalEl = document.getElementById('stat-total');
+      if (totalEl) {
+        totalEl.textContent = stats.totalBoutiqueStudios || 0;
+      }
+      
+      // Recent openings (2024-2025)
+      const recentEl = document.getElementById('stat-recent');
+      if (recentEl) {
+        recentEl.textContent = stats.totalNewStudios || 0;
+      }
+      
+      // Modality categories
+      const modalitiesEl = document.getElementById('stat-modalities');
+      if (modalitiesEl) {
+        modalitiesEl.textContent = stats.totalModalityCategories || modalities.length || 0;
+      }
+      
+      // Top modality
+      const topModalityEl = document.getElementById('stat-top-modality');
+      const topModalityLabelEl = document.getElementById('stat-top-modality-label');
+      if (topModalityEl && modalities.length > 0) {
+        const topModality = modalities[0];
+        topModalityEl.textContent = topModality.count || 0;
+        if (topModalityLabelEl) {
+          const modalityName = topModality.modality.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+          topModalityLabelEl.textContent = `Top Modality: ${modalityName}`;
+        }
+      }
+    }
 
     // Initialize all charts function
     function initializeAllCharts() {
