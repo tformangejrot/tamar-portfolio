@@ -429,6 +429,35 @@
     </div>
   </section>
 
+  <!-- Modality Growth Over Time -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Modality Trends</div>
+      <h2 class="section-title">Growth by Modality</h2>
+      <p class="section-subtitle">
+        Number of studio locations opened each year for Yoga, Pilates, and Strength Training.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Studio Openings by Modality Over Time</h3>
+        <span>Yoga, Pilates, and Strength Training</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="modalityGrowthChart"></canvas>
+      </div>
+      <p class="note">
+        Studios can appear in multiple modalities, so a single studio opening may be counted in multiple categories.
+        Opening dates are estimated from location pages, domain registration, and other sources.
+      </p>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        This chart shows how different modalities have grown over time. The three most popular modalities—Yoga, Pilates, and Strength Training—each show distinct growth patterns that reflect changing fitness trends and consumer preferences in London.
+      </p>
+    </div>
+  </section>
+
   <!-- Modality Mix -->
   <section class="section">
     <div class="section-header">
@@ -608,14 +637,15 @@
       try {
         const basePath = '../../data/aggregates/london/';
         
-        const [modalityData, newModalityData, yearData, boroughData, statsData, growthData, chainsData] = await Promise.all([
+        const [modalityData, newModalityData, yearData, boroughData, statsData, growthData, chainsData, modalityGrowthData] = await Promise.all([
           fetch(`${basePath}modality_mix.json`).then(r => r.json()),
           fetch(`${basePath}recent_new_modalities.json`).then(r => r.json()),
           fetch(`${basePath}growth_over_time.json`).then(r => r.json()),
           fetch(`${basePath}borough_distribution.json`).then(r => r.json()),
           fetch(`${basePath}overall_stats.json`).then(r => r.json()),
           fetch(`${basePath}recent_growth_rate.json`).then(r => r.json()),
-          fetch(`${basePath}chains_vs_single_location.json`).then(r => r.json())
+          fetch(`${basePath}chains_vs_single_location.json`).then(r => r.json()),
+          fetch(`${basePath}modality_growth_by_year.json`).then(r => r.json())
         ]);
 
         // Populate global data variables
@@ -626,6 +656,7 @@
         window.stats = statsData;
         window.growthData = growthData;
         window.chainsData = chainsData;
+        window.modalityGrowthData = modalityGrowthData;
         window.totalNewStudios = statsData.totalNewStudios || 0;
 
         // Update summary stat cards
@@ -643,6 +674,8 @@
         window.boroughData = [];
         window.stats = {};
         window.growthData = [];
+        window.chainsData = [];
+        window.modalityGrowthData = [];
         window.totalNewStudios = 0;
         updateSummaryStats();
         initializeAllCharts();
@@ -949,7 +982,114 @@
     });
     };
 
-    // 5. Spatial Distribution - Data will be loaded from aggregates
+    // 5. Modality Growth Over Time Chart
+    chartInitFunctions['modalityGrowthChart'] = function() {
+      const modalityGrowthData = window.modalityGrowthData || [];
+      const yearLabels = modalityGrowthData.map(d => d.year.toString());
+      const yogaData = modalityGrowthData.map(d => d.yoga || 0);
+      const pilatesData = modalityGrowthData.map(d => d.pilates || 0);
+      const strengthData = modalityGrowthData.map(d => d['strength-training'] || 0);
+
+      const modalityGrowthCtx = document.getElementById('modalityGrowthChart').getContext('2d');
+
+      charts['modalityGrowthChart'] = new Chart(modalityGrowthCtx, {
+        type: 'line',
+        data: {
+          labels: yearLabels,
+          datasets: [
+            {
+              label: 'Yoga',
+              data: yogaData,
+              borderColor: 'rgba(56, 189, 248, 1)',
+              backgroundColor: 'rgba(56, 189, 248, 0.1)',
+              tension: 0.4,
+              fill: false,
+              pointRadius: 4,
+              pointHoverRadius: 6,
+              pointBackgroundColor: 'rgba(56, 189, 248, 1)',
+              pointBorderColor: '#05060a',
+              pointBorderWidth: 2
+            },
+            {
+              label: 'Pilates',
+              data: pilatesData,
+              borderColor: 'rgba(139, 92, 246, 1)',
+              backgroundColor: 'rgba(139, 92, 246, 0.1)',
+              tension: 0.4,
+              fill: false,
+              pointRadius: 4,
+              pointHoverRadius: 6,
+              pointBackgroundColor: 'rgba(139, 92, 246, 1)',
+              pointBorderColor: '#05060a',
+              pointBorderWidth: 2
+            },
+            {
+              label: 'Strength Training',
+              data: strengthData,
+              borderColor: 'rgba(34, 197, 94, 1)',
+              backgroundColor: 'rgba(34, 197, 94, 0.1)',
+              tension: 0.4,
+              fill: false,
+              pointRadius: 4,
+              pointHoverRadius: 6,
+              pointBackgroundColor: 'rgba(34, 197, 94, 1)',
+              pointBorderColor: '#05060a',
+              pointBorderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top',
+              labels: {
+                color: '#cbd5f5',
+                font: { size: 12 },
+                padding: 15,
+                usePointStyle: true,
+                pointStyle: 'circle'
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return ` ${context.dataset.label}: ${context.parsed.y} location${context.parsed.y !== 1 ? 's' : ''}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#e5e7ff',
+                font: { size: 11 },
+                maxRotation: 45,
+                minRotation: 45
+              },
+              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            },
+            y: {
+              beginAtZero: true,
+              ticks: {
+                color: '#cbd5ff',
+                font: { size: 11 },
+                stepSize: 5
+              },
+              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            }
+          },
+          animation: {
+            duration: 1200,
+            easing: 'easeOutQuart'
+          }
+        }
+      });
+    };
+
+    // 6. Spatial Distribution - Data will be loaded from aggregates
     chartInitFunctions['arrChart'] = function() {
       const boroughData = (window.boroughData || []).slice(0, 15).sort((a, b) => b.count - a.count);
       const boroughLabels = boroughData.map(d => d.borough);
@@ -1047,7 +1187,7 @@
 
     // Initialize all charts function
     function initializeAllCharts() {
-      const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'locationChart', 'arrChart'];
+      const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart'];
       chartIds.forEach(chartId => {
         const chartElement = document.getElementById(chartId);
         if (chartElement && chartInitFunctions[chartId]) {
@@ -1169,7 +1309,7 @@
     }
 
     // Initialize charts when they scroll into view (for initial page load before data is ready)
-    const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'locationChart', 'arrChart'];
+    const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart'];
     chartIds.forEach(chartId => {
       const chartElement = document.getElementById(chartId);
       if (chartElement) {

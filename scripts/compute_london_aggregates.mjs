@@ -247,6 +247,57 @@ async function main() {
   await fs.writeFile(path.join(OUTPUT_DIR, 'chains_vs_single_location.json'), JSON.stringify(locationData, null, 2));
   await fs.writeFile(path.join(OUTPUT_DIR, 'borough_distribution.json'), JSON.stringify(boroughData, null, 2));
   
+  // Modality growth over time (yoga, pilates, strength-training)
+  const modalityGrowthByYear = {
+    yoga: {},
+    pilates: {},
+    'strength-training': {}
+  };
+  
+  studios.forEach(studio => {
+    if (!studio.estimated_opening_date) return;
+    
+    const date = new Date(studio.estimated_opening_date);
+    if (isNaN(date.getTime())) return;
+    
+    let year = date.getFullYear();
+    // Filter out dates before 2000
+    if (year < 2000) return;
+    
+    // Adjust for Nov/Dec domain registrations
+    if (studio.opening_date_source === 'whois_domain_creation') {
+      year = adjustYearForDomainRegistration(year, date.getMonth());
+    }
+    
+    const consolidatedCats = consolidateCategories(studio, consolidationMap);
+    
+    // Count studio for each modality it offers
+    if (consolidatedCats.includes('yoga')) {
+      modalityGrowthByYear.yoga[year] = (modalityGrowthByYear.yoga[year] || 0) + 1;
+    }
+    if (consolidatedCats.includes('pilates')) {
+      modalityGrowthByYear.pilates[year] = (modalityGrowthByYear.pilates[year] || 0) + 1;
+    }
+    if (consolidatedCats.includes('strength-training')) {
+      modalityGrowthByYear['strength-training'][year] = (modalityGrowthByYear['strength-training'][year] || 0) + 1;
+    }
+  });
+  
+  // Get all years from all modalities
+  const allYears = new Set();
+  Object.values(modalityGrowthByYear).forEach(yearData => {
+    Object.keys(yearData).forEach(year => allYears.add(parseInt(year)));
+  });
+  
+  const sortedYears = Array.from(allYears).sort((a, b) => a - b);
+  
+  const modalityGrowthData = sortedYears.map(year => ({
+    year,
+    yoga: modalityGrowthByYear.yoga[year] || 0,
+    pilates: modalityGrowthByYear.pilates[year] || 0,
+    'strength-training': modalityGrowthByYear['strength-training'][year] || 0
+  }));
+  
   // Overall stats for the hero section
   const overallStats = {
     totalBoutiqueStudios: totalStudios,
@@ -256,6 +307,7 @@ async function main() {
     totalNewStudios: recentCount
   };
   await fs.writeFile(path.join(OUTPUT_DIR, 'overall_stats.json'), JSON.stringify(overallStats, null, 2));
+  await fs.writeFile(path.join(OUTPUT_DIR, 'modality_growth_by_year.json'), JSON.stringify(modalityGrowthData, null, 2));
   
   console.log('✓ Computed London aggregates');
   console.log(`✓ Saved to ${OUTPUT_DIR}\n`);
