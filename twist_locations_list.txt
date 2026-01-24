@@ -1,0 +1,71 @@
+Twist Studios Locations - Google Maps Search List
+====================================================================================================
+
+ 1. 28 Station Passage, London
+    Borough: Southwark
+    Google Maps: "Twist Studios 28 Station Passage, London"
+    Script Key: "twist-studios-peckham-london"
+    Opening Date: 1985-07-24
+
+ 2. 344 Camberwell Station Road, London
+    Borough: Southwark
+    Google Maps: "Twist Studios 344 Camberwell Station Road, London"
+    Script Key: "twist-studios--camberwell-london"
+    Opening Date: 1985-07-24
+
+ 3. 344 Camberwell Station Road, London (duplicate - personal training)
+    Borough: Southwark
+    Google Maps: "Twist Studios 344 Camberwell Station Road, London"
+    Script Key: "twist-studios-camberwell--personal-training-london"
+    Opening Date: 1985-07-24
+
+ 4. 6 Thurston Road, London
+    Borough: Lewisham
+    Google Maps: "Twist Studios 6 Thurston Road, London"
+    Script Key: "twist-studios--lewisham-london"
+    Opening Date: 1985-07-24
+
+ 5. 6 Thurston Road, London (duplicate - personal training)
+    Borough: Lewisham
+    Google Maps: "Twist Studios 6 Thurston Road, London"
+    Script Key: "twist-studios--lewisham---personal-training-london"
+    Opening Date: 1985-07-24
+
+ 6. 99a Dartmouth Road, London
+    Borough: Lewisham
+    Google Maps: "Twist Studios 99a Dartmouth Road, London"
+    Script Key: "twist-studios--forest-hill-london"
+    Opening Date: 1985-07-24
+
+ 7. 99a Dartmouth Road, London (duplicate - personal training)
+    Borough: Lewisham
+    Google Maps: "Twist Studios 99a Dartmouth Road, London"
+    Script Key: "twist-studios--forest-hill---personal-training-london"
+    Opening Date: 1985-07-24
+
+ 8. Station Passage, London
+    Borough: Southwark
+    Google Maps: "Twist Studios Station Passage, London"
+    Script Key: "twist-studios--peckham---personal-training-london"
+    Opening Date: 1985-07-24
+
+ 9. The Club House, Beckenham Rugby Club
+    Google Maps: "Twist Studios The Club House, Beckenham Rugby Club"
+    Script Key: "twist-studios-beckenham--personal-training"
+    Opening Date: 1985-07-24
+
+10. The Clubhouse, Balmoral Avenue
+    Google Maps: "Twist Studios The Clubhouse, Balmoral Avenue"
+    Script Key: "twist-studios--beckenham"
+    Opening Date: 1985-07-24
+
+====================================================================================================
+Total: 10 locations (some appear to be duplicates with different service types)
+
+Instructions:
+1. Search each location on Google Maps using the "Google Maps" search string
+2. Find the earliest review date
+3. Add entries to the openingDates object in scripts/update_twist_dates.mjs using the Script Key
+4. Run: node scripts/update_twist_dates.mjs
+
+Note: All locations currently have opening dates of 1985-07-24 which is likely a WHOIS domain creation date and not accurate for individual locations.

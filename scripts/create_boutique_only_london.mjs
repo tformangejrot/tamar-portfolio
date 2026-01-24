@@ -12,6 +12,21 @@ const INPUT_PATH = path.join(ROOT, 'data/processed/studios_consolidated_london.j
 const OUTPUT_PATH = path.join(ROOT, 'data/processed/studios_consolidated_boutique_london.json');
 
 function isBoutique(studio) {
+  // Exclude ((BOUNCE)), Sanctum, Dominic Chapman PT, and Anytime Fitness - these are branded classes, personal trainers, or chain gyms
+  const name = studio.name || '';
+  if (/\(\(BOUNCE\)\)|bounce/i.test(name)) {
+    return false;
+  }
+  if (/sanctum/i.test(name)) {
+    return false;
+  }
+  if (/dominic chapman/i.test(name)) {
+    return false;
+  }
+  if (/anytime fitness/i.test(name)) {
+    return false;
+  }
+  
   const cats = studio.categories || [];
   if (cats.length === 0) return true; // Keep studios with no categories (edge case)
   

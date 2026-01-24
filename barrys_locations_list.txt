@@ -1,0 +1,53 @@
+Barry's Locations - Google Maps Search List
+====================================================================================================
+
+ 1. 1 Crossrail Place Canary Wharf, London
+    Borough: Tower Hamlets
+    Google Maps: "Barry's 1 Crossrail Place Canary Wharf, London"
+    Script Key: "barrys-canary-wharf-london"
+    Opening Date: NONE
+
+ 2. 16 Eccleston YardsEccleston Place, London SW1W 9NF, London
+    Borough: Westminster
+    Google Maps: "Barry's 16 Eccleston YardsEccleston Place, London SW1W 9NF, London"
+    Script Key: "barrys-belgravia-london"
+    Opening Date: NONE
+
+ 3. 163 Euston Road, London
+    Borough: Camden
+    Google Maps: "Barry's 163 Euston Road, London"
+    Script Key: "barrys-kings-cross-london"
+    Opening Date: NONE
+
+ 4. 2 Worship Street, London
+    Borough: City of London
+    Google Maps: "Barry's 2 Worship Street, London"
+    Script Key: "barrys-shoreditch-london"
+    Opening Date: NONE
+
+ 5. 33 Gutter Ln, London
+    Borough: City of London
+    Google Maps: "Barry's 33 Gutter Ln, London"
+    Script Key: "barrys-bank-london"
+    Opening Date: NONE
+
+ 6. 59  Kingly Street Soho, London
+    Borough: Westminster
+    Google Maps: "Barry's 59  Kingly Street Soho, London"
+    Script Key: "barrys-soho-london"
+    Opening Date: NONE
+
+ 7. 9A Queensway, London
+    Borough: Westminster
+    Google Maps: "Barry's 9A Queensway, London"
+    Script Key: "barrys-bayswater-london"
+    Opening Date: NONE
+
+====================================================================================================
+Total: 7 locations
+
+Instructions:
+1. Search each location on Google Maps using the "Google Maps" search string
+2. Find the earliest review date
+3. Add entries to the openingDates object in scripts/update_barrys_dates.mjs using the Script Key
+4. Run: node scripts/update_barrys_dates.mjs

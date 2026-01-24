@@ -1,0 +1,49 @@
+Barrecore Locations - Google Maps Search List
+====================================================================================================
+
+ 1. 12 Chepstow Rd, London
+    Borough: Westminster
+    Google Maps: "Barrecore 12 Chepstow Rd, London"
+    Script Key: "barrecore-notting-hill-london"
+    Opening Date: 2011-02-08
+
+ 2. 372 King's Road, London
+    Borough: Kensington and Chelsea
+    Google Maps: "Barrecore 372 King's Road, London"
+    Script Key: "barrecore-chelsea-studio-london"
+    Opening Date: 2011-02-08
+
+ 3. 50 St Mary Axe, London
+    Borough: City of London
+    Google Maps: "Barrecore 50 St Mary Axe, London"
+    Script Key: "barrecore-st-marys-axe-london"
+    Opening Date: 2011-02-08
+
+ 4. 501A Old York Rd, London
+    Borough: Wandsworth
+    Google Maps: "Barrecore 501A Old York Rd, London"
+    Script Key: "barrecore-wandsworth-london"
+    Opening Date: 2011-02-08
+
+ 5. 57a Jamestown Road, London
+    Borough: Camden
+    Google Maps: "Barrecore 57a Jamestown Road, London"
+    Script Key: "barrecore-camden-studio-london"
+    Opening Date: 2023-11-17
+
+ 6. 7 Pond St, London
+    Borough: Camden
+    Google Maps: "Barrecore 7 Pond St, London"
+    Script Key: "barrecore-hampstead-studio-london"
+    Opening Date: 2011-02-08
+
+====================================================================================================
+Total: 6 locations
+
+Instructions:
+1. Search each location on Google Maps using the "Google Maps" search string
+2. Find the earliest review date
+3. Add entries to the openingDates object in scripts/update_barrecore_dates.mjs using the Script Key
+4. Run: node scripts/update_barrecore_dates.mjs
+
+Note: Most locations have opening dates of 2011-02-08 which is likely a WHOIS domain creation date and may not be accurate for individual locations. One location (Camden) shows 2023-11-17 which may be more accurate.

@@ -1,0 +1,193 @@
+F45 Training Locations - Google Maps Search List
+====================================================================================================
+
+ 1. 1 The Causeway, Teddington
+    Google Maps: "F45 1 The Causeway, Teddington"
+    Script Key: "teddington"
+
+ 2. 103 Hammersmith Rd, London
+    Borough: Hammersmith and Fulham
+    Google Maps: "F45 103 Hammersmith Rd, London"
+    Script Key: "kensington-olympia-london-uspg"
+
+ 3. 111 Power Road, London
+    Borough: Hounslow
+    Google Maps: "F45 111 Power Road, London"
+    Script Key: "unknown"
+
+ 4. 13 The St, Ashtead
+    Google Maps: "F45 13 The St, Ashtead"
+    Script Key: "ashtead"
+
+ 5. 131-133 East Hill, London
+    Borough: Wandsworth
+    Google Maps: "F45 131-133 East Hill, London"
+    Script Key: "wandsworth"
+
+ 6. 14 Morden Road, London
+    Borough: Merton
+    Google Maps: "F45 14 Morden Road, London"
+    Script Key: "south-wimbledon-london-konm"
+
+ 7. 168-172 Old Street, London
+    Borough: Islington
+    Google Maps: "F45 168-172 Old Street, London"
+    Script Key: "unknown"
+
+ 8. 19 Sidworth St, London
+    Borough: Hackney
+    Google Maps: "F45 19 Sidworth St, London"
+    Script Key: "london-fields"
+
+ 9. 193 Kensington High St, London
+    Borough: Kensington and Chelsea
+    Google Maps: "F45 193 Kensington High St, London"
+    Script Key: "high-street-kensington"
+
+10. 198 Cambridge Road, Kingston upon Thames
+    Google Maps: "F45 198 Cambridge Road, Kingston upon Thames"
+    Script Key: "kingston-kingston-upon-thames-wccy"
+
+11. 2 Clove Crescent, London
+    Borough: Tower Hamlets
+    Google Maps: "F45 2 Clove Crescent, London"
+    Script Key: "blackwall"
+
+12. 20 Totterdown Street, London
+    Borough: Wandsworth
+    Google Maps: "F45 20 Totterdown Street, London"
+    Script Key: "unknown"
+
+13. 21 Saint Alban's Place, London
+    Borough: Islington
+    Google Maps: "F45 21 Saint Alban's Place, London"
+    Script Key: "islington"
+
+14. 230-234 Brixton Road, London
+    Borough: Lambeth
+    Google Maps: "F45 230-234 Brixton Road, London"
+    Script Key: "brixton"
+
+15. 239-241 Rye Lane, London
+    Borough: Southwark
+    Google Maps: "F45 239-241 Rye Lane, London"
+    Script Key: "peckham-rye"
+
+16. 25 Chamberlayne Road, London
+    Borough: Brent
+    Google Maps: "F45 25 Chamberlayne Road, London"
+    Script Key: "kensal-green"
+
+17. 258 Holloway Road, London
+    Borough: Islington
+    Google Maps: "F45 258 Holloway Road, London"
+    Script Key: "holloway"
+
+18. 2a Little Portland St, London
+    Borough: Westminster
+    Google Maps: "F45 2a Little Portland St, London"
+    Script Key: "oxford-circus"
+
+19. 3 St Marks Square, Bromley
+    Google Maps: "F45 3 St Marks Square, Bromley"
+    Script Key: "unknown"
+
+20. 31 Downham Rd, London
+    Borough: Islington
+    Google Maps: "F45 31 Downham Rd, London"
+    Script Key: "haggerston"
+
+21. 32 Uxbridge Road, London
+    Borough: Ealing
+    Google Maps: "F45 32 Uxbridge Road, London"
+    Script Key: "ealing-london-uacg"
+
+22. 32-34 Gordon House Rd, London
+    Borough: Camden
+    Google Maps: "F45 32-34 Gordon House Rd, London"
+    Script Key: "hampstead-heath"
+
+23. 336a Queenstown Rd, Nine Elms
+    Borough: Wandsworth
+    Google Maps: "F45 336a Queenstown Rd, Nine Elms"
+    Script Key: "battersea-park"
+
+24. 35 Harbour Wy, London
+    Borough: Tower Hamlets
+    Google Maps: "F45 35 Harbour Wy, London"
+    Script Key: "millharbour-canary-wharf"
+
+25. 423 North End Road, London
+    Borough: Hammersmith and Fulham
+    Google Maps: "F45 423 North End Road, London"
+    Script Key: "unknown"
+
+26. 615-619 Watford Way, London
+    Borough: Barnet
+    Google Maps: "F45 615-619 Watford Way, London"
+    Script Key: "mill-hill-london-wnwa"
+
+27. 64-66 Brighton Rd, Surbiton
+    Google Maps: "F45 64-66 Brighton Rd, Surbiton"
+    Script Key: "unknown"
+
+28. 72 St John's Hill, London
+    Borough: Wandsworth
+    Google Maps: "F45 72 St John's Hill, London"
+    Script Key: "clapham-junction"
+
+29. 80 Middlesex Street, London
+    Borough: Tower Hamlets
+    Google Maps: "F45 80 Middlesex Street, London"
+    Script Key: "liverpool-street-london-jyur"
+
+30. 9-11 Streatham High Road, London
+    Borough: Lambeth
+    Google Maps: "F45 9-11 Streatham High Road, London"
+    Script Key: "unknown"
+
+31. Blackhorse Mills, Forest Rd
+    Borough: Waltham Forest
+    Google Maps: "F45 Blackhorse Mills, Forest Rd"
+    Script Key: "blackhorse-lane"
+
+32. Centro 1, Plender St
+    Borough: Camden
+    Google Maps: "F45 Centro 1, Plender St"
+    Script Key: "camden-london-wfjt"
+
+33. First Floor 1-7 Morris Place, London
+    Borough: Haringey
+    Google Maps: "F45 First Floor 1-7 Morris Place, London"
+    Script Key: "unknown"
+
+34. Leadenhall Market, London
+    Borough: City of London
+    Google Maps: "F45 Leadenhall Market, London"
+    Script Key: "unknown"
+
+35. Stamford Works, 3 Gillett St
+    Borough: Hackney
+    Google Maps: "F45 Stamford Works, 3 Gillett St"
+    Script Key: "dalston"
+
+36. Unit 2 Canalside, London
+    Borough: Hackney
+    Google Maps: "F45 Unit 2 Canalside, London"
+    Script Key: "unknown"
+
+37. West Works Building, 195 Wood Lane
+    Borough: Hammersmith and Fulham
+    Google Maps: "F45 West Works Building, 195 Wood Lane"
+    Script Key: "unknown"
+
+====================================================================================================
+Total: 37 locations
+
+Instructions:
+1. Search each location on Google Maps using the "Google Maps" search string
+2. Find the earliest review date
+3. Add entries to the openingDates object in scripts/update_f45_dates.mjs using the Script Key
+4. Run: node scripts/update_f45_dates.mjs
+
+Note: Locations with "unknown" Script Key may need manual matching by address in the script.

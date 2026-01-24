@@ -1,0 +1,65 @@
+Ten Health & Fitness Locations - Google Maps Search List
+====================================================================================================
+
+ 1. 1 Lewis Cubitt Walk, London
+    Borough: Islington
+    Google Maps: "Ten Health & Fitness 1 Lewis Cubitt Walk, London"
+    Script Key: "ten-health-fitness-kings-cross-london"
+    Opening Date: NONE
+
+ 2. 2-4 Exmoor St, London
+    Borough: Kensington and Chelsea
+    Google Maps: "Ten Health & Fitness 2-4 Exmoor St, London"
+    Script Key: "ten-health-fitness-ladbroke-grove-london"
+    Opening Date: NONE
+
+ 3. 38 Hatton Garden, London
+    Borough: Islington
+    Google Maps: "Ten Health & Fitness 38 Hatton Garden, London"
+    Script Key: "ten-health-fitness-hatton-garden-london"
+    Opening Date: NONE
+
+ 4. 6 Duke Street St James's, London
+    Borough: Westminster
+    Google Maps: "Ten Health & Fitness 6 Duke Street St James's, London"
+    Script Key: "ten-health-fitness-st-jamess-london"
+    Opening Date: NONE
+
+ 5. 6 New Union Square, Nine Elms, London
+    Borough: Wandsworth
+    Google Maps: "Ten Health & Fitness 6 New Union Square, Nine Elms, London"
+    Script Key: "ten-health-fitness-nine-elms-london"
+    Opening Date: NONE
+
+ 6. 83 Great Titchfield St, London
+    Borough: Westminster
+    Google Maps: "Ten Health & Fitness 83 Great Titchfield St, London"
+    Script Key: "ten-health-fitness-fitzrovia-london"
+    Opening Date: NONE
+
+ 7. 94 Notting Hill Gate, London
+    Borough: Kensington and Chelsea
+    Google Maps: "Ten Health & Fitness 94 Notting Hill Gate, London"
+    Script Key: "ten-health-fitness-notting-hill-london"
+    Opening Date: NONE
+
+ 8. 119-121 Middlesex St, London
+    Borough: Tower Hamlets
+    Google Maps: "Ten Health & Fitness 119-121 Middlesex St, London"
+    Script Key: "ten-health-fitness-spitalfields-london"
+    Opening Date: NONE
+
+ 9. Barley Mow Passage, London
+    Borough: Hounslow
+    Google Maps: "Ten Health & Fitness Barley Mow Passage, London"
+    Script Key: "ten-health-fitness-chiswick-london"
+    Opening Date: NONE
+
+====================================================================================================
+Total: 9 locations
+
+Instructions:
+1. Search each location on Google Maps using the "Google Maps" search string
+2. Find the earliest review date
+3. Add entries to the openingDates object in scripts/update_ten_health_dates.mjs using the Script Key
+4. Run: node scripts/update_ten_health_dates.mjs

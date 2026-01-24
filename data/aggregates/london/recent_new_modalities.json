@@ -1,62 +1,62 @@
 [
   {
-    "modality": "pilates",
-    "count": 51,
+    "modality": "strength-training",
+    "count": 55,
     "pctOfAllNew": 45.1,
-    "pctOfModality": 10.5
+    "pctOfModality": 10.1
   },
   {
-    "modality": "strength-training",
-    "count": 47,
-    "pctOfAllNew": 41.6,
-    "pctOfModality": 8.2
+    "modality": "pilates",
+    "count": 55,
+    "pctOfAllNew": 45.1,
+    "pctOfModality": 11.5
   },
   {
     "modality": "hiit-bootcamp",
-    "count": 38,
-    "pctOfAllNew": 33.6,
-    "pctOfModality": 7.7
+    "count": 45,
+    "pctOfAllNew": 36.9,
+    "pctOfModality": 9.4
   },
   {
     "modality": "yoga",
-    "count": 38,
-    "pctOfAllNew": 33.6,
-    "pctOfModality": 9.2
+    "count": 39,
+    "pctOfAllNew": 32,
+    "pctOfModality": 9.6
   },
   {
     "modality": "reformer-pilates",
-    "count": 35,
-    "pctOfAllNew": 31,
-    "pctOfModality": 15.4
+    "count": 38,
+    "pctOfAllNew": 31.1,
+    "pctOfModality": 16.7
   },
   {
     "modality": "dance",
     "count": 15,
-    "pctOfAllNew": 13.3,
-    "pctOfModality": 7.9
+    "pctOfAllNew": 12.3,
+    "pctOfModality": 8.4
+  },
+  {
+    "modality": "stretching",
+    "count": 13,
+    "pctOfAllNew": 10.7,
+    "pctOfModality": 11.5
+  },
+  {
+    "modality": "low-impact-training",
+    "count": 13,
+    "pctOfAllNew": 10.7,
+    "pctOfModality": 15.7
   },
   {
     "modality": "martial-arts",
     "count": 12,
-    "pctOfAllNew": 10.6,
-    "pctOfModality": 11.7
-  },
-  {
-    "modality": "low-impact-training",
-    "count": 12,
-    "pctOfAllNew": 10.6,
-    "pctOfModality": 14.1
-  },
-  {
-    "modality": "stretching",
-    "count": 11,
-    "pctOfAllNew": 9.7,
-    "pctOfModality": 9.4
+    "pctOfAllNew": 9.8,
+    "pctOfModality": 11.8
   },
   {
     "modality": "barre",
-    "count": 9,
-    "pctOfAllNew": 8,
-    "pctOfModality": 7.2
+    "count": 10,
+    "pctOfAllNew": 8.2,
+    "pctOfModality": 8.1
   }
 ]

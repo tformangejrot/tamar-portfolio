@@ -1,0 +1,53 @@
+FS8 Locations - Google Maps Search List
+====================================================================================================
+
+ 1. First Floor, 1-7 Morris Place, London
+    Borough: Haringey
+    Google Maps: "FS8 First Floor, 1-7 Morris Place, London"
+    Script Key: "fs8-finsbury-park-london"
+    Opening Date: NONE
+
+ 2. Unit 1 Canalside HereEast, London
+    Borough: Newham
+    Google Maps: "FS8 Unit 1 Canalside HereEast, London"
+    Script Key: "fs8-hackney-wick-london"
+    Opening Date: NONE
+
+ 3. 65 Kensington Church Street, London
+    Borough: Kensington and Chelsea
+    Google Maps: "FS8 65 Kensington Church Street, London"
+    Script Key: "fs8-kensington-london"
+    Opening Date: NONE
+
+ 4. 111 Power Road, London
+    Borough: Hounslow
+    Google Maps: "FS8 111 Power Road, London"
+    Script Key: "fs8-chiswick-london"
+    Opening Date: NONE
+
+ 5. 23-35 Great Titchfield St., London
+    Borough: Westminster
+    Google Maps: "FS8 23-35 Great Titchfield St., London"
+    Script Key: "fs8-fitzrovia-london"
+    Opening Date: NONE
+
+ 6. Unit 4 Blackhorse Mills Forest Road, London
+    Borough: Waltham Forest
+    Google Maps: "FS8 Unit 4 Blackhorse Mills Forest Road, London"
+    Script Key: "fs8-blackhorse-road-london"
+    Opening Date: NONE
+
+ 7. Unit 1,12 Hoxton Market, London
+    Borough: Islington
+    Google Maps: "FS8 Unit 1,12 Hoxton Market, London"
+    Script Key: "fs8-hoxton-london"
+    Opening Date: NONE
+
+====================================================================================================
+Total: 7 locations
+
+Instructions:
+1. Search each location on Google Maps using the "Google Maps" search string
+2. Find the earliest review date
+3. Add entries to the openingDates object in scripts/update_fs8_dates.mjs using the Script Key
+4. Run: node scripts/update_fs8_dates.mjs
