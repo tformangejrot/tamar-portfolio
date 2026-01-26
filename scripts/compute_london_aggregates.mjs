@@ -247,12 +247,8 @@ async function main() {
   await fs.writeFile(path.join(OUTPUT_DIR, 'chains_vs_single_location.json'), JSON.stringify(locationData, null, 2));
   await fs.writeFile(path.join(OUTPUT_DIR, 'borough_distribution.json'), JSON.stringify(boroughData, null, 2));
   
-  // Modality growth over time (yoga, pilates, strength-training)
-  const modalityGrowthByYear = {
-    yoga: {},
-    pilates: {},
-    'strength-training': {}
-  };
+  // Modality growth over time (ALL modalities)
+  const modalityGrowthByYear = {};
   
   studios.forEach(studio => {
     if (!studio.estimated_opening_date) return;
@@ -272,15 +268,12 @@ async function main() {
     const consolidatedCats = consolidateCategories(studio, consolidationMap);
     
     // Count studio for each modality it offers
-    if (consolidatedCats.includes('yoga')) {
-      modalityGrowthByYear.yoga[year] = (modalityGrowthByYear.yoga[year] || 0) + 1;
-    }
-    if (consolidatedCats.includes('pilates')) {
-      modalityGrowthByYear.pilates[year] = (modalityGrowthByYear.pilates[year] || 0) + 1;
-    }
-    if (consolidatedCats.includes('strength-training')) {
-      modalityGrowthByYear['strength-training'][year] = (modalityGrowthByYear['strength-training'][year] || 0) + 1;
-    }
+    consolidatedCats.forEach(modality => {
+      if (!modalityGrowthByYear[modality]) {
+        modalityGrowthByYear[modality] = {};
+      }
+      modalityGrowthByYear[modality][year] = (modalityGrowthByYear[modality][year] || 0) + 1;
+    });
   });
   
   // Get all years from all modalities
@@ -291,12 +284,17 @@ async function main() {
   
   const sortedYears = Array.from(allYears).sort((a, b) => a - b);
   
-  const modalityGrowthData = sortedYears.map(year => ({
-    year,
-    yoga: modalityGrowthByYear.yoga[year] || 0,
-    pilates: modalityGrowthByYear.pilates[year] || 0,
-    'strength-training': modalityGrowthByYear['strength-training'][year] || 0
-  }));
+  // Get all unique modalities
+  const allModalities = Object.keys(modalityGrowthByYear).sort();
+  
+  // Build data structure with all modalities
+  const modalityGrowthData = sortedYears.map(year => {
+    const yearData = { year };
+    allModalities.forEach(modality => {
+      yearData[modality] = modalityGrowthByYear[modality][year] || 0;
+    });
+    return yearData;
+  });
   
   // Pilates combination trends (yoga+pilates vs pilates+strength)
   const pilatesCombinationsByYear = {
