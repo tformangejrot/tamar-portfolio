@@ -15,6 +15,11 @@
     "pctOfModality": 11.8
   },
   {
+    "modality": "outdoors",
+    "count": 8,
+    "pctOfModality": 11.3
+  },
+  {
     "modality": "pilates",
     "count": 53,
     "pctOfModality": 11
@@ -25,9 +30,14 @@
     "pctOfModality": 10.3
   },
   {
-    "modality": "outdoors",
+    "modality": "running",
     "count": 7,
-    "pctOfModality": 9.9
+    "pctOfModality": 10
+  },
+  {
+    "modality": "strength-training",
+    "count": 52,
+    "pctOfModality": 9.8
   },
   {
     "modality": "stretching",
@@ -38,15 +48,5 @@
     "modality": "yoga",
     "count": 38,
     "pctOfModality": 9.3
-  },
-  {
-    "modality": "strength-training",
-    "count": 48,
-    "pctOfModality": 9
-  },
-  {
-    "modality": "dance",
-    "count": 15,
-    "pctOfModality": 8.6
   }
 ]

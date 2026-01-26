@@ -57,47 +57,47 @@
   {
     "year": 2014,
     "yoga-pilates": 3,
-    "pilates-strength": 13
+    "pilates-strength": 3
   },
   {
     "year": 2015,
     "yoga-pilates": 13,
-    "pilates-strength": 9
+    "pilates-strength": 10
   },
   {
     "year": 2016,
-    "yoga-pilates": 6,
-    "pilates-strength": 6
+    "yoga-pilates": 7,
+    "pilates-strength": 7
   },
   {
     "year": 2017,
-    "yoga-pilates": 45,
-    "pilates-strength": 11
+    "yoga-pilates": 11,
+    "pilates-strength": 9
   },
   {
     "year": 2018,
-    "yoga-pilates": 10,
+    "yoga-pilates": 16,
     "pilates-strength": 10
   },
   {
     "year": 2019,
-    "yoga-pilates": 10,
-    "pilates-strength": 11
+    "yoga-pilates": 22,
+    "pilates-strength": 15
   },
   {
     "year": 2020,
-    "yoga-pilates": 8,
-    "pilates-strength": 8
+    "yoga-pilates": 12,
+    "pilates-strength": 9
   },
   {
     "year": 2021,
-    "yoga-pilates": 7,
-    "pilates-strength": 6
+    "yoga-pilates": 11,
+    "pilates-strength": 8
   },
   {
     "year": 2022,
-    "yoga-pilates": 11,
-    "pilates-strength": 6
+    "yoga-pilates": 16,
+    "pilates-strength": 7
   },
   {
     "year": 2023,
@@ -111,7 +111,7 @@
   },
   {
     "year": 2025,
-    "yoga-pilates": 18,
-    "pilates-strength": 12
+    "yoga-pilates": 21,
+    "pilates-strength": 14
   }
 ]
