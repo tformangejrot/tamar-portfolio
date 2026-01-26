@@ -298,6 +298,54 @@ async function main() {
     'strength-training': modalityGrowthByYear['strength-training'][year] || 0
   }));
   
+  // Pilates combination trends (yoga+pilates vs pilates+strength)
+  const pilatesCombinationsByYear = {
+    'yoga-pilates': {},
+    'pilates-strength': {}
+  };
+  
+  studios.forEach(studio => {
+    if (!studio.estimated_opening_date) return;
+    
+    const date = new Date(studio.estimated_opening_date);
+    if (isNaN(date.getTime())) return;
+    
+    let year = date.getFullYear();
+    // Filter out dates before 2000
+    if (year < 2000) return;
+    
+    // Adjust for Nov/Dec domain registrations
+    if (studio.opening_date_source === 'whois_domain_creation') {
+      year = adjustYearForDomainRegistration(year, date.getMonth());
+    }
+    
+    const consolidatedCats = consolidateCategories(studio, consolidationMap);
+    
+    // Check for yoga + pilates combination
+    if (consolidatedCats.includes('yoga') && consolidatedCats.includes('pilates')) {
+      pilatesCombinationsByYear['yoga-pilates'][year] = (pilatesCombinationsByYear['yoga-pilates'][year] || 0) + 1;
+    }
+    
+    // Check for pilates + strength-training combination
+    if (consolidatedCats.includes('pilates') && consolidatedCats.includes('strength-training')) {
+      pilatesCombinationsByYear['pilates-strength'][year] = (pilatesCombinationsByYear['pilates-strength'][year] || 0) + 1;
+    }
+  });
+  
+  // Get all years from both combinations
+  const allCombinationYears = new Set();
+  Object.values(pilatesCombinationsByYear).forEach(yearData => {
+    Object.keys(yearData).forEach(year => allCombinationYears.add(parseInt(year)));
+  });
+  
+  const sortedCombinationYears = Array.from(allCombinationYears).sort((a, b) => a - b);
+  
+  const pilatesCombinationsData = sortedCombinationYears.map(year => ({
+    year,
+    'yoga-pilates': pilatesCombinationsByYear['yoga-pilates'][year] || 0,
+    'pilates-strength': pilatesCombinationsByYear['pilates-strength'][year] || 0
+  }));
+  
   // Overall stats for the hero section
   const overallStats = {
     totalBoutiqueStudios: totalStudios,
@@ -308,6 +356,7 @@ async function main() {
   };
   await fs.writeFile(path.join(OUTPUT_DIR, 'overall_stats.json'), JSON.stringify(overallStats, null, 2));
   await fs.writeFile(path.join(OUTPUT_DIR, 'modality_growth_by_year.json'), JSON.stringify(modalityGrowthData, null, 2));
+  await fs.writeFile(path.join(OUTPUT_DIR, 'pilates_combinations_by_year.json'), JSON.stringify(pilatesCombinationsData, null, 2));
   
   console.log('✓ Computed London aggregates');
   console.log(`✓ Saved to ${OUTPUT_DIR}\n`);

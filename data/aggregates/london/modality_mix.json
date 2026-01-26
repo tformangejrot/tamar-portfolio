@@ -1,77 +1,77 @@
 [
   {
     "modality": "strength-training",
-    "count": 544,
-    "pct": "45.9"
-  },
-  {
-    "modality": "hiit-bootcamp",
-    "count": 481,
-    "pct": "40.6"
+    "count": 533,
+    "pct": "45.7"
   },
   {
     "modality": "pilates",
     "count": 480,
-    "pct": "40.5"
+    "pct": "41.1"
+  },
+  {
+    "modality": "hiit-bootcamp",
+    "count": 470,
+    "pct": "40.3"
   },
   {
     "modality": "yoga",
     "count": 407,
-    "pct": "34.3"
+    "pct": "34.9"
   },
   {
     "modality": "reformer-pilates",
     "count": 227,
-    "pct": "19.2"
+    "pct": "19.5"
   },
   {
     "modality": "dance",
-    "count": 178,
-    "pct": "15.0"
+    "count": 174,
+    "pct": "14.9"
   },
   {
     "modality": "boxing",
     "count": 163,
-    "pct": "13.8"
+    "pct": "14.0"
   },
   {
     "modality": "barre",
     "count": 124,
-    "pct": "10.5"
+    "pct": "10.6"
   },
   {
     "modality": "stretching",
     "count": 113,
-    "pct": "9.5"
+    "pct": "9.7"
   },
   {
     "modality": "prenatal-postnatal",
     "count": 111,
-    "pct": "9.4"
+    "pct": "9.5"
   },
   {
     "modality": "martial-arts",
     "count": 102,
-    "pct": "8.6"
+    "pct": "8.7"
   },
   {
     "modality": "cycling",
     "count": 92,
-    "pct": "7.8"
+    "pct": "7.9"
   },
   {
     "modality": "personal-training",
-    "count": 90,
-    "pct": "7.6"
+    "count": 86,
+    "pct": "7.4"
   },
   {
     "modality": "low-impact-training",
     "count": 83,
-    "pct": "7.0"
+    "pct": "7.1"
   },
   {
     "modality": "outdoors",
-    "count": 76,
-    "pct": "6.4"
+    "count": 71,
+    "pct": "6.1"
   }
 ]

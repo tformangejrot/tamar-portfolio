@@ -1,0 +1,47 @@
+LevelOut Locations - For Manual Opening Date Lookup
+====================================================
+
+1. LevelOut Brixton
+   Address: 10-12 Tunstall Rd, London SW9 8BN, UK
+   Borough: Lambeth
+   Postcode: SW9 8BN
+   Google Maps: "LevelOut Brixton 10-12 Tunstall Rd London" or "LevelOut Brixton"
+   Script Key: levelout-brixton-london
+   Website: http://levelout.london/
+   Current Opening Date: 2022-10-13 (WHOIS - may be brand date, not location)
+
+2. LevelOut Blackheath
+   Address: Brigade works, 20 Brigade Street, London SE3 0TW, UK
+   Borough: Greenwich
+   Postcode: SE3 0TW
+   Google Maps: "LevelOut Blackheath 20 Brigade Street London" or "LevelOut Blackheath"
+   Script Key: levelout--blackheath-london
+   Website: https://levelout.co/en-gb/pages/studios/blackheath
+   Current Opening Date: 2018-03-09 (WHOIS - may be brand date, not location)
+
+3. LevelOut De Beauvoir
+   Address: 28-36 Orsman Road, London N1 5QY, UK
+   Borough: Islington
+   Postcode: N1 5QY
+   Google Maps: "LevelOut De Beauvoir 28-36 Orsman Road London" or "LevelOut De Beauvoir"
+   Script Key: levelout-de-beauvoir-london-avcc
+   Website: https://levelout.co/en-gb/pages/studios/de-beauvoir
+   Current Opening Date: 2018-03-09 (WHOIS - may be brand date, not location)
+
+4. LevelOut Wandsworth
+   Address: 3 All Saints Passage, London SW18 1EP, UK
+   Borough: Wandsworth
+   Postcode: SW18 1EP
+   Google Maps: "LevelOut Wandsworth 3 All Saints Passage London" or "LevelOut Wandsworth"
+   Script Key: levelout--wandsworth-london
+   Website: https://levelout.co/en-gb/pages/studios/wandsworth
+   Current Opening Date: 2018-03-09 (WHOIS - may be brand date, not location)
+
+5. LevelOut St Pauls
+   Address: 25 Cannon Street, London EC4M 5SB, UK
+   Borough: City of London
+   Postcode: EC4M 5SB
+   Google Maps: "LevelOut St Pauls 25 Cannon Street London" or "LevelOut St Pauls"
+   Script Key: levelout-st-pauls-london
+   Website: https://levelout.co/en-gb/pages/studios/st-pauls
+   Current Opening Date: 2018-03-09 (WHOIS - may be brand date, not location)

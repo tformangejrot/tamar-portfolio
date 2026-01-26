@@ -1,0 +1,48 @@
+One Element Locations - For Manual Opening Date Lookup
+======================================================
+
+1. One Element St Margarets/Twickenham
+   Address: Moor Mead Road, Isleworth, Twickenham (matched: 5 Moor Mead Rd, St Margarets, Twickenham TW1 1JS, UK)
+   Borough: None (Twickenham - outside London boroughs)
+   Postcode: TW1 1JS
+   Google Maps: "One Element St Margarets Twickenham" or "One Element Moor Mead Rd"
+   Script Key: one-element-st-margarets-twickenham-qnhf
+   Website: https://www.one-element.co.uk/free-trial-richmond/
+   Current Opening Date: 2007-05-31 (WHOIS - may be brand date, not location)
+
+2. One Element Tooting
+   Address: Dr Johnson Avenue and Hillbury Road, London (matched: Hillbury Rd, London SW16 1RT, UK)
+   Borough: Lambeth
+   Postcode: SW16 1RT
+   Google Maps: "One Element Tooting Hillbury Rd London" or "One Element Tooting Bec Common"
+   Script Key: one-element-tooting-london-txas
+   Website: https://www.one-element.co.uk/tooting-bec-common/
+   Current Opening Date: 2007-05-31 (WHOIS - may be brand date, not location)
+
+3. One Element King Georges Park
+   Address: King Georges Park, Mapleton Rd, London (matched: Wandsworth Park, 7 Putney Bridge Rd, London SW15 2NQ, UK)
+   Borough: Wandsworth
+   Postcode: SW15 2NQ
+   Google Maps: "One Element King Georges Park London" or "One Element Wandsworth Park"
+   Script Key: one-element--king-georges-park-london
+   Website: https://www.one-element.co.uk/putney-wandsworth-park/
+   Current Opening Date: 2007-05-31 (WHOIS - may be brand date, not location)
+
+4. One Element Wandsworth Park
+   Address: Wandsworth Park, Putney Bridge Rd, London (matched: Wandsworth Park, 7 Putney Bridge Rd, London SW15 2NQ, UK)
+   Borough: Wandsworth
+   Postcode: SW15 2NQ
+   Google Maps: "One Element Wandsworth Park Putney Bridge Rd London" or "One Element Wandsworth Park"
+   Script Key: one-element-wandsworth-park-london
+   Website: https://www.one-element.co.uk/putney-wandsworth-park/
+   Current Opening Date: 2007-05-31 (WHOIS - may be brand date, not location)
+   Note: This appears to be a duplicate/alternative listing for King Georges Park location
+
+5. One Element Wandsworth Common
+   Address: Wandsworth Common, Trinity Rd, London (matched: Skylark Cafe, Dorlcote Rd, London SW18 3RT, UK)
+   Borough: Wandsworth
+   Postcode: SW18 3RT
+   Google Maps: "One Element Wandsworth Common Trinity Rd London" or "One Element Wandsworth Common"
+   Script Key: one-element-wandsworth-common-london
+   Website: https://www.one-element.co.uk/wandsworth-common/
+   Current Opening Date: 2007-05-31 (WHOIS - may be brand date, not location)

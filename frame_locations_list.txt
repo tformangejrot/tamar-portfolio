@@ -1,0 +1,47 @@
+Frame Locations - For Manual Opening Date Lookup
+==================================================
+
+1. Frame Hammersmith
+   Address: 32 King St, London (matched: 61 Downham Rd, London N1 5AH, UK)
+   Borough: Islington
+   Postcode: N1 5AH
+   Google Maps: "Frame 61 Downham Rd London" or "Frame Hammersmith London"
+   Script Key: frame-hammersmith-london
+   Website: https://www.framelondon.com/
+   Current Opening Date: 2012-06-23 (WHOIS - may be brand date, not location)
+
+2. Frame Angel
+   Address: The Shopping Centre, Basement level, Angel, 21 Parkfield St, London N1 0PS, UK
+   Borough: Islington
+   Postcode: N1 0PS
+   Google Maps: "Frame Angel 21 Parkfield St London" or "Frame Angel Shopping Centre"
+   Script Key: frame-angel-london
+   Website: None
+   Current Opening Date: None
+
+3. Frame Kings Cross
+   Address: 1 York Way, London (matched: ArtHouse, Unit 1 York Wy, London N1C 4AS, UK)
+   Borough: Islington
+   Postcode: N1C 4AS
+   Google Maps: "Frame Kings Cross 1 York Way London" or "Frame ArtHouse Kings Cross"
+   Script Key: frame-kings-cross-london
+   Website: https://moveyourframe.com/locations/kingscross/
+   Current Opening Date: 2008-07-21 (WHOIS - may be brand date, not location)
+
+4. Frame Shoreditch
+   Address: 29 New Inn Yard, London EC2A 3EY, UK
+   Borough: City of London
+   Postcode: EC2A 3EY
+   Google Maps: "Frame Shoreditch 29 New Inn Yard London" or "Frame Shoreditch"
+   Script Key: frame-shoreditch-london
+   Website: None
+   Current Opening Date: None
+
+5. Frame Victoria
+   Address: 4 Bridge Place, London (matched: 4 Bridge Pl, Pimlico, London SW1V 1AF, UK)
+   Borough: Westminster
+   Postcode: SW1V 1AF
+   Google Maps: "Frame Victoria 4 Bridge Place London" or "Frame Victoria Pimlico"
+   Script Key: frame-victoria-london-wddo
+   Website: None
+   Current Opening Date: None

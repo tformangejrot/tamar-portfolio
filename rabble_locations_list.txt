@@ -1,0 +1,47 @@
+Rabble Locations - For Manual Opening Date Lookup
+==================================================
+
+1. Rabble Finsbury Park
+   Address: Endymion Rd, Finsbury Park, London (matched: Finsbury Park, London N4 1DY, UK)
+   Borough: Haringey
+   Postcode: N4 1DY
+   Google Maps: "Rabble Finsbury Park London" or "Rabble Endymion Rd Finsbury Park"
+   Script Key: rabble-finsbury-park-london-jpyu
+   Website: http://www.joinrabble.com/
+   Current Opening Date: 2014-06-04 (WHOIS - may be brand date, not location)
+
+2. Rabble Clapham Common
+   Address: Clapham Common North, London (matched: London SW4 9DE, UK)
+   Borough: Lambeth
+   Postcode: SW4 9DE
+   Google Maps: "Rabble Clapham Common London" or "Rabble Clapham Common North"
+   Script Key: rabble-clapham-common-london-tkkc
+   Website: http://www.joinrabble.com/
+   Current Opening Date: 2014-06-04 (WHOIS - may be brand date, not location)
+
+3. Rabble Shoreditch Park
+   Address: 188 New N Rd, London (matched: 188 New N Rd, London N1 6TA, UK)
+   Borough: Islington
+   Postcode: N1 6TA
+   Google Maps: "Rabble Shoreditch Park 188 New N Rd London" or "Rabble Shoreditch Park"
+   Script Key: rabble-shoreditch-park-london-xqth
+   Website: http://www.hackney.gov.uk/shoreditch-park.htm#.VTYoNic4l4s
+   Current Opening Date: None
+
+4. Rabble Southwark Park
+   Address: Southwark Park Rd, London SE16 2JH, London (matched: Gomm Rd, London SE16 2TY, UK)
+   Borough: Southwark
+   Postcode: SE16 2TY
+   Google Maps: "Rabble Southwark Park London" or "Rabble Southwark Park Rd London"
+   Script Key: rabble-southwark-park-london
+   Website: http://www.joinrabble.com/
+   Current Opening Date: 2014-06-04 (WHOIS - may be brand date, not location)
+
+5. Rabble Highbury Fields
+   Address: City of London Academy Highbury Grove, London (matched: 8 Highbury Grove, London N5 2EQ, UK)
+   Borough: Islington
+   Postcode: N5 2EQ
+   Google Maps: "Rabble Highbury Fields London" or "Rabble Highbury Grove London"
+   Script Key: rabble-highbury-feilds-london
+   Website: http://highburygrove.cola.org.uk/
+   Current Opening Date: None

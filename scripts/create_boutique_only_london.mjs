@@ -12,7 +12,7 @@ const INPUT_PATH = path.join(ROOT, 'data/processed/studios_consolidated_london.j
 const OUTPUT_PATH = path.join(ROOT, 'data/processed/studios_consolidated_boutique_london.json');
 
 function isBoutique(studio) {
-  // Exclude ((BOUNCE)), Sanctum, Dominic Chapman PT, and Anytime Fitness - these are branded classes, personal trainers, or chain gyms
+  // Exclude ((BOUNCE)), Sanctum, Dominic Chapman PT, Anytime Fitness, The Performance Works, Rabble, Great Bear Fitness, and Salsateca - these are branded classes, personal trainers, chain gyms, or not boutique fitness studios
   const name = studio.name || '';
   if (/\(\(BOUNCE\)\)|bounce/i.test(name)) {
     return false;
@@ -24,6 +24,18 @@ function isBoutique(studio) {
     return false;
   }
   if (/anytime fitness/i.test(name)) {
+    return false;
+  }
+  if (/theperformanceworks|the performance works/i.test(name)) {
+    return false;
+  }
+  if (/^rabble$/i.test(name)) {
+    return false;
+  }
+  if (/great bear fitness/i.test(name)) {
+    return false;
+  }
+  if (/^salsateca$/i.test(name)) {
     return false;
   }
   

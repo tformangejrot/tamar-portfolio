@@ -1,13 +1,13 @@
 [
   {
     "modality": "reformer-pilates",
-    "count": 38,
-    "pctOfModality": 16.7
+    "count": 36,
+    "pctOfModality": 15.9
   },
   {
     "modality": "low-impact-training",
-    "count": 13,
-    "pctOfModality": 15.7
+    "count": 12,
+    "pctOfModality": 14.5
   },
   {
     "modality": "martial-arts",
@@ -15,19 +15,9 @@
     "pctOfModality": 11.8
   },
   {
-    "modality": "outdoors",
-    "count": 9,
-    "pctOfModality": 11.8
-  },
-  {
-    "modality": "stretching",
-    "count": 13,
-    "pctOfModality": 11.5
-  },
-  {
     "modality": "pilates",
-    "count": 55,
-    "pctOfModality": 11.5
+    "count": 53,
+    "pctOfModality": 11
   },
   {
     "modality": "mind-body",
@@ -35,18 +25,28 @@
     "pctOfModality": 10.3
   },
   {
-    "modality": "strength-training",
-    "count": 55,
-    "pctOfModality": 10.1
+    "modality": "outdoors",
+    "count": 7,
+    "pctOfModality": 9.9
   },
   {
-    "modality": "running",
-    "count": 7,
-    "pctOfModality": 10
+    "modality": "stretching",
+    "count": 11,
+    "pctOfModality": 9.7
   },
   {
     "modality": "yoga",
-    "count": 39,
-    "pctOfModality": 9.6
+    "count": 38,
+    "pctOfModality": 9.3
+  },
+  {
+    "modality": "strength-training",
+    "count": 48,
+    "pctOfModality": 9
+  },
+  {
+    "modality": "dance",
+    "count": 15,
+    "pctOfModality": 8.6
   }
 ]

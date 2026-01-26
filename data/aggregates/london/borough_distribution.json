@@ -8,14 +8,6 @@
     ]
   },
   {
-    "borough": "Southwark",
-    "count": 90,
-    "center": [
-      51.5033,
-      -0.0814
-    ]
-  },
-  {
     "borough": "Westminster",
     "count": 88,
     "center": [
@@ -24,8 +16,16 @@
     ]
   },
   {
-    "borough": "Islington",
+    "borough": "Southwark",
     "count": 86,
+    "center": [
+      51.5033,
+      -0.0814
+    ]
+  },
+  {
+    "borough": "Islington",
+    "count": 84,
     "center": [
       51.5446,
       -0.1028
@@ -33,7 +33,7 @@
   },
   {
     "borough": "Lambeth",
-    "count": 71,
+    "count": 70,
     "center": [
       51.4952,
       -0.112
@@ -88,27 +88,27 @@
     ]
   },
   {
-    "borough": "Barnet",
-    "count": 35,
+    "borough": "Lewisham",
+    "count": 34,
     "center": [
-      51.5074,
-      -0.1278
+      51.4652,
+      -0.0136
     ]
   },
   {
     "borough": "Haringey",
-    "count": 34,
+    "count": 33,
     "center": [
       51.5906,
       -0.11
     ]
   },
   {
-    "borough": "Lewisham",
-    "count": 34,
+    "borough": "Barnet",
+    "count": 33,
     "center": [
-      51.4652,
-      -0.0136
+      51.5074,
+      -0.1278
     ]
   },
   {

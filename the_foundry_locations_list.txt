@@ -1,0 +1,47 @@
+The Foundry Locations - For Manual Opening Date Lookup
+=======================================================
+
+1. The Foundry Moorgate
+   Address: 7 Moorgate, London EC2R 6AF, UK
+   Borough: City of London
+   Postcode: EC2R 6AF
+   Google Maps: "The Foundry Moorgate 7 Moorgate London" or "The Foundry Moorgate"
+   Script Key: the-foundry-moorgate-london
+   Website: https://foundryfit.com/locations/east-london/moorgate/
+   Current Opening Date: 2009-10-27 (WHOIS - may be brand date, not location)
+
+2. The Foundry Vauxhall
+   Address: Beaufoy walk, London (matched: Black Prince Community Hub, 5 Beaufoy Walk, London SE11 6HU, UK)
+   Borough: Lambeth
+   Postcode: SE11 6HU
+   Google Maps: "The Foundry Vauxhall Beaufoy Walk London" or "The Foundry Vauxhall"
+   Script Key: the-foundry-vauxhall-london
+   Website: https://foundryfit.com/locations/south-east-london/vauxhall/
+   Current Opening Date: 2009-10-27 (WHOIS - may be brand date, not location)
+
+3. The Foundry Old Street
+   Address: 227 City Rd, London EC1V 1JT, UK
+   Borough: Islington
+   Postcode: EC1V 1JT
+   Google Maps: "The Foundry Old Street 227 City Rd London" or "The Foundry Old Street"
+   Script Key: the-foundry-old-street-london
+   Website: https://foundryfit.com/locations/east-london/old-street/
+   Current Opening Date: 2009-10-27 (WHOIS - may be brand date, not location)
+
+4. The Foundry Richmond
+   Address: 1-2 Orchard Road, London (matched: 1-2 Orchard Rd, Richmond TW9 4AQ, UK)
+   Borough: None (Richmond - outside London boroughs)
+   Postcode: TW9 4AQ
+   Google Maps: "The Foundry Richmond 1-2 Orchard Rd London" or "The Foundry Richmond"
+   Script Key: the-foundry-richmond-london
+   Website: https://foundryfit.com/locations/west-london/richmond/
+   Current Opening Date: 2009-10-27 (WHOIS - may be brand date, not location)
+
+5. The Foundry Aldgate
+   Address: 80 Fenchurch Street, London, London (matched: 80 Fenchurch St, London EC3N 2ER, UK)
+   Borough: City of London
+   Postcode: EC3N 2ER
+   Google Maps: "The Foundry Aldgate 80 Fenchurch St London" or "The Foundry Aldgate"
+   Script Key: the-foundry-aldgate-london
+   Website: https://foundryfit.com/locations/east-london/aldgate/
+   Current Opening Date: 2009-10-27 (WHOIS - may be brand date, not location)
