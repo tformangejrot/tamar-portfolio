@@ -1,0 +1,90 @@
+Paris Multi-Location Studios Needing Opening Date Updates
+==========================================================
+
+STUDIOS WITH ALL LOCATIONS SHARING SAME DATE (HIGH PRIORITY):
+These studios all have the same WHOIS domain creation date for all locations, 
+indicating they're using brand domain registration dates rather than individual 
+location opening dates.
+
+1. Apollo Sporting Club (8 locations)
+   - All dated: 2011-03-31 (whois_domain_creation)
+   - Needs: Individual location opening dates
+
+2. My Big Bang (6 locations)
+   - All dated: 2016-04-19 (whois_domain_creation)
+   - Needs: Individual location opening dates
+
+3. POSES (6 locations)
+   - All dated: 2022-08-23 (whois_domain_creation)
+   - Needs: Individual location opening dates
+
+4. Aqua by (4 locations)
+   - All dated: 2013-05-25 (whois_domain_creation)
+   - Needs: Individual location opening dates
+
+5. Punch Boxing (4 locations)
+   - All dated: 2018-11-20 (whois_domain_creation)
+   - Needs: Individual location opening dates
+
+6. Belly Studio (3 locations)
+   - All dated: 2024-02-03 (whois_domain_creation)
+   - Needs: Individual location opening dates
+
+7. Cyberdanse Paris (3 locations)
+   - All dated: 1999-02-23 (whois_domain_creation)
+   - Needs: Individual location opening dates
+
+8. Free Fight Academy (3 locations)
+   - All dated: 2005-12-21 (whois_domain_creation)
+   - Needs: Individual location opening dates
+
+9. La Plume Air Club (3 locations)
+   - All dated: 2019-01-09 (whois_domain_creation)
+   - Needs: Individual location opening dates
+
+10. Lorraine Bouchet Yoga (3 locations)
+    - All dated: 2021-10-01 (whois_domain_creation)
+    - Needs: Individual location opening dates
+
+11. Mama Yoga (3 locations)
+    - All dated: 2020-02-23 (whois_domain_creation)
+    - Needs: Individual location opening dates
+
+12. Reformation (3 locations)
+    - All dated: 2017-05-03 (whois_domain_creation)
+    - Needs: Individual location opening dates
+
+13. Workouts By Yael (3 locations)
+    - 2 locations dated: 2020-06-11 (whois_domain_creation)
+    - 1 location: No date
+    - Needs: Individual location opening dates
+
+14. YAY: Le Yoga Pour Tous! (3 locations)
+    - All dated: 2016-02-14 (whois_domain_creation)
+    - Needs: Individual location opening dates
+
+
+STUDIOS WITH LIMITED DATE VARIATION (MEDIUM PRIORITY):
+These studios have only 2 unique dates across multiple locations, suggesting 
+most locations may still be using domain creation dates.
+
+- Swedish Fit (24 locations) - only 2 unique dates
+- Point Soleil (13 locations) - only 2 unique dates
+- Krav Maga Paris (4 locations) - only 2 unique dates
+- Noble Art Institut (4 locations) - only 2 unique dates
+- Paris Boxing Club (4 locations) - only 2 unique dates
+- Dana Mussa Ballet (3 locations) - only 2 unique dates
+- Indian Swaas (3 locations) - only 2 unique dates
+
+
+STUDIOS WITH GOOD DATE QUALITY (LOW PRIORITY):
+These studios appear to have location-specific dates already:
+- OLY Be (24 locations) - 10 unique dates
+- The New Me (17 locations) - 10 unique dates (wayback_machine)
+- Dynamo Cycling (9 locations) - 7 unique dates (user_provided)
+- EPISOD (8 locations) - 7 unique dates (user_provided_google_reviews)
+- Snake & Twist (6 locations) - 6 unique dates (user_provided)
+- YUJ YOGA Studio (6 locations) - 6 unique dates (user_provided_google_reviews)
+- Magic Form (4 locations) - 3 unique dates (wayback_machine)
+- Hooptonic (4 locations) - 3 unique dates
+- Shut Up and Breathe Yoga (3 locations) - No dates (but not all same date issue)

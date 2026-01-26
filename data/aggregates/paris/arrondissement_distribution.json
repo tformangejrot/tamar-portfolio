@@ -1,0 +1,162 @@
+[
+  {
+    "arrondissement": "Paris 11",
+    "count": 71,
+    "center": [
+      48.861,
+      2.3794
+    ]
+  },
+  {
+    "arrondissement": "Paris 17",
+    "count": 47,
+    "center": [
+      48.8846,
+      2.3222
+    ]
+  },
+  {
+    "arrondissement": "Paris 16",
+    "count": 39,
+    "center": [
+      48.85,
+      2.2669
+    ]
+  },
+  {
+    "arrondissement": "Paris 09",
+    "count": 38,
+    "center": [
+      48.875,
+      2.3394
+    ]
+  },
+  {
+    "arrondissement": "Paris 02",
+    "count": 34,
+    "center": [
+      48.8698,
+      2.3412
+    ]
+  },
+  {
+    "arrondissement": "Paris 15",
+    "count": 30,
+    "center": [
+      48.8422,
+      2.2995
+    ]
+  },
+  {
+    "arrondissement": "Paris 10",
+    "count": 29,
+    "center": [
+      48.872,
+      2.36
+    ]
+  },
+  {
+    "arrondissement": "Paris 12",
+    "count": 20,
+    "center": [
+      48.8447,
+      2.3732
+    ]
+  },
+  {
+    "arrondissement": "Paris 04",
+    "count": 18,
+    "center": [
+      48.8546,
+      2.3522
+    ]
+  },
+  {
+    "arrondissement": "Paris 08",
+    "count": 18,
+    "center": [
+      48.875,
+      2.3181
+    ]
+  },
+  {
+    "arrondissement": "Paris 19",
+    "count": 17,
+    "center": [
+      48.8827,
+      2.3742
+    ]
+  },
+  {
+    "arrondissement": "Paris 06",
+    "count": 16,
+    "center": [
+      48.8449,
+      2.3327
+    ]
+  },
+  {
+    "arrondissement": "Paris 18",
+    "count": 15,
+    "center": [
+      48.8932,
+      2.3484
+    ]
+  },
+  {
+    "arrondissement": "Paris 03",
+    "count": 15,
+    "center": [
+      48.863,
+      2.3622
+    ]
+  },
+  {
+    "arrondissement": "Paris 20",
+    "count": 13,
+    "center": [
+      48.863,
+      2.3987
+    ]
+  },
+  {
+    "arrondissement": "Paris 13",
+    "count": 13,
+    "center": [
+      48.8322,
+      2.3561
+    ]
+  },
+  {
+    "arrondissement": "Paris 14",
+    "count": 13,
+    "center": [
+      48.8331,
+      2.3264
+    ]
+  },
+  {
+    "arrondissement": "Paris 07",
+    "count": 12,
+    "center": [
+      48.8565,
+      2.3122
+    ]
+  },
+  {
+    "arrondissement": "Paris 01",
+    "count": 12,
+    "center": [
+      48.8606,
+      2.3376
+    ]
+  },
+  {
+    "arrondissement": "Paris 05",
+    "count": 8,
+    "center": [
+      48.844,
+      2.3438
+    ]
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "year": 2000,
+    "yoga": 0,
+    "pilates": 1,
+    "strength-training": 0
+  },
+  {
+    "year": 2001,
+    "yoga": 3,
+    "pilates": 1,
+    "strength-training": 1
+  },
+  {
+    "year": 2002,
+    "yoga": 2,
+    "pilates": 2,
+    "strength-training": 0
+  },
+  {
+    "year": 2003,
+    "yoga": 3,
+    "pilates": 1,
+    "strength-training": 2
+  },
+  {
+    "year": 2004,
+    "yoga": 2,
+    "pilates": 1,
+    "strength-training": 1
+  },
+  {
+    "year": 2005,
+    "yoga": 1,
+    "pilates": 1,
+    "strength-training": 1
+  },
+  {
+    "year": 2006,
+    "yoga": 0,
+    "pilates": 1,
+    "strength-training": 0
+  },
+  {
+    "year": 2007,
+    "yoga": 0,
+    "pilates": 0,
+    "strength-training": 2
+  },
+  {
+    "year": 2008,
+    "yoga": 1,
+    "pilates": 3,
+    "strength-training": 1
+  },
+  {
+    "year": 2009,
+    "yoga": 2,
+    "pilates": 1,
+    "strength-training": 2
+  },
+  {
+    "year": 2010,
+    "yoga": 1,
+    "pilates": 0,
+    "strength-training": 0
+  },
+  {
+    "year": 2011,
+    "yoga": 7,
+    "pilates": 9,
+    "strength-training": 9
+  },
+  {
+    "year": 2012,
+    "yoga": 4,
+    "pilates": 4,
+    "strength-training": 0
+  },
+  {
+    "year": 2013,
+    "yoga": 1,
+    "pilates": 0,
+    "strength-training": 3
+  },
+  {
+    "year": 2014,
+    "yoga": 6,
+    "pilates": 6,
+    "strength-training": 6
+  },
+  {
+    "year": 2015,
+    "yoga": 1,
+    "pilates": 4,
+    "strength-training": 3
+  },
+  {
+    "year": 2016,
+    "yoga": 18,
+    "pilates": 11,
+    "strength-training": 10
+  },
+  {
+    "year": 2017,
+    "yoga": 13,
+    "pilates": 12,
+    "strength-training": 11
+  },
+  {
+    "year": 2018,
+    "yoga": 19,
+    "pilates": 19,
+    "strength-training": 16
+  },
+  {
+    "year": 2019,
+    "yoga": 36,
+    "pilates": 32,
+    "strength-training": 18
+  },
+  {
+    "year": 2020,
+    "yoga": 10,
+    "pilates": 10,
+    "strength-training": 7
+  },
+  {
+    "year": 2021,
+    "yoga": 17,
+    "pilates": 19,
+    "strength-training": 13
+  },
+  {
+    "year": 2022,
+    "yoga": 20,
+    "pilates": 21,
+    "strength-training": 17
+  },
+  {
+    "year": 2023,
+    "yoga": 19,
+    "pilates": 26,
+    "strength-training": 18
+  },
+  {
+    "year": 2024,
+    "yoga": 28,
+    "pilates": 55,
+    "strength-training": 33
+  },
+  {
+    "year": 2025,
+    "yoga": 11,
+    "pilates": 26,
+    "strength-training": 10
+  }
+]

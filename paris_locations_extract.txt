@@ -1,0 +1,246 @@
+Loading Paris boutique data...
+
+
+================================================================================
+Apollo Sporting Club (8 locations)
+================================================================================
+
+1. 5 Square Villaret de Joyeuse, Paris
+   Arrondissement: Paris 17
+   Zip Code: 75017
+   Matched Address: 5 Sq. Villaret de Joyeuse, 75017 Paris, France
+   Google Maps: https://maps.google.com/?cid=11126659565978663268
+   Script Key: apollo-sporting-club-paris-17
+   Current Opening Date: 2011-03-31 (whois_domain_creation)
+
+2. 40 Rue de Turbigo, Paris
+   Arrondissement: Paris 03
+   Zip Code: 75003
+   Matched Address: 40 R. de Turbigo, 75003 Paris, France
+   Google Maps: https://maps.google.com/?cid=8169700731252874202
+   Script Key: apollo-sporting-club-paris-3
+   Current Opening Date: 2011-03-31 (whois_domain_creation)
+
+3. 29 Boulevard Georges Clemenceau, Courbevoie
+   Arrondissement: N/A
+   Zip Code: 92400
+   Matched Address: 29 Bd Georges Clemenceau, 92400 Courbevoie, France
+   Google Maps: https://maps.google.com/?cid=1263298202236254519
+   Script Key: apollo-sporting-club-courbevoie-92
+   Current Opening Date: 2011-03-31 (whois_domain_creation)
+
+4. 40 Rue de Maubeuge, Paris
+   Arrondissement: Paris 09
+   Zip Code: 75009
+   Matched Address: 40 Rue de Maubeuge, 75009 Paris, France
+   Google Maps: https://maps.google.com/?cid=7240690250118449489
+   Script Key: apollo-sporting-club--paris-9
+   Current Opening Date: 2011-03-31 (whois_domain_creation)
+
+5. 8 Rue Edouard Lockroy, Paris
+   Arrondissement: Paris 11
+   Zip Code: 75011
+   Matched Address: 8 Rue Édouard-Lockroy, 75011 Paris, France
+   Google Maps: https://maps.google.com/?cid=13305786364658604332
+   Script Key: apollo-sporting-club-paris-11
+   Current Opening Date: 2011-03-31 (whois_domain_creation)
+
+6. 20 Rue Paul Vaillant Couturier, Alfortville
+   Arrondissement: N/A
+   Zip Code: 94140
+   Matched Address: 20 Rue Paul Vaillant Couturier, 94140 Alfortville, France
+   Google Maps: https://maps.google.com/?cid=7669636777180259803
+   Script Key: apollo-sporting-club-alfortville-94
+   Current Opening Date: 2011-03-31 (whois_domain_creation)
+
+7. 154 Rue du Vieux Pont de Sèvres, Boulogne-Billancourt
+   Arrondissement: N/A
+   Zip Code: 92100
+   Matched Address: 154 Rue du Vieux Pont de Sèvres, 92100 Boulogne-Billancourt, France
+   Google Maps: https://maps.google.com/?cid=18216221265819179284
+   Script Key: apollo-sporting-club-boulogne-boulogne-billancourt
+   Current Opening Date: 2011-03-31 (whois_domain_creation)
+
+8. 3 Quai du Lot, Paris
+   Arrondissement: Paris 19
+   Zip Code: 75019
+   Matched Address: 3 Quai du Lot, 75019 Paris, France
+   Google Maps: https://maps.google.com/?cid=17377622927145993416
+   Script Key: apollo-sporting-club-paris-19
+   Current Opening Date: 2011-03-31 (whois_domain_creation)
+
+================================================================================
+My Big Bang (6 locations)
+================================================================================
+
+1. 35 Rue Jean Pierre Timbaud, Issy-les-Moulineaux
+   Arrondissement: N/A
+   Zip Code: 92130
+   Matched Address: 35 Rue Jean Pierre Timbaud, 92130 Issy-les-Moulineaux, France
+   Google Maps: https://maps.google.com/?cid=13672145903691154225
+   Script Key: my-big-bang-issy-les-moulineaux-issy-les-moulineaux-hggb
+   Current Opening Date: 2016-04-19 (whois_domain_creation)
+
+2. 12 rue Paul Valéry, Paris
+   Arrondissement: Paris 16
+   Zip Code: 75016
+   Matched Address: 12 Rue Paul Valéry, 75016 Paris, France
+   Google Maps: https://maps.google.com/?cid=1343402804228391456
+   Script Key: my-big-bang-paris-etoile
+   Current Opening Date: 2016-04-19 (whois_domain_creation)
+
+3. 33 rue de Saussure, Paris
+   Arrondissement: Paris 17
+   Zip Code: 75017
+   Matched Address: 33 Rue de Saussure, 75017 Paris, France
+   Google Maps: https://maps.google.com/?cid=12522562517754852420
+   Script Key: my-big-bang-villiersbatignolles-paris
+   Current Opening Date: 2016-04-19 (whois_domain_creation)
+
+4. 6 rue des Favorites, Paris
+   Arrondissement: Paris 15
+   Zip Code: 75015
+   Matched Address: 6 Rue des Favorites, 75015 Paris, France
+   Google Maps: https://maps.google.com/?cid=4589026377510402344
+   Script Key: my-big-bang-vaugirard-paris
+   Current Opening Date: 2016-04-19 (whois_domain_creation)
+
+5. 1 Rue Popincourt, Paris
+   Arrondissement: Paris 11
+   Zip Code: 75011
+   Matched Address: 1 Rue Popincourt, 75011 Paris, France
+   Google Maps: https://maps.google.com/?cid=2772578883082836675
+   Script Key: my-big-bang-voltaire-paris
+   Current Opening Date: 2016-04-19 (whois_domain_creation)
+
+6. 4 rue des Jeûneurs, Paris
+   Arrondissement: Paris 02
+   Zip Code: 75002
+   Matched Address: 4 Rue des Jeuneurs, 75002 Paris, France
+   Google Maps: https://maps.google.com/?cid=14333383602730627824
+   Script Key: my-big-bang-sentier-paris
+   Current Opening Date: 2016-04-19 (whois_domain_creation)
+
+================================================================================
+POSES (6 locations)
+================================================================================
+
+1. 21 Rue des Filles du Calvaire, Paris
+   Arrondissement: Paris 03
+   Zip Code: 75003
+   Matched Address: 21 Rue des Filles du Calvaire, 75003 Paris, France
+   Google Maps: https://maps.google.com/?cid=2004610864639854158
+   Script Key: poses-marais-paris
+   Current Opening Date: 2022-08-23 (whois_domain_creation)
+
+2. 6 Rue de l'Échiquier, Paris
+   Arrondissement: Paris 10
+   Zip Code: 75010
+   Matched Address: 6 Rue de l'Échiquier, 75010 Paris, France
+   Google Maps: https://maps.google.com/?cid=17072670294506589173
+   Script Key: poses-bonne-nouvelle-paris
+   Current Opening Date: 2022-08-23 (whois_domain_creation)
+
+3. 28 Rue de Châteaudun, Paris
+   Arrondissement: Paris 09
+   Zip Code: 75009
+   Matched Address: 28 Rue de Châteaudun, 75009 Paris, France
+   Google Maps: https://maps.google.com/?cid=1038154347355289332
+   Script Key: poses-saint-lazare-paris-gcxy
+   Current Opening Date: 2022-08-23 (whois_domain_creation)
+
+4. 50 Rue de Monceau, Paris
+   Arrondissement: Paris 08
+   Zip Code: 75008
+   Matched Address: 50 Rue de Monceau, 75008 Paris, France
+   Google Maps: https://maps.google.com/?cid=6889991081147693984
+   Script Key: poses-monceau-paris
+   Current Opening Date: 2022-08-23 (whois_domain_creation)
+
+5. 151 Rue du Faubourg Saint-Antoine, Paris
+   Arrondissement: Paris 12
+   Zip Code: 75012
+   Matched Address: 151 Rue du Faubourg Saint-Antoine, 75012 Paris, France
+   Google Maps: https://maps.google.com/?cid=783817837960044226
+   Script Key: poses-bastille-paris
+   Current Opening Date: 2022-08-23 (whois_domain_creation)
+
+6. 28B Rue Popincourt, Paris
+   Arrondissement: Paris 11
+   Zip Code: 75011
+   Matched Address: 28 bis Rue Popincourt, 75011 Paris, France
+   Google Maps: https://maps.google.com/?cid=9643310968337527895
+   Script Key: poses-voltaire-paris
+   Current Opening Date: None (unknown)
+
+================================================================================
+Aqua by (4 locations)
+================================================================================
+
+1. 28 Rue du Fief, Boulogne-Billancourt
+   Arrondissement: N/A
+   Zip Code: 92100
+   Matched Address: 28 Rue du Fief, 92100 Boulogne-Billancourt, France
+   Google Maps: https://maps.google.com/?cid=5434392942154603717
+   Script Key: aqua-by-boulogne-boulogne-billancourt
+   Current Opening Date: 2013-05-25 (whois_domain_creation)
+
+2. 4 rue Jules Valles, Paris
+   Arrondissement: Paris 11
+   Zip Code: 75011
+   Matched Address: 4 Rue Jules Vallès, 75011 Paris, France
+   Google Maps: https://maps.google.com/?cid=17314700806055978538
+   Script Key: aqua-by-charonne-paris
+   Current Opening Date: 2013-05-25 (whois_domain_creation)
+
+3. 82 Rue Notre Dame de Nazareth, Paris
+   Arrondissement: Paris 03
+   Zip Code: 75003
+   Matched Address: 82 Rue Notre Dame de Nazareth, 75003 Paris, France
+   Google Maps: https://maps.google.com/?cid=138026645285990283
+   Script Key: aqua-by-raumur-paris-xshs
+   Current Opening Date: 2013-05-25 (whois_domain_creation)
+
+4. 21 Rue du Faubourg Saint-Antoine, Paris
+   Arrondissement: Paris 11
+   Zip Code: 75011
+   Matched Address: 21 Rue du Faubourg Saint-Antoine, 75011 Paris, France
+   Google Maps: https://maps.google.com/?cid=3665808185372189193
+   Script Key: aqua-by-bastille-paris-kfqx
+   Current Opening Date: 2013-05-25 (whois_domain_creation)
+
+================================================================================
+Punch Boxing (4 locations)
+================================================================================
+
+1. 3 Rue du Château, Neuilly-sur-Seine
+   Arrondissement: N/A
+   Zip Code: 92200
+   Matched Address: 3 Rue du Château, 92200 Neuilly-sur-Seine, France
+   Google Maps: https://maps.google.com/?cid=11321886166340842189
+   Script Key: punch-boxing-neuilly-neuilly-sur-seine
+   Current Opening Date: 2018-11-20 (whois_domain_creation)
+
+2. 24 Rue Chauchat, Paris
+   Arrondissement: Paris 09
+   Zip Code: 75009
+   Matched Address: 24 Rue Chauchat, 75009 Paris, France
+   Google Maps: https://maps.google.com/?cid=10208770049999173711
+   Script Key: punch-boxing-lafayette-paris
+   Current Opening Date: 2018-11-20 (whois_domain_creation)
+
+3. 26 rue de Berri, Paris
+   Arrondissement: Paris 08
+   Zip Code: 75008
+   Matched Address: 26 Rue de Berri, 75008 Paris, France
+   Google Maps: https://maps.google.com/?cid=11788479993359038166
+   Script Key: punch-boxing--champs-elysees-paris
+   Current Opening Date: 2018-11-20 (whois_domain_creation)
+
+4. 3 Rue de Richelieu, Paris
+   Arrondissement: Paris 01
+   Zip Code: 75001
+   Matched Address: 3 Rue de Richelieu, 75001 Paris, France
+   Google Maps: https://maps.google.com/?cid=11334486288195785048
+   Script Key: punch-boxing-louvre-paris
+   Current Opening Date: 2018-11-20 (whois_domain_creation)

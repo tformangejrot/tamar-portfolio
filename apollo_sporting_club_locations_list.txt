@@ -1,0 +1,66 @@
+Apollo Sporting Club Locations - For Manual Opening Date Lookup
+================================================================
+
+1. Apollo Sporting Club Paris 17
+   Address: 5 Square Villaret de Joyeuse, Paris 75017, France
+   Arrondissement: Paris 17
+   Google Maps: "Apollo Sporting Club 5 Square Villaret de Joyeuse Paris" or "Apollo Sporting Club Paris 17"
+   Script Key: apollo-sporting-club-paris-17
+   Website: https://apollosportingclub.com/
+   Current Opening Date: 2011-03-31 (WHOIS - may be brand date, not location)
+
+2. Apollo Sporting Club Paris 3
+   Address: 40 Rue de Turbigo, Paris 75003, France
+   Arrondissement: Paris 03
+   Google Maps: "Apollo Sporting Club 40 Rue de Turbigo Paris" or "Apollo Sporting Club Paris 3"
+   Script Key: apollo-sporting-club-paris-3
+   Website: https://www.apollosportingclub.com/
+   Current Opening Date: 2011-03-31 (WHOIS - may be brand date, not location)
+
+3. Apollo Sporting Club Courbevoie
+   Address: 29 Boulevard Georges Clemenceau, 92400 Courbevoie, France
+   Arrondissement: N/A (Courbevoie)
+   Google Maps: "Apollo Sporting Club 29 Boulevard Georges Clemenceau Courbevoie" or "Apollo Sporting Club Courbevoie"
+   Script Key: apollo-sporting-club-courbevoie-92
+   Website: https://www.apollosportingclub.com/details-club+apollo+courbevoie+la+defense+92-272.html
+   Current Opening Date: 2011-03-31 (WHOIS - may be brand date, not location)
+
+4. Apollo Sporting Club Paris 9
+   Address: 40 Rue de Maubeuge, Paris 75009, France
+   Arrondissement: Paris 09
+   Google Maps: "Apollo Sporting Club 40 Rue de Maubeuge Paris" or "Apollo Sporting Club Paris 9"
+   Script Key: apollo-sporting-club--paris-9
+   Website: https://www.apollosportingclub.com/details-club+apollo+paris+9-271.html
+   Current Opening Date: 2011-03-31 (WHOIS - may be brand date, not location)
+
+5. Apollo Sporting Club Paris 11
+   Address: 8 Rue Edouard Lockroy, Paris 75011, France
+   Arrondissement: Paris 11
+   Google Maps: "Apollo Sporting Club 8 Rue Edouard Lockroy Paris" or "Apollo Sporting Club Paris 11"
+   Script Key: apollo-sporting-club-paris-11
+   Website: https://apollosportingclub.com/
+   Current Opening Date: 2011-03-31 (WHOIS - may be brand date, not location)
+
+6. Apollo Sporting Club Alfortville
+   Address: 20 Rue Paul Vaillant Couturier, 94140 Alfortville, France
+   Arrondissement: N/A (Alfortville)
+   Google Maps: "Apollo Sporting Club 20 Rue Paul Vaillant Couturier Alfortville" or "Apollo Sporting Club Alfortville"
+   Script Key: apollo-sporting-club-alfortville-94
+   Website: https://apollosportingclub.com/salle/alfortville-94/
+   Current Opening Date: 2011-03-31 (WHOIS - may be brand date, not location)
+
+7. Apollo Sporting Club Boulogne-Billancourt
+   Address: 154 Rue du Vieux Pont de Sèvres, 92100 Boulogne-Billancourt, France
+   Arrondissement: N/A (Boulogne-Billancourt)
+   Google Maps: "Apollo Sporting Club 154 Rue du Vieux Pont de Sèvres Boulogne" or "Apollo Sporting Club Boulogne"
+   Script Key: apollo-sporting-club-boulogne-boulogne-billancourt
+   Website: https://www.apollosportingclub.com/
+   Current Opening Date: 2011-03-31 (WHOIS - may be brand date, not location)
+
+8. Apollo Sporting Club Paris 19
+   Address: 3 Quai du Lot, Paris 75019, France
+   Arrondissement: Paris 19
+   Google Maps: "Apollo Sporting Club 3 Quai du Lot Paris" or "Apollo Sporting Club Paris 19"
+   Script Key: apollo-sporting-club-paris-19
+   Website: https://apollosportingclub.com/
+   Current Opening Date: 2011-03-31 (WHOIS - may be brand date, not location)

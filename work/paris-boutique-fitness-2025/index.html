@@ -638,30 +638,102 @@
     // Chart initialization functions
     const chartInitFunctions = {};
 
-    // 1. Modality Chart
-    const modalities = [
-      { modality: 'pilates', count: 303, pct: 47.0 },
-      { modality: 'yoga', count: 279, pct: 43.3 },
-      { modality: 'strength-training', count: 228, pct: 35.4 },
-      { modality: 'hiit-bootcamp', count: 195, pct: 30.3 },
-      { modality: 'reformer-pilates', count: 115, pct: 17.9 },
-      { modality: 'dance', count: 92, pct: 14.3 },
-      { modality: 'boxing', count: 79, pct: 12.3 },
-      { modality: 'stretching', count: 67, pct: 10.4 },
-      { modality: 'cycling', count: 62, pct: 9.6 },
-      { modality: 'barre', count: 62, pct: 9.6 },
-      { modality: 'prenatal-postnatal', count: 48, pct: 7.5 },
-      { modality: 'low-impact-training', count: 44, pct: 6.8 },
-      { modality: 'martial-arts', count: 41, pct: 6.4 },
-      { modality: 'running', count: 32, pct: 5.0 },
-      { modality: 'electrical-muscle-stimulation', count: 27, pct: 4.2 },
-    ];
+    // Data loading function
+    async function loadData() {
+      try {
+        const basePath = '../../data/aggregates/paris/';
+        
+        const [modalityData, newModalityData, yearData, arrondissementData, statsData, growthData, chainsData, modalityGrowthData] = await Promise.all([
+          fetch(`${basePath}modality_mix.json`).then(r => r.json()),
+          fetch(`${basePath}recent_new_modalities.json`).then(r => r.json()),
+          fetch(`${basePath}growth_over_time.json`).then(r => r.json()),
+          fetch(`${basePath}arrondissement_distribution.json`).then(r => r.json()),
+          fetch(`${basePath}overall_stats.json`).then(r => r.json()),
+          fetch(`${basePath}recent_growth_rate.json`).then(r => r.json()),
+          fetch(`${basePath}chains_vs_single_location.json`).then(r => r.json()),
+          fetch(`${basePath}modality_growth_by_year.json`).then(r => r.json())
+        ]);
 
-    const modalityLabels = modalities.map(m => m.modality.replace(/-/g, ' '));
-    const modalityCounts = modalities.map(m => m.count);
-    const modalityPcts = modalities.map(m => m.pct);
+        // Populate global data variables
+        window.modalities = modalityData;
+        window.newModalities = newModalityData;
+        window.yearData = yearData;
+        window.arrondissementData = arrondissementData;
+        window.stats = statsData;
+        window.growthData = growthData;
+        window.chainsData = chainsData;
+        window.modalityGrowthData = modalityGrowthData;
+        window.totalNewStudios = statsData.totalNewStudios || 0;
 
+        // Update summary stat cards
+        updateSummaryStats();
+
+        // Initialize all charts after data is loaded
+        initializeAllCharts();
+        initializeMap();
+      } catch (error) {
+        console.error('Error loading data:', error);
+        // Fallback to empty data
+        window.modalities = [];
+        window.newModalities = [];
+        window.yearData = [];
+        window.arrondissementData = [];
+        window.stats = {};
+        window.growthData = [];
+        window.chainsData = [];
+        window.modalityGrowthData = [];
+        window.totalNewStudios = 0;
+        updateSummaryStats();
+        initializeAllCharts();
+      }
+    }
+
+    // Update summary stats
+    function updateSummaryStats() {
+      const stats = window.stats || {};
+      const totalStudios = stats.totalBoutiqueStudios || 0;
+      const recentPct = stats.pctOpenedRecent || 0;
+      const totalModalities = stats.totalModalityCategories || 0;
+      const pilatesPct = stats.pilatesPct || 0;
+
+      const statCards = document.querySelectorAll('.stat-value');
+      if (statCards.length >= 4) {
+        statCards[0].textContent = totalStudios.toLocaleString();
+        statCards[1].textContent = `${recentPct}%`;
+        statCards[2].textContent = totalModalities;
+        statCards[3].textContent = `${pilatesPct}%`;
+      }
+    }
+
+    // Initialize all charts function
+    function initializeAllCharts() {
+      const chartIds = ['modalityChart', 'reformerChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'locationChart', 'arrChart'];
+      chartIds.forEach(chartId => {
+        const chartElement = document.getElementById(chartId);
+        if (chartElement && chartInitFunctions[chartId]) {
+          // Destroy existing chart if it exists
+          if (charts[chartId]) {
+            charts[chartId].destroy();
+            charts[chartId] = null;
+          }
+          // Check if chart is visible
+          const rect = chartElement.getBoundingClientRect();
+          const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+          if (isVisible) {
+            chartInitFunctions[chartId]();
+          } else {
+            chartObserver.observe(chartElement);
+          }
+        }
+      });
+    }
+
+    // 1. Modality Chart - Data will be loaded from aggregates
     chartInitFunctions['modalityChart'] = function() {
+      const modalities = window.modalities || [];
+      const modalityLabels = modalities.map(m => m.modality.replace(/-/g, ' '));
+      const modalityCounts = modalities.map(m => m.count);
+      const modalityPcts = modalities.map(m => m.pct);
       const modalityCtx = document.getElementById('modalityChart').getContext('2d');
       const modalityGradient = modalityCtx.createLinearGradient(0, 0, 600, 0);
       modalityGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
@@ -782,27 +854,14 @@
     });
     };
 
-    // 3. New Studios Charts
-    const newModalities = [
-      { modality: 'pilates', count: 45, pctOfModality: 14.9 },
-      { modality: 'reformer-pilates', count: 31, pctOfModality: 27.0 },
-      { modality: 'strength-training', count: 24, pctOfModality: 10.5 },
-      { modality: 'yoga', count: 23, pctOfModality: 8.2 },
-      { modality: 'hiit-bootcamp', count: 19, pctOfModality: 9.7 },
-      { modality: 'low-impact-training', count: 13, pctOfModality: 29.5 },
-      { modality: 'stretching', count: 12, pctOfModality: 17.9 },
-      { modality: 'barre', count: 9, pctOfModality: 14.5 },
-      { modality: 'dance', count: 9, pctOfModality: 9.8 },
-      { modality: 'boxing', count: 7, pctOfModality: 8.9 },
-    ];
-
-    const totalNewStudios = 66;
-    const newLabels = newModalities.map(m => m.modality.replace(/-/g, ' '));
-    const newCounts = newModalities.map(m => m.count);
-    const pctsOfAllNew = newModalities.map(m => +((m.count / totalNewStudios) * 100).toFixed(1));
-    const pctsOfModality = newModalities.map(m => m.pctOfModality);
-
+    // 3. New Studios Charts - Data will be loaded from aggregates
     chartInitFunctions['newModalityChart'] = function() {
+      const newModalities = window.newModalities || [];
+      const totalNewStudios = window.totalNewStudios || 0;
+      const newLabels = newModalities.map(m => m.modality.replace(/-/g, ' '));
+      const newCounts = newModalities.map(m => m.count);
+      const pctsOfAllNew = newModalities.map(m => m.pctOfAllNew || 0);
+      const pctsOfModality = newModalities.map(m => m.pctOfModality || 0);
       const newCtx = document.getElementById('newModalityChart').getContext('2d');
       const newGradient = newCtx.createLinearGradient(0, 0, 600, 0);
       newGradient.addColorStop(0, 'rgba(139, 92, 246, 0.9)');
@@ -854,6 +913,11 @@
     };
 
     chartInitFunctions['growthRateChart'] = function() {
+      const growthData = window.growthData || [];
+      const growthLabels = growthData.map(m => m.modality.replace(/-/g, ' '));
+      const growthCounts = growthData.map(m => m.count);
+      const growthPcts = growthData.map(m => m.pctOfModality || 0);
+      
       const growthCtx = document.getElementById('growthRateChart').getContext('2d');
       const growthGradient = growthCtx.createLinearGradient(0, 0, 600, 0);
       growthGradient.addColorStop(0, 'rgba(34, 197, 94, 0.9)');
@@ -862,10 +926,10 @@
       charts['growthRateChart'] = new Chart(growthCtx, {
       type: 'bar',
       data: {
-        labels: newLabels,
+        labels: growthLabels,
         datasets: [{
           label: 'Growth Rate',
-          data: pctsOfModality,
+          data: growthPcts,
           backgroundColor: growthGradient,
           borderRadius: 6,
           borderSkipped: false
@@ -881,7 +945,7 @@
             callbacks: {
               label: function(context) {
                 const i = context.dataIndex;
-                return ` ${pctsOfModality[i]}% of ${newLabels[i]} studios are new (${newCounts[i]} new studios)`;
+                return ` ${growthPcts[i]}% of ${growthLabels[i]} studios are new (${growthCounts[i]} new studios)`;
               }
             }
           }
@@ -910,25 +974,11 @@
     });
     };
 
-    // 4. Year Chart (dates adjusted: Nov/Dec registrations count as next year)
-    const yearData = [
-      { year: 1985, count: 4 }, { year: 1992, count: 4 }, { year: 1997, count: 4 },
-      { year: 1998, count: 12 }, { year: 1999, count: 3 }, { year: 2000, count: 1 },
-      { year: 2001, count: 8 }, { year: 2002, count: 2 }, { year: 2003, count: 4 },
-      { year: 2004, count: 10 }, { year: 2005, count: 4 }, { year: 2006, count: 4 },
-      { year: 2007, count: 3 }, { year: 2008, count: 6 }, { year: 2009, count: 6 },
-      { year: 2010, count: 2 }, { year: 2011, count: 34 }, { year: 2012, count: 5 },
-      { year: 2013, count: 8 }, { year: 2014, count: 16 }, { year: 2015, count: 8 },
-      { year: 2016, count: 33 }, { year: 2017, count: 19 }, { year: 2018, count: 46 },
-      { year: 2019, count: 50 }, { year: 2020, count: 18 }, { year: 2021, count: 34 },
-      { year: 2022, count: 44 }, { year: 2023, count: 46 }, { year: 2024, count: 71 },
-      { year: 2025, count: 48 }
-    ];
-
-    const yearLabels = yearData.map(d => d.year.toString());
-    const yearCounts = yearData.map(d => d.count);
-
+    // 4. Year Chart - Data will be loaded from aggregates
     chartInitFunctions['yearChart'] = function() {
+      const yearData = window.yearData || [];
+      const yearLabels = yearData.map(d => d.year.toString());
+      const yearCounts = yearData.map(d => d.count);
       const yearCtx = document.getElementById('yearChart').getContext('2d');
       const yearGradient = yearCtx.createLinearGradient(0, 0, 0, 450);
       yearGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
@@ -987,27 +1037,12 @@
     });
     };
 
-    // 5. Location Chart
-    const locationData = [
-      { locations: 1, studioBrands: 311 },
-      { locations: 2, studioBrands: 49 },
-      { locations: 3, studioBrands: 15 },
-      { locations: 4, studioBrands: 5 },
-      { locations: 5, studioBrands: 5 },
-      { locations: 6, studioBrands: 3 },
-      { locations: 7, studioBrands: 2 },
-      { locations: 8, studioBrands: 2 },
-      { locations: 9, studioBrands: 1 },
-      { locations: 12, studioBrands: 1 },
-      { locations: 17, studioBrands: 2 },
-      { locations: 19, studioBrands: 1 },
-      { locations: 23, studioBrands: 1 }
-    ];
-
-    const locationLabels = locationData.map(d => d.locations === 1 ? '1 location' : `${d.locations} locations`);
-    const locationBrands = locationData.map(d => d.studioBrands);
-
+    // 5. Location Chart - Data will be loaded from aggregates
     chartInitFunctions['locationChart'] = function() {
+      const chainsData = window.chainsData || [];
+      const locationData = chainsData.slice(0, 10).filter(d => d.studioBrands > 0);
+      const locationLabels = locationData.map(d => d.locations === 1 ? '1 location' : `${d.locations} locations`);
+      const locationBrands = locationData.map(d => d.studioBrands);
       const locationCtx = document.getElementById('locationChart').getContext('2d');
       const locationGradient = locationCtx.createLinearGradient(0, 0, 600, 0);
       locationGradient.addColorStop(0, 'rgba(34, 197, 94, 0.9)');
@@ -1057,34 +1092,16 @@
     });
     };
 
-    // 6. Spatial Distribution (ordered by arrondissement number, suburbs at end)
-    const arrData = [
-      { arr: 'Paris 01', count: 12, center: [48.8606, 2.3376] },
-      { arr: 'Paris 02', count: 35, center: [48.8698, 2.3412] },
-      { arr: 'Paris 03', count: 16, center: [48.8630, 2.3622] },
-      { arr: 'Paris 04', count: 21, center: [48.8546, 2.3522] },
-      { arr: 'Paris 05', count: 8, center: [48.8440, 2.3438] },
-      { arr: 'Paris 06', count: 17, center: [48.8449, 2.3327] },
-      { arr: 'Paris 07', count: 12, center: [48.8565, 2.3122] },
-      { arr: 'Paris 08', count: 18, center: [48.8750, 2.3181] },
-      { arr: 'Paris 09', count: 43, center: [48.8750, 2.3394] },
-      { arr: 'Paris 10', count: 30, center: [48.8720, 2.3600] },
-      { arr: 'Paris 11', count: 71, center: [48.8610, 2.3794] },
-      { arr: 'Paris 12', count: 21, center: [48.8447, 2.3732] },
-      { arr: 'Paris 13', count: 13, center: [48.8322, 2.3561] },
-      { arr: 'Paris 14', count: 14, center: [48.8331, 2.3264] },
-      { arr: 'Paris 15', count: 30, center: [48.8422, 2.2995] },
-      { arr: 'Paris 16', count: 40, center: [48.8500, 2.2669] },
-      { arr: 'Paris 17', count: 61, center: [48.8846, 2.3222] },
-      { arr: 'Paris 18', count: 16, center: [48.8932, 2.3484] },
-      { arr: 'Paris 19', count: 18, center: [48.8827, 2.3742] },
-      { arr: 'Paris 20', count: 13, center: [48.8630, 2.3987] }
-    ];
-
-    const arrLabels = arrData.map(d => d.arr.replace('Paris ', ''));
-    const arrCounts = arrData.map(d => d.count);
-
+    // 6. Spatial Distribution - Data will be loaded from aggregates
     chartInitFunctions['arrChart'] = function() {
+      const arrondissementData = (window.arrondissementData || []).slice(0, 15).sort((a, b) => b.count - a.count);
+      const arrData = arrondissementData.map(d => ({
+        arr: d.arrondissement,
+        count: d.count,
+        center: d.center
+      }));
+      const arrLabels = arrData.map(d => d.arr.replace('Paris ', ''));
+      const arrCounts = arrData.map(d => d.count);
       const arrCtx = document.getElementById('arrChart').getContext('2d');
       const arrGradient = arrCtx.createLinearGradient(0, 0, 600, 0);
       arrGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
@@ -1150,105 +1167,125 @@
       }
     });
 
-    // Map with heatmap (initialize immediately as it's always visible)
-    try {
-      const mapElement = document.getElementById('map');
-      if (mapElement && typeof L !== 'undefined') {
-        const map = L.map('map', {
-          center: [48.8566, 2.3522],
-          zoom: 12,
-          zoomControl: true,
-          attributionControl: false
-        });
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '© OpenStreetMap contributors',
-          maxZoom: 19
-        }).addTo(map);
-
-        const heatmapPoints = [];
-        const maxCount = Math.max(...arrData.map(d => d.count));
-        
-        arrData.forEach(({ arr, count, center }) => {
-          const [lat, lng] = center;
-          const intensity = count / maxCount;
-          const pointsPerStudio = 3;
-          for (let i = 0; i < count * pointsPerStudio; i++) {
-            const angle = (i / count) * Math.PI * 2;
-            const radius = (Math.random() * 0.008);
-            const offsetLat = Math.cos(angle) * radius;
-            const offsetLng = Math.sin(angle) * radius;
-            heatmapPoints.push([
-              lat + offsetLat + (Math.random() - 0.5) * 0.003,
-              lng + offsetLng + (Math.random() - 0.5) * 0.003,
-              intensity * 0.8
-            ]);
-          }
-        });
-
-        const heat = L.heatLayer(heatmapPoints, {
-          radius: 25,
-          blur: 20,
-          maxZoom: 17,
-          max: 1.0,
-          gradient: {
-            0.0: 'rgba(56, 189, 248, 0)',
-            0.2: 'rgba(56, 189, 248, 0.4)',
-            0.4: 'rgba(139, 92, 246, 0.6)',
-            0.6: 'rgba(236, 72, 153, 0.7)',
-            0.8: 'rgba(239, 68, 68, 0.8)',
-            1.0: 'rgba(251, 146, 60, 1.0)'
-          }
-        }).addTo(map);
-
-        arrData.forEach(({ arr, count, center }) => {
-          const [lat, lng] = center;
-          const radius = Math.sqrt(count) * 150;
-          const opacity = Math.min(0.6, 0.3 + (count / maxCount) * 0.3);
+    // Map initialization function
+    function initializeMap() {
+      try {
+        const mapElement = document.getElementById('map');
+        if (mapElement && typeof L !== 'undefined') {
+          const arrondissementData = window.arrondissementData || [];
+          const arrData = arrondissementData.map(d => ({
+            arr: d.arrondissement,
+            count: d.count,
+            center: d.center
+          }));
           
-          L.circleMarker([lat, lng], {
-            radius: Math.min(12, 4 + (count / maxCount) * 8),
-            fillColor: '#7dd3ff',
-            color: '#3b82f6',
-            weight: 2,
-            opacity: 0.8,
-            fillOpacity: opacity
-          }).bindTooltip(`${arr.replace('Paris ', '')}: ${count} studios`, {
-            permanent: false,
-            direction: 'top'
-          }).addTo(map);
-        });
+          // Clear existing map if it exists
+          if (window.parisMap) {
+            window.parisMap.remove();
+          }
+          
+          const map = L.map('map', {
+            center: [48.8566, 2.3522],
+            zoom: 12,
+            zoomControl: true,
+            attributionControl: false
+          });
+          window.parisMap = map;
 
-        const legend = L.control({ position: 'bottomright' });
-        legend.onAdd = function() {
-          const div = L.DomUtil.create('div', 'info legend');
-          div.innerHTML = `
-            <h4>Studio Density</h4>
-            <div class="legend">
-              <i style="background: rgba(251, 146, 60, 1.0);"></i> 60+ studios<br/>
-              <i style="background: rgba(239, 68, 68, 0.8);"></i> 40-59 studios<br/>
-              <i style="background: rgba(236, 72, 153, 0.7);"></i> 20-39 studios<br/>
-              <i style="background: rgba(139, 92, 246, 0.6);"></i> 10-19 studios<br/>
-              <i style="background: rgba(56, 189, 248, 0.4);"></i> &lt;10 studios
-            </div>
-          `;
-          return div;
-        };
-        legend.addTo(map);
-      } else {
-        // If map can't be initialized (e.g., Leaflet not loaded or file:// protocol issues)
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 19
+          }).addTo(map);
+
+          const heatmapPoints = [];
+          const maxCount = arrData.length > 0 ? Math.max(...arrData.map(d => d.count)) : 1;
+          
+          arrData.forEach(({ arr, count, center }) => {
+            const [lat, lng] = center;
+            const intensity = count / maxCount;
+            const pointsPerStudio = 3;
+            for (let i = 0; i < count * pointsPerStudio; i++) {
+              const angle = (i / count) * Math.PI * 2;
+              const radius = (Math.random() * 0.008);
+              const offsetLat = Math.cos(angle) * radius;
+              const offsetLng = Math.sin(angle) * radius;
+              heatmapPoints.push([
+                lat + offsetLat + (Math.random() - 0.5) * 0.003,
+                lng + offsetLng + (Math.random() - 0.5) * 0.003,
+                intensity * 0.8
+              ]);
+            }
+          });
+
+          if (heatmapPoints.length > 0) {
+            const heat = L.heatLayer(heatmapPoints, {
+              radius: 25,
+              blur: 20,
+              maxZoom: 17,
+              max: 1.0,
+              gradient: {
+                0.0: 'rgba(56, 189, 248, 0)',
+                0.2: 'rgba(56, 189, 248, 0.4)',
+                0.4: 'rgba(139, 92, 246, 0.6)',
+                0.6: 'rgba(236, 72, 153, 0.7)',
+                0.8: 'rgba(239, 68, 68, 0.8)',
+                1.0: 'rgba(251, 146, 60, 1.0)'
+              }
+            }).addTo(map);
+          }
+
+          arrData.forEach(({ arr, count, center }) => {
+            const [lat, lng] = center;
+            const radius = Math.sqrt(count) * 150;
+            const opacity = Math.min(0.6, 0.3 + (count / maxCount) * 0.3);
+            
+            L.circleMarker([lat, lng], {
+              radius: Math.min(12, 4 + (count / maxCount) * 8),
+              fillColor: '#7dd3ff',
+              color: '#3b82f6',
+              weight: 2,
+              opacity: 0.8,
+              fillOpacity: opacity
+            }).bindTooltip(`${arr.replace('Paris ', '')}: ${count} studios`, {
+              permanent: false,
+              direction: 'top'
+            }).addTo(map);
+          });
+
+          const legend = L.control({ position: 'bottomright' });
+          legend.onAdd = function() {
+            const div = L.DomUtil.create('div', 'info legend');
+            div.innerHTML = `
+              <h4>Studio Density</h4>
+              <div class="legend">
+                <i style="background: rgba(251, 146, 60, 1.0);"></i> 60+ studios<br/>
+                <i style="background: rgba(239, 68, 68, 0.8);"></i> 40-59 studios<br/>
+                <i style="background: rgba(236, 72, 153, 0.7);"></i> 20-39 studios<br/>
+                <i style="background: rgba(139, 92, 246, 0.6);"></i> 10-19 studios<br/>
+                <i style="background: rgba(56, 189, 248, 0.4);"></i> &lt;10 studios
+              </div>
+            `;
+            return div;
+          };
+          legend.addTo(map);
+        } else {
+          // If map can't be initialized (e.g., Leaflet not loaded or file:// protocol issues)
+          const mapElement = document.getElementById('map');
+          if (mapElement) {
+            mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
+          }
+        }
+      } catch (error) {
+        console.warn('Map initialization failed:', error);
         const mapElement = document.getElementById('map');
         if (mapElement) {
           mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
         }
       }
-    } catch (error) {
-      console.warn('Map initialization failed:', error);
-      const mapElement = document.getElementById('map');
-      if (mapElement) {
-        mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
-      }
     }
+
+    // Load data when page loads
+    loadData();
   </script>
 </body>
 </html>

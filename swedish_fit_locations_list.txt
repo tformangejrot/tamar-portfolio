@@ -1,0 +1,170 @@
+Swedish Fit Locations - For Manual Opening Date Lookup
+=======================================================
+
+1. Swedish Fit Paris 14 - Lycée Sainte Catherine Labour
+   Address: 29 Rue Gassendi, Paris (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 29 Rue Gassendi Paris" or "Swedish Fit Paris 14"
+   Script Key: swedish-fit-paris-14---lyce-sainte-catherine-labour
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+2. Swedish Fit Paris 17 - Champerret
+   Address: 11 Rue Jacques Ibert, Paris 75017, France
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 11 Rue Jacques Ibert Paris" or "Swedish Fit Paris 17 Champerret"
+   Script Key: swedish-fit-paris-17---champerret
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+3. Swedish Fit Paris 6 - Institut St Geneviève
+   Address: 64 Rue d'Assas, Paris (matched: 6 Rue du Montparnasse, 75006 Paris, France)
+   Arrondissement: Paris 06
+   Google Maps: "Swedish Fit 64 Rue d'Assas Paris" or "Swedish Fit Paris 6"
+   Script Key: swedish-fit-paris-6---institut-st-genevive
+   Current Opening Date: None
+
+4. Swedish Fit Paris 10 - Gustave Ferri
+   Address: 7 Rue des Écluses Saint-Martin, Paris (matched: 22 Rue Chaudron, 75010 Paris, France)
+   Arrondissement: Paris 10
+   Google Maps: "Swedish Fit 7 Rue des Écluses Saint-Martin Paris" or "Swedish Fit Paris 10"
+   Script Key: swedish-fit-paris-10---gustave-ferri
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+5. Swedish Fit Paris 14 - Labruyère
+   Address: 66 Rue de l'Abbé Carton, 75014 Paris, France (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 66 Rue de l'Abbé Carton Paris" or "Swedish Fit Paris 14 Labruyère"
+   Script Key: swedish-fit-paris-14---labruyre
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+6. Swedish Fit Paris 7 - Saint Jean
+   Address: 11 Rue Pierre Villey, Paris (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 11 Rue Pierre Villey Paris" or "Swedish Fit Paris 7"
+   Script Key: swedish-fit-paris-7---saint-jean
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+7. Swedish Fit Paris 16 - Lübeck
+   Address: 4 Rue de l'Amiral d'Estaing, Paris (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 4 Rue de l'Amiral d'Estaing Paris" or "Swedish Fit Paris 16"
+   Script Key: swedish-fit-paris-16-lbeck
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+8. Swedish Fit Paris 13 - Gymnase Rodin
+   Address: 39 Rue des Cordelieres, Paris (matched: 5 Rue Bergère, 75009 Paris, France)
+   Arrondissement: Paris 09
+   Google Maps: "Swedish Fit 39 Rue des Cordelieres Paris" or "Swedish Fit Paris 13"
+   Script Key: swedish-fit-paris-13---gymnase-rodin
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+9. Swedish Fit Boulogne - Carnot
+   Address: 57 Rue Carnot, 92100 Boulogne-Billancourt, France
+   Arrondissement: N/A (Boulogne-Billancourt)
+   Google Maps: "Swedish Fit 57 Rue Carnot Boulogne" or "Swedish Fit Boulogne"
+   Script Key: swedish-fit-boulogne---carnot-boulogne-billancourt
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+10. Swedish Fit Courbevoie - Montalembert
+   Address: 238 Boulevard Saint-Denis, Courbevoie (matched: 13 Rue de l'Industrie, 92400 Courbevoie, France)
+   Arrondissement: N/A (Courbevoie)
+   Google Maps: "Swedish Fit 238 Boulevard Saint-Denis Courbevoie" or "Swedish Fit Courbevoie"
+   Script Key: swedish-fit-courbevoie---montalembert
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+11. Swedish Fit Paris 18 - Championnet
+   Address: 2 Impasse Massonnet, Paris (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 2 Impasse Massonnet Paris" or "Swedish Fit Paris 18"
+   Script Key: swedish-fit-paris-18---championnet
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+12. Swedish Fit Paris 3 - Carréau du Temple
+   Address: 2 Rue Perree, Paris (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 2 Rue Perree Paris" or "Swedish Fit Paris 3"
+   Script Key: swedish-fit-paris-3---carreau-du-temple
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+13. Swedish Fit Neuilly - Saint Dominique
+   Address: 23 quater Bd d'Argenson, Neuilly-sur-Seine (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 23 quater Bd d'Argenson Neuilly" or "Swedish Fit Neuilly"
+   Script Key: swedish-fit-neuilly---saint-dominique-neuilly-sur-seine
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+14. Swedish Fit Paris 9 - Bergère
+   Address: 5 Rue Bergère, Paris 75009, France
+   Arrondissement: Paris 09
+   Google Maps: "Swedish Fit 5 Rue Bergère Paris" or "Swedish Fit Paris 9"
+   Script Key: swedish-fit-paris-9-bergre
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+15. Swedish Fit Pantin - Saint Joseph La Salle
+   Address: 12 Avenue du 8 Mai 1945, Pantin (matched: 20 Rue Bouret, 75019 Paris, France)
+   Arrondissement: Paris 19
+   Google Maps: "Swedish Fit 12 Avenue du 8 Mai 1945 Pantin" or "Swedish Fit Pantin"
+   Script Key: swedish-fit-pantin-saint-joseph-la-salle
+   Current Opening Date: None
+
+16. Swedish Fit Paris 13 - École St Vincent de Paul
+   Address: 109 Rue Bobillot, Paris (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 109 Rue Bobillot Paris" or "Swedish Fit Paris 13"
+   Script Key: swedish-fit--paris-13-ecole-st-vincent-de-paul-109
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+17. Swedish Fit Paris 15 - Lacretelle STAPS
+   Address: 1 Rue Lacretelle, Paris (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 1 Rue Lacretelle Paris" or "Swedish Fit Paris 15"
+   Script Key: swedish-fit-paris-15-lacretelle-staps
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+18. Swedish Fit Vincennes - Saint Louis / Salle Victor Brociero
+   Address: 34 Rue Céline Robert, Vincennes (matched: 39 Rue Céline Robert, 94300 Vincennes, France)
+   Arrondissement: N/A (Vincennes)
+   Google Maps: "Swedish Fit 34 Rue Céline Robert Vincennes" or "Swedish Fit Vincennes"
+   Script Key: swedish-fit--vincennes-saint-louis---salle-victor-brociero
+   Current Opening Date: 2022-09-19 (WHOIS - may be brand date, not location)
+
+19. Swedish Fit Paris 14 - Cité Universitaire - Arts et Métiers
+   Address: 27 Boulevard Jourdan, Paris (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 27 Boulevard Jourdan Paris" or "Swedish Fit Paris 14 Cité Universitaire"
+   Script Key: swedish-fit-paris-14---cit-universitaire---arts-et-mtiers
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+20. Swedish Fit Paris 5 - CROUS
+   Address: 31 Avenue Georges Bernanos, Paris (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 31 Avenue Georges Bernanos Paris" or "Swedish Fit Paris 5"
+   Script Key: swedish-fit--paris-5-crous
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+21. Swedish Fit Paris 14 - Cité Universitaire - Espace Sud Salle de Danse
+   Address: 17 Boulevard Jourdan, Paris (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 17 Boulevard Jourdan Paris" or "Swedish Fit Paris 14 Cité Universitaire"
+   Script Key: swedish-fit-paris-14---cit-universitaire---espace-sud-salle-de-danse
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+22. Swedish Fit Paris 3 - Turgot
+   Address: 69 Rue de Turbigo, Paris (matched: 5 Rue Bergère, 75009 Paris, France)
+   Arrondissement: Paris 09
+   Google Maps: "Swedish Fit 69 Rue de Turbigo Paris" or "Swedish Fit Paris 3 Turgot"
+   Script Key: swedish-fit--paris--3-turgot
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+23. Swedish Fit Paris 6 - École Alsacienne
+   Address: 109 Rue Notre Dame des Champs, Paris (matched: 11 Rue Jacques Ibert, 75017 Paris, France)
+   Arrondissement: Paris 17
+   Google Maps: "Swedish Fit 109 Rue Notre Dame des Champs Paris" or "Swedish Fit Paris 6"
+   Script Key: swedish-fit-paris--6-ecole-alsacienne
+   Current Opening Date: 2011-02-22 (WHOIS - may be brand date, not location)
+
+24. Swedish Fit Montreuil - Doriant / Gymnase
+   Address: 10 Rue du Colonel Raynal, Montreuil (matched: 35 Rue Jean Moulin, 94300 Vincennes, France)
+   Arrondissement: N/A (Montreuil)
+   Google Maps: "Swedish Fit 10 Rue du Colonel Raynal Montreuil" or "Swedish Fit Montreuil"
+   Script Key: swedish-fit--montreuil-doriant---gymnase
+   Current Opening Date: None

@@ -458,34 +458,6 @@
     </div>
   </section>
 
-  <!-- Pilates Evolution -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-label">The Pilates Evolution</div>
-      <h2 class="section-title">Pilates: From Restorative to Strength-Focused</h2>
-      <p class="section-subtitle">
-        Tracking how pilates studios have shifted from pairing with yoga (restorative) to pairing with strength training (intensity-focused).
-      </p>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <h3>Pilates Combination Trends</h3>
-        <span>Yoga + Pilates vs. Pilates + Strength Training</span>
-      </div>
-      <div class="chart-container">
-        <canvas id="pilatesCombinationsChart"></canvas>
-      </div>
-      <p class="note">
-        This chart shows studios that offer both pilates and yoga (restorative/spiritual focus) versus studios that offer both pilates and strength training (intensity/core focus). The shift in these combinations over time reflects how pilates has been repositioned in the fitness market.
-      </p>
-    </div>
-    <div class="card" style="margin-top: 32px;">
-      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
-        The data suggests that pilates has undergone a significant rebranding in recent years. Early pilates studios often paired with yoga, emphasizing the practice's restorative and mindful aspects. More recently, pilates has increasingly been positioned alongside strength training, highlighting its core-strengthening and intensity-focused benefits. This shift reflects broader trends in fitness toward functional strength and high-intensity training.
-      </p>
-    </div>
-  </section>
-
   <!-- Modality Mix -->
   <section class="section">
     <div class="section-header">
@@ -665,7 +637,7 @@
       try {
         const basePath = '../../data/aggregates/london/';
         
-        const [modalityData, newModalityData, yearData, boroughData, statsData, growthData, chainsData, modalityGrowthData, pilatesCombinationsData] = await Promise.all([
+        const [modalityData, newModalityData, yearData, boroughData, statsData, growthData, chainsData, modalityGrowthData] = await Promise.all([
           fetch(`${basePath}modality_mix.json`).then(r => r.json()),
           fetch(`${basePath}recent_new_modalities.json`).then(r => r.json()),
           fetch(`${basePath}growth_over_time.json`).then(r => r.json()),
@@ -673,8 +645,7 @@
           fetch(`${basePath}overall_stats.json`).then(r => r.json()),
           fetch(`${basePath}recent_growth_rate.json`).then(r => r.json()),
           fetch(`${basePath}chains_vs_single_location.json`).then(r => r.json()),
-          fetch(`${basePath}modality_growth_by_year.json`).then(r => r.json()),
-          fetch(`${basePath}pilates_combinations_by_year.json`).then(r => r.json())
+          fetch(`${basePath}modality_growth_by_year.json`).then(r => r.json())
         ]);
 
         // Populate global data variables
@@ -686,7 +657,6 @@
         window.growthData = growthData;
         window.chainsData = chainsData;
         window.modalityGrowthData = modalityGrowthData;
-        window.pilatesCombinationsData = pilatesCombinationsData;
         window.totalNewStudios = statsData.totalNewStudios || 0;
 
         // Update summary stat cards
@@ -706,7 +676,6 @@
         window.growthData = [];
         window.chainsData = [];
         window.modalityGrowthData = [];
-        window.pilatesCombinationsData = [];
         window.totalNewStudios = 0;
         updateSummaryStats();
         initializeAllCharts();
@@ -1120,106 +1089,6 @@
       });
     };
 
-    // Pilates Combinations Chart
-    chartInitFunctions['pilatesCombinationsChart'] = function() {
-      const pilatesCombinationsData = window.pilatesCombinationsData || [];
-      const yearLabels = pilatesCombinationsData.map(d => d.year.toString());
-      const yogaPilatesData = pilatesCombinationsData.map(d => d['yoga-pilates'] || 0);
-      const pilatesStrengthData = pilatesCombinationsData.map(d => d['pilates-strength'] || 0);
-
-      const pilatesCombinationsCtx = document.getElementById('pilatesCombinationsChart').getContext('2d');
-
-      charts['pilatesCombinationsChart'] = new Chart(pilatesCombinationsCtx, {
-        type: 'line',
-        data: {
-          labels: yearLabels,
-          datasets: [
-            {
-              label: 'Yoga + Pilates',
-              data: yogaPilatesData,
-              borderColor: 'rgba(56, 189, 248, 1)',
-              backgroundColor: 'rgba(56, 189, 248, 0.1)',
-              tension: 0.4,
-              fill: false,
-              pointRadius: 4,
-              pointHoverRadius: 6,
-              pointBackgroundColor: 'rgba(56, 189, 248, 1)',
-              pointBorderColor: '#05060a',
-              pointBorderWidth: 2
-            },
-            {
-              label: 'Pilates + Strength Training',
-              data: pilatesStrengthData,
-              borderColor: 'rgba(34, 197, 94, 1)',
-              backgroundColor: 'rgba(34, 197, 94, 0.1)',
-              tension: 0.4,
-              fill: false,
-              pointRadius: 4,
-              pointHoverRadius: 6,
-              pointBackgroundColor: 'rgba(34, 197, 94, 1)',
-              pointBorderColor: '#05060a',
-              pointBorderWidth: 2
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: true,
-              position: 'top',
-              labels: {
-                color: '#cbd5ff',
-                font: { size: 12, weight: '500' },
-                padding: 16,
-                usePointStyle: true,
-                pointStyle: 'circle'
-              }
-            },
-            tooltip: {
-              backgroundColor: 'rgba(5, 6, 10, 0.95)',
-              titleColor: '#f5f7ff',
-              bodyColor: '#cbd5ff',
-              borderColor: 'rgba(148, 163, 255, 0.3)',
-              borderWidth: 1,
-              padding: 12,
-              displayColors: true,
-              callbacks: {
-                label: function(context) {
-                  return `${context.dataset.label}: ${context.parsed.y} studios`;
-                }
-              }
-            }
-          },
-          scales: {
-            x: {
-              ticks: {
-                color: '#cbd5ff',
-                font: { size: 11 },
-                maxRotation: 45,
-                minRotation: 45
-              },
-              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
-            },
-            y: {
-              beginAtZero: true,
-              ticks: {
-                color: '#cbd5ff',
-                font: { size: 11 },
-                stepSize: 2
-              },
-              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
-            }
-          },
-          animation: {
-            duration: 1200,
-            easing: 'easeOutQuart'
-          }
-        }
-      });
-    };
-
     // 6. Spatial Distribution - Data will be loaded from aggregates
     chartInitFunctions['arrChart'] = function() {
       const boroughData = (window.boroughData || []).slice(0, 15).sort((a, b) => b.count - a.count);
@@ -1318,7 +1187,7 @@
 
     // Initialize all charts function
     function initializeAllCharts() {
-      const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'pilatesCombinationsChart', 'locationChart', 'arrChart'];
+      const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart'];
       chartIds.forEach(chartId => {
         const chartElement = document.getElementById(chartId);
         if (chartElement && chartInitFunctions[chartId]) {

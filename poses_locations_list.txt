@@ -1,0 +1,50 @@
+POSES Locations - For Manual Opening Date Lookup
+=================================================
+
+1. POSES Marais
+   Address: 21 Rue des Filles du Calvaire, Paris 75003, France
+   Arrondissement: Paris 03
+   Google Maps: "POSES 21 Rue des Filles du Calvaire Paris" or "POSES Marais Paris"
+   Script Key: poses-marais-paris
+   Website: https://poses.fr/
+   Current Opening Date: 2022-08-23 (WHOIS - may be brand date, not location)
+
+2. POSES Bonne Nouvelle
+   Address: 6 Rue de l'Échiquier, Paris 75010, France
+   Arrondissement: Paris 10
+   Google Maps: "POSES 6 Rue de l'Échiquier Paris" or "POSES Bonne Nouvelle Paris"
+   Script Key: poses-bonne-nouvelle-paris
+   Website: https://poses.fr/
+   Current Opening Date: 2022-08-23 (WHOIS - may be brand date, not location)
+
+3. POSES Saint-Lazare
+   Address: 28 Rue de Châteaudun, Paris 75009, France
+   Arrondissement: Paris 09
+   Google Maps: "POSES 28 Rue de Châteaudun Paris" or "POSES Saint-Lazare Paris"
+   Script Key: poses-saint-lazare-paris-gcxy
+   Website: https://poses.fr/
+   Current Opening Date: 2022-08-23 (WHOIS - may be brand date, not location)
+
+4. POSES Monceau
+   Address: 50 Rue de Monceau, Paris 75008, France
+   Arrondissement: Paris 08
+   Google Maps: "POSES 50 Rue de Monceau Paris" or "POSES Monceau Paris"
+   Script Key: poses-monceau-paris
+   Website: https://poses.fr/
+   Current Opening Date: 2022-08-23 (WHOIS - may be brand date, not location)
+
+5. POSES Bastille
+   Address: 151 Rue du Faubourg Saint-Antoine, Paris 75012, France
+   Arrondissement: Paris 12
+   Google Maps: "POSES 151 Rue du Faubourg Saint-Antoine Paris" or "POSES Bastille Paris"
+   Script Key: poses-bastille-paris
+   Website: https://poses.fr/
+   Current Opening Date: 2022-08-23 (WHOIS - may be brand date, not location)
+
+6. POSES Voltaire
+   Address: 28B Rue Popincourt, Paris 75011, France
+   Arrondissement: Paris 11
+   Google Maps: "POSES 28B Rue Popincourt Paris" or "POSES Voltaire Paris"
+   Script Key: poses-voltaire-paris
+   Website: https://poses.fr/
+   Current Opening Date: None

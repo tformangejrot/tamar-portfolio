@@ -1,0 +1,34 @@
+Punch Boxing Locations - For Manual Opening Date Lookup
+========================================================
+
+1. Punch Boxing Neuilly
+   Address: 3 Rue du Château, 92200 Neuilly-sur-Seine, France
+   Arrondissement: N/A (Neuilly-sur-Seine)
+   Google Maps: "Punch Boxing 3 Rue du Château Neuilly" or "Punch Boxing Neuilly"
+   Script Key: punch-boxing-neuilly-neuilly-sur-seine
+   Website: https://punchboxing.fr/
+   Current Opening Date: 2018-11-20 (WHOIS - may be brand date, not location)
+
+2. Punch Boxing Lafayette
+   Address: 24 Rue Chauchat, Paris 75009, France
+   Arrondissement: Paris 09
+   Google Maps: "Punch Boxing 24 Rue Chauchat Paris" or "Punch Boxing Lafayette Paris"
+   Script Key: punch-boxing-lafayette-paris
+   Website: https://punchboxing.fr/
+   Current Opening Date: 2018-11-20 (WHOIS - may be brand date, not location)
+
+3. Punch Boxing Champs-Élysées
+   Address: 26 rue de Berri, Paris 75008, France
+   Arrondissement: Paris 08
+   Google Maps: "Punch Boxing 26 rue de Berri Paris" or "Punch Boxing Champs-Élysées Paris"
+   Script Key: punch-boxing--champs-elysees-paris
+   Website: https://punchboxing.fr/
+   Current Opening Date: 2018-11-20 (WHOIS - may be brand date, not location)
+
+4. Punch Boxing Louvre
+   Address: 3 Rue de Richelieu, Paris 75001, France
+   Arrondissement: Paris 01
+   Google Maps: "Punch Boxing 3 Rue de Richelieu Paris" or "Punch Boxing Louvre Paris"
+   Script Key: punch-boxing-louvre-paris
+   Website: https://punchboxing.fr/
+   Current Opening Date: 2018-11-20 (WHOIS - may be brand date, not location)

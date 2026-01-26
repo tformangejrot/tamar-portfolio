@@ -1,0 +1,34 @@
+Aqua by Locations - For Manual Opening Date Lookup
+===================================================
+
+1. Aqua by Boulogne-Billancourt
+   Address: 28 Rue du Fief, 92100 Boulogne-Billancourt, France
+   Arrondissement: N/A (Boulogne-Billancourt)
+   Google Maps: "Aqua by 28 Rue du Fief Boulogne" or "Aqua by Boulogne"
+   Script Key: aqua-by-boulogne-boulogne-billancourt
+   Website: https://aqua-by.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+boulogne
+   Current Opening Date: 2013-05-25 (WHOIS - may be brand date, not location)
+
+2. Aqua by Charonne
+   Address: 4 rue Jules Valles, Paris 75011, France
+   Arrondissement: Paris 11
+   Google Maps: "Aqua by 4 rue Jules Valles Paris" or "Aqua by Charonne Paris"
+   Script Key: aqua-by-charonne-paris
+   Website: https://aqua-by.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+charonne
+   Current Opening Date: 2013-05-25 (WHOIS - may be brand date, not location)
+
+3. Aqua by Réaumur
+   Address: 82 Rue Notre Dame de Nazareth, Paris 75003, France
+   Arrondissement: Paris 03
+   Google Maps: "Aqua by 82 Rue Notre Dame de Nazareth Paris" or "Aqua by Réaumur Paris"
+   Script Key: aqua-by-raumur-paris-xshs
+   Website: https://aqua-by.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+reaumur
+   Current Opening Date: 2013-05-25 (WHOIS - may be brand date, not location)
+
+4. Aqua by Bastille
+   Address: 21 Rue du Faubourg Saint-Antoine, Paris 75011, France
+   Arrondissement: Paris 11
+   Google Maps: "Aqua by 21 Rue du Faubourg Saint-Antoine Paris" or "Aqua by Bastille Paris"
+   Script Key: aqua-by-bastille-paris-kfqx
+   Website: https://aqua-by.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+bastille
+   Current Opening Date: 2013-05-25 (WHOIS - may be brand date, not location)

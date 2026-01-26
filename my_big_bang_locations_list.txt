@@ -1,0 +1,50 @@
+My Big Bang Locations - For Manual Opening Date Lookup
+======================================================
+
+1. My Big Bang Issy-les-Moulineaux
+   Address: 35 Rue Jean Pierre Timbaud, 92130 Issy-les-Moulineaux, France
+   Arrondissement: N/A (Issy-les-Moulineaux)
+   Google Maps: "My Big Bang 35 Rue Jean Pierre Timbaud Issy" or "My Big Bang Issy-les-Moulineaux"
+   Script Key: my-big-bang-issy-les-moulineaux-issy-les-moulineaux-hggb
+   Website: https://www.my-big-bang.fr/studios/issy-les-moulineaux/#reservez_votre_essai
+   Current Opening Date: 2016-04-19 (WHOIS - may be brand date, not location)
+
+2. My Big Bang Paris Étoile
+   Address: 12 rue Paul Valéry, Paris 75016, France
+   Arrondissement: Paris 16
+   Google Maps: "My Big Bang 12 rue Paul Valéry Paris" or "My Big Bang Paris Étoile"
+   Script Key: my-big-bang-paris-etoile
+   Website: https://www.my-big-bang.fr/nos-studios-delectro-stimulation/ems-paris-16/
+   Current Opening Date: 2016-04-19 (WHOIS - may be brand date, not location)
+
+3. My Big Bang Villiers/Batignolles
+   Address: 33 rue de Saussure, Paris 75017, France
+   Arrondissement: Paris 17
+   Google Maps: "My Big Bang 33 rue de Saussure Paris" or "My Big Bang Paris 17"
+   Script Key: my-big-bang-villiersbatignolles-paris
+   Website: https://www.my-big-bang.fr/nos-studios-delectro-stimulation/seance-electrostimulation-paris-17-2/
+   Current Opening Date: 2016-04-19 (WHOIS - may be brand date, not location)
+
+4. My Big Bang Vaugirard
+   Address: 6 rue des Favorites, Paris 75015, France
+   Arrondissement: Paris 15
+   Google Maps: "My Big Bang 6 rue des Favorites Paris" or "My Big Bang Vaugirard Paris"
+   Script Key: my-big-bang-vaugirard-paris
+   Website: https://www.my-big-bang.fr/nos-studios-delectro-stimulation/paris-15-ems-2/
+   Current Opening Date: 2016-04-19 (WHOIS - may be brand date, not location)
+
+5. My Big Bang Voltaire
+   Address: 1 Rue Popincourt, Paris 75011, France
+   Arrondissement: Paris 11
+   Google Maps: "My Big Bang 1 Rue Popincourt Paris" or "My Big Bang Voltaire Paris"
+   Script Key: my-big-bang-voltaire-paris
+   Website: https://www.my-big-bang.fr/
+   Current Opening Date: 2016-04-19 (WHOIS - may be brand date, not location)
+
+6. My Big Bang Sentier
+   Address: 4 rue des Jeûneurs, Paris 75002, France
+   Arrondissement: Paris 02
+   Google Maps: "My Big Bang 4 rue des Jeûneurs Paris" or "My Big Bang Sentier Paris"
+   Script Key: my-big-bang-sentier-paris
+   Website: https://www.my-big-bang.fr/
+   Current Opening Date: 2016-04-19 (WHOIS - may be brand date, not location)

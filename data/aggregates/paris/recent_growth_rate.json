@@ -1,0 +1,52 @@
+[
+  {
+    "modality": "outdoors",
+    "count": 3,
+    "pctOfModality": 37.5
+  },
+  {
+    "modality": "reformer-pilates",
+    "count": 43,
+    "pctOfModality": 37.4
+  },
+  {
+    "modality": "trampoline",
+    "count": 1,
+    "pctOfModality": 33.3
+  },
+  {
+    "modality": "low-impact-training",
+    "count": 12,
+    "pctOfModality": 27.9
+  },
+  {
+    "modality": "pilates",
+    "count": 62,
+    "pctOfModality": 20.7
+  },
+  {
+    "modality": "stretching",
+    "count": 13,
+    "pctOfModality": 19.7
+  },
+  {
+    "modality": "strength-training",
+    "count": 36,
+    "pctOfModality": 17.5
+  },
+  {
+    "modality": "hiit-bootcamp",
+    "count": 30,
+    "pctOfModality": 17.2
+  },
+  {
+    "modality": "dance",
+    "count": 15,
+    "pctOfModality": 16.9
+  },
+  {
+    "modality": "prenatal-postnatal",
+    "count": 6,
+    "pctOfModality": 12.5
+  }
+]
