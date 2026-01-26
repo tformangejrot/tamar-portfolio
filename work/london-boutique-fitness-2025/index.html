@@ -219,6 +219,20 @@
       line-height: 1.5;
     }
 
+    /* Make legend items clearly clickable */
+    canvas + div[style*="position"] {
+      cursor: default;
+    }
+
+    canvas + div[style*="position"] > ul > li {
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+
+    canvas + div[style*="position"] > ul > li:hover {
+      opacity: 0.8;
+    }
+
     .stat-highlight {
       display: inline-block;
       background: rgba(56, 189, 248, 0.15);
@@ -441,7 +455,7 @@
     <div class="card">
       <div class="card-header">
         <h3>Studio Openings by Modality Over Time</h3>
-        <span>Yoga, Pilates, and Strength Training</span>
+        <span>All modalities - click legend items to show/hide</span>
       </div>
       <div class="chart-container">
         <canvas id="modalityGrowthChart"></canvas>
@@ -449,6 +463,7 @@
       <p class="note">
         Studios can appear in multiple modalities, so a single studio opening may be counted in multiple categories.
         Opening dates are estimated from location pages, domain registration, and other sources.
+        Click on legend items to toggle visibility of each modality.
       </p>
     </div>
     <div class="card" style="margin-top: 32px;">
@@ -1055,8 +1070,38 @@
             legend: {
               display: true,
               position: 'top',
+              onClick: function(e, legendItem, legend) {
+                // Default Chart.js behavior - toggle dataset visibility
+                const index = legendItem.datasetIndex;
+                const chart = legend.chart;
+                const meta = chart.getDatasetMeta(index);
+                
+                // Toggle visibility
+                meta.hidden = meta.hidden === null ? !chart.data.datasets[index].hidden : null;
+                
+                // Update the chart
+                chart.update();
+              },
+              onHover: function(e, legendItem, legend) {
+                // Change cursor to pointer on hover
+                if (e.native && e.native.target) {
+                  e.native.target.style.cursor = 'pointer';
+                }
+              },
+              onLeave: function(e, legendItem, legend) {
+                // Reset cursor
+                if (e.native && e.native.target) {
+                  e.native.target.style.cursor = 'default';
+                }
+              },
               labels: {
-                color: '#cbd5f5',
+                color: function(context) {
+                  // Dim hidden items
+                  if (context.hidden) {
+                    return 'rgba(203, 213, 245, 0.4)';
+                  }
+                  return '#cbd5f5';
+                },
                 font: { size: 10 },
                 padding: 8,
                 usePointStyle: true,
