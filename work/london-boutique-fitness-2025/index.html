@@ -1008,6 +1008,9 @@
       const firstDataPoint = modalityGrowthData[0];
       const allModalities = Object.keys(firstDataPoint).filter(key => key !== 'year').sort();
       
+      // Default visible modalities
+      const defaultVisibleModalities = ['pilates', 'yoga', 'strength-training', 'hiit-bootcamp'];
+      
       // Color palette for modalities (extended)
       const colorPalette = [
         { border: 'rgba(56, 189, 248, 1)', bg: 'rgba(56, 189, 248, 0.1)' },   // Sky blue
@@ -1040,6 +1043,9 @@
         // Format label: replace hyphens with spaces and capitalize
         const label = modality.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
         
+        // Hide modalities that are not in the default visible list
+        const isHidden = !defaultVisibleModalities.includes(modality);
+        
         return {
           label: label,
           data: modalityData,
@@ -1051,7 +1057,8 @@
           pointHoverRadius: 5,
           pointBackgroundColor: color.border,
           pointBorderColor: '#05060a',
-          pointBorderWidth: 1.5
+          pointBorderWidth: 1.5,
+          hidden: isHidden
         };
       });
 

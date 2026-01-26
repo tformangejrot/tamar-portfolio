@@ -856,7 +856,8 @@
 
     // 3. New Studios Charts - Data will be loaded from aggregates
     chartInitFunctions['newModalityChart'] = function() {
-      const newModalities = window.newModalities || [];
+      // Get top 10 modalities (already sorted by count from aggregates)
+      const newModalities = (window.newModalities || []).slice(0, 10);
       const totalNewStudios = window.totalNewStudios || 0;
       const newLabels = newModalities.map(m => m.modality.replace(/-/g, ' '));
       const newCounts = newModalities.map(m => m.count);
@@ -913,10 +914,28 @@
     };
 
     chartInitFunctions['growthRateChart'] = function() {
-      const growthData = window.growthData || [];
-      const growthLabels = growthData.map(m => m.modality.replace(/-/g, ' '));
-      const growthCounts = growthData.map(m => m.count);
-      const growthPcts = growthData.map(m => m.pctOfModality || 0);
+      // Get top 10 modalities from New Studios chart (already sorted by count)
+      const newModalities = (window.newModalities || []).slice(0, 10);
+      
+      // Create a lookup map from growthData by modality name
+      const growthDataMap = new Map();
+      (window.growthData || []).forEach(item => {
+        growthDataMap.set(item.modality, item);
+      });
+      
+      // Use the same order and modalities as New Studios chart
+      const growthLabels = [];
+      const growthCounts = [];
+      const growthPcts = [];
+      
+      newModalities.forEach(newMod => {
+        const modality = newMod.modality;
+        const growthItem = growthDataMap.get(modality);
+        
+        growthLabels.push(modality.replace(/-/g, ' '));
+        growthCounts.push(growthItem ? growthItem.count : 0);
+        growthPcts.push(growthItem ? (growthItem.pctOfModality || 0) : 0);
+      });
       
       const growthCtx = document.getElementById('growthRateChart').getContext('2d');
       const growthGradient = growthCtx.createLinearGradient(0, 0, 600, 0);
