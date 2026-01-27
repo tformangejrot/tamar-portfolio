@@ -431,13 +431,13 @@
       <div class="section-label">The Growth Story</div>
       <h2 class="section-title">Evolution Over Time</h2>
       <p class="section-subtitle">
-        Boutique fitness studios opened by year. Dates are adjusted to account for domain registration typically preceding actual openings by ~2 months.
+        Boutique fitness studios opened by year. Dates are adjusted to account for domain registration typically preceding actual openings by ~2 months. The number of new studios opening has increased steadily since around 2006.
       </p>
     </div>
     <div class="card">
       <div class="card-header">
         <h3>Studios by Opening Year</h3>
-        <span id="year-chart-subtitle">Studios total · Each location counted separately</span>
+        <span id="year-chart-subtitle">1167 studios total · Each location counted separately</span>
       </div>
       <div class="chart-container">
         <canvas id="yearChart"></canvas>
@@ -450,7 +450,31 @@
     </div>
     <div class="card" style="margin-top: 32px;">
       <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
-        London's boutique fitness scene has been growing steadily. These are openings of studios from our data set, so there are studios that opened but aren't included and also studios that may have opened but have since closed. Nonetheless, the growth patterns provide insights into how the market is evolving.
+        London's boutique fitness scene has been growing steadily. Since the COVID dip in openings, boutique fitness has continued to thrive. These are openings of studios from our current data set, so there are studios that opened but aren't included and also studios that may have opened but have since closed. Nonetheless, the growth patterns provide insights into how the market is evolving.
+      </p>
+    </div>
+  </section>
+
+  <!-- Modality Mix -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">What are people training for?</div>
+      <h2 class="section-title">The Modality Landscape</h2>
+      <p class="section-subtitle">
+        Distribution of boutique studios by primary modalities across London. Strength training, pilates, hiit, and yoga dominate the industry.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Studios by Modality</h3>
+        <span id="modality-chart-subtitle">Top modalities</span>
+      </div>
+      <div class="chart-container chart-container-large">
+        <canvas id="modalityChart"></canvas>
+      </div>
+      <p class="note">
+        Studios can appear in multiple modalities; counts are locations, not unique brands.
+        Categories have been consolidated (e.g., all yoga variants → "yoga").
       </p>
     </div>
   </section>
@@ -461,7 +485,7 @@
       <div class="section-label">Modality Trends</div>
       <h2 class="section-title">Growth by Modality</h2>
       <p class="section-subtitle">
-        Number of studio locations opened each year for Yoga, Pilates, and Strength Training.
+        Number of studio locations opened each year by modality, highlighting how the leading categories have evolved over time.
       </p>
     </div>
     <div class="card">
@@ -480,41 +504,12 @@
     </div>
     <div class="card" style="margin-top: 32px;">
       <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
-        This chart shows how different modalities have grown over time. The three most popular modalities—Yoga, Pilates, and Strength Training—each show distinct growth patterns that reflect changing fitness trends and consumer preferences in London.
-      </p>
-    </div>
-  </section>
-
-  <!-- Modality Mix -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-label">What are people training for?</div>
-      <h2 class="section-title">The Modality Landscape</h2>
-      <p class="section-subtitle">
-        Distribution of boutique studios by primary modalities across London.
-      </p>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <h3>Studios by Modality</h3>
-        <span id="modality-chart-subtitle">Top modalities</span>
-      </div>
-      <div class="chart-container chart-container-large">
-        <canvas id="modalityChart"></canvas>
-      </div>
-      <p class="note">
-        Studios can appear in multiple modalities; counts are locations, not unique brands.
-        Categories have been consolidated (e.g., all yoga variants → "yoga").
+        Strength training, pilates, hiit, and yoga are the drivers of boutique fitness with over 400 studios, while all other modalities have less than half of that. This shows that overall, users crave a mix of intensity and recovery that these four modalities cover, while other exercises may be seen as more recreational. In the early years of boutique fitness (prior to 2011), there is still a fairly even spread of openings across modalities, but one can clearly observe the four top modalities rising to the top beginning in 2012. Yoga and pilates, which trended very similar for most of the life of the industry, have seen a split recently, with pilates booming (largely thanks to reformer) since 2019.
       </p>
     </div>
     <div class="card" style="margin-top: 32px;">
       <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
-        The London boutique fitness landscape shows a diverse mix of modalities. Multi-modality studios are common, with many studios offering complementary classes to fill extra space and time.
-      </p>
-    </div>
-    <div class="card" style="margin-top: 32px;">
-      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
-        Multi-modality studios are common in London. Many studios offer complementary classes alongside their primary modality, creating hybrid concepts that fuse different exercises into one experience.
+        Multi-modality studios are everywhere. Only <span class="stat-highlight">28% of studios</span> offer just one modality, while the majority (<span class="stat-highlight">72%</span>) offer multiple. But with more and more unique and hybrid concepts, even the idea of a single modality needs to be questioned. Rather, we are starting to see variations on multi-modality: classes fusing different exercises into one, flagship locations with open gym space, and of course studios offering a primary modality but filling extra space and time with complementary classes.
       </p>
     </div>
   </section>
@@ -574,7 +569,7 @@
     <div class="card">
       <div class="card-header">
         <h3>Studio Brands by Number of Locations</h3>
-        <span id="location-chart-subtitle">Unique brands · Total locations</span>
+        <span id="location-chart-subtitle">843 unique brands · 1167 total locations</span>
       </div>
       <div class="chart-container">
         <canvas id="locationChart"></canvas>
