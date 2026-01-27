@@ -352,9 +352,72 @@ async function main() {
     pilatesPct: modalities.find(m => m.modality === 'pilates')?.pct || 0,
     totalNewStudios: recentCount
   };
+  // Chain percentage by modality (chain = 2+ locations)
+  const chainMap = new Map();
+  studios.forEach(studio => {
+    const key = studio.domain || studio.name?.toLowerCase().trim() || 'unknown';
+    if (!chainMap.has(key)) {
+      chainMap.set(key, []);
+    }
+    chainMap.get(key).push(studio);
+  });
+  
+  const chainStudios = new Set();
+  chainMap.forEach((locations, key) => {
+    if (locations.length >= 2) {
+      locations.forEach(studio => {
+        const studioId = studio.detail_url || `${studio.name}|${studio.location}`;
+        chainStudios.add(studioId);
+      });
+    }
+  });
+  
+  const modalityChainStats = {};
+  studios.forEach(studio => {
+    const studioId = studio.detail_url || `${studio.name}|${studio.location}`;
+    const isChainStudio = chainStudios.has(studioId);
+    const consolidatedCats = consolidateCategories(studio, consolidationMap);
+    
+    consolidatedCats.forEach(modality => {
+      if (!modalityChainStats[modality]) {
+        modalityChainStats[modality] = {
+          totalStudios: 0,
+          chainStudios: 0
+        };
+      }
+      modalityChainStats[modality].totalStudios++;
+      if (isChainStudio) {
+        modalityChainStats[modality].chainStudios++;
+      }
+    });
+  });
+  
+  const chainPercentageData = Object.entries(modalityChainStats)
+    .map(([modality, stats]) => ({
+      modality,
+      totalStudios: stats.totalStudios,
+      chainStudios: stats.chainStudios,
+      chainPercentage: stats.totalStudios > 0 
+        ? parseFloat(((stats.chainStudios / stats.totalStudios) * 100).toFixed(1))
+        : 0,
+      independentStudios: stats.totalStudios - stats.chainStudios
+    }))
+    .sort((a, b) => b.chainPercentage - a.chainPercentage);
+  
+  const overallChainPercentage = {
+    totalStudios: totalStudios,
+    chainStudios: chainStudios.size,
+    chainPercentage: parseFloat(((chainStudios.size / totalStudios) * 100).toFixed(1)),
+    independentStudios: totalStudios - chainStudios.size
+  };
+  
   await fs.writeFile(path.join(OUTPUT_DIR, 'overall_stats.json'), JSON.stringify(overallStats, null, 2));
   await fs.writeFile(path.join(OUTPUT_DIR, 'modality_growth_by_year.json'), JSON.stringify(modalityGrowthData, null, 2));
   await fs.writeFile(path.join(OUTPUT_DIR, 'pilates_combinations_by_year.json'), JSON.stringify(pilatesCombinationsData, null, 2));
+  await fs.writeFile(path.join(OUTPUT_DIR, 'chain_percentage_by_modality.json'), JSON.stringify({
+    overall: overallChainPercentage,
+    byModality: chainPercentageData
+  }, null, 2));
   
   console.log('✓ Computed London aggregates');
   console.log(`✓ Saved to ${OUTPUT_DIR}\n`);

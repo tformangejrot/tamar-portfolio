@@ -385,8 +385,20 @@
   <section class="section">
     <div class="card">
       <h3 style="margin: 0 0 16px; font-size: 24px; font-weight: 600;">What is this report?</h3>
+      <p class="section-content" style="margin: 0 0 16px; font-size: 16px; line-height: 1.8;">
+        London is one of the most developed and dynamic boutique fitness markets in Europe — often setting trends that ripple to other global cities. While boutique fitness remains inherently trend-driven and still evolving even in London, this report provides a data-driven snapshot of the market as of 2025.
+      </p>
+      <p class="section-content" style="margin: 0 0 12px; font-size: 16px; line-height: 1.8;">
+        Using a large and representative dataset of boutique fitness studios across London, this analysis explores:
+      </p>
+      <ul class="section-content" style="margin: 0 0 16px; padding-left: 24px; font-size: 16px; line-height: 1.8; color: #cbd5f5;">
+        <li style="margin-bottom: 8px;">Market size and growth</li>
+        <li style="margin-bottom: 8px;">Evolution of key modalities</li>
+        <li style="margin-bottom: 8px;">Patterns of market maturity</li>
+        <li style="margin-bottom: 8px;">Geographic distribution and clustering</li>
+      </ul>
       <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
-        London has been a leader in boutique fitness among European capitals. This report provides an overview of the London boutique fitness market, the evolution of different modalities, and their geographic distribution. It is based on a large representative data set. Exact studio counts are not fully accurate but relative percentages and growth numbers capture real insights.
+        Rather than exact studio counts, this report emphasizes relative market shares, growth trajectories, and spatial trends to deliver meaningful insights for operators, investors, and planners.
       </p>
     </div>
   </section>
@@ -576,6 +588,23 @@
         One indication of the relative newness of boutique fitness is the extreme prominence of single-location businesses. It's likely that we will start seeing greater consolidation as "winners" develop truly profitable business models and smaller studios are purchased or forced to close.
       </p>
     </div>
+    <div class="card" style="margin-top: 32px;">
+      <div class="card-header">
+        <h3>Chain vs Independent Studios by Modality</h3>
+        <span>% of studios that are part of chains (2+ locations)</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="chainPercentageChart"></canvas>
+      </div>
+      <p class="note">
+        Chains are defined as brands with 2+ locations. Studios can appear in multiple modalities, so a single studio may be counted in multiple categories.
+      </p>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        The percentage of studios that are part of chains varies significantly by modality. Running and cycling show the highest chain percentages, reflecting the presence of multi-location brands in these categories. Martial arts and boxing remain more independent, with lower chain percentages.
+      </p>
+    </div>
   </section>
 
   <!-- Spatial Distribution -->
@@ -652,7 +681,7 @@
       try {
         const basePath = '../../data/aggregates/london/';
         
-        const [modalityData, newModalityData, yearData, boroughData, statsData, growthData, chainsData, modalityGrowthData] = await Promise.all([
+        const [modalityData, newModalityData, yearData, boroughData, statsData, growthData, chainsData, modalityGrowthData, chainPercentageData] = await Promise.all([
           fetch(`${basePath}modality_mix.json`).then(r => r.json()),
           fetch(`${basePath}recent_new_modalities.json`).then(r => r.json()),
           fetch(`${basePath}growth_over_time.json`).then(r => r.json()),
@@ -660,7 +689,8 @@
           fetch(`${basePath}overall_stats.json`).then(r => r.json()),
           fetch(`${basePath}recent_growth_rate.json`).then(r => r.json()),
           fetch(`${basePath}chains_vs_single_location.json`).then(r => r.json()),
-          fetch(`${basePath}modality_growth_by_year.json`).then(r => r.json())
+          fetch(`${basePath}modality_growth_by_year.json`).then(r => r.json()),
+          fetch(`${basePath}chain_percentage_by_modality.json`).then(r => r.json())
         ]);
 
         // Populate global data variables
@@ -672,6 +702,7 @@
         window.growthData = growthData;
         window.chainsData = chainsData;
         window.modalityGrowthData = modalityGrowthData;
+        window.chainPercentageData = chainPercentageData;
         window.totalNewStudios = statsData.totalNewStudios || 0;
 
         // Update summary stat cards
@@ -691,6 +722,7 @@
         window.growthData = [];
         window.chainsData = [];
         window.modalityGrowthData = [];
+        window.chainPercentageData = { overall: {}, byModality: [] };
         window.totalNewStudios = 0;
         updateSummaryStats();
         initializeAllCharts();
@@ -1208,6 +1240,83 @@
     });
     };
 
+    // 7. Chain Percentage by Modality Chart
+    chartInitFunctions['chainPercentageChart'] = function() {
+      const chainData = window.chainPercentageData || { overall: {}, byModality: [] };
+      const overall = chainData.overall || {};
+      const byModality = chainData.byModality || [];
+      
+      // Create labels and data: overall first, then modalities
+      const labels = ['Overall', ...byModality.map(m => m.modality.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()))];
+      const percentages = [overall.chainPercentage || 0, ...byModality.map(m => m.chainPercentage || 0)];
+      
+      const chainCtx = document.getElementById('chainPercentageChart').getContext('2d');
+      const chainGradient = chainCtx.createLinearGradient(0, 0, 600, 0);
+      chainGradient.addColorStop(0, 'rgba(236, 72, 153, 0.9)');
+      chainGradient.addColorStop(1, 'rgba(139, 92, 246, 0.9)');
+
+      charts['chainPercentageChart'] = new Chart(chainCtx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Chain Percentage',
+            data: percentages,
+            backgroundColor: function(context) {
+              // Highlight overall bar with different color
+              if (context.dataIndex === 0) {
+                return 'rgba(251, 146, 60, 0.9)'; // Orange for overall
+              }
+              return chainGradient;
+            },
+            borderRadius: 6,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const i = context.dataIndex;
+                  if (i === 0) {
+                    return ` ${percentages[i]}% of all studios are part of chains (${overall.chainStudios || 0} of ${overall.totalStudios || 0} studios)`;
+                  }
+                  const modality = byModality[i - 1];
+                  return ` ${percentages[i]}% of ${labels[i]} studios are part of chains (${modality.chainStudios || 0} of ${modality.totalStudios || 0} studios)`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#e5e7ff',
+                font: { size: 11 },
+                callback: function(value) {
+                  return value + '%';
+                }
+              },
+              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false },
+              max: 100
+            },
+            y: {
+              ticks: { color: '#cbd5ff', font: { size: 11 } },
+              grid: { display: false }
+            }
+          },
+          animation: {
+            duration: 1200,
+            easing: 'easeOutQuart'
+          }
+        }
+      });
+    };
+
     // Update summary statistics
     function updateSummaryStats() {
       const stats = window.stats || {};
@@ -1251,7 +1360,7 @@
 
     // Initialize all charts function
     function initializeAllCharts() {
-      const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart'];
+      const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart', 'chainPercentageChart'];
       chartIds.forEach(chartId => {
         const chartElement = document.getElementById(chartId);
         if (chartElement && chartInitFunctions[chartId]) {
@@ -1373,7 +1482,7 @@
     }
 
     // Initialize charts when they scroll into view (for initial page load before data is ready)
-    const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart'];
+    const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart', 'chainPercentageChart'];
     chartIds.forEach(chartId => {
       const chartElement = document.getElementById(chartId);
       if (chartElement) {

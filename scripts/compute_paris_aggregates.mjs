@@ -149,6 +149,11 @@ async function main() {
     .sort((a, b) => b.count - a.count)
     .slice(0, 10);
   
+  // Growth rate by modality for ALL modalities.
+  // We intentionally do NOT slice here so that the dashboard,
+  // which aligns this dataset to the top-10 new modalities,
+  // can always find a matching entry (even if a modality's
+  // growth rate is relatively low).
   const growthRateByModality = Object.entries(recentModalityCounts)
     .map(([modality, count]) => ({
       modality,
@@ -156,9 +161,7 @@ async function main() {
       pctOfModality: recentModalityTotals[modality] 
         ? parseFloat(((count / recentModalityTotals[modality]) * 100).toFixed(1))
         : 0
-    }))
-    .sort((a, b) => b.pctOfModality - a.pctOfModality)
-    .slice(0, 10);
+    }));
   
   // 4. Chains vs single-location (group by domain or name)
   const brandMap = new Map();

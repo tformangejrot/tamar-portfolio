@@ -1,0 +1,150 @@
+{
+  "overall": {
+    "totalStudios": 1167,
+    "chainStudios": 463,
+    "chainPercentage": 39.7,
+    "independentStudios": 704
+  },
+  "byModality": [
+    {
+      "modality": "running",
+      "totalStudios": 70,
+      "chainStudios": 43,
+      "chainPercentage": 61.4,
+      "independentStudios": 27
+    },
+    {
+      "modality": "cycling",
+      "totalStudios": 92,
+      "chainStudios": 52,
+      "chainPercentage": 56.5,
+      "independentStudios": 40
+    },
+    {
+      "modality": "electrical-muscle-stimulation",
+      "totalStudios": 13,
+      "chainStudios": 7,
+      "chainPercentage": 53.8,
+      "independentStudios": 6
+    },
+    {
+      "modality": "reformer-pilates",
+      "totalStudios": 227,
+      "chainStudios": 122,
+      "chainPercentage": 53.7,
+      "independentStudios": 105
+    },
+    {
+      "modality": "pilates",
+      "totalStudios": 480,
+      "chainStudios": 222,
+      "chainPercentage": 46.3,
+      "independentStudios": 258
+    },
+    {
+      "modality": "barre",
+      "totalStudios": 124,
+      "chainStudios": 57,
+      "chainPercentage": 46,
+      "independentStudios": 67
+    },
+    {
+      "modality": "outdoors",
+      "totalStudios": 71,
+      "chainStudios": 32,
+      "chainPercentage": 45.1,
+      "independentStudios": 39
+    },
+    {
+      "modality": "hiit-bootcamp",
+      "totalStudios": 470,
+      "chainStudios": 204,
+      "chainPercentage": 43.4,
+      "independentStudios": 266
+    },
+    {
+      "modality": "strength-training",
+      "totalStudios": 533,
+      "chainStudios": 229,
+      "chainPercentage": 43,
+      "independentStudios": 304
+    },
+    {
+      "modality": "aerial",
+      "totalStudios": 39,
+      "chainStudios": 16,
+      "chainPercentage": 41,
+      "independentStudios": 23
+    },
+    {
+      "modality": "stretching",
+      "totalStudios": 113,
+      "chainStudios": 44,
+      "chainPercentage": 38.9,
+      "independentStudios": 69
+    },
+    {
+      "modality": "prenatal-postnatal",
+      "totalStudios": 111,
+      "chainStudios": 41,
+      "chainPercentage": 36.9,
+      "independentStudios": 70
+    },
+    {
+      "modality": "yoga",
+      "totalStudios": 407,
+      "chainStudios": 149,
+      "chainPercentage": 36.6,
+      "independentStudios": 258
+    },
+    {
+      "modality": "personal-training",
+      "totalStudios": 86,
+      "chainStudios": 31,
+      "chainPercentage": 36,
+      "independentStudios": 55
+    },
+    {
+      "modality": "dance",
+      "totalStudios": 174,
+      "chainStudios": 62,
+      "chainPercentage": 35.6,
+      "independentStudios": 112
+    },
+    {
+      "modality": "low-impact-training",
+      "totalStudios": 83,
+      "chainStudios": 28,
+      "chainPercentage": 33.7,
+      "independentStudios": 55
+    },
+    {
+      "modality": "trampoline",
+      "totalStudios": 9,
+      "chainStudios": 3,
+      "chainPercentage": 33.3,
+      "independentStudios": 6
+    },
+    {
+      "modality": "mind-body",
+      "totalStudios": 29,
+      "chainStudios": 9,
+      "chainPercentage": 31,
+      "independentStudios": 20
+    },
+    {
+      "modality": "boxing",
+      "totalStudios": 163,
+      "chainStudios": 46,
+      "chainPercentage": 28.2,
+      "independentStudios": 117
+    },
+    {
+      "modality": "martial-arts",
+      "totalStudios": 102,
+      "chainStudios": 17,
+      "chainPercentage": 16.7,
+      "independentStudios": 85
+    }
+  ]
+}

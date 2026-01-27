@@ -1,33 +1,8 @@
 [
   {
-    "modality": "outdoors",
-    "count": 3,
-    "pctOfModality": 37.5
-  },
-  {
-    "modality": "reformer-pilates",
-    "count": 43,
-    "pctOfModality": 37.4
-  },
-  {
-    "modality": "trampoline",
-    "count": 1,
-    "pctOfModality": 33.3
-  },
-  {
-    "modality": "low-impact-training",
-    "count": 12,
-    "pctOfModality": 27.9
-  },
-  {
-    "modality": "pilates",
-    "count": 62,
-    "pctOfModality": 20.7
-  },
-  {
-    "modality": "stretching",
-    "count": 13,
-    "pctOfModality": 19.7
+    "modality": "hiit-bootcamp",
+    "count": 30,
+    "pctOfModality": 17.2
   },
   {
     "modality": "strength-training",
@@ -35,9 +10,19 @@
     "pctOfModality": 17.5
   },
   {
-    "modality": "hiit-bootcamp",
-    "count": 30,
-    "pctOfModality": 17.2
+    "modality": "yoga",
+    "count": 32,
+    "pctOfModality": 11.5
+  },
+  {
+    "modality": "barre",
+    "count": 7,
+    "pctOfModality": 11.3
+  },
+  {
+    "modality": "boxing",
+    "count": 8,
+    "pctOfModality": 10.1
   },
   {
     "modality": "dance",
@@ -45,8 +30,53 @@
     "pctOfModality": 16.9
   },
   {
+    "modality": "pilates",
+    "count": 62,
+    "pctOfModality": 20.7
+  },
+  {
+    "modality": "low-impact-training",
+    "count": 12,
+    "pctOfModality": 27.9
+  },
+  {
     "modality": "prenatal-postnatal",
     "count": 6,
     "pctOfModality": 12.5
+  },
+  {
+    "modality": "reformer-pilates",
+    "count": 43,
+    "pctOfModality": 37.4
+  },
+  {
+    "modality": "stretching",
+    "count": 13,
+    "pctOfModality": 19.7
+  },
+  {
+    "modality": "outdoors",
+    "count": 3,
+    "pctOfModality": 37.5
+  },
+  {
+    "modality": "cycling",
+    "count": 4,
+    "pctOfModality": 8.2
+  },
+  {
+    "modality": "martial-arts",
+    "count": 5,
+    "pctOfModality": 12.2
+  },
+  {
+    "modality": "running",
+    "count": 2,
+    "pctOfModality": 7.4
+  },
+  {
+    "modality": "trampoline",
+    "count": 1,
+    "pctOfModality": 33.3
   }
 ]
