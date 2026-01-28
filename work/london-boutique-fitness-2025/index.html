@@ -633,6 +633,19 @@
         Studio locations are approximated based on borough centers.
       </p>
     </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Growth by Borough Over Time</h3>
+        <span>Select boroughs via the legend · Wandsworth shown by default</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="boroughGrowthChart"></canvas>
+      </div>
+      <p class="note">
+        Each line shows the number of boutique studio locations opened per year in a given borough.
+        By default only Wandsworth is visible; click legend items to add or remove other boroughs for comparison.
+      </p>
+    </div>
     <div class="card" style="margin-top: 32px;">
       <p class="section-content" style="margin: 0 0 16px; font-size: 16px; line-height: 1.8;">
         <strong>Wandsworth, Westminster, Southwark, and Islington all exhibit boutique fitness maturity — but through different demand structures.</strong>
@@ -714,7 +727,18 @@
       try {
         const basePath = '../../data/aggregates/london/';
         
-        const [modalityData, newModalityData, yearData, boroughData, statsData, growthData, chainsData, modalityGrowthData, chainPercentageData] = await Promise.all([
+        const [
+          modalityData,
+          newModalityData,
+          yearData,
+          boroughData,
+          statsData,
+          growthData,
+          chainsData,
+          modalityGrowthData,
+          chainPercentageData,
+          boroughGrowthData
+        ] = await Promise.all([
           fetch(`${basePath}modality_mix.json`).then(r => r.json()),
           fetch(`${basePath}recent_new_modalities.json`).then(r => r.json()),
           fetch(`${basePath}growth_over_time.json`).then(r => r.json()),
@@ -723,7 +747,8 @@
           fetch(`${basePath}recent_growth_rate.json`).then(r => r.json()),
           fetch(`${basePath}chains_vs_single_location.json`).then(r => r.json()),
           fetch(`${basePath}modality_growth_by_year.json`).then(r => r.json()),
-          fetch(`${basePath}chain_percentage_by_modality.json`).then(r => r.json())
+          fetch(`${basePath}chain_percentage_by_modality.json`).then(r => r.json()),
+          fetch(`${basePath}borough_growth_by_year.json`).then(r => r.json())
         ]);
 
         // Populate global data variables
@@ -736,6 +761,7 @@
         window.chainsData = chainsData;
         window.modalityGrowthData = modalityGrowthData;
         window.chainPercentageData = chainPercentageData;
+        window.boroughGrowthData = boroughGrowthData;
         window.totalNewStudios = statsData.totalNewStudios || 0;
 
         // Update summary stat cards
@@ -756,6 +782,7 @@
         window.chainsData = [];
         window.modalityGrowthData = [];
         window.chainPercentageData = { overall: {}, byModality: [] };
+        window.boroughGrowthData = [];
         window.totalNewStudios = 0;
         updateSummaryStats();
         initializeAllCharts();
@@ -1273,6 +1300,150 @@
     });
     };
 
+    // 8. Borough Growth Over Time Chart
+    chartInitFunctions['boroughGrowthChart'] = function() {
+      const boroughGrowthData = window.boroughGrowthData || [];
+      if (boroughGrowthData.length === 0) return;
+
+      const yearLabels = boroughGrowthData.map(d => d.year.toString());
+
+      // Get all boroughs (exclude 'year' field)
+      const firstDataPoint = boroughGrowthData[0];
+      const allBoroughs = Object.keys(firstDataPoint).filter(key => key !== 'year').sort();
+
+      // Default visible borough(s)
+      const defaultVisibleBoroughs = ['Wandsworth'];
+
+      // Color palette (reuse the extended palette from modality growth)
+      const colorPalette = [
+        { border: 'rgba(56, 189, 248, 1)', bg: 'rgba(56, 189, 248, 0.1)' },
+        { border: 'rgba(139, 92, 246, 1)', bg: 'rgba(139, 92, 246, 0.1)' },
+        { border: 'rgba(34, 197, 94, 1)', bg: 'rgba(34, 197, 94, 0.1)' },
+        { border: 'rgba(236, 72, 153, 1)', bg: 'rgba(236, 72, 153, 0.1)' },
+        { border: 'rgba(251, 146, 60, 1)', bg: 'rgba(251, 146, 60, 0.1)' },
+        { border: 'rgba(239, 68, 68, 1)', bg: 'rgba(239, 68, 68, 0.1)' },
+        { border: 'rgba(168, 85, 247, 1)', bg: 'rgba(168, 85, 247, 0.1)' },
+        { border: 'rgba(59, 130, 246, 1)', bg: 'rgba(59, 130, 246, 0.1)' },
+        { border: 'rgba(16, 185, 129, 1)', bg: 'rgba(16, 185, 129, 0.1)' },
+        { border: 'rgba(245, 101, 101, 1)', bg: 'rgba(245, 101, 101, 0.1)' },
+        { border: 'rgba(249, 115, 22, 1)', bg: 'rgba(249, 115, 22, 0.1)' },
+        { border: 'rgba(147, 51, 234, 1)', bg: 'rgba(147, 51, 234, 0.1)' },
+        { border: 'rgba(14, 165, 233, 1)', bg: 'rgba(14, 165, 233, 0.1)' },
+        { border: 'rgba(20, 184, 166, 1)', bg: 'rgba(20, 184, 166, 0.1)' },
+        { border: 'rgba(244, 63, 94, 1)', bg: 'rgba(244, 63, 94, 0.1)' },
+        { border: 'rgba(217, 70, 239, 1)', bg: 'rgba(217, 70, 239, 0.1)' },
+        { border: 'rgba(99, 102, 241, 1)', bg: 'rgba(99, 102, 241, 0.1)' },
+        { border: 'rgba(34, 211, 238, 1)', bg: 'rgba(34, 211, 238, 0.1)' },
+        { border: 'rgba(251, 191, 36, 1)', bg: 'rgba(251, 191, 36, 0.1)' },
+        { border: 'rgba(190, 24, 93, 1)', bg: 'rgba(190, 24, 93, 0.1)' }
+      ];
+
+      const datasets = allBoroughs.map((borough, index) => {
+        const color = colorPalette[index % colorPalette.length];
+        const data = boroughGrowthData.map(d => d[borough] || 0);
+        const isHidden = !defaultVisibleBoroughs.includes(borough);
+
+        return {
+          label: borough,
+          data,
+          borderColor: color.border,
+          backgroundColor: color.bg,
+          tension: 0.4,
+          fill: false,
+          pointRadius: 3,
+          pointHoverRadius: 5,
+          pointBackgroundColor: color.border,
+          pointBorderColor: '#05060a',
+          pointBorderWidth: 1.5,
+          hidden: isHidden
+        };
+      });
+
+      const boroughGrowthCtx = document.getElementById('boroughGrowthChart').getContext('2d');
+
+      charts['boroughGrowthChart'] = new Chart(boroughGrowthCtx, {
+        type: 'line',
+        data: {
+          labels: yearLabels,
+          datasets
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top',
+              onClick: function(e, legendItem, legend) {
+                const index = legendItem.datasetIndex;
+                const chart = legend.chart;
+                const meta = chart.getDatasetMeta(index);
+
+                meta.hidden = meta.hidden === null ? !chart.data.datasets[index].hidden : null;
+                chart.update();
+              },
+              onHover: function(e) {
+                if (e.native && e.native.target) {
+                  e.native.target.style.cursor = 'pointer';
+                }
+              },
+              onLeave: function(e) {
+                if (e.native && e.native.target) {
+                  e.native.target.style.cursor = 'default';
+                }
+              },
+              labels: {
+                color: function(context) {
+                  if (context.hidden) {
+                    return 'rgba(203, 213, 245, 0.4)';
+                  }
+                  return '#cbd5f5';
+                },
+                font: { size: 10 },
+                padding: 8,
+                usePointStyle: true,
+                pointStyle: 'circle',
+                boxWidth: 12,
+                boxHeight: 12
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const value = context.parsed.y || 0;
+                  return ` ${context.dataset.label}: ${value} location${value !== 1 ? 's' : ''}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#e5e7ff',
+                font: { size: 11 },
+                maxRotation: 45,
+                minRotation: 45
+              },
+              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            },
+            y: {
+              beginAtZero: true,
+              ticks: {
+                color: '#cbd5ff',
+                font: { size: 11 },
+                stepSize: 2
+              },
+              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            }
+          },
+          animation: {
+            duration: 1200,
+            easing: 'easeOutQuart'
+          }
+        }
+      });
+    };
+
     // 7. Chain Percentage by Modality Chart
     chartInitFunctions['chainPercentageChart'] = function() {
       const chainData = window.chainPercentageData || { overall: {}, byModality: [] };
@@ -1393,7 +1564,7 @@
 
     // Initialize all charts function
     function initializeAllCharts() {
-      const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart', 'chainPercentageChart'];
+      const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart', 'chainPercentageChart', 'boroughGrowthChart'];
       chartIds.forEach(chartId => {
         const chartElement = document.getElementById(chartId);
         if (chartElement && chartInitFunctions[chartId]) {
@@ -1515,7 +1686,7 @@
     }
 
     // Initialize charts when they scroll into view (for initial page load before data is ready)
-    const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart', 'chainPercentageChart'];
+    const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart', 'chainPercentageChart', 'boroughGrowthChart'];
     chartIds.forEach(chartId => {
       const chartElement = document.getElementById(chartId);
       if (chartElement) {

@@ -214,7 +214,14 @@ async function main() {
     'Waltham Forest': [51.5856, -0.0118],
     'Newham': [51.5255, 0.0352],
     'Redbridge': [51.5597, 0.0818],
-    'City of London': [51.5155, -0.0920]
+    'City of London': [51.5155, -0.0920],
+    // Additional borough centroids to avoid multiple boroughs collapsing
+    // onto central London in the heatmap. These are approximate borough centres.
+    'Barnet': [51.6150, -0.1740],
+    'Hounslow': [51.4730, -0.3660],
+    'Croydon': [51.3720, -0.1020],
+    'Enfield': [51.6530, -0.0790],
+    'Bromley': [51.4060, 0.0160]
   };
   
   const boroughData = Object.entries(boroughCounts)
@@ -225,6 +232,48 @@ async function main() {
     }))
     .sort((a, b) => b.count - a.count);
   
+  // 6. Borough growth over time (per borough, by opening year)
+  const boroughGrowthByYear = {};
+
+  studios.forEach(studio => {
+    if (!studio.estimated_opening_date || !studio.borough) return;
+
+    const date = new Date(studio.estimated_opening_date);
+    if (isNaN(date.getTime())) return;
+
+    let year = date.getFullYear();
+    // Filter out dates before 2000
+    if (year < 2000) return;
+
+    // Adjust for Nov/Dec domain registrations
+    if (studio.opening_date_source === 'whois_domain_creation') {
+      year = adjustYearForDomainRegistration(year, date.getMonth());
+    }
+
+    const borough = studio.borough;
+    if (!boroughGrowthByYear[borough]) {
+      boroughGrowthByYear[borough] = {};
+    }
+    boroughGrowthByYear[borough][year] = (boroughGrowthByYear[borough][year] || 0) + 1;
+  });
+
+  // Collect all years and boroughs
+  const boroughGrowthYears = new Set();
+  Object.values(boroughGrowthByYear).forEach(yearData => {
+    Object.keys(yearData).forEach(year => boroughGrowthYears.add(parseInt(year)));
+  });
+
+  const sortedBoroughGrowthYears = Array.from(boroughGrowthYears).sort((a, b) => a - b);
+  const allBoroughs = Object.keys(boroughGrowthByYear).sort();
+
+  const boroughGrowthData = sortedBoroughGrowthYears.map(year => {
+    const yearData = { year };
+    allBoroughs.forEach(borough => {
+      yearData[borough] = boroughGrowthByYear[borough][year] || 0;
+    });
+    return yearData;
+  });
+
   // Key stats
   const totalStudios = studios.length;
   const studiosWithDates = studios.filter(s => s.estimated_opening_date).length;
@@ -246,6 +295,7 @@ async function main() {
   await fs.writeFile(path.join(OUTPUT_DIR, 'recent_growth_rate.json'), JSON.stringify(growthRateByModality, null, 2));
   await fs.writeFile(path.join(OUTPUT_DIR, 'chains_vs_single_location.json'), JSON.stringify(locationData, null, 2));
   await fs.writeFile(path.join(OUTPUT_DIR, 'borough_distribution.json'), JSON.stringify(boroughData, null, 2));
+  await fs.writeFile(path.join(OUTPUT_DIR, 'borough_growth_by_year.json'), JSON.stringify(boroughGrowthData, null, 2));
   
   // Modality growth over time (ALL modalities)
   const modalityGrowthByYear = {};
