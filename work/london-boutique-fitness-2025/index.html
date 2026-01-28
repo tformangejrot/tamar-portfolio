@@ -748,7 +748,16 @@
           fetch(`${basePath}chains_vs_single_location.json`).then(r => r.json()),
           fetch(`${basePath}modality_growth_by_year.json`).then(r => r.json()),
           fetch(`${basePath}chain_percentage_by_modality.json`).then(r => r.json()),
-          fetch(`${basePath}borough_growth_by_year.json`).then(r => r.json())
+          // Borough growth is optional so that missing data
+          // doesn't break the rest of the dashboard.
+          fetch(`${basePath}borough_growth_by_year.json`).then(async r => {
+            if (!r.ok) return [];
+            try {
+              return await r.json();
+            } catch {
+              return [];
+            }
+          })
         ]);
 
         // Populate global data variables
