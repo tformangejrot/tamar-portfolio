@@ -242,6 +242,30 @@
       color: #7dd3ff;
     }
 
+    .year-chart-toggle-btn {
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #cbd5f5;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 255, 0.25);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .year-chart-toggle-btn:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: rgba(56, 189, 248, 0.4);
+      color: #f5f7ff;
+    }
+
+    .year-chart-toggle-btn.active {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: rgba(56, 189, 248, 0.6);
+      color: #7dd3ff;
+    }
+
     /* Two-column layout for some sections */
     .two-column {
       display: grid;
@@ -438,6 +462,10 @@
       <div class="card-header">
         <h3>Studios by Opening Year</h3>
         <span id="year-chart-subtitle">1167 studios total · Each location counted separately</span>
+      </div>
+      <div class="year-chart-toggle" style="margin-bottom: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
+        <button type="button" id="year-chart-mode-openings" class="year-chart-toggle-btn active" aria-pressed="true">Openings by year</button>
+        <button type="button" id="year-chart-mode-cumulative" class="year-chart-toggle-btn" aria-pressed="false">Cumulative studios</button>
       </div>
       <div class="chart-container">
         <canvas id="yearChart"></canvas>
@@ -683,6 +711,11 @@
           </tbody>
         </table>
       </div>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        Wandsworth, Westminster, Southwark, and Islington have the greatest number of studios. Over the past 15 or so years, Wandsworth and Southwark show relative accelerated studio growth, reflecting the new neighbourhood-level demand driven by population inflows, regeneration, and expanding residential developments. In contrast, Islington and Westminster exhibit more consistent, linear growth, characteristic of more mature markets where demand has been established and new openings primarily reflect optimisation rather than expansion.
+      </p>
     </div>
   </section>
 
@@ -976,68 +1009,106 @@
     });
     };
 
-    // 3. Year Chart - Data will be loaded from aggregates
+    // 3. Year Chart - Data will be loaded from aggregates (openings by year or cumulative)
     chartInitFunctions['yearChart'] = function() {
       const yearData = window.yearData || [];
       const yearLabels = yearData.map(d => d.year.toString());
       const yearCounts = yearData.map(d => d.count);
+      const cumulativeCounts = yearCounts.reduce((acc, count) => {
+        acc.push((acc.length ? acc[acc.length - 1] : 0) + count);
+        return acc;
+      }, []);
+
+      const totalStudios = cumulativeCounts.length ? cumulativeCounts[cumulativeCounts.length - 1] : 0;
+      const subtitleEl = document.getElementById('year-chart-subtitle');
+      const btnOpenings = document.getElementById('year-chart-mode-openings');
+      const btnCumulative = document.getElementById('year-chart-mode-cumulative');
 
       const yearCtx = document.getElementById('yearChart').getContext('2d');
       const yearGradient = yearCtx.createLinearGradient(0, 0, 0, 450);
       yearGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
       yearGradient.addColorStop(1, 'rgba(56, 189, 248, 0.3)');
 
-      charts['yearChart'] = new Chart(yearCtx, {
-      type: 'bar',
-      data: {
-        labels: yearLabels,
-        datasets: [{
-          label: 'New Studios',
-          data: yearCounts,
-          backgroundColor: yearGradient,
-          borderRadius: 4,
-          borderSkipped: false
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return ` ${context.parsed.y} new studio${context.parsed.y !== 1 ? 's' : ''}`;
+      const chart = new Chart(yearCtx, {
+        type: 'bar',
+        data: {
+          labels: yearLabels,
+          datasets: [{
+            label: 'New Studios',
+            data: yearCounts,
+            backgroundColor: yearGradient,
+            borderRadius: 4,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const y = context.parsed.y;
+                  return window._yearChartMode === 'cumulative'
+                    ? ` ${y} studio${y !== 1 ? 's' : ''} (cumulative)`
+                    : ` ${y} new studio${y !== 1 ? 's' : ''}`;
+                }
               }
             }
-          }
-        },
-        scales: {
-          x: {
-            ticks: {
-              color: '#e5e7ff',
-              font: { size: 10 },
-              maxRotation: 45,
-              minRotation: 45
-            },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
           },
-          y: {
-            beginAtZero: true,
-            ticks: {
-              color: '#cbd5ff',
-              font: { size: 11 },
-              stepSize: 10
+          scales: {
+            x: {
+              ticks: {
+                color: '#e5e7ff',
+                font: { size: 10 },
+                maxRotation: 45,
+                minRotation: 45
+              },
+              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
             },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            y: {
+              beginAtZero: true,
+              ticks: {
+                color: '#cbd5ff',
+                font: { size: 11 },
+                stepSize: 10
+              },
+              grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            }
+          },
+          animation: {
+            duration: 1200,
+            easing: 'easeOutQuart'
           }
-        },
-        animation: {
-          duration: 1200,
-          easing: 'easeOutQuart'
         }
+      });
+
+      window._yearChartMode = 'openings';
+
+      function setYearChartMode(mode) {
+        window._yearChartMode = mode;
+        const ds = chart.data.datasets[0];
+        if (mode === 'cumulative') {
+          ds.data = cumulativeCounts;
+          ds.label = 'Cumulative Studios';
+          if (subtitleEl) subtitleEl.textContent = `${totalStudios} studios total · Cumulative count by year`;
+          if (btnOpenings) { btnOpenings.classList.remove('active'); btnOpenings.setAttribute('aria-pressed', 'false'); }
+          if (btnCumulative) { btnCumulative.classList.add('active'); btnCumulative.setAttribute('aria-pressed', 'true'); }
+        } else {
+          ds.data = yearCounts;
+          ds.label = 'New Studios';
+          if (subtitleEl) subtitleEl.textContent = `${totalStudios} studios total · Each location counted separately`;
+          if (btnOpenings) { btnOpenings.classList.add('active'); btnOpenings.setAttribute('aria-pressed', 'true'); }
+          if (btnCumulative) { btnCumulative.classList.remove('active'); btnCumulative.setAttribute('aria-pressed', 'false'); }
+        }
+        chart.update();
       }
-    });
+
+      if (btnOpenings) btnOpenings.addEventListener('click', function() { setYearChartMode('openings'); });
+      if (btnCumulative) btnCumulative.addEventListener('click', function() { setYearChartMode('cumulative'); });
+
+      charts['yearChart'] = chart;
     };
 
     // 4. Location Chart - Data will be loaded from aggregates
