@@ -1,277 +1,266 @@
 {
-  "generated_at": "2026-03-11T11:11:30.362Z",
+  "generated_at": "2026-03-11T14:19:07.355Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
-    "approved_records_total": 182,
-    "in_scope_records": 167,
+    "approved_records_total": 50,
+    "in_scope_records": 47,
     "coverage": {
-      "with_drop_in": 58,
-      "with_class_packs": 68,
-      "with_memberships": 43,
-      "with_intro_offers": 139
+      "with_drop_in": 45,
+      "with_class_packs": 47,
+      "with_memberships": 21,
+      "with_intro_offers": 38
     },
     "credit_systems": {
-      "count": 14,
-      "pct": 8.4,
+      "count": 8,
+      "pct": 17,
       "examples": [
+        "20edanse.com",
+        "adrenaline-sport-cafe.fr",
         "atelierlacanopee.com",
         "ateliers-ground-control.com",
-        "becoached.fr",
-        "notyoga.fr",
-        "onmindclub.com",
-        "paris-marais-dance-school.org",
-        "poses-studio.com",
-        "rasa-yogarivegauche.com"
+        "yogagarden.fr",
+        "yogaismyland.com",
+        "zeartstudios.com",
+        "zones.paris"
       ]
     },
-    "excluded_records": 15
+    "excluded_records": 3
   },
   "benchmarks": {
     "drop_in": {
-      "n": 58,
+      "n": 45,
       "min": 15,
-      "q1": 24.25,
-      "median": 29,
-      "q3": 35,
+      "q1": 18.9,
+      "median": 25,
+      "q3": 30,
       "max": 50,
-      "mean": 30.27,
-      "stddev": 8.87
+      "mean": 25.28,
+      "stddev": 8.05
     },
     "drop_in_distribution": [
       {
         "label": "<25EUR",
-        "count": 15
+        "count": 21
       },
       {
         "label": "25-28EUR",
-        "count": 10
+        "count": 7
       },
       {
         "label": "28-30EUR",
-        "count": 6
+        "count": 3
       },
       {
         "label": "30-32EUR",
-        "count": 5
-      },
-      {
-        "label": "32-35EUR",
-        "count": 6
-      },
-      {
-        "label": "35-40EUR",
         "count": 4
       },
       {
+        "label": "32-35EUR",
+        "count": 5
+      },
+      {
+        "label": "35-40EUR",
+        "count": 2
+      },
+      {
         "label": "40EUR+",
-        "count": 12
+        "count": 3
       }
     ],
     "class_pack_price_per_class": [
       {
         "bucket": "5 classes",
-        "n": 45,
-        "min": 15,
-        "q1": 22,
-        "median": 28,
-        "q3": 34.5,
-        "max": 44,
-        "mean": 28.05,
-        "stddev": 8.14
+        "n": 33,
+        "min": 14.5,
+        "q1": 14.5,
+        "median": 20,
+        "q3": 27.8,
+        "max": 38.75,
+        "mean": 22.16,
+        "stddev": 7.56
       },
       {
         "bucket": "10 classes",
-        "n": 57,
-        "min": 2,
-        "q1": 19,
-        "median": 24.1,
-        "q3": 28,
-        "max": 41,
-        "mean": 23.98,
-        "stddev": 8.82
+        "n": 40,
+        "min": 14,
+        "q1": 15.68,
+        "median": 20,
+        "q3": 25,
+        "max": 35,
+        "mean": 20.82,
+        "stddev": 6.01
       },
       {
         "bucket": "20 classes",
-        "n": 46,
+        "n": 34,
         "min": 12.25,
-        "q1": 19.86,
-        "median": 24,
-        "q3": 30,
-        "max": 38,
-        "mean": 24.68,
-        "stddev": 6.55
+        "q1": 13,
+        "median": 19.38,
+        "q3": 24.46,
+        "max": 34.17,
+        "mean": 19.98,
+        "stddev": 6.62
       }
     ],
     "memberships_monthly_price_by_classes_per_month": [
       {
         "bucket": "4 classes/mo",
-        "n": 27,
-        "min": 55,
-        "q1": 89.5,
-        "median": 105,
-        "q3": 136,
+        "n": 16,
+        "min": 75,
+        "q1": 94.25,
+        "median": 102.5,
+        "q3": 115,
         "max": 176,
-        "mean": 109.18,
-        "stddev": 30.44,
-        "ppc_median": 26.25
+        "mean": 107.73,
+        "stddev": 25.44,
+        "ppc_median": 25.63
       },
       {
         "bucket": "8 classes/mo",
-        "n": 26,
-        "min": 112,
-        "q1": 159.25,
-        "median": 180,
-        "q3": 236,
-        "max": 280,
-        "mean": 193.31,
-        "stddev": 48.06,
-        "ppc_median": 22.5
+        "n": 16,
+        "min": 133.33,
+        "q1": 158,
+        "median": 174,
+        "q3": 196.25,
+        "max": 269,
+        "mean": 183.26,
+        "stddev": 38.34,
+        "ppc_median": 21.76
       },
       {
         "bucket": "12 classes/mo",
-        "n": 47,
-        "min": 18,
-        "q1": 135.33,
-        "median": 202.33,
-        "q3": 251,
+        "n": 30,
+        "min": 111,
+        "q1": 160.27,
+        "median": 205.67,
+        "q3": 239.75,
         "max": 590,
-        "mean": 212.52,
-        "stddev": 117.44,
-        "ppc_median": 16.86
+        "mean": 224.94,
+        "stddev": 106.56,
+        "ppc_median": 17.14
       }
     ],
     "unlimited_memberships_monthly_price": {
-      "n": 53,
-      "min": 18,
-      "q1": 130.83,
-      "median": 179,
-      "q3": 249,
+      "n": 36,
+      "min": 82.5,
+      "q1": 132.29,
+      "median": 160.75,
+      "q3": 219.83,
       "max": 590,
-      "mean": 205.93,
-      "stddev": 119.76
+      "mean": 196.96,
+      "stddev": 108.64
     }
   },
   "modality_drop_in_comparison": [
     {
       "modality": "pilates",
-      "n": 33,
-      "avg_drop_in": 33.08,
-      "median_drop_in": 30,
-      "min_drop_in": 18.9,
+      "n": 23,
+      "avg_drop_in": 27.25,
+      "median_drop_in": 29,
+      "min_drop_in": 15,
       "max_drop_in": 50,
-      "q1": 27,
-      "q3": 40,
-      "range": 31.1
+      "q1": 19.45,
+      "q3": 32,
+      "range": 35
     },
     {
       "modality": "yoga",
-      "n": 33,
-      "avg_drop_in": 27.02,
-      "median_drop_in": 27,
-      "min_drop_in": 18.9,
+      "n": 35,
+      "avg_drop_in": 23.25,
+      "median_drop_in": 24,
+      "min_drop_in": 15,
       "max_drop_in": 40,
-      "q1": 23,
-      "q3": 30,
-      "range": 21.1
+      "q1": 16.95,
+      "q3": 27.5,
+      "range": 25
     },
     {
       "modality": "strength-training",
-      "n": 13,
-      "avg_drop_in": 31.07,
+      "n": 9,
+      "avg_drop_in": 30.77,
       "median_drop_in": 30,
       "min_drop_in": 18.9,
       "max_drop_in": 40,
       "q1": 28,
-      "q3": 35,
+      "q3": 34,
       "range": 21.1
     },
     {
       "modality": "reformer-pilates",
-      "n": 12,
-      "avg_drop_in": 39.17,
-      "median_drop_in": 41,
+      "n": 6,
+      "avg_drop_in": 33,
+      "median_drop_in": 33,
       "min_drop_in": 27,
-      "max_drop_in": 50,
-      "q1": 33.5,
-      "q3": 45,
-      "range": 23
+      "max_drop_in": 40,
+      "q1": 30.5,
+      "q3": 34.75,
+      "range": 13
     },
     {
       "modality": "dance",
-      "n": 6,
-      "avg_drop_in": 22.17,
-      "median_drop_in": 22,
-      "min_drop_in": 15,
+      "n": 5,
+      "avg_drop_in": 23.6,
+      "median_drop_in": 20,
+      "min_drop_in": 18,
       "max_drop_in": 30,
-      "q1": 18.5,
-      "q3": 25.5,
-      "range": 15
+      "q1": 20,
+      "q3": 30,
+      "range": 12
     },
     {
       "modality": "boxing",
-      "n": 7,
-      "avg_drop_in": 26.57,
-      "median_drop_in": 28,
-      "min_drop_in": 15,
+      "n": 2,
+      "avg_drop_in": 31,
+      "median_drop_in": 31,
+      "min_drop_in": 28,
       "max_drop_in": 34,
-      "q1": 25,
-      "q3": 29.5,
-      "range": 19
+      "q1": 29.5,
+      "q3": 32.5,
+      "range": 6
     },
     {
       "modality": "stretching",
-      "n": 3,
-      "avg_drop_in": 27.33,
-      "median_drop_in": 28,
-      "min_drop_in": 25,
-      "max_drop_in": 29,
-      "q1": 26.5,
-      "q3": 28.5,
-      "range": 4
-    },
-    {
-      "modality": "cycling",
       "n": 4,
-      "avg_drop_in": 30.75,
-      "median_drop_in": 30,
-      "min_drop_in": 29,
-      "max_drop_in": 34,
-      "q1": 29.75,
-      "q3": 31,
+      "avg_drop_in": 28,
+      "median_drop_in": 28.5,
+      "min_drop_in": 25,
+      "max_drop_in": 30,
+      "q1": 27.25,
+      "q3": 29.25,
       "range": 5
     },
     {
+      "modality": "cycling",
+      "n": 1,
+      "avg_drop_in": 34,
+      "median_drop_in": 34,
+      "min_drop_in": 34,
+      "max_drop_in": 34,
+      "q1": 34,
+      "q3": 34,
+      "range": 0
+    },
+    {
       "modality": "barre",
-      "n": 10,
-      "avg_drop_in": 29,
-      "median_drop_in": 29,
-      "min_drop_in": 20,
+      "n": 9,
+      "avg_drop_in": 26.44,
+      "median_drop_in": 28,
+      "min_drop_in": 15,
       "max_drop_in": 40,
-      "q1": 25.25,
-      "q3": 31.5,
-      "range": 20
+      "q1": 20,
+      "q3": 30,
+      "range": 25
     },
     {
       "modality": "low-impact-training",
-      "n": 6,
-      "avg_drop_in": 38.67,
-      "median_drop_in": 40,
+      "n": 5,
+      "avg_drop_in": 34.4,
+      "median_drop_in": 34,
       "min_drop_in": 28,
-      "max_drop_in": 50,
-      "q1": 35.5,
+      "max_drop_in": 40,
+      "q1": 30,
       "q3": 40,
-      "range": 22
-    },
-    {
-      "modality": "martial-arts",
-      "n": 2,
-      "avg_drop_in": 20,
-      "median_drop_in": 20,
-      "min_drop_in": 15,
-      "max_drop_in": 25,
-      "q1": 17.5,
-      "q3": 22.5,
-      "range": 10
+      "range": 12
     },
     {
       "modality": "running",
@@ -288,53 +277,53 @@
   "pricing_option_coverage": [
     {
       "option": "drop_in",
-      "count": 167,
+      "count": 47,
       "pct": 100
     },
     {
       "option": "pack_5",
-      "count": 45,
-      "pct": 26.9
+      "count": 33,
+      "pct": 70.2
     },
     {
       "option": "pack_10",
-      "count": 57,
-      "pct": 34.1
+      "count": 40,
+      "pct": 85.1
     },
     {
       "option": "pack_20",
-      "count": 46,
-      "pct": 27.5
+      "count": 34,
+      "pct": 72.3
     },
     {
       "option": "pack_30",
-      "count": 15,
-      "pct": 9
+      "count": 19,
+      "pct": 40.4
     },
     {
       "option": "pack_40",
-      "count": 10,
-      "pct": 6
+      "count": 7,
+      "pct": 14.9
     },
     {
       "option": "pack_50",
-      "count": 11,
-      "pct": 6.6
+      "count": 4,
+      "pct": 8.5
     },
     {
       "option": "membership_4_per_month",
-      "count": 15,
-      "pct": 9
+      "count": 7,
+      "pct": 14.9
     },
     {
       "option": "membership_8_per_month",
-      "count": 13,
-      "pct": 7.8
+      "count": 6,
+      "pct": 12.8
     },
     {
       "option": "membership_12_per_month",
-      "count": 20,
-      "pct": 12
+      "count": 9,
+      "pct": 19.1
     },
     {
       "option": "unlimited_1_week",
@@ -343,141 +332,141 @@
     },
     {
       "option": "unlimited_1_month",
-      "count": 6,
-      "pct": 3.6
+      "count": 4,
+      "pct": 8.5
     },
     {
       "option": "unlimited_3_months",
-      "count": 9,
-      "pct": 5.4
+      "count": 5,
+      "pct": 10.6
     },
     {
       "option": "unlimited_annual",
-      "count": 19,
-      "pct": 11.4
+      "count": 10,
+      "pct": 21.3
     },
     {
       "option": "intro_3_class_pack",
-      "count": 42,
-      "pct": 25.1
+      "count": 25,
+      "pct": 53.2
     },
     {
       "option": "single_trial_class",
-      "count": 40,
-      "pct": 24
+      "count": 16,
+      "pct": 34
     }
   ],
   "discount_curves": {
     "pack_by_size": [
       {
         "bucket": "5 classes",
-        "n": 56,
-        "min": 0,
-        "q1": 4.68,
-        "median": 9.69,
-        "q3": 13.16,
-        "max": 42,
-        "mean": 11.03,
-        "stddev": 9.25
+        "n": 38,
+        "min": 2.63,
+        "q1": 3.42,
+        "median": 8.33,
+        "q3": 11.01,
+        "max": 33.33,
+        "mean": 9.33,
+        "stddev": 6.69
       },
       {
         "bucket": "10 classes",
-        "n": 68,
+        "n": 46,
         "min": 0,
-        "q1": 10,
-        "median": 14.18,
-        "q3": 18.66,
-        "max": 46,
-        "mean": 15.04,
-        "stddev": 10.49
+        "q1": 6.67,
+        "median": 13.72,
+        "q3": 16.67,
+        "max": 43,
+        "mean": 14.5,
+        "stddev": 9.04
       },
       {
         "bucket": "20 classes",
-        "n": 54,
-        "min": 0,
-        "q1": 17.24,
-        "median": 22.02,
-        "q3": 24.89,
-        "max": 50,
-        "mean": 21.72,
-        "stddev": 9.89
+        "n": 40,
+        "min": 7.89,
+        "q1": 13.33,
+        "median": 21.65,
+        "q3": 23.33,
+        "max": 47.5,
+        "mean": 21.08,
+        "stddev": 8.18
       },
       {
         "bucket": "30 classes",
-        "n": 16,
+        "n": 20,
         "min": 17.39,
-        "q1": 27.25,
-        "median": 30.52,
-        "q3": 31.36,
+        "q1": 20,
+        "median": 20,
+        "q3": 28.34,
         "max": 36.67,
-        "mean": 28.6,
-        "stddev": 4.89
+        "mean": 24.21,
+        "stddev": 5.51
       },
       {
         "bucket": "40 classes",
-        "n": 11,
-        "min": 23.08,
+        "n": 7,
+        "min": 25.71,
         "q1": 29.89,
-        "median": 37.5,
-        "q3": 40.02,
+        "median": 29.89,
+        "q3": 38.75,
         "max": 43.44,
-        "mean": 34.76,
-        "stddev": 6.89
+        "mean": 33.76,
+        "stddev": 6.05
       },
       {
         "bucket": "50 classes",
-        "n": 14,
-        "min": 30.77,
-        "q1": 32.44,
-        "median": 35.56,
+        "n": 6,
+        "min": 31.25,
+        "q1": 31.94,
+        "median": 35.89,
         "q3": 37.89,
-        "max": 54,
+        "max": 50.48,
         "mean": 37.12,
-        "stddev": 6.75
+        "stddev": 6.56
       }
     ],
     "membership_by_cadence": [
       {
         "bucket": "4 classes/mo",
-        "n": 27,
+        "n": 16,
         "min": -29.41,
-        "q1": 13.97,
-        "median": 22.79,
-        "q3": 28.35,
-        "max": 45,
-        "mean": 20.54,
-        "stddev": 14.56
+        "q1": 14.5,
+        "median": 21.4,
+        "q3": 27.93,
+        "max": 39.38,
+        "mean": 18.33,
+        "stddev": 16.32
       },
       {
         "bucket": "8 classes/mo",
-        "n": 26,
+        "n": 16,
         "min": 0,
-        "q1": 25,
-        "median": 33.33,
-        "q3": 38.78,
+        "q1": 29.12,
+        "median": 34.95,
+        "q3": 42.26,
         "max": 49.21,
-        "mean": 31.31,
-        "stddev": 11.83
+        "mean": 32.27,
+        "stddev": 13.69
       },
       {
         "bucket": "12 classes/mo",
-        "n": 47,
+        "n": 30,
         "min": -22.93,
-        "q1": 30.91,
-        "median": 44.43,
-        "q3": 56.51,
+        "q1": 39.01,
+        "median": 46.44,
+        "q3": 55.81,
         "max": 76.88,
-        "mean": 42.17,
-        "stddev": 21.14
+        "mean": 45.26,
+        "stddev": 17.65
       }
     ]
   },
   "unlimited_break_even": {
-    "studios_considered": 19,
-    "average_break_even_classes_per_month": 10.06,
-    "median_break_even_classes_per_month": 9.29,
-    "p25_break_even_classes_per_month": 7.45,
-    "p75_break_even_classes_per_month": 12.04,
+    "studios_considered": 12,
+    "average_break_even_classes_per_month": 9.95,
+    "median_break_even_classes_per_month": 8.74,
+    "p25_break_even_classes_per_month": 7.58,
+    "p75_break_even_classes_per_month": 11.66,
     "details_preview": [
       {
         "domain": "ashtangayogaparis.fr",
@@ -494,27 +483,6 @@
         "break_even_classes_per_month": 14.8
       },
       {
-        "domain": "coresociety.fr",
-        "studio_name": "Core Society",
-        "unlimited_monthly_price": 380,
-        "best_alternative_price_per_class": 30,
-        "break_even_classes_per_month": 12.67
-      },
-      {
-        "domain": "episod.com",
-        "studio_name": "EPISOD",
-        "unlimited_monthly_price": 250,
-        "best_alternative_price_per_class": 20,
-        "break_even_classes_per_month": 12.5
-      },
-      {
-        "domain": "assyasana.fr",
-        "studio_name": "ASSY/ASANA (HOLD Studio)",
-        "unlimited_monthly_price": 169,
-        "best_alternative_price_per_class": 14,
-        "break_even_classes_per_month": 12.07
-      },
-      {
         "domain": "barreshape.com",
         "studio_name": "BarreShape",
         "unlimited_monthly_price": 200,
@@ -522,18 +490,39 @@
         "break_even_classes_per_month": 12
       },
       {
-        "domain": "outboxe.com",
-        "studio_name": "OUTBOXE",
-        "unlimited_monthly_price": 300,
-        "best_alternative_price_per_class": 26,
+        "domain": "yogavillage.fr",
+        "studio_name": "Yoga Village",
+        "unlimited_monthly_price": 225,
+        "best_alternative_price_per_class": 19.5,
         "break_even_classes_per_month": 11.54
       },
       {
-        "domain": "outcore.studio",
-        "studio_name": "OUTCORE",
-        "unlimited_monthly_price": 300,
-        "best_alternative_price_per_class": 26,
-        "break_even_classes_per_month": 11.54
+        "domain": "yogmatcha.fr",
+        "studio_name": "Yog&Matcha",
+        "unlimited_monthly_price": 130,
+        "best_alternative_price_per_class": 14,
+        "break_even_classes_per_month": 9.29
+      },
+      {
+        "domain": "yogagarden.fr",
+        "studio_name": "Yoga Garden",
+        "unlimited_monthly_price": 179,
+        "best_alternative_price_per_class": 20,
+        "break_even_classes_per_month": 8.95
+      },
+      {
+        "domain": "zones.paris",
+        "studio_name": "Zones Sport Studio",
+        "unlimited_monthly_price": 165,
+        "best_alternative_price_per_class": 19.38,
+        "break_even_classes_per_month": 8.52
+      },
+      {
+        "domain": "yoga-colibri.com",
+        "studio_name": "Yoga Colibri",
+        "unlimited_monthly_price": 162.5,
+        "best_alternative_price_per_class": 19.5,
+        "break_even_classes_per_month": 8.33
       }
     ],
     "methodology": {
@@ -542,8 +531,8 @@
     }
   },
   "outlier_thresholds": {
-    "monthly_price_high": 400.5,
-    "membership_effective_price_per_class_high": 39.28
+    "monthly_price_high": 372.5,
+    "membership_effective_price_per_class_high": 36.52
   },
   "membership_outliers": [
     {
@@ -586,6 +575,32 @@
       "outlier_type": "high_monthly_price"
     },
     {
+      "domain": "image.pngstudio.com",
+      "studio_name": "Evocore",
+      "name": "Transform",
+      "monthly_price": 379,
+      "classes_per_month": 12,
+      "effective_price_per_class": 31.58,
+      "discount_vs_dropin_pct": 36.84,
+      "drop_in_price": 50,
+      "commitment_months": 0,
+      "is_unlimited": false,
+      "outlier_type": "high_monthly_price"
+    },
+    {
+      "domain": "centreiyengar-paris.fr",
+      "studio_name": "Centre de Yoga Iyengar de Paris",
+      "name": "Abonnement mensuel 1h30 presentiel - 5 cours/semaine",
+      "monthly_price": 377,
+      "classes_per_month": 20,
+      "effective_price_per_class": 18.85,
+      "discount_vs_dropin_pct": 44.56,
+      "drop_in_price": 34,
+      "commitment_months": 1,
+      "is_unlimited": false,
+      "outlier_type": "high_monthly_price"
+    },
+    {
       "domain": "centreiyengar-paris.fr",
       "studio_name": "Centre de Yoga Iyengar de Paris",
       "name": "Abonnement mensuel 2h presentiel - 1 cours/semaine",
@@ -599,128 +614,122 @@
       "outlier_type": "high_effective_price_per_class"
     },
     {
-      "domain": "coresociety.fr",
-      "studio_name": "Core Society",
-      "name": "Abonnement Flow – 4 cours/mois",
-      "monthly_price": 160,
+      "domain": "image.pngstudio.com",
+      "studio_name": "Evocore",
+      "name": "Starter",
+      "monthly_price": 150,
       "classes_per_month": 4,
-      "effective_price_per_class": 40,
-      "discount_vs_dropin_pct": 11.11,
-      "drop_in_price": 45,
-      "commitment_months": 3,
+      "effective_price_per_class": 37.5,
+      "discount_vs_dropin_pct": 25,
+      "drop_in_price": 50,
+      "commitment_months": 0,
       "is_unlimited": false,
       "outlier_type": "high_effective_price_per_class"
     }
   ],
   "layers": {
     "layer1_market_overview": {
-      "studios_analyzed": 167,
-      "with_pricing_available": 167,
-      "with_memberships": 43,
-      "offering_intro_offers": 139,
+      "studios_analyzed": 47,
+      "with_pricing_available": 47,
+      "with_memberships": 21,
+      "offering_intro_offers": 38,
       "dropin_metrics": {
-        "average": 30.27,
-        "median": 29,
+        "average": 25.28,
+        "median": 25,
         "lowest": 15,
         "highest": 50,
-        "stddev": 8.87
+        "stddev": 8.05
       },
       "dropin_distribution": [
         {
           "label": "<25EUR",
-          "count": 15
+          "count": 21
         },
         {
           "label": "25-28EUR",
-          "count": 10
+          "count": 7
         },
         {
           "label": "28-30EUR",
-          "count": 6
+          "count": 3
         },
         {
           "label": "30-32EUR",
-          "count": 5
-        },
-        {
-          "label": "32-35EUR",
-          "count": 6
-        },
-        {
-          "label": "35-40EUR",
           "count": 4
         },
         {
+          "label": "32-35EUR",
+          "count": 5
+        },
+        {
+          "label": "35-40EUR",
+          "count": 2
+        },
+        {
           "label": "40EUR+",
-          "count": 12
+          "count": 3
         }
       ],
       "modality_pricing_table": [
         {
           "modality": "pilates",
-          "avg_drop_in": 33.08,
-          "median_drop_in": 30,
-          "range": 31.1
+          "avg_drop_in": 27.25,
+          "median_drop_in": 29,
+          "range": 35
         },
         {
           "modality": "yoga",
-          "avg_drop_in": 27.02,
-          "median_drop_in": 27,
-          "range": 21.1
+          "avg_drop_in": 23.25,
+          "median_drop_in": 24,
+          "range": 25
         },
         {
           "modality": "strength-training",
-          "avg_drop_in": 31.07,
+          "avg_drop_in": 30.77,
           "median_drop_in": 30,
           "range": 21.1
         },
         {
           "modality": "reformer-pilates",
-          "avg_drop_in": 39.17,
-          "median_drop_in": 41,
-          "range": 23
+          "avg_drop_in": 33,
+          "median_drop_in": 33,
+          "range": 13
         },
         {
           "modality": "dance",
-          "avg_drop_in": 22.17,
-          "median_drop_in": 22,
-          "range": 15
+          "avg_drop_in": 23.6,
+          "median_drop_in": 20,
+          "range": 12
         },
         {
           "modality": "boxing",
-          "avg_drop_in": 26.57,
-          "median_drop_in": 28,
-          "range": 19
+          "avg_drop_in": 31,
+          "median_drop_in": 31,
+          "range": 6
         },
         {
           "modality": "stretching",
-          "avg_drop_in": 27.33,
-          "median_drop_in": 28,
-          "range": 4
-        },
-        {
-          "modality": "cycling",
-          "avg_drop_in": 30.75,
-          "median_drop_in": 30,
+          "avg_drop_in": 28,
+          "median_drop_in": 28.5,
           "range": 5
         },
         {
+          "modality": "cycling",
+          "avg_drop_in": 34,
+          "median_drop_in": 34,
+          "range": 0
+        },
+        {
           "modality": "barre",
-          "avg_drop_in": 29,
-          "median_drop_in": 29,
-          "range": 20
+          "avg_drop_in": 26.44,
+          "median_drop_in": 28,
+          "range": 25
         },
         {
           "modality": "low-impact-training",
-          "avg_drop_in": 38.67,
-          "median_drop_in": 40,
-          "range": 22
-        },
-        {
-          "modality": "martial-arts",
-          "avg_drop_in": 20,
-          "median_drop_in": 20,
-          "range": 10
+          "avg_drop_in": 34.4,
+          "median_drop_in": 34,
+          "range": 12
         },
         {
           "modality": "running",
@@ -731,51 +740,51 @@
       ]
     },
     "layer2_pricing_structure": {
-      "pct_studios_with_intro": 83.2,
-      "average_intro_price": 68.71,
-      "average_intro_price_per_class": 31.06,
+      "pct_studios_with_intro": 80.9,
+      "average_intro_price": 49.8,
+      "average_intro_price_per_class": 26.39,
       "intro_types": [
         {
           "type": "single_discounted_class",
-          "count": 114
+          "count": 29
         },
         {
           "type": "pack_3",
-          "count": 46
+          "count": 29
         },
         {
           "type": "pack_5",
-          "count": 10
+          "count": 1
         },
         {
           "type": "intro_unlimited",
-          "count": 7
+          "count": 5
         },
         {
           "type": "no_intro_offer",
-          "count": 28
+          "count": 9
         }
       ],
       "intro_discount_histogram": [
         {
           "label": "0-10%",
-          "count": 0
+          "count": 10
         },
         {
           "label": "10-20%",
-          "count": 3
+          "count": 1
         },
         {
           "label": "20-30%",
-          "count": 16
+          "count": 7
         },
         {
           "label": "30-40%",
-          "count": 26
+          "count": 17
         },
         {
           "label": "40%+",
-          "count": 24
+          "count": 16
         }
       ]
     },
@@ -783,18 +792,18 @@
       "pack_table": [
         {
           "pack": "5 pack",
-          "avg_price_per_class": 28.05,
-          "avg_discount_vs_dropin_pct": 10.68
+          "avg_price_per_class": 22.16,
+          "avg_discount_vs_dropin_pct": 8.67
         },
         {
           "pack": "10 pack",
-          "avg_price_per_class": 23.98,
-          "avg_discount_vs_dropin_pct": 14.68
+          "avg_price_per_class": 20.82,
+          "avg_discount_vs_dropin_pct": 13.58
         },
         {
           "pack": "20 pack",
-          "avg_price_per_class": 24.68,
-          "avg_discount_vs_dropin_pct": 21.59
+          "avg_price_per_class": 19.98,
+          "avg_discount_vs_dropin_pct": 20.49
         }
       ],
       "pack_expiration_histogram": [
@@ -804,108 +813,102 @@
         },
         {
           "label": "2 months",
-          "count": 18
+          "count": 7
         },
         {
           "label": "3 months",
-          "count": 36
+          "count": 29
         },
         {
           "label": "6 months",
-          "count": 78
+          "count": 52
         },
         {
           "label": "12 months",
-          "count": 88
+          "count": 75
         },
         {
           "label": "No expiration",
-          "count": 4
+          "count": 1
         }
       ]
     },
     "layer4_membership_models": {
-      "pct_studios_with_memberships": 25.7,
-      "pct_with_unlimited_memberships": 15.6,
-      "pct_with_class_based_memberships": 18.6,
+      "pct_studios_with_memberships": 44.7,
+      "pct_with_unlimited_memberships": 34,
+      "pct_with_class_based_memberships": 29.8,
       "membership_adoption_pie": [
         {
           "type": "no_membership",
-          "count": 124
+          "count": 26
         },
         {
           "type": "class_based_membership",
-          "count": 17
+          "count": 5
         },
         {
           "type": "unlimited_membership",
-          "count": 12
+          "count": 7
         },
         {
           "type": "both",
-          "count": 14
+          "count": 9
         }
       ],
       "membership_types_table": [
         {
           "membership_type": "4 classes/month",
-          "avg_monthly_price": 109.18,
-          "avg_effective_price_per_class": 27.3
+          "avg_monthly_price": 107.73,
+          "avg_effective_price_per_class": 26.94
         },
         {
           "membership_type": "8 classes/month",
-          "avg_monthly_price": 193.31,
-          "avg_effective_price_per_class": 24.17
+          "avg_monthly_price": 183.26,
+          "avg_effective_price_per_class": 22.91
         },
         {
           "membership_type": "12 classes/month",
-          "avg_monthly_price": 249.19,
-          "avg_effective_price_per_class": 20.77
+          "avg_monthly_price": 227.47,
+          "avg_effective_price_per_class": 18.96
         },
         {
           "membership_type": "Unlimited",
-          "avg_monthly_price": 205.93,
-          "avg_effective_price_per_class": 14.81
+          "avg_monthly_price": 196.96,
+          "avg_effective_price_per_class": 17.17
         }
       ],
       "commitment_structure": {
-        "pct_no_commitment": 41.9,
-        "pct_3_month_commitment": 39.5,
-        "pct_6_month_commitment": 16.3,
-        "pct_12_month_commitment": 69.8
+        "pct_no_commitment": 47.6,
+        "pct_3_month_commitment": 38.1,
+        "pct_6_month_commitment": 19,
+        "pct_12_month_commitment": 61.9
       }
     },
     "layer5_pricing_strategy": {
-      "avg_drop_in_to_10_pack_price_diff_pct": 13.85,
+      "avg_drop_in_to_10_pack_price_diff_pct": 12.51,
       "dropin_vs_10pack_discount_histogram": [
         {
           "label": "0-10%",
-          "count": 5
+          "count": 12
         },
         {
           "label": "10-20%",
-          "count": 26
+          "count": 17
         },
         {
           "label": "20-30%",
-          "count": 11
+          "count": 6
         },
         {
           "label": "30-40%",
-          "count": 2
+          "count": 1
         },
         {
           "label": "40%+",
-          "count": 1
+          "count": 0
         }
       ],
       "membership_vs_pack_scatter": [
-        {
-          "studio_name": "ASSY/ASANA (HOLD Studio)",
-          "domain": "assyasana.fr",
-          "x": 18,
-          "y": 14
-        },
         {
           "studio_name": "La Canopée : Yoga & Bien-Être",
           "domain": "atelierlacanopee.com",
@@ -925,39 +928,9 @@
           "y": 16.67
         },
         {
-          "studio_name": "Bee Lagree",
-          "domain": "beelagree.fr",
-          "x": 35,
-          "y": 27.5
-        },
-        {
           "studio_name": "Beyoga Paris",
           "domain": "beyoga.fr",
           "x": 21,
-          "y": 20
-        },
-        {
-          "studio_name": "Brooklyn Fitboxing",
-          "domain": "brooklynfitboxing.com",
-          "x": 18,
-          "y": 13.75
-        },
-        {
-          "studio_name": "Core Society",
-          "domain": "coresociety.fr",
-          "x": 36,
-          "y": 35
-        },
-        {
-          "studio_name": "DNA Pilates Paris",
-          "domain": "dnapilatesparis.com",
-          "x": 40,
-          "y": 28.33
-        },
-        {
-          "studio_name": "EPISOD",
-          "domain": "episod.com",
-          "x": 31,
           "y": 20
         },
         {
@@ -973,40 +946,10 @@
           "y": 20
         },
         {
-          "studio_name": "NOT YOGA",
-          "domain": "notyoga.fr",
-          "x": 25.5,
-          "y": 16
-        },
-        {
           "studio_name": "Now Reformer",
           "domain": "nowreformer.com",
           "x": 26.9,
           "y": 24.9
-        },
-        {
-          "studio_name": "Stepupfree",
-          "domain": "paris-marais-dance-school.org",
-          "x": 15.5,
-          "y": 12.11
-        },
-        {
-          "studio_name": "POSES",
-          "domain": "poses-studio.com",
-          "x": 32.9,
-          "y": 15
-        },
-        {
-          "studio_name": "PUR Reformer",
-          "domain": "pur-reformer.fr",
-          "x": 36,
-          "y": 28
-        },
-        {
-          "studio_name": "The Well",
-          "domain": "thewellparis.com",
-          "x": 41,
-          "y": 17.25
         },
         {
           "studio_name": "Yoga Garden",
@@ -1045,69 +988,63 @@
       "modality_revenue_table": [
         {
           "modality": "pilates",
-          "avg_drop_in_price": 33.08,
+          "avg_drop_in_price": 27.25,
           "avg_capacity": 18,
-          "estimated_max_revenue_per_class": 595.47
+          "estimated_max_revenue_per_class": 490.46
         },
         {
           "modality": "yoga",
-          "avg_drop_in_price": 27.02,
+          "avg_drop_in_price": 23.25,
           "avg_capacity": 24,
-          "estimated_max_revenue_per_class": 648.51
+          "estimated_max_revenue_per_class": 557.97
         },
         {
           "modality": "strength-training",
-          "avg_drop_in_price": 31.07,
+          "avg_drop_in_price": 30.77,
           "avg_capacity": 16,
-          "estimated_max_revenue_per_class": 497.11
+          "estimated_max_revenue_per_class": 492.27
         },
         {
           "modality": "reformer-pilates",
-          "avg_drop_in_price": 39.17,
+          "avg_drop_in_price": 33,
           "avg_capacity": 12,
-          "estimated_max_revenue_per_class": 470
+          "estimated_max_revenue_per_class": 396
         },
         {
           "modality": "dance",
-          "avg_drop_in_price": 22.17,
+          "avg_drop_in_price": 23.6,
           "avg_capacity": 22,
-          "estimated_max_revenue_per_class": 487.67
+          "estimated_max_revenue_per_class": 519.2
         },
         {
           "modality": "boxing",
-          "avg_drop_in_price": 26.57,
+          "avg_drop_in_price": 31,
           "avg_capacity": 18,
-          "estimated_max_revenue_per_class": 478.29
+          "estimated_max_revenue_per_class": 558
         },
         {
           "modality": "stretching",
-          "avg_drop_in_price": 27.33,
+          "avg_drop_in_price": 28,
           "avg_capacity": 20,
-          "estimated_max_revenue_per_class": 546.67
+          "estimated_max_revenue_per_class": 560
         },
         {
           "modality": "cycling",
-          "avg_drop_in_price": 30.75,
+          "avg_drop_in_price": 34,
           "avg_capacity": 28,
-          "estimated_max_revenue_per_class": 861
+          "estimated_max_revenue_per_class": 952
         },
         {
           "modality": "barre",
-          "avg_drop_in_price": 29,
+          "avg_drop_in_price": 26.44,
           "avg_capacity": 20,
-          "estimated_max_revenue_per_class": 580
+          "estimated_max_revenue_per_class": 528.89
         },
         {
           "modality": "low-impact-training",
-          "avg_drop_in_price": 38.67,
+          "avg_drop_in_price": 34.4,
           "avg_capacity": 18,
-          "estimated_max_revenue_per_class": 696
-        },
-        {
-          "modality": "martial-arts",
-          "avg_drop_in_price": 20,
-          "avg_capacity": 20,
-          "estimated_max_revenue_per_class": 400
+          "estimated_max_revenue_per_class": 619.2
         },
         {
           "modality": "running",
@@ -1121,18 +1058,18 @@
       "pricing_spread_boxplots": [
         {
           "modality": "pilates",
-          "min": 18.9,
-          "q1": 27,
-          "median": 30,
-          "q3": 40,
+          "min": 15,
+          "q1": 19.45,
+          "median": 29,
+          "q3": 32,
           "max": 50
         },
         {
           "modality": "yoga",
-          "min": 18.9,
-          "q1": 23,
-          "median": 27,
-          "q3": 30,
+          "min": 15,
+          "q1": 16.95,
+          "median": 24,
+          "q3": 27.5,
           "max": 40
         },
         {
@@ -1140,72 +1077,64 @@
           "min": 18.9,
           "q1": 28,
           "median": 30,
-          "q3": 35,
+          "q3": 34,
           "max": 40
         },
         {
           "modality": "reformer-pilates",
           "min": 27,
-          "q1": 33.5,
-          "median": 41,
-          "q3": 45,
-          "max": 50
+          "q1": 30.5,
+          "median": 33,
+          "q3": 34.75,
+          "max": 40
         },
         {
           "modality": "dance",
-          "min": 15,
-          "q1": 18.5,
-          "median": 22,
-          "q3": 25.5,
+          "min": 18,
+          "q1": 20,
+          "median": 20,
+          "q3": 30,
           "max": 30
         },
         {
           "modality": "boxing",
-          "min": 15,
-          "q1": 25,
-          "median": 28,
-          "q3": 29.5,
+          "min": 28,
+          "q1": 29.5,
+          "median": 31,
+          "q3": 32.5,
           "max": 34
         },
         {
           "modality": "stretching",
           "min": 25,
-          "q1": 26.5,
-          "median": 28,
-          "q3": 28.5,
-          "max": 29
+          "q1": 27.25,
+          "median": 28.5,
+          "q3": 29.25,
+          "max": 30
         },
         {
           "modality": "cycling",
-          "min": 29,
-          "q1": 29.75,
-          "median": 30,
-          "q3": 31,
+          "min": 34,
+          "q1": 34,
+          "median": 34,
+          "q3": 34,
           "max": 34
         },
         {
           "modality": "barre",
-          "min": 20,
-          "q1": 25.25,
-          "median": 29,
-          "q3": 31.5,
+          "min": 15,
+          "q1": 20,
+          "median": 28,
+          "q3": 30,
           "max": 40
         },
         {
           "modality": "low-impact-training",
           "min": 28,
-          "q1": 35.5,
-          "median": 40,
+          "q1": 30,
+          "median": 34,
           "q3": 40,
-          "max": 50
-        },
-        {
-          "modality": "martial-arts",
-          "min": 15,
-          "q1": 17.5,
-          "median": 20,
-          "q3": 22.5,
-          "max": 25
+          "max": 40
         },
         {
           "modality": "running",
@@ -1267,44 +1196,44 @@
           },
           {
             "area": "West+Southwest",
-            "avg_drop_in": 37.13,
-            "studio_count": 8
+            "avg_drop_in": 28.56,
+            "studio_count": 9
           },
           {
             "area": "East+Northeast",
-            "avg_drop_in": 26.32,
-            "studio_count": 21
+            "avg_drop_in": 23.17,
+            "studio_count": 16
           },
           {
             "area": "South+Southeast",
-            "avg_drop_in": 27,
-            "studio_count": 3
+            "avg_drop_in": 20.14,
+            "studio_count": 7
           }
         ],
-        "unknown_arrondissement_count": 26
+        "unknown_arrondissement_count": 13
       }
     },
     "layer8_business_model_profiles": {
       "distribution": [
         {
           "studio_type": "pack_driven",
-          "count": 34,
-          "pct": 20.4
+          "count": 26,
+          "pct": 55.3
         },
         {
           "studio_type": "membership_driven",
-          "count": 9,
-          "pct": 5.4
+          "count": 0,
+          "pct": 0
         },
         {
           "studio_type": "hybrid",
-          "count": 34,
-          "pct": 20.4
+          "count": 21,
+          "pct": 44.7
         },
         {
           "studio_type": "no_offer_other",
-          "count": 90,
-          "pct": 53.9
+          "count": 0,
+          "pct": 0
         }
       ]
     }

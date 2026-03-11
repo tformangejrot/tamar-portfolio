@@ -1,127 +1,81 @@
-# Future Chat Handoff: Studio Pricing Updates
+# Pricing Project Handoff (Simplified)
 
-Use this guide in a new chat to keep updates consistent with the current workflow.
+This pricing workflow now uses a single canonical dataset as the source for analysis.
 
-## Canonical Files
+## One Source of Truth
 
-- Master working file: `data/pricing/paris_pricing_master_wave2_no_exa.json`
-- Canonical approved output: `data/pricing/paris_pricing_approved_records.json`
-- Analysis outputs:
-  - `data/pricing/analysis/paris_pricing_snapshot.json`
-  - `data/pricing/analysis/paris_pricing_snapshot.md`
+- Canonical pricing file: `data/pricing/paris_pricing_approved_records.json`
 
-## Approval Logic (Important)
+Dashboard data is derived from this file.
 
-In this repo, a record is treated as approved when either:
+## Queue for New Studios
 
-- `manual_verified === true`, OR
-- `review_required === false`
+- Temporary queue file: `data/pricing/paris_pricing_pending_queue.json`
+- Generated from:
+  - `data/processed/studios_consolidated_boutique.json`
+  - minus domains already present in `paris_pricing_approved_records.json`
 
-This is implemented in `scripts/build_approved_records_file.mjs`.
-
-For exclusions (not a studio, out of scope), do **not** accidentally approve:
-
-- `excluded_from_scope: true`
-- `manual_verified: false`
-- `review_required: true`
-
-## What To Provide Per Studio
-
-When sending updates in chat, include:
-
-- Studio/domain (for example: `example-studio.com`)
-- Offer types seen (trial, drop-in, packs, memberships/unlimited)
-- Price, classes included, and validity/expiration
-- Commitment length (if subscription)
-- Any special notes (new clients only, one-time purchase, modality-specific pricing)
-- Whether the website is down/unreachable (temporary) or out of scope
-
-Screenshots are fine; text is even better when possible.
-
-## Standard Update Pattern
-
-For each studio update:
-
-1. Find the existing record by `domain` in `paris_pricing_master_wave2_no_exa.json`.
-2. Replace noisy/auto-extracted pricing fields with clean manual values:
-   - `drop_in`
-   - `drop_in_by_modality` (when applicable)
-   - `intro_offers`
-   - `class_packs`
-   - `memberships`
-   - `discounts`
-   - `expiration_policy`
-3. Set verification flags:
-   - Manual confirmed pricing:
-     - `manual_verified: true`
-     - `review_required: false`
-     - `confidence_score: 100`
-     - `confidence_tier: "high"`
-     - `confidence_reasons: ["manual_verified"]`
-   - Temporary website down:
-     - `pricing_publicly_available: false`
-     - `manual_verified: false`
-     - `review_required: true`
-     - note that it should be rechecked later
-   - Out-of-scope:
-     - `excluded_from_scope: true`
-     - `exclusion_reason: <reason_code>`
-     - `manual_verified: false`
-     - `review_required: true`
-4. Keep `notes` clear and brief.
-5. Update `data_collected_date` and `extraction_meta` timestamp/source.
-
-## Price Calculation Conventions
-
-- `price_per_class = total_price / classes` (rounded to 2 decimals)
-- `discount_vs_dropin_pct = ((drop_in - price_per_class) / drop_in) * 100`
-- Weekly subscription display prices should be converted to monthly for analytics:
-  - `monthly_price = weekly_price * 52 / 12`
-- If no reliable baseline drop-in exists, leave `% discount` as `null`.
-
-## Commands To Run After Any Update Batch
-
-Run from repo root:
+Generate queue:
 
 ```bash
-node "scripts/build_approved_records_file.mjs" \
-  --wave2 "data/pricing/paris_pricing_master_wave2_no_exa.json" \
-  --wave1-approved "data/pricing/paris_pricing_master_approved_wave1.json" \
-  --exa-merged "data/pricing/paris_pricing_master_exa_merged.json" \
-  --output "data/pricing/paris_pricing_approved_records.json"
+node "scripts/build_pricing_pending_queue.mjs"
+```
 
+## How Dashboard Works Now
+
+- File: `scripts/pricing-dashboard.html`
+- It fetches:
+  - `data/pricing/analysis/paris_pricing_snapshot.json`
+- Snapshot generation command:
+
+```bash
 node "scripts/analyze_paris_pricing_snapshot.mjs"
 ```
 
-## Suggested Prompt For New Chat
+## How To Add More Studios
 
-Use this starter prompt:
+Use this exact process in future chats:
 
-```text
-Please apply manual pricing updates to `data/pricing/paris_pricing_master_wave2_no_exa.json`.
+1. Pick next domain from `paris_pricing_pending_queue.json`.
+2. Add a full studio record to `paris_pricing_approved_records.json` (in `records` array), including:
+   - `studio_name`, `domain`, `website`, `categories`, `arrondissement`
+   - `drop_in`, `intro_offers`, `class_packs`, `memberships`, `discounts`, `expiration_policy`
+   - `pricing_publicly_available`, `notes`, `uses_credit_system`
+3. Keep currency in EUR and use consistent derived fields:
+   - `price_per_class`
+   - `discount_vs_dropin_pct` where possible
+4. Regenerate snapshot:
 
-For each studio I send:
-- Update pricing fields (drop-in, intro offers, class packs, memberships, discounts, expiration).
-- Mark as `manual_verified: true` and `review_required: false` when confirmed.
-- For temporary downtime, keep it pending (`manual_verified: false`, `review_required: true`).
-- For out-of-scope records, set `excluded_from_scope: true`, keep non-approved (`manual_verified: false`, `review_required: true`).
+   - `node "scripts/analyze_paris_pricing_snapshot.mjs"`
 
-After each studio (or small batch), rebuild:
-1) `data/pricing/paris_pricing_approved_records.json`
-2) `data/pricing/analysis/paris_pricing_snapshot.json`
-3) `data/pricing/analysis/paris_pricing_snapshot.md`
+5. Rebuild queue:
 
-Then report updated totals:
-- approved_records
-- manual_verified_records
-```
+   - `node "scripts/build_pricing_pending_queue.mjs"`
+6. Refresh dashboard page.
 
-## Current Scope Reminder
+## Scope Rules
 
-Keep in scope:
+Keep:
 
 - yoga, pilates/reformer, barre, dance, boxing, HIIT/bootcamp, cycling, strength/crossfit
 
 Exclude:
 
-- cryotherapy, EMS/electrostimulation, infrabike/infrarun, sauna/recovery-only, treatment-centric concepts, teacher-only profiles (non-studio)
+- cryotherapy, EMS/electrostimulation, infrabike/infrarun, sauna/recovery-only, treatment-centric concepts, teacher-only profiles
+
+## Suggested Prompt for Future Chats
+
+```text
+Please update `data/pricing/paris_pricing_approved_records.json` directly.
+Use `data/pricing/paris_pricing_pending_queue.json` as the next-studios queue.
+
+For each studio I send:
+- add/replace pricing fields (drop-in, intro, packs, memberships, discounts, expiration)
+- keep only in-scope boutique fitness studios
+- if out-of-scope, remove from queue and do not add to approved file
+
+After updates:
+1) run `node scripts/analyze_paris_pricing_snapshot.mjs`
+2) run `node scripts/build_pricing_pending_queue.mjs`
+3) report total approved studios and remaining queue size
+```

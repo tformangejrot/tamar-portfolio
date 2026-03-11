@@ -1,0 +1,1343 @@
+{
+  "generated_at": "2026-03-11T14:12:14.774Z",
+  "source": "data/pricing/paris_pricing_approved_records.json",
+  "summary": {
+    "original_records": 186,
+    "kept_complete_records": 38,
+    "removed_records": 148
+  },
+  "removed_preview": [
+    {
+      "domain": "academiedanseparis.com",
+      "studio_name": "ACADEMIE INTERNATIONALE DE LA DANSE (Paris 16ème)",
+      "manual_verified": true,
+      "review_required": false,
+      "excluded_from_scope": true,
+      "has_known_pricing": false,
+      "concept_excluded": false
+    },
+    {
+      "domain": "afya.fr",
+      "studio_name": "AFYA",
+      "manual_verified": true,
+      "review_required": false,
+      "excluded_from_scope": true,
+      "has_known_pricing": false,
+      "concept_excluded": false
+    },
+    {
+      "domain": "agefo.com",
+      "studio_name": "OLY Be",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "ajahouse.fr",
+      "studio_name": "Aja House",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "akmd.fr",
+      "studio_name": "AKMD Krav Maga",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "aleaubike.fr",
+      "studio_name": "A l'Eau Bike Paris",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "apollosportingclub.com",
+      "studio_name": "Apollo Sporting Club",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "aqua-by.com",
+      "studio_name": "Aqua by",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "arkose.com",
+      "studio_name": "YOZE - Boulogne-Billancourt Pont de Sèvres",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "assyasana.fr",
+      "studio_name": "ASSY/ASANA (HOLD Studio)",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "astrabodyvincennes.fr",
+      "studio_name": "Astra body",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "ataum-paris.fr",
+      "studio_name": "AT AUM",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "atelierkbox.com",
+      "studio_name": "Kbox",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "atelierportesoleil.com",
+      "studio_name": "Yoga Bar",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": false,
+      "concept_excluded": false
+    },
+    {
+      "domain": "babayogaclub.com",
+      "studio_name": "Baba Yoga",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "becoached.fr",
+      "studio_name": "becoached",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "beelagree.fr",
+      "studio_name": "Bee Lagree",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "bikramyogaparis.com",
+      "studio_name": "Yoga Bikram Paris - Grands Boulevards",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "bodybooster.fr",
+      "studio_name": "Body Booster Paris 16",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "bodylifeparis.com",
+      "studio_name": "Studio Body Life Paris",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "bodytec15.fr",
+      "studio_name": "Bodytec15",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "bodytechcenter.fr",
+      "studio_name": "BodyTech Center",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "brooklynfitboxing.com",
+      "studio_name": "Brooklyn Fitboxing",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "brumestudios.fr",
+      "studio_name": "Studio Brume",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "callesol.net",
+      "studio_name": "OLY Be",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "candryayoga.com",
+      "studio_name": "CANDRYA YOGA",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "centrededansedumarais.fr",
+      "studio_name": "Carolina Dehlouz",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "climbingdistrict.com",
+      "studio_name": "Climbing District",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "clmx.fr",
+      "studio_name": "CLMX",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "coresociety.fr",
+      "studio_name": "Core Society",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "cours-hip-hop.fr",
+      "studio_name": "Mickael Bilionniere",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "coursdekravmaga.com",
+      "studio_name": "Krav Maga Paris",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "crossfitfactory.fr",
+      "studio_name": "CrossFit Factory 92",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "cryofast.fr",
+      "studio_name": "Cryofast",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "dancefloor-paris.com",
+      "studio_name": "Dancefloor Paris",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "davinasamba.com",
+      "studio_name": "Ecole Samba Davina",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "decibel-danse.com",
+      "studio_name": "DECIBEL®",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "deeply-studiodepilates.com",
+      "studio_name": "Deeply studio de Pilates",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "definestudio.fr",
+      "studio_name": "Define Studio",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "dnapilatesparis.com",
+      "studio_name": "DNA Pilates Paris",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "drip-hiit.com",
+      "studio_name": "DRIP",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "dynamo-cycling.com",
+      "studio_name": "Dynamo Cycling",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "eaumegatraining.com",
+      "studio_name": "EAUMEGA TRAINING",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "eliteclub-94.fr",
+      "studio_name": "Élite Club",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "elkeyogaparis.fr",
+      "studio_name": "Alice Clerc Yoga",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "energyfit.paris",
+      "studio_name": "Energy fit",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "episod.com",
+      "studio_name": "EPISOD",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "ergoparis.com",
+      "studio_name": "Ergo",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "espaceallzen.com",
+      "studio_name": "Allzen Studio",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "espacestudio.fr",
+      "studio_name": "ESPACE",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "featclub.fr",
+      "studio_name": "FeatClub",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": false,
+      "concept_excluded": false
+    },
+    {
+      "domain": "firstup.fr",
+      "studio_name": "First UP",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "fit-success.fr",
+      "studio_name": "Fit Success",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "flowstudioparis.com",
+      "studio_name": "Flow Studio",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "gavrochefitness.com",
+      "studio_name": "Gavroche Fitness",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "gotham.paris",
+      "studio_name": "Gotham 17",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "heraclubparis.com",
+      "studio_name": "Hera Club",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "hi-kick.fr",
+      "studio_name": "HI KICK",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "humble-warrior.com",
+      "studio_name": "Humble Warrior",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "jeen.care",
+      "studio_name": "Jeen+ Paris 11",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "jivamuktiyoga.fr",
+      "studio_name": "jivamukti yoga paris",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "jumpmanfitness.com",
+      "studio_name": "Jumpman",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "kalonbarre.com",
+      "studio_name": "Kalon",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "kmpo.fr",
+      "studio_name": "Krav Maga Paris",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "kurvstudio.com",
+      "studio_name": "KURV Studio",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "la-castagne.com",
+      "studio_name": "La Castagne - Cours collectifs",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "lakave.paris",
+      "studio_name": "La Kave Paris",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "laplume.club",
+      "studio_name": "La Plume Air Club",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "lasalledutemps.com",
+      "studio_name": "La Salle du Temps - Courbevoie/La Défense",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "laststudio.fr",
+      "studio_name": "Last Studio",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "lasuitecoaching.com",
+      "studio_name": "La Suite Coaching",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "lecercle-boxing.com",
+      "studio_name": "Le Cercle Boxing",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "lehyve.fr",
+      "studio_name": "Le Hyve",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "lesailesducanal.com",
+      "studio_name": "Les Ailes du Canal",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "lesjardins-suspendus.com",
+      "studio_name": "Les Jardins Suspendus",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "ligneetendorphines.com",
+      "studio_name": "LIGNE ET ENDORPHINES",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "lorrainebouchet.com",
+      "studio_name": "Lorraine Bouchet Yoga",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "louisfabre.com",
+      "studio_name": "Louis fabre coaching",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "magic-form.fr",
+      "studio_name": "Magic Form",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "magicformvitry.fr",
+      "studio_name": "Magic Form",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "maisonamat.com",
+      "studio_name": "Maison Amat",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "maisonminceur.fr",
+      "studio_name": "Maison minceur",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "mamayoga.fr",
+      "studio_name": "Mama Yoga",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "maritza-arizala.com",
+      "studio_name": "Academia Maritza Arizala",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "mayashala.com",
+      "studio_name": "Mayashala Yoga - Griset",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "meiso.fr",
+      "studio_name": "Oly Be",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "methodlagreestudio.com",
+      "studio_name": "Method Lagree Studio",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "midtown-studio.com",
+      "studio_name": "MIDTOWN",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "millesime-coaching.fr",
+      "studio_name": "MILLESIME",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "modoyogaparis.fr",
+      "studio_name": "Modo Yoga",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "mood-fitness-studio.com",
+      "studio_name": "Mood fitness studio",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "muchopilates-studio.com",
+      "studio_name": "Mucho Pilates Studio",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "myginger.fr",
+      "studio_name": "My Ginger Paris",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "mygoldenhour.fr",
+      "studio_name": "My Golden Hour",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "nadyut.com",
+      "studio_name": "Nandini",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "navapilates.com",
+      "studio_name": "Nava Pilates",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "ng-sport.com",
+      "studio_name": "NG Sport",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "nobleartclub.fr",
+      "studio_name": "Noble Art Club",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "notyoga.fr",
+      "studio_name": "NOT YOGA",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "olybe.elle.fr",
+      "studio_name": "OLY Be",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "one-rep.fr",
+      "studio_name": "ONE REP",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "paris-marais-dance-school.org",
+      "studio_name": "Stepupfree",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "parisboxingclub.fr",
+      "studio_name": "Paris Boxing Club",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "pilatesocialclub.fr",
+      "studio_name": "Pilates Social Club",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "planity.com",
+      "studio_name": "Astra Body",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "poledance-paris.com",
+      "studio_name": "Pole Dance Paris",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "poses-studio.com",
+      "studio_name": "POSES",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "pur-reformer.fr",
+      "studio_name": "PUR Reformer",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "pyra.paris",
+      "studio_name": "Pyra",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "rebeccayoga.net",
+      "studio_name": "Yoga with Anastasia",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": false,
+      "concept_excluded": false
+    },
+    {
+      "domain": "reformation-pilates.com",
+      "studio_name": "Reformation",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "reformfrombali.com",
+      "studio_name": "Reform.",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "remega.fr",
+      "studio_name": "Remega",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "reve-studioparis.com",
+      "studio_name": "R.EVE",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "riise-studios.com",
+      "studio_name": "Riise",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "sense-club.fr",
+      "studio_name": "Sense Club",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "silostudio.fr",
+      "studio_name": "Silo Lagree Studio",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "sivanandaparis.org",
+      "studio_name": "Centre de Yoga Sivananda",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "slowe-studio.com",
+      "studio_name": "Slowe Wellness House",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "socialreformers.fr",
+      "studio_name": "SOCIAL REFORMERS",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "sofit-club.com",
+      "studio_name": "SOFIT CLUB",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "soregym.com",
+      "studio_name": "SORE",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "space-cycle.com",
+      "studio_name": "SPACE CYCLE",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "stationforme.com",
+      "studio_name": "Station Forme",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "studio-shelam.fr",
+      "studio_name": "Studio Shelam",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "studio3c.fr",
+      "studio_name": "STUDIO 3C",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "studiobelly.com",
+      "studio_name": "Belly Studio",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "studiocorpsetforme.fr",
+      "studio_name": "Studio Corps & Forme",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": false,
+      "concept_excluded": false
+    },
+    {
+      "domain": "studiocorpsplus.fr",
+      "studio_name": "Studio Corps +",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "studioforme.fr",
+      "studio_name": "Studio Forme",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "studiomarga.com",
+      "studio_name": "Studio Marga",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "studiorivegauche.com",
+      "studio_name": "Yoga Studio Rive Gauche",
+      "manual_verified": true,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": false,
+      "concept_excluded": false
+    },
+    {
+      "domain": "swimstars.co",
+      "studio_name": "Oly Be",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "take-ktrl.com",
+      "studio_name": "KTRL",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "tecfit-boulognebillancourt.fr",
+      "studio_name": "TECFIT",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    },
+    {
+      "domain": "temple-nobleart.com",
+      "studio_name": "Le Temple Noble Art",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "terhappy-studio.fr",
+      "studio_name": "TER’HAPPY STUDIO",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "thenewmeparis.com",
+      "studio_name": "The New Me",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "thespaceparis.com",
+      "studio_name": "The Space",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "thewellparis.com",
+      "studio_name": "The Well",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "toprankbagnolet.com",
+      "studio_name": "Noble Art Institut",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "toutaincoaching.com",
+      "studio_name": "Toutain Coaching",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "upgradeprivatecoaching.com",
+      "studio_name": "Upgrade Private Coaching",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "westretch.fr",
+      "studio_name": "We Stretch",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "withoutweakness.fr",
+      "studio_name": "Without Weakness",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "workoutwithdan.fr",
+      "studio_name": "Workout with Dan",
+      "manual_verified": false,
+      "review_required": true,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": false
+    },
+    {
+      "domain": "yoganepita.com",
+      "studio_name": "Yoga with Anastasia",
+      "manual_verified": true,
+      "review_required": false,
+      "excluded_from_scope": true,
+      "has_known_pricing": false,
+      "concept_excluded": false
+    },
+    {
+      "domain": "yujparis.com",
+      "studio_name": "YUJ YOGA Studio",
+      "manual_verified": false,
+      "review_required": false,
+      "excluded_from_scope": false,
+      "has_known_pricing": true,
+      "concept_excluded": true
+    }
+  ]
+}

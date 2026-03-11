@@ -1,0 +1,5100 @@
+{
+  "generated_at": "2026-03-11T14:12:14.949Z",
+  "source_files": {
+    "consolidated": "data/processed/studios_consolidated_boutique.json",
+    "approved": "data/pricing/paris_pricing_approved_records.json"
+  },
+  "summary": {
+    "queue_size": 322,
+    "excluded_already_approved": 38
+  },
+  "records": [
+    {
+      "studio_name": "à soi · yoga",
+      "domain": "a-soi.com",
+      "website": "https://www.a-soi.com/",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 19",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "ACADEMIE INTERNATIONALE DE LA DANSE (Paris 16ème)",
+      "domain": "academiedanseparis.com",
+      "website": "http://www.academiedanseparis.com/",
+      "categories": [
+        "pilates"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "AFYA",
+      "domain": "afya.fr",
+      "website": "https://www.afya.fr/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=2528681361313747804",
+      "categories": [
+        "bootcamp",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "agefo.com",
+      "website": "https://agefo.com/residence/residence-jerome-lejeune/",
+      "categories": [
+        "fitness",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Yoga alsa",
+      "domain": "agence-sisters-factory.com",
+      "website": "https://agence-sisters-factory.com/alsayoga",
+      "categories": [
+        "aerial-antigravity-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Aja House",
+      "domain": "ajahouse.fr",
+      "website": "https://www.ajahouse.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "barre",
+        "bootcamp",
+        "boxing",
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "high-intensity-pilates",
+        "latin-dance",
+        "low-impact-training",
+        "mat-pilates",
+        "pilates",
+        "power-yoga",
+        "prenatal",
+        "prenatal-yoga",
+        "reformer-pilates",
+        "restorative-yoga",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 07",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "AKMD Krav Maga",
+      "domain": "akmd.fr",
+      "website": "https://www.akmd.fr/",
+      "categories": [
+        "fitness",
+        "krav-maga",
+        "martial-arts"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "A l'Eau Bike Paris",
+      "domain": "aleaubike.fr",
+      "website": "http://www.aleaubike.fr/",
+      "categories": [
+        "cycling",
+        "fitness",
+        "indoor-cycling"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Apollo Sporting Club",
+      "domain": "apollosportingclub.com",
+      "website": "https://apollosportingclub.com/",
+      "categories": [
+        "boxing",
+        "circuit-training",
+        "fitness",
+        "personal-training",
+        "strength-training",
+        "stretching"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Apyzen",
+      "domain": "apycem.com",
+      "website": "https://apycem.com/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "mat-pilates",
+        "pilates",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 01",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Aqua by",
+      "domain": "aqua-by.com",
+      "website": "https://aqua-by.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+boulogne",
+      "categories": [
+        "bootcamp",
+        "cycling",
+        "fitness",
+        "indoor-cycling",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Oly Be",
+      "domain": "arkose.com",
+      "website": "https://arkose.com/chevaleret",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 13",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "armeedusalut.fr",
+      "website": "http://www.armeedusalut.fr",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 13",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "ASSY/ASANA",
+      "domain": "assyasana.fr",
+      "website": "https://assyasana.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "bootcamp",
+        "fitness",
+        "low-impact-training",
+        "pilates",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Astra Body Paris 8",
+      "domain": "astrabody-paris8.fr",
+      "website": "http://www.astrabody-paris8.fr/",
+      "categories": [
+        "cycling",
+        "indoor-cycling",
+        "low-impact-training",
+        "sculpt"
+      ],
+      "arrondissement": "Paris 08",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Astra body",
+      "domain": "astrabodyvincennes.fr",
+      "website": "https://astrabodyvincennes.fr/",
+      "categories": [
+        "cycling",
+        "fitness",
+        "indoor-cycling",
+        "low-impact-training",
+        "sculpt"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "AT AUM",
+      "domain": "ataum-paris.fr",
+      "website": "http://www.ataum-paris.fr/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "iyengar-yoga",
+        "pilates",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 20",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Kbox",
+      "domain": "atelierkbox.com",
+      "website": "https://atelierkbox.com/",
+      "categories": [
+        "boxing",
+        "circuit-training",
+        "fitness",
+        "low-impact-training",
+        "martial-arts",
+        "mixed-martial-arts",
+        "sculpt",
+        "strength-training",
+        "stretching"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Atelier Mood",
+      "domain": "ateliermood.com",
+      "website": "https://www.ateliermood.com/",
+      "categories": [
+        "cycling",
+        "fitness"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Yoga Bar",
+      "domain": "atelierportesoleil.com",
+      "website": "http://www.atelierportesoleil.com/",
+      "categories": [
+        "iyengar-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Athletic Studio",
+      "domain": "athletic-studio.fr",
+      "website": "https://www.athletic-studio.fr/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "crossfit",
+        "fitness",
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Atmasphera",
+      "domain": "atmasphera.fr",
+      "website": "https://atmasphera.fr/",
+      "categories": [
+        "postnatal",
+        "prenatal"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Au cours du mouvement",
+      "domain": "au-cours-du-mouvement.com",
+      "website": "http://www.au-cours-du-mouvement.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=17970648994060070640",
+      "categories": [
+        "fitness",
+        "personal-training"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Au Garage Club",
+      "domain": "augarageclub.fr",
+      "website": "http://www.augarageclub.fr/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "crossfit",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "AU LAGREE CLUB",
+      "domain": "aulagreeclub.com",
+      "website": "https://www.aulagreeclub.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=11985339791980549681",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Baba Yoga",
+      "domain": "babayogaclub.com",
+      "website": "https://www.babayogaclub.com/",
+      "categories": [
+        "barre",
+        "fitness",
+        "pilates",
+        "power-yoga",
+        "prenatal",
+        "prenatal-yoga",
+        "restorative-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Naamasté",
+      "domain": "backoffice.bsport.io",
+      "website": "https://backoffice.bsport.io/m/Naamast%C3%A9/3451/calendar/?isPreview=true",
+      "categories": [
+        "fitness",
+        "pilates",
+        "power-yoga",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 13",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Bandha Yoga",
+      "domain": "bandhayoga.paris",
+      "website": "https://www.bandhayoga.paris/",
+      "categories": [
+        "ashtanga-yoga",
+        "barre",
+        "dance",
+        "fitness",
+        "hatha-yoga",
+        "kundalini-yoga",
+        "pilates",
+        "prenatal",
+        "prenatal-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 06",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Banote Club",
+      "domain": "banoteclub.com",
+      "website": "https://www.banoteclub.com/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Battesti coaching",
+      "domain": "battesticoaching.com",
+      "website": "https://www.battesticoaching.com/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "fitness",
+        "low-impact-training",
+        "running",
+        "sculpt",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "becoached",
+      "domain": "becoached.fr",
+      "website": "https://www.becoached.fr/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "cycling",
+        "fitness",
+        "indoor-cycling",
+        "low-impact-training",
+        "running",
+        "strength-training",
+        "stretching",
+        "trx",
+        "weightlifting"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Bee Lagree",
+      "domain": "beelagree.fr",
+      "website": "https://beelagree.fr/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Yoga Bikram Paris - Grands Boulevards",
+      "domain": "bikramyogaparis.com",
+      "website": "http://www.bikramyogaparis.com/",
+      "categories": [
+        "fitness",
+        "high-intensity-pilates",
+        "hot-yoga",
+        "mat-pilates",
+        "pilates",
+        "yoga"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Biopilates Paris",
+      "domain": "biopilates.fr",
+      "website": "https://biopilates.fr/",
+      "categories": [
+        "fitness",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates",
+        "yoga"
+      ],
+      "arrondissement": "Paris 20",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "blom31.life",
+      "website": "https://blom31.life/",
+      "categories": [
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Body Booster Paris 16",
+      "domain": "bodybooster.fr",
+      "website": "http://www.bodybooster.fr/",
+      "categories": [
+        "electrical-muscle-stimulation"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Body Life Paris",
+      "domain": "bodylifeparis.com",
+      "website": "http://www.bodylifeparis.com/",
+      "categories": [
+        "personal-training"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Body Om",
+      "domain": "bodyom.fr",
+      "website": "http://www.bodyom.fr/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "pilates",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Bodytec15",
+      "domain": "bodytec15.fr",
+      "website": "https://bodytec15.fr/",
+      "categories": [
+        "electrical-muscle-stimulation",
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "BodyTech Center",
+      "domain": "bodytechcenter.fr",
+      "website": "http://www.bodytechcenter.fr/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "circuit-training",
+        "crossfit",
+        "electrical-muscle-stimulation",
+        "fitness",
+        "high-intensity-pilates",
+        "hiit",
+        "mat-pilates",
+        "outdoors",
+        "pilates",
+        "prenatal",
+        "reformer-pilates",
+        "running",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Bollywood by Deva",
+      "domain": "bollywood-paris-by-deva.com",
+      "website": "https://www.bollywood-paris-by-deva.com/",
+      "categories": [
+        "dance"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Flamenkrais",
+      "domain": "bom93.com",
+      "website": "https://bom93.com/",
+      "categories": [
+        "dance"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Ponthieu Soleil",
+      "domain": "bronzage-aquabike-paris-8.fr",
+      "website": "https://bronzage-aquabike-paris-8.fr/",
+      "categories": [
+        "bootcamp",
+        "electrical-muscle-stimulation",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 08",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Brooklyn Fitboxing",
+      "domain": "brooklynfitboxing.com",
+      "website": "https://www.brooklynfitboxing.com/public/fr/fr-fr/",
+      "categories": [
+        "boxing",
+        "heavy-bag"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Brume",
+      "domain": "brumestudios.fr",
+      "website": "https://www.brumestudios.fr/?utm_source=google-my-business&utm_medium=site-web&utm_campaign=paris-12",
+      "categories": [
+        "fitness",
+        "high-intensity-pilates",
+        "hot-yoga",
+        "pilates",
+        "power-yoga",
+        "prenatal",
+        "reformer-pilates",
+        "yoga"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "BUBBLE",
+      "domain": "bubble.spa",
+      "website": "https://bubble.spa/",
+      "categories": [
+        "fitness",
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Callesol",
+      "domain": "callesol.net",
+      "website": "https://www.callesol.net/",
+      "categories": [
+        "dance",
+        "latin-dance",
+        "salsa-dance"
+      ],
+      "arrondissement": "Paris 14",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "CANDRYA YOGA",
+      "domain": "candryayoga.com",
+      "website": "https://www.candryayoga.com/",
+      "categories": [
+        "hatha-yoga",
+        "yin-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Carbonne",
+      "domain": "carbonnestudio.com",
+      "website": "https://www.carbonnestudio.com/",
+      "categories": [
+        "fitness",
+        "high-intensity-pilates",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Céline Coelho Yoga",
+      "domain": "catuelanyoga.fr",
+      "website": "http://www.catuelanyoga.fr/",
+      "categories": [
+        "outdoors",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Central Fit",
+      "domain": "centralfitcharenton.fr",
+      "website": "https://centralfitcharenton.fr/",
+      "categories": [
+        "bootcamp",
+        "cardio-dance",
+        "circuit-training",
+        "cycling",
+        "dance",
+        "fitness",
+        "hiit",
+        "indoor-cycling",
+        "low-impact-training",
+        "martial-arts",
+        "pilates",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "yoga",
+        "zumba-dance"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Central Fit",
+      "domain": "centralfitvincennes.fr",
+      "website": "http://www.centralfitvincennes.fr/",
+      "categories": [
+        "bootcamp",
+        "cycling",
+        "dance",
+        "fitness",
+        "gym-time",
+        "hiit",
+        "indoor-cycling",
+        "low-impact-training",
+        "martial-arts",
+        "mixed-martial-arts",
+        "pilates",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "yoga",
+        "zumba-dance"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Poppy Yoga",
+      "domain": "centreanima.com",
+      "website": "https://www.centreanima.com/",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Carolina Dehlouz",
+      "domain": "centrededansedumarais.fr",
+      "website": "http://www.centrededansedumarais.fr/",
+      "categories": [
+        "cardio-dance",
+        "dance",
+        "jazz-dance",
+        "modern-dance",
+        "zumba-dance"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Cerce",
+      "domain": "cerce.fr",
+      "website": "http://cerce.fr/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "mat-pilates",
+        "pilates",
+        "prenatal",
+        "prenatal-yoga",
+        "reformer-pilates",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Chang noi",
+      "domain": "changnoiboxing.com",
+      "website": "https://www.changnoiboxing.com/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "martial-arts",
+        "muay-thai",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Chez Simone",
+      "domain": "chezsimone.fr",
+      "website": "https://www.chezsimone.fr/",
+      "categories": [
+        "ballet-dance",
+        "barre",
+        "bootcamp",
+        "cardio-dance",
+        "circuit-training",
+        "dance",
+        "fitness",
+        "hiit",
+        "hot-yoga",
+        "low-impact-training",
+        "pilates",
+        "power-yoga",
+        "sculpt",
+        "strength-training",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Climbing District",
+      "domain": "climbingdistrict.com",
+      "website": "https://www.climbingdistrict.com/",
+      "categories": [
+        "fitness",
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "CLMX",
+      "domain": "clmx.fr",
+      "website": "http://www.clmx.fr/",
+      "categories": [
+        "dance",
+        "hip-hop-dance",
+        "outdoors"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Club Lulu",
+      "domain": "clublulu.paris",
+      "website": "http://www.clublulu.paris/",
+      "categories": [
+        "ballet-dance",
+        "barre",
+        "bootcamp",
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "hiit",
+        "hot-yoga",
+        "low-impact-training",
+        "pilates",
+        "prenatal",
+        "reformer-pilates",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "combray",
+      "domain": "combray.com",
+      "website": "https://combray.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb_siteweb",
+      "categories": [
+        "cycling",
+        "indoor-cycling",
+        "running"
+      ],
+      "arrondissement": "Paris 08",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Core Society",
+      "domain": "coresociety.fr",
+      "website": "https://www.coresociety.fr/",
+      "categories": [
+        "fitness",
+        "high-intensity-pilates",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Cosmopilates",
+      "domain": "cosmopilates.fr",
+      "website": "http://www.cosmopilates.fr/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 06",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Mickael Bilionniere",
+      "domain": "cours-hip-hop.fr",
+      "website": "http://www.cours-hip-hop.fr/",
+      "categories": [
+        "dance",
+        "fitness",
+        "hip-hop-dance",
+        "jazz-dance"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Krav Maga Paris",
+      "domain": "coursdekravmaga.com",
+      "website": "https://www.coursdekravmaga.com/",
+      "categories": [
+        "fitness",
+        "hiit",
+        "krav-maga",
+        "martial-arts",
+        "mixed-martial-arts",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "CrossFit Factory - Boulogne Billancourt",
+      "domain": "crossfitfactory-boulogne.fr",
+      "website": "https://crossfitfactory-boulogne.fr/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "crossfit",
+        "fitness",
+        "hiit",
+        "outdoors",
+        "running",
+        "strength-training",
+        "weightlifting"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "CrossFit Factory 92",
+      "domain": "crossfitfactory.fr",
+      "website": "http://www.crossfitfactory.fr/",
+      "categories": [
+        "circuit-training",
+        "crossfit",
+        "fitness",
+        "hiit",
+        "strength-training",
+        "vinyasa-yoga",
+        "weightlifting",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Cross Fit Grande Arche Station",
+      "domain": "crossfitgrandearchestation.com",
+      "website": "http://crossfitgrandearchestation.com/",
+      "categories": [
+        "bootcamp",
+        "crossfit",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "CrossFit Lutèce II",
+      "domain": "crossfitlutece.com",
+      "website": "http://www.crossfitlutece.com/",
+      "categories": [
+        "bootcamp",
+        "crossfit",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Cryofast",
+      "domain": "cryofast.fr",
+      "website": "https://cryofast.fr/centre-de-cryotherapie-paris/",
+      "categories": [
+        "fitness",
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Culte Reformer",
+      "domain": "culte-reformer.com",
+      "website": "http://www.culte-reformer.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "pilates",
+        "reformer-pilates",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Paris Boxing Club",
+      "domain": "curial-boxing-team.fr",
+      "website": "http://curial-boxing-team.fr/",
+      "categories": [
+        "boxing",
+        "heavy-bag"
+      ],
+      "arrondissement": "Paris 19",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Cyberdanse Paris",
+      "domain": "cyberdanseparis.com",
+      "website": "http://www.cyberdanseparis.com/",
+      "categories": [
+        "ballet-dance",
+        "contemporary-dance",
+        "dance",
+        "fitness",
+        "gym-time",
+        "modern-dance"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "à soi · yoga",
+      "domain": "daljeet-yoga.fr",
+      "website": "http://www.daljeet-yoga.fr/cours-yoga-paris-neuilly-courbevoie/yoga-a-neuilly",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Dancefloor Paris",
+      "domain": "dancefloor-paris.com",
+      "website": "https://www.dancefloor-paris.com/",
+      "categories": [
+        "ballet-dance",
+        "barre",
+        "dance",
+        "fitness",
+        "pilates",
+        "yoga"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "danse75.fr",
+      "website": "http://www.danse75.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "pilates",
+        "power-yoga",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 18",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "YOZE - Alesia Dansomania 1",
+      "domain": "dansomania.fr",
+      "website": "https://www.dansomania.fr/",
+      "categories": [
+        "pilates",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 14",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Ecole Samba Davina",
+      "domain": "davinasamba.com",
+      "website": "http://www.davinasamba.com/",
+      "categories": [
+        "dance",
+        "latin-dance"
+      ],
+      "arrondissement": "Paris 19",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "DECIBEL®",
+      "domain": "decibel-danse.com",
+      "website": "https://www.decibel-danse.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+decibel",
+      "categories": [
+        "dance",
+        "fitness"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Deeply studio de Pilates",
+      "domain": "deeply-studiodepilates.com",
+      "website": "https://www.deeply-studiodepilates.com/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Define Studio",
+      "domain": "definestudio.fr",
+      "website": "https://definestudio.fr/",
+      "categories": [
+        "fitness",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "DNA Pilates",
+      "domain": "dnapilatesparis.com",
+      "website": "https://dnapilatesparis.com/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "DRIP",
+      "domain": "drip-hiit.com",
+      "website": "https://www.drip-hiit.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+grands-boulevards",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "running",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Dynamo Cycling",
+      "domain": "dynamo-cycling.com",
+      "website": "http://www.dynamo-cycling.com/",
+      "categories": [
+        "cycling",
+        "fitness",
+        "indoor-cycling"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "EAUMEGA TRAINING",
+      "domain": "eaumegatraining.com",
+      "website": "http://www.eaumegatraining.com/",
+      "categories": [
+        "cycling",
+        "electrical-muscle-stimulation",
+        "indoor-cycling",
+        "pilates",
+        "power-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Eden Studio Paris",
+      "domain": "edenstudioparis.com",
+      "website": "http://www.edenstudioparis.com/",
+      "categories": [
+        "barre",
+        "belly-dance",
+        "contemporary-dance",
+        "dance",
+        "hip-hop-dance",
+        "jazz-dance",
+        "latin-dance",
+        "low-impact-training",
+        "modern-dance",
+        "pilates",
+        "pole-dance",
+        "running",
+        "salsa-dance",
+        "vinyasa-yoga",
+        "yoga",
+        "zumba-dance"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "EffiScience Cicé",
+      "domain": "effiscience.paris",
+      "website": "http://www.effiscience.paris/",
+      "categories": [
+        "aerial-antigravity-yoga",
+        "bootcamp",
+        "boxing",
+        "fitness",
+        "hiit",
+        "pilates",
+        "strength-training",
+        "stretching",
+        "trx",
+        "yoga"
+      ],
+      "arrondissement": "Paris 06",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Elevate Studio",
+      "domain": "elevateparis.com",
+      "website": "https://www.elevateparis.com/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Élite Club",
+      "domain": "eliteclub-94.fr",
+      "website": "https://www.eliteclub-94.fr/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "circuit-training",
+        "dance",
+        "fitness",
+        "hiit",
+        "pilates",
+        "strength-training",
+        "stretching",
+        "zumba-dance"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Alice Clerc Yoga",
+      "domain": "elkeyogaparis.fr",
+      "website": "https://www.elkeyogaparis.fr/",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 18",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Empreinte Zen",
+      "domain": "empreintezen.com",
+      "website": "http://www.empreintezen.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Energy fit",
+      "domain": "energyfit.paris",
+      "website": "https://energyfit.paris/",
+      "categories": [
+        "electrical-muscle-stimulation"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "EPISOD",
+      "domain": "episod.com",
+      "website": "https://www.episod.com/",
+      "categories": [
+        "barre",
+        "bootcamp",
+        "circuit-training",
+        "cycling",
+        "fitness",
+        "high-intensity-pilates",
+        "hiit",
+        "indoor-cycling",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 01",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Ergo",
+      "domain": "ergoparis.com",
+      "website": "http://www.ergoparis.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "running",
+        "strength-training",
+        "stretching",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Allzen Studio",
+      "domain": "espaceallzen.com",
+      "website": "http://espaceallzen.com/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "fitness",
+        "martial-arts",
+        "mat-pilates",
+        "pilates",
+        "qi-gong",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "ESPACE",
+      "domain": "espacestudio.fr",
+      "website": "https://espacestudio.fr/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "fitness",
+        "hiit",
+        "pilates",
+        "strength-training",
+        "weightlifting"
+      ],
+      "arrondissement": "Paris 06",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Terra Nova",
+      "domain": "espaceterranova.com",
+      "website": "https://www.espaceterranova.com/",
+      "categories": [
+        "personal-training"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Evocore",
+      "domain": "evocorestudio.com",
+      "website": "https://www.evocorestudio.com/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "La Casa - Studio de Yoga",
+      "domain": "facebook.com",
+      "website": "https://www.facebook.com/StudioDeYogaLaCasa/",
+      "categories": [
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "FeatClub",
+      "domain": "featclub.fr",
+      "website": "https://www.featclub.fr/pages/studio",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "fitness",
+        "pilates",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Fight Room",
+      "domain": "fightroom.fr",
+      "website": "https://fightroom.fr/",
+      "categories": [
+        "boxing"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "First UP",
+      "domain": "firstup.fr",
+      "website": "https://www.firstup.fr/",
+      "categories": [
+        "electrical-muscle-stimulation",
+        "fitness"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Fit'Ballet - Bonne-Nouvelle",
+      "domain": "fit-ballet.com",
+      "website": "https://fit-ballet.com/fr/octavie-escure",
+      "categories": [
+        "ballet-dance",
+        "barre",
+        "dance",
+        "fitness",
+        "pilates",
+        "stretching"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Fit Health Station - small group",
+      "domain": "fit-station.care",
+      "website": "https://fit-station.care/",
+      "categories": [
+        "bootcamp",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Fit Success",
+      "domain": "fit-success.fr",
+      "website": "https://fit-success.fr/",
+      "categories": [
+        "electrical-muscle-stimulation",
+        "fitness"
+      ],
+      "arrondissement": "Paris 03",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Fit & Healthy",
+      "domain": "fithealthy.fr",
+      "website": "https://fithealthy.fr/",
+      "categories": [
+        "pilates",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Flow Studio",
+      "domain": "flowstudioparis.com",
+      "website": "https://www.flowstudioparis.com/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Barry's Bootcamp",
+      "domain": "fr.barrys.com",
+      "website": "https://fr.barrys.com/studio/paris/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "running",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Free Fight Academy",
+      "domain": "freefightacademy.net",
+      "website": "https://www.freefightacademy.net/",
+      "categories": [
+        "boxing",
+        "fitness",
+        "jiu-jitsu",
+        "martial-arts",
+        "mixed-martial-arts",
+        "muay-thai"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Gavroche Fitness",
+      "domain": "gavrochefitness.com",
+      "website": "http://www.gavrochefitness.com/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "crossfit",
+        "fitness",
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Genesis Yoga",
+      "domain": "genesisyoga.fr",
+      "website": "https://www.genesisyoga.fr/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hatha-yoga",
+        "strength-training",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Dana Mussa Ballet",
+      "domain": "getchancetodance.com",
+      "website": "https://www.getchancetodance.com/",
+      "categories": [
+        "ballet-dance",
+        "contemporary-dance",
+        "dance",
+        "jazz-dance"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Gigafit",
+      "domain": "gigafit.fr",
+      "website": "https://gigafit.fr/club/issy-les-moulineaux?utm_source=google&utm_medium=mybusiness",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Gotham 17",
+      "domain": "gotham.paris",
+      "website": "https://gotham.paris/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates",
+        "stretching",
+        "yoga"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Ground to Grow",
+      "domain": "groundtogrow.fr",
+      "website": "http://www.groundtogrow.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "bootcamp",
+        "fitness",
+        "hatha-yoga",
+        "high-intensity-pilates",
+        "mat-pilates",
+        "pilates",
+        "power-yoga",
+        "strength-training",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 03",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Galeries Lafayette Sports Club",
+      "domain": "haussmann.galerieslafayette.com",
+      "website": "https://haussmann.galerieslafayette.com/galeries-lafayette-sports-club/?utm_id=+&utm_medium=FIchegmb&utm_source=gmb",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "pilates",
+        "power-yoga",
+        "running",
+        "strength-training",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Healthy Warriors",
+      "domain": "healthy-warriors.com",
+      "website": "https://www.healthy-warriors.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "postnatal",
+        "power-yoga",
+        "prenatal",
+        "prenatal-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "IVRY BOXING CLUB",
+      "domain": "helloasso.com",
+      "website": "https://www.helloasso.com/associations/ivry-boxing-club-ekiboxe",
+      "categories": [
+        "boxing",
+        "fitness",
+        "kickboxing"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Hera Club",
+      "domain": "heraclubparis.com",
+      "website": "https://www.heraclubparis.com/",
+      "categories": [
+        "barre",
+        "bootcamp",
+        "fitness",
+        "high-intensity-pilates",
+        "mat-pilates",
+        "pilates",
+        "power-yoga",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "HI KICK",
+      "domain": "hi-kick.fr",
+      "website": "http://hi-kick.fr/",
+      "categories": [
+        "boxing",
+        "circuit-training",
+        "fitness",
+        "gym-time",
+        "heavy-bag",
+        "high-intensity-pilates",
+        "kickboxing",
+        "martial-arts",
+        "mat-pilates",
+        "pilates",
+        "strength-training",
+        "stretching"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "HIFE",
+      "domain": "hife-coliving.fr",
+      "website": "https://hife-coliving.fr/residences/ile-de-france/hife-paris-issy/",
+      "categories": [
+        "bootcamp",
+        "crossfit",
+        "fitness",
+        "gym-time",
+        "martial-arts",
+        "strength-training",
+        "stretching"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Homa Sport",
+      "domain": "homasport.com",
+      "website": "https://www.homasport.com/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "circuit-training",
+        "fitness",
+        "jiu-jitsu",
+        "martial-arts",
+        "mixed-martial-arts",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Humble Warrior",
+      "domain": "humble-warrior.com",
+      "website": "http://humble-warrior.com/",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "ATELIERS ILLUMINESSENS",
+      "domain": "illuminessens.com",
+      "website": "https://www.illuminessens.com/services",
+      "categories": [
+        "fitness",
+        "pilates",
+        "yoga"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "imageriepariscentre.fr",
+      "website": "http://imageriepariscentre.fr/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "pilates",
+        "prenatal",
+        "prenatal-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 14",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Inspiration Danse Studio Association",
+      "domain": "inspirationdansestudio.com",
+      "website": "https://www.inspirationdansestudio.com/",
+      "categories": [
+        "ballroom-dance",
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "latin-dance",
+        "salsa-dance"
+      ],
+      "arrondissement": "Paris 20",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le club 66",
+      "domain": "instagram.com",
+      "website": "https://www.instagram.com/leclub.66?igsh=aHJrbmRhdmoxamRx",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Institut La Motte Piquet",
+      "domain": "institutlamottepicquet.fr",
+      "website": "https://www.institutlamottepicquet.fr/?utm_source=Google&utm_medium=My%20Business",
+      "categories": [
+        "cycling"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Inter7",
+      "domain": "inter7.fr",
+      "website": "http://www.inter7.fr/",
+      "categories": [
+        "fitness",
+        "iyengar-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 07",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Janet Studio",
+      "domain": "janetstudio.fr",
+      "website": "https://www.janetstudio.fr/",
+      "categories": [
+        "fitness",
+        "mat-pilates",
+        "pilates",
+        "prenatal",
+        "reformer-pilates",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Jeen+ Montreuil",
+      "domain": "jeen.care",
+      "website": "https://www.jeen.care/centres/jeen-plus-montreuil",
+      "categories": [
+        "fitness",
+        "pilates",
+        "postnatal",
+        "prenatal",
+        "prenatal-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Point Soleil Demours",
+      "domain": "jesuisbiendansmapeau.com",
+      "website": "https://jesuisbiendansmapeau.com/centre-bien-etre-17eme-paris-demours/",
+      "categories": [
+        "fitness",
+        "running"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "jivamukti yoga paris",
+      "domain": "jivamuktiyoga.fr",
+      "website": "http://jivamuktiyoga.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "iyengar-yoga",
+        "jivamukti-yoga",
+        "kundalini-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "JM Tonic",
+      "domain": "jmtonic.fr",
+      "website": "https://www.jmtonic.fr/",
+      "categories": [
+        "bootcamp",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Julia B - Renata Franca & Sophrologie",
+      "domain": "juliablech.com",
+      "website": "https://www.juliablech.com/",
+      "categories": [
+        "fitness",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Jumpman",
+      "domain": "jumpmanfitness.com",
+      "website": "https://jumpmanfitness.com/",
+      "categories": [
+        "bootcamp",
+        "cycling",
+        "dance",
+        "fitness",
+        "high-intensity-pilates",
+        "indoor-cycling",
+        "pilates",
+        "strength-training",
+        "trampoline"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "KAH Studio",
+      "domain": "kahstudioandcoffee.com",
+      "website": "http://kahstudioandcoffee.com/",
+      "categories": [
+        "barre",
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "low-impact-training",
+        "pilates",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Kalon",
+      "domain": "kalonbarre.com",
+      "website": "https://www.kalonbarre.com/",
+      "categories": [
+        "barre",
+        "fitness"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Karma Pilates",
+      "domain": "karmapilates.fr",
+      "website": "https://karmapilates.fr/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "K-Gym Training",
+      "domain": "kgym-paris.com",
+      "website": "https://www.kgym-paris.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "low-impact-training",
+        "sculpt",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Krav Maga Paris",
+      "domain": "kmpo.fr",
+      "website": "http://kmpo.fr/",
+      "categories": [
+        "boxing",
+        "krav-maga",
+        "martial-arts"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "KORE",
+      "domain": "kore-studio.com",
+      "website": "https://www.kore-studio.com/",
+      "categories": [
+        "fitness",
+        "high-intensity-pilates",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "KURV Studio",
+      "domain": "kurvstudio.com",
+      "website": "https://www.kurvstudio.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "high-intensity-pilates",
+        "lagree",
+        "pilates",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 06",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "La Castagne",
+      "domain": "la-castagne.com",
+      "website": "http://www.la-castagne.com/",
+      "categories": [
+        "boxing",
+        "martial-arts",
+        "mixed-martial-arts",
+        "muay-thai"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "la Clairière",
+      "domain": "laclairiere-bienetre.com",
+      "website": "http://www.laclairiere-bienetre.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "hiit",
+        "iyengar-yoga",
+        "kundalini-yoga",
+        "mat-pilates",
+        "pilates",
+        "power-yoga",
+        "prenatal",
+        "prenatal-yoga",
+        "strength-training",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Lagreeness",
+      "domain": "lagreeness.com",
+      "website": "http://www.lagreeness.com/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "La Kave Paris",
+      "domain": "lakave.paris",
+      "website": "http://lakave.paris/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "crossfit",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "LA LA DANSE",
+      "domain": "laladanse.paris",
+      "website": "https://www.laladanse.paris/",
+      "categories": [
+        "ballet-dance",
+        "barre",
+        "contemporary-dance",
+        "dance",
+        "fitness",
+        "hip-hop-dance",
+        "personal-training",
+        "pilates",
+        "postnatal",
+        "restorative-yoga",
+        "salsa-dance",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "La Plume Air Club",
+      "domain": "laplume.club",
+      "website": "https://www.laplume.club/?fbclid=IwAR0SFy_j7z8JzLS1JAbuNr6zOaPBIbS42B5OU_jpIu0PYMBiJtDIoO7fj6U",
+      "categories": [
+        "aerial",
+        "aerial-antigravity-yoga",
+        "dance",
+        "fitness",
+        "pole-dance",
+        "yoga"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "La Salle du Temps - Courbevoie/La Défense",
+      "domain": "lasalledutemps.com",
+      "website": "http://lasalledutemps.com/",
+      "categories": [
+        "personal-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "La Source Paris",
+      "domain": "lasource-paris.com",
+      "website": "https://lasource-paris.com/#",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "fitness",
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Last Studio",
+      "domain": "laststudio.fr",
+      "website": "https://www.laststudio.fr/",
+      "categories": [
+        "mat-pilates",
+        "pilates"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "La Suite Coaching",
+      "domain": "lasuitecoaching.com",
+      "website": "https://www.lasuitecoaching.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "high-intensity-pilates",
+        "hiit",
+        "pilates",
+        "power-yoga",
+        "strength-training",
+        "yoga"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le 33 FOCH",
+      "domain": "le33foch.fr",
+      "website": "http://www.le33foch.fr/",
+      "categories": [
+        "aerial",
+        "barre",
+        "bootcamp",
+        "boxing",
+        "cycling",
+        "dance",
+        "fitness",
+        "hatha-yoga",
+        "hiit",
+        "indoor-cycling",
+        "lagree",
+        "low-impact-training",
+        "mat-pilates",
+        "pilates",
+        "pole-dance",
+        "reformer-pilates",
+        "sculpt",
+        "strength-training",
+        "trampoline",
+        "trx",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Hooptonic",
+      "domain": "lecarreaudutemple.eu",
+      "website": "https://www.lecarreaudutemple.eu/",
+      "categories": [
+        "bootcamp",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 03",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le Centre Element",
+      "domain": "lecentre-element.com",
+      "website": "https://www.lecentre-element.com/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "iyengar-yoga",
+        "kundalini-yoga",
+        "pilates",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le Cercle Boxing",
+      "domain": "lecercle-boxing.com",
+      "website": "https://lecercle-boxing.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+monmartre",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 18",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le Cube Fight Club",
+      "domain": "lecubefightclub.fr",
+      "website": "https://www.lecubefightclub.fr/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "fitness",
+        "heavy-bag",
+        "hiit",
+        "kickboxing",
+        "shadowboxing",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le Hyve",
+      "domain": "lehyve.fr",
+      "website": "http://www.lehyve.fr/",
+      "categories": [
+        "bootcamp",
+        "cycling",
+        "fitness",
+        "pilates",
+        "reformer-pilates",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le Loft boxing",
+      "domain": "leloftboxing.com",
+      "website": "https://www.leloftboxing.com/",
+      "categories": [
+        "boxing",
+        "fitness",
+        "heavy-bag",
+        "hiit",
+        "kickboxing",
+        "shadowboxing",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 18",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Victoria Delorée",
+      "domain": "lenouveaumondeparis.com",
+      "website": "https://www.lenouveaumondeparis.com/",
+      "categories": [
+        "stretching"
+      ],
+      "arrondissement": "Paris 01",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Les Ailes du Canal",
+      "domain": "lesailesducanal.com",
+      "website": "https://lesailesducanal.com/",
+      "categories": [
+        "barre",
+        "bootcamp",
+        "circuit-training",
+        "fitness",
+        "high-intensity-pilates",
+        "hiit",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates",
+        "strength-training",
+        "stretching"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Les Jardins Suspendus",
+      "domain": "lesjardins-suspendus.com",
+      "website": "https://lesjardins-suspendus.com/?utm_source=google&utm_medium=organic&utm_campaign=gmbparis11",
+      "categories": [
+        "bootcamp",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Espace Elysée",
+      "domain": "lespace-champselysees.fr",
+      "website": "http://www.lespace-champselysees.fr/",
+      "categories": [
+        "bootcamp",
+        "cycling",
+        "electrical-muscle-stimulation",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 08",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le studio de Hém",
+      "domain": "lestudiodehem.com",
+      "website": "http://lestudiodehem.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "iyengar-yoga",
+        "restorative-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le Studio Lagree",
+      "domain": "lestudiolagree.com",
+      "website": "https://www.lestudiolagree.com/",
+      "categories": [
+        "aerial-antigravity-yoga",
+        "barre",
+        "bootcamp",
+        "boxing",
+        "circuit-training",
+        "dance",
+        "fitness",
+        "hiit",
+        "lagree",
+        "pilates",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga",
+        "zumba-dance"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Les Yeux Doux X Astrabody Neuilly",
+      "domain": "lesyeuxdouxastrabody.fr",
+      "website": "https://lesyeuxdouxastrabody.fr/",
+      "categories": [
+        "cycling",
+        "indoor-cycling"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le vestiaire Vincennes",
+      "domain": "levestiairevincennes.fr",
+      "website": "https://levestiairevincennes.fr/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "pilates",
+        "strength-training",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "LIGNE ET ENDORPHINES",
+      "domain": "ligneetendorphines.com",
+      "website": "https://www.ligneetendorphines.com/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "electrical-muscle-stimulation",
+        "fitness",
+        "hiit",
+        "running",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Hooptonic",
+      "domain": "ligueo.ligueparis.org",
+      "website": "https://ligueo.ligueparis.org/nouvelle-athenes/",
+      "categories": [
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Like you Fitness",
+      "domain": "likeyoufitness.fr",
+      "website": "https://www.likeyoufitness.fr/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "circuit-training",
+        "dance",
+        "fitness",
+        "low-impact-training",
+        "pilates",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "zumba-dance"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Pilatestudio",
+      "domain": "linktr.ee",
+      "website": "https://linktr.ee/pilatestudioparis",
+      "categories": [
+        "barre",
+        "fitness",
+        "low-impact-training",
+        "pilates",
+        "sculpt"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "lmstudiomarais.com",
+      "website": "http://lmstudiomarais.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "pilates",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Lomey Yoga",
+      "domain": "lomey-yoga.com",
+      "website": "http://www.lomey-yoga.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Lorraine Bouchet Yoga",
+      "domain": "lorrainebouchet.com",
+      "website": "http://lorrainebouchet.com/",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Louis fabre coaching",
+      "domain": "louisfabre.com",
+      "website": "http://www.louisfabre.com/",
+      "categories": [
+        "fitness",
+        "personal-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Ma Parenthèse",
+      "domain": "ma-parenthese.com",
+      "website": "http://www.ma-parenthese.com/",
+      "categories": [
+        "fitness",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Magic Form",
+      "domain": "magic-form.fr",
+      "website": "https://magic-form.fr/clubs/meudon/",
+      "categories": [
+        "barre",
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "pilates",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Magic Fit HIT",
+      "domain": "magicfit.fr",
+      "website": "https://www.magicfit.fr/magicfit-hit-paris-15/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "hatha-yoga",
+        "low-impact-training",
+        "pilates",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "trx",
+        "yoga",
+        "zumba-dance"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Magic Form",
+      "domain": "magicformvitry.fr",
+      "website": "http://www.magicformvitry.fr/",
+      "categories": [
+        "bootcamp",
+        "cycling",
+        "dance",
+        "gym-time",
+        "hiit",
+        "indoor-cycling",
+        "martial-arts",
+        "pilates",
+        "strength-training",
+        "stretching",
+        "yoga",
+        "zumba-dance"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Maison-né",
+      "domain": "maison-ne.com",
+      "website": "https://www.maison-ne.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "mat-pilates",
+        "pilates",
+        "postnatal",
+        "prenatal",
+        "prenatal-yoga",
+        "strength-training",
+        "yoga"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Maison Amat",
+      "domain": "maisonamat.com",
+      "website": "http://maisonamat.com/",
+      "categories": [
+        "barre",
+        "fitness",
+        "high-intensity-pilates",
+        "low-impact-training",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates",
+        "running",
+        "sculpt"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Maison minceur",
+      "domain": "maisonminceur.fr",
+      "website": "https://www.maisonminceur.fr/",
+      "categories": [
+        "electrical-muscle-stimulation",
+        "fitness"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Maison Rem",
+      "domain": "maisonrem.com",
+      "website": "https://www.maisonrem.com/",
+      "categories": [
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "hatha-yoga",
+        "pilates",
+        "postnatal",
+        "prenatal",
+        "prenatal-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Mama Yoga",
+      "domain": "mamayoga.fr",
+      "website": "http://mamayoga.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "high-intensity-pilates",
+        "hot-yoga",
+        "jivamukti-yoga",
+        "kundalini-yoga",
+        "mat-pilates",
+        "pilates",
+        "power-yoga",
+        "prenatal",
+        "prenatal-yoga",
+        "restorative-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Academia Maritza Arizala",
+      "domain": "maritza-arizala.com",
+      "website": "https://www.maritza-arizala.com/",
+      "categories": [
+        "dance",
+        "salsa-dance"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Mayashala Yoga - Griset",
+      "domain": "mayashala.com",
+      "website": "http://www.mayashala.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "iyengar-yoga",
+        "kundalini-yoga",
+        "power-yoga",
+        "prenatal",
+        "prenatal-yoga",
+        "restorative-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Oly Be",
+      "domain": "meiso.fr",
+      "website": "https://www.meiso.fr/",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 13",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Method Lagree Studio",
+      "domain": "methodlagreestudio.com",
+      "website": "http://www.methodlagreestudio.com/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "MIDTOWN",
+      "domain": "midtown-studio.com",
+      "website": "https://www.midtown-studio.com/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "fitness",
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "MILLESIME",
+      "domain": "millesime-coaching.fr",
+      "website": "https://millesime-coaching.fr/",
+      "categories": [
+        "personal-training"
+      ],
+      "arrondissement": "Paris 05",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Modo Yoga",
+      "domain": "modoyogaparis.fr",
+      "website": "http://www.modoyogaparis.fr/",
+      "categories": [
+        "aerial-antigravity-yoga",
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "hot-yoga",
+        "mat-pilates",
+        "pilates",
+        "postnatal",
+        "prenatal",
+        "prenatal-yoga",
+        "restorative-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Shut Up and Breathe Yoga",
+      "domain": "momoyoga.com",
+      "website": "https://www.momoyoga.com/shut-up-and-breathe-yoga",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 19",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "mon Q",
+      "domain": "monqclub.fr",
+      "website": "https://monqclub.fr/",
+      "categories": [
+        "high-intensity-pilates",
+        "mat-pilates",
+        "outdoors",
+        "pilates"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Mood fitness studio",
+      "domain": "mood-fitness-studio.com",
+      "website": "http://www.mood-fitness-studio.com/",
+      "categories": [
+        "ballroom-dance",
+        "bootcamp",
+        "boxing",
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "heavy-bag",
+        "high-intensity-pilates",
+        "hiit",
+        "hip-hop-dance",
+        "latin-dance",
+        "low-impact-training",
+        "pilates",
+        "salsa-dance",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga",
+        "zumba-dance"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Move Lagree",
+      "domain": "movelagree.net",
+      "website": "https://www.movelagree.net/",
+      "categories": [
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "France Muay-Thai",
+      "domain": "muaythai-france.fr",
+      "website": "http://muaythai-france.fr/",
+      "categories": [
+        "fitness",
+        "martial-arts",
+        "muay-thai"
+      ],
+      "arrondissement": "Paris 14",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Mucho Pilates Studio",
+      "domain": "muchopilates-studio.com",
+      "website": "https://muchopilates-studio.com/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "MU:V",
+      "domain": "muvparis.com",
+      "website": "http://muvparis.com/",
+      "categories": [
+        "barre",
+        "bootcamp",
+        "boxing",
+        "cardio-dance",
+        "cycling",
+        "dance",
+        "fitness",
+        "hiit",
+        "indoor-cycling",
+        "pilates",
+        "power-yoga",
+        "strength-training",
+        "stretching",
+        "trx",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "My big bang",
+      "domain": "my-big-bang.fr",
+      "website": "https://www.my-big-bang.fr/",
+      "categories": [
+        "electrical-muscle-stimulation"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "My Fitness Studio",
+      "domain": "myfitness-studio.com",
+      "website": "https://myfitness-studio.com/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "cycling",
+        "fitness",
+        "gym-time",
+        "hiit",
+        "indoor-cycling",
+        "pilates",
+        "strength-training",
+        "stretching"
+      ],
+      "arrondissement": "Paris 20",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "My Ginger Paris",
+      "domain": "myginger.fr",
+      "website": "http://www.myginger.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "pilates",
+        "power-yoga",
+        "prenatal",
+        "prenatal-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 06",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "My Golden Hour",
+      "domain": "mygoldenhour.fr",
+      "website": "https://www.mygoldenhour.fr/",
+      "categories": [
+        "aerial-antigravity-yoga",
+        "cardio-dance",
+        "contemporary-dance",
+        "high-intensity-pilates",
+        "jazz-dance",
+        "latin-dance",
+        "power-yoga",
+        "restorative-yoga",
+        "salsa-dance",
+        "zumba-dance"
+      ],
+      "arrondissement": "Paris 08",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Nandini",
+      "domain": "nadyut.com",
+      "website": "http://www.nadyut.com/",
+      "categories": [
+        "mat-pilates",
+        "pilates"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Indian Swaas",
+      "domain": "nataraja-paris.com",
+      "website": "https://www.nataraja-paris.com/",
+      "categories": [
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Nava Pilates",
+      "domain": "navapilates.com",
+      "website": "https://navapilates.com/",
+      "categories": [
+        "fitness",
+        "high-intensity-pilates",
+        "mat-pilates",
+        "pilates",
+        "prenatal",
+        "reformer-pilates",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "NG Sport",
+      "domain": "ng-sport.com",
+      "website": "https://ng-sport.com/",
+      "categories": [
+        "electrical-muscle-stimulation",
+        "fitness"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Noble Art Club",
+      "domain": "nobleartclub.fr",
+      "website": "http://www.nobleartclub.fr/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Noble Art Institut",
+      "domain": "nobleartinstitut.com",
+      "website": "http://www.nobleartinstitut.com/",
+      "categories": [
+        "boxing",
+        "fitness"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Nomeia pilates",
+      "domain": "nomeia.fr",
+      "website": "https://www.nomeia.fr/services-6",
+      "categories": [
+        "dance",
+        "fitness",
+        "pilates",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "NOT YOGA",
+      "domain": "notyoga.fr",
+      "website": "https://notyoga.fr/",
+      "categories": [
+        "fitness",
+        "hot-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "L'ATELIER DU BIEN-ÊTRE par OLIVIER",
+      "domain": "olivierlecocq.com",
+      "website": "https://www.olivierlecocq.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Oly Be",
+      "domain": "olybe.elle.fr",
+      "website": "https://olybe.elle.fr/",
+      "categories": [
+        "barre",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Omvida",
+      "domain": "omvida.fr",
+      "website": "https://www.omvida.fr/",
+      "categories": [
+        "dance",
+        "fitness",
+        "pilates",
+        "power-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 07",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "ONE REP",
+      "domain": "one-rep.fr",
+      "website": "https://www.one-rep.fr/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "On Mind Club",
+      "domain": "onmindclub.com",
+      "website": "https://www.onmindclub.com/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "crossfit",
+        "fitness",
+        "hiit",
+        "low-impact-training",
+        "personal-training",
+        "sculpt",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Ora Studio",
+      "domain": "oraconcepts.fr",
+      "website": "https://oraconcepts.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "barre",
+        "fitness",
+        "hatha-yoga",
+        "iyengar-yoga",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 08",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Original Timba",
+      "domain": "originaltimba.com",
+      "website": "https://www.originaltimba.com/",
+      "categories": [
+        "dance",
+        "latin-dance",
+        "salsa-dance"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "OUTBOXE",
+      "domain": "outboxe.com",
+      "website": "http://www.outboxe.com/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 01",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "OUTCORE",
+      "domain": "outcore.studio",
+      "website": "https://outcore.studio/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 01",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Stepupfree",
+      "domain": "paris-marais-dance-school.org",
+      "website": "https://www.paris-marais-dance-school.org/",
+      "categories": [
+        "contemporary-dance",
+        "dance",
+        "hip-hop-dance",
+        "jazz-dance",
+        "latin-dance",
+        "modern-dance",
+        "pole-dance"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "ZumbaFrance",
+      "domain": "paris-society-events.com",
+      "website": "https://paris-society-events.com/salles/club-haussmann/",
+      "categories": [
+        "dance",
+        "hiit",
+        "strength-training",
+        "zumba-dance"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Bolly Deewani",
+      "domain": "paris.fr",
+      "website": "https://www.paris.fr/equipements/gymnase-reuilly-19545",
+      "categories": [
+        "belly-dance",
+        "dance"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Paris Boxing Club",
+      "domain": "parisboxingclub.fr",
+      "website": "https://www.parisboxingclub.fr/",
+      "categories": [
+        "boxing",
+        "fitness",
+        "kickboxing",
+        "martial-arts",
+        "mixed-martial-arts"
+      ],
+      "arrondissement": "Paris 19",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Paris Pilates Society",
+      "domain": "parispilates.com",
+      "website": "https://www.parispilates.com/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 07",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Paua Massage",
+      "domain": "paua-massage-paris.com",
+      "website": "http://www.paua-massage-paris.com/",
+      "categories": [
+        "dance"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Pilates Social Club",
+      "domain": "pilatesocialclub.fr",
+      "website": "https://pilatesocialclub.fr/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 08",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Astra Body",
+      "domain": "planity.com",
+      "website": "https://www.planity.com/astra-body-levallois-perret-92300",
+      "categories": [
+        "cycling",
+        "fitness",
+        "indoor-cycling"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Platinum Coaching",
+      "domain": "platinumcoaching.fr",
+      "website": "http://platinumcoaching.fr/",
+      "categories": [
+        "circuit-training",
+        "crossfit",
+        "electrical-muscle-stimulation",
+        "fitness",
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Jolie Silhouette",
+      "domain": "pointsoleil.com",
+      "website": "https://www.pointsoleil.com/paris-pompe",
+      "categories": [
+        "cycling",
+        "fitness",
+        "indoor-cycling",
+        "running"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Pole Dance Paris",
+      "domain": "poledance-paris.com",
+      "website": "http://www.poledance-paris.com/",
+      "categories": [
+        "barre",
+        "dance",
+        "fitness",
+        "pilates",
+        "pole-dance"
+      ],
+      "arrondissement": "Paris 20",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "POSES",
+      "domain": "poses-studio.com",
+      "website": "https://www.poses-studio.com/?utm_source=google&utm_medium=gmb&utm_campaign=lien-homepage-fiche-gmb&utm_content=site-web",
+      "categories": [
+        "barre",
+        "fitness",
+        "pilates",
+        "yoga"
+      ],
+      "arrondissement": "Paris 03",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Power by Ergo",
+      "domain": "powerbyergo.com",
+      "website": "http://www.powerbyergo.com/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "fitness",
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 20",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Punch Boxing",
+      "domain": "punch-boxing.com",
+      "website": "http://www.punch-boxing.com/",
+      "categories": [
+        "boxing",
+        "fitness"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "PUR Reformer",
+      "domain": "pur-reformer.fr",
+      "website": "https://www.pur-reformer.fr/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 18",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Pyra",
+      "domain": "pyra.paris",
+      "website": "https://pyra.paris/",
+      "categories": [
+        "bootcamp",
+        "dance",
+        "fitness",
+        "hiit",
+        "low-impact-training",
+        "pilates",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "yoga"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "R2 Training",
+      "domain": "r2training.fr",
+      "website": "http://www.r2training.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "bootcamp",
+        "boxing",
+        "crossfit",
+        "fitness",
+        "gym-time",
+        "hatha-yoga",
+        "pilates",
+        "running",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "weightlifting",
+        "yoga"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Ráfaga Studios",
+      "domain": "rafagastudios.com",
+      "website": "https://www.rafagastudios.com/",
+      "categories": [
+        "high-intensity-pilates",
+        "lagree",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 01",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Rasa Yoga Rive Gauche",
+      "domain": "rasa-yogarivegauche.com",
+      "website": "https://www.rasa-yogarivegauche.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "iyengar-yoga",
+        "jivamukti-yoga",
+        "kundalini-yoga",
+        "power-yoga",
+        "prenatal",
+        "prenatal-yoga",
+        "restorative-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 05",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Yoga with Anastasia",
+      "domain": "rebeccayoga.net",
+      "website": "http://www.rebeccayoga.net/",
+      "categories": [
+        "fitness",
+        "vinyasa-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 18",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Reformation",
+      "domain": "reformation-pilates.com",
+      "website": "http://reformation-pilates.com/",
+      "categories": [
+        "barre",
+        "bootcamp",
+        "fitness",
+        "pilates",
+        "prenatal",
+        "reformer-pilates",
+        "strength-training",
+        "yoga"
+      ],
+      "arrondissement": "Paris 01",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Reform.",
+      "domain": "reformfrombali.com",
+      "website": "https://reformfrombali.com/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Remega",
+      "domain": "remega.fr",
+      "website": "https://www.remega.fr/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "R.EVE",
+      "domain": "reve-studioparis.com",
+      "website": "https://www.reve-studioparis.com/",
+      "categories": [
+        "low-impact-training",
+        "sculpt"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Riise",
+      "domain": "riise-studios.com",
+      "website": "https://riise-studios.com/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 03",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Rock 4 You",
+      "domain": "rock4you.dance",
+      "website": "https://www.rock4you.dance/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=4842100932620613219",
+      "categories": [
+        "bootcamp",
+        "dance",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Roméo Club",
+      "domain": "romeoclub.fr",
+      "website": "http://www.romeoclub.fr/",
+      "categories": [
+        "bootcamp",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 05",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "RUYI STUDIO",
+      "domain": "ruyiparis.fr",
+      "website": "https://www.ruyiparis.fr/",
+      "categories": [
+        "fitness",
+        "high-intensity-pilates",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "SalsAlianza",
+      "domain": "salsalianza.fr",
+      "website": "http://www.salsalianza.fr/",
+      "categories": [
+        "dance",
+        "fitness",
+        "latin-dance",
+        "salsa-dance"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Spartan boxing club paris",
+      "domain": "sbcparis.fr",
+      "website": "https://www.sbcparis.fr/",
+      "categories": [
+        "boxing",
+        "fitness"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Sculpt",
+      "domain": "sculptclub.fr",
+      "website": "http://sculptclub.fr/",
+      "categories": [
+        "fitness",
+        "high-intensity-pilates",
+        "low-impact-training",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates",
+        "sculpt",
+        "yoga"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "SENSA STUDIO",
+      "domain": "sensastudio.fr",
+      "website": "https://www.sensastudio.fr/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "pilates",
+        "prenatal",
+        "prenatal-yoga",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Sense Club",
+      "domain": "sense-club.fr",
+      "website": "http://sense-club.fr/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "pilates",
+        "reformer-pilates",
+        "strength-training",
+        "yoga"
+      ],
+      "arrondissement": "Paris 06",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "SEQUOIIA",
+      "domain": "sequoiia.com",
+      "website": "https://sequoiia.com/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "mat-pilates",
+        "pilates",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Serial Yogger",
+      "domain": "serialyogger.com",
+      "website": "https://www.serialyogger.com/",
+      "categories": [
+        "fitness",
+        "power-yoga",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Silo Lagree Studio",
+      "domain": "silostudio.fr",
+      "website": "https://silostudio.fr/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 08",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Centre de Yoga Sivananda",
+      "domain": "sivanandaparis.org",
+      "website": "http://www.sivanandaparis.org/",
+      "categories": [
+        "fitness",
+        "yoga"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Slowe Wellness House",
+      "domain": "slowe-studio.com",
+      "website": "http://www.slowe-studio.com/",
+      "categories": [
+        "barre",
+        "bootcamp",
+        "fitness",
+        "high-intensity-pilates",
+        "hiit",
+        "mat-pilates",
+        "pilates",
+        "strength-training",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Smart Body",
+      "domain": "smart-body-paris16.com",
+      "website": "https://www.smart-body-paris16.com/",
+      "categories": [
+        "cycling",
+        "fitness",
+        "indoor-cycling",
+        "running"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Snake & Twist",
+      "domain": "snakeandtwist.fr",
+      "website": "https://www.snakeandtwist.fr/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "lagree",
+        "pilates",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 06",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "SOCIAL REFORMERS",
+      "domain": "socialreformers.fr",
+      "website": "https://socialreformers.fr/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "SOFIT CLUB",
+      "domain": "sofit-club.com",
+      "website": "http://www.sofit-club.com/",
+      "categories": [
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Sophie Mila",
+      "domain": "sophiemila.fr",
+      "website": "https://www.sophiemila.fr/",
+      "categories": [
+        "barre",
+        "dance",
+        "fitness",
+        "jazz-dance",
+        "mat-pilates",
+        "pilates"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "SORE",
+      "domain": "soregym.com",
+      "website": "http://soregym.com/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "fitness",
+        "high-intensity-pilates",
+        "hiit",
+        "mat-pilates",
+        "pilates",
+        "restorative-yoga",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 05",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "SPACE CYCLE",
+      "domain": "space-cycle.com",
+      "website": "https://www.space-cycle.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+bonne-nouvelle",
+      "categories": [
+        "cycling",
+        "fitness",
+        "indoor-cycling"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Spark Club",
+      "domain": "spark-club.fr",
+      "website": "https://www.spark-club.fr/",
+      "categories": [
+        "bootcamp",
+        "cycling",
+        "fitness",
+        "hiit",
+        "hot-yoga",
+        "indoor-cycling",
+        "pilates",
+        "strength-training",
+        "yoga"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Factory Dance",
+      "domain": "sr-factory.com",
+      "website": "https://www.sr-factory.com/",
+      "categories": [
+        "ballet-dance",
+        "ballroom-dance",
+        "barre",
+        "bootcamp",
+        "boxing",
+        "cardio-dance",
+        "contemporary-dance",
+        "dance",
+        "fitness",
+        "hip-hop-dance",
+        "jazz-dance",
+        "latin-dance",
+        "low-impact-training",
+        "mat-pilates",
+        "pilates",
+        "salsa-dance",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga",
+        "zumba-dance"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Station Forme",
+      "domain": "stationforme.com",
+      "website": "https://www.stationforme.com/",
+      "categories": [
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "STELLIA PARIS",
+      "domain": "stellia.paris",
+      "website": "https://www.stellia.paris/",
+      "categories": [
+        "fitness",
+        "stretching"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio MC",
+      "domain": "studio-mc.fr",
+      "website": "http://www.studio-mc.fr/",
+      "categories": [
+        "bootcamp",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Shelam",
+      "domain": "studio-shelam.fr",
+      "website": "https://www.studio-shelam.fr/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hatha-yoga",
+        "high-intensity-pilates",
+        "hiit",
+        "mat-pilates",
+        "pilates",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio 15 Pilates",
+      "domain": "studio15pilates.com",
+      "website": "http://www.studio15pilates.com/",
+      "categories": [
+        "fitness",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "STUDIO 16",
+      "domain": "studio16.fr",
+      "website": "http://www.studio16.fr/",
+      "categories": [
+        "ballet-dance",
+        "barre",
+        "boxing",
+        "cardio-dance",
+        "contemporary-dance",
+        "dance",
+        "fitness",
+        "hip-hop-dance",
+        "jazz-dance",
+        "latin-dance",
+        "mat-pilates",
+        "pilates",
+        "salsa-dance",
+        "vinyasa-yoga",
+        "yoga",
+        "zumba-dance"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "STUDIO 3C",
+      "domain": "studio3c.fr",
+      "website": "http://www.studio3c.fr/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "fitness",
+        "hiit",
+        "pilates",
+        "power-yoga",
+        "strength-training",
+        "stretching",
+        "trx",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Air Yoga & Pratiques bien-être",
+      "domain": "studioairyoga.fr",
+      "website": "https://www.studioairyoga.fr/",
+      "categories": [
+        "dance",
+        "hatha-yoga",
+        "low-impact-training",
+        "pilates",
+        "sculpt",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Belly Studio",
+      "domain": "studiobelly.com",
+      "website": "https://studiobelly.com/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio by Holy",
+      "domain": "studiobyholy.com",
+      "website": "https://studiobyholy.com/",
+      "categories": [
+        "fitness",
+        "high-intensity-pilates",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Coach In",
+      "domain": "studiocoachin.com",
+      "website": "http://www.studiocoachin.com/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "dance",
+        "hiit",
+        "pilates",
+        "strength-training",
+        "stretching",
+        "yoga",
+        "zumba-dance"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Corps & Forme",
+      "domain": "studiocorpsetforme.fr",
+      "website": "http://studiocorpsetforme.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "gym-time",
+        "pilates",
+        "restorative-yoga",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 10",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Corps +",
+      "domain": "studiocorpsplus.fr",
+      "website": "https://studiocorpsplus.fr/",
+      "categories": [
+        "aerial-antigravity-yoga",
+        "fitness",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates",
+        "stretching",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 18",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Else",
+      "domain": "studioelse.fr",
+      "website": "https://www.studioelse.fr/",
+      "categories": [
+        "ballet-dance",
+        "bootcamp",
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "hip-hop-dance",
+        "jazz-dance",
+        "martial-arts",
+        "pilates",
+        "power-yoga",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Forme",
+      "domain": "studioforme.fr",
+      "website": "http://studioforme.fr/?utm_source=gmb",
+      "categories": [
+        "electrical-muscle-stimulation",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Marga",
+      "domain": "studiomarga.com",
+      "website": "http://studiomarga.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "barre",
+        "bootcamp",
+        "dance",
+        "fitness",
+        "hatha-yoga",
+        "jivamukti-yoga",
+        "kundalini-yoga",
+        "martial-arts",
+        "pilates",
+        "prenatal",
+        "prenatal-yoga",
+        "qi-gong",
+        "strength-training",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Nodè",
+      "domain": "studionode.fr",
+      "website": "https://studionode.fr/",
+      "categories": [
+        "bootcamp",
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "lagree",
+        "mat-pilates",
+        "pilates",
+        "restorative-yoga",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 20",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio On",
+      "domain": "studioon.fr",
+      "website": "https://studioon.fr/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Yoga Studio Rive Gauche",
+      "domain": "studiorivegauche.com",
+      "website": "https://www.studiorivegauche.com/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 07",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Summit Cycle",
+      "domain": "summit-cycle.fr",
+      "website": "http://www.summit-cycle.fr/",
+      "categories": [
+        "bootcamp",
+        "cycling",
+        "fitness",
+        "hiit",
+        "indoor-cycling",
+        "running",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Sunshine Studio",
+      "domain": "sunshinestudiopilates.com",
+      "website": "https://www.sunshinestudiopilates.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=10701012969334888909",
+      "categories": [
+        "fitness",
+        "high-intensity-pilates",
+        "pilates",
+        "prenatal",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Indian Swaas",
+      "domain": "swa-ayurveda.com",
+      "website": "https://swa-ayurveda.com/",
+      "categories": [
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Swedish Fit",
+      "domain": "swedishfit.com",
+      "website": "http://www.swedishfit.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "pilates",
+        "strength-training",
+        "yoga"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Swedish Fit",
+      "domain": "swedishfit.fr",
+      "website": "https://www.swedishfit.fr/loc/dt/?id=784",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Lovely Keys",
+      "domain": "swimstars.co",
+      "website": "https://swimstars.co/piscines/paris-oberkampf/",
+      "categories": [
+        "bootcamp",
+        "cycling",
+        "indoor-cycling",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Club St-Germaine Taekwondo",
+      "domain": "taekwondoparis5.fr",
+      "website": "http://taekwondoparis5.fr/",
+      "categories": [
+        "fitness",
+        "martial-arts",
+        "taekwondo"
+      ],
+      "arrondissement": "Paris 05",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "KTRL",
+      "domain": "take-ktrl.com",
+      "website": "https://www.take-ktrl.com/",
+      "categories": [
+        "barre",
+        "bootcamp",
+        "circuit-training",
+        "fitness",
+        "high-intensity-pilates",
+        "hiit",
+        "low-impact-training",
+        "pilates",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "trx",
+        "weightlifting"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "DANSE ART ET MOUVEMENT",
+      "domain": "tangopilatesflow.com",
+      "website": "https://tangopilatesflow.com/",
+      "categories": [
+        "barre",
+        "contemporary-dance",
+        "dance",
+        "fitness",
+        "jazz-dance",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 01",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "TECFIT",
+      "domain": "tecfit-boulognebillancourt.fr",
+      "website": "https://www.tecfit-boulognebillancourt.fr/",
+      "categories": [
+        "electrical-muscle-stimulation",
+        "fitness"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le Temple Noble Art",
+      "domain": "temple-nobleart.com",
+      "website": "https://www.temple-nobleart.com/clubs/boxe-paris-15/",
+      "categories": [
+        "boxing",
+        "circuit-training",
+        "fitness",
+        "heavy-bag",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 15",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "TER’HAPPY STUDIO",
+      "domain": "terhappy-studio.fr",
+      "website": "http://terhappy-studio.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "pilates",
+        "power-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Le GymGirlsClub",
+      "domain": "tffacademy.fr",
+      "website": "https://www.tffacademy.fr/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "hiit",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 13",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "the Gravity Studio",
+      "domain": "thegravitystudioparis.com",
+      "website": "https://www.thegravitystudioparis.com/",
+      "categories": [
+        "pilates",
+        "reformer-pilates",
+        "yoga"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "The Method Paris - Studio Opéra",
+      "domain": "themethodfrance.fr",
+      "website": "https://themethodfrance.fr/",
+      "categories": [
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "low-impact-training",
+        "mat-pilates",
+        "pilates",
+        "sculpt"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "La Maison The New Cool",
+      "domain": "thenewcool.fr",
+      "website": "http://www.thenewcool.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "pilates",
+        "power-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "The New Me",
+      "domain": "thenewmeparis.com",
+      "website": "https://thenewmeparis.com/pages/the-new-me-studio-neuilly",
+      "categories": [
+        "ballet-dance",
+        "barre",
+        "bootcamp",
+        "dance",
+        "fitness",
+        "low-impact-training",
+        "pilates",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "The Space",
+      "domain": "thespaceparis.com",
+      "website": "http://www.thespaceparis.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "jivamukti-yoga",
+        "pilates",
+        "prenatal",
+        "prenatal-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 12",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "The Well",
+      "domain": "thewellparis.com",
+      "website": "http://thewellparis.com/",
+      "categories": [
+        "barre",
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "pilates",
+        "restorative-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Noble Art Institut",
+      "domain": "toprankbagnolet.com",
+      "website": "http://www.toprankbagnolet.com/",
+      "categories": [
+        "boxing"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Toutain Coaching",
+      "domain": "toutaincoaching.com",
+      "website": "http://www.toutaincoaching.com/",
+      "categories": [
+        "boxing",
+        "heavy-bag",
+        "kickboxing"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Tribu",
+      "domain": "tribuparis.com",
+      "website": "http://tribuparis.com/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "pilates",
+        "power-yoga",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Upgrade Private Coaching",
+      "domain": "upgradeprivatecoaching.com",
+      "website": "http://www.upgradeprivatecoaching.com/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "fitness",
+        "high-intensity-pilates",
+        "hiit",
+        "mat-pilates",
+        "pilates",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 09",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "vietvodaoparis",
+      "domain": "vietvodaoparis.fr",
+      "website": "http://vietvodaoparis.fr/",
+      "categories": [
+        "fitness",
+        "karate",
+        "martial-arts",
+        "mixed-martial-arts",
+        "qi-gong",
+        "tai-chi"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Vo Thuat Van Vo Dao Paris",
+      "domain": "vothuatvanvodaoparis.com",
+      "website": "https://vothuatvanvodaoparis.com/",
+      "categories": [
+        "fitness",
+        "karate",
+        "krav-maga",
+        "martial-arts",
+        "mixed-martial-arts",
+        "outdoors",
+        "tai-chi"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Vybes Reformer",
+      "domain": "vybes-reformer.com",
+      "website": "http://www.vybes-reformer.com/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Bloom",
+      "domain": "welovebloom.co",
+      "website": "https://welovebloom.co/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "mat-pilates",
+        "pilates",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": "Paris 02",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "We Stretch",
+      "domain": "westretch.fr",
+      "website": "https://westretch.fr/",
+      "categories": [
+        "fitness",
+        "stretching"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Without Weakness",
+      "domain": "withoutweakness.fr",
+      "website": "https://withoutweakness.fr/",
+      "categories": [
+        "fitness",
+        "personal-training"
+      ],
+      "arrondissement": "Paris 04",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Workouts By Yael",
+      "domain": "workoutsbyyael.com",
+      "website": "https://workoutsbyyael.com/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "high-intensity-pilates",
+        "hiit",
+        "hip-hop-dance",
+        "low-impact-training",
+        "pilates",
+        "sculpt",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 16",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Workout with Dan",
+      "domain": "workoutwithdan.fr",
+      "website": "https://workoutwithdan.fr/",
+      "categories": [
+        "boxing",
+        "fitness"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Studio Wunder Barre",
+      "domain": "wunder-barre.com",
+      "website": "http://www.wunder-barre.com/",
+      "categories": [
+        "barre",
+        "bollywood-dance",
+        "boxing",
+        "dance",
+        "fitness",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates",
+        "yoga"
+      ],
+      "arrondissement": "Paris 17",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Gérard Arnaud Yoga",
+      "domain": "yoga-paris.com",
+      "website": "http://www.yoga-paris.com/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "restorative-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 11",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Yoga with Anastasia",
+      "domain": "yoganepita.com",
+      "website": "https://yoganepita.com/",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "Soulfully, Jo",
+      "domain": "yogasearcher-paris.com",
+      "website": "http://www.yogasearcher-paris.com/",
+      "categories": [
+        "fitness",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 03",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    },
+    {
+      "studio_name": "YUJ YOGA & REFORMER Pilates Studio",
+      "domain": "yujparis.com",
+      "website": "http://www.yujparis.com/",
+      "categories": [
+        "fitness",
+        "hot-yoga",
+        "pilates",
+        "reformer-pilates",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 01",
+      "source": "studios_consolidated_boutique",
+      "status": "pending_manual_pricing_update"
+    }
+  ]
+}
