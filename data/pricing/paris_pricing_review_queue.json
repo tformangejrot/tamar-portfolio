@@ -1,0 +1,3842 @@
+{
+  "generated_at": "2026-02-27T08:26:33.337Z",
+  "source_file": "/Users/tformangejrot/Desktop/tamar-portfolio/data/pricing/paris_pricing_master.json",
+  "summary": {
+    "total_records": 100,
+    "auto_approved_count": 13,
+    "review_required_count": 87,
+    "non_public_pricing_count": 49,
+    "high_confidence_count": 13,
+    "medium_confidence_count": 36,
+    "low_confidence_count": 51
+  },
+  "auto_approved": [
+    {
+      "studio_name": "Aja House",
+      "domain": "ajahouse.fr",
+      "website": "https://www.ajahouse.fr/",
+      "pricing_url": "https://www.ajahouse.fr/tarifs-cours-collectifs/",
+      "booking_software": "mindbody",
+      "pricing_publicly_available": true,
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "modality_drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 1,
+        "class_packs": 6,
+        "memberships": 4,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Ashtanga Yoga Paris",
+      "domain": "ashtangayogaparis.fr",
+      "website": "http://www.ashtangayogaparis.fr/",
+      "pricing_url": "https://www.ashtangayogaparis.fr/prix/",
+      "booking_software": "bsport, mindbody",
+      "pricing_publicly_available": true,
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "modality_drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 2,
+        "class_packs": 3,
+        "memberships": 2,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "ASSY/ASANA (HOLD Studio)",
+      "domain": "assyasana.fr",
+      "website": "https://assyasana.fr/",
+      "pricing_url": "https://assyasana.fr/tarifs",
+      "booking_software": "eversports",
+      "pricing_publicly_available": true,
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_structured"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 2,
+        "class_packs": 4,
+        "memberships": 4,
+        "discounts": 2
+      },
+      "notes": "Operating as HOLD Studio. Validity measured in weeks."
+    },
+    {
+      "studio_name": "Core Society",
+      "domain": "coresociety.fr",
+      "website": "https://www.coresociety.fr/",
+      "pricing_url": "https://www.coresociety.fr/tarifs/",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "modality_drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "pricing_url",
+        "booking_software",
+        "expiration_structured"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 3,
+        "class_packs": 3,
+        "memberships": 3,
+        "discounts": 0
+      },
+      "notes": "Grip socks required. Memberships include -15% on café and priority event access."
+    },
+    {
+      "studio_name": "Aqua by",
+      "domain": "aqua-by.com",
+      "website": "https://aqua-by.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+charonne",
+      "pricing_url": "https://aqua-by.com/les-tarifs/",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 96,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_structured"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 1,
+        "class_packs": 4,
+        "memberships": 3,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Kbox",
+      "domain": "atelierkbox.com",
+      "website": "https://atelierkbox.com/",
+      "pricing_url": "https://atelierkbox.com/ateliers",
+      "booking_software": null,
+      "pricing_publicly_available": true,
+      "confidence_score": 96,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "modality_drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "discounts",
+        "pricing_url",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 1,
+        "class_packs": 4,
+        "memberships": 3,
+        "discounts": 1
+      },
+      "notes": "Carnets sold at front desk. No online booking platform identified. Free trial available on request. All memberships sans engagement."
+    },
+    {
+      "studio_name": "à soi · yoga",
+      "domain": "a-soi.com",
+      "website": "https://www.a-soi.com/",
+      "pricing_url": "https://www.a-soi.com/cours-studio",
+      "booking_software": "acuity scheduling, momoyoga",
+      "pricing_publicly_available": true,
+      "confidence_score": 92,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "modality_drop_in",
+        "intro_offers",
+        "class_packs",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 2,
+        "class_packs": 3,
+        "memberships": 0,
+        "discounts": 3
+      },
+      "notes": "Independent yoga teacher. Offers group classes, private sessions, and massage. Also teaches at partner studios. SAP-eligible (50% tax credit on private sessions)."
+    },
+    {
+      "studio_name": "Brooklyn Fitboxing",
+      "domain": "brooklynfitboxing.com",
+      "website": "https://www.brooklynfitboxing.com/public/fr/fr-fr/",
+      "pricing_url": "https://www.brooklynfitboxing.com/public/fr/fr-fr/ (homepage scroll)",
+      "booking_software": "proprietary (Brooklyn Fitboxing app)",
+      "pricing_publicly_available": true,
+      "confidence_score": 92,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "pricing_url",
+        "booking_software",
+        "expiration_structured"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 1,
+        "class_packs": 3,
+        "memberships": 4,
+        "discounts": 0
+      },
+      "notes": "International franchise. Prices listed as 'à partir de' (from). 4-week billing cycle for memberships, not monthly. Gloves and wraps included with trial."
+    },
+    {
+      "studio_name": "AT AUM",
+      "domain": "ataum-paris.fr",
+      "website": "http://www.ataum-paris.fr/",
+      "pricing_url": "https://ataum-paris.fr/tarifs-at-aum-studio-cours/",
+      "booking_software": "eversports",
+      "pricing_publicly_available": true,
+      "confidence_score": 87,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "modality_drop_in",
+        "intro_offers",
+        "class_packs",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 2,
+        "class_packs": 1,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Dynamo Cycling",
+      "domain": "dynamo-cycling.com",
+      "website": "http://www.dynamo-cycling.com/",
+      "pricing_url": "https://dynamo-cycling.com/reservation/#/tarifs",
+      "booking_software": "Monday Sports Club (Mindbody)",
+      "pricing_publicly_available": true,
+      "confidence_score": 87,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_structured"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 2,
+        "class_packs": 4,
+        "memberships": 0,
+        "discounts": 3
+      },
+      "notes": "Part of Monday Sports Club network with Riise and Punch Boxing. Credits valid across all three. Alma payments available for larger packs."
+    },
+    {
+      "studio_name": "Bee Lagree",
+      "domain": "beelagree.fr",
+      "website": "https://beelagree.fr/",
+      "pricing_url": "https://beelagree.fr/tarifs",
+      "booking_software": "mindbody",
+      "pricing_publicly_available": true,
+      "confidence_score": 85,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "class_packs",
+        "memberships",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 0,
+        "class_packs": 4,
+        "memberships": 4,
+        "discounts": 0
+      },
+      "notes": "Memberships listed as 'Bientôt disponible' (coming soon). Pack validity not stated on site."
+    },
+    {
+      "studio_name": "DNA Pilates Paris",
+      "domain": "dnapilatesparis.com",
+      "website": "https://dnapilatesparis.com/",
+      "pricing_url": "https://dnapilatesparis.com/shop",
+      "booking_software": "mindbody",
+      "pricing_publicly_available": true,
+      "confidence_score": 81,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "class_packs",
+        "memberships",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 0,
+        "class_packs": 3,
+        "memberships": 3,
+        "discounts": 0
+      },
+      "notes": "No intro offers. No student/corporate discounts listed. Pack validity not shown on website; CGV say it's indicated at order."
+    },
+    {
+      "studio_name": "Carolina Dehlouz",
+      "domain": "centrededansedumarais.fr",
+      "website": "http://www.centrededansedumarais.fr/",
+      "pricing_url": "http://www.centrededansedumarais.fr/tarifs/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 75,
+      "confidence_tier": "high",
+      "review_required": false,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "class_packs",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 0,
+        "class_packs": 4,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    }
+  ],
+  "review_required": [
+    {
+      "studio_name": "becoached",
+      "domain": "becoached.fr",
+      "website": "https://www.becoached.fr/",
+      "pricing_url": "https://www.becoached.fr/copie-de-services-tarifs",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 71,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "drop_in",
+        "class_packs",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": true,
+        "intro_offers": 0,
+        "class_packs": 4,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Credit-based system for multi-activity cards. Small group sessions sold separately. No memberships. Sans engagement."
+    },
+    {
+      "studio_name": "Ateliers Ground Control",
+      "domain": "ateliers-ground-control.com",
+      "website": "https://www.ateliers-ground-control.com/",
+      "pricing_url": "https://www.ateliers-ground-control.com/nos-tarifs/",
+      "booking_software": "deciplus",
+      "pricing_publicly_available": true,
+      "confidence_score": 68,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "class_packs",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 3,
+        "class_packs": 3,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "agefo.com",
+      "website": "https://agefo.com/residence/residence-jerome-lejeune/",
+      "pricing_url": "https://agefo.com/residence/residence-jerome-lejeune/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "AKMD Krav Maga",
+      "domain": "akmd.fr",
+      "website": "https://www.akmd.fr/",
+      "pricing_url": "https://www.akmd.fr/krav-maga-lieux-horaires-tarifs/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Apollo Sporting Club",
+      "domain": "apollosportingclub.com",
+      "website": "https://www.apollosportingclub.com/details-club+apollo+courbevoie+la+defense+92-272.html",
+      "pricing_url": "https://www.apollosportingclub.com/",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Astra body",
+      "domain": "astrabodyvincennes.fr",
+      "website": "https://astrabodyvincennes.fr/",
+      "pricing_url": "https://astrabodyvincennes.fr/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "La Canopée : Yoga & Bien-Être",
+      "domain": "atelierlacanopee.com",
+      "website": "https://www.atelierlacanopee.com/",
+      "pricing_url": "https://www.atelierlacanopee.com/planning-et-reservations",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Athletx Rebel",
+      "domain": "athletxrebel.com",
+      "website": "https://www.athletxrebel.com/",
+      "pricing_url": "https://www.athletxrebel.com/tarifs",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "AURA",
+      "domain": "aurapilates.fr",
+      "website": "https://www.aurapilates.fr/",
+      "pricing_url": "https://aurapilates.fr/pricing",
+      "booking_software": "mindbody",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Baba Yoga",
+      "domain": "babayogaclub.com",
+      "website": "https://www.babayogaclub.com/",
+      "pricing_url": "https://www.babayogaclub.com/tarifs",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "BarreShape",
+      "domain": "barreshape.com",
+      "website": "http://www.barreshape.com/",
+      "pricing_url": "https://www.barreshape.com/prix-dun-cours-de-barre-en-ligne/",
+      "booking_software": "mindbody, proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Beyoga Paris",
+      "domain": "beyoga.fr",
+      "website": "https://www.beyoga.fr/fr",
+      "pricing_url": "https://www.beyoga.fr/fr/cours-de-yoga-paris-14-5-6-nouveaux-yogis",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "bodistudio",
+      "domain": "bodi-studio.com",
+      "website": "https://bodi-studio.com/",
+      "pricing_url": "https://bodi-studio.com/tarifs",
+      "booking_software": "mindbody, proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Body Booster Paris 16",
+      "domain": "bodybooster.fr",
+      "website": "http://www.bodybooster.fr/",
+      "pricing_url": "https://www.bodybooster.fr/nos-offres.html",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Studio Body Life Paris",
+      "domain": "bodylifeparis.com",
+      "website": "http://www.bodylifeparis.com/",
+      "pricing_url": "https://bodylifeparis.com/nos-offres/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Bodytec15",
+      "domain": "bodytec15.fr",
+      "website": "https://bodytec15.fr/",
+      "pricing_url": "https://bodytec15.fr/OFFRES.html",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "BodyTech Center",
+      "domain": "bodytechcenter.fr",
+      "website": "http://www.bodytechcenter.fr/",
+      "pricing_url": "https://bodytechcenter.fr/offre-tarif-sport-et-bient-etre-paris-bodytech-center/",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Burning Bar",
+      "domain": "burningbar.fr",
+      "website": "https://www.burningbar.fr/",
+      "pricing_url": "https://burningbar.fr/the-hot-room/",
+      "booking_software": "mindbody, proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Centre de Yoga Iyengar de Paris",
+      "domain": "centreiyengar-paris.fr",
+      "website": "https://centreiyengar-paris.fr/",
+      "pricing_url": "https://centreiyengar-paris.fr/cours-de-yoga/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Climbing District",
+      "domain": "climbingdistrict.com",
+      "website": "https://www.climbingdistrict.com/",
+      "pricing_url": "https://climbingdistrict.com/tarifs-et-abonnements/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "CrossFit Factory 92",
+      "domain": "crossfitfactory.fr",
+      "website": "http://www.crossfitfactory.fr/",
+      "pricing_url": "https://crossfitfactory.fr/pages/tarifs-crossfit-puteaux-la-defense",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Cryofast",
+      "domain": "cryofast.fr",
+      "website": "https://cryofast.fr/centre-de-cryotherapie-paris/",
+      "pricing_url": "https://cryofast.fr/tarifs-2/",
+      "booking_software": "planity",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Dancefloor Paris",
+      "domain": "dancefloor-paris.com",
+      "website": "https://dancefloor-paris.com/",
+      "pricing_url": "https://www.dancefloor-paris.com/tarifs/",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "DECIBEL®",
+      "domain": "decibel-danse.com",
+      "website": "https://www.decibel-danse.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+decibel",
+      "pricing_url": "https://www.decibel-danse.com/tarifs/",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Define Studio",
+      "domain": "definestudio.fr",
+      "website": "https://definestudio.fr/",
+      "pricing_url": "https://definestudio.fr/paris/tarifs/",
+      "booking_software": "bsport, proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "DRIP",
+      "domain": "drip-hiit.com",
+      "website": "https://www.drip-hiit.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+grands-boulevards",
+      "pricing_url": "https://www.drip-hiit.com/tarifs/",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 52,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Ecole Samba Davina",
+      "domain": "davinasamba.com",
+      "website": "http://www.davinasamba.com/",
+      "pricing_url": "https://davinasamba.com/cours-de-samba/",
+      "booking_software": "eversports",
+      "pricing_publicly_available": true,
+      "confidence_score": 51,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "memberships",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 1,
+        "discounts": 0
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Yoga Bikram Paris - Grands Boulevards",
+      "domain": "bikramyogaparis.com",
+      "website": "http://www.bikramyogaparis.com/",
+      "pricing_url": "https://www.bikramyogaparis.com/tarifs/",
+      "booking_software": "mindbody, proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 49,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Studio Brume",
+      "domain": "brumestudios.fr",
+      "website": "https://www.brumestudios.fr/?utm_source=google-my-business&utm_medium=site-web&utm_campaign=paris-12",
+      "pricing_url": "https://www.brumestudios.fr/tarifs",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 49,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "callesol.net",
+      "website": "https://www.callesol.net/",
+      "pricing_url": "https://www.callesol.net/tarifs/",
+      "booking_software": "bsport, proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 49,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "CANDRYA YOGA",
+      "domain": "candryayoga.com",
+      "website": "https://www.candryayoga.com/",
+      "pricing_url": "https://candryayoga.com/cours/",
+      "booking_software": "momoyoga",
+      "pricing_publicly_available": true,
+      "confidence_score": 49,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "CLMX",
+      "domain": "clmx.fr",
+      "website": "http://www.clmx.fr/",
+      "pricing_url": "https://www.clmx.fr/tarifs",
+      "booking_software": "bsport",
+      "pricing_publicly_available": true,
+      "confidence_score": 49,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Krav Maga Paris",
+      "domain": "coursdekravmaga.com",
+      "website": "https://www.coursdekravmaga.com/",
+      "pricing_url": "https://coursdekravmaga.com/",
+      "booking_software": "proprietary, wix-bookings",
+      "pricing_publicly_available": true,
+      "confidence_score": 49,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Deeply studio de Pilates",
+      "domain": "deeply-studiodepilates.com",
+      "website": "https://www.deeply-studiodepilates.com/",
+      "pricing_url": "https://www.deeply-studiodepilates.com/tarifs",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": true,
+      "confidence_score": 49,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "discounts",
+        "pricing_url",
+        "booking_software"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "A l'Eau Bike Paris",
+      "domain": "aleaubike.fr",
+      "website": "http://www.aleaubike.fr/",
+      "pricing_url": "http://www.aleaubike.fr/tarifs/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": true,
+      "confidence_score": 48,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "memberships",
+        "pricing_url",
+        "booking_software"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 1,
+        "discounts": 0
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "YOZE - Boulogne-Billancourt Pont de Sèvres",
+      "domain": "arkose.com",
+      "website": "https://arkose.com/pont-de-sevres",
+      "pricing_url": "https://arkose.com/tarifs",
+      "booking_software": null,
+      "pricing_publicly_available": true,
+      "confidence_score": 48,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "memberships",
+        "discounts",
+        "pricing_url",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 1,
+        "discounts": 1
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Mickael Bilionniere",
+      "domain": "cours-hip-hop.fr",
+      "website": "http://www.cours-hip-hop.fr/",
+      "pricing_url": "http://www.cours-hip-hop.fr/index.php",
+      "booking_software": null,
+      "pricing_publicly_available": true,
+      "confidence_score": 43,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "public_pricing",
+        "intro_offers",
+        "pricing_url",
+        "expiration_notes"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 1,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": ""
+    },
+    {
+      "studio_name": "Vingtième Danse",
+      "domain": "20edanse.com",
+      "website": "http://www.20edanse.com/",
+      "pricing_url": "https://www.20edanse.com/tarifs",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "L'Académie 34",
+      "domain": "academie34paris.com",
+      "website": "https://www.academie34paris.com/",
+      "pricing_url": "https://www.academie34paris.com/tarifs",
+      "booking_software": "mindbody",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "ACADEMIE INTERNATIONALE DE LA DANSE (Paris 16ème)",
+      "domain": "academiedanseparis.com",
+      "website": "http://www.academiedanseparis.com/",
+      "pricing_url": "https://academiedanseparis.com/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Académie Francaise de Yoga",
+      "domain": "academiefrancaisedeyoga.com",
+      "website": "http://www.academiefrancaisedeyoga.com/",
+      "pricing_url": "https://www.academiefrancaisedeyoga.com/cours",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "ADRENALINE SPORT & CAFE",
+      "domain": "adrenaline-sport-cafe.fr",
+      "website": "https://adrenaline-sport-cafe.fr/",
+      "pricing_url": null,
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "No reachable pricing candidates discovered."
+    },
+    {
+      "studio_name": "AFYA",
+      "domain": "afya.fr",
+      "website": "https://www.afya.fr/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=2528681361313747804",
+      "pricing_url": null,
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "booking_software"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "No reachable pricing candidates discovered."
+    },
+    {
+      "studio_name": "Yoga alsa",
+      "domain": "agence-sisters-factory.com",
+      "website": "https://agence-sisters-factory.com/alsayoga",
+      "pricing_url": "https://agence-sisters-factory.com/alsayoga",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Apyzen",
+      "domain": "apycem.com",
+      "website": "https://apycem.com/",
+      "pricing_url": "https://apycem.com/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "armeedusalut.fr",
+      "website": "http://www.armeedusalut.fr/",
+      "pricing_url": "https://www.armeedusalut.fr/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Astra Body Paris 8",
+      "domain": "astrabody-paris8.fr",
+      "website": "http://www.astrabody-paris8.fr/",
+      "pricing_url": "https://www.astrabody-paris8.fr/r%C3%A9servation-tarifs",
+      "booking_software": "planity, wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Atelier Mood",
+      "domain": "ateliermood.com",
+      "website": "https://www.ateliermood.com/",
+      "pricing_url": "https://www.ateliermood.com/tarifs/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Yoga Bar",
+      "domain": "atelierportesoleil.com",
+      "website": "http://www.atelierportesoleil.com/",
+      "pricing_url": "http://www.atelierportesoleil.com/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Athletic Studio",
+      "domain": "athletic-studio.fr",
+      "website": "https://www.athletic-studio.fr/",
+      "pricing_url": "https://www.athletic-studio.fr/tarifs-smallgroup",
+      "booking_software": "bsport, wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Atmasphera",
+      "domain": "atmasphera.fr",
+      "website": "https://atmasphera.fr/",
+      "pricing_url": "https://atmasphera.fr/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Au cours du mouvement",
+      "domain": "au-cours-du-mouvement.com",
+      "website": "http://www.au-cours-du-mouvement.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=17970648994060070640",
+      "pricing_url": "https://www.au-cours-du-mouvement.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=17970648994060070640",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Au Garage Club",
+      "domain": "augarageclub.fr",
+      "website": "http://www.augarageclub.fr/",
+      "pricing_url": "https://www.augarageclub.fr/les-tarifs",
+      "booking_software": "bsport, wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "AU LAGREE CLUB",
+      "domain": "aulagreeclub.com",
+      "website": "https://www.aulagreeclub.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=11985339791980549681",
+      "pricing_url": "https://www.aulagreeclub.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=11985339791980549681",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Naamasté",
+      "domain": "backoffice.bsport.io",
+      "website": "https://backoffice.bsport.io/m/Naamast%C3%A9/3451/calendar/?isPreview=true",
+      "pricing_url": "https://backoffice.bsport.io/tarifs",
+      "booking_software": "bsport",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Bandha Yoga",
+      "domain": "bandhayoga.paris",
+      "website": "https://www.bandhayoga.paris/",
+      "pricing_url": "https://www.bandhayoga.paris/tarifs2",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Banote Club",
+      "domain": "banoteclub.com",
+      "website": "https://www.banoteclub.com/",
+      "pricing_url": null,
+      "booking_software": null,
+      "pricing_publicly_available": null,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Unable to access website during data collection (site may have been down or blocking automated access). Manual verification required."
+    },
+    {
+      "studio_name": "Battesti coaching",
+      "domain": "battesticoaching.com",
+      "website": "https://www.battesticoaching.com/",
+      "pricing_url": "https://www.battesticoaching.com/",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Studio Biopilates Paris",
+      "domain": "biopilates.fr",
+      "website": "https://biopilates.fr/",
+      "pricing_url": "https://biopilates.fr/tarifs",
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "blom31.life",
+      "website": "https://blom31.life/",
+      "pricing_url": "https://blom31.life/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Body Om",
+      "domain": "bodyom.fr",
+      "website": "http://www.bodyom.fr/",
+      "pricing_url": "https://www.bodyom.fr/planning-tarifs",
+      "booking_software": "eversports, wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Body positive studio",
+      "domain": "bodypositivestudio.com",
+      "website": "https://bodypositivestudio.com/",
+      "pricing_url": null,
+      "booking_software": "momoyoga",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "booking_software",
+        "page_unavailable"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Candidate pages fetched but unavailable or blocked."
+    },
+    {
+      "studio_name": "Bollywood by Deva",
+      "domain": "bollywood-paris-by-deva.com",
+      "website": "https://www.bollywood-paris-by-deva.com/",
+      "pricing_url": "https://www.bollywood-paris-by-deva.com/cours-et-stages",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Flamenkrais",
+      "domain": "bom93.com",
+      "website": "https://bom93.com/",
+      "pricing_url": "https://bom93.com/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Ponthieu Soleil",
+      "domain": "bronzage-aquabike-paris-8.fr",
+      "website": "https://bronzage-aquabike-paris-8.fr/",
+      "pricing_url": "https://bronzage-aquabike-paris8.fr/fr/page/nos-tarifs",
+      "booking_software": "planity",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "BUBBLE",
+      "domain": "bubble.spa",
+      "website": "https://bubble.spa/",
+      "pricing_url": "https://bubble.spa/",
+      "booking_software": "planity",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Carbonne",
+      "domain": "carbonnestudio.com",
+      "website": "https://www.carbonnestudio.com/",
+      "pricing_url": "https://www.carbonnestudio.com/",
+      "booking_software": "bsport, wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "ZumbaFrance",
+      "domain": "carre-montparnasse.com",
+      "website": "http://www.carre-montparnasse.com/",
+      "pricing_url": null,
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "No reachable pricing candidates discovered."
+    },
+    {
+      "studio_name": "Céline Coelho Yoga",
+      "domain": "catuelanyoga.fr",
+      "website": "http://www.catuelanyoga.fr/",
+      "pricing_url": "https://catuelanyoga.mailerpage.io/tarifs",
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Central Fit",
+      "domain": "centralfitcharenton.fr",
+      "website": "https://centralfitcharenton.fr/",
+      "pricing_url": "https://www.centralfitcharenton.fr/cours-collectifs",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Central Fit",
+      "domain": "centralfitvincennes.fr",
+      "website": "http://www.centralfitvincennes.fr/",
+      "pricing_url": "https://www.centralfitvincennes.fr/tarifs",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Poppy Yoga",
+      "domain": "centreanima.com",
+      "website": "https://www.centreanima.com/",
+      "pricing_url": "https://centreanima.com/cours-de-yoga-paris/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Cerce",
+      "domain": "cerce.fr",
+      "website": "http://cerce.fr/",
+      "pricing_url": null,
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "No reachable pricing candidates discovered."
+    },
+    {
+      "studio_name": "Chang noi",
+      "domain": "changnoiboxing.com",
+      "website": "https://www.changnoiboxing.com/",
+      "pricing_url": "https://www.changnoiboxing.com/pricing",
+      "booking_software": "bsport",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Chez Simone",
+      "domain": "chezsimone.fr",
+      "website": "https://www.chezsimone.fr/",
+      "pricing_url": "https://chezsimone.fr/nos-offres/",
+      "booking_software": "bsport, proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Club Lulu",
+      "domain": "clublulu.paris",
+      "website": "http://www.clublulu.paris/",
+      "pricing_url": "https://www.clublulu.paris/test-cours",
+      "booking_software": "bsport",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "combray",
+      "domain": "combray.com",
+      "website": "https://combray.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb_siteweb",
+      "pricing_url": "https://combray.com/pages/nos-tarifs",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Cosmopilates",
+      "domain": "cosmopilates.fr",
+      "website": "http://www.cosmopilates.fr/",
+      "pricing_url": "https://cosmopilates.fr/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "CrossFit Factory - Boulogne Billancourt",
+      "domain": "crossfitfactory-boulogne.fr",
+      "website": "https://crossfitfactory-boulogne.fr/",
+      "pricing_url": "https://crossfitfactory-boulogne.fr/collections/nos-tarifs",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Cross Fit Grande Arche Station",
+      "domain": "crossfitgrandearchestation.com",
+      "website": "http://crossfitgrandearchestation.com/",
+      "pricing_url": "https://crossfitgrandearchestation.com/la-boxtarifs-et-horaires/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "CrossFit Lutèce II",
+      "domain": "crossfitlutece.com",
+      "website": "http://www.crossfitlutece.com/",
+      "pricing_url": "https://crossfitlutece.com/tarifs-horaires",
+      "booking_software": "bsport",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Culte Reformer",
+      "domain": "culte-reformer.com",
+      "website": "https://www.culte-reformer.com/",
+      "pricing_url": "https://www.culte-reformer.com/tarifs",
+      "booking_software": "bsport",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Paris Boxing Club",
+      "domain": "curial-boxing-team.fr",
+      "website": "http://curial-boxing-team.fr/",
+      "pricing_url": "https://curial-boxing-team.fr/tarifs-cours-de-boxe-et-aeroboxe/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Cyberdanse Paris",
+      "domain": "cyberdanseparis.com",
+      "website": "http://www.cyberdanseparis.com/",
+      "pricing_url": "http://www.cyberdanseparis.com/cours.html",
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "à soi · yoga",
+      "domain": "daljeet-yoga.fr",
+      "website": "http://www.daljeet-yoga.fr/cours-yoga-paris-neuilly-courbevoie/yoga-a-neuilly",
+      "pricing_url": "http://daljeet-yoga.fr/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "danse75.fr",
+      "website": "http://www.danse75.fr/",
+      "pricing_url": "https://aac.danse75.fr//cours-enfants/inscriptions-enfants",
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "YOZE - Alesia Dansomania 2",
+      "domain": "dansomania.fr",
+      "website": "https://www.dansomania.fr/",
+      "pricing_url": null,
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "No reachable pricing candidates discovered."
+    }
+  ],
+  "non_public_pricing": [
+    {
+      "studio_name": "Vingtième Danse",
+      "domain": "20edanse.com",
+      "website": "http://www.20edanse.com/",
+      "pricing_url": "https://www.20edanse.com/tarifs",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "L'Académie 34",
+      "domain": "academie34paris.com",
+      "website": "https://www.academie34paris.com/",
+      "pricing_url": "https://www.academie34paris.com/tarifs",
+      "booking_software": "mindbody",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "ACADEMIE INTERNATIONALE DE LA DANSE (Paris 16ème)",
+      "domain": "academiedanseparis.com",
+      "website": "http://www.academiedanseparis.com/",
+      "pricing_url": "https://academiedanseparis.com/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Académie Francaise de Yoga",
+      "domain": "academiefrancaisedeyoga.com",
+      "website": "http://www.academiefrancaisedeyoga.com/",
+      "pricing_url": "https://www.academiefrancaisedeyoga.com/cours",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "ADRENALINE SPORT & CAFE",
+      "domain": "adrenaline-sport-cafe.fr",
+      "website": "https://adrenaline-sport-cafe.fr/",
+      "pricing_url": null,
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "No reachable pricing candidates discovered."
+    },
+    {
+      "studio_name": "AFYA",
+      "domain": "afya.fr",
+      "website": "https://www.afya.fr/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=2528681361313747804",
+      "pricing_url": null,
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "booking_software"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "No reachable pricing candidates discovered."
+    },
+    {
+      "studio_name": "Yoga alsa",
+      "domain": "agence-sisters-factory.com",
+      "website": "https://agence-sisters-factory.com/alsayoga",
+      "pricing_url": "https://agence-sisters-factory.com/alsayoga",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Apyzen",
+      "domain": "apycem.com",
+      "website": "https://apycem.com/",
+      "pricing_url": "https://apycem.com/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "armeedusalut.fr",
+      "website": "http://www.armeedusalut.fr/",
+      "pricing_url": "https://www.armeedusalut.fr/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Astra Body Paris 8",
+      "domain": "astrabody-paris8.fr",
+      "website": "http://www.astrabody-paris8.fr/",
+      "pricing_url": "https://www.astrabody-paris8.fr/r%C3%A9servation-tarifs",
+      "booking_software": "planity, wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Atelier Mood",
+      "domain": "ateliermood.com",
+      "website": "https://www.ateliermood.com/",
+      "pricing_url": "https://www.ateliermood.com/tarifs/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Yoga Bar",
+      "domain": "atelierportesoleil.com",
+      "website": "http://www.atelierportesoleil.com/",
+      "pricing_url": "http://www.atelierportesoleil.com/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "discounts",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 1
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Athletic Studio",
+      "domain": "athletic-studio.fr",
+      "website": "https://www.athletic-studio.fr/",
+      "pricing_url": "https://www.athletic-studio.fr/tarifs-smallgroup",
+      "booking_software": "bsport, wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Atmasphera",
+      "domain": "atmasphera.fr",
+      "website": "https://atmasphera.fr/",
+      "pricing_url": "https://atmasphera.fr/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Au cours du mouvement",
+      "domain": "au-cours-du-mouvement.com",
+      "website": "http://www.au-cours-du-mouvement.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=17970648994060070640",
+      "pricing_url": "https://www.au-cours-du-mouvement.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=17970648994060070640",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Au Garage Club",
+      "domain": "augarageclub.fr",
+      "website": "http://www.augarageclub.fr/",
+      "pricing_url": "https://www.augarageclub.fr/les-tarifs",
+      "booking_software": "bsport, wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "AU LAGREE CLUB",
+      "domain": "aulagreeclub.com",
+      "website": "https://www.aulagreeclub.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=11985339791980549681",
+      "pricing_url": "https://www.aulagreeclub.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=11985339791980549681",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Naamasté",
+      "domain": "backoffice.bsport.io",
+      "website": "https://backoffice.bsport.io/m/Naamast%C3%A9/3451/calendar/?isPreview=true",
+      "pricing_url": "https://backoffice.bsport.io/tarifs",
+      "booking_software": "bsport",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Bandha Yoga",
+      "domain": "bandhayoga.paris",
+      "website": "https://www.bandhayoga.paris/",
+      "pricing_url": "https://www.bandhayoga.paris/tarifs2",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Battesti coaching",
+      "domain": "battesticoaching.com",
+      "website": "https://www.battesticoaching.com/",
+      "pricing_url": "https://www.battesticoaching.com/",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Studio Biopilates Paris",
+      "domain": "biopilates.fr",
+      "website": "https://biopilates.fr/",
+      "pricing_url": "https://biopilates.fr/tarifs",
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "blom31.life",
+      "website": "https://blom31.life/",
+      "pricing_url": "https://blom31.life/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Body Om",
+      "domain": "bodyom.fr",
+      "website": "http://www.bodyom.fr/",
+      "pricing_url": "https://www.bodyom.fr/planning-tarifs",
+      "booking_software": "eversports, wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Body positive studio",
+      "domain": "bodypositivestudio.com",
+      "website": "https://bodypositivestudio.com/",
+      "pricing_url": null,
+      "booking_software": "momoyoga",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "booking_software",
+        "page_unavailable"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Candidate pages fetched but unavailable or blocked."
+    },
+    {
+      "studio_name": "Bollywood by Deva",
+      "domain": "bollywood-paris-by-deva.com",
+      "website": "https://www.bollywood-paris-by-deva.com/",
+      "pricing_url": "https://www.bollywood-paris-by-deva.com/cours-et-stages",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Flamenkrais",
+      "domain": "bom93.com",
+      "website": "https://bom93.com/",
+      "pricing_url": "https://bom93.com/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Ponthieu Soleil",
+      "domain": "bronzage-aquabike-paris-8.fr",
+      "website": "https://bronzage-aquabike-paris-8.fr/",
+      "pricing_url": "https://bronzage-aquabike-paris8.fr/fr/page/nos-tarifs",
+      "booking_software": "planity",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "BUBBLE",
+      "domain": "bubble.spa",
+      "website": "https://bubble.spa/",
+      "pricing_url": "https://bubble.spa/",
+      "booking_software": "planity",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Carbonne",
+      "domain": "carbonnestudio.com",
+      "website": "https://www.carbonnestudio.com/",
+      "pricing_url": "https://www.carbonnestudio.com/",
+      "booking_software": "bsport, wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "ZumbaFrance",
+      "domain": "carre-montparnasse.com",
+      "website": "http://www.carre-montparnasse.com/",
+      "pricing_url": null,
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "No reachable pricing candidates discovered."
+    },
+    {
+      "studio_name": "Céline Coelho Yoga",
+      "domain": "catuelanyoga.fr",
+      "website": "http://www.catuelanyoga.fr/",
+      "pricing_url": "https://catuelanyoga.mailerpage.io/tarifs",
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Central Fit",
+      "domain": "centralfitcharenton.fr",
+      "website": "https://centralfitcharenton.fr/",
+      "pricing_url": "https://www.centralfitcharenton.fr/cours-collectifs",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Central Fit",
+      "domain": "centralfitvincennes.fr",
+      "website": "http://www.centralfitvincennes.fr/",
+      "pricing_url": "https://www.centralfitvincennes.fr/tarifs",
+      "booking_software": "wix-bookings",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Poppy Yoga",
+      "domain": "centreanima.com",
+      "website": "https://www.centreanima.com/",
+      "pricing_url": "https://centreanima.com/cours-de-yoga-paris/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Cerce",
+      "domain": "cerce.fr",
+      "website": "http://cerce.fr/",
+      "pricing_url": null,
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "No reachable pricing candidates discovered."
+    },
+    {
+      "studio_name": "Chang noi",
+      "domain": "changnoiboxing.com",
+      "website": "https://www.changnoiboxing.com/",
+      "pricing_url": "https://www.changnoiboxing.com/pricing",
+      "booking_software": "bsport",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Chez Simone",
+      "domain": "chezsimone.fr",
+      "website": "https://www.chezsimone.fr/",
+      "pricing_url": "https://chezsimone.fr/nos-offres/",
+      "booking_software": "bsport, proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Club Lulu",
+      "domain": "clublulu.paris",
+      "website": "http://www.clublulu.paris/",
+      "pricing_url": "https://www.clublulu.paris/test-cours",
+      "booking_software": "bsport",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "combray",
+      "domain": "combray.com",
+      "website": "https://combray.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb_siteweb",
+      "pricing_url": "https://combray.com/pages/nos-tarifs",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Cosmopilates",
+      "domain": "cosmopilates.fr",
+      "website": "http://www.cosmopilates.fr/",
+      "pricing_url": "https://cosmopilates.fr/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "CrossFit Factory - Boulogne Billancourt",
+      "domain": "crossfitfactory-boulogne.fr",
+      "website": "https://crossfitfactory-boulogne.fr/",
+      "pricing_url": "https://crossfitfactory-boulogne.fr/collections/nos-tarifs",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Cross Fit Grande Arche Station",
+      "domain": "crossfitgrandearchestation.com",
+      "website": "http://crossfitgrandearchestation.com/",
+      "pricing_url": "https://crossfitgrandearchestation.com/la-boxtarifs-et-horaires/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "CrossFit Lutèce II",
+      "domain": "crossfitlutece.com",
+      "website": "http://www.crossfitlutece.com/",
+      "pricing_url": "https://crossfitlutece.com/tarifs-horaires",
+      "booking_software": "bsport",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Culte Reformer",
+      "domain": "culte-reformer.com",
+      "website": "https://www.culte-reformer.com/",
+      "pricing_url": "https://www.culte-reformer.com/tarifs",
+      "booking_software": "bsport",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Paris Boxing Club",
+      "domain": "curial-boxing-team.fr",
+      "website": "http://curial-boxing-team.fr/",
+      "pricing_url": "https://curial-boxing-team.fr/tarifs-cours-de-boxe-et-aeroboxe/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "expiration_notes",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "Cyberdanse Paris",
+      "domain": "cyberdanseparis.com",
+      "website": "http://www.cyberdanseparis.com/",
+      "pricing_url": "http://www.cyberdanseparis.com/cours.html",
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "à soi · yoga",
+      "domain": "daljeet-yoga.fr",
+      "website": "http://www.daljeet-yoga.fr/cours-yoga-paris-neuilly-courbevoie/yoga-a-neuilly",
+      "pricing_url": "http://daljeet-yoga.fr/",
+      "booking_software": "proprietary",
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "booking_software",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "danse75.fr",
+      "website": "http://www.danse75.fr/",
+      "pricing_url": "https://aac.danse75.fr//cours-enfants/inscriptions-enfants",
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing",
+        "pricing_url",
+        "low_confidence_parse"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "Pricing page reachable but structured prices not confidently extracted."
+    },
+    {
+      "studio_name": "YOZE - Alesia Dansomania 2",
+      "domain": "dansomania.fr",
+      "website": "https://www.dansomania.fr/",
+      "pricing_url": null,
+      "booking_software": null,
+      "pricing_publicly_available": false,
+      "confidence_score": 0,
+      "confidence_tier": "low",
+      "review_required": true,
+      "review_reason": [
+        "no_public_pricing"
+      ],
+      "quick_stats": {
+        "has_drop_in": false,
+        "intro_offers": 0,
+        "class_packs": 0,
+        "memberships": 0,
+        "discounts": 0
+      },
+      "notes": "No reachable pricing candidates discovered."
+    }
+  ]
+}

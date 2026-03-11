@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paris Pricing Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: #05060a;
+      color: #f5f7ff;
+    }
+    .hero {
+      padding: 56px 24px 28px;
+      text-align: center;
+      background: radial-gradient(circle at top, #0b1c3a 0, #05060a 65%);
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 38px;
+      background: linear-gradient(135deg, #7dd3ff 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p { margin: 0; color: #cbd5f5; }
+    .wrap { max-width: 1300px; margin: 0 auto; padding: 24px; }
+    .layer { margin-bottom: 26px; }
+    .layer-head { margin-bottom: 12px; }
+    .layer-head h2 { margin: 0 0 6px; font-size: 22px; }
+    .layer-head p { margin: 0; color: #9ca3ff; font-size: 13px; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .stat {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.10), rgba(139, 92, 246, 0.10));
+      border: 1px solid rgba(148, 163, 255, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .stat .v { font-size: 26px; font-weight: 700; color: #7dd3ff; }
+    .stat .k { font-size: 11px; color: #cbd5f5; text-transform: uppercase; letter-spacing: .06em; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: linear-gradient(135deg, rgba(15,23,42,0.92), rgba(15,23,42,0.98));
+      border-radius: 16px;
+      box-shadow: 0 0 0 1px rgba(148,163,255,0.12), 0 22px 60px rgba(15,23,42,.85);
+      padding: 18px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 17px; }
+    .sub { margin: 0 0 12px; font-size: 12px; color: #9ca3ff; text-transform: uppercase; letter-spacing: .08em; }
+    .chart-box { height: 300px; }
+    .explain {
+      margin: 8px 0 12px;
+      color: #c7d2fe;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .wide { grid-column: 1 / -1; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      color: #dbe4ff;
+    }
+    th, td {
+      border-bottom: 1px solid rgba(148, 163, 255, 0.15);
+      text-align: left;
+      padding: 8px 6px;
+      vertical-align: top;
+    }
+    th { color: #9ca3ff; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+    .chip {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      color: #7dd3ff;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 11px;
+      margin: 0 6px 6px 0;
+    }
+    .footer {
+      text-align: center;
+      color: #9ca3ff;
+      font-size: 12px;
+      padding: 24px;
+      border-top: 1px solid rgba(148,163,255,.12);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Paris Pricing Dashboard</h1>
+    <p>Multi-layer market structure and pricing strategy view</p>
+  </section>
+
+  <main class="wrap">
+    <section class="layer">
+      <div class="layer-head">
+        <h2>Layer 1 — Market Overview</h2>
+        <p>Overall pricing landscape and modality premiums.</p>
+      </div>
+      <section class="stats" id="l1Stats"></section>
+      <section class="grid">
+        <article class="card">
+          <h3>Drop-in Price Distribution</h3>
+          <p class="sub">&lt;25EUR · 25-28 · 28-30 · 30-32 · 32-35 · 35-40 · 40+</p>
+          <p class="explain">How to read: each bar is the number of studios in a price bracket. Taller bars show where market pricing clusters.</p>
+          <div class="chart-box"><canvas id="l1DropinChart"></canvas></div>
+        </article>
+        <article class="card">
+          <h3>Pricing by Modality</h3>
+          <p class="sub">Average and median drop-in by modality</p>
+          <p class="explain">How to read: compare avg vs median within each modality. A large gap often means a few premium outliers are pulling prices up.</p>
+          <div class="chart-box"><canvas id="l1ModalityChart"></canvas></div>
+        </article>
+        <article class="card wide">
+          <h3>Modality Pricing Table</h3>
+          <table>
+            <thead>
+              <tr><th>Modality</th><th>Avg Drop-in</th><th>Median</th><th>Range</th></tr>
+            </thead>
+            <tbody id="l1ModalityRows"></tbody>
+          </table>
+        </article>
+      </section>
+    </section>
+
+    <section class="layer">
+      <div class="layer-head">
+        <h2>Layer 2 — Pricing Structure</h2>
+        <p>Intro acquisition mechanics and discount aggressiveness.</p>
+      </div>
+      <section class="stats" id="l2Stats"></section>
+      <section class="grid">
+        <article class="card">
+          <h3>Intro Offer Types</h3>
+          <p class="sub">Single · 3-pack · 5-pack · Intro unlimited · No intro</p>
+          <p class="explain">How to read: each slice is share of studios using that intro model. A large "No intro offer" slice signals weaker top-of-funnel discounting.</p>
+          <div class="chart-box"><canvas id="l2IntroTypesChart"></canvas></div>
+        </article>
+        <article class="card">
+          <h3>Intro Discount vs Drop-in</h3>
+          <p class="sub">0-10% · 10-20% · 20-30% · 30-40% · 40%+</p>
+          <p class="explain">How to read: bars show how aggressive first-purchase discounts are versus standard drop-in price. Right-side concentration means stronger acquisition promos.</p>
+          <div class="chart-box"><canvas id="l2IntroDiscountChart"></canvas></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="layer">
+      <div class="layer-head">
+        <h2>Layer 3 — Pack Pricing</h2>
+        <p>Bulk purchase incentive and expiration structure.</p>
+      </div>
+      <section class="grid">
+        <article class="card">
+          <h3>Pack Discount Table</h3>
+          <table>
+            <thead>
+              <tr><th>Pack</th><th>Avg Price/Class</th><th>Avg Discount vs Drop-in</th></tr>
+            </thead>
+            <tbody id="l3PackRows"></tbody>
+          </table>
+        </article>
+        <article class="card">
+          <h3>Pack Expiration</h3>
+          <p class="sub">Usage pressure and breakage profile</p>
+          <p class="explain">How to read: shorter validity windows indicate stronger pressure to consume quickly (and potentially higher breakage risk).</p>
+          <div class="chart-box"><canvas id="l3PackExpirationChart"></canvas></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="layer">
+      <div class="layer-head">
+        <h2>Layer 4 — Membership Models</h2>
+        <p>Adoption, membership value and commitment risk.</p>
+      </div>
+      <section class="stats" id="l4Stats"></section>
+      <section class="grid">
+        <article class="card">
+          <h3>Membership Adoption</h3>
+          <p class="explain">How to read: shows how studios split between no membership, class-based, unlimited, or both. "Both" usually indicates a broader monetization strategy.</p>
+          <div class="chart-box"><canvas id="l4AdoptionChart"></canvas></div>
+        </article>
+        <article class="card">
+          <h3>Commitment Structure</h3>
+          <div id="l4Commitment"></div>
+        </article>
+        <article class="card wide">
+          <h3>Membership Types</h3>
+          <table>
+            <thead>
+              <tr><th>Type</th><th>Avg Monthly Price</th><th>Avg Effective Price/Class</th></tr>
+            </thead>
+            <tbody id="l4MembershipTypeRows"></tbody>
+          </table>
+        </article>
+      </section>
+    </section>
+
+    <section class="layer">
+      <div class="layer-head">
+        <h2>Layer 5 — Pricing Strategy</h2>
+        <p>Drop-in anchoring gap and membership-versus-pack value.</p>
+      </div>
+      <section class="stats" id="l5Stats"></section>
+      <section class="grid">
+        <article class="card">
+          <h3>Drop-in vs 10-Pack Discount</h3>
+          <p class="explain">How to read: this distribution shows how strongly studios anchor on drop-in and push customers to 10-packs. Higher bins mean more aggressive pack incentives.</p>
+          <div class="chart-box"><canvas id="l5GapChart"></canvas></div>
+        </article>
+        <article class="card">
+          <h3>Membership vs 10-Pack Value</h3>
+          <p class="sub">X = 10-pack EUR/class · Y = membership EUR/class</p>
+          <p class="explain">How to read: each point is one studio. Below the diagonal (y &lt; x) means membership is cheaper per class than a 10-pack; above means memberships are less value-driven.</p>
+          <div class="chart-box"><canvas id="l5ScatterChart"></canvas></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="layer">
+      <div class="layer-head">
+        <h2>Layer 6 — Modality Economics (V1)</h2>
+        <p>Estimated max revenue per class using proxy capacities.</p>
+      </div>
+      <section class="grid">
+        <article class="card wide">
+          <h3>Estimated Revenue per Class</h3>
+          <p class="explain">How to read: this is a directional estimate only. It multiplies average drop-in by proxy capacity per modality and should be used for relative comparisons, not absolute forecasting.</p>
+          <div id="l6Assumptions"></div>
+          <table>
+            <thead>
+              <tr><th>Modality</th><th>Avg Price</th><th>Avg Capacity (Proxy)</th><th>Est Max Revenue</th></tr>
+            </thead>
+            <tbody id="l6EconomicsRows"></tbody>
+          </table>
+        </article>
+      </section>
+    </section>
+
+    <section class="layer">
+      <div class="layer-head">
+        <h2>Layer 7 — Market Structure</h2>
+        <p>Distribution spread by modality and 4-bucket geography.</p>
+      </div>
+      <section class="grid">
+        <article class="card">
+          <h3>Pricing Spread by Modality</h3>
+          <p class="sub">Boxplot-style: min/q1/median/q3/max</p>
+          <p class="explain">How to read: purple band approximates the middle 50% (Q1 to Q3). Green line is median; gray/orange lines show min/max. Wider spreads indicate less pricing consistency.</p>
+          <div class="chart-box"><canvas id="l7BoxplotChart"></canvas></div>
+        </article>
+        <article class="card">
+          <h3>Geographic Pricing (4 Buckets)</h3>
+          <p class="explain">How to read: compare average drop-in by area bucket to identify spatial premiums. "Unknown arrondissement" records are excluded from area averages.</p>
+          <table>
+            <thead>
+              <tr><th>Area</th><th>Avg Drop-in</th><th>Studios</th></tr>
+            </thead>
+            <tbody id="l7GeoRows"></tbody>
+          </table>
+          <div id="l7GeoMeta" style="margin-top:10px;"></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="layer">
+      <div class="layer-head">
+        <h2>Layer 8 — Studio Business Model Profiles</h2>
+        <p>Pack-driven, membership-driven, hybrid, and no-offer mix.</p>
+      </div>
+      <section class="grid">
+        <article class="card">
+          <h3>Distribution by Profile</h3>
+          <p class="explain">How to read: this shows which commercial model dominates in the market mix. A higher hybrid share usually indicates broader pricing architecture sophistication.</p>
+          <div class="chart-box"><canvas id="l8ProfilesChart"></canvas></div>
+        </article>
+        <article class="card">
+          <h3>Profile Breakdown</h3>
+          <table>
+            <thead>
+              <tr><th>Studio Type</th><th>Count</th><th>Share</th></tr>
+            </thead>
+            <tbody id="l8ProfileRows"></tbody>
+          </table>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script>
+    Chart.defaults.color = "#cbd5f5";
+    Chart.defaults.borderColor = "rgba(148, 163, 255, 0.15)";
+
+    const FALLBACK_SNAPSHOT = {
+      generated_at: "fallback",
+      source: "fallback",
+      sample: { approved_records_total: 0, in_scope_records: 0, excluded_records: 0, coverage: {} },
+      layers: {
+        layer1_market_overview: { studios_analyzed: 0, with_pricing_available: 0, with_memberships: 0, offering_intro_offers: 0, dropin_metrics: {}, dropin_distribution: [], modality_pricing_table: [] },
+        layer2_pricing_structure: { pct_studios_with_intro: 0, average_intro_price: null, average_intro_price_per_class: null, intro_types: [], intro_discount_histogram: [] },
+        layer3_pack_pricing: { pack_table: [], pack_expiration_histogram: [] },
+        layer4_membership_models: { pct_studios_with_memberships: 0, pct_with_unlimited_memberships: 0, pct_with_class_based_memberships: 0, membership_adoption_pie: [], membership_types_table: [], commitment_structure: {} },
+        layer5_pricing_strategy: { avg_drop_in_to_10_pack_price_diff_pct: null, dropin_vs_10pack_discount_histogram: [], membership_vs_pack_scatter: [] },
+        layer6_modality_economics_v1: { assumptions: {}, modality_revenue_table: [] },
+        layer7_market_structure: { pricing_spread_boxplots: [], geographic_pricing: { bucket_mapping: [], area_avg_dropin: [], unknown_arrondissement_count: 0 } },
+        layer8_business_model_profiles: { distribution: [] }
+      }
+    };
+
+    const charts = {};
+    const modalityLabelMap = {
+      "strength-training": "Strength Training",
+      "hiit-bootcamp": "HIIT / Bootcamp",
+      "reformer-pilates": "Reformer Pilates",
+      "prenatal-postnatal": "Prenatal / Postnatal",
+      "low-impact-training": "Low Impact",
+      "martial-arts": "Martial Arts",
+      "electrical-muscle-stimulation": "EMS"
+    };
+    const introTypeLabels = {
+      single_discounted_class: "Single discounted class",
+      pack_3: "3-class pack",
+      pack_5: "5-class pack",
+      intro_unlimited: "Intro unlimited",
+      no_intro_offer: "No intro offer"
+    };
+    const profileLabels = {
+      pack_driven: "Pack-driven",
+      membership_driven: "Membership-driven",
+      hybrid: "Hybrid",
+      no_offer_other: "No offer / Other"
+    };
+
+    function money(v) {
+      if (v == null || !Number.isFinite(v)) return "-";
+      return `€${Number(v).toFixed(Number.isInteger(v) ? 0 : 2)}`;
+    }
+    function pct(v) {
+      if (v == null || !Number.isFinite(v)) return "-";
+      return `${Number(v).toFixed(1)}%`;
+    }
+    function fmt(v) {
+      if (v == null || !Number.isFinite(v)) return "-";
+      return Number(v).toFixed(Number.isInteger(v) ? 0 : 2);
+    }
+    function formatModalityLabel(key) {
+      if (modalityLabelMap[key]) return modalityLabelMap[key];
+      return String(key || "").replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+    }
+    function destroyCharts() {
+      Object.values(charts).forEach((c) => c && c.destroy && c.destroy());
+    }
+
+    function renderLayer1(layer) {
+      const metrics = layer.dropin_metrics || {};
+      const cards = [
+        ["Studios analyzed", layer.studios_analyzed],
+        ["Pricing available", layer.with_pricing_available],
+        ["With memberships", layer.with_memberships],
+        ["Offering intro offers", layer.offering_intro_offers],
+        ["Average drop-in", money(metrics.average)],
+        ["Median drop-in", money(metrics.median)],
+        ["Lowest drop-in", money(metrics.lowest)],
+        ["Highest drop-in", money(metrics.highest)],
+        ["Drop-in std dev", fmt(metrics.stddev)]
+      ];
+      document.getElementById("l1Stats").innerHTML = cards.map(([k, v]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
+
+      const dist = layer.dropin_distribution || [];
+      charts.l1Dropin = new Chart(document.getElementById("l1DropinChart"), {
+        type: "bar",
+        data: {
+          labels: dist.map((d) => d.label),
+          datasets: [{ data: dist.map((d) => d.count), backgroundColor: "#38bdf8", borderRadius: 8 }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+      });
+
+      const modality = (layer.modality_pricing_table || []).slice().sort((a, b) => (b.avg_drop_in || 0) - (a.avg_drop_in || 0));
+      charts.l1Modality = new Chart(document.getElementById("l1ModalityChart"), {
+        type: "bar",
+        data: {
+          labels: modality.map((m) => formatModalityLabel(m.modality)),
+          datasets: [
+            { label: "Avg drop-in", data: modality.map((m) => m.avg_drop_in), backgroundColor: "rgba(125, 211, 255, 0.6)", borderRadius: 6 },
+            { label: "Median", data: modality.map((m) => m.median_drop_in), backgroundColor: "rgba(167, 139, 250, 0.7)", borderRadius: 6 }
+          ]
+        },
+        options: { responsive: true, maintainAspectRatio: false }
+      });
+
+      document.getElementById("l1ModalityRows").innerHTML = modality.map((m) => `
+        <tr>
+          <td>${formatModalityLabel(m.modality)}</td>
+          <td>${money(m.avg_drop_in)}</td>
+          <td>${money(m.median_drop_in)}</td>
+          <td>${money(m.range)}</td>
+        </tr>
+      `).join("") || `<tr><td colspan="4">No modality data.</td></tr>`;
+    }
+
+    function renderLayer2(layer) {
+      const cards = [
+        ["Studios with intro offers", pct(layer.pct_studios_with_intro)],
+        ["Average intro price", money(layer.average_intro_price)],
+        ["Average intro price/class", money(layer.average_intro_price_per_class)]
+      ];
+      document.getElementById("l2Stats").innerHTML = cards.map(([k, v]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
+
+      const types = layer.intro_types || [];
+      charts.l2Types = new Chart(document.getElementById("l2IntroTypesChart"), {
+        type: "pie",
+        data: {
+          labels: types.map((t) => introTypeLabels[t.type] || t.type),
+          datasets: [{ data: types.map((t) => t.count), backgroundColor: ["#38bdf8", "#8b5cf6", "#22c55e", "#f59e0b", "#64748b"] }]
+        },
+        options: { responsive: true, maintainAspectRatio: false }
+      });
+
+      const hist = layer.intro_discount_histogram || [];
+      charts.l2Discount = new Chart(document.getElementById("l2IntroDiscountChart"), {
+        type: "bar",
+        data: {
+          labels: hist.map((h) => h.label),
+          datasets: [{ data: hist.map((h) => h.count), backgroundColor: "#f97316", borderRadius: 8 }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+      });
+    }
+
+    function renderLayer3(layer) {
+      document.getElementById("l3PackRows").innerHTML = (layer.pack_table || []).map((r) => `
+        <tr>
+          <td>${r.pack}</td>
+          <td>${money(r.avg_price_per_class)}</td>
+          <td>${pct(r.avg_discount_vs_dropin_pct)}</td>
+        </tr>
+      `).join("") || `<tr><td colspan="3">No pack data.</td></tr>`;
+
+      const hist = layer.pack_expiration_histogram || [];
+      charts.l3Expiry = new Chart(document.getElementById("l3PackExpirationChart"), {
+        type: "bar",
+        data: {
+          labels: hist.map((h) => h.label),
+          datasets: [{ data: hist.map((h) => h.count), backgroundColor: "#06b6d4", borderRadius: 8 }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+      });
+    }
+
+    function renderLayer4(layer) {
+      const cards = [
+        ["Studios with memberships", pct(layer.pct_studios_with_memberships)],
+        ["With unlimited memberships", pct(layer.pct_with_unlimited_memberships)],
+        ["With class-based memberships", pct(layer.pct_with_class_based_memberships)]
+      ];
+      document.getElementById("l4Stats").innerHTML = cards.map(([k, v]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
+
+      const pie = layer.membership_adoption_pie || [];
+      charts.l4Adoption = new Chart(document.getElementById("l4AdoptionChart"), {
+        type: "pie",
+        data: {
+          labels: pie.map((p) => p.type.replace(/_/g, " ")),
+          datasets: [{ data: pie.map((p) => p.count), backgroundColor: ["#64748b", "#22c55e", "#f59e0b", "#8b5cf6"] }]
+        },
+        options: { responsive: true, maintainAspectRatio: false }
+      });
+
+      const c = layer.commitment_structure || {};
+      document.getElementById("l4Commitment").innerHTML = `
+        <span class="chip">No commitment: ${pct(c.pct_no_commitment)}</span>
+        <span class="chip">3-month: ${pct(c.pct_3_month_commitment)}</span>
+        <span class="chip">6-month: ${pct(c.pct_6_month_commitment)}</span>
+        <span class="chip">12-month: ${pct(c.pct_12_month_commitment)}</span>
+      `;
+
+      document.getElementById("l4MembershipTypeRows").innerHTML = (layer.membership_types_table || []).map((r) => `
+        <tr>
+          <td>${r.membership_type}</td>
+          <td>${money(r.avg_monthly_price)}</td>
+          <td>${money(r.avg_effective_price_per_class)}</td>
+        </tr>
+      `).join("") || `<tr><td colspan="3">No membership type data.</td></tr>`;
+    }
+
+    function renderLayer5(layer) {
+      const cards = [["Avg drop-in vs 10-pack gap", pct(layer.avg_drop_in_to_10_pack_price_diff_pct)]];
+      document.getElementById("l5Stats").innerHTML = cards.map(([k, v]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
+
+      const hist = layer.dropin_vs_10pack_discount_histogram || [];
+      charts.l5Gap = new Chart(document.getElementById("l5GapChart"), {
+        type: "bar",
+        data: { labels: hist.map((h) => h.label), datasets: [{ data: hist.map((h) => h.count), backgroundColor: "#f43f5e", borderRadius: 8 }] },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+      });
+
+      const scatter = (layer.membership_vs_pack_scatter || []).map((p) => ({ x: p.x, y: p.y, label: p.studio_name }));
+      charts.l5Scatter = new Chart(document.getElementById("l5ScatterChart"), {
+        type: "scatter",
+        data: {
+          datasets: [{ label: "Studios", data: scatter, backgroundColor: "#7dd3ff" }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { title: { display: true, text: "10-pack EUR/class" } },
+            y: { title: { display: true, text: "Membership EUR/class" } }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+    }
+
+    function renderLayer6(layer) {
+      const assumptions = layer.assumptions || {};
+      document.getElementById("l6Assumptions").innerHTML = `
+        <span class="chip">Proxy model enabled (V1)</span>
+        <span class="chip">${assumptions.methodology || "Methodology not available"}</span>
+      `;
+      const rows = (layer.modality_revenue_table || []).slice().sort((a, b) => (b.estimated_max_revenue_per_class || 0) - (a.estimated_max_revenue_per_class || 0));
+      document.getElementById("l6EconomicsRows").innerHTML = rows.map((r) => `
+        <tr>
+          <td>${formatModalityLabel(r.modality)}</td>
+          <td>${money(r.avg_drop_in_price)}</td>
+          <td>${r.avg_capacity}</td>
+          <td>${money(r.estimated_max_revenue_per_class)}</td>
+        </tr>
+      `).join("") || `<tr><td colspan="4">No modality economics data.</td></tr>`;
+    }
+
+    function renderLayer7(layer) {
+      const box = (layer.pricing_spread_boxplots || []).slice().sort((a, b) => (b.median || 0) - (a.median || 0)).slice(0, 10);
+      const labels = box.map((b) => formatModalityLabel(b.modality));
+      charts.l7Box = new Chart(document.getElementById("l7BoxplotChart"), {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [
+            { label: "Q1-Q3", data: box.map((b) => [b.q1, b.q3]), backgroundColor: "rgba(139, 92, 246, 0.5)", borderRadius: 4 },
+            { label: "Median", type: "line", data: box.map((b) => b.median), borderColor: "#22c55e", pointRadius: 4, tension: 0 },
+            { label: "Min", type: "line", data: box.map((b) => b.min), borderColor: "#64748b", pointRadius: 3, tension: 0 },
+            { label: "Max", type: "line", data: box.map((b) => b.max), borderColor: "#f59e0b", pointRadius: 3, tension: 0 }
+          ]
+        },
+        options: { responsive: true, maintainAspectRatio: false }
+      });
+
+      const geo = (layer.geographic_pricing && layer.geographic_pricing.area_avg_dropin) || [];
+      document.getElementById("l7GeoRows").innerHTML = geo.map((r) => `
+        <tr><td>${r.area}</td><td>${money(r.avg_drop_in)}</td><td>${r.studio_count}</td></tr>
+      `).join("") || `<tr><td colspan="3">No geographic pricing data.</td></tr>`;
+
+      const unknown = layer.geographic_pricing ? layer.geographic_pricing.unknown_arrondissement_count : 0;
+      document.getElementById("l7GeoMeta").innerHTML = `<span class="chip">Unknown arrondissement count: ${unknown}</span>`;
+    }
+
+    function renderLayer8(layer) {
+      const rows = layer.distribution || [];
+      charts.l8Profile = new Chart(document.getElementById("l8ProfilesChart"), {
+        type: "bar",
+        data: {
+          labels: rows.map((r) => profileLabels[r.studio_type] || r.studio_type),
+          datasets: [{ data: rows.map((r) => r.count), backgroundColor: ["#38bdf8", "#22c55e", "#8b5cf6", "#64748b"], borderRadius: 8 }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+      });
+      document.getElementById("l8ProfileRows").innerHTML = rows.map((r) => `
+        <tr>
+          <td>${profileLabels[r.studio_type] || r.studio_type}</td>
+          <td>${r.count}</td>
+          <td>${pct(r.pct)}</td>
+        </tr>
+      `).join("") || `<tr><td colspan="3">No profile data.</td></tr>`;
+    }
+
+    function render(snapshot) {
+      destroyCharts();
+      const layers = snapshot.layers || FALLBACK_SNAPSHOT.layers;
+      renderLayer1(layers.layer1_market_overview || FALLBACK_SNAPSHOT.layers.layer1_market_overview);
+      renderLayer2(layers.layer2_pricing_structure || FALLBACK_SNAPSHOT.layers.layer2_pricing_structure);
+      renderLayer3(layers.layer3_pack_pricing || FALLBACK_SNAPSHOT.layers.layer3_pack_pricing);
+      renderLayer4(layers.layer4_membership_models || FALLBACK_SNAPSHOT.layers.layer4_membership_models);
+      renderLayer5(layers.layer5_pricing_strategy || FALLBACK_SNAPSHOT.layers.layer5_pricing_strategy);
+      renderLayer6(layers.layer6_modality_economics_v1 || FALLBACK_SNAPSHOT.layers.layer6_modality_economics_v1);
+      renderLayer7(layers.layer7_market_structure || FALLBACK_SNAPSHOT.layers.layer7_market_structure);
+      renderLayer8(layers.layer8_business_model_profiles || FALLBACK_SNAPSHOT.layers.layer8_business_model_profiles);
+      document.getElementById("footer").textContent = `Generated ${new Date(snapshot.generated_at).toLocaleString()} · Source: ${snapshot.source}`;
+    }
+
+    async function boot() {
+      let snapshot = FALLBACK_SNAPSHOT;
+      let loadedFrom = "fallback";
+      const ts = Date.now();
+      const candidateUrls = [
+        `../data/pricing/analysis/paris_pricing_snapshot.json?v=${ts}`,
+        `/data/pricing/analysis/paris_pricing_snapshot.json?v=${ts}`,
+        `../../data/pricing/analysis/paris_pricing_snapshot.json?v=${ts}`
+      ];
+      try {
+        for (const url of candidateUrls) {
+          const res = await fetch(url, { cache: "no-store" });
+          if (!res.ok) continue;
+          const data = await res.json();
+          if (data && data.layers) {
+            snapshot = data;
+            loadedFrom = url;
+            break;
+          }
+        }
+      } catch (e) {
+        // fallback
+      }
+      render(snapshot);
+      if (loadedFrom === "fallback") {
+        document.getElementById("footer").textContent += " · (fallback data loaded)";
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>
