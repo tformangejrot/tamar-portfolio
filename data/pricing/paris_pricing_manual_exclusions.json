@@ -29,6 +29,22 @@
     {
       "domain": "astrabodyvincennes.fr",
       "reason": "infrabiking_out_of_scope"
+    },
+    {
+      "domain": "atelierkbox.com",
+      "reason": "pricing_not_public_exclude_entirely"
+    },
+    {
+      "domain": "atelierportesoleil.com",
+      "reason": "not_boutique_studio_exclude"
+    },
+    {
+      "domain": "bodybooster.fr",
+      "reason": "ems_out_of_scope"
+    },
+    {
+      "domain": "bodylifeparis.com",
+      "reason": "private_lessons_only_out_of_scope"
     }
   ]
 }
