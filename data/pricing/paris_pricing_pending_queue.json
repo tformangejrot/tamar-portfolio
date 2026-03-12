@@ -1,253 +1,16 @@
 {
-  "generated_at": "2026-03-11T14:12:14.949Z",
+  "generated_at": "2026-03-11T14:51:15.617Z",
   "source_files": {
     "consolidated": "data/processed/studios_consolidated_boutique.json",
-    "approved": "data/pricing/paris_pricing_approved_records.json"
+    "approved": "data/pricing/paris_pricing_approved_records.json",
+    "exclusions": "data/pricing/paris_pricing_manual_exclusions.json"
   },
   "summary": {
-    "queue_size": 322,
-    "excluded_already_approved": 38
+    "queue_size": 300,
+    "excluded_already_approved": 53,
+    "excluded_manual": 7
   },
   "records": [
-    {
-      "studio_name": "à soi · yoga",
-      "domain": "a-soi.com",
-      "website": "https://www.a-soi.com/",
-      "categories": [
-        "vinyasa-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 19",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "ACADEMIE INTERNATIONALE DE LA DANSE (Paris 16ème)",
-      "domain": "academiedanseparis.com",
-      "website": "http://www.academiedanseparis.com/",
-      "categories": [
-        "pilates"
-      ],
-      "arrondissement": "Paris 16",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "AFYA",
-      "domain": "afya.fr",
-      "website": "https://www.afya.fr/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=2528681361313747804",
-      "categories": [
-        "bootcamp",
-        "strength-training"
-      ],
-      "arrondissement": null,
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "OLY Be",
-      "domain": "agefo.com",
-      "website": "https://agefo.com/residence/residence-jerome-lejeune/",
-      "categories": [
-        "fitness",
-        "vinyasa-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 15",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "Yoga alsa",
-      "domain": "agence-sisters-factory.com",
-      "website": "https://agence-sisters-factory.com/alsayoga",
-      "categories": [
-        "aerial-antigravity-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 16",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "Aja House",
-      "domain": "ajahouse.fr",
-      "website": "https://www.ajahouse.fr/",
-      "categories": [
-        "ashtanga-yoga",
-        "barre",
-        "bootcamp",
-        "boxing",
-        "cardio-dance",
-        "dance",
-        "fitness",
-        "high-intensity-pilates",
-        "latin-dance",
-        "low-impact-training",
-        "mat-pilates",
-        "pilates",
-        "power-yoga",
-        "prenatal",
-        "prenatal-yoga",
-        "reformer-pilates",
-        "restorative-yoga",
-        "sculpt",
-        "strength-training",
-        "stretching",
-        "vinyasa-yoga",
-        "yin-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 07",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "AKMD Krav Maga",
-      "domain": "akmd.fr",
-      "website": "https://www.akmd.fr/",
-      "categories": [
-        "fitness",
-        "krav-maga",
-        "martial-arts"
-      ],
-      "arrondissement": null,
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "A l'Eau Bike Paris",
-      "domain": "aleaubike.fr",
-      "website": "http://www.aleaubike.fr/",
-      "categories": [
-        "cycling",
-        "fitness",
-        "indoor-cycling"
-      ],
-      "arrondissement": "Paris 02",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "Apollo Sporting Club",
-      "domain": "apollosportingclub.com",
-      "website": "https://apollosportingclub.com/",
-      "categories": [
-        "boxing",
-        "circuit-training",
-        "fitness",
-        "personal-training",
-        "strength-training",
-        "stretching"
-      ],
-      "arrondissement": "Paris 17",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "Apyzen",
-      "domain": "apycem.com",
-      "website": "https://apycem.com/",
-      "categories": [
-        "fitness",
-        "hatha-yoga",
-        "mat-pilates",
-        "pilates",
-        "vinyasa-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 01",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "Aqua by",
-      "domain": "aqua-by.com",
-      "website": "https://aqua-by.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb+boulogne",
-      "categories": [
-        "bootcamp",
-        "cycling",
-        "fitness",
-        "indoor-cycling",
-        "strength-training"
-      ],
-      "arrondissement": null,
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "Oly Be",
-      "domain": "arkose.com",
-      "website": "https://arkose.com/chevaleret",
-      "categories": [
-        "vinyasa-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 13",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "OLY Be",
-      "domain": "armeedusalut.fr",
-      "website": "http://www.armeedusalut.fr",
-      "categories": [
-        "vinyasa-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 13",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "ASSY/ASANA",
-      "domain": "assyasana.fr",
-      "website": "https://assyasana.fr/",
-      "categories": [
-        "ashtanga-yoga",
-        "bootcamp",
-        "fitness",
-        "low-impact-training",
-        "pilates",
-        "strength-training",
-        "stretching",
-        "vinyasa-yoga",
-        "yoga",
-        "yoga-nidra"
-      ],
-      "arrondissement": null,
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "Astra Body Paris 8",
-      "domain": "astrabody-paris8.fr",
-      "website": "http://www.astrabody-paris8.fr/",
-      "categories": [
-        "cycling",
-        "indoor-cycling",
-        "low-impact-training",
-        "sculpt"
-      ],
-      "arrondissement": "Paris 08",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "Astra body",
-      "domain": "astrabodyvincennes.fr",
-      "website": "https://astrabodyvincennes.fr/",
-      "categories": [
-        "cycling",
-        "fitness",
-        "indoor-cycling",
-        "low-impact-training",
-        "sculpt"
-      ],
-      "arrondissement": null,
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
     {
       "studio_name": "AT AUM",
       "domain": "ataum-paris.fr",
@@ -529,18 +292,6 @@
         "yoga"
       ],
       "arrondissement": "Paris 20",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "OLY Be",
-      "domain": "blom31.life",
-      "website": "https://blom31.life/",
-      "categories": [
-        "yin-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 15",
       "source": "studios_consolidated_boutique",
       "status": "pending_manual_pricing_update"
     },
@@ -1168,22 +919,6 @@
         "yoga"
       ],
       "arrondissement": "Paris 11",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "OLY Be",
-      "domain": "danse75.fr",
-      "website": "http://www.danse75.fr/",
-      "categories": [
-        "ashtanga-yoga",
-        "fitness",
-        "pilates",
-        "power-yoga",
-        "vinyasa-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 18",
       "source": "studios_consolidated_boutique",
       "status": "pending_manual_pricing_update"
     },
@@ -1920,24 +1655,6 @@
         "yoga"
       ],
       "arrondissement": "Paris 15",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "OLY Be",
-      "domain": "imageriepariscentre.fr",
-      "website": "http://imageriepariscentre.fr/",
-      "categories": [
-        "fitness",
-        "hatha-yoga",
-        "pilates",
-        "prenatal",
-        "prenatal-yoga",
-        "vinyasa-yoga",
-        "yin-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 14",
       "source": "studios_consolidated_boutique",
       "status": "pending_manual_pricing_update"
     },
@@ -2692,23 +2409,6 @@
       "status": "pending_manual_pricing_update"
     },
     {
-      "studio_name": "OLY Be",
-      "domain": "lmstudiomarais.com",
-      "website": "http://lmstudiomarais.com/",
-      "categories": [
-        "ashtanga-yoga",
-        "fitness",
-        "hatha-yoga",
-        "pilates",
-        "vinyasa-yoga",
-        "yin-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 04",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
       "studio_name": "Lomey Yoga",
       "domain": "lomey-yoga.com",
       "website": "http://www.lomey-yoga.com/",
@@ -2956,18 +2656,6 @@
         "yoga-nidra"
       ],
       "arrondissement": "Paris 11",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "Oly Be",
-      "domain": "meiso.fr",
-      "website": "https://www.meiso.fr/",
-      "categories": [
-        "vinyasa-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 13",
       "source": "studios_consolidated_boutique",
       "status": "pending_manual_pricing_update"
     },
@@ -3342,19 +3030,6 @@
         "strength-training"
       ],
       "arrondissement": "Paris 09",
-      "source": "studios_consolidated_boutique",
-      "status": "pending_manual_pricing_update"
-    },
-    {
-      "studio_name": "Oly Be",
-      "domain": "olybe.elle.fr",
-      "website": "https://olybe.elle.fr/",
-      "categories": [
-        "barre",
-        "vinyasa-yoga",
-        "yoga"
-      ],
-      "arrondissement": "Paris 11",
       "source": "studios_consolidated_boutique",
       "status": "pending_manual_pricing_update"
     },

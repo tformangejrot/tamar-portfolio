@@ -5388,6 +5388,1803 @@
         "manual_verified"
       ],
       "manual_verified": true
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "agefo.com",
+      "website": "https://www.olybe.com/",
+      "pricing_url": "https://www.olybe.com/",
+      "categories": [
+        "fitness",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 15",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "OLY Be pricing applied to this location from provided screenshots.",
+      "drop_in": {
+        "price": 15,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Offre decouverte 3 cours",
+          "price": 42,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "14 EUR per class."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l unite",
+          "classes": 1,
+          "total_price": 15,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Carte 5 cours",
+          "classes": 5,
+          "total_price": 72.5,
+          "price_per_class": 14.5,
+          "discount_vs_dropin_pct": 3.33,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Carte 10 cours",
+          "classes": 10,
+          "total_price": 140,
+          "price_per_class": 14,
+          "discount_vs_dropin_pct": 6.67,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Carte 20 cours",
+          "classes": 20,
+          "total_price": 260,
+          "price_per_class": 13,
+          "discount_vs_dropin_pct": 13.33,
+          "validity_days": 270,
+          "notes": ""
+        },
+        {
+          "name": "Carte 30 cours",
+          "classes": 30,
+          "total_price": 360,
+          "price_per_class": 12,
+          "discount_vs_dropin_pct": 20,
+          "validity_days": 365,
+          "notes": ""
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "90-365 depending on pack",
+        "notes": "Discovery offer valid 1 month; cards valid 3/6/9/12 months depending on size."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "single_class": 15
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.olybe.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "Oly Be",
+      "domain": "arkose.com",
+      "website": "https://www.olybe.com/",
+      "pricing_url": "https://www.olybe.com/",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 13",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "OLY Be pricing applied to this location from provided screenshots.",
+      "drop_in": {
+        "price": 15,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Offre decouverte 3 cours",
+          "price": 42,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "14 EUR per class."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l unite",
+          "classes": 1,
+          "total_price": 15,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Carte 5 cours",
+          "classes": 5,
+          "total_price": 72.5,
+          "price_per_class": 14.5,
+          "discount_vs_dropin_pct": 3.33,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Carte 10 cours",
+          "classes": 10,
+          "total_price": 140,
+          "price_per_class": 14,
+          "discount_vs_dropin_pct": 6.67,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Carte 20 cours",
+          "classes": 20,
+          "total_price": 260,
+          "price_per_class": 13,
+          "discount_vs_dropin_pct": 13.33,
+          "validity_days": 270,
+          "notes": ""
+        },
+        {
+          "name": "Carte 30 cours",
+          "classes": 30,
+          "total_price": 360,
+          "price_per_class": 12,
+          "discount_vs_dropin_pct": 20,
+          "validity_days": 365,
+          "notes": ""
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "90-365 depending on pack",
+        "notes": "Discovery offer valid 1 month; cards valid 3/6/9/12 months depending on size."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "single_class": 15
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.olybe.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "armeedusalut.fr",
+      "website": "https://www.olybe.com/",
+      "pricing_url": "https://www.olybe.com/",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 13",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "OLY Be pricing applied to this location from provided screenshots.",
+      "drop_in": {
+        "price": 15,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Offre decouverte 3 cours",
+          "price": 42,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "14 EUR per class."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l unite",
+          "classes": 1,
+          "total_price": 15,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Carte 5 cours",
+          "classes": 5,
+          "total_price": 72.5,
+          "price_per_class": 14.5,
+          "discount_vs_dropin_pct": 3.33,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Carte 10 cours",
+          "classes": 10,
+          "total_price": 140,
+          "price_per_class": 14,
+          "discount_vs_dropin_pct": 6.67,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Carte 20 cours",
+          "classes": 20,
+          "total_price": 260,
+          "price_per_class": 13,
+          "discount_vs_dropin_pct": 13.33,
+          "validity_days": 270,
+          "notes": ""
+        },
+        {
+          "name": "Carte 30 cours",
+          "classes": 30,
+          "total_price": 360,
+          "price_per_class": 12,
+          "discount_vs_dropin_pct": 20,
+          "validity_days": 365,
+          "notes": ""
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "90-365 depending on pack",
+        "notes": "Discovery offer valid 1 month; cards valid 3/6/9/12 months depending on size."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "single_class": 15
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.olybe.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "blom31.life",
+      "website": "https://www.olybe.com/",
+      "pricing_url": "https://www.olybe.com/",
+      "categories": [
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 15",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "OLY Be pricing applied to this location from provided screenshots.",
+      "drop_in": {
+        "price": 15,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Offre decouverte 3 cours",
+          "price": 42,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "14 EUR per class."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l unite",
+          "classes": 1,
+          "total_price": 15,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Carte 5 cours",
+          "classes": 5,
+          "total_price": 72.5,
+          "price_per_class": 14.5,
+          "discount_vs_dropin_pct": 3.33,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Carte 10 cours",
+          "classes": 10,
+          "total_price": 140,
+          "price_per_class": 14,
+          "discount_vs_dropin_pct": 6.67,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Carte 20 cours",
+          "classes": 20,
+          "total_price": 260,
+          "price_per_class": 13,
+          "discount_vs_dropin_pct": 13.33,
+          "validity_days": 270,
+          "notes": ""
+        },
+        {
+          "name": "Carte 30 cours",
+          "classes": 30,
+          "total_price": 360,
+          "price_per_class": 12,
+          "discount_vs_dropin_pct": 20,
+          "validity_days": 365,
+          "notes": ""
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "90-365 depending on pack",
+        "notes": "Discovery offer valid 1 month; cards valid 3/6/9/12 months depending on size."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "single_class": 15
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.olybe.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "danse75.fr",
+      "website": "https://www.olybe.com/",
+      "pricing_url": "https://www.olybe.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "pilates",
+        "power-yoga",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 18",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "OLY Be pricing applied to this location from provided screenshots.",
+      "drop_in": {
+        "price": 15,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Offre decouverte 3 cours",
+          "price": 42,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "14 EUR per class."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l unite",
+          "classes": 1,
+          "total_price": 15,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Carte 5 cours",
+          "classes": 5,
+          "total_price": 72.5,
+          "price_per_class": 14.5,
+          "discount_vs_dropin_pct": 3.33,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Carte 10 cours",
+          "classes": 10,
+          "total_price": 140,
+          "price_per_class": 14,
+          "discount_vs_dropin_pct": 6.67,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Carte 20 cours",
+          "classes": 20,
+          "total_price": 260,
+          "price_per_class": 13,
+          "discount_vs_dropin_pct": 13.33,
+          "validity_days": 270,
+          "notes": ""
+        },
+        {
+          "name": "Carte 30 cours",
+          "classes": 30,
+          "total_price": 360,
+          "price_per_class": 12,
+          "discount_vs_dropin_pct": 20,
+          "validity_days": 365,
+          "notes": ""
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "90-365 depending on pack",
+        "notes": "Discovery offer valid 1 month; cards valid 3/6/9/12 months depending on size."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "single_class": 15
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.olybe.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "imageriepariscentre.fr",
+      "website": "https://www.olybe.com/",
+      "pricing_url": "https://www.olybe.com/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "pilates",
+        "prenatal",
+        "prenatal-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 14",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "OLY Be pricing applied to this location from provided screenshots.",
+      "drop_in": {
+        "price": 15,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Offre decouverte 3 cours",
+          "price": 42,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "14 EUR per class."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l unite",
+          "classes": 1,
+          "total_price": 15,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Carte 5 cours",
+          "classes": 5,
+          "total_price": 72.5,
+          "price_per_class": 14.5,
+          "discount_vs_dropin_pct": 3.33,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Carte 10 cours",
+          "classes": 10,
+          "total_price": 140,
+          "price_per_class": 14,
+          "discount_vs_dropin_pct": 6.67,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Carte 20 cours",
+          "classes": 20,
+          "total_price": 260,
+          "price_per_class": 13,
+          "discount_vs_dropin_pct": 13.33,
+          "validity_days": 270,
+          "notes": ""
+        },
+        {
+          "name": "Carte 30 cours",
+          "classes": 30,
+          "total_price": 360,
+          "price_per_class": 12,
+          "discount_vs_dropin_pct": 20,
+          "validity_days": 365,
+          "notes": ""
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "90-365 depending on pack",
+        "notes": "Discovery offer valid 1 month; cards valid 3/6/9/12 months depending on size."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "single_class": 15
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.olybe.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "OLY Be",
+      "domain": "lmstudiomarais.com",
+      "website": "https://www.olybe.com/",
+      "pricing_url": "https://www.olybe.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "pilates",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 04",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "OLY Be pricing applied to this location from provided screenshots.",
+      "drop_in": {
+        "price": 15,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Offre decouverte 3 cours",
+          "price": 42,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "14 EUR per class."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l unite",
+          "classes": 1,
+          "total_price": 15,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Carte 5 cours",
+          "classes": 5,
+          "total_price": 72.5,
+          "price_per_class": 14.5,
+          "discount_vs_dropin_pct": 3.33,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Carte 10 cours",
+          "classes": 10,
+          "total_price": 140,
+          "price_per_class": 14,
+          "discount_vs_dropin_pct": 6.67,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Carte 20 cours",
+          "classes": 20,
+          "total_price": 260,
+          "price_per_class": 13,
+          "discount_vs_dropin_pct": 13.33,
+          "validity_days": 270,
+          "notes": ""
+        },
+        {
+          "name": "Carte 30 cours",
+          "classes": 30,
+          "total_price": 360,
+          "price_per_class": 12,
+          "discount_vs_dropin_pct": 20,
+          "validity_days": 365,
+          "notes": ""
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "90-365 depending on pack",
+        "notes": "Discovery offer valid 1 month; cards valid 3/6/9/12 months depending on size."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "single_class": 15
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.olybe.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "Oly Be",
+      "domain": "meiso.fr",
+      "website": "https://www.olybe.com/",
+      "pricing_url": "https://www.olybe.com/",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 13",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "OLY Be pricing applied to this location from provided screenshots.",
+      "drop_in": {
+        "price": 15,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Offre decouverte 3 cours",
+          "price": 42,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "14 EUR per class."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l unite",
+          "classes": 1,
+          "total_price": 15,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Carte 5 cours",
+          "classes": 5,
+          "total_price": 72.5,
+          "price_per_class": 14.5,
+          "discount_vs_dropin_pct": 3.33,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Carte 10 cours",
+          "classes": 10,
+          "total_price": 140,
+          "price_per_class": 14,
+          "discount_vs_dropin_pct": 6.67,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Carte 20 cours",
+          "classes": 20,
+          "total_price": 260,
+          "price_per_class": 13,
+          "discount_vs_dropin_pct": 13.33,
+          "validity_days": 270,
+          "notes": ""
+        },
+        {
+          "name": "Carte 30 cours",
+          "classes": 30,
+          "total_price": 360,
+          "price_per_class": 12,
+          "discount_vs_dropin_pct": 20,
+          "validity_days": 365,
+          "notes": ""
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "90-365 depending on pack",
+        "notes": "Discovery offer valid 1 month; cards valid 3/6/9/12 months depending on size."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "single_class": 15
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.olybe.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "Oly Be",
+      "domain": "olybe.elle.fr",
+      "website": "https://www.olybe.com/",
+      "pricing_url": "https://www.olybe.com/",
+      "categories": [
+        "barre",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 11",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "OLY Be pricing applied to this location from provided screenshots.",
+      "drop_in": {
+        "price": 15,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Offre decouverte 3 cours",
+          "price": 42,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "14 EUR per class."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l unite",
+          "classes": 1,
+          "total_price": 15,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Carte 5 cours",
+          "classes": 5,
+          "total_price": 72.5,
+          "price_per_class": 14.5,
+          "discount_vs_dropin_pct": 3.33,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Carte 10 cours",
+          "classes": 10,
+          "total_price": 140,
+          "price_per_class": 14,
+          "discount_vs_dropin_pct": 6.67,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Carte 20 cours",
+          "classes": 20,
+          "total_price": 260,
+          "price_per_class": 13,
+          "discount_vs_dropin_pct": 13.33,
+          "validity_days": 270,
+          "notes": ""
+        },
+        {
+          "name": "Carte 30 cours",
+          "classes": 30,
+          "total_price": 360,
+          "price_per_class": 12,
+          "discount_vs_dropin_pct": 20,
+          "validity_days": 365,
+          "notes": ""
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "90-365 depending on pack",
+        "notes": "Discovery offer valid 1 month; cards valid 3/6/9/12 months depending on size."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "single_class": 15
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.olybe.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "Aja House",
+      "domain": "ajahouse.fr",
+      "website": "https://www.ajahouse.fr/",
+      "pricing_url": "https://www.ajahouse.fr/tarifs/",
+      "categories": [
+        "ashtanga-yoga",
+        "barre",
+        "bootcamp",
+        "boxing",
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "high-intensity-pilates",
+        "latin-dance",
+        "low-impact-training",
+        "mat-pilates",
+        "pilates",
+        "power-yoga",
+        "prenatal",
+        "prenatal-yoga",
+        "reformer-pilates",
+        "restorative-yoga",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 07",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Aja House pricing screenshots.",
+      "drop_in": {
+        "price": 32,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Offre decouverte",
+          "price": 60,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "Nouveaux clients; all courses."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours Reformer - 5 cours",
+          "classes": 5,
+          "total_price": 190,
+          "price_per_class": 38,
+          "discount_vs_dropin_pct": 5,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Cours Reformer - 10 cours",
+          "classes": 10,
+          "total_price": 360,
+          "price_per_class": 36,
+          "discount_vs_dropin_pct": 10,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Cours Reformer - 20 cours",
+          "classes": 20,
+          "total_price": 680,
+          "price_per_class": 34,
+          "discount_vs_dropin_pct": 15,
+          "validity_days": 365,
+          "notes": "Paiement en 2 fois possible."
+        },
+        {
+          "name": "Cours Yoga Barre Fitness - 5 cours",
+          "classes": 5,
+          "total_price": 160,
+          "price_per_class": 32,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Cours Yoga Barre Fitness - 10 cours",
+          "classes": 10,
+          "total_price": 300,
+          "price_per_class": 30,
+          "discount_vs_dropin_pct": 6.25,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Cours Yoga Barre Fitness - 20 cours",
+          "classes": 20,
+          "total_price": 560,
+          "price_per_class": 28,
+          "discount_vs_dropin_pct": 12.5,
+          "validity_days": 365,
+          "notes": "Paiement en 2 fois possible."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Abonnements tous cours - 4 cours/mois",
+          "monthly_price": 130,
+          "classes_included": 4,
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 32.5,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 6,
+          "notes": "Engagement de 6 mois reconductible."
+        },
+        {
+          "name": "Abonnements tous cours - 8 cours/mois",
+          "monthly_price": 240,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 30,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 6,
+          "notes": "Engagement de 6 mois reconductible."
+        },
+        {
+          "name": "Abonnements tous cours - 12 cours/mois",
+          "monthly_price": 340,
+          "classes_included": 12,
+          "estimated_classes_per_month": 12,
+          "effective_price_per_class": 28.33,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 6,
+          "notes": "Engagement de 6 mois reconductible."
+        },
+        {
+          "name": "Illimite (1 cours/jour)",
+          "monthly_price": 500,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 3,
+          "notes": "Engagement de 3 mois reconductible."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "90-365 depending on pack",
+        "notes": "Single classes valid 1 month; reformer and yoga/barre/fitness cards valid 3/6/12 months."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "reformer_single": 40,
+        "tapis_barre_fitness_single": 32
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.ajahouse.fr/tarifs/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "A l'Eau Bike Paris",
+      "domain": "aleaubike.fr",
+      "website": "http://www.aleaubike.fr/",
+      "pricing_url": "http://www.aleaubike.fr/tarifs/",
+      "categories": [
+        "aqua-cycling",
+        "cycling",
+        "fitness",
+        "indoor-cycling"
+      ],
+      "arrondissement": "Paris 02",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided screenshot; values captured from 45-minute aquabiking pricing column only.",
+      "drop_in": {
+        "price": 45,
+        "duration_minutes": 45
+      },
+      "intro_offers": [],
+      "class_packs": [
+        {
+          "name": "Aquabiking 45 min - 6 seances",
+          "classes": 6,
+          "total_price": 200,
+          "price_per_class": 33.33,
+          "discount_vs_dropin_pct": 25.93,
+          "validity_days": null,
+          "notes": ""
+        },
+        {
+          "name": "Aquabiking 45 min - 12 seances",
+          "classes": 12,
+          "total_price": 360,
+          "price_per_class": 30,
+          "discount_vs_dropin_pct": 33.33,
+          "validity_days": null,
+          "notes": ""
+        },
+        {
+          "name": "Aquabiking 45 min - 20 seances",
+          "classes": 20,
+          "total_price": 520,
+          "price_per_class": 26,
+          "discount_vs_dropin_pct": 42.22,
+          "validity_days": null,
+          "notes": ""
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Abonnement 6 mois (45 min)",
+          "monthly_price": 90,
+          "classes_included": null,
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 6,
+          "notes": "Additional 12 EUR per session."
+        },
+        {
+          "name": "Abonnement annuel illimite (45 min)",
+          "monthly_price": 190,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "1 session max per day."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": null,
+        "notes": "Validity periods are not specified in the provided screenshot."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "aquabiking_45min_single": 45
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "http://www.aleaubike.fr/tarifs/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "Apollo Sporting Club",
+      "domain": "apollosportingclub.com",
+      "website": "https://apollosportingclub.com/",
+      "pricing_url": "https://apollosportingclub.com/",
+      "categories": [
+        "boxing",
+        "circuit-training",
+        "fitness",
+        "personal-training",
+        "strength-training",
+        "stretching"
+      ],
+      "arrondissement": "Paris 17",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Apollo Sporting Club pricing screenshots. Annual membership fee (cotisation) of 30 EUR is required to access packs.",
+      "drop_in": {
+        "price": 20,
+        "duration_minutes": 60
+      },
+      "intro_offers": [
+        {
+          "type": "Trial class",
+          "name": "Offre d'essai",
+          "price": 10,
+          "classes_included": 1,
+          "validity_days": 45,
+          "notes": "1h de cours d'essai."
+        },
+        {
+          "type": "First membership offer",
+          "name": "Offre premiere adhesion - pack 50 credits",
+          "price": 480,
+          "classes_included": 50,
+          "validity_days": 365,
+          "notes": "Equivalent to 9.60 EUR per credit. Valid within 8 days after using trial offer."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "1 credit",
+          "classes": 1,
+          "total_price": 20,
+          "price_per_class": 20,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 15,
+          "notes": ""
+        },
+        {
+          "name": "5 credits",
+          "classes": 5,
+          "total_price": 90,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 10,
+          "validity_days": 45,
+          "notes": ""
+        },
+        {
+          "name": "10 credits",
+          "classes": 10,
+          "total_price": 170,
+          "price_per_class": 17,
+          "discount_vs_dropin_pct": 15,
+          "validity_days": 120,
+          "notes": ""
+        },
+        {
+          "name": "20 credits",
+          "classes": 20,
+          "total_price": 290,
+          "price_per_class": 14.5,
+          "discount_vs_dropin_pct": 27.5,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "50 credits",
+          "classes": 50,
+          "total_price": 600,
+          "price_per_class": 12,
+          "discount_vs_dropin_pct": 40,
+          "validity_days": 365,
+          "notes": ""
+        },
+        {
+          "name": "100 credits",
+          "classes": 100,
+          "total_price": 1075,
+          "price_per_class": 10.75,
+          "discount_vs_dropin_pct": 46.25,
+          "validity_days": 450,
+          "notes": ""
+        }
+      ],
+      "memberships": [],
+      "discounts": [
+        {
+          "type": "other",
+          "description": "Cotisation annuelle obligatoire",
+          "discount_pct_or_amount": "30 EUR/year"
+        },
+        {
+          "type": "student",
+          "description": "Reduction etudiants (jusqu'a 25 ans) sur packs credits",
+          "discount_pct_or_amount": "5 credits 72 EUR; 10 credits 136 EUR; 20 credits 232 EUR; 50 credits 480 EUR"
+        }
+      ],
+      "expiration_policy": {
+        "single_class_validity_days": 15,
+        "pack_validity_days": "45-450 depending on pack size",
+        "notes": "Validity by pack: 1 credit (15 days), 5 (45 days), 10 (4 months), 20 (6 months), 50 (12 months), 100 (15 months)."
+      },
+      "uses_credit_system": true,
+      "credit_system_notes": "1 credit = 1h small-group class. 6 credits = 1h private coaching.",
+      "drop_in_by_modality": {
+        "group_class_1_credit": 20
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://apollosportingclub.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "Apyzen",
+      "domain": "apycem.com",
+      "website": "https://apycem.com/",
+      "pricing_url": "https://apycem.com/",
+      "categories": [
+        "fitness",
+        "hatha-yoga",
+        "mat-pilates",
+        "pilates",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 01",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "proprietary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided pricing screenshot.",
+      "drop_in": {
+        "price": 22,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Trial class",
+          "name": "Cours d'essai / Offre de rentree",
+          "price": 10,
+          "classes_included": 1,
+          "validity_days": null,
+          "notes": ""
+        },
+        {
+          "type": "Trial pack",
+          "name": "Carte 3 cours d'essai",
+          "price": 45,
+          "classes_included": 3,
+          "validity_days": null,
+          "notes": "Screenshot displays expiration date 11/05/2026."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Carte 3 cours d'essai",
+          "classes": 3,
+          "total_price": 45,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 31.82,
+          "validity_days": null,
+          "notes": "Displayed as trial card."
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": null,
+        "notes": "An expiration date is shown for the trial card (11/05/2026), but no explicit standard validity rule is visible."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "single_class": 22
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://apycem.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "Aqua by",
+      "domain": "aqua-by.com",
+      "website": "https://aqua-by.com/",
+      "pricing_url": "https://aqua-by.com/",
+      "categories": [
+        "aqua-cycling",
+        "bootcamp",
+        "cycling",
+        "fitness",
+        "indoor-cycling",
+        "strength-training"
+      ],
+      "arrondissement": null,
+      "data_collected_date": "2026-03-11",
+      "booking_software": "sanctuary",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Aqua by pricing screenshots.",
+      "drop_in": {
+        "price": 35,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Welcome pack",
+          "name": "Welcome Pack 2 sessions",
+          "price": 19,
+          "classes_included": 2,
+          "validity_days": 30,
+          "notes": "26 credits, one purchase only."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Pack sans engagement - 1 session",
+          "classes": 1,
+          "total_price": 35,
+          "price_per_class": 35,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "14 credits."
+        },
+        {
+          "name": "Pack sans engagement - 5 sessions",
+          "classes": 5,
+          "total_price": 149,
+          "price_per_class": 29.8,
+          "discount_vs_dropin_pct": 14.86,
+          "validity_days": 60,
+          "notes": "60 credits. Pack sessions shareable."
+        },
+        {
+          "name": "Pack sans engagement - 10 sessions",
+          "classes": 10,
+          "total_price": 279,
+          "price_per_class": 27.9,
+          "discount_vs_dropin_pct": 20.29,
+          "validity_days": 120,
+          "notes": "120 credits. Pack sessions shareable."
+        },
+        {
+          "name": "Pack sans engagement - 20 sessions",
+          "classes": 20,
+          "total_price": 499,
+          "price_per_class": 24.95,
+          "discount_vs_dropin_pct": 28.71,
+          "validity_days": 240,
+          "notes": "240 credits. Pack sessions shareable."
+        },
+        {
+          "name": "Pack sans engagement - 40 sessions",
+          "classes": 40,
+          "total_price": 799,
+          "price_per_class": 19.98,
+          "discount_vs_dropin_pct": 42.93,
+          "validity_days": 480,
+          "notes": "480 credits. Pack sessions shareable."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Abonnement 1 session/semaine - engagement 3 mois",
+          "monthly_price": 121.24,
+          "classes_included": "1 session/week",
+          "estimated_classes_per_month": 4.33,
+          "effective_price_per_class": 28,
+          "discount_vs_dropin_pct": 20,
+          "commitment_months": 3,
+          "notes": "14 credits/week."
+        },
+        {
+          "name": "Abonnement 1 session/semaine - engagement 6 mois",
+          "monthly_price": 108.25,
+          "classes_included": "1 session/week",
+          "estimated_classes_per_month": 4.33,
+          "effective_price_per_class": 25,
+          "discount_vs_dropin_pct": 28.57,
+          "commitment_months": 6,
+          "notes": "14 credits/week."
+        },
+        {
+          "name": "Abonnement 1 session/semaine - engagement 12 mois",
+          "monthly_price": 82.27,
+          "classes_included": "1 session/week",
+          "estimated_classes_per_month": 4.33,
+          "effective_price_per_class": 19,
+          "discount_vs_dropin_pct": 45.71,
+          "commitment_months": 12,
+          "notes": "14 credits/week."
+        },
+        {
+          "name": "Abonnement 2 sessions/semaine - engagement 3 mois",
+          "monthly_price": 190.52,
+          "classes_included": "2 sessions/week",
+          "estimated_classes_per_month": 8.66,
+          "effective_price_per_class": 22,
+          "discount_vs_dropin_pct": 37.14,
+          "commitment_months": 3,
+          "notes": "26 credits/week."
+        },
+        {
+          "name": "Abonnement 2 sessions/semaine - engagement 6 mois",
+          "monthly_price": 168.87,
+          "classes_included": "2 sessions/week",
+          "estimated_classes_per_month": 8.66,
+          "effective_price_per_class": 19.5,
+          "discount_vs_dropin_pct": 44.29,
+          "commitment_months": 6,
+          "notes": "26 credits/week."
+        },
+        {
+          "name": "Abonnement 2 sessions/semaine - engagement 12 mois",
+          "monthly_price": 151.55,
+          "classes_included": "2 sessions/week",
+          "estimated_classes_per_month": 8.66,
+          "effective_price_per_class": 17.5,
+          "discount_vs_dropin_pct": 50,
+          "commitment_months": 12,
+          "notes": "26 credits/week."
+        },
+        {
+          "name": "Abonnement 3 sessions/semaine - engagement 3 mois",
+          "monthly_price": 238.15,
+          "classes_included": "3 sessions/week",
+          "estimated_classes_per_month": 12.99,
+          "effective_price_per_class": 18.5,
+          "discount_vs_dropin_pct": 47.14,
+          "commitment_months": 3,
+          "notes": "39 credits/week."
+        },
+        {
+          "name": "Abonnement 3 sessions/semaine - engagement 6 mois",
+          "monthly_price": 212.17,
+          "classes_included": "3 sessions/week",
+          "estimated_classes_per_month": 12.99,
+          "effective_price_per_class": 16.5,
+          "discount_vs_dropin_pct": 52.86,
+          "commitment_months": 6,
+          "notes": "39 credits/week."
+        },
+        {
+          "name": "Abonnement 3 sessions/semaine - engagement 12 mois",
+          "monthly_price": 194.85,
+          "classes_included": "3 sessions/week",
+          "estimated_classes_per_month": 12.99,
+          "effective_price_per_class": 15,
+          "discount_vs_dropin_pct": 57.14,
+          "commitment_months": 12,
+          "notes": "39 credits/week."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "60-480 depending on pack",
+        "notes": "Welcome pack valid 1 month. Pack validity: 5 sessions (2 months), 10 (4 months), 20 (8 months), 40 (16 months)."
+      },
+      "uses_credit_system": true,
+      "credit_system_notes": "Credits are consumed per session tier (examples shown: 14 credits for 1 session, 26 for 2 sessions, 39 for 3 sessions weekly plans).",
+      "drop_in_by_modality": {
+        "single_session_pack": 35
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://aqua-by.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
+    },
+    {
+      "studio_name": "ASSY/ASANA",
+      "domain": "assyasana.fr",
+      "website": "https://assyasana.fr/",
+      "pricing_url": "https://assyasana.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "bootcamp",
+        "fitness",
+        "low-impact-training",
+        "pilates",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga",
+        "yoga-nidra"
+      ],
+      "arrondissement": null,
+      "data_collected_date": "2026-03-11",
+      "booking_software": "bsport",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided screenshots. Pratique libre offer intentionally excluded per user instruction.",
+      "drop_in": {
+        "price": 25,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Trial class",
+          "name": "Cours Decouverte",
+          "price": 17,
+          "classes_included": 1,
+          "validity_days": 7,
+          "notes": ""
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Carte 1 cours",
+          "classes": 1,
+          "total_price": 25,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 7,
+          "notes": ""
+        },
+        {
+          "name": "Carte 4 cours mensuelle",
+          "classes": 4,
+          "total_price": 75,
+          "price_per_class": 18.75,
+          "discount_vs_dropin_pct": 25,
+          "validity_days": 35,
+          "notes": ""
+        },
+        {
+          "name": "Carte 5 cours",
+          "classes": 5,
+          "total_price": 100,
+          "price_per_class": 20,
+          "discount_vs_dropin_pct": 20,
+          "validity_days": 42,
+          "notes": ""
+        },
+        {
+          "name": "Carte 10 cours",
+          "classes": 10,
+          "total_price": 180,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 28,
+          "validity_days": 84,
+          "notes": ""
+        },
+        {
+          "name": "Carte 20 cours",
+          "classes": 20,
+          "total_price": 320,
+          "price_per_class": 16,
+          "discount_vs_dropin_pct": 36,
+          "validity_days": 168,
+          "notes": ""
+        }
+      ],
+      "memberships": [
+        {
+          "name": "2 cours / semaine avec engagement 12 mois",
+          "monthly_price": 112,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 14,
+          "discount_vs_dropin_pct": 44,
+          "commitment_months": 12,
+          "notes": ""
+        },
+        {
+          "name": "2 cours / semaine sans engagement",
+          "monthly_price": 128,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 16,
+          "discount_vs_dropin_pct": 36,
+          "commitment_months": 1,
+          "notes": ""
+        },
+        {
+          "name": "Abonnement mensuel illimite avec engagement 12 mois",
+          "monthly_price": 169,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": ""
+        },
+        {
+          "name": "Abonnement mensuel illimite sans engagement",
+          "monthly_price": 210,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 1,
+          "notes": ""
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 7,
+        "pack_validity_days": "7-168 depending on pack",
+        "notes": "Validity shown on cards: 1 week (trial and 1 class), 5 weeks (4-class monthly), 6 weeks (5 classes), 12 weeks (10 classes), 24 weeks (20 classes)."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "single_class_card": 25
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://assyasana.fr/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 100,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified"
+      ],
+      "manual_verified": true
     }
   ]
 }

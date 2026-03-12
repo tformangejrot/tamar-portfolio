@@ -10,6 +10,7 @@ const ROOT = path.resolve(__dirname, "..");
 
 const CONSOLIDATED_PATH = path.join(ROOT, "data/processed/studios_consolidated_boutique.json");
 const APPROVED_PATH = path.join(ROOT, "data/pricing/paris_pricing_approved_records.json");
+const EXCLUSIONS_PATH = path.join(ROOT, "data/pricing/paris_pricing_manual_exclusions.json");
 const OUTPUT_PATH = path.join(ROOT, "data/pricing/paris_pricing_pending_queue.json");
 
 function normDomain(v) {
@@ -20,9 +21,21 @@ async function main() {
   const consolidated = JSON.parse(await fs.readFile(CONSOLIDATED_PATH, "utf8"));
   const approvedPayload = JSON.parse(await fs.readFile(APPROVED_PATH, "utf8"));
   const approved = Array.isArray(approvedPayload) ? approvedPayload : approvedPayload.records || [];
+  let exclusions = [];
+  try {
+    const exclusionsPayload = JSON.parse(await fs.readFile(EXCLUSIONS_PATH, "utf8"));
+    exclusions = Array.isArray(exclusionsPayload) ? exclusionsPayload : exclusionsPayload.records || [];
+  } catch {
+    exclusions = [];
+  }
 
   const approvedDomains = new Set(
     approved
+      .map((r) => normDomain(r.domain))
+      .filter(Boolean)
+  );
+  const excludedDomains = new Set(
+    exclusions
       .map((r) => normDomain(r.domain))
       .filter(Boolean)
   );
@@ -34,6 +47,7 @@ async function main() {
     const domain = normDomain(studio.domain);
     if (!domain) continue;
     if (approvedDomains.has(domain)) continue;
+    if (excludedDomains.has(domain)) continue;
     if (seen.has(domain)) continue;
     seen.add(domain);
 
@@ -55,10 +69,12 @@ async function main() {
     source_files: {
       consolidated: path.relative(ROOT, CONSOLIDATED_PATH),
       approved: path.relative(ROOT, APPROVED_PATH),
+      exclusions: path.relative(ROOT, EXCLUSIONS_PATH),
     },
     summary: {
       queue_size: queue.length,
       excluded_already_approved: approvedDomains.size,
+      excluded_manual: excludedDomains.size,
     },
     records: queue,
   };

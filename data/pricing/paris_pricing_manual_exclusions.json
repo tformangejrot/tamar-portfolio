@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-03-11T00:00:00.000Z",
+  "notes": "Manual exclusions: domains to skip from pending queue without adding to approved records.",
+  "records": [
+    {
+      "domain": "a-soi.com",
+      "reason": "independent_teacher_not_studio"
+    },
+    {
+      "domain": "academiedanseparis.com",
+      "reason": "teacher_managed_pricing_not_boutique_studio"
+    },
+    {
+      "domain": "afya.fr",
+      "reason": "inactive_or_unverified_skip_requested"
+    },
+    {
+      "domain": "agence-sisters-factory.com",
+      "reason": "inactive_or_unverified_skip_requested"
+    },
+    {
+      "domain": "akmd.fr",
+      "reason": "not_standard_boutique_pricing"
+    },
+    {
+      "domain": "astrabody-paris8.fr",
+      "reason": "infrabiking_out_of_scope"
+    },
+    {
+      "domain": "astrabodyvincennes.fr",
+      "reason": "infrabiking_out_of_scope"
+    }
+  ]
+}
