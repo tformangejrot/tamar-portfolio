@@ -45,6 +45,38 @@
     {
       "domain": "bodylifeparis.com",
       "reason": "private_lessons_only_out_of_scope"
+    },
+    {
+      "domain": "bodytec15.fr",
+      "reason": "ems_out_of_scope"
+    },
+    {
+      "domain": "bodytechcenter.fr",
+      "reason": "ems_out_of_scope"
+    },
+    {
+      "domain": "bollywood-paris-by-deva.com",
+      "reason": "independent_teacher_not_studio"
+    },
+    {
+      "domain": "bronzage-aquabike-paris-8.fr",
+      "reason": "not_boutique_fitness_out_of_scope"
+    },
+    {
+      "domain": "bubble.spa",
+      "reason": "not_boutique_fitness_out_of_scope"
+    },
+    {
+      "domain": "centralfitcharenton.fr",
+      "reason": "box_gym_not_boutique_studio"
+    },
+    {
+      "domain": "centralfitvincennes.fr",
+      "reason": "box_gym_not_boutique_studio"
+    },
+    {
+      "domain": "centreanima.com",
+      "reason": "instructor_hub_not_boutique_studio"
     }
   ]
 }
