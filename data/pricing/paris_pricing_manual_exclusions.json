@@ -77,6 +77,58 @@
     {
       "domain": "centreanima.com",
       "reason": "instructor_hub_not_boutique_studio"
+    },
+    {
+      "domain": "centrededansedumarais.fr",
+      "reason": "teacher_managed_average_pricing_not_standard_boutique"
+    },
+    {
+      "domain": "combray.com",
+      "reason": "not_boutique_fitness_out_of_scope"
+    },
+    {
+      "domain": "cours-hip-hop.fr",
+      "reason": "independent_teacher_not_studio"
+    },
+    {
+      "domain": "coursdekravmaga.com",
+      "reason": "non_standard_weird_pricing_exclude_requested"
+    },
+    {
+      "domain": "cryofast.fr",
+      "reason": "cryotherapy_out_of_scope"
+    },
+    {
+      "domain": "daljeet-yoga.fr",
+      "reason": "independent_teacher_not_studio"
+    },
+    {
+      "domain": "davinasamba.com",
+      "reason": "independent_teacher_not_studio"
+    },
+    {
+      "domain": "eaumegatraining.com",
+      "reason": "ems_out_of_scope"
+    },
+    {
+      "domain": "effiscience.paris",
+      "reason": "treatment_centric_not_boutique_fitness"
+    },
+    {
+      "domain": "eliteclub-94.fr",
+      "reason": "box_gym_not_boutique_studio"
+    },
+    {
+      "domain": "empreintezen.com",
+      "reason": "massage_not_boutique_fitness_out_of_scope"
+    },
+    {
+      "domain": "energyfit.paris",
+      "reason": "ems_out_of_scope"
+    },
+    {
+      "domain": "ergoparis.com",
+      "reason": "credit_based_pricing_not_comparable_exclude_requested"
     }
   ]
 }
