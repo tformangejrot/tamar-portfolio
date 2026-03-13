@@ -867,165 +867,6 @@
       "manual_verification_notes": "User-provided screenshots for discovery offers, cards, and monthly subscriptions only."
     },
     {
-      "studio_name": "Ateliers Ground Control",
-      "domain": "ateliers-ground-control.com",
-      "website": "https://www.ateliers-ground-control.com/",
-      "pricing_url": "https://www.ateliers-ground-control.com/nos-tarifs/",
-      "categories": [
-        "fitness",
-        "high-intensity-pilates",
-        "mat-pilates",
-        "personal-training",
-        "pilates",
-        "reformer-pilates"
-      ],
-      "arrondissement": "Paris 02",
-      "data_collected_date": "2026-02-27",
-      "booking_software": "deciplus",
-      "currency": "EUR",
-      "pricing_publicly_available": true,
-      "notes": "",
-      "drop_in": {
-        "price": null,
-        "duration_minutes": null
-      },
-      "intro_offers": [
-        {
-          "type": "Initiatis Solo",
-          "name": "INITIATIS SOLO",
-          "price": 60,
-          "classes_included": 1,
-          "validity_days": null,
-          "notes": "6 tickets"
-        },
-        {
-          "type": "Initiatis Duo",
-          "name": "INITIATIS DUO",
-          "price": 90,
-          "classes_included": 1,
-          "validity_days": null,
-          "notes": "9 tickets"
-        },
-        {
-          "type": "Initiatis Cosma",
-          "name": "INITIATIS COSMA",
-          "price": 30,
-          "classes_included": 1,
-          "validity_days": null,
-          "notes": "3 tickets"
-        }
-      ],
-      "class_packs": [
-        {
-          "name": "EXPLORIS 24 tickets",
-          "classes": null,
-          "total_price": 300,
-          "price_per_class": null,
-          "discount_vs_dropin_pct": null,
-          "validity_days": null,
-          "notes": "Ticket bundle"
-        },
-        {
-          "name": "FORFAITIS 36 tickets",
-          "classes": null,
-          "total_price": 612,
-          "price_per_class": null,
-          "discount_vs_dropin_pct": null,
-          "validity_days": 180,
-          "notes": "Ticket bundle"
-        },
-        {
-          "name": "REGULARIS 72 tickets",
-          "classes": null,
-          "total_price": 1176,
-          "price_per_class": null,
-          "discount_vs_dropin_pct": null,
-          "validity_days": 240,
-          "notes": "Ticket bundle"
-        }
-      ],
-      "memberships": [],
-      "discounts": [
-        {
-          "type": "promo",
-          "description": "Nos tarifs pilates sur machine à Paris - Ateliers Ground Control 07 77 78 40 29 Réserver Le studio L&rsquo;équipe Nos séances Nos tarifs Contact Sélectionner une page Nos tarifs ATELIERS GROUND CONTROL &#x22; Notre systè",
-          "discount_pct_or_amount": "60€"
-        }
-      ],
-      "expiration_policy": {
-        "single_class_validity_days": null,
-        "pack_validity_days": null,
-        "notes": "Nos tarifs pilates sur machine à Paris - Ateliers Ground Control 07 77 78 40 29 Réserver Le studio L&rsquo;équipe Nos séances Nos tarifs Contact Sélectionner une page Nos tarifs ATELIERS GROUND CONTROL &#x22; Notre système de tarification p"
-      },
-      "uses_credit_system": true,
-      "credit_system_notes": "Ticket-based pricing where class types consume different ticket amounts.",
-      "drop_in_by_modality": null,
-      "extraction_meta": {
-        "source": "auto_extraction",
-        "evidence_urls": [
-          "https://www.ateliers-ground-control.com/nos-tarifs/",
-          "https://www.ateliers-ground-control.com/"
-        ],
-        "evidence_line_count": 1,
-        "extracted_at": "2026-02-27T08:18:33.702Z"
-      },
-      "confidence_score": 73,
-      "confidence_tier": "medium",
-      "review_required": true,
-      "confidence_reasons": [
-        "public_pricing",
-        "intro_offers",
-        "class_packs",
-        "discounts",
-        "pricing_url",
-        "booking_software",
-        "expiration_notes",
-        "exa_used",
-        "exa_multi_source"
-      ],
-      "manual_verified": true,
-      "manual_verification_date": "2026-02-27",
-      "manual_verification_notes": "Verified from tarifs page; ticket system captured.",
-      "exa_enrichment": {
-        "exa_used": true,
-        "exa_query": "Ateliers Ground Control Paris tarifs prix abonnement pack cours",
-        "exa_queries": [
-          "Ateliers Ground Control Paris tarifs prix abonnement pack cours",
-          "site:ateliers-ground-control.com tarifs prix abonnement"
-        ],
-        "exa_sources": [
-          {
-            "query": "Ateliers Ground Control Paris tarifs prix abonnement pack cours",
-            "url": "https://www.ateliers-ground-control.com/nos-tarifs/",
-            "title": "Nos tarifs pilates sur machine à Paris - Ateliers Ground Control",
-            "snippet": "",
-            "score": 12
-          },
-          {
-            "query": "Ateliers Ground Control Paris tarifs prix abonnement pack cours",
-            "url": "https://www.ateliers-ground-control.com/nos-professeurs-pilates-paris/",
-            "title": "Nos professeurs de Pilates à Paris",
-            "snippet": "",
-            "score": 3
-          },
-          {
-            "query": "Ateliers Ground Control Paris tarifs prix abonnement pack cours",
-            "url": "https://www.ateliers-ground-control.com/",
-            "title": "Studio de Pilates sur machines à Paris",
-            "snippet": "",
-            "score": 3
-          }
-        ],
-        "exa_retrieved_at": "2026-02-27T20:52:30.700Z",
-        "exa_status": "enriched",
-        "exa_actions": [
-          "skipped_pricing_merge_manual_verified"
-        ],
-        "conflict_reasons": []
-      },
-      "conflict_reasons": []
-    },
-    {
       "studio_name": "Athletx Rebel",
       "domain": "athletxrebel.com",
       "website": "https://www.athletxrebel.com/",
@@ -15482,6 +15323,4011 @@
         "pricing amounts clearly visible in screenshot"
       ],
       "manual_verified": true
+    },
+    {
+      "studio_name": "Gotham 17",
+      "domain": "gotham.paris",
+      "website": "https://gotham.paris/",
+      "pricing_url": "https://gotham.paris/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 17",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Gotham pricing screenshot; only Lagree pricing included.",
+      "drop_in": {
+        "price": null,
+        "duration_minutes": null
+      },
+      "intro_offers": [],
+      "class_packs": [
+        {
+          "name": "Pack 10 cours (Lagree)",
+          "classes": 10,
+          "total_price": 400,
+          "price_per_class": 40,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": "Lagree pricing only; validity not shown."
+        },
+        {
+          "name": "Pack 20 cours (Lagree)",
+          "classes": 20,
+          "total_price": 700,
+          "price_per_class": 35,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": "Lagree pricing only; validity not shown."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Abonnement 2 cours / semaine (Lagree)",
+          "monthly_price": 240,
+          "classes_included": "2/week",
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 30,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": null,
+          "notes": "Commitment length not shown."
+        },
+        {
+          "name": "Abonnement 3 cours / semaine (Lagree)",
+          "monthly_price": 324,
+          "classes_included": "3/week",
+          "estimated_classes_per_month": 12,
+          "effective_price_per_class": 27,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": null,
+          "notes": "Commitment length not shown."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": null,
+        "notes": "Validity not shown in provided screenshot."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "lagree_single": null
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://gotham.paris/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 94,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "User-provided screenshot with Lagree packs and weekly memberships only."
+    },
+    {
+      "studio_name": "Ground to Grow",
+      "domain": "groundtogrow.fr",
+      "website": "http://www.groundtogrow.fr/",
+      "pricing_url": "http://www.groundtogrow.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "bootcamp",
+        "fitness",
+        "hatha-yoga",
+        "high-intensity-pilates",
+        "mat-pilates",
+        "pilates",
+        "power-yoga",
+        "strength-training",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 03",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "bsport",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Ground to Grow pricing screenshots (offres decouverte, a la carte, abonnements).",
+      "drop_in": {
+        "price": 26,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery pass",
+          "name": "Pass 1 mois illimite",
+          "price": 49,
+          "classes_included": "unlimited",
+          "validity_days": 30,
+          "notes": "Valid for 1 month."
+        },
+        {
+          "type": "Discovery pack",
+          "name": "Nouveaux Membres - Pack 2 cours",
+          "price": 18,
+          "classes_included": 2,
+          "validity_days": 90,
+          "notes": "Valid for 3 months."
+        },
+        {
+          "type": "Discovery offer",
+          "name": "1 cours Decouverte",
+          "price": 15,
+          "classes_included": 1,
+          "validity_days": 30,
+          "notes": "Valid for 1 month."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l'unite",
+          "classes": 1,
+          "total_price": 26,
+          "price_per_class": 26,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "Valid for 1 month."
+        },
+        {
+          "name": "Carte de 10 cours",
+          "classes": 10,
+          "total_price": 220,
+          "price_per_class": 22,
+          "discount_vs_dropin_pct": 15.38,
+          "validity_days": 365,
+          "notes": "Valid for 12 months."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Abonnement STARTER - 4 cours / mois",
+          "monthly_price": 78,
+          "classes_included": 4,
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 19,
+          "discount_vs_dropin_pct": 26.92,
+          "commitment_months": 12,
+          "notes": "12 invoices."
+        },
+        {
+          "name": "Abonnement ESSENTIEL - 8 cours / mois",
+          "monthly_price": 125,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 15.63,
+          "discount_vs_dropin_pct": 39.88,
+          "commitment_months": 12,
+          "notes": "12 invoices."
+        },
+        {
+          "name": "Abonnement SCHOOL - illimite",
+          "monthly_price": 155,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 3,
+          "notes": "3 invoices. Card shows range 12 EUR a 5 EUR per class depending on usage."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "30 or 365 depending on offer",
+        "notes": "Discovery and single class are valid 1 month; 10-class card is valid 12 months; 2-class discovery pack valid 3 months."
+      },
+      "uses_credit_system": true,
+      "credit_system_notes": "Offers are displayed as credits where 1 credit corresponds to 1 class for listed offers.",
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "http://www.groundtogrow.fr/"
+        ],
+        "evidence_line_count": 3,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 95,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "User-provided screenshots with explicit prices, validity windows, and invoice commitments."
+    },
+    {
+      "studio_name": "Galeries Lafayette Sports Club",
+      "domain": "haussmann.galerieslafayette.com",
+      "website": "https://haussmann.galerieslafayette.com/galeries-lafayette-sports-club/?utm_id=+&utm_medium=FIchegmb&utm_source=gmb",
+      "pricing_url": "https://haussmann.galerieslafayette.com/galeries-lafayette-sports-club/?utm_id=+&utm_medium=FIchegmb&utm_source=gmb",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "pilates",
+        "power-yoga",
+        "running",
+        "strength-training",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 09",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Galeries Lafayette Sports Club screenshots. Included visible Yoga Pilates single class and membership prices (8/month, 12/month). ESSENTIEL 4 sessions plan is shown but price is not visible in provided images.",
+      "drop_in": {
+        "price": 29,
+        "duration_minutes": 45
+      },
+      "intro_offers": [],
+      "class_packs": [],
+      "memberships": [
+        {
+          "name": "Abonnement INTENSIF - 8 seances / mois",
+          "monthly_price": 149,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 18.63,
+          "discount_vs_dropin_pct": 35.76,
+          "commitment_months": null,
+          "notes": "Card also shows reference price 232 EUR. Text indicates sans engagement."
+        },
+        {
+          "name": "Abonnement ULTIME - 12 sessions / mois",
+          "monthly_price": 209,
+          "classes_included": 12,
+          "estimated_classes_per_month": 12,
+          "effective_price_per_class": 17.42,
+          "discount_vs_dropin_pct": 39.93,
+          "commitment_months": null,
+          "notes": "Card also shows reference price 348 EUR. Text indicates sans engagement."
+        }
+      ],
+      "discounts": [
+        {
+          "type": "promo",
+          "description": "INTENSIF displayed as 149 EUR instead of 232 EUR",
+          "discount_pct_or_amount": "149 EUR (was 232 EUR)"
+        },
+        {
+          "type": "promo",
+          "description": "ULTIME displayed as 209 EUR instead of 348 EUR",
+          "discount_pct_or_amount": "209 EUR (was 348 EUR)"
+        }
+      ],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": null,
+        "notes": "No validity windows shown in provided screenshots."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "yoga_pilates_45min": 29
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://haussmann.galerieslafayette.com/galeries-lafayette-sports-club/?utm_id=+&utm_medium=FIchegmb&utm_source=gmb"
+        ],
+        "evidence_line_count": 4,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 90,
+      "confidence_tier": "high",
+      "review_required": true,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "memberships",
+        "missing_essentiel_price"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshot-based capture; ESSENTIEL 4-seance price not visible."
+    },
+    {
+      "studio_name": "Healthy Warriors",
+      "domain": "healthy-warriors.com",
+      "website": "https://www.healthy-warriors.com/",
+      "pricing_url": "https://www.healthy-warriors.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "postnatal",
+        "power-yoga",
+        "prenatal",
+        "prenatal-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "data_collected_date": "2026-03-11",
+      "booking_software": "bsport",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Healthy Warriors pricing screenshot (offre decouverte and cours cards).",
+      "drop_in": {
+        "price": 20,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Cours decouverte",
+          "price": 15,
+          "classes_included": 1,
+          "validity_days": 30,
+          "notes": "Displayed as 2 credits; one class consumes 2 credits."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "1 cours",
+          "classes": 1,
+          "total_price": 20,
+          "price_per_class": 20,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "Displayed as 2 credits."
+        },
+        {
+          "name": "5 cours",
+          "classes": 5,
+          "total_price": 95,
+          "price_per_class": 19,
+          "discount_vs_dropin_pct": 5,
+          "validity_days": 90,
+          "notes": "Displayed as 10 credits."
+        },
+        {
+          "name": "10 cours",
+          "classes": 10,
+          "total_price": 180,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 10,
+          "validity_days": 180,
+          "notes": "Displayed as 20 credits."
+        },
+        {
+          "name": "20 cours",
+          "classes": 20,
+          "total_price": 340,
+          "price_per_class": 17,
+          "discount_vs_dropin_pct": 15,
+          "validity_days": 365,
+          "notes": "Displayed as 40 credits."
+        },
+        {
+          "name": "30 cours",
+          "classes": 30,
+          "total_price": 480,
+          "price_per_class": 16,
+          "discount_vs_dropin_pct": 20,
+          "validity_days": 450,
+          "notes": "Displayed as 60 credits."
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "30/90/180/365/450 depending on pack",
+        "notes": "Validity shown on each card: 1 month, 3 months, 6 months, 12 months, and 15 months."
+      },
+      "uses_credit_system": true,
+      "credit_system_notes": "Pricing cards are denominated in credits; each class appears to use 2 credits.",
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.healthy-warriors.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 94,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "credit_system_identified"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshot includes discovery and class-pack pricing with validity windows."
+    },
+    {
+      "studio_name": "Hera Club",
+      "domain": "heraclubparis.com",
+      "website": "https://www.heraclubparis.com/",
+      "pricing_url": "https://www.heraclubparis.com/",
+      "categories": [
+        "barre",
+        "bootcamp",
+        "fitness",
+        "high-intensity-pilates",
+        "mat-pilates",
+        "pilates",
+        "power-yoga",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 16",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Hera Club pricing screenshots.",
+      "drop_in": {
+        "price": 38,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Intro offer",
+          "name": "Intro offer - 3 classes",
+          "price": 75,
+          "classes_included": 3,
+          "validity_days": null,
+          "notes": "Validity not shown in provided screenshots."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "1 classe",
+          "classes": 1,
+          "total_price": 38,
+          "price_per_class": 38,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": null,
+          "notes": "Validity not shown."
+        },
+        {
+          "name": "5 classes",
+          "classes": 5,
+          "total_price": 165,
+          "price_per_class": 33,
+          "discount_vs_dropin_pct": 13.16,
+          "validity_days": null,
+          "notes": "Validity not shown."
+        },
+        {
+          "name": "10 classes",
+          "classes": 10,
+          "total_price": 300,
+          "price_per_class": 30,
+          "discount_vs_dropin_pct": 21.05,
+          "validity_days": null,
+          "notes": "Validity not shown."
+        },
+        {
+          "name": "20 classes",
+          "classes": 20,
+          "total_price": 560,
+          "price_per_class": 28,
+          "discount_vs_dropin_pct": 26.32,
+          "validity_days": null,
+          "notes": "Validity not shown."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Monthly Unlimited",
+          "monthly_price": 320,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": null,
+          "notes": "Shown as Contract; commitment length not visible."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": null,
+        "notes": "No validity durations visible in provided screenshots."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.heraclubparis.com/"
+        ],
+        "evidence_line_count": 3,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 93,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "User-provided screenshots include single class, intro offer, class packs, and monthly unlimited contract price."
+    },
+    {
+      "studio_name": "HI KICK",
+      "domain": "hi-kick.fr",
+      "website": "http://hi-kick.fr/",
+      "pricing_url": "http://hi-kick.fr/",
+      "categories": [
+        "boxing",
+        "circuit-training",
+        "fitness",
+        "gym-time",
+        "heavy-bag",
+        "high-intensity-pilates",
+        "kickboxing",
+        "martial-arts",
+        "mat-pilates",
+        "pilates",
+        "strength-training",
+        "stretching"
+      ],
+      "arrondissement": "Paris 15",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided HI KICK pricing screenshots (pass decouverte, a la carte, abonnements). Base subscription prices are shown for 12-month commitment; sans engagement is +10 EUR/month.",
+      "drop_in": {
+        "price": 25,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Trial class",
+          "name": "Cours d'essai",
+          "price": 19,
+          "classes_included": 1,
+          "validity_days": 14,
+          "notes": "Valid 2 weeks."
+        },
+        {
+          "type": "Discovery pack",
+          "name": "3 cours",
+          "price": 49,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "Valid 1 month."
+        },
+        {
+          "type": "Discovery pass",
+          "name": "1 mois illimite",
+          "price": 99,
+          "classes_included": "unlimited",
+          "validity_days": 30,
+          "notes": "Valid 1 month; not cumulable with 3-course offer."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "A l'unite",
+          "classes": 1,
+          "total_price": 25,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 14,
+          "notes": "Valid 2 weeks."
+        },
+        {
+          "name": "Carte 5 cours",
+          "classes": 5,
+          "total_price": 120,
+          "price_per_class": 24,
+          "discount_vs_dropin_pct": 4,
+          "validity_days": 30,
+          "notes": "Valid 1 month."
+        },
+        {
+          "name": "Carte 10 cours",
+          "classes": 10,
+          "total_price": 220,
+          "price_per_class": 22,
+          "discount_vs_dropin_pct": 12,
+          "validity_days": 90,
+          "notes": "Valid 3 months."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "LIGHT",
+          "monthly_price": 59,
+          "classes_included": 4,
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 14.75,
+          "discount_vs_dropin_pct": 41,
+          "commitment_months": 12,
+          "notes": "Includes off-peak access (heures creuses). Sans engagement: +10 EUR/month."
+        },
+        {
+          "name": "BASIC",
+          "monthly_price": 109,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 13.63,
+          "discount_vs_dropin_pct": 45.5,
+          "commitment_months": 12,
+          "notes": "Includes off-peak access (heures creuses). Sans engagement: +10 EUR/month."
+        },
+        {
+          "name": "PREMIUM",
+          "monthly_price": 129,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "Unlimited sessions. Includes off-peak access (heures creuses). Sans engagement: +10 EUR/month."
+        },
+        {
+          "name": "Duo premium",
+          "monthly_price": 169,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "Shared premium subscription for couple at same address."
+        }
+      ],
+      "discounts": [
+        {
+          "type": "promo",
+          "description": "Additional class price for subscribers",
+          "discount_pct_or_amount": "19 EUR (instead of 25 EUR)"
+        },
+        {
+          "type": "pricing_rule",
+          "description": "Sans engagement option",
+          "discount_pct_or_amount": "+10 EUR/month versus 12-month commitment prices"
+        }
+      ],
+      "expiration_policy": {
+        "single_class_validity_days": 14,
+        "pack_validity_days": "14/30/90 depending on offer",
+        "notes": "A la carte and discovery cards show 2-week, 1-month, and 3-month validity depending on product."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "http://hi-kick.fr/"
+        ],
+        "evidence_line_count": 3,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 94,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "User-provided screenshots include full visible pricing grid and subscription conditions."
+    },
+    {
+      "studio_name": "Homa Sport",
+      "domain": "homasport.com",
+      "website": "https://www.homasport.com/",
+      "pricing_url": "https://www.homasport.com/",
+      "categories": [
+        "bootcamp",
+        "boxing",
+        "circuit-training",
+        "fitness",
+        "jiu-jitsu",
+        "martial-arts",
+        "mixed-martial-arts",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 10",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Homa Sport screenshots. Adult formulas shown for combat + cross training. Membership cards list 12-month commitment prices and fixed-duration no-commitment alternatives.",
+      "drop_in": {
+        "price": 30,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Trial class",
+          "name": "Cours d'essai",
+          "price": 20,
+          "classes_included": 1,
+          "validity_days": null,
+          "notes": "Deducted if subscribing to a membership."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l'unite",
+          "classes": 1,
+          "total_price": 30,
+          "price_per_class": 30,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": null,
+          "notes": ""
+        },
+        {
+          "name": "Carte de 15 cours",
+          "classes": 15,
+          "total_price": 225,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 50,
+          "validity_days": null,
+          "notes": "Validity not shown in provided screenshots."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Formule 8 cours/mois Adulte",
+          "monthly_price": 75,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 9.38,
+          "discount_vs_dropin_pct": 68.75,
+          "commitment_months": 12,
+          "notes": "12-month commitment (tacit renewal). No-commitment fixed-duration options shown: 111 EUR/1 month, 280 EUR/3 months, 561 EUR/6 months. Signup fee: 35 EUR (only at registration)."
+        },
+        {
+          "name": "Formule 12 cours/mois Adulte",
+          "monthly_price": 85,
+          "classes_included": 12,
+          "estimated_classes_per_month": 12,
+          "effective_price_per_class": 7.08,
+          "discount_vs_dropin_pct": 76.39,
+          "commitment_months": 12,
+          "notes": "12-month commitment (tacit renewal). No-commitment fixed-duration options shown: 137 EUR/1 month, 370 EUR/3 months, 661 EUR/6 months. Signup fee: 35 EUR (only at registration)."
+        },
+        {
+          "name": "Formule 20 cours/mois Adulte",
+          "monthly_price": 119,
+          "classes_included": 20,
+          "estimated_classes_per_month": 20,
+          "effective_price_per_class": 5.95,
+          "discount_vs_dropin_pct": 80.17,
+          "commitment_months": 12,
+          "notes": "12-month commitment (tacit renewal). No-commitment fixed-duration options shown: 175 EUR/1 month, 472 EUR/3 months, 949 EUR/6 months. Signup fee: 35 EUR (only at registration)."
+        },
+        {
+          "name": "Formule illimitee Adulte",
+          "monthly_price": 159,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "12-month commitment (tacit renewal). No-commitment fixed-duration options shown: 261 EUR/1 month, 659 EUR/3 months, 1318 EUR/6 months. Signup fee: 35 EUR (only at registration)."
+        }
+      ],
+      "discounts": [
+        {
+          "type": "pricing_rule",
+          "description": "Frais de dossier",
+          "discount_pct_or_amount": "35 EUR one-time at registration"
+        }
+      ],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": null,
+        "notes": "No validity durations shown for trial, single class, or 15-class card in provided screenshots."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.homasport.com/"
+        ],
+        "evidence_line_count": 6,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 95,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "User-provided screenshots include trial class, a la carte/card prices, and adult membership pricing matrix."
+    },
+    {
+      "studio_name": "Humble Warrior",
+      "domain": "humble-warrior.com",
+      "website": "http://humble-warrior.com/",
+      "pricing_url": "http://humble-warrior.com/",
+      "categories": [
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 02",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Humble Warrior pricing screenshots for studio classes only.",
+      "drop_in": {
+        "price": 20.9,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "New member pass",
+          "name": "Pass New Warrior (cours studio)",
+          "price": 47,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "For first-time HW students only. Valid 1 month from first booking. Not renewable or redeemable for cash. Excludes atelier/workshop/evenement."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Cours a l'unite en studio",
+          "classes": 1,
+          "total_price": 20.9,
+          "price_per_class": 20.9,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": null,
+          "notes": "Offer valid for one class."
+        },
+        {
+          "name": "Carte 5 cours (en studio)",
+          "classes": 5,
+          "total_price": 90,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 13.88,
+          "validity_days": 90,
+          "notes": "Valid 3 months from first booking. Excludes atelier/workshop/evenement. Non-refundable and non-shareable."
+        },
+        {
+          "name": "Carte 10 cours (en studio)",
+          "classes": 10,
+          "total_price": 170,
+          "price_per_class": 17,
+          "discount_vs_dropin_pct": 18.66,
+          "validity_days": 180,
+          "notes": "Valid 6 months from first booking. Excludes atelier/workshop/evenement. Non-refundable and non-shareable."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Pass No limit (en studio)",
+          "monthly_price": 150,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 1,
+          "notes": "Unlimited hip-hop yoga for 30 days on regular classes (Paris and Marseille). Excludes atelier/workshop/evenement. Purchase valid for 365 days; once first booking is made, pass is valid for 1 month. Non-refundable and non-shareable."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": "90/180 depending on pack",
+        "notes": "New Warrior pass valid 1 month from first booking; No Limit pass redeemable within 365 days, then valid 1 month from first booking."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "studio_single": 20.9
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "http://humble-warrior.com/"
+        ],
+        "evidence_line_count": 5,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 95,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "User-provided screenshots include single class, New Warrior pass, 5/10-class packs, and No limit pass details."
+    },
+    {
+      "studio_name": "ATELIERS ILLUMINESSENS",
+      "domain": "illuminessens.com",
+      "website": "https://www.illuminessens.com/services",
+      "pricing_url": "https://www.illuminessens.com/services",
+      "categories": [
+        "fitness",
+        "pilates",
+        "yoga"
+      ],
+      "arrondissement": "Paris 15",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Ateliers Illuminessens pricing screenshots.",
+      "drop_in": {
+        "price": null,
+        "duration_minutes": null
+      },
+      "intro_offers": [],
+      "class_packs": [
+        {
+          "name": "Forfait 5 cours",
+          "classes": 5,
+          "total_price": 100,
+          "price_per_class": 20,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": "Yoga/Pilates/Sophrologie classes; validity not shown."
+        },
+        {
+          "name": "Forfait 10 cours",
+          "classes": 10,
+          "total_price": 190,
+          "price_per_class": 19,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": "Yoga/Pilates/Sophrologie classes; validity not shown."
+        },
+        {
+          "name": "Forfait 15 cours",
+          "classes": 15,
+          "total_price": 275,
+          "price_per_class": 18.33,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": "Yoga/Pilates/Sophrologie classes; validity not shown."
+        },
+        {
+          "name": "Forfait 20 cours",
+          "classes": 20,
+          "total_price": 350,
+          "price_per_class": 17.5,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": "Yoga/Pilates/Sophrologie classes; validity not shown."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Abonnement mensuel 4 cours",
+          "monthly_price": 85,
+          "classes_included": 4,
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 21.25,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": null,
+          "notes": "4 group classes per month; commitment not shown."
+        },
+        {
+          "name": "Abonnement mensuel 8 cours",
+          "monthly_price": 140,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 17.5,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": null,
+          "notes": "8 group classes per month; commitment not shown."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": null,
+        "notes": "No validity windows visible in provided screenshots."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.illuminessens.com/services"
+        ],
+        "evidence_line_count": 4,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 93,
+      "confidence_tier": "high",
+      "review_required": true,
+      "confidence_reasons": [
+        "manual_verified",
+        "class_packs",
+        "memberships",
+        "missing_single_class_price"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshots show packs and monthly memberships; no explicit single drop-in card visible."
+    },
+    {
+      "studio_name": "Inspiration Danse Studio Association",
+      "domain": "inspirationdansestudio.com",
+      "website": "https://www.inspirationdansestudio.com/",
+      "pricing_url": "https://www.inspirationdansestudio.com/",
+      "categories": [
+        "ballroom-dance",
+        "cardio-dance",
+        "dance",
+        "fitness",
+        "latin-dance",
+        "salsa-dance"
+      ],
+      "arrondissement": "Paris 20",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided cours collectifs adultes pricing screenshot. Adhesion annuelle de 30 EUR applies to listed options.",
+      "drop_in": {
+        "price": 16,
+        "duration_minutes": 60
+      },
+      "intro_offers": [],
+      "class_packs": [
+        {
+          "name": "Carte liberte - Cours a l'unite",
+          "classes": 1,
+          "total_price": 16,
+          "price_per_class": 16,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 90,
+          "notes": "Adhesion 30 EUR required. Validity 3 months."
+        },
+        {
+          "name": "Carte liberte - 10 cours",
+          "classes": 10,
+          "total_price": 150,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 6.25,
+          "validity_days": 180,
+          "notes": "Adhesion 30 EUR required. Validity 6 months."
+        },
+        {
+          "name": "Carte liberte - 20 cours",
+          "classes": 20,
+          "total_price": 280,
+          "price_per_class": 14,
+          "discount_vs_dropin_pct": 12.5,
+          "validity_days": 240,
+          "notes": "Adhesion 30 EUR required. Validity 8 months."
+        },
+        {
+          "name": "Carte liberte - 30 cours",
+          "classes": 30,
+          "total_price": 390,
+          "price_per_class": 13,
+          "discount_vs_dropin_pct": 18.75,
+          "validity_days": 365,
+          "notes": "Adhesion 30 EUR required. Validity 12 months."
+        },
+        {
+          "name": "Carte liberte - 60 cours",
+          "classes": 60,
+          "total_price": 720,
+          "price_per_class": 12,
+          "discount_vs_dropin_pct": 25,
+          "validity_days": 365,
+          "notes": "Adhesion 30 EUR required. Validity 12 months."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Carte annuelle - 1 cours/semaine",
+          "monthly_price": 35.83,
+          "classes_included": "1/week",
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 8.96,
+          "discount_vs_dropin_pct": 44,
+          "commitment_months": 12,
+          "notes": "Annual card price 430 EUR + adhesion 30 EUR. Season runs Sept to July."
+        },
+        {
+          "name": "Carte annuelle - 2 cours/semaine",
+          "monthly_price": 60.83,
+          "classes_included": "2/week",
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 7.6,
+          "discount_vs_dropin_pct": 52.5,
+          "commitment_months": 12,
+          "notes": "Annual card price 730 EUR + adhesion 30 EUR. Season runs Sept to July."
+        },
+        {
+          "name": "Carte annuelle - 3 cours/semaine",
+          "monthly_price": 80,
+          "classes_included": "3/week",
+          "estimated_classes_per_month": 12,
+          "effective_price_per_class": 6.67,
+          "discount_vs_dropin_pct": 58.31,
+          "commitment_months": 12,
+          "notes": "Annual card price 960 EUR + adhesion 30 EUR. Season runs Sept to July."
+        },
+        {
+          "name": "Carte annuelle - 4 cours/semaine",
+          "monthly_price": 92.5,
+          "classes_included": "4/week",
+          "estimated_classes_per_month": 16,
+          "effective_price_per_class": 5.78,
+          "discount_vs_dropin_pct": 63.88,
+          "commitment_months": 12,
+          "notes": "Annual card price 1110 EUR + adhesion 30 EUR. Season runs Sept to July."
+        },
+        {
+          "name": "Carte annuelle - Illimite",
+          "monthly_price": 112.5,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "Annual card price 1350 EUR + adhesion 30 EUR. Season runs Sept to July."
+        }
+      ],
+      "discounts": [
+        {
+          "type": "membership_fee",
+          "description": "Adhesion annuelle obligatoire",
+          "discount_pct_or_amount": "30 EUR"
+        },
+        {
+          "type": "discount",
+          "description": "Reduction couples et moins de 27 ans",
+          "discount_pct_or_amount": "-10% (non cumulable)"
+        }
+      ],
+      "expiration_policy": {
+        "single_class_validity_days": 90,
+        "pack_validity_days": "90/180/240/365 depending on card",
+        "notes": "Season in progress from September to 13 July; pro-rata may apply if purchased Nov-Feb as noted."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.inspirationdansestudio.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 92,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshot shows adult group class cards, validity durations, annual options, and adhesion fee."
+    },
+    {
+      "studio_name": "Janet Studio",
+      "domain": "janetstudio.fr",
+      "website": "https://www.janetstudio.fr/",
+      "pricing_url": "https://www.janetstudio.fr/",
+      "categories": [
+        "fitness",
+        "mat-pilates",
+        "pilates",
+        "prenatal",
+        "reformer-pilates",
+        "stretching",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 11",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Janet Studio pricing screenshots with reformer and tapis modalities.",
+      "drop_in": {
+        "price": null,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "1 cours achete = 1 cours offert Reformer",
+          "price": 42,
+          "classes_included": 2,
+          "validity_days": 30,
+          "notes": "Valid once per person."
+        },
+        {
+          "type": "Discovery offer",
+          "name": "1 cours achete = 1 cours offert Tapis",
+          "price": 28,
+          "classes_included": 2,
+          "validity_days": 30,
+          "notes": "Valid once per person."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "1 seance Reformer",
+          "classes": 1,
+          "total_price": 42,
+          "price_per_class": 42,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Pack 5 Reformer",
+          "classes": 5,
+          "total_price": 200,
+          "price_per_class": 40,
+          "discount_vs_dropin_pct": 4.76,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Pack 10 Reformer",
+          "classes": 10,
+          "total_price": 380,
+          "price_per_class": 38,
+          "discount_vs_dropin_pct": 9.52,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Pack 20 Reformer",
+          "classes": 20,
+          "total_price": 690,
+          "price_per_class": 34.5,
+          "discount_vs_dropin_pct": 17.86,
+          "validity_days": 270,
+          "notes": ""
+        },
+        {
+          "name": "1 seance Tapis",
+          "classes": 1,
+          "total_price": 28,
+          "price_per_class": 28,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Pack 5 Tapis",
+          "classes": 5,
+          "total_price": 130,
+          "price_per_class": 26,
+          "discount_vs_dropin_pct": 7.14,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Pack 10 Tapis",
+          "classes": 10,
+          "total_price": 240,
+          "price_per_class": 24,
+          "discount_vs_dropin_pct": 14.29,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Pack 20 Tapis",
+          "classes": 20,
+          "total_price": 440,
+          "price_per_class": 22,
+          "discount_vs_dropin_pct": 21.43,
+          "validity_days": 270,
+          "notes": ""
+        }
+      ],
+      "memberships": [
+        {
+          "name": "4 cours / mois",
+          "monthly_price": 115,
+          "classes_included": 4,
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 28.75,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 3,
+          "notes": "2 reformer + 2 tapis."
+        },
+        {
+          "name": "8 cours / mois",
+          "monthly_price": 220,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 27.5,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 3,
+          "notes": "4 reformer + 4 tapis."
+        },
+        {
+          "name": "12 cours / mois",
+          "monthly_price": 330,
+          "classes_included": 12,
+          "estimated_classes_per_month": 12,
+          "effective_price_per_class": 27.5,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 3,
+          "notes": "6 reformer + 6 tapis."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "30/90/180/270 depending on pack",
+        "notes": "Reformer and tapis packs share the same validity windows."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "reformer_single": 42,
+        "tapis_single": 28
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.janetstudio.fr/"
+        ],
+        "evidence_line_count": 3,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 95,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "modality_specific_pricing"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "User-provided screenshots include discovery offers, reformer/tapis packs, and monthly memberships with commitments."
+    },
+    {
+      "studio_name": "jivamukti yoga paris",
+      "domain": "jivamuktiyoga.fr",
+      "website": "http://jivamuktiyoga.fr/",
+      "pricing_url": "http://jivamuktiyoga.fr/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "iyengar-yoga",
+        "jivamukti-yoga",
+        "kundalini-yoga",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 10",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "bsport",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Jivamukti pricing screenshots. Captured regular drop-in/packs, Ashtanga Mysore products, unlimited products excluding Mysore, and express 60-minute products.",
+      "drop_in": {
+        "price": 27,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Mysore intro",
+          "name": "Mysore Intro",
+          "price": 20,
+          "classes_included": 1,
+          "validity_days": 90,
+          "notes": "Ashtanga Mysore product."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Drop-in",
+          "classes": 1,
+          "total_price": 27,
+          "price_per_class": 27,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 90,
+          "notes": "Regular classes; includes Ashtanga Mysore in this product group."
+        },
+        {
+          "name": "5 classes",
+          "classes": 5,
+          "total_price": 115,
+          "price_per_class": 23,
+          "discount_vs_dropin_pct": 14.81,
+          "validity_days": 90,
+          "notes": "Regular classes."
+        },
+        {
+          "name": "10 classes",
+          "classes": 10,
+          "total_price": 200,
+          "price_per_class": 20,
+          "discount_vs_dropin_pct": 25.93,
+          "validity_days": 180,
+          "notes": "Regular classes."
+        },
+        {
+          "name": "20 classes",
+          "classes": 20,
+          "total_price": 360,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 33.33,
+          "validity_days": 365,
+          "notes": "Regular classes."
+        },
+        {
+          "name": "40 classes pack",
+          "classes": 40,
+          "total_price": 680,
+          "price_per_class": 17,
+          "discount_vs_dropin_pct": 37.04,
+          "validity_days": 365,
+          "notes": "Regular classes."
+        },
+        {
+          "name": "Drop-in (60 minutes)",
+          "classes": 1,
+          "total_price": 22,
+          "price_per_class": 22,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 90,
+          "notes": "Express 60-minute classes only."
+        },
+        {
+          "name": "5 classes (60 minutes)",
+          "classes": 5,
+          "total_price": 90,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 90,
+          "notes": "Express 60-minute classes only."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Mysore 1 week",
+          "monthly_price": 95,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 0.25,
+          "notes": "Ashtanga Mysore unlimited. Valid 7 days."
+        },
+        {
+          "name": "Mysore 1 month",
+          "monthly_price": 190,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 1,
+          "notes": "Ashtanga Mysore unlimited."
+        },
+        {
+          "name": "Mysore 3 months",
+          "monthly_price": 178.33,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 3,
+          "notes": "Ashtanga Mysore unlimited. Total price 535 EUR."
+        },
+        {
+          "name": "1 week unlimited (excl. Mysore)",
+          "monthly_price": 115,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 0.25,
+          "notes": "Unlimited product does NOT include Ashtanga Mysore. Valid 7 days."
+        },
+        {
+          "name": "1 month unlimited (excl. Mysore)",
+          "monthly_price": 220,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 1,
+          "notes": "Unlimited product does NOT include Ashtanga Mysore."
+        },
+        {
+          "name": "3 months unlimited (excl. Mysore)",
+          "monthly_price": 193.33,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 3,
+          "notes": "Unlimited product does NOT include Ashtanga Mysore. Total price 580 EUR; validity shown as 3 months and 1 day."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 90,
+        "pack_validity_days": "90/180/365 depending on product",
+        "notes": "Regular and express class-pack products show 3/6/12-month windows; weekly/monthly unlimited products have fixed durations."
+      },
+      "uses_credit_system": true,
+      "credit_system_notes": "Products are displayed as credits with 1 credit corresponding to 1 class in shown class-pack products.",
+      "drop_in_by_modality": {
+        "regular_drop_in": 27,
+        "express_60min_drop_in": 22,
+        "mysore_intro": 20
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "http://jivamuktiyoga.fr/"
+        ],
+        "evidence_line_count": 4,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 94,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "User-provided screenshots include all visible pricing blocks and validity windows for each product family."
+    },
+    {
+      "studio_name": "Jumpman",
+      "domain": "jumpmanfitness.com",
+      "website": "https://jumpmanfitness.com/",
+      "pricing_url": "https://jumpmanfitness.com/",
+      "categories": [
+        "bootcamp",
+        "cycling",
+        "dance",
+        "fitness",
+        "high-intensity-pilates",
+        "indoor-cycling",
+        "pilates",
+        "strength-training",
+        "trampoline"
+      ],
+      "arrondissement": "Paris 16",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Jumpman pricing screenshots (sessions + 3-month and 6-month subscription tabs).",
+      "drop_in": {
+        "price": 27,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Trial pack",
+          "name": "Offre d'essai 3 seances",
+          "price": 39,
+          "classes_included": 3,
+          "validity_days": 21,
+          "notes": "Offer unique, valid 3 weeks."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Pack etudiants 5 seances",
+          "classes": 5,
+          "total_price": 99,
+          "price_per_class": 19.8,
+          "discount_vs_dropin_pct": 26.67,
+          "validity_days": 60,
+          "notes": "Student pack; validity 2 months."
+        },
+        {
+          "name": "1 seance",
+          "classes": 1,
+          "total_price": 27,
+          "price_per_class": 27,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "Valid 1 month."
+        },
+        {
+          "name": "5 seances",
+          "classes": 5,
+          "total_price": 125,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": 7.41,
+          "validity_days": 60,
+          "notes": "Valid 2 months."
+        },
+        {
+          "name": "10 seances",
+          "classes": 10,
+          "total_price": 230,
+          "price_per_class": 23,
+          "discount_vs_dropin_pct": 14.81,
+          "validity_days": 120,
+          "notes": "Valid 4 months; shareable."
+        },
+        {
+          "name": "20 seances",
+          "classes": 20,
+          "total_price": 420,
+          "price_per_class": 21,
+          "discount_vs_dropin_pct": 22.22,
+          "validity_days": 240,
+          "notes": "Valid 8 months; shareable."
+        },
+        {
+          "name": "40 seances",
+          "classes": 40,
+          "total_price": 720,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 33.33,
+          "validity_days": 365,
+          "notes": "Valid 12 months; shareable."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "4 seances/mois (engagement 6 mois)",
+          "monthly_price": 69,
+          "classes_included": 4,
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 17.25,
+          "discount_vs_dropin_pct": 36.11,
+          "commitment_months": 6,
+          "notes": "6-month tab selected."
+        },
+        {
+          "name": "8 seances/mois (engagement 6 mois)",
+          "monthly_price": 99,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 12.38,
+          "discount_vs_dropin_pct": 54.17,
+          "commitment_months": 6,
+          "notes": "6-month tab selected."
+        },
+        {
+          "name": "Illimite/mois (engagement 6 mois)",
+          "monthly_price": 119,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 6,
+          "notes": "6-month tab selected."
+        },
+        {
+          "name": "4 seances/mois (engagement 3 mois)",
+          "monthly_price": 79,
+          "classes_included": 4,
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 19.75,
+          "discount_vs_dropin_pct": 26.85,
+          "commitment_months": 3,
+          "notes": "3-month tab selected."
+        },
+        {
+          "name": "8 seances/mois (engagement 3 mois)",
+          "monthly_price": 119,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 14.88,
+          "discount_vs_dropin_pct": 44.91,
+          "commitment_months": 3,
+          "notes": "3-month tab selected."
+        },
+        {
+          "name": "Illimite/mois (engagement 3 mois)",
+          "monthly_price": 139,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 3,
+          "notes": "3-month tab selected."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "21/30/60/120/240/365 depending on offer",
+        "notes": "Validity windows shown on cards; some packs are marked shareable."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://jumpmanfitness.com/"
+        ],
+        "evidence_line_count": 3,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 95,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshots include sessions grid and both 3-month and 6-month membership tabs."
+    },
+    {
+      "studio_name": "KAH Studio",
+      "domain": "kahstudioandcoffee.com",
+      "website": "http://kahstudioandcoffee.com/",
+      "pricing_url": "http://kahstudioandcoffee.com/",
+      "categories": [
+        "barre",
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "low-impact-training",
+        "pilates",
+        "sculpt",
+        "strength-training",
+        "stretching",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 10",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided KAH Studio screenshots (discovery offers, class packs, subscriptions, unlimited plans).",
+      "drop_in": {
+        "price": 29,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery pack",
+          "name": "Offre decouverte 3 cours",
+          "price": 45,
+          "classes_included": 3,
+          "validity_days": 14,
+          "notes": "1 achat par client. Validity starts on first booking."
+        },
+        {
+          "type": "Unlimited week",
+          "name": "Unlimited Week",
+          "price": 89,
+          "classes_included": "unlimited",
+          "validity_days": 7,
+          "notes": "Sans engagement. 1 achat par client. Validity starts on first booking."
+        },
+        {
+          "type": "Buddy offer",
+          "name": "Double Trouble",
+          "price": 50,
+          "classes_included": 2,
+          "validity_days": 7,
+          "notes": "Session for same class/time slot; access x2 for you and +1 (or chain solo). 1 achat par client."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Seance unitaire",
+          "classes": 1,
+          "total_price": 29,
+          "price_per_class": 29,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Pack 5 seances",
+          "classes": 5,
+          "total_price": 130,
+          "price_per_class": 26,
+          "discount_vs_dropin_pct": 10.34,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Pack 10 seances",
+          "classes": 10,
+          "total_price": 220,
+          "price_per_class": 22,
+          "discount_vs_dropin_pct": 24.14,
+          "validity_days": 60,
+          "notes": ""
+        },
+        {
+          "name": "Pack 15 seances",
+          "classes": 15,
+          "total_price": 315,
+          "price_per_class": 21,
+          "discount_vs_dropin_pct": 27.59,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Pack 30 seances",
+          "classes": 30,
+          "total_price": 540,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 37.93,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Pack 40 seances",
+          "classes": 40,
+          "total_price": 640,
+          "price_per_class": 16,
+          "discount_vs_dropin_pct": 44.83,
+          "validity_days": 240,
+          "notes": ""
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Abonnement x5/mois",
+          "monthly_price": 90,
+          "classes_included": 5,
+          "estimated_classes_per_month": 5,
+          "effective_price_per_class": 18,
+          "discount_vs_dropin_pct": 37.93,
+          "commitment_months": 6,
+          "notes": "Engagement minimum 6 mois. Renouvellement automatique. Resiliation avec 1 mois preavis. Limite a 2 check-ins/semaine."
+        },
+        {
+          "name": "Abonnement x7/mois",
+          "monthly_price": 109,
+          "classes_included": 7,
+          "estimated_classes_per_month": 7,
+          "effective_price_per_class": 15.57,
+          "discount_vs_dropin_pct": 46.31,
+          "commitment_months": 6,
+          "notes": "Engagement minimum 6 mois. Renouvellement automatique. Resiliation avec 1 mois preavis. Limite a 2 check-ins/semaine."
+        },
+        {
+          "name": "Abonnement x9/mois",
+          "monthly_price": 139,
+          "classes_included": 9,
+          "estimated_classes_per_month": 9,
+          "effective_price_per_class": 15.44,
+          "discount_vs_dropin_pct": 46.78,
+          "commitment_months": 9,
+          "notes": "Engagement minimum 9 mois. Renouvellement automatique. Resiliation avec 1 mois preavis."
+        },
+        {
+          "name": "Abonnement x12/mois",
+          "monthly_price": 169,
+          "classes_included": 12,
+          "estimated_classes_per_month": 12,
+          "effective_price_per_class": 14.08,
+          "discount_vs_dropin_pct": 51.44,
+          "commitment_months": 12,
+          "notes": "Engagement minimum 12 mois. Renouvellement automatique. Resiliation avec 1 mois preavis."
+        },
+        {
+          "name": "Unlimited KAH",
+          "monthly_price": 189,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "Engagement 12 mois. Renouvellement tacite."
+        },
+        {
+          "name": "Unlimited Month",
+          "monthly_price": 229,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 1,
+          "notes": "Sans engagement."
+        }
+      ],
+      "discounts": [
+        {
+          "type": "benefit",
+          "description": "Avantage abonnement",
+          "discount_pct_or_amount": "-20% sur tout le cafe (et merch KAH)"
+        }
+      ],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "30/60/90/180/240 depending on pack",
+        "notes": "Discovery offers run from first booking date."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "http://kahstudioandcoffee.com/"
+        ],
+        "evidence_line_count": 5,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 95,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "User-provided screenshots include packs, subscriptions, and unlimited plans with commitments."
+    },
+    {
+      "studio_name": "Kalon",
+      "domain": "kalonbarre.com",
+      "website": "https://www.kalonbarre.com/",
+      "pricing_url": "https://www.kalonbarre.com/",
+      "categories": [
+        "barre",
+        "fitness"
+      ],
+      "arrondissement": "Paris 09",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Kalon pricing screenshot.",
+      "drop_in": {
+        "price": 32,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Trial class",
+          "name": "First timer trial class",
+          "price": 20,
+          "classes_included": 1,
+          "validity_days": null,
+          "notes": "Offer valid once per person for new studio clients."
+        },
+        {
+          "type": "Intro pack",
+          "name": "Intro to Kalon Barre",
+          "price": 70,
+          "classes_included": 3,
+          "validity_days": 21,
+          "notes": "One-time only."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Single class",
+          "classes": 1,
+          "total_price": 32,
+          "price_per_class": 32,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Five classes",
+          "classes": 5,
+          "total_price": 150,
+          "price_per_class": 30,
+          "discount_vs_dropin_pct": 6.25,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Ten classes",
+          "classes": 10,
+          "total_price": 280,
+          "price_per_class": 28,
+          "discount_vs_dropin_pct": 12.5,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Twenty classes",
+          "classes": 20,
+          "total_price": 520,
+          "price_per_class": 26,
+          "discount_vs_dropin_pct": 18.75,
+          "validity_days": 270,
+          "notes": ""
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "21/30/90/180/270 depending on offer",
+        "notes": "Intro pack valid 21 days; other cards follow listed validity windows."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.kalonbarre.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 94,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshot includes trial class banner and full class-card pricing table."
+    },
+    {
+      "studio_name": "Karma Pilates",
+      "domain": "karmapilates.fr",
+      "website": "https://karmapilates.fr/",
+      "pricing_url": "https://karmapilates.fr/",
+      "categories": [
+        "fitness",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": null,
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Karma Pilates pricing screenshots.",
+      "drop_in": {
+        "price": 30,
+        "duration_minutes": 50
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery class",
+          "name": "Seance Decouverte",
+          "price": 20,
+          "classes_included": 1,
+          "validity_days": null,
+          "notes": "Valable une fois."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Karma First",
+          "classes": 1,
+          "total_price": 30,
+          "price_per_class": 30,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "Cours collectif 50 minutes."
+        },
+        {
+          "name": "Mini-Karma",
+          "classes": 3,
+          "total_price": 85,
+          "price_per_class": 28.33,
+          "discount_vs_dropin_pct": 5.57,
+          "validity_days": 60,
+          "notes": "Cours collectif 50 minutes."
+        },
+        {
+          "name": "Karma complet",
+          "classes": 5,
+          "total_price": 130,
+          "price_per_class": 26,
+          "discount_vs_dropin_pct": 13.33,
+          "validity_days": 90,
+          "notes": "Cours collectif 50 minutes."
+        },
+        {
+          "name": "Karma ultime",
+          "classes": 10,
+          "total_price": 250,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": 16.67,
+          "validity_days": 120,
+          "notes": "Cours collectif 50 minutes."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Karma Boost",
+          "monthly_price": 99,
+          "classes_included": 4,
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 24.75,
+          "discount_vs_dropin_pct": 17.5,
+          "commitment_months": 1,
+          "notes": "Sans engagement."
+        },
+        {
+          "name": "Karma Intense",
+          "monthly_price": 199,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 24.88,
+          "discount_vs_dropin_pct": 17.07,
+          "commitment_months": 1,
+          "notes": "Sans engagement."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "30/60/90/120 depending on pack",
+        "notes": "Validity windows and class duration (50 min) shown on cards."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "reformer_collectif_50min": 30
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://karmapilates.fr/"
+        ],
+        "evidence_line_count": 3,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 94,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "User-provided screenshots include one-time discovery class, class packs, and no-commit monthly memberships."
+    },
+    {
+      "studio_name": "K-Gym Training",
+      "domain": "kgym-paris.com",
+      "website": "https://www.kgym-paris.com/",
+      "pricing_url": "https://www.kgym-paris.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "hiit",
+        "low-impact-training",
+        "sculpt",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 15",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "bsport",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided K-Gym Small Group pricing screenshots.",
+      "drop_in": {
+        "price": 35,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery class",
+          "name": "Small Group - Seance Decouverte",
+          "price": 20,
+          "classes_included": 1,
+          "validity_days": 30,
+          "notes": "1 credit."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Small Group Unite (Sans Engagement)",
+          "classes": 1,
+          "total_price": 35,
+          "price_per_class": 35,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 60,
+          "notes": "1 credit."
+        },
+        {
+          "name": "Small Group Carte 10 (Sans Engagement)",
+          "classes": 10,
+          "total_price": 220,
+          "price_per_class": 22,
+          "discount_vs_dropin_pct": 37.14,
+          "validity_days": 60,
+          "notes": "10 credits; cours a 22 EUR/unite."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Small Group 4 seances/mois",
+          "monthly_price": 69,
+          "classes_included": 4,
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 17.25,
+          "discount_vs_dropin_pct": 50.71,
+          "commitment_months": 12,
+          "notes": "12 invoices."
+        },
+        {
+          "name": "Small Group 8 seances/mois",
+          "monthly_price": 119,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 14.88,
+          "discount_vs_dropin_pct": 57.5,
+          "commitment_months": 12,
+          "notes": "12 invoices."
+        },
+        {
+          "name": "Small Group Illimite",
+          "monthly_price": 159,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "12 invoices."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 60,
+        "pack_validity_days": 60,
+        "notes": "Discovery valid 1 month; single sans engagement and 10-pack valid 60 days as shown."
+      },
+      "uses_credit_system": true,
+      "credit_system_notes": "Small Group offers are credit-based (1 credit per class on shown cards).",
+      "drop_in_by_modality": {
+        "small_group_single": 35
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.kgym-paris.com/"
+        ],
+        "evidence_line_count": 2,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 94,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshots include small-group discovery/sans engagement cards and membership cards with 12 invoices."
+    },
+    {
+      "studio_name": "KORE",
+      "domain": "kore-studio.com",
+      "website": "https://www.kore-studio.com/",
+      "pricing_url": "https://www.kore-studio.com/",
+      "categories": [
+        "fitness",
+        "high-intensity-pilates",
+        "mat-pilates",
+        "pilates",
+        "reformer-pilates"
+      ],
+      "arrondissement": "Paris 02",
+      "data_collected_date": "2026-03-11",
+      "booking_software": "bsport",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided KORE Studio pricing screenshots. Private session offer excluded from benchmarked group pricing.",
+      "drop_in": {
+        "price": 45,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Trial class",
+          "name": "Cours d'essai",
+          "price": 35,
+          "classes_included": 1,
+          "validity_days": 30,
+          "notes": "Premiere fois; 1 credit."
+        },
+        {
+          "type": "Starter pack",
+          "name": "Starter Pack",
+          "price": 95,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "3 cours d'essai."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "1 cours",
+          "classes": 1,
+          "total_price": 45,
+          "price_per_class": 45,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "Pack 3 cours",
+          "classes": 3,
+          "total_price": 125,
+          "price_per_class": 41.67,
+          "discount_vs_dropin_pct": 7.41,
+          "validity_days": 60,
+          "notes": ""
+        },
+        {
+          "name": "Pack 5 cours",
+          "classes": 5,
+          "total_price": 200,
+          "price_per_class": 40,
+          "discount_vs_dropin_pct": 11.11,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "Pack 10 cours",
+          "classes": 10,
+          "total_price": 380,
+          "price_per_class": 38,
+          "discount_vs_dropin_pct": 15.56,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "Pack 20 cours",
+          "classes": 20,
+          "total_price": 690,
+          "price_per_class": 34.5,
+          "discount_vs_dropin_pct": 23.33,
+          "validity_days": 270,
+          "notes": "Possibilite de payer en 3 ou 4 fois."
+        },
+        {
+          "name": "Pack 30 cours",
+          "classes": 30,
+          "total_price": 890,
+          "price_per_class": 29.67,
+          "discount_vs_dropin_pct": 34.07,
+          "validity_days": 365,
+          "notes": "Possibilite de payer en 3 ou 4 fois."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Abonnement 4 cours/mois",
+          "monthly_price": 160,
+          "classes_included": 4,
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 40,
+          "discount_vs_dropin_pct": 11.11,
+          "commitment_months": 3,
+          "notes": "3 factures."
+        },
+        {
+          "name": "Abonnement 8 cours/mois",
+          "monthly_price": 290,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 36.25,
+          "discount_vs_dropin_pct": 19.44,
+          "commitment_months": 3,
+          "notes": "3 factures."
+        },
+        {
+          "name": "Abonnement 12 cours/mois",
+          "monthly_price": 380,
+          "classes_included": 12,
+          "estimated_classes_per_month": 12,
+          "effective_price_per_class": 31.67,
+          "discount_vs_dropin_pct": 29.63,
+          "commitment_months": 3,
+          "notes": "3 factures."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "30/60/90/180/270/365 depending on offer",
+        "notes": "Validity windows shown on cards."
+      },
+      "uses_credit_system": true,
+      "credit_system_notes": "Offers are displayed as credits (1 credit per class on shown cards).",
+      "drop_in_by_modality": {
+        "small_group_single": 45
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.kore-studio.com/"
+        ],
+        "evidence_line_count": 2,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 95,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshots include trial/starter, class packs, and subscriptions. Private session product intentionally excluded."
+    },
+    {
+      "studio_name": "KURV Studio",
+      "domain": "kurvstudio.com",
+      "website": "https://www.kurvstudio.com/",
+      "pricing_url": "https://www.kurvstudio.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "high-intensity-pilates",
+        "lagree",
+        "pilates",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 06",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided KURV screenshots. Discovery membership captured only for 5 classes/month per user confirmation; 10 and 15 class discovery membership prices not visible.",
+      "drop_in": {
+        "price": null,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Decouverte",
+          "price": 35,
+          "classes_included": 1,
+          "validity_days": null,
+          "notes": "1 cours, valable 1 fois."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Pack 5 cours",
+          "classes": 5,
+          "total_price": 215,
+          "price_per_class": 43,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 60,
+          "notes": "Card displays 43 EUR/seance and validite 2 mois."
+        },
+        {
+          "name": "Pack 10 cours",
+          "classes": 10,
+          "total_price": 380,
+          "price_per_class": 38,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 180,
+          "notes": "Card displays 6 mois."
+        },
+        {
+          "name": "Pack 20 cours",
+          "classes": 20,
+          "total_price": 700,
+          "price_per_class": 35,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 180,
+          "notes": "Card displays 6 mois."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "KURV Discovery, Pulse & Addicted",
+          "monthly_price": 160,
+          "classes_included": 5,
+          "estimated_classes_per_month": 5,
+          "effective_price_per_class": 32,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": null,
+          "notes": "User confirmed this displayed price corresponds to 5 classes/month only; 10 and 15 classes/month prices not found."
+        },
+        {
+          "name": "KURV Unlimited",
+          "monthly_price": 499,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": null,
+          "notes": "One class per day possible. Commitment length not explicitly shown in provided screenshots."
+        }
+      ],
+      "discounts": [
+        {
+          "type": "benefit",
+          "description": "Merch discount for discovery memberships",
+          "discount_pct_or_amount": "-15% sur le merch KURV"
+        }
+      ],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": "60/180 depending on pack",
+        "notes": "Pack validity visible for 5/10/20 packs in screenshots."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.kurvstudio.com/"
+        ],
+        "evidence_line_count": 3,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 92,
+      "confidence_tier": "high",
+      "review_required": true,
+      "confidence_reasons": [
+        "manual_verified",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "missing_10_15_discovery_membership_prices"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "User confirmed discovery membership price shown is only for 5 classes/month; other tiers not visible."
+    },
+    {
+      "studio_name": "La Castagne",
+      "domain": "la-castagne.com",
+      "website": "http://www.la-castagne.com/",
+      "pricing_url": "http://www.la-castagne.com/",
+      "categories": [
+        "boxing",
+        "martial-arts",
+        "mixed-martial-arts",
+        "muay-thai"
+      ],
+      "arrondissement": "Paris 11",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided La Castagne pricing screenshots (abonnements mensuels and carnets). Carnet cards display EUR/mois text but are modeled as per-pack totals based on 1/10-session structure.",
+      "drop_in": {
+        "price": 25,
+        "duration_minutes": null
+      },
+      "intro_offers": [],
+      "class_packs": [
+        {
+          "name": "Carnet 1 seance collective",
+          "classes": 1,
+          "total_price": 25,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": null,
+          "notes": "Card text shows 25 EUR/mois; interpreted as single-session carnet price."
+        },
+        {
+          "name": "Carnet 10 seances collectives",
+          "classes": 10,
+          "total_price": 220,
+          "price_per_class": 22,
+          "discount_vs_dropin_pct": 12,
+          "validity_days": null,
+          "notes": "Card text shows 220 EUR/mois; interpreted as 10-session carnet total."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Abonnement mensuel 1 seance collective/semaine",
+          "monthly_price": 69,
+          "classes_included": "1/week",
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 17.25,
+          "discount_vs_dropin_pct": 31,
+          "commitment_months": null,
+          "notes": "Commitment length not shown."
+        },
+        {
+          "name": "Abonnement mensuel 2 seances collectives/semaine",
+          "monthly_price": 109,
+          "classes_included": "2/week",
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 13.63,
+          "discount_vs_dropin_pct": 45.5,
+          "commitment_months": null,
+          "notes": "Commitment length not shown."
+        },
+        {
+          "name": "Abonnement mensuel 2 seances collectives/semaine + 1 seance privee/mois",
+          "monthly_price": 179,
+          "classes_included": "2/week + 1 private/month",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": null,
+          "notes": "Includes private-session component; effective per-class not modeled from provided screenshot."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": null,
+        "notes": "Validity windows not visible in provided screenshots."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "http://www.la-castagne.com/"
+        ],
+        "evidence_line_count": 2,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 90,
+      "confidence_tier": "high",
+      "review_required": true,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "class_packs",
+        "memberships",
+        "ambiguous_card_mois_label"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshots show monthly memberships and carnet lines; carnet cards include EUR/mois label likely UI wording ambiguity."
+    },
+    {
+      "studio_name": "la Clairiere",
+      "domain": "laclairiere-bienetre.com",
+      "website": "http://www.laclairiere-bienetre.com/",
+      "pricing_url": "http://www.laclairiere-bienetre.com/",
+      "categories": [
+        "ashtanga-yoga",
+        "fitness",
+        "hatha-yoga",
+        "hiit",
+        "iyengar-yoga",
+        "kundalini-yoga",
+        "mat-pilates",
+        "pilates",
+        "power-yoga",
+        "prenatal",
+        "prenatal-yoga",
+        "strength-training",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "data_collected_date": "2026-03-11",
+      "booking_software": "bsport",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided la Clairiere pricing screenshots. One 2x/week subscription card shows conflicting commitment text versus invoice badge and is flagged for review.",
+      "drop_in": {
+        "price": 23,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Trial class",
+          "name": "1 cours d'essai",
+          "price": 17,
+          "classes_included": 1,
+          "validity_days": 22,
+          "notes": "1 credit."
+        },
+        {
+          "type": "Discovery pack",
+          "name": "3 cours decouverte",
+          "price": 48,
+          "classes_included": 3,
+          "validity_days": 21,
+          "notes": "3 credits."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "1 cours",
+          "classes": 1,
+          "total_price": 23,
+          "price_per_class": 23,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "1 credit."
+        },
+        {
+          "name": "5 cours",
+          "classes": 5,
+          "total_price": 110,
+          "price_per_class": 22,
+          "discount_vs_dropin_pct": 4.35,
+          "validity_days": 90,
+          "notes": "5 credits."
+        },
+        {
+          "name": "10 cours",
+          "classes": 10,
+          "total_price": 200,
+          "price_per_class": 20,
+          "discount_vs_dropin_pct": 13.04,
+          "validity_days": 180,
+          "notes": "10 credits."
+        },
+        {
+          "name": "20 cours",
+          "classes": 20,
+          "total_price": 380,
+          "price_per_class": 19,
+          "discount_vs_dropin_pct": 17.39,
+          "validity_days": 270,
+          "notes": "20 credits."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "1 fois par semaine (12 factures)",
+          "monthly_price": 66,
+          "classes_included": "1/week",
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 16.5,
+          "discount_vs_dropin_pct": 28.26,
+          "commitment_months": 12,
+          "notes": "Card shows 12 factures."
+        },
+        {
+          "name": "1 fois par semaine (3 factures)",
+          "monthly_price": 72,
+          "classes_included": "1/week",
+          "estimated_classes_per_month": 4,
+          "effective_price_per_class": 18,
+          "discount_vs_dropin_pct": 21.74,
+          "commitment_months": 3,
+          "notes": "Card shows 3 factures."
+        },
+        {
+          "name": "2 fois par semaine (12 factures)",
+          "monthly_price": 120,
+          "classes_included": "2/week",
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 15,
+          "discount_vs_dropin_pct": 34.78,
+          "commitment_months": 12,
+          "notes": "Badge shows 12 factures; body text appears to mention 3 months, possible display inconsistency."
+        },
+        {
+          "name": "2 fois par semaine (3 factures)",
+          "monthly_price": 136,
+          "classes_included": "2/week",
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 17,
+          "discount_vs_dropin_pct": 26.09,
+          "commitment_months": 3,
+          "notes": "Card shows 3 factures."
+        },
+        {
+          "name": "4 fois par semaine",
+          "monthly_price": 232,
+          "classes_included": "4/week",
+          "estimated_classes_per_month": 16,
+          "effective_price_per_class": 14.5,
+          "discount_vs_dropin_pct": 36.96,
+          "commitment_months": 3,
+          "notes": "Card shows 3 factures."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "22/21/30/90/180/270 depending on offer",
+        "notes": "Validity windows shown directly on cards."
+      },
+      "uses_credit_system": true,
+      "credit_system_notes": "Offers are displayed in credits; one credit corresponds to one class for shown products.",
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "http://www.laclairiere-bienetre.com/"
+        ],
+        "evidence_line_count": 2,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 91,
+      "confidence_tier": "high",
+      "review_required": true,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "membership_commitment_conflict_visible"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshots include discovery, classic packs, and subscription cards with invoice badges."
+    },
+    {
+      "studio_name": "Lagreeness",
+      "domain": "lagreeness.com",
+      "website": "http://www.lagreeness.com/",
+      "pricing_url": "http://www.lagreeness.com/",
+      "categories": [
+        "fitness",
+        "lagree",
+        "pilates"
+      ],
+      "arrondissement": "Paris 17",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Lagreeness pricing screenshot. Commitment lengths for memberships set per user instruction: 5 and 8 classes/month = 6 months; unlimited memberships = 12 months.",
+      "drop_in": {
+        "price": 50,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Start pack",
+          "name": "1 session Start",
+          "price": 40,
+          "classes_included": 1,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "type": "Start pack",
+          "name": "3 sessions Start",
+          "price": 100,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "type": "Start pack",
+          "name": "5 sessions Start",
+          "price": 230,
+          "classes_included": 5,
+          "validity_days": 60,
+          "notes": ""
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "1 cours unitaire",
+          "classes": 1,
+          "total_price": 50,
+          "price_per_class": 50,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "12 sessions",
+          "classes": 12,
+          "total_price": 460,
+          "price_per_class": 38.33,
+          "discount_vs_dropin_pct": 23.34,
+          "validity_days": 365,
+          "notes": ""
+        },
+        {
+          "name": "20 sessions",
+          "classes": 20,
+          "total_price": 740,
+          "price_per_class": 37,
+          "discount_vs_dropin_pct": 26,
+          "validity_days": 365,
+          "notes": ""
+        },
+        {
+          "name": "30 sessions",
+          "classes": 30,
+          "total_price": 1100,
+          "price_per_class": 36.67,
+          "discount_vs_dropin_pct": 26.66,
+          "validity_days": 365,
+          "notes": ""
+        },
+        {
+          "name": "50 sessions",
+          "classes": 50,
+          "total_price": 1600,
+          "price_per_class": 32,
+          "discount_vs_dropin_pct": 36,
+          "validity_days": 365,
+          "notes": ""
+        }
+      ],
+      "memberships": [
+        {
+          "name": "5 classes/mois",
+          "monthly_price": 210,
+          "classes_included": 5,
+          "estimated_classes_per_month": 5,
+          "effective_price_per_class": 42,
+          "discount_vs_dropin_pct": 16,
+          "commitment_months": 6,
+          "notes": "User confirmed 6-month commitment."
+        },
+        {
+          "name": "8 classes/mois",
+          "monthly_price": 290,
+          "classes_included": 8,
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 36.25,
+          "discount_vs_dropin_pct": 27.5,
+          "commitment_months": 6,
+          "notes": "User confirmed 6-month commitment."
+        },
+        {
+          "name": "Unlimited",
+          "monthly_price": 390,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "User confirmed unlimited memberships have 12-month commitment."
+        },
+        {
+          "name": "Flex Unlimited (hr creuses)",
+          "monthly_price": 250,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "Off-peak hours only (heures creuses). Kept as secondary option, not primary unlimited benchmark. User confirmed unlimited memberships have 12-month commitment."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "30/60/365 depending on offer",
+        "notes": "Validity windows shown on cards."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "lagree_single": 50
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "http://www.lagreeness.com/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 95,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "class_packs",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Pricing and membership commitments set from screenshot plus user-provided commitment clarification."
+    },
+    {
+      "studio_name": "La Kave Paris",
+      "domain": "lakave.paris",
+      "website": "http://lakave.paris/",
+      "pricing_url": "http://lakave.paris/",
+      "categories": [
+        "bootcamp",
+        "circuit-training",
+        "crossfit",
+        "fitness",
+        "strength-training"
+      ],
+      "arrondissement": "Paris 15",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided La Kave pricing screenshot. Personal training and stage lines excluded per user instruction.",
+      "drop_in": {
+        "price": null,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Trial pack",
+          "name": "Pack d'essai 5 seances",
+          "price": 75,
+          "classes_included": 5,
+          "validity_days": null,
+          "notes": "Valable une seule fois."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Carte de 10 cours",
+          "classes": 10,
+          "total_price": 250,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": ""
+        },
+        {
+          "name": "Carte de 20 cours",
+          "classes": 20,
+          "total_price": 450,
+          "price_per_class": 22.5,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": ""
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Abonnement illimite",
+          "monthly_price": 240,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": null,
+          "notes": "Commitment length not shown in provided screenshot."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": null,
+        "notes": "Validity windows not shown for group offers in provided screenshot."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "http://lakave.paris/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 90,
+      "confidence_tier": "high",
+      "review_required": true,
+      "confidence_reasons": [
+        "manual_verified",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "missing_validity_details"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshot includes group-training prices; private training and stage items intentionally ignored."
+    },
+    {
+      "studio_name": "LA LA DANSE",
+      "domain": "laladanse.paris",
+      "website": "https://www.laladanse.paris/",
+      "pricing_url": "https://www.laladanse.paris/",
+      "categories": [
+        "ballet-dance",
+        "barre",
+        "contemporary-dance",
+        "dance",
+        "fitness",
+        "hip-hop-dance",
+        "personal-training",
+        "pilates",
+        "postnatal",
+        "restorative-yoga",
+        "salsa-dance",
+        "vinyasa-yoga",
+        "yin-yoga",
+        "yoga"
+      ],
+      "arrondissement": null,
+      "data_collected_date": "2026-03-11",
+      "booking_software": "bsport",
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided LA LA DANSE open-adult pricing screenshots and annual-pass detail popups.",
+      "drop_in": {
+        "price": 25,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Trial class",
+          "name": "Pass 1 Cours d'essai Danse / YOGA / ...",
+          "price": 15,
+          "classes_included": 1,
+          "validity_days": 90,
+          "notes": "1 credit. Valid for 3 months."
+        },
+        {
+          "type": "Discovery pack",
+          "name": "Pass decouverte 3 cours",
+          "price": 36,
+          "classes_included": 3,
+          "validity_days": 180,
+          "notes": "3 credits. Valid for 6 months."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Pass unitaire Cours 1H Danse",
+          "classes": 1,
+          "total_price": 18,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 28,
+          "validity_days": 90,
+          "notes": "Valid for 3 months."
+        },
+        {
+          "name": "Pass YOGA / Pilates / Fitness",
+          "classes": 1,
+          "total_price": 25,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "Valid for 1 month."
+        },
+        {
+          "name": "Pass Unitaire Salsa ou Zumba",
+          "classes": 1,
+          "total_price": 15,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 40,
+          "validity_days": 30,
+          "notes": "Valid for 1 month."
+        },
+        {
+          "name": "Pass 2HOO Danse/STAGE",
+          "classes": 2,
+          "total_price": 36,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 28,
+          "validity_days": 180,
+          "notes": "Valid for 6 months."
+        },
+        {
+          "name": "Pass 5 Cours Danse",
+          "classes": 5,
+          "total_price": 90,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 28,
+          "validity_days": 180,
+          "notes": "5 credits. Valid for 6 months."
+        },
+        {
+          "name": "Pass 10 Cours Danse",
+          "classes": 10,
+          "total_price": 180,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 28,
+          "validity_days": 365,
+          "notes": "10 credits. Valid for 1 year."
+        },
+        {
+          "name": "Pass 10 Cours YOGA / Pilates et acces ...",
+          "classes": 10,
+          "total_price": 250,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 365,
+          "notes": "12 credits shown on card. Valid for 12 months."
+        },
+        {
+          "name": "Pass 10 Cours YOGA / Pilates / Fitness",
+          "classes": 10,
+          "total_price": 80,
+          "price_per_class": 8,
+          "discount_vs_dropin_pct": 68,
+          "validity_days": 365,
+          "notes": "Card shows 10 credits and valid 12 months; unusually low unit price, captured as shown."
+        },
+        {
+          "name": "Pass 20 Cours Danse + 2 Offert",
+          "classes": 22,
+          "total_price": 360,
+          "price_per_class": 16.36,
+          "discount_vs_dropin_pct": 34.56,
+          "validity_days": 365,
+          "notes": "22 credits shown on card. Valid for 1 year."
+        },
+        {
+          "name": "Pass 50 Cours Danse + 10 Offerts",
+          "classes": 60,
+          "total_price": 900,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 40,
+          "validity_days": 365,
+          "notes": "60 credits shown on card. Valid for 1 year."
+        },
+        {
+          "name": "Adhesion Annuelle Danse 36 Cours (Sept a Juin)",
+          "classes": 36,
+          "total_price": 540,
+          "price_per_class": 15,
+          "discount_vs_dropin_pct": 40,
+          "validity_days": 365,
+          "notes": "Detail popup: 1 cours/semaine, 36 cours dans l'annee, jour/horaire fixe."
+        },
+        {
+          "name": "Adhesion Annuelle 1 Acces YOGA/PILATES/BARRE",
+          "classes": 36,
+          "total_price": 900,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 365,
+          "notes": "Detail popup: 36 credits, date a date, 12 months."
+        },
+        {
+          "name": "Pass Annuel Danse et Yoga 66 credits",
+          "classes": 66,
+          "total_price": 1650,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 365,
+          "notes": "Valid for 1 year."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Pass annuel Danse et Yoga Temps scolaire",
+          "monthly_price": 68.75,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "Total annual price 825 EUR; valid 1 year."
+        },
+        {
+          "name": "Pass annuel danse, Yoga et stages (limite 70 utilisations)",
+          "monthly_price": 145.83,
+          "classes_included": 70,
+          "estimated_classes_per_month": 5.83,
+          "effective_price_per_class": 25,
+          "discount_vs_dropin_pct": 0,
+          "commitment_months": 12,
+          "notes": "Total annual price 1750 EUR; card says limite a 70 utilisations, yoga inclus."
+        }
+      ],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "90/180/365 depending on pass",
+        "notes": "Mixed validity windows from 3/6/12-month products in screenshots."
+      },
+      "uses_credit_system": true,
+      "credit_system_notes": "Most products are displayed in credits (1 credit generally maps to 1 class in shown offers).",
+      "drop_in_by_modality": {
+        "yoga_pilates_fitness_single": 25,
+        "salsa_zumba_single": 15,
+        "danse_1h_single": 18
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.laladanse.paris/"
+        ],
+        "evidence_line_count": 3,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 83,
+      "confidence_tier": "medium",
+      "review_required": true,
+      "confidence_reasons": [
+        "manual_verified",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "mixed_program_pricing_complexity"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Captured directly from list and two details popups; catalog includes heterogeneous programs and may mix fixed-schedule and credit offers."
+    },
+    {
+      "studio_name": "La Plume Air Club",
+      "domain": "laplume.club",
+      "website": "https://www.laplume.club/?fbclid=IwAR0SFy_j7z8JzLS1JAbuNr6zOaPBIbS42B5OU_jpIu0PYMBiJtDIoO7fj6U",
+      "pricing_url": "https://www.laplume.club/",
+      "categories": [
+        "aerial",
+        "aerial-antigravity-yoga",
+        "dance",
+        "fitness",
+        "pole-dance",
+        "yoga"
+      ],
+      "arrondissement": "Paris 15",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided La Plume Air Club pricing screenshots. Drop-in price manually provided by user: 32 EUR.",
+      "drop_in": {
+        "price": 32,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Trial carnet",
+          "name": "Carnet d'essai",
+          "price": 55,
+          "classes_included": 5,
+          "validity_days": 730,
+          "notes": "Valable 2 ans. Card shows 55 EUR au lieu de 160 EUR."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "Petit Carnet",
+          "classes": 20,
+          "total_price": 520,
+          "price_per_class": 26,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 730,
+          "notes": "20 reservations; 26 EUR le cours; validite 2 ans; limitation valable par quartier."
+        },
+        {
+          "name": "Carnet Membre",
+          "classes": 80,
+          "total_price": 1800,
+          "price_per_class": 22.5,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 730,
+          "notes": "80 reservations; 22.5 EUR le cours; validite 2 ans."
+        }
+      ],
+      "memberships": [
+        {
+          "name": "L'abo - 2 reservations/semaine",
+          "monthly_price": 180,
+          "classes_included": "2/week",
+          "estimated_classes_per_month": 8,
+          "effective_price_per_class": 22.5,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 1,
+          "notes": "Sans engagement."
+        }
+      ],
+      "discounts": [
+        {
+          "type": "promo",
+          "description": "Carnet d'essai promotional price",
+          "discount_pct_or_amount": "55 EUR au lieu de 160 EUR"
+        }
+      ],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": 730,
+        "notes": "Majority of visible products are valid for 2 years."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": null,
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.laplume.club/"
+        ],
+        "evidence_line_count": 2,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 88,
+      "confidence_tier": "high",
+      "review_required": true,
+      "confidence_reasons": [
+        "manual_verified",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "missing_single_class_price"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Captured from screenshot cards; one-course card has no visible price. Drop-in price updated to 32 EUR per user correction."
+    },
+    {
+      "studio_name": "Last Studio",
+      "domain": "laststudio.fr",
+      "website": "https://www.laststudio.fr/",
+      "pricing_url": "https://www.laststudio.fr/",
+      "categories": [
+        "mat-pilates",
+        "pilates"
+      ],
+      "arrondissement": "Paris 11",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Last Studio screenshot. Pricing captured specifically for mat pilates group classes only; private-session offerings intentionally excluded per user instruction.",
+      "drop_in": {
+        "price": 35,
+        "duration_minutes": 50
+      },
+      "intro_offers": [],
+      "class_packs": [
+        {
+          "name": "Pack 10 cours (Mat Pilates)",
+          "classes": 10,
+          "total_price": 300,
+          "price_per_class": 30,
+          "discount_vs_dropin_pct": 14.29,
+          "validity_days": null,
+          "notes": "Price shown as 30 EUR le cours."
+        },
+        {
+          "name": "Pack 20 cours (Mat Pilates)",
+          "classes": 20,
+          "total_price": 500,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": 28.57,
+          "validity_days": null,
+          "notes": "Price shown as 25 EUR le cours."
+        }
+      ],
+      "memberships": [],
+      "discounts": [],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": null,
+        "notes": "Validity windows not visible in provided screenshot."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "mat_pilates_50min": 35
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.laststudio.fr/"
+        ],
+        "evidence_line_count": 1,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 94,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "class_packs",
+        "scope_filtered_group_only"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Only mat pilates group pricing retained; private sessions excluded."
+    },
+    {
+      "studio_name": "La Suite Coaching",
+      "domain": "lasuitecoaching.com",
+      "website": "https://www.lasuitecoaching.com/",
+      "pricing_url": "https://www.lasuitecoaching.com/",
+      "categories": [
+        "bootcamp",
+        "fitness",
+        "high-intensity-pilates",
+        "hiit",
+        "pilates",
+        "power-yoga",
+        "strength-training",
+        "yoga"
+      ],
+      "arrondissement": "Paris 17",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided La Suite Coaching small-group pricing screenshots.",
+      "drop_in": {
+        "price": 35,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery offer",
+          "name": "Seance decouverte",
+          "price": 30,
+          "classes_included": 2,
+          "validity_days": null,
+          "notes": "Displayed as 30 EUR for 2 seances."
+        }
+      ],
+      "class_packs": [],
+      "memberships": [
+        {
+          "name": "Abonnement 1 mois (sans engagement)",
+          "monthly_price": 250,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 1,
+          "notes": "Includes unlimited classes and open gym access."
+        },
+        {
+          "name": "Membership annuel (engagement 12 mois)",
+          "monthly_price": 183.25,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "Annual total 2199 EUR (shown as 183.25 EUR/month equivalent). Includes events, quarterly assessment, unlimited gym access, monthly guest invitation."
+        }
+      ],
+      "discounts": [
+        {
+          "type": "annual_pricing",
+          "description": "Annual membership total with 12-month commitment",
+          "discount_pct_or_amount": "2199 EUR/an (183.25 EUR/mois equivalent)"
+        }
+      ],
+      "expiration_policy": {
+        "single_class_validity_days": null,
+        "pack_validity_days": null,
+        "notes": "Validity windows not shown on provided small-group cards."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "small_group_drop_in": 35
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "https://www.lasuitecoaching.com/"
+        ],
+        "evidence_line_count": 2,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 93,
+      "confidence_tier": "high",
+      "review_required": false,
+      "confidence_reasons": [
+        "manual_verified",
+        "drop_in",
+        "intro_offers",
+        "memberships"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Screenshots show small-group discovery/drop-in and two unlimited membership options."
+    },
+    {
+      "studio_name": "Le 33 FOCH",
+      "domain": "le33foch.fr",
+      "website": "http://www.le33foch.fr/",
+      "pricing_url": "http://www.le33foch.fr/",
+      "categories": [
+        "aerial",
+        "barre",
+        "bootcamp",
+        "boxing",
+        "cycling",
+        "dance",
+        "fitness",
+        "hatha-yoga",
+        "hiit",
+        "indoor-cycling",
+        "lagree",
+        "low-impact-training",
+        "mat-pilates",
+        "pilates",
+        "pole-dance",
+        "reformer-pilates",
+        "sculpt",
+        "strength-training",
+        "trampoline",
+        "trx",
+        "vinyasa-yoga",
+        "yoga"
+      ],
+      "arrondissement": "Paris 16",
+      "data_collected_date": "2026-03-11",
+      "booking_software": null,
+      "currency": "EUR",
+      "pricing_publicly_available": true,
+      "notes": "Manual update from provided Le 33 Foch pricing screenshots. Teen and kid plans intentionally excluded per user instruction.",
+      "drop_in": {
+        "price": 30,
+        "duration_minutes": null
+      },
+      "intro_offers": [
+        {
+          "type": "Discovery pack",
+          "name": "3 seances (offre decouverte)",
+          "price": 60,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "General pricing grid. Valid 1 month."
+        },
+        {
+          "type": "Discovery pack",
+          "name": "3 seances Lagree",
+          "price": 99,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "Tarifs visiteurs Lagree. Offer decouverte, first purchase only."
+        },
+        {
+          "type": "Discovery pack",
+          "name": "3 seances Reformer",
+          "price": 99,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "Tarifs visiteurs Reformer. Offer decouverte."
+        },
+        {
+          "type": "Discovery pack",
+          "name": "3 seances Cardio-Boxing",
+          "price": 60,
+          "classes_included": 3,
+          "validity_days": 30,
+          "notes": "Offer decouverte. Valid 1 month."
+        }
+      ],
+      "class_packs": [
+        {
+          "name": "1 seance (general)",
+          "classes": 1,
+          "total_price": 30,
+          "price_per_class": 30,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "General pricing grid. Valid 1 month."
+        },
+        {
+          "name": "10 seances (general)",
+          "classes": 10,
+          "total_price": 195,
+          "price_per_class": 19.5,
+          "discount_vs_dropin_pct": 35,
+          "validity_days": 180,
+          "notes": "Promo -25%, was 260 EUR. Valid 6 months."
+        },
+        {
+          "name": "20 seances (general)",
+          "classes": 20,
+          "total_price": 360,
+          "price_per_class": 18,
+          "discount_vs_dropin_pct": 40,
+          "validity_days": 365,
+          "notes": "Promo -25%, was 480 EUR. Valid 12 months."
+        },
+        {
+          "name": "33 seances (general)",
+          "classes": 33,
+          "total_price": 726,
+          "price_per_class": 22,
+          "discount_vs_dropin_pct": 26.67,
+          "validity_days": 365,
+          "notes": "Valid 12 months."
+        },
+        {
+          "name": "66 seances (general)",
+          "classes": 66,
+          "total_price": 1320,
+          "price_per_class": 20,
+          "discount_vs_dropin_pct": 33.33,
+          "validity_days": 365,
+          "notes": "Valid 12 months."
+        },
+        {
+          "name": "1 seance Lagree",
+          "classes": 1,
+          "total_price": 45,
+          "price_per_class": 45,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 30,
+          "notes": "Tarifs visiteurs Lagree."
+        },
+        {
+          "name": "10 seances Lagree",
+          "classes": 10,
+          "total_price": 307.5,
+          "price_per_class": 30.75,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 180,
+          "notes": "Promo -25%, was 410 EUR."
+        },
+        {
+          "name": "20 seances Lagree",
+          "classes": 20,
+          "total_price": 540,
+          "price_per_class": 27,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 365,
+          "notes": "Promo -25%, was 720 EUR."
+        },
+        {
+          "name": "30 seances Lagree",
+          "classes": 30,
+          "total_price": 742.5,
+          "price_per_class": 24.75,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 365,
+          "notes": "Promo -25%, was 990 EUR."
+        },
+        {
+          "name": "1 seance Reformer",
+          "classes": 1,
+          "total_price": 45,
+          "price_per_class": 45,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 30,
+          "notes": "Tarifs visiteurs Reformer."
+        },
+        {
+          "name": "10 seances Reformer",
+          "classes": 10,
+          "total_price": 307.5,
+          "price_per_class": 30.75,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 180,
+          "notes": "Promo -25%, was 410 EUR."
+        },
+        {
+          "name": "20 seances Reformer",
+          "classes": 20,
+          "total_price": 540,
+          "price_per_class": 27,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 365,
+          "notes": "Promo -25%, was 720 EUR."
+        },
+        {
+          "name": "30 seances Reformer",
+          "classes": 30,
+          "total_price": 742.5,
+          "price_per_class": 24.75,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 365,
+          "notes": "Promo -25%, was 990 EUR."
+        },
+        {
+          "name": "1 seance Cardio-Boxing",
+          "classes": 1,
+          "total_price": 30,
+          "price_per_class": 30,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
+          "name": "5 seances Cardio-Boxing",
+          "classes": 5,
+          "total_price": 135,
+          "price_per_class": 27,
+          "discount_vs_dropin_pct": 10,
+          "validity_days": 90,
+          "notes": ""
+        },
+        {
+          "name": "10 seances Cardio-Boxing",
+          "classes": 10,
+          "total_price": 250,
+          "price_per_class": 25,
+          "discount_vs_dropin_pct": 16.67,
+          "validity_days": 180,
+          "notes": ""
+        },
+        {
+          "name": "20 seances Cardio-Boxing",
+          "classes": 20,
+          "total_price": 440,
+          "price_per_class": 22,
+          "discount_vs_dropin_pct": 26.67,
+          "validity_days": 365,
+          "notes": ""
+        },
+        {
+          "name": "40 seances Cardio-Boxing",
+          "classes": 40,
+          "total_price": 800,
+          "price_per_class": 20,
+          "discount_vs_dropin_pct": 33.33,
+          "validity_days": 365,
+          "notes": ""
+        }
+      ],
+      "memberships": [
+        {
+          "name": "Single",
+          "monthly_price": 220,
+          "classes_included": "unlimited",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "Avec engagement."
+        },
+        {
+          "name": "Couple/Duo",
+          "monthly_price": 360,
+          "classes_included": "unlimited_duo",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "Avec engagement. 180 EUR/personne equivalent."
+        },
+        {
+          "name": "Business",
+          "monthly_price": 220,
+          "classes_included": "unlimited_business",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "Avec engagement. Includes 3 meeting room bookings up to 12 people (KBIS required)."
+        },
+        {
+          "name": "Etudiant",
+          "monthly_price": 120,
+          "classes_included": "unlimited_student",
+          "estimated_classes_per_month": null,
+          "effective_price_per_class": null,
+          "discount_vs_dropin_pct": null,
+          "commitment_months": 12,
+          "notes": "17-26 ans. Included because user only asked to ignore teen and kid tiers."
+        }
+      ],
+      "discounts": [
+        {
+          "type": "membership_fee",
+          "description": "Droits d'entree / frais d'inscription",
+          "discount_pct_or_amount": "see enrollment terms"
+        },
+        {
+          "type": "membership_fee",
+          "description": "Badge",
+          "discount_pct_or_amount": "15 EUR a regler a l'inscription"
+        }
+      ],
+      "expiration_policy": {
+        "single_class_validity_days": 30,
+        "pack_validity_days": "30/90/180/365 depending on product family",
+        "notes": "Teen and kid plans intentionally excluded."
+      },
+      "uses_credit_system": false,
+      "credit_system_notes": null,
+      "drop_in_by_modality": {
+        "general_single": 30,
+        "lagree_single": 45,
+        "reformer_single": 45,
+        "cardio_boxing_single": 30
+      },
+      "extraction_meta": {
+        "source": "manual_update",
+        "evidence_urls": [
+          "http://www.le33foch.fr/"
+        ],
+        "evidence_line_count": 5,
+        "extracted_at": "2026-03-11T00:00:00.000Z"
+      },
+      "confidence_score": 88,
+      "confidence_tier": "high",
+      "review_required": true,
+      "confidence_reasons": [
+        "manual_verified",
+        "intro_offers",
+        "class_packs",
+        "memberships",
+        "multi_program_catalog_complexity"
+      ],
+      "manual_verified": true,
+      "manual_verification_date": "2026-03-11",
+      "manual_verification_notes": "Captured from multiple tariff grids; teen and child subscriptions excluded per user instruction."
     }
   ]
 }

@@ -1,34 +1,34 @@
 # Paris Pricing Snapshot
 
-Generated: 2026-03-13T08:01:27.048Z
+Generated: 2026-03-13T09:37:02.655Z
 
 ## Coverage
 
-- In-scope studios: **114** (excluded: 0)
-- With drop-in pricing: **111**
-- With class packs: **111**
-- With memberships: **72**
-- With intro offers: **89**
+- In-scope studios: **141** (excluded: 0)
+- With drop-in pricing: **134**
+- With class packs: **136**
+- With memberships: **97**
+- With intro offers: **110**
 
 ## Layer 1 quick metrics
 
 | Studios | Avg drop-in | Median drop-in | Drop-in stddev |
 | --- | --- | --- | --- |
-| 114 | 28.66 | 27 | 9.86 |
+| 141 | 28.85 | 27 | 9.51 |
 
 ## Layer 3 pack pricing
 
 | Pack | Avg EUR/class | Avg discount vs drop-in % |
 | --- | --- | --- |
-| 5 pack | 25.66 | 11.18 |
-| 10 pack | 23.85 | 15.71 |
-| 20 pack | 23.11 | 23.22 |
+| 5 pack | 25.78 | 10.87 |
+| 10 pack | 24.05 | 15.35 |
+| 20 pack | 23.49 | 21.75 |
 
 ## Layer 4 commitment structure
 
 | No commitment % | 3 months % | 6 months % | 12 months % |
 | --- | --- | --- | --- |
-| 44.4 | 38.9 | 29.2 | 59.7 |
+| 46.4 | 35.1 | 24.7 | 55.7 |
 
 ---
 

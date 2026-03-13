@@ -165,6 +165,58 @@
     {
       "domain": "gigafit.fr",
       "reason": "box_gym_not_boutique_studio"
+    },
+    {
+      "domain": "helloasso.com",
+      "reason": "not_boutique_fitness_payment_structure"
+    },
+    {
+      "domain": "hife-coliving.fr",
+      "reason": "not_boutique_studio_exclude"
+    },
+    {
+      "domain": "instagram.com",
+      "reason": "personal_training_studio_not_boutique_classes"
+    },
+    {
+      "domain": "institutlamottepicquet.fr",
+      "reason": "ems_out_of_scope"
+    },
+    {
+      "domain": "inter7.fr",
+      "reason": "not_a_studio_exclude_requested"
+    },
+    {
+      "domain": "jeen.care",
+      "reason": "clinic_not_studio_exclude_requested"
+    },
+    {
+      "domain": "jesuisbiendansmapeau.com",
+      "reason": "cryo_ems_out_of_scope"
+    },
+    {
+      "domain": "jmtonic.fr",
+      "reason": "ems_out_of_scope"
+    },
+    {
+      "domain": "juliablech.com",
+      "reason": "not_a_studio_exclude_requested"
+    },
+    {
+      "domain": "kmpo.fr",
+      "reason": "not_boutique_pricing_exclude_requested"
+    },
+    {
+      "domain": "lasalledutemps.com",
+      "reason": "personal_training_not_boutique_studio"
+    },
+    {
+      "domain": "lasource-paris.com",
+      "reason": "pricing_not_public_exclude_requested"
+    },
+    {
+      "domain": "ateliers-ground-control.com",
+      "reason": "credit_based_pricing_not_currently_accurate_exclude_requested"
     }
   ]
 }
