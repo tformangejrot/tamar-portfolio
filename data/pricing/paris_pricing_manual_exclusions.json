@@ -129,6 +129,42 @@
     {
       "domain": "ergoparis.com",
       "reason": "credit_based_pricing_not_comparable_exclude_requested"
+    },
+    {
+      "domain": "espaceterranova.com",
+      "reason": "inactive_or_unverified_skip_requested"
+    },
+    {
+      "domain": "facebook.com",
+      "reason": "social_profile_not_current_exclude_requested"
+    },
+    {
+      "domain": "fightroom.fr",
+      "reason": "space_rental_only_not_boutique_fitness"
+    },
+    {
+      "domain": "firstup.fr",
+      "reason": "ems_out_of_scope"
+    },
+    {
+      "domain": "fit-station.care",
+      "reason": "inactive_or_unverified_skip_requested"
+    },
+    {
+      "domain": "fit-success.fr",
+      "reason": "ems_out_of_scope"
+    },
+    {
+      "domain": "fithealthy.fr",
+      "reason": "in_home_coaching_not_boutique_studio"
+    },
+    {
+      "domain": "gavrochefitness.com",
+      "reason": "box_gym_not_boutique_studio"
+    },
+    {
+      "domain": "gigafit.fr",
+      "reason": "box_gym_not_boutique_studio"
     }
   ]
 }
