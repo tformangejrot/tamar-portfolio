@@ -30,19 +30,6 @@ const MAIN_MODALITIES = [
   "running",
 ];
 
-const EXCLUDED_SCOPE_KEYWORDS = [
-  "ems",
-  "electrical-muscle-stimulation",
-  "electrostimulation",
-  "infrabike",
-  "infrarun",
-  "infra",
-  "cryotherapy",
-  "cryo",
-  "sauna",
-  "recovery",
-];
-
 const MODALITY_CAPACITY_PROXY = {
   pilates: 18,
   yoga: 24,
@@ -232,23 +219,6 @@ function hasKnownPricing(record) {
   if ((record?.memberships || []).length > 0) return true;
   if ((record?.discounts || []).length > 0) return true;
   return false;
-}
-
-function isScopeExcludedByConcept(record) {
-  const categories = (record?.categories || []).map((v) => String(v).toLowerCase());
-  const haystack = [
-    ...(record?.categories || []),
-    record?.studio_name,
-    record?.domain,
-    record?.website,
-    record?.notes,
-  ]
-    .map((v) => String(v || "").toLowerCase())
-    .join(" ");
-
-  return EXCLUDED_SCOPE_KEYWORDS.some(
-    (kw) => categories.some((c) => c.includes(kw)) || haystack.includes(kw)
-  );
 }
 
 function computeSlice(activeRecords, approvedTotal = null) {
@@ -900,7 +870,6 @@ async function main() {
   const records = Array.isArray(raw) ? raw : raw.records || [];
   const active = records
     .filter((r) => r.excluded_from_scope !== true)
-    .filter((r) => !isScopeExcludedByConcept(r))
     .filter(hasKnownPricing);
 
   const base = computeSlice(active, records.length);
