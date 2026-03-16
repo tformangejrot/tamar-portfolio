@@ -543,7 +543,7 @@ function computeSlice(activeRecords, approvedTotal = null) {
   })();
 
   const layer3Pack = (() => {
-    const table = [5, 10, 20].map((size) => {
+    const table = [5, 10, 20, 30, 50].map((size) => {
       const rows = allPacks.filter((p) => p.classes === size && Number.isFinite(p.price_per_class));
       const byStudio = new Map();
       for (const p of rows) {
@@ -563,33 +563,64 @@ function computeSlice(activeRecords, approvedTotal = null) {
       const discounts = representative.map((r) => r.discount).filter(Number.isFinite);
       return {
         pack: `${size} pack`,
+        n_studios: representative.length,
         avg_price_per_class: round(ppcs.reduce((a, b) => a + b, 0) / (ppcs.length || 1)),
         avg_discount_vs_dropin_pct: round(discounts.reduce((a, b) => a + b, 0) / (discounts.length || 1)),
       };
     });
 
-    const expirationCounts = new Map([
-      ["1_month", 0],
-      ["2_months", 0],
-      ["3_months", 0],
-      ["6_months", 0],
-      ["12_months", 0],
-      ["no_expiration", 0],
-    ]);
-    for (const p of allPacks) {
-      if (!p.validity_bucket) continue;
-      expirationCounts.set(p.validity_bucket, (expirationCounts.get(p.validity_bucket) || 0) + 1);
+    const buildExpirationSlice = (rows, scopeLabel) => {
+      const expirationCounts = new Map([
+        ["1_month", 0],
+        ["2_months", 0],
+        ["3_months", 0],
+        ["6_months", 0],
+        ["12_months", 0],
+        ["no_expiration", 0],
+      ]);
+      const rowsWithValidity = rows.filter((p) => Boolean(p.validity_bucket));
+      const studios = new Set(rows.map((p) => p.domain).filter(Boolean));
+      const studiosWithValidity = new Set(rowsWithValidity.map((p) => p.domain).filter(Boolean));
+      for (const p of rowsWithValidity) {
+        expirationCounts.set(p.validity_bucket, (expirationCounts.get(p.validity_bucket) || 0) + 1);
+      }
+      return {
+        scope_label: scopeLabel,
+        n_pack_rows: rows.length,
+        n_pack_rows_with_validity: rowsWithValidity.length,
+        n_studios: studios.size,
+        n_studios_with_validity: studiosWithValidity.size,
+        histogram: [
+          { label: "1 month", count: expirationCounts.get("1_month") || 0 },
+          { label: "2 months", count: expirationCounts.get("2_months") || 0 },
+          { label: "3 months", count: expirationCounts.get("3_months") || 0 },
+          { label: "6 months", count: expirationCounts.get("6_months") || 0 },
+          { label: "12 months", count: expirationCounts.get("12_months") || 0 },
+          { label: "No expiration", count: expirationCounts.get("no_expiration") || 0 },
+        ],
+      };
+    };
+    const uniquePackSizes = Array.from(
+      new Set(
+        allPacks
+          .map((p) => p.classes)
+          .filter((v) => Number.isFinite(v) && v > 0)
+      )
+    ).sort((a, b) => a - b);
+    const expirationByPackSize = {
+      all: buildExpirationSlice(allPacks, "All pack sizes"),
+    };
+    for (const size of uniquePackSizes) {
+      const rows = allPacks.filter((p) => p.classes === size);
+      expirationByPackSize[String(size)] = buildExpirationSlice(rows, `${size}-pack only`);
     }
     return {
       pack_table: table,
-      pack_expiration_histogram: [
-        { label: "1 month", count: expirationCounts.get("1_month") || 0 },
-        { label: "2 months", count: expirationCounts.get("2_months") || 0 },
-        { label: "3 months", count: expirationCounts.get("3_months") || 0 },
-        { label: "6 months", count: expirationCounts.get("6_months") || 0 },
-        { label: "12 months", count: expirationCounts.get("12_months") || 0 },
-        { label: "No expiration", count: expirationCounts.get("no_expiration") || 0 },
-      ],
+      pack_expiration_available_pack_sizes: uniquePackSizes,
+      pack_expiration_by_pack_size: expirationByPackSize,
+      // Backward-compat default view.
+      pack_expiration_scope: expirationByPackSize["10"] || expirationByPackSize.all,
+      pack_expiration_histogram: (expirationByPackSize["10"] || expirationByPackSize.all).histogram,
     };
   })();
 
@@ -617,21 +648,35 @@ function computeSlice(activeRecords, approvedTotal = null) {
       const rows = allMemberships.filter(matcher);
       const monthly = rows.map((r) => r.monthly_price).filter(Number.isFinite);
       const ppc = rows.map((r) => r.effective_price_per_class).filter(Number.isFinite);
+      const studios = new Set(rows.map((r) => r.domain).filter(Boolean));
       return {
         membership_type: label,
+        n_memberships: rows.length,
+        n_studios: studios.size,
         avg_monthly_price: round(monthly.reduce((a, b) => a + b, 0) / (monthly.length || 1)),
         avg_effective_price_per_class: round(ppc.reduce((a, b) => a + b, 0) / (ppc.length || 1)),
       };
     });
 
-    const hasCommitment = (studio, months) =>
-      (studio.memberships || []).some((m) => Number.isFinite(Number(m.commitment_months)) && Number(m.commitment_months) === months);
-    const hasNoCommitment = (studio) =>
-      (studio.memberships || []).some((m) => {
-        const c = Number(m.commitment_months);
-        return !Number.isFinite(c) || c <= 1;
-      });
     const denom = studiosWithMemberships.length || 1;
+    const commitmentCounts = {
+      no_commitment: 0,
+      commitment_3_months: 0,
+      commitment_6_months: 0,
+      commitment_12_months: 0,
+    };
+    for (const studio of active) {
+      const memberships = studio.memberships || [];
+      if (!memberships.length) continue;
+      const commitments = memberships
+        .map((m) => Number(m.commitment_months))
+        .filter((c) => Number.isFinite(c) && c > 0);
+      const maxCommitment = commitments.length ? Math.max(...commitments) : 0;
+      if (maxCommitment <= 1) commitmentCounts.no_commitment += 1;
+      else if (maxCommitment <= 3) commitmentCounts.commitment_3_months += 1;
+      else if (maxCommitment <= 6) commitmentCounts.commitment_6_months += 1;
+      else commitmentCounts.commitment_12_months += 1;
+    }
 
     return {
       pct_studios_with_memberships: round((studiosWithMemberships.length / totalStudios) * 100, 1),
@@ -647,11 +692,18 @@ function computeSlice(activeRecords, approvedTotal = null) {
         { type: "both", count: both },
       ],
       membership_types_table: membershipTypeRows,
+      membership_type_methodology: {
+        unlimited_effective_price_per_class:
+          "Uses explicit effective_price_per_class where available. No synthetic classes-per-month is assumed for unlimited plans.",
+      },
       commitment_structure: {
-        pct_no_commitment: round((active.filter(hasNoCommitment).length / denom) * 100, 1),
-        pct_3_month_commitment: round((active.filter((s) => hasCommitment(s, 3)).length / denom) * 100, 1),
-        pct_6_month_commitment: round((active.filter((s) => hasCommitment(s, 6)).length / denom) * 100, 1),
-        pct_12_month_commitment: round((active.filter((s) => hasCommitment(s, 12)).length / denom) * 100, 1),
+        denominator_studios_with_memberships: denom,
+        methodology:
+          "Mutually exclusive studio buckets by highest commitment found across memberships: <=1 month no commitment, <=3 months, <=6 months, >6 months.",
+        pct_no_commitment: round((commitmentCounts.no_commitment / denom) * 100, 1),
+        pct_3_month_commitment: round((commitmentCounts.commitment_3_months / denom) * 100, 1),
+        pct_6_month_commitment: round((commitmentCounts.commitment_6_months / denom) * 100, 1),
+        pct_12_month_commitment: round((commitmentCounts.commitment_12_months / denom) * 100, 1),
       },
     };
   })();
@@ -671,26 +723,38 @@ function computeSlice(activeRecords, approvedTotal = null) {
       const discountPct = ((drop - tenPackPpc) / drop) * 100;
       gapRows.push(discountPct);
 
-      const membershipPpcs = (studio.memberships || [])
+      const classMembershipRows = (studio.memberships || [])
         .map((m) => {
           if (isUnlimitedMembership(m)) return null;
           const explicit = Number(m?.effective_price_per_class);
-          if (Number.isFinite(explicit) && explicit > 0) return explicit;
           const monthly = Number(m?.monthly_price);
           const classes = parseClassesPerMonth(m);
-          if (Number.isFinite(monthly) && monthly > 0 && Number.isFinite(classes) && classes > 0) return monthly / classes;
+          if (!Number.isFinite(classes) || classes <= 0) return null;
+          if (Number.isFinite(explicit) && explicit > 0) {
+            return { ppc: explicit, classes_per_month: classes };
+          }
+          if (Number.isFinite(monthly) && monthly > 0) {
+            return { ppc: monthly / classes, classes_per_month: classes };
+          }
           return null;
         })
-        .filter((v) => Number.isFinite(v) && v > 0);
-      if (!membershipPpcs.length) continue;
-      const membershipPpc = Math.min(...membershipPpcs);
+        .filter((v) => v && Number.isFinite(v.ppc) && v.ppc > 0 && Number.isFinite(v.classes_per_month) && v.classes_per_month > 0);
+      if (!classMembershipRows.length) continue;
+      const lowestTier = Math.min(...classMembershipRows.map((r) => r.classes_per_month));
+      const tierRows = classMembershipRows.filter((r) => r.classes_per_month === lowestTier);
+      const membershipPpc = Math.min(...tierRows.map((r) => r.ppc));
       scatter.push({
         studio_name: studio.studio_name,
         domain: studio.domain,
         x: round(tenPackPpc),
         y: round(membershipPpc),
+        membership_tier_classes_per_month: lowestTier,
       });
     }
+    const xs = scatter.map((p) => p.x).filter(Number.isFinite);
+    const ys = scatter.map((p) => p.y).filter(Number.isFinite);
+    const minAxis = xs.length && ys.length ? round(Math.min(...xs, ...ys)) : null;
+    const maxAxis = xs.length && ys.length ? round(Math.max(...xs, ...ys)) : null;
     return {
       avg_drop_in_to_10_pack_price_diff_pct: round(gapRows.reduce((a, b) => a + b, 0) / (gapRows.length || 1)),
       dropin_vs_10pack_discount_histogram: buildRangeHistogram(gapRows, [
@@ -700,6 +764,13 @@ function computeSlice(activeRecords, approvedTotal = null) {
         { label: "30-40%", min: 30, max: 40 },
         { label: "40%+", min: 40, max: null },
       ]),
+      scatter_methodology:
+        "Each point compares 10-pack EUR/class (x) vs lowest available non-unlimited membership tier EUR/class (y) for that studio.",
+      scatter_sample_size: scatter.length,
+      scatter_diagonal_reference:
+        Number.isFinite(minAxis) && Number.isFinite(maxAxis)
+          ? [{ x: minAxis, y: minAxis }, { x: maxAxis, y: maxAxis }]
+          : [],
       membership_vs_pack_scatter: scatter,
     };
   })();
@@ -836,7 +907,7 @@ function computeSlice(activeRecords, approvedTotal = null) {
     layers: {
       layer1_market_overview: {
         studios_analyzed: active.length,
-        with_pricing_available: active.length,
+        with_pricing_available: studiosWithDropIn.length,
         with_memberships: studiosWithMemberships.length,
         offering_intro_offers: studiosWithIntro.length,
         dropin_metrics: {
@@ -846,11 +917,17 @@ function computeSlice(activeRecords, approvedTotal = null) {
           highest: dropInStats.max ?? null,
           stddev: dropInStats.stddev ?? null,
         },
+        methodology: {
+          dropin_distribution_source: "Drop-in distribution is built only from drop_in.price values (not intro offers, packs, or memberships).",
+        },
         dropin_distribution: layer1DropInBins,
         modality_pricing_table: modalityDropInComparison.map((m) => ({
           modality: m.modality,
+          n_studios: m.n,
           avg_drop_in: m.avg_drop_in,
           median_drop_in: m.median_drop_in,
+          min_drop_in: m.min_drop_in,
+          max_drop_in: m.max_drop_in,
           range: m.range,
         })),
       },

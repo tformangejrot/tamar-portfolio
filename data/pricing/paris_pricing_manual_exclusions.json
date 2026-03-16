@@ -217,6 +217,34 @@
     {
       "domain": "ateliers-ground-control.com",
       "reason": "credit_based_pricing_not_currently_accurate_exclude_requested"
+    },
+    {
+      "domain": "lenouveaumondeparis.com",
+      "reason": "therapy_not_boutique_fitness_exclude_requested"
+    },
+    {
+      "domain": "lesjardins-suspendus.com",
+      "reason": "massage_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "lespace-champselysees.fr",
+      "reason": "ems_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "lesyeuxdouxastrabody.fr",
+      "reason": "ems_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "ligneetendorphines.com",
+      "reason": "cryotherapy_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "likeyoufitness.fr",
+      "reason": "box_gym_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "linktr.ee",
+      "reason": "aggregator_link_excluded_use_official_studio_domain"
     }
   ]
 }

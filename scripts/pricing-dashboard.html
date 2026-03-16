@@ -117,6 +117,7 @@
           <h3>Drop-in Price Distribution</h3>
           <p class="sub">&lt;25EUR · 25-28 · 28-30 · 30-32 · 32-35 · 35-40 · 40+</p>
           <p class="explain">How to read: each bar is the number of studios in a price bracket. Taller bars show where market pricing clusters.</p>
+          <div id="l1DropinMeta"></div>
           <div class="chart-box"><canvas id="l1DropinChart"></canvas></div>
         </article>
         <article class="card">
@@ -127,9 +128,10 @@
         </article>
         <article class="card wide">
           <h3>Modality Pricing Table</h3>
+          <div id="l1ModalityMeta"></div>
           <table>
             <thead>
-              <tr><th>Modality</th><th>Avg Drop-in</th><th>Median</th><th>Range</th></tr>
+              <tr><th>Modality</th><th>Studios</th><th>Avg Drop-in</th><th>Median</th><th>Low</th><th>High</th></tr>
             </thead>
             <tbody id="l1ModalityRows"></tbody>
           </table>
@@ -167,9 +169,10 @@
       <section class="grid">
         <article class="card">
           <h3>Pack Discount Table</h3>
+          <div id="l3PackMeta"></div>
           <table>
             <thead>
-              <tr><th>Pack</th><th>Avg Price/Class</th><th>Avg Discount vs Drop-in</th></tr>
+              <tr><th>Pack</th><th>Studios</th><th>Avg Price/Class</th><th>Avg Discount vs Drop-in</th></tr>
             </thead>
             <tbody id="l3PackRows"></tbody>
           </table>
@@ -178,6 +181,11 @@
           <h3>Pack Expiration</h3>
           <p class="sub">Usage pressure and breakage profile</p>
           <p class="explain">How to read: shorter validity windows indicate stronger pressure to consume quickly (and potentially higher breakage risk).</p>
+          <div style="display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-bottom:8px;">
+            <label for="l3PackSizeFilter" style="font-size:11px;color:#9ca3ff;text-transform:uppercase;letter-spacing:.06em;">Pack filter</label>
+            <select id="l3PackSizeFilter" style="background:#0f172a;color:#e2e8ff;border:1px solid rgba(148, 163, 255, 0.35);border-radius:8px;padding:6px 8px;"></select>
+          </div>
+          <div id="l3ExpirationMeta"></div>
           <div class="chart-box"><canvas id="l3PackExpirationChart"></canvas></div>
         </article>
       </section>
@@ -197,13 +205,15 @@
         </article>
         <article class="card">
           <h3>Commitment Structure</h3>
+          <p class="explain">How to read: percentages are now mutually exclusive studio buckets and sum to 100% across studios with memberships.</p>
           <div id="l4Commitment"></div>
         </article>
         <article class="card wide">
           <h3>Membership Types</h3>
+          <div id="l4MembershipMeta"></div>
           <table>
             <thead>
-              <tr><th>Type</th><th>Avg Monthly Price</th><th>Avg Effective Price/Class</th></tr>
+              <tr><th>Type</th><th>Memberships</th><th>Studios</th><th>Avg Monthly Price</th><th>Avg Effective Price/Class</th></tr>
             </thead>
             <tbody id="l4MembershipTypeRows"></tbody>
           </table>
@@ -226,7 +236,8 @@
         <article class="card">
           <h3>Membership vs 10-Pack Value</h3>
           <p class="sub">X = 10-pack EUR/class · Y = membership EUR/class</p>
-          <p class="explain">How to read: each point is one studio. Below the diagonal (y &lt; x) means membership is cheaper per class than a 10-pack; above means memberships are less value-driven.</p>
+          <p class="explain">How to read: each point is one studio. Y uses that studio's lowest available class-based membership tier (4, 5, 8, etc.). Below the diagonal (y &lt; x) means membership is cheaper per class than a 10-pack.</p>
+          <div id="l5ScatterMeta"></div>
           <div class="chart-box"><canvas id="l5ScatterChart"></canvas></div>
         </article>
       </section>
@@ -315,7 +326,13 @@
       layers: {
         layer1_market_overview: { studios_analyzed: 0, with_pricing_available: 0, with_memberships: 0, offering_intro_offers: 0, dropin_metrics: {}, dropin_distribution: [], modality_pricing_table: [] },
         layer2_pricing_structure: { pct_studios_with_intro: 0, average_intro_price: null, average_intro_price_per_class: null, intro_types: [], intro_discount_histogram: [] },
-        layer3_pack_pricing: { pack_table: [], pack_expiration_histogram: [] },
+        layer3_pack_pricing: {
+          pack_table: [],
+          pack_expiration_histogram: [],
+          pack_expiration_scope: {},
+          pack_expiration_available_pack_sizes: [],
+          pack_expiration_by_pack_size: { all: { histogram: [] } }
+        },
         layer4_membership_models: { pct_studios_with_memberships: 0, pct_with_unlimited_memberships: 0, pct_with_class_based_memberships: 0, membership_adoption_pie: [], membership_types_table: [], commitment_structure: {} },
         layer5_pricing_strategy: { avg_drop_in_to_10_pack_price_diff_pct: null, dropin_vs_10pack_discount_histogram: [], membership_vs_pack_scatter: [] },
         layer6_modality_economics_v1: { assumptions: {}, modality_revenue_table: [] },
@@ -372,7 +389,6 @@
       const metrics = layer.dropin_metrics || {};
       const cards = [
         ["Studios analyzed", layer.studios_analyzed],
-        ["Pricing available", layer.with_pricing_available],
         ["With memberships", layer.with_memberships],
         ["Offering intro offers", layer.offering_intro_offers],
         ["Average drop-in", money(metrics.average)],
@@ -392,8 +408,12 @@
         },
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
       });
+      const sourceNote = layer.methodology && layer.methodology.dropin_distribution_source ? layer.methodology.dropin_distribution_source : "";
+      document.getElementById("l1DropinMeta").innerHTML = sourceNote ? `<span class="chip">${sourceNote}</span>` : "";
 
       const modality = (layer.modality_pricing_table || []).slice().sort((a, b) => (b.avg_drop_in || 0) - (a.avg_drop_in || 0));
+      const modalityStudios = modality.reduce((acc, m) => acc + (Number(m.n_studios) || 0), 0);
+      document.getElementById("l1ModalityMeta").innerHTML = `<span class="chip">Rows: ${modality.length}</span><span class="chip">Total modality-study observations: ${modalityStudios}</span>`;
       charts.l1Modality = new Chart(document.getElementById("l1ModalityChart"), {
         type: "bar",
         data: {
@@ -409,11 +429,13 @@
       document.getElementById("l1ModalityRows").innerHTML = modality.map((m) => `
         <tr>
           <td>${formatModalityLabel(m.modality)}</td>
+          <td>${m.n_studios ?? "-"}</td>
           <td>${money(m.avg_drop_in)}</td>
           <td>${money(m.median_drop_in)}</td>
-          <td>${money(m.range)}</td>
+          <td>${money(m.min_drop_in)}</td>
+          <td>${money(m.max_drop_in)}</td>
         </tr>
-      `).join("") || `<tr><td colspan="4">No modality data.</td></tr>`;
+      `).join("") || `<tr><td colspan="6">No modality data.</td></tr>`;
     }
 
     function renderLayer2(layer) {
@@ -446,15 +468,38 @@
     }
 
     function renderLayer3(layer) {
+      document.getElementById("l3PackMeta").innerHTML = `<span class="chip">Pack sizes shown: 5, 10, 20, 30, 50</span>`;
       document.getElementById("l3PackRows").innerHTML = (layer.pack_table || []).map((r) => `
         <tr>
           <td>${r.pack}</td>
+          <td>${r.n_studios ?? "-"}</td>
           <td>${money(r.avg_price_per_class)}</td>
           <td>${pct(r.avg_discount_vs_dropin_pct)}</td>
         </tr>
-      `).join("") || `<tr><td colspan="3">No pack data.</td></tr>`;
+      `).join("") || `<tr><td colspan="4">No pack data.</td></tr>`;
 
-      const hist = layer.pack_expiration_histogram || [];
+      const byPack = layer.pack_expiration_by_pack_size || {};
+      const available = layer.pack_expiration_available_pack_sizes || [];
+      const preferredSizes = [5, 10, 20, 30, 40, 50];
+      const shownSizes = preferredSizes.filter((size) => available.includes(size) && byPack[String(size)]);
+      const selector = document.getElementById("l3PackSizeFilter");
+      const previous = selector.value || "";
+      const defaultValue = shownSizes.includes(10) ? "10" : "all";
+      selector.innerHTML = [
+        `<option value="all">All pack sizes</option>`,
+        ...shownSizes.map((size) => `<option value="${size}">${size}-pack only</option>`)
+      ].join("");
+      selector.value = previous && (previous === "all" || shownSizes.includes(Number(previous))) ? previous : defaultValue;
+
+      const selectedKey = selector.value || defaultValue;
+      const selectedSlice = byPack[selectedKey] || byPack.all || {};
+      const hist = selectedSlice.histogram || layer.pack_expiration_histogram || [];
+      const scope = selectedSlice;
+      document.getElementById("l3ExpirationMeta").innerHTML = `
+        <span class="chip">Scope: ${scope.scope_label || "All pack sizes"}</span>
+        <span class="chip">Studios in scope: ${scope.n_studios ?? 0}</span>
+        <span class="chip">Studios with validity data: ${scope.n_studios_with_validity ?? 0}</span>
+      `;
       charts.l3Expiry = new Chart(document.getElementById("l3PackExpirationChart"), {
         type: "bar",
         data: {
@@ -489,15 +534,23 @@
         <span class="chip">3-month: ${pct(c.pct_3_month_commitment)}</span>
         <span class="chip">6-month: ${pct(c.pct_6_month_commitment)}</span>
         <span class="chip">12-month: ${pct(c.pct_12_month_commitment)}</span>
+        <span class="chip">Denominator studios: ${c.denominator_studios_with_memberships ?? "-"}</span>
       `;
+
+      const methodology = layer.membership_type_methodology && layer.membership_type_methodology.unlimited_effective_price_per_class
+        ? layer.membership_type_methodology.unlimited_effective_price_per_class
+        : "";
+      document.getElementById("l4MembershipMeta").innerHTML = methodology ? `<span class="chip">${methodology}</span>` : "";
 
       document.getElementById("l4MembershipTypeRows").innerHTML = (layer.membership_types_table || []).map((r) => `
         <tr>
           <td>${r.membership_type}</td>
+          <td>${r.n_memberships ?? "-"}</td>
+          <td>${r.n_studios ?? "-"}</td>
           <td>${money(r.avg_monthly_price)}</td>
           <td>${money(r.avg_effective_price_per_class)}</td>
         </tr>
-      `).join("") || `<tr><td colspan="3">No membership type data.</td></tr>`;
+      `).join("") || `<tr><td colspan="5">No membership type data.</td></tr>`;
     }
 
     function renderLayer5(layer) {
@@ -511,11 +564,24 @@
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
       });
 
-      const scatter = (layer.membership_vs_pack_scatter || []).map((p) => ({ x: p.x, y: p.y, label: p.studio_name }));
+      const scatter = (layer.membership_vs_pack_scatter || []).map((p) => ({
+        x: p.x,
+        y: p.y,
+        label: p.studio_name,
+        tier: p.membership_tier_classes_per_month
+      }));
+      const diagonal = (layer.scatter_diagonal_reference || []).map((p) => ({ x: p.x, y: p.y }));
+      document.getElementById("l5ScatterMeta").innerHTML = `
+        <span class="chip">Studios in scatter: ${layer.scatter_sample_size ?? scatter.length}</span>
+        <span class="chip">${layer.scatter_methodology || "Comparator: lowest class-based membership tier"}</span>
+      `;
       charts.l5Scatter = new Chart(document.getElementById("l5ScatterChart"), {
         type: "scatter",
         data: {
-          datasets: [{ label: "Studios", data: scatter, backgroundColor: "#7dd3ff" }]
+          datasets: [
+            { label: "Studios", data: scatter, backgroundColor: "#7dd3ff", pointRadius: 4, pointHoverRadius: 6 },
+            { label: "Parity line (y=x)", type: "line", data: diagonal, borderColor: "#f97316", borderWidth: 2, pointRadius: 0, tension: 0 }
+          ]
         },
         options: {
           responsive: true,
@@ -524,7 +590,20 @@
             x: { title: { display: true, text: "10-pack EUR/class" } },
             y: { title: { display: true, text: "Membership EUR/class" } }
           },
-          plugins: { legend: { display: false } }
+          plugins: {
+            legend: { display: true },
+            tooltip: {
+              callbacks: {
+                label(ctx) {
+                  const raw = ctx.raw || {};
+                  if (ctx.datasetIndex === 1) return "Parity line";
+                  const tier = raw.tier ? `${raw.tier} classes/mo tier` : "tier unknown";
+                  const name = raw.label || "Studio";
+                  return `${name}: x ${money(raw.x)}, y ${money(raw.y)} (${tier})`;
+                }
+              }
+            }
+          }
         }
       });
     }
@@ -629,6 +708,8 @@
         // fallback
       }
       render(snapshot);
+      const l3PackSizeFilter = document.getElementById("l3PackSizeFilter");
+      l3PackSizeFilter.addEventListener("change", () => render(snapshot));
       if (loadedFrom === "fallback") {
         document.getElementById("footer").textContent += " · (fallback data loaded)";
       }
