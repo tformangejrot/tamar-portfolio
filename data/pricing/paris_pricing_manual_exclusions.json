@@ -245,6 +245,74 @@
     {
       "domain": "linktr.ee",
       "reason": "aggregator_link_excluded_use_official_studio_domain"
+    },
+    {
+      "domain": "louisfabre.com",
+      "reason": "trainer_not_studio_exclude_requested"
+    },
+    {
+      "domain": "magic-form.fr",
+      "reason": "box_gym_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "magicfit.fr",
+      "reason": "box_gym_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "magicformvitry.fr",
+      "reason": "box_gym_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "maisonminceur.fr",
+      "reason": "not_fitness_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "millesime-coaching.fr",
+      "reason": "private_training_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "monqclub.fr",
+      "reason": "pricing_not_public_exclude_requested"
+    },
+    {
+      "domain": "muaythai-france.fr",
+      "reason": "not_boutique_fitness_exclude_requested"
+    },
+    {
+      "domain": "my-big-bang.fr",
+      "reason": "ems_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "myfitness-studio.com",
+      "reason": "gym_not_studio_exclude_requested"
+    },
+    {
+      "domain": "nadyut.com",
+      "reason": "not_a_studio_exclude_requested"
+    },
+    {
+      "domain": "nataraja-paris.com",
+      "reason": "website_not_working_exclude_requested"
+    },
+    {
+      "domain": "ng-sport.com",
+      "reason": "private_coaching_out_of_scope_exclude_requested"
+    },
+    {
+      "domain": "nobleartinstitut.com",
+      "reason": "not_boutique_fitness_pricing_exclude_requested"
+    },
+    {
+      "domain": "olivierlecocq.com",
+      "reason": "not_a_studio_exclude_requested"
+    },
+    {
+      "domain": "omvida.fr",
+      "reason": "teacher_managed_payments_not_boutique_studio_exclude_requested"
+    },
+    {
+      "domain": "one-rep.fr",
+      "reason": "no_classes_exclude_requested"
     }
   ]
 }
