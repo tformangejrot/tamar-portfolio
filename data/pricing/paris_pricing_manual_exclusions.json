@@ -321,6 +321,46 @@
     {
       "domain": "paris-society-events.com",
       "reason": "aggregator_or_venue_link_excluded_use_official_studio_domain"
+    },
+    {
+      "domain": "paris-marais-dance-school.org",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "paris.fr",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "paua-massage-paris.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "planity.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "platinumcoaching.fr",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "pointsoleil.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "powerbyergo.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "rafagastudios.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "rebeccayoga.net",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "romeoclub.fr",
+      "reason": "exclude_requested"
     }
   ]
 }
