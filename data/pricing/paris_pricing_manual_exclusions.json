@@ -313,6 +313,14 @@
     {
       "domain": "one-rep.fr",
       "reason": "no_classes_exclude_requested"
+    },
+    {
+      "domain": "originaltimba.com",
+      "reason": "teacher_not_studio_exclude_requested"
+    },
+    {
+      "domain": "paris-society-events.com",
+      "reason": "aggregator_or_venue_link_excluded_use_official_studio_domain"
     }
   ]
 }
