@@ -13,38 +13,125 @@ const OUTPUT_DIR = path.join(ROOT, "data/pricing/analysis");
 const OUTPUT_JSON = path.join(OUTPUT_DIR, "paris_pricing_snapshot.json");
 const OUTPUT_MD = path.join(OUTPUT_DIR, "paris_pricing_snapshot.md");
 
-const MAIN_MODALITIES = [
-  "pilates",
+const CANONICAL_MODALITIES = [
+  "reformer_pilates",
+  "mat_pilates",
   "yoga",
-  "strength-training",
-  "hiit-bootcamp",
-  "reformer-pilates",
-  "dance",
-  "boxing",
-  "stretching",
-  "cycling",
+  "prenatal_postnatal",
   "barre",
-  "prenatal-postnatal",
-  "low-impact-training",
-  "martial-arts",
+  "dance",
+  "strength_conditioning",
+  "boxing_striking",
+  "martial_arts",
+  "indoor_cycling",
+  "aqua_cycling",
   "running",
+  "stretching_mobility",
+  "aerial_pole",
+  "trampoline",
 ];
 
+const RAW_TO_CANONICAL_MODALITY = {
+  "reformer-pilates": "reformer_pilates",
+  lagree: "reformer_pilates",
+  "high-intensity-pilates": "reformer_pilates",
+  "tower-pilates": "reformer_pilates",
+  pilates: "mat_pilates",
+  "mat-pilates": "mat_pilates",
+  motr: "mat_pilates",
+  yoga: "yoga",
+  "vinyasa-yoga": "yoga",
+  "yin-yoga": "yoga",
+  "hatha-yoga": "yoga",
+  "ashtanga-yoga": "yoga",
+  "power-yoga": "yoga",
+  "restorative-yoga": "yoga",
+  "yoga-nidra": "yoga",
+  "iyengar-yoga": "yoga",
+  "hot-yoga": "yoga",
+  "kundalini-yoga": "yoga",
+  "jivamukti-yoga": "yoga",
+  prenatal: "prenatal_postnatal",
+  "prenatal-yoga": "prenatal_postnatal",
+  postnatal: "prenatal_postnatal",
+  barre: "barre",
+  dance: "dance",
+  "cardio-dance": "dance",
+  "latin-dance": "dance",
+  "salsa-dance": "dance",
+  salsa: "dance",
+  "ballet-dance": "dance",
+  "contemporary-dance": "dance",
+  "hip-hop-dance": "dance",
+  "street-dance": "dance",
+  "street-jazz": "dance",
+  "jazz-dance": "dance",
+  "ballroom-dance": "dance",
+  zumba: "dance",
+  "zumba-dance": "dance",
+  "strength-training": "strength_conditioning",
+  bootcamp: "strength_conditioning",
+  hiit: "strength_conditioning",
+  "circuit-training": "strength_conditioning",
+  crossfit: "strength_conditioning",
+  hyrox: "strength_conditioning",
+  weightlifting: "strength_conditioning",
+  trx: "strength_conditioning",
+  "cross-training": "strength_conditioning",
+  "functional-training": "strength_conditioning",
+  boxing: "boxing_striking",
+  kickboxing: "boxing_striking",
+  shadowboxing: "boxing_striking",
+  "cardio-boxing": "boxing_striking",
+  "heavy-bag": "boxing_striking",
+  "martial-arts": "martial_arts",
+  "mixed-martial-arts": "martial_arts",
+  "muay-thai": "martial_arts",
+  "jiu-jitsu": "martial_arts",
+  mma: "martial_arts",
+  hapkido: "martial_arts",
+  taekwondo: "martial_arts",
+  cycling: "indoor_cycling",
+  "indoor-cycling": "indoor_cycling",
+  "aqua-cycling": "aqua_cycling",
+  running: "running",
+  stretching: "stretching_mobility",
+  mobility: "stretching_mobility",
+  "qi-gong": "stretching_mobility",
+  aerial: "aerial_pole",
+  "aerial-antigravity-yoga": "aerial_pole",
+  "aerial-yoga": "aerial_pole",
+  "pole-dance": "aerial_pole",
+  trampoline: "trampoline",
+};
+
+const EXCLUDED_MODALITY_TAGS = new Set([
+  "fitness",
+  "sculpt",
+  "low-impact-training",
+  "outdoors",
+  "gym-time",
+  "personal-training",
+  "wellness",
+  "meditation",
+]);
+
 const MODALITY_CAPACITY_PROXY = {
-  pilates: 18,
-  yoga: 24,
-  "strength-training": 16,
-  "hiit-bootcamp": 20,
-  "reformer-pilates": 12,
-  dance: 22,
-  boxing: 18,
-  stretching: 20,
-  cycling: 28,
+  reformer_pilates: 8,
+  mat_pilates: 20,
+  yoga: 22,
+  prenatal_postnatal: 14,
   barre: 20,
-  "prenatal-postnatal": 14,
-  "low-impact-training": 18,
-  "martial-arts": 20,
-  running: 30,
+  dance: 22,
+  strength_conditioning: 34,
+  boxing_striking: 26,
+  martial_arts: 20,
+  indoor_cycling: 45,
+  aqua_cycling: 14,
+  running: 35,
+  stretching_mobility: 15,
+  aerial_pole: 10,
+  trampoline: 18,
 };
 
 const GEO_BUCKETS = [
@@ -221,7 +308,85 @@ function hasKnownPricing(record) {
   return false;
 }
 
-function computeSlice(activeRecords, approvedTotal = null) {
+function textNorm(value) {
+  return String(value || "").toLowerCase();
+}
+
+function detectConfirmedDedupeGroup(record) {
+  const name = textNorm(record?.studio_name);
+  const domain = textNorm(record?.domain);
+  const pricingUrl = textNorm(record?.pricing_url);
+  if (/\boly\s*be\b/.test(name) || domain.includes("olybe") || pricingUrl.includes("olybe.com")) return "olybe";
+  if (name.includes("zumbafrance") || domain.includes("zumbafrance.com")) return "zumbafrance";
+  if (/\byoze\b/.test(name) || domain.includes("yoze.fr") || pricingUrl.includes("yoze.fr")) return "yoze";
+  if (name.includes("hooptonic")) return "hooptonic";
+  if (name.includes("evocore") || domain.includes("evocore")) return "evocore";
+  return null;
+}
+
+function applyMinimalConfirmedDedupe(records) {
+  const seen = new Set();
+  const deduped = [];
+  const removedByGroup = {};
+  for (const record of records) {
+    const group = detectConfirmedDedupeGroup(record);
+    if (!group) {
+      deduped.push(record);
+      continue;
+    }
+    if (!seen.has(group)) {
+      seen.add(group);
+      deduped.push(record);
+      continue;
+    }
+    removedByGroup[group] = (removedByGroup[group] || 0) + 1;
+  }
+  return {
+    deduped_records: deduped,
+    meta: {
+      applied: true,
+      groups_considered: ["olybe", "zumbafrance", "yoze", "hooptonic", "evocore"],
+      removed_total: records.length - deduped.length,
+      removed_by_group: removedByGroup,
+    },
+  };
+}
+
+function mapRawCategoryToCanonical(rawCategory) {
+  return RAW_TO_CANONICAL_MODALITY[String(rawCategory || "").trim()] || null;
+}
+
+function normalizeModalityKey(rawKey) {
+  return String(rawKey || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
+
+function mapDropInByModalityKeyToCanonical(rawKey) {
+  const key = normalizeModalityKey(rawKey);
+  if (!key) return null;
+  if (/(reformer|lagree|tower)/.test(key)) return "reformer_pilates";
+  if (/(aqua).*(cycl|bike)|aquabike/.test(key)) return "aqua_cycling";
+  if (/(cycl|bike|spin)/.test(key)) return "indoor_cycling";
+  if (/(kickbox|shadowbox|cardio_box|heavy_bag|boxing)/.test(key)) return "boxing_striking";
+  if (/(martial|muay|jiu|mma|hapkido|taekwondo)/.test(key)) return "martial_arts";
+  if (/trampoline/.test(key)) return "trampoline";
+  if (/(aerial|pole|antigravity)/.test(key)) return "aerial_pole";
+  if (/(stretch|mobil|qigong|qi_gong)/.test(key)) return "stretching_mobility";
+  if (/running/.test(key)) return "running";
+  if (/barre/.test(key)) return "barre";
+  if (/(dance|zumba|salsa|ballet|hip_hop|street_jazz|jazz)/.test(key)) return "dance";
+  if (/(prenatal|postnatal)/.test(key)) return "prenatal_postnatal";
+  if (/yoga/.test(key)) return "yoga";
+  if (/pilates/.test(key)) return "mat_pilates";
+  if (/(strength|hiit|bootcamp|crossfit|hyrox|weight|trx|functional|circuit)/.test(key)) return "strength_conditioning";
+  return null;
+}
+
+function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
   const active = activeRecords;
   const studiosWithDropIn = active.filter((r) => Number.isFinite(r.drop_in?.price));
   const studiosWithPacks = active.filter((r) => (r.class_packs || []).length > 0);
@@ -340,15 +505,72 @@ function computeSlice(activeRecords, approvedTotal = null) {
     { label: "40EUR+", min: 40, max: null },
   ]);
 
-  const modalityDropInComparison = MAIN_MODALITIES.map((modality) => {
-    const values = active
-      .filter((r) => Array.isArray(r.categories) && r.categories.includes(modality))
-      .map((r) => Number(r.drop_in?.price))
-      .filter((v) => Number.isFinite(v) && v > 0);
+  const modalityAttributionRows = [];
+  const multiModalityAuditRows = [];
+  for (const studio of active) {
+    const categories = Array.isArray(studio.categories) ? [...new Set(studio.categories.filter(Boolean))] : [];
+    const canonicalSet = new Set();
+    const excludedTags = [];
+    for (const rawCategory of categories) {
+      const canonical = mapRawCategoryToCanonical(rawCategory);
+      if (canonical) {
+        canonicalSet.add(canonical);
+      } else if (EXCLUDED_MODALITY_TAGS.has(rawCategory)) {
+        excludedTags.push(rawCategory);
+      }
+    }
+
+    const modalitySpecificPriceMap = new Map();
+    const byModality = studio?.drop_in_by_modality && typeof studio.drop_in_by_modality === "object" ? studio.drop_in_by_modality : null;
+    if (byModality) {
+      for (const [rawKey, rawValue] of Object.entries(byModality)) {
+        const value = Number(rawValue);
+        if (!Number.isFinite(value) || value <= 0) continue;
+        const canonical = mapDropInByModalityKeyToCanonical(rawKey);
+        if (!canonical) continue;
+        if (!modalitySpecificPriceMap.has(canonical) || value > modalitySpecificPriceMap.get(canonical)) {
+          modalitySpecificPriceMap.set(canonical, value);
+        }
+      }
+    }
+
+    const sharedDropIn = Number(studio?.drop_in?.price);
+    for (const canonical of canonicalSet) {
+      const modalitySpecific = modalitySpecificPriceMap.get(canonical);
+      const price = Number.isFinite(modalitySpecific) && modalitySpecific > 0
+        ? modalitySpecific
+        : Number.isFinite(sharedDropIn) && sharedDropIn > 0
+          ? sharedDropIn
+          : null;
+      if (!Number.isFinite(price) || price <= 0) continue;
+      modalityAttributionRows.push({
+        domain: studio.domain,
+        studio_name: studio.studio_name,
+        modality: canonical,
+        price,
+        price_source: Number.isFinite(modalitySpecific) && modalitySpecific > 0 ? "modality_specific" : "shared_drop_in",
+      });
+    }
+
+    multiModalityAuditRows.push({
+      domain: studio.domain,
+      studio_name: studio.studio_name,
+      category_count: canonicalSet.size,
+      categories: Array.from(canonicalSet).sort(),
+      excluded_tags: excludedTags,
+      has_modality_specific_pricing: modalitySpecificPriceMap.size > 0,
+    });
+  }
+
+  const modalityDropInComparison = CANONICAL_MODALITIES.map((modality) => {
+    const rows = modalityAttributionRows.filter((r) => r.modality === modality);
+    const values = rows.map((r) => r.price).filter((v) => Number.isFinite(v) && v > 0);
+    const studioSet = new Set(rows.map((r) => String(r.domain || r.studio_name || "")).filter(Boolean));
     const st = stats(values);
     return {
       modality,
-      n: st.n || 0,
+      n: studioSet.size,
+      observations: st.n || 0,
       avg_drop_in: st.mean ?? null,
       median_drop_in: st.median ?? null,
       min_drop_in: st.min ?? null,
@@ -358,6 +580,39 @@ function computeSlice(activeRecords, approvedTotal = null) {
       range: Number.isFinite(st.min) && Number.isFinite(st.max) ? round(st.max - st.min) : null,
     };
   }).filter((r) => r.n > 0);
+
+  const modalityAudit = (() => {
+    const distribution = { "0": 0, "1": 0, "2": 0, "3": 0, "4+": 0 };
+    for (const row of multiModalityAuditRows) {
+      const n = row.category_count;
+      if (n >= 4) distribution["4+"] += 1;
+      else distribution[String(n)] = (distribution[String(n)] || 0) + 1;
+    }
+    return {
+      attribution_mode: "count_all_cleaned_categories",
+      excluded_tags: Array.from(EXCLUDED_MODALITY_TAGS),
+      total_studios: multiModalityAuditRows.length,
+      studios_with_2_plus_categories: multiModalityAuditRows.filter((r) => r.category_count >= 2).length,
+      distribution,
+      zero_category_studios: multiModalityAuditRows
+        .filter((r) => r.category_count === 0)
+        .map((r) => ({
+          studio_name: r.studio_name,
+          domain: r.domain,
+          excluded_tags: r.excluded_tags,
+        })),
+      multi_category_studios: multiModalityAuditRows
+        .filter((r) => r.category_count >= 2)
+        .sort((a, b) => b.category_count - a.category_count)
+        .map((r) => ({
+          studio_name: r.studio_name,
+          domain: r.domain,
+          category_count: r.category_count,
+          categories: r.categories,
+          has_modality_specific_pricing: r.has_modality_specific_pricing,
+        })),
+    };
+  })();
 
   const pricingOptionCoverage = (() => {
     const hasPackSize = (record, size) => (record.class_packs || []).some((p) => Number(p?.classes) === size);
@@ -776,19 +1031,15 @@ function computeSlice(activeRecords, approvedTotal = null) {
   })();
 
   const layer6Economics = (() => {
-    const rows = MAIN_MODALITIES.map((modality) => {
-      const values = active
-        .filter((r) => Array.isArray(r.categories) && r.categories.includes(modality))
-        .map((r) => Number(r.drop_in?.price))
-        .filter((v) => Number.isFinite(v) && v > 0);
-      if (!values.length) return null;
-      const avgPrice = values.reduce((a, b) => a + b, 0) / values.length;
+    const rows = CANONICAL_MODALITIES.map((modality) => {
+      const row = modalityDropInComparison.find((m) => m.modality === modality);
+      if (!row || !Number.isFinite(row.avg_drop_in)) return null;
       const cap = MODALITY_CAPACITY_PROXY[modality] ?? 18;
       return {
         modality,
-        avg_drop_in_price: round(avgPrice),
+        avg_drop_in_price: row.avg_drop_in,
         avg_capacity: cap,
-        estimated_max_revenue_per_class: round(avgPrice * cap),
+        estimated_max_revenue_per_class: round(row.avg_drop_in * cap),
       };
     }).filter(Boolean);
     return {
@@ -887,6 +1138,7 @@ function computeSlice(activeRecords, approvedTotal = null) {
         pct: round((studiosUsingCredits.length / totalStudios) * 100, 1),
         examples: studiosUsingCredits.slice(0, 8).map((r) => r.domain),
       },
+      dedupe: extra.dedupe_meta || null,
     },
     benchmarks: {
       drop_in: dropInStats,
@@ -920,10 +1172,12 @@ function computeSlice(activeRecords, approvedTotal = null) {
         methodology: {
           dropin_distribution_source: "Drop-in distribution is built only from drop_in.price values (not intro offers, packs, or memberships).",
         },
+        modality_audit: modalityAudit,
         dropin_distribution: layer1DropInBins,
         modality_pricing_table: modalityDropInComparison.map((m) => ({
           modality: m.modality,
           n_studios: m.n,
+          n_observations: m.observations,
           avg_drop_in: m.avg_drop_in,
           median_drop_in: m.median_drop_in,
           min_drop_in: m.min_drop_in,
@@ -945,12 +1199,16 @@ function computeSlice(activeRecords, approvedTotal = null) {
 async function main() {
   const raw = JSON.parse(await fs.readFile(INPUT_PATH, "utf8"));
   const records = Array.isArray(raw) ? raw : raw.records || [];
-  const active = records
+  const inScopeBeforeDedupe = records.filter((r) => r.excluded_from_scope !== true);
+  const deduped = applyMinimalConfirmedDedupe(inScopeBeforeDedupe);
+  const recordsAfterDedupe = deduped.deduped_records;
+  const active = recordsAfterDedupe
     .filter((r) => r.excluded_from_scope !== true)
     .filter(hasKnownPricing);
 
-  const base = computeSlice(active, records.length);
-  base.sample.excluded_records = records.length - active.length;
+  const base = computeSlice(active, recordsAfterDedupe.length, { dedupe_meta: deduped.meta });
+  base.sample.excluded_records = recordsAfterDedupe.length - active.length;
+  base.sample.source_records_before_dedupe = inScopeBeforeDedupe.length;
 
   const snapshot = {
     generated_at: new Date().toISOString(),
@@ -968,10 +1226,18 @@ Generated: ${snapshot.generated_at}
 ## Coverage
 
 - In-scope studios: **${snapshot.sample.in_scope_records}** (excluded: ${snapshot.sample.excluded_records})
+- Source in-scope before dedupe: **${snapshot.sample.source_records_before_dedupe ?? snapshot.sample.in_scope_records}**
+- Removed by minimal dedupe: **${snapshot.sample.dedupe?.removed_total ?? 0}**
 - With drop-in pricing: **${snapshot.sample.coverage.with_drop_in}**
 - With class packs: **${snapshot.sample.coverage.with_class_packs}**
 - With memberships: **${snapshot.sample.coverage.with_memberships}**
 - With intro offers: **${snapshot.sample.coverage.with_intro_offers}**
+
+## Modality Audit
+
+- Attribution mode: **${snapshot.layers.layer1_market_overview.modality_audit?.attribution_mode || "-"}**
+- Studios with 2+ cleaned categories: **${snapshot.layers.layer1_market_overview.modality_audit?.studios_with_2_plus_categories ?? "-"}**
+- Studios with 0 cleaned categories: **${snapshot.layers.layer1_market_overview.modality_audit?.distribution?.["0"] ?? "-"}**
 
 ## Layer 1 quick metrics
 

@@ -123,7 +123,7 @@
         <article class="card">
           <h3>Pricing by Modality</h3>
           <p class="sub">Average and median drop-in by modality</p>
-          <p class="explain">How to read: compare avg vs median within each modality. A large gap often means a few premium outliers are pulling prices up.</p>
+          <p class="explain">How to read: compare avg vs median within each cleaned modality. Studios can contribute to multiple cleaned categories; modality-specific drop-ins are used when available, otherwise shared drop-in is used.</p>
           <div class="chart-box"><canvas id="l1ModalityChart"></canvas></div>
         </article>
         <article class="card wide">
@@ -324,7 +324,16 @@
       source: "fallback",
       sample: { approved_records_total: 0, in_scope_records: 0, excluded_records: 0, coverage: {} },
       layers: {
-        layer1_market_overview: { studios_analyzed: 0, with_pricing_available: 0, with_memberships: 0, offering_intro_offers: 0, dropin_metrics: {}, dropin_distribution: [], modality_pricing_table: [] },
+        layer1_market_overview: {
+          studios_analyzed: 0,
+          with_pricing_available: 0,
+          with_memberships: 0,
+          offering_intro_offers: 0,
+          dropin_metrics: {},
+          dropin_distribution: [],
+          modality_pricing_table: [],
+          modality_audit: { attribution_mode: "", studios_with_2_plus_categories: 0, distribution: { "0": 0, "1": 0, "2": 0, "3": 0, "4+": 0 } }
+        },
         layer2_pricing_structure: { pct_studios_with_intro: 0, average_intro_price: null, average_intro_price_per_class: null, intro_types: [], intro_discount_histogram: [] },
         layer3_pack_pricing: {
           pack_table: [],
@@ -343,13 +352,21 @@
 
     const charts = {};
     const modalityLabelMap = {
-      "strength-training": "Strength Training",
-      "hiit-bootcamp": "HIIT / Bootcamp",
-      "reformer-pilates": "Reformer Pilates",
-      "prenatal-postnatal": "Prenatal / Postnatal",
-      "low-impact-training": "Low Impact",
-      "martial-arts": "Martial Arts",
-      "electrical-muscle-stimulation": "EMS"
+      reformer_pilates: "Reformer Pilates",
+      mat_pilates: "Mat Pilates",
+      yoga: "Yoga",
+      prenatal_postnatal: "Prenatal / Postnatal",
+      barre: "Barre",
+      dance: "Dance",
+      strength_conditioning: "Strength & Conditioning",
+      boxing_striking: "Boxing / Striking",
+      martial_arts: "Martial Arts",
+      indoor_cycling: "Indoor Cycling",
+      aqua_cycling: "Aqua Cycling",
+      running: "Running",
+      stretching_mobility: "Stretching / Mobility",
+      aerial_pole: "Aerial / Pole",
+      trampoline: "Trampoline"
     };
     const introTypeLabels = {
       single_discounted_class: "Single discounted class",
@@ -413,7 +430,17 @@
 
       const modality = (layer.modality_pricing_table || []).slice().sort((a, b) => (b.avg_drop_in || 0) - (a.avg_drop_in || 0));
       const modalityStudios = modality.reduce((acc, m) => acc + (Number(m.n_studios) || 0), 0);
-      document.getElementById("l1ModalityMeta").innerHTML = `<span class="chip">Rows: ${modality.length}</span><span class="chip">Total modality-study observations: ${modalityStudios}</span>`;
+      const modalityObservations = modality.reduce((acc, m) => acc + (Number(m.n_observations) || 0), 0);
+      const audit = layer.modality_audit || {};
+      const distribution = audit.distribution || {};
+      document.getElementById("l1ModalityMeta").innerHTML = `
+        <span class="chip">Rows: ${modality.length}</span>
+        <span class="chip">Studios across modality rows: ${modalityStudios}</span>
+        <span class="chip">Price observations: ${modalityObservations}</span>
+        <span class="chip">Attribution: ${audit.attribution_mode || "count_all_cleaned_categories"}</span>
+        <span class="chip">Studios with 2+ categories: ${audit.studios_with_2_plus_categories ?? "-"}</span>
+        <span class="chip">0-category studios: ${distribution["0"] ?? "-"}</span>
+      `;
       charts.l1Modality = new Chart(document.getElementById("l1ModalityChart"), {
         type: "bar",
         data: {
