@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T20:38:52.244Z",
+  "generated_at": "2026-03-18T20:42:20.108Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
     "approved_records_total": 229,
@@ -3346,14 +3346,14 @@
       "pack_expiration_by_pack_size": {
         "1": {
           "scope_label": "1-pack only",
-          "n_pack_rows": 183,
-          "n_pack_rows_with_validity": 139,
-          "n_studios": 149,
-          "n_studios_with_validity": 113,
+          "n_pack_rows": 165,
+          "n_pack_rows_with_validity": 124,
+          "n_studios": 145,
+          "n_studios_with_validity": 110,
           "histogram": [
             {
               "label": "1 month",
-              "count": 109
+              "count": 97
             },
             {
               "label": "2 months",
@@ -3361,7 +3361,7 @@
             },
             {
               "label": "3 months",
-              "count": 16
+              "count": 14
             },
             {
               "label": "6 months",
@@ -3369,7 +3369,7 @@
             },
             {
               "label": "12 months",
-              "count": 5
+              "count": 4
             },
             {
               "label": "No expiration",
@@ -4600,14 +4600,14 @@
         },
         "all": {
           "scope_label": "All pack sizes",
-          "n_pack_rows": 1104,
-          "n_pack_rows_with_validity": 909,
+          "n_pack_rows": 1086,
+          "n_pack_rows_with_validity": 894,
           "n_studios": 219,
           "n_studios_with_validity": 178,
           "histogram": [
             {
               "label": "1 month",
-              "count": 176
+              "count": 164
             },
             {
               "label": "2 months",
@@ -4615,7 +4615,7 @@
             },
             {
               "label": "3 months",
-              "count": 137
+              "count": 135
             },
             {
               "label": "6 months",
@@ -4623,7 +4623,7 @@
             },
             {
               "label": "12 months",
-              "count": 280
+              "count": 279
             },
             {
               "label": "No expiration",
