@@ -425,6 +425,58 @@
     {
       "domain": "tecfit-boulognebillancourt.fr",
       "reason": "exclude_requested"
+    },
+    {
+      "domain": "sofit-club.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "toutaincoaching.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "tribuparis.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "upgradeprivatecoaching.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "vietvodaoparis.fr",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "vothuatvanvodaoparis.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "welovebloom.co",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "westretch.fr",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "withoutweakness.fr",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "workoutsbyyael.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "workoutwithdan.fr",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "yoganepita.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "yogasearcher-paris.com",
+      "reason": "exclude_requested"
     }
   ]
 }
