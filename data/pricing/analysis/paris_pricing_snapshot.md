@@ -1,6 +1,6 @@
 # Paris Pricing Snapshot
 
-Generated: 2026-03-18T14:43:26.606Z
+Generated: 2026-03-18T20:38:52.244Z
 
 ## Coverage
 
@@ -8,7 +8,7 @@ Generated: 2026-03-18T14:43:26.606Z
 - Source in-scope before dedupe: **243**
 - Removed by minimal dedupe: **14**
 - With drop-in pricing: **215**
-- With class packs: **220**
+- With class packs: **219**
 - With memberships: **162**
 - With intro offers: **185**
 
@@ -29,8 +29,8 @@ Generated: 2026-03-18T14:43:26.606Z
 | Pack | Avg EUR/class | Avg discount vs drop-in % |
 | --- | --- | --- |
 | 5 pack | 27.82 | 11.71 |
-| 10 pack | 25.38 | 16.2 |
-| 20 pack | 24.69 | 22.35 |
+| 10 pack | 25.4 | 16.14 |
+| 20 pack | 24.72 | 22.25 |
 | 30 pack | 21.3 | 27.08 |
 | 50 pack | 24.4 | 34.76 |
 

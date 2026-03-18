@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-18T14:43:26.606Z",
+  "generated_at": "2026-03-18T20:38:52.244Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
     "approved_records_total": 229,
     "in_scope_records": 229,
     "coverage": {
       "with_drop_in": 215,
-      "with_class_packs": 220,
+      "with_class_packs": 219,
       "with_memberships": 162,
       "with_intro_offers": 185
     },
@@ -104,10 +104,10 @@
         "min": 11,
         "q1": 20,
         "median": 25,
-        "q3": 30.23,
+        "q3": 30.67,
         "max": 45,
-        "mean": 25.38,
-        "stddev": 7.29
+        "mean": 25.4,
+        "stddev": 7.3
       },
       {
         "bucket": "20 classes",
@@ -117,7 +117,7 @@
         "median": 24,
         "q3": 30,
         "max": 42,
-        "mean": 24.69,
+        "mean": 24.72,
         "stddev": 6.7
       }
     ],
@@ -173,10 +173,10 @@
   "modality_drop_in_comparison": [
     {
       "modality": "reformer_pilates",
-      "n": 72,
-      "observations": 72,
-      "avg_drop_in": 40.39,
-      "median_drop_in": 42,
+      "n": 64,
+      "observations": 64,
+      "avg_drop_in": 41.9,
+      "median_drop_in": 44.5,
       "min_drop_in": 20,
       "max_drop_in": 60,
       "q1": 35,
@@ -185,15 +185,15 @@
     },
     {
       "modality": "mat_pilates",
-      "n": 119,
-      "observations": 119,
-      "avg_drop_in": 33.24,
-      "median_drop_in": 30,
+      "n": 89,
+      "observations": 89,
+      "avg_drop_in": 29.67,
+      "median_drop_in": 29,
       "min_drop_in": 18,
-      "max_drop_in": 60,
+      "max_drop_in": 55,
       "q1": 25,
-      "q3": 40,
-      "range": 42
+      "q3": 32,
+      "range": 37
     },
     {
       "modality": "yoga",
@@ -449,25 +449,25 @@
       },
       {
         "bucket": "10 classes",
-        "n": 233,
+        "n": 234,
         "min": -13.75,
         "q1": 10.34,
         "median": 15.56,
         "q3": 20.3,
         "max": 68,
-        "mean": 16.33,
-        "stddev": 9.97
+        "mean": 16.26,
+        "stddev": 10
       },
       {
         "bucket": "20 classes",
-        "n": 185,
+        "n": 186,
         "min": 0,
-        "q1": 17.24,
-        "median": 22.5,
-        "q3": 28.57,
+        "q1": 17.21,
+        "median": 22.46,
+        "q3": 28.49,
         "max": 50,
-        "mean": 21.93,
-        "stddev": 9.62
+        "mean": 21.81,
+        "stddev": 9.73
       },
       {
         "bucket": "30 classes",
@@ -901,9 +901,9 @@
         "distribution": {
           "0": 9,
           "1": 61,
-          "2": 77,
-          "3": 36,
-          "4+": 46
+          "2": 78,
+          "3": 37,
+          "4+": 44
         },
         "zero_category_studios": [
           {
@@ -989,7 +989,9 @@
               "trampoline",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Aja House",
@@ -1006,7 +1008,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Club Lulu",
@@ -1022,7 +1026,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "L'Académie 34",
@@ -1037,7 +1043,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "bodistudio",
@@ -1051,49 +1059,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
-          },
-          {
-            "studio_name": "Hera Club",
-            "domain": "heraclubparis.com",
-            "category_count": 6,
-            "categories": [
-              "barre",
-              "mat_pilates",
-              "reformer_pilates",
-              "strength_conditioning",
-              "stretching_mobility",
-              "yoga"
-            ],
-            "has_modality_specific_pricing": false
-          },
-          {
-            "studio_name": "HI KICK",
-            "domain": "hi-kick.fr",
-            "category_count": 6,
-            "categories": [
-              "boxing_striking",
-              "martial_arts",
-              "mat_pilates",
-              "reformer_pilates",
-              "strength_conditioning",
-              "stretching_mobility"
-            ],
-            "has_modality_specific_pricing": false
-          },
-          {
-            "studio_name": "Jumpman",
-            "domain": "jumpmanfitness.com",
-            "category_count": 6,
-            "categories": [
-              "dance",
-              "indoor_cycling",
-              "mat_pilates",
-              "reformer_pilates",
-              "strength_conditioning",
-              "trampoline"
-            ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Le Cube Fight Club",
@@ -1107,7 +1075,9 @@
               "reformer_pilates",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Pyra",
@@ -1121,7 +1091,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "R2 Training",
@@ -1135,7 +1107,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Reformation",
@@ -1149,7 +1123,9 @@
               "strength_conditioning",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "Athletx Rebel",
@@ -1162,7 +1138,9 @@
               "reformer_pilates",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Bandha Yoga",
@@ -1175,7 +1153,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Cerce",
@@ -1188,7 +1168,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Chez Simone",
@@ -1201,7 +1183,9 @@
               "strength_conditioning",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "espaceallzen.com",
@@ -1213,7 +1197,39 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
+            "studio_name": "Hera Club",
+            "domain": "heraclubparis.com",
+            "category_count": 5,
+            "categories": [
+              "barre",
+              "mat_pilates",
+              "strength_conditioning",
+              "stretching_mobility",
+              "yoga"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
+            "studio_name": "HI KICK",
+            "domain": "hi-kick.fr",
+            "category_count": 5,
+            "categories": [
+              "boxing_striking",
+              "martial_arts",
+              "mat_pilates",
+              "strength_conditioning",
+              "stretching_mobility"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Janet Studio",
@@ -1226,7 +1242,24 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
+            "studio_name": "Jumpman",
+            "domain": "jumpmanfitness.com",
+            "category_count": 5,
+            "categories": [
+              "dance",
+              "indoor_cycling",
+              "mat_pilates",
+              "strength_conditioning",
+              "trampoline"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "KAH Studio",
@@ -1239,7 +1272,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "LA LA DANSE",
@@ -1252,7 +1287,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Le Hyve",
@@ -1265,33 +1302,9 @@
               "reformer_pilates",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": true
-          },
-          {
-            "studio_name": "Slowe Wellness House",
-            "domain": "slowe-studio.com",
-            "category_count": 5,
-            "categories": [
-              "barre",
-              "mat_pilates",
-              "reformer_pilates",
-              "strength_conditioning",
-              "yoga"
-            ],
-            "has_modality_specific_pricing": false
-          },
-          {
-            "studio_name": "SORE",
-            "domain": "soregym.com",
-            "category_count": 5,
-            "categories": [
-              "mat_pilates",
-              "reformer_pilates",
-              "strength_conditioning",
-              "stretching_mobility",
-              "yoga"
-            ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio 3C",
@@ -1304,7 +1317,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio Wunder Barre",
@@ -1317,19 +1332,9 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
-          },
-          {
-            "studio_name": "BarreShape",
-            "domain": "barreshape.com",
-            "category_count": 4,
-            "categories": [
-              "barre",
-              "dance",
-              "mat_pilates",
-              "reformer_pilates"
-            ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "K Sport Studio 7",
@@ -1341,7 +1346,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Yoga Garden",
@@ -1353,7 +1360,9 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Ze Art Studios",
@@ -1365,7 +1374,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "ASSY/ASANA",
@@ -1377,7 +1388,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Baba Yoga",
@@ -1389,7 +1402,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "becoached",
@@ -1401,7 +1416,9 @@
               "strength_conditioning",
               "stretching_mobility"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio Brume",
@@ -1413,7 +1430,9 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "fit-ballet.com",
@@ -1424,19 +1443,9 @@
               "mat_pilates",
               "stretching_mobility"
             ],
-            "has_modality_specific_pricing": false
-          },
-          {
-            "studio_name": "Ground to Grow",
-            "domain": "groundtogrow.fr",
-            "category_count": 4,
-            "categories": [
-              "mat_pilates",
-              "reformer_pilates",
-              "strength_conditioning",
-              "yoga"
-            ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Galeries Lafayette Sports Club",
@@ -1448,7 +1457,9 @@
               "strength_conditioning",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "la Clairiere",
@@ -1460,7 +1471,9 @@
               "strength_conditioning",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "La Suite Coaching",
@@ -1472,7 +1485,9 @@
               "strength_conditioning",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Pilatestudio Paris",
@@ -1484,7 +1499,9 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Pole Dance Paris",
@@ -1496,7 +1513,9 @@
               "dance",
               "mat_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "POSES",
@@ -1508,7 +1527,9 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "SENSA STUDIO",
@@ -1520,7 +1541,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Sense Club",
@@ -1532,7 +1555,37 @@
               "strength_conditioning",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
+          },
+          {
+            "studio_name": "Slowe Wellness House",
+            "domain": "slowe-studio.com",
+            "category_count": 4,
+            "categories": [
+              "barre",
+              "mat_pilates",
+              "strength_conditioning",
+              "yoga"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
+            "studio_name": "SORE",
+            "domain": "soregym.com",
+            "category_count": 4,
+            "categories": [
+              "mat_pilates",
+              "strength_conditioning",
+              "stretching_mobility",
+              "yoga"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio Corps +",
@@ -1544,7 +1597,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "The Well",
@@ -1556,7 +1611,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Vybes Reformer",
@@ -1568,7 +1625,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Vingtième Danse",
@@ -1579,18 +1638,9 @@
               "dance",
               "mat_pilates"
             ],
-            "has_modality_specific_pricing": false
-          },
-          {
-            "studio_name": "Ashtanga Yoga Paris",
-            "domain": "ashtangayogaparis.fr",
-            "category_count": 3,
-            "categories": [
-              "mat_pilates",
-              "reformer_pilates",
-              "yoga"
-            ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "La Canopée : Yoga & Bien-Être",
@@ -1601,7 +1651,22 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
+            "studio_name": "BarreShape",
+            "domain": "barreshape.com",
+            "category_count": 3,
+            "categories": [
+              "barre",
+              "dance",
+              "mat_pilates"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Burning Bar",
@@ -1612,7 +1677,9 @@
               "strength_conditioning",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Yada",
@@ -1623,7 +1690,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Yazen",
@@ -1634,7 +1703,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Zones Sport Studio",
@@ -1645,7 +1716,9 @@
               "running",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Apollo Sporting Club",
@@ -1656,7 +1729,9 @@
               "strength_conditioning",
               "stretching_mobility"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Aqua by",
@@ -1667,7 +1742,9 @@
               "indoor_cycling",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Naamaste",
@@ -1678,7 +1755,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Battesti coaching",
@@ -1689,7 +1768,9 @@
               "running",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Bee Lagree",
@@ -1700,7 +1781,9 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Yoga Bikram Paris - Grands Boulevards",
@@ -1711,7 +1794,9 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio Biopilates Paris",
@@ -1722,7 +1807,9 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Body Om",
@@ -1733,7 +1820,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Chang noi",
@@ -1744,7 +1833,9 @@
               "martial_arts",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "elevateparis.com",
@@ -1754,7 +1845,9 @@
               "reformer_pilates",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "episod.com",
@@ -1764,7 +1857,9 @@
               "reformer_pilates",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "featclub.fr",
@@ -1774,7 +1869,22 @@
               "mat_pilates",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
+            "studio_name": "Ground to Grow",
+            "domain": "groundtogrow.fr",
+            "category_count": 3,
+            "categories": [
+              "mat_pilates",
+              "strength_conditioning",
+              "yoga"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Homa Sport",
@@ -1785,7 +1895,9 @@
               "martial_arts",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "KURV Studio",
@@ -1796,7 +1908,9 @@
               "reformer_pilates",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "La Plume Air Club",
@@ -1807,7 +1921,9 @@
               "dance",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Les Ailes du Canal",
@@ -1818,7 +1934,9 @@
               "reformer_pilates",
               "stretching_mobility"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Le Studio Lagree",
@@ -1829,7 +1947,9 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Noble Art Club",
@@ -1840,7 +1960,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Sculpt",
@@ -1851,7 +1973,9 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Snake & Twist",
@@ -1862,7 +1986,9 @@
               "reformer_pilates",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "Studio Shelam",
@@ -1873,7 +1999,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studios Corps & Forme",
@@ -1884,7 +2012,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio Else",
@@ -1895,7 +2025,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio Marga",
@@ -1906,7 +2038,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Temple | Noble Art",
@@ -1917,7 +2051,9 @@
               "martial_arts",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Le GymGirlsClub (TFF Academy)",
@@ -1928,7 +2064,9 @@
               "martial_arts",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "La Maison The New Cool",
@@ -1939,7 +2077,9 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "The Space",
@@ -1950,7 +2090,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "YUJ YOGA & REFORMER Pilates Studio",
@@ -1961,7 +2103,21 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
+            "studio_name": "Ashtanga Yoga Paris",
+            "domain": "ashtangayogaparis.fr",
+            "category_count": 2,
+            "categories": [
+              "mat_pilates",
+              "yoga"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "AURA",
@@ -1971,7 +2127,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Beyoga Paris",
@@ -1981,7 +2139,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Body positive studio",
@@ -1991,7 +2151,9 @@
               "stretching_mobility",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Evocore",
@@ -2001,7 +2163,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "Now Reformer",
@@ -2011,7 +2175,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "YOZE - Rooftop Colonel Fabien",
@@ -2021,7 +2187,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "YAY : Le Yoga Pour Tous",
@@ -2031,7 +2199,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Yoga is My Land",
@@ -2041,7 +2211,9 @@
               "barre",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Yoga Village",
@@ -2051,7 +2223,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Yog&Matcha",
@@ -2061,7 +2235,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "YUJ YOGA Studio",
@@ -2071,7 +2247,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "A l'Eau Bike Paris",
@@ -2081,7 +2259,9 @@
               "aqua_cycling",
               "indoor_cycling"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Apyzen",
@@ -2091,7 +2271,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "AT AUM",
@@ -2101,7 +2283,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Atelier Mood",
@@ -2111,7 +2295,9 @@
               "aqua_cycling",
               "indoor_cycling"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Atmasphera",
@@ -2121,7 +2307,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Au Garage Club",
@@ -2131,7 +2319,9 @@
               "boxing_striking",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "AU LAGREE CLUB",
@@ -2141,7 +2331,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Banote Club",
@@ -2151,7 +2343,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Carbonne",
@@ -2161,7 +2355,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Core Society",
@@ -2171,7 +2367,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Cosmopilates",
@@ -2181,7 +2379,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "CrossFit Factory - Boulogne Billancourt",
@@ -2191,7 +2391,9 @@
               "running",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "CrossFit Factory 92",
@@ -2201,7 +2403,9 @@
               "strength_conditioning",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "culte-reformer.com",
@@ -2210,7 +2414,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "curial-boxing-team.fr",
@@ -2219,7 +2425,9 @@
               "boxing_striking",
               "martial_arts"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "flowstudioparis.com",
@@ -2228,7 +2436,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "fr.barrys.com",
@@ -2237,7 +2447,9 @@
               "running",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "freefightacademy.net",
@@ -2246,7 +2458,9 @@
               "boxing_striking",
               "martial_arts"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "genesisyoga.fr",
@@ -2255,7 +2469,9 @@
               "strength_conditioning",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "domain": "getchancetodance.com",
@@ -2264,7 +2480,9 @@
               "dance",
               "stretching_mobility"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Gotham 17",
@@ -2274,7 +2492,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Healthy Warriors",
@@ -2284,7 +2504,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "ATELIERS ILLUMINESSENS",
@@ -2294,7 +2516,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Karma Pilates",
@@ -2304,7 +2528,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "KORE",
@@ -2314,7 +2540,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "La Castagne",
@@ -2324,7 +2552,9 @@
               "boxing_striking",
               "martial_arts"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Lagreeness",
@@ -2334,7 +2564,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Le Cercle Boxing",
@@ -2344,7 +2576,9 @@
               "boxing_striking",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Le Loft Boxing",
@@ -2354,7 +2588,9 @@
               "boxing_striking",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Le Vestiaire Vincennes",
@@ -2364,7 +2600,9 @@
               "strength_conditioning",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Ma Parenthese",
@@ -2374,7 +2612,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Maison Amat",
@@ -2384,7 +2624,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Method Lagree Studio",
@@ -2394,7 +2636,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Move Lagree",
@@ -2404,7 +2648,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Mucho Pilates Studio",
@@ -2414,7 +2660,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "MU:V",
@@ -2424,7 +2672,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "My Ginger Paris",
@@ -2434,7 +2684,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "My Golden Hour",
@@ -2444,7 +2696,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Nava Pilates",
@@ -2454,7 +2708,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "ORA Concepts",
@@ -2464,7 +2720,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "OUTBOXE",
@@ -2474,7 +2732,9 @@
               "boxing_striking",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "OUTCORE",
@@ -2484,7 +2744,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "Paris Boxing Club",
@@ -2494,7 +2756,9 @@
               "boxing_striking",
               "martial_arts"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Paris Pilates Society",
@@ -2504,7 +2768,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "Pilates Social Club",
@@ -2514,7 +2780,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "PUR Reformer",
@@ -2524,7 +2792,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Rasa Yoga Rive Gauche",
@@ -2534,7 +2804,9 @@
               "prenatal_postnatal",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Reform.",
@@ -2544,7 +2816,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "Remega",
@@ -2554,7 +2828,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "RUYI STUDIO",
@@ -2564,7 +2840,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "Riise",
@@ -2574,7 +2852,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Rock 4 You",
@@ -2584,7 +2864,9 @@
               "dance",
               "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "SEQUOIIA",
@@ -2594,7 +2876,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Silo Lagree Studio",
@@ -2604,7 +2888,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "SOCIAL REFORMERS",
@@ -2614,7 +2900,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio MC",
@@ -2624,7 +2912,9 @@
               "barre",
               "dance"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio 15 Pilates",
@@ -2634,7 +2924,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio Air",
@@ -2644,7 +2936,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Belly Studio",
@@ -2654,7 +2948,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio by Holy",
@@ -2664,7 +2960,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Studio ON Paris",
@@ -2674,7 +2972,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "Sunshine Studio Pilates",
@@ -2684,7 +2984,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "TER HAPPY STUDIO",
@@ -2694,7 +2996,9 @@
               "mat_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "the Gravity Studio",
@@ -2704,7 +3008,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "The Method Paris - Studio Opera",
@@ -2714,7 +3020,9 @@
               "dance",
               "mat_pilates"
             ],
-            "has_modality_specific_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
           },
           {
             "studio_name": "The New Me",
@@ -2724,7 +3032,9 @@
               "mat_pilates",
               "reformer_pilates"
             ],
-            "has_modality_specific_pricing": true
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
           }
         ]
       },
@@ -2761,23 +3071,23 @@
       "modality_pricing_table": [
         {
           "modality": "reformer_pilates",
-          "n_studios": 72,
-          "n_observations": 72,
-          "avg_drop_in": 40.39,
-          "median_drop_in": 42,
+          "n_studios": 64,
+          "n_observations": 64,
+          "avg_drop_in": 41.9,
+          "median_drop_in": 44.5,
           "min_drop_in": 20,
           "max_drop_in": 60,
           "range": 40
         },
         {
           "modality": "mat_pilates",
-          "n_studios": 119,
-          "n_observations": 119,
-          "avg_drop_in": 33.24,
-          "median_drop_in": 30,
+          "n_studios": 89,
+          "n_observations": 89,
+          "avg_drop_in": 29.67,
+          "median_drop_in": 29,
           "min_drop_in": 18,
-          "max_drop_in": 60,
-          "range": 42
+          "max_drop_in": 55,
+          "range": 37
         },
         {
           "modality": "yoga",
@@ -2971,14 +3281,14 @@
         {
           "pack": "10 pack",
           "n_studios": 195,
-          "avg_price_per_class": 25.38,
-          "avg_discount_vs_dropin_pct": 16.2
+          "avg_price_per_class": 25.4,
+          "avg_discount_vs_dropin_pct": 16.14
         },
         {
           "pack": "20 pack",
           "n_studios": 159,
-          "avg_price_per_class": 24.69,
-          "avg_discount_vs_dropin_pct": 22.35
+          "avg_price_per_class": 24.72,
+          "avg_discount_vs_dropin_pct": 22.25
         },
         {
           "pack": "30 pack",
@@ -3036,14 +3346,14 @@
       "pack_expiration_by_pack_size": {
         "1": {
           "scope_label": "1-pack only",
-          "n_pack_rows": 187,
-          "n_pack_rows_with_validity": 142,
-          "n_studios": 150,
-          "n_studios_with_validity": 114,
+          "n_pack_rows": 183,
+          "n_pack_rows_with_validity": 139,
+          "n_studios": 149,
+          "n_studios_with_validity": 113,
           "histogram": [
             {
               "label": "1 month",
-              "count": 112
+              "count": 109
             },
             {
               "label": "2 months",
@@ -3300,7 +3610,7 @@
         },
         "10": {
           "scope_label": "10-pack only",
-          "n_pack_rows": 233,
+          "n_pack_rows": 234,
           "n_pack_rows_with_validity": 184,
           "n_studios": 195,
           "n_studios_with_validity": 156,
@@ -3498,7 +3808,7 @@
         },
         "20": {
           "scope_label": "20-pack only",
-          "n_pack_rows": 185,
+          "n_pack_rows": 186,
           "n_pack_rows_with_validity": 157,
           "n_studios": 159,
           "n_studios_with_validity": 135,
@@ -4290,14 +4600,14 @@
         },
         "all": {
           "scope_label": "All pack sizes",
-          "n_pack_rows": 1106,
-          "n_pack_rows_with_validity": 912,
-          "n_studios": 220,
-          "n_studios_with_validity": 179,
+          "n_pack_rows": 1104,
+          "n_pack_rows_with_validity": 909,
+          "n_studios": 219,
+          "n_studios_with_validity": 178,
           "histogram": [
             {
               "label": "1 month",
-              "count": 179
+              "count": 176
             },
             {
               "label": "2 months",
@@ -4324,7 +4634,7 @@
       },
       "pack_expiration_scope": {
         "scope_label": "10-pack only",
-        "n_pack_rows": 233,
+        "n_pack_rows": 234,
         "n_pack_rows_with_validity": 184,
         "n_studios": 195,
         "n_studios_with_validity": 156,
@@ -4447,11 +4757,11 @@
       }
     },
     "layer5_pricing_strategy": {
-      "avg_drop_in_to_10_pack_price_diff_pct": 15.03,
+      "avg_drop_in_to_10_pack_price_diff_pct": 14.96,
       "dropin_vs_10pack_discount_histogram": [
         {
           "label": "0-10%",
-          "count": 16
+          "count": 17
         },
         {
           "label": "10-20%",
@@ -4459,7 +4769,7 @@
         },
         {
           "label": "20-30%",
-          "count": 58
+          "count": 57
         },
         {
           "label": "30-40%",
@@ -4493,7 +4803,7 @@
         {
           "studio_name": "Athletx Rebel",
           "domain": "athletxrebel.com",
-          "x": 25.9,
+          "x": 30.9,
           "y": 20.61,
           "membership_tier_classes_per_month": 4
         },
@@ -5137,15 +5447,15 @@
       "modality_revenue_table": [
         {
           "modality": "reformer_pilates",
-          "avg_drop_in_price": 40.39,
+          "avg_drop_in_price": 41.9,
           "avg_capacity": 8,
-          "estimated_max_revenue_per_class": 323.12
+          "estimated_max_revenue_per_class": 335.2
         },
         {
           "modality": "mat_pilates",
-          "avg_drop_in_price": 33.24,
+          "avg_drop_in_price": 29.67,
           "avg_capacity": 20,
-          "estimated_max_revenue_per_class": 664.8
+          "estimated_max_revenue_per_class": 593.4
         },
         {
           "modality": "yoga",
@@ -5233,7 +5543,7 @@
           "modality": "reformer_pilates",
           "min": 20,
           "q1": 35,
-          "median": 42,
+          "median": 44.5,
           "q3": 45,
           "max": 60
         },
@@ -5241,9 +5551,9 @@
           "modality": "mat_pilates",
           "min": 18,
           "q1": 25,
-          "median": 30,
-          "q3": 40,
-          "max": 60
+          "median": 29,
+          "q3": 32,
+          "max": 55
         },
         {
           "modality": "yoga",
@@ -5422,8 +5732,8 @@
       "distribution": [
         {
           "studio_type": "pack_driven",
-          "count": 66,
-          "pct": 28.8
+          "count": 65,
+          "pct": 28.4
         },
         {
           "studio_type": "membership_driven",
@@ -5437,8 +5747,8 @@
         },
         {
           "studio_type": "no_offer_other",
-          "count": 1,
-          "pct": 0.4
+          "count": 2,
+          "pct": 0.9
         }
       ]
     }

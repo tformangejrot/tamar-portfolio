@@ -250,15 +250,6 @@
           "notes": ""
         },
         {
-          "name": "Pilates reformer - 1 seance",
-          "classes": 1,
-          "total_price": 45,
-          "price_per_class": 45,
-          "discount_vs_dropin_pct": 0,
-          "validity_days": null,
-          "notes": ""
-        },
-        {
           "name": "Pilates reformer - 3 seances",
           "classes": 3,
           "total_price": 90,
@@ -547,7 +538,6 @@
         "ashtanga-yoga",
         "fitness",
         "pilates",
-        "reformer-pilates",
         "restorative-yoga",
         "vinyasa-yoga",
         "yin-yoga",
@@ -889,7 +879,7 @@
       "booking_software": "bsport",
       "currency": "EUR",
       "pricing_publicly_available": true,
-      "notes": "Manual update from user screenshots: packs and memberships across 3/6/12 month commitments.",
+      "notes": "Manual update from user screenshots: packs and memberships across 3/6/12 month commitments. Added reformer-specific packs (1/10/20) from latest screenshot.",
       "drop_in": {
         "price": 34,
         "duration_minutes": null
@@ -957,6 +947,33 @@
           "discount_vs_dropin_pct": 43.44,
           "validity_days": 450,
           "notes": ""
+        },
+        {
+          "name": "Reformer - Pack 1 seance",
+          "classes": 1,
+          "total_price": 39,
+          "price_per_class": 39,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": "Manual add from reformer pricing screenshot."
+        },
+        {
+          "name": "Reformer - Pack 10 seances",
+          "classes": 10,
+          "total_price": 359,
+          "price_per_class": 35.9,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": "Manual add from reformer pricing screenshot."
+        },
+        {
+          "name": "Reformer - Pack 20 seances",
+          "classes": 20,
+          "total_price": 649,
+          "price_per_class": 32.45,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": "Manual add from reformer pricing screenshot."
         }
       ],
       "memberships": [
@@ -1209,7 +1226,9 @@
       },
       "uses_credit_system": false,
       "credit_system_notes": null,
-      "drop_in_by_modality": null,
+      "drop_in_by_modality": {
+        "reformer_single": 39
+      },
       "extraction_meta": {
         "source": "manual_override",
         "evidence_urls": [
@@ -1220,7 +1239,7 @@
       },
       "confidence_score": 100,
       "confidence_tier": "high",
-      "review_required": false,
+      "review_required": true,
       "confidence_reasons": [
         "public_pricing",
         "drop_in",
@@ -1229,7 +1248,8 @@
         "memberships",
         "pricing_url",
         "booking_software",
-        "expiration_structured"
+        "expiration_structured",
+        "reformer_pricing_added"
       ],
       "manual_verified": true,
       "manual_verification_date": "2026-02-21",
@@ -1277,26 +1297,7 @@
           "notes": "Valid for mat and reformer classes. Unused classes cannot be carried over past expiry."
         }
       ],
-      "class_packs": [
-        {
-          "name": "Oak 1 (Mat)",
-          "classes": 1,
-          "total_price": 40,
-          "price_per_class": 40,
-          "discount_vs_dropin_pct": 0,
-          "validity_days": 30,
-          "notes": "1 mat class."
-        },
-        {
-          "name": "Halo 1 (Mix)",
-          "classes": 1,
-          "total_price": 45,
-          "price_per_class": 45,
-          "discount_vs_dropin_pct": null,
-          "validity_days": 30,
-          "notes": "1 reformer or mat class."
-        }
-      ],
+      "class_packs": [],
       "memberships": [],
       "discounts": [],
       "expiration_policy": {
@@ -1307,8 +1308,8 @@
       "uses_credit_system": false,
       "credit_system_notes": null,
       "drop_in_by_modality": {
-        "standard_class": 40,
-        "reformer_pilates": 45
+        "mat_single": 40,
+        "reformer_single": 45
       },
       "extraction_meta": {
         "source": "manual_override",
@@ -1345,7 +1346,6 @@
         "cardio-dance",
         "dance",
         "fitness",
-        "high-intensity-pilates",
         "mat-pilates",
         "pilates"
       ],
@@ -6235,6 +6235,15 @@
       ],
       "class_packs": [
         {
+          "name": "Cours Reformer - 1 cours",
+          "classes": 1,
+          "total_price": 40,
+          "price_per_class": 40,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "Valable 1 mois."
+        },
+        {
           "name": "Cours Reformer - 5 cours",
           "classes": 5,
           "total_price": 190,
@@ -10179,15 +10188,6 @@
           "notes": "Listed as average rate."
         },
         {
-          "name": "Espace reformer - 1 cours",
-          "classes": 1,
-          "total_price": 30,
-          "price_per_class": 30,
-          "discount_vs_dropin_pct": 0,
-          "validity_days": null,
-          "notes": "Pilates Reformer & Tower."
-        },
-        {
           "name": "Espace reformer - 10 cours",
           "classes": 10,
           "total_price": 280,
@@ -13658,15 +13658,6 @@
           "notes": ""
         },
         {
-          "name": "1 session Reformer",
-          "classes": 1,
-          "total_price": 39,
-          "price_per_class": 39,
-          "discount_vs_dropin_pct": null,
-          "validity_days": 30,
-          "notes": "Reformer-only card."
-        },
-        {
           "name": "3 sessions Reformer",
           "classes": 3,
           "total_price": 114,
@@ -15428,7 +15419,6 @@
         "bootcamp",
         "fitness",
         "hatha-yoga",
-        "high-intensity-pilates",
         "mat-pilates",
         "pilates",
         "power-yoga",
@@ -15773,7 +15763,6 @@
         "barre",
         "bootcamp",
         "fitness",
-        "high-intensity-pilates",
         "mat-pilates",
         "pilates",
         "power-yoga",
@@ -15895,7 +15884,6 @@
         "fitness",
         "gym-time",
         "heavy-bag",
-        "high-intensity-pilates",
         "kickboxing",
         "martial-arts",
         "mat-pilates",
@@ -16954,7 +16942,6 @@
         "cycling",
         "dance",
         "fitness",
-        "high-intensity-pilates",
         "indoor-cycling",
         "pilates",
         "strength-training",
@@ -29037,7 +29024,6 @@
         "barre",
         "bootcamp",
         "fitness",
-        "high-intensity-pilates",
         "hiit",
         "mat-pilates",
         "pilates",
@@ -29491,7 +29477,6 @@
         "bootcamp",
         "circuit-training",
         "fitness",
-        "high-intensity-pilates",
         "hiit",
         "mat-pilates",
         "pilates",
@@ -33052,15 +33037,6 @@
           "discount_vs_dropin_pct": 26.92,
           "validity_days": 365,
           "notes": "Validite 12 mois."
-        },
-        {
-          "name": "Pilates Reformer - Cours a l unite",
-          "classes": 1,
-          "total_price": 45,
-          "price_per_class": 45,
-          "discount_vs_dropin_pct": 0,
-          "validity_days": 30,
-          "notes": "Validite 1 mois."
         },
         {
           "name": "Pilates Reformer - Carte de 5 cours",

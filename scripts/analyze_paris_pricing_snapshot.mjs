@@ -521,21 +521,40 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
     }
 
     const modalitySpecificPriceMap = new Map();
+    let hasReformerSpecificKey = false;
+    let hasNonReformerMappedKey = false;
+    let hasUnknownSpecificKey = false;
     const byModality = studio?.drop_in_by_modality && typeof studio.drop_in_by_modality === "object" ? studio.drop_in_by_modality : null;
     if (byModality) {
       for (const [rawKey, rawValue] of Object.entries(byModality)) {
         const value = Number(rawValue);
         if (!Number.isFinite(value) || value <= 0) continue;
         const canonical = mapDropInByModalityKeyToCanonical(rawKey);
-        if (!canonical) continue;
+        if (!canonical) {
+          hasUnknownSpecificKey = true;
+          continue;
+        }
+        if (canonical === "reformer_pilates") hasReformerSpecificKey = true;
+        else hasNonReformerMappedKey = true;
         if (!modalitySpecificPriceMap.has(canonical) || value > modalitySpecificPriceMap.get(canonical)) {
           modalitySpecificPriceMap.set(canonical, value);
         }
       }
     }
+    const reformerOnlySpecificPricing =
+      hasReformerSpecificKey &&
+      !hasNonReformerMappedKey &&
+      !hasUnknownSpecificKey;
+    const reformerAndMatNoSplitPricing =
+      canonicalSet.has("reformer_pilates") &&
+      canonicalSet.has("mat_pilates") &&
+      (!byModality || Object.keys(byModality).length === 0);
 
     const sharedDropIn = Number(studio?.drop_in?.price);
     for (const canonical of canonicalSet) {
+      // If a studio only exposes explicit reformer/lagree modality pricing,
+      // avoid attributing shared drop-in to mat pilates.
+      if (canonical === "mat_pilates" && (reformerOnlySpecificPricing || reformerAndMatNoSplitPricing)) continue;
       const modalitySpecific = modalitySpecificPriceMap.get(canonical);
       const price = Number.isFinite(modalitySpecific) && modalitySpecific > 0
         ? modalitySpecific
@@ -559,6 +578,8 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
       categories: Array.from(canonicalSet).sort(),
       excluded_tags: excludedTags,
       has_modality_specific_pricing: modalitySpecificPriceMap.size > 0,
+      reformer_only_specific_pricing: reformerOnlySpecificPricing,
+      reformer_and_mat_no_split_pricing: reformerAndMatNoSplitPricing,
     });
   }
 
@@ -610,6 +631,8 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
           category_count: r.category_count,
           categories: r.categories,
           has_modality_specific_pricing: r.has_modality_specific_pricing,
+          reformer_only_specific_pricing: r.reformer_only_specific_pricing,
+          reformer_and_mat_no_split_pricing: r.reformer_and_mat_no_split_pricing,
         })),
     };
   })();
