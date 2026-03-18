@@ -361,6 +361,70 @@
     {
       "domain": "romeoclub.fr",
       "reason": "exclude_requested"
+    },
+    {
+      "domain": "spark-club.fr",
+      "reason": "infrared_fitness_out_of_scope"
+    },
+    {
+      "domain": "smart-body-paris16.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "sophiemila.fr",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "sr-factory.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "stationforme.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "stellia.paris",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "studiocoachin.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "studioforme.fr",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "studionode.fr",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "studiorivegauche.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "swa-ayurveda.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "swedishfit.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "swedishfit.fr",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "swimstars.co",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "tangopilatesflow.com",
+      "reason": "exclude_requested"
+    },
+    {
+      "domain": "tecfit-boulognebillancourt.fr",
+      "reason": "exclude_requested"
     }
   ]
 }
