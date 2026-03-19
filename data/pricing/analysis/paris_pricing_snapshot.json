@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T20:42:20.108Z",
+  "generated_at": "2026-03-19T08:53:01.534Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
     "approved_records_total": 229,
@@ -173,33 +173,33 @@
   "modality_drop_in_comparison": [
     {
       "modality": "reformer_pilates",
-      "n": 64,
-      "observations": 64,
-      "avg_drop_in": 41.9,
-      "median_drop_in": 44.5,
+      "n": 63,
+      "observations": 63,
+      "avg_drop_in": 43.06,
+      "median_drop_in": 45,
       "min_drop_in": 20,
       "max_drop_in": 60,
-      "q1": 35,
+      "q1": 39,
       "q3": 45,
       "range": 40
     },
     {
       "modality": "mat_pilates",
-      "n": 89,
-      "observations": 89,
-      "avg_drop_in": 29.67,
-      "median_drop_in": 29,
+      "n": 75,
+      "observations": 75,
+      "avg_drop_in": 27.51,
+      "median_drop_in": 28,
       "min_drop_in": 18,
-      "max_drop_in": 55,
-      "q1": 25,
-      "q3": 32,
-      "range": 37
+      "max_drop_in": 40,
+      "q1": 24.5,
+      "q3": 30,
+      "range": 22
     },
     {
       "modality": "yoga",
-      "n": 102,
-      "observations": 102,
-      "avg_drop_in": 27.2,
+      "n": 101,
+      "observations": 101,
+      "avg_drop_in": 27.24,
       "median_drop_in": 26,
       "min_drop_in": 14,
       "max_drop_in": 55,
@@ -281,27 +281,27 @@
     },
     {
       "modality": "indoor_cycling",
-      "n": 12,
-      "observations": 12,
-      "avg_drop_in": 32.75,
-      "median_drop_in": 32,
+      "n": 11,
+      "observations": 11,
+      "avg_drop_in": 33.27,
+      "median_drop_in": 34,
       "min_drop_in": 27,
       "max_drop_in": 45,
-      "q1": 29,
+      "q1": 29.5,
       "q3": 35,
       "range": 18
     },
     {
       "modality": "aqua_cycling",
-      "n": 5,
-      "observations": 5,
-      "avg_drop_in": 35.8,
-      "median_drop_in": 35,
-      "min_drop_in": 27,
+      "n": 4,
+      "observations": 4,
+      "avg_drop_in": 38,
+      "median_drop_in": 36,
+      "min_drop_in": 35,
       "max_drop_in": 45,
       "q1": 35,
-      "q3": 37,
-      "range": 18
+      "q3": 39,
+      "range": 10
     },
     {
       "modality": "running",
@@ -897,13 +897,13 @@
           "meditation"
         ],
         "total_studios": 229,
-        "studios_with_2_plus_categories": 159,
+        "studios_with_2_plus_categories": 153,
         "distribution": {
           "0": 9,
-          "1": 61,
-          "2": 78,
-          "3": 37,
-          "4+": 44
+          "1": 67,
+          "2": 75,
+          "3": 36,
+          "4+": 42
         },
         "zero_category_studios": [
           {
@@ -1060,22 +1060,6 @@
               "yoga"
             ],
             "has_modality_specific_pricing": true,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
-            "studio_name": "Le Cube Fight Club",
-            "domain": "lecubefightclub.fr",
-            "category_count": 6,
-            "categories": [
-              "aqua_cycling",
-              "boxing_striking",
-              "indoor_cycling",
-              "mat_pilates",
-              "reformer_pilates",
-              "strength_conditioning"
-            ],
-            "has_modality_specific_pricing": false,
             "reformer_only_specific_pricing": false,
             "reformer_and_mat_no_split_pricing": false
           },
@@ -1292,21 +1276,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "Le Hyve",
-            "domain": "lehyve.fr",
-            "category_count": 5,
-            "categories": [
-              "aqua_cycling",
-              "indoor_cycling",
-              "mat_pilates",
-              "reformer_pilates",
-              "strength_conditioning"
-            ],
-            "has_modality_specific_pricing": true,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "Studio 3C",
             "domain": "studio3c.fr",
             "category_count": 5,
@@ -1476,16 +1445,16 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "La Suite Coaching",
-            "domain": "lasuitecoaching.com",
+            "studio_name": "Le Hyve",
+            "domain": "lehyve.fr",
             "category_count": 4,
             "categories": [
-              "mat_pilates",
+              "aqua_cycling",
+              "indoor_cycling",
               "reformer_pilates",
-              "strength_conditioning",
-              "yoga"
+              "strength_conditioning"
             ],
-            "has_modality_specific_pricing": false,
+            "has_modality_specific_pricing": true,
             "reformer_only_specific_pricing": false,
             "reformer_and_mat_no_split_pricing": false
           },
@@ -1786,19 +1755,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "Yoga Bikram Paris - Grands Boulevards",
-            "domain": "bikramyogaparis.com",
-            "category_count": 3,
-            "categories": [
-              "mat_pilates",
-              "reformer_pilates",
-              "yoga"
-            ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "Studio Biopilates Paris",
             "domain": "biopilates.fr",
             "category_count": 3,
@@ -1947,8 +1903,8 @@
               "reformer_pilates",
               "yoga"
             ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
             "reformer_and_mat_no_split_pricing": false
           },
           {
@@ -2348,24 +2304,12 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "Carbonne",
-            "domain": "carbonnestudio.com",
+            "studio_name": "Yoga Bikram Paris - Grands Boulevards",
+            "domain": "bikramyogaparis.com",
             "category_count": 2,
             "categories": [
               "mat_pilates",
-              "reformer_pilates"
-            ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
-            "studio_name": "Core Society",
-            "domain": "coresociety.fr",
-            "category_count": 2,
-            "categories": [
-              "mat_pilates",
-              "reformer_pilates"
+              "yoga"
             ],
             "has_modality_specific_pricing": false,
             "reformer_only_specific_pricing": false,
@@ -2533,18 +2477,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "KORE",
-            "domain": "kore-studio.com",
-            "category_count": 2,
-            "categories": [
-              "mat_pilates",
-              "reformer_pilates"
-            ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "La Castagne",
             "domain": "la-castagne.com",
             "category_count": 2,
@@ -2569,8 +2501,32 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
+            "studio_name": "La Suite Coaching",
+            "domain": "lasuitecoaching.com",
+            "category_count": 2,
+            "categories": [
+              "strength_conditioning",
+              "yoga"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
             "studio_name": "Le Cercle Boxing",
             "domain": "lecercle-boxing.com",
+            "category_count": 2,
+            "categories": [
+              "boxing_striking",
+              "strength_conditioning"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
+            "studio_name": "Le Cube Fight Club",
+            "domain": "lecubefightclub.fr",
             "category_count": 2,
             "categories": [
               "boxing_striking",
@@ -2653,18 +2609,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "Mucho Pilates Studio",
-            "domain": "muchopilates-studio.com",
-            "category_count": 2,
-            "categories": [
-              "mat_pilates",
-              "reformer_pilates"
-            ],
-            "has_modality_specific_pricing": true,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "MU:V",
             "domain": "muvparis.com",
             "category_count": 2,
@@ -2697,18 +2641,6 @@
               "reformer_pilates"
             ],
             "has_modality_specific_pricing": true,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
-            "studio_name": "Nava Pilates",
-            "domain": "navapilates.com",
-            "category_count": 2,
-            "categories": [
-              "mat_pilates",
-              "reformer_pilates"
-            ],
-            "has_modality_specific_pricing": false,
             "reformer_only_specific_pricing": false,
             "reformer_and_mat_no_split_pricing": false
           },
@@ -3001,18 +2933,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "the Gravity Studio",
-            "domain": "thegravitystudioparis.com",
-            "category_count": 2,
-            "categories": [
-              "mat_pilates",
-              "reformer_pilates"
-            ],
-            "has_modality_specific_pricing": true,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "The Method Paris - Studio Opera",
             "domain": "themethodfrance.fr",
             "category_count": 2,
@@ -3071,29 +2991,29 @@
       "modality_pricing_table": [
         {
           "modality": "reformer_pilates",
-          "n_studios": 64,
-          "n_observations": 64,
-          "avg_drop_in": 41.9,
-          "median_drop_in": 44.5,
+          "n_studios": 63,
+          "n_observations": 63,
+          "avg_drop_in": 43.06,
+          "median_drop_in": 45,
           "min_drop_in": 20,
           "max_drop_in": 60,
           "range": 40
         },
         {
           "modality": "mat_pilates",
-          "n_studios": 89,
-          "n_observations": 89,
-          "avg_drop_in": 29.67,
-          "median_drop_in": 29,
+          "n_studios": 75,
+          "n_observations": 75,
+          "avg_drop_in": 27.51,
+          "median_drop_in": 28,
           "min_drop_in": 18,
-          "max_drop_in": 55,
-          "range": 37
+          "max_drop_in": 40,
+          "range": 22
         },
         {
           "modality": "yoga",
-          "n_studios": 102,
-          "n_observations": 102,
-          "avg_drop_in": 27.2,
+          "n_studios": 101,
+          "n_observations": 101,
+          "avg_drop_in": 27.24,
           "median_drop_in": 26,
           "min_drop_in": 14,
           "max_drop_in": 55,
@@ -3161,23 +3081,23 @@
         },
         {
           "modality": "indoor_cycling",
-          "n_studios": 12,
-          "n_observations": 12,
-          "avg_drop_in": 32.75,
-          "median_drop_in": 32,
+          "n_studios": 11,
+          "n_observations": 11,
+          "avg_drop_in": 33.27,
+          "median_drop_in": 34,
           "min_drop_in": 27,
           "max_drop_in": 45,
           "range": 18
         },
         {
           "modality": "aqua_cycling",
-          "n_studios": 5,
-          "n_observations": 5,
-          "avg_drop_in": 35.8,
-          "median_drop_in": 35,
-          "min_drop_in": 27,
+          "n_studios": 4,
+          "n_observations": 4,
+          "avg_drop_in": 38,
+          "median_drop_in": 36,
+          "min_drop_in": 35,
           "max_drop_in": 45,
-          "range": 18
+          "range": 10
         },
         {
           "modality": "running",
@@ -3346,14 +3266,14 @@
       "pack_expiration_by_pack_size": {
         "1": {
           "scope_label": "1-pack only",
-          "n_pack_rows": 165,
-          "n_pack_rows_with_validity": 124,
-          "n_studios": 145,
-          "n_studios_with_validity": 110,
+          "n_pack_rows": 183,
+          "n_pack_rows_with_validity": 139,
+          "n_studios": 149,
+          "n_studios_with_validity": 113,
           "histogram": [
             {
               "label": "1 month",
-              "count": 97
+              "count": 109
             },
             {
               "label": "2 months",
@@ -3361,7 +3281,7 @@
             },
             {
               "label": "3 months",
-              "count": 14
+              "count": 16
             },
             {
               "label": "6 months",
@@ -3369,7 +3289,7 @@
             },
             {
               "label": "12 months",
-              "count": 4
+              "count": 5
             },
             {
               "label": "No expiration",
@@ -4600,14 +4520,14 @@
         },
         "all": {
           "scope_label": "All pack sizes",
-          "n_pack_rows": 1086,
-          "n_pack_rows_with_validity": 894,
+          "n_pack_rows": 1104,
+          "n_pack_rows_with_validity": 909,
           "n_studios": 219,
           "n_studios_with_validity": 178,
           "histogram": [
             {
               "label": "1 month",
-              "count": 164
+              "count": 176
             },
             {
               "label": "2 months",
@@ -4615,7 +4535,7 @@
             },
             {
               "label": "3 months",
-              "count": 135
+              "count": 137
             },
             {
               "label": "6 months",
@@ -4623,7 +4543,7 @@
             },
             {
               "label": "12 months",
-              "count": 279
+              "count": 280
             },
             {
               "label": "No expiration",
@@ -5447,21 +5367,21 @@
       "modality_revenue_table": [
         {
           "modality": "reformer_pilates",
-          "avg_drop_in_price": 41.9,
+          "avg_drop_in_price": 43.06,
           "avg_capacity": 8,
-          "estimated_max_revenue_per_class": 335.2
+          "estimated_max_revenue_per_class": 344.48
         },
         {
           "modality": "mat_pilates",
-          "avg_drop_in_price": 29.67,
+          "avg_drop_in_price": 27.51,
           "avg_capacity": 20,
-          "estimated_max_revenue_per_class": 593.4
+          "estimated_max_revenue_per_class": 550.2
         },
         {
           "modality": "yoga",
-          "avg_drop_in_price": 27.2,
+          "avg_drop_in_price": 27.24,
           "avg_capacity": 22,
-          "estimated_max_revenue_per_class": 598.4
+          "estimated_max_revenue_per_class": 599.28
         },
         {
           "modality": "prenatal_postnatal",
@@ -5501,15 +5421,15 @@
         },
         {
           "modality": "indoor_cycling",
-          "avg_drop_in_price": 32.75,
+          "avg_drop_in_price": 33.27,
           "avg_capacity": 45,
-          "estimated_max_revenue_per_class": 1473.75
+          "estimated_max_revenue_per_class": 1497.15
         },
         {
           "modality": "aqua_cycling",
-          "avg_drop_in_price": 35.8,
+          "avg_drop_in_price": 38,
           "avg_capacity": 14,
-          "estimated_max_revenue_per_class": 501.2
+          "estimated_max_revenue_per_class": 532
         },
         {
           "modality": "running",
@@ -5542,18 +5462,18 @@
         {
           "modality": "reformer_pilates",
           "min": 20,
-          "q1": 35,
-          "median": 44.5,
+          "q1": 39,
+          "median": 45,
           "q3": 45,
           "max": 60
         },
         {
           "modality": "mat_pilates",
           "min": 18,
-          "q1": 25,
-          "median": 29,
-          "q3": 32,
-          "max": 55
+          "q1": 24.5,
+          "median": 28,
+          "q3": 30,
+          "max": 40
         },
         {
           "modality": "yoga",
@@ -5614,17 +5534,17 @@
         {
           "modality": "indoor_cycling",
           "min": 27,
-          "q1": 29,
-          "median": 32,
+          "q1": 29.5,
+          "median": 34,
           "q3": 35,
           "max": 45
         },
         {
           "modality": "aqua_cycling",
-          "min": 27,
+          "min": 35,
           "q1": 35,
-          "median": 35,
-          "q3": 37,
+          "median": 36,
+          "q3": 39,
           "max": 45
         },
         {

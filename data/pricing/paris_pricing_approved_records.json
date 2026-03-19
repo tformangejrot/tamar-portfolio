@@ -949,6 +949,15 @@
           "notes": ""
         },
         {
+          "name": "Reformer - Pack 1 seance",
+          "classes": 1,
+          "total_price": 39,
+          "price_per_class": 39,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": "Manual add from reformer pricing screenshot."
+        },
+        {
           "name": "Reformer - Pack 10 seances",
           "classes": 10,
           "total_price": 359,
@@ -3836,6 +3845,15 @@
           "discount_vs_dropin_pct": 22.03,
           "validity_days": 365,
           "notes": ""
+        },
+        {
+          "name": "1 cours Pilates Reformer",
+          "classes": 1,
+          "total_price": 32,
+          "price_per_class": 32,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
         }
       ],
       "memberships": [
@@ -6216,6 +6234,15 @@
         }
       ],
       "class_packs": [
+        {
+          "name": "Cours Reformer - 1 cours",
+          "classes": 1,
+          "total_price": 40,
+          "price_per_class": 40,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "Valable 1 mois."
+        },
         {
           "name": "Cours Reformer - 5 cours",
           "classes": 5,
@@ -16570,6 +16597,15 @@
       ],
       "class_packs": [
         {
+          "name": "1 seance Reformer",
+          "classes": 1,
+          "total_price": 42,
+          "price_per_class": 42,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": ""
+        },
+        {
           "name": "Pack 5 Reformer",
           "classes": 5,
           "total_price": 200,
@@ -19074,6 +19110,15 @@
           "notes": "Valid 12 months."
         },
         {
+          "name": "1 seance Lagree",
+          "classes": 1,
+          "total_price": 45,
+          "price_per_class": 45,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 30,
+          "notes": "Tarifs visiteurs Lagree."
+        },
+        {
           "name": "10 seances Lagree",
           "classes": 10,
           "total_price": 307.5,
@@ -19099,6 +19144,15 @@
           "discount_vs_dropin_pct": null,
           "validity_days": 365,
           "notes": "Promo -25%, was 990 EUR."
+        },
+        {
+          "name": "1 seance Reformer",
+          "classes": 1,
+          "total_price": 45,
+          "price_per_class": 45,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 30,
+          "notes": "Tarifs visiteurs Reformer."
         },
         {
           "name": "10 seances Reformer",
@@ -19758,6 +19812,15 @@
           "notes": "Card caption shows 23 EUR/session; arithmetic from total implies 23.67 EUR/session."
         },
         {
+          "name": "1 seance Pilates Reformer",
+          "classes": 1,
+          "total_price": 42,
+          "price_per_class": 42,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 15,
+          "notes": ""
+        },
+        {
           "name": "5 seances Pilates Reformer",
           "classes": 5,
           "total_price": 190,
@@ -20291,6 +20354,15 @@
           "discount_vs_dropin_pct": 0,
           "validity_days": 30,
           "notes": "Unit price. Equivalent to 2 credits."
+        },
+        {
+          "name": "1 Reformer",
+          "classes": 1,
+          "total_price": 42,
+          "price_per_class": 42,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 30,
+          "notes": "Unit price. Equivalent to 3 credits."
         },
         {
           "name": "Starter - 6 credits",
@@ -21096,6 +21168,15 @@
           "notes": "Shown as 20 credits."
         },
         {
+          "name": "Session a l unite - Reformer",
+          "classes": 1,
+          "total_price": 35,
+          "price_per_class": 35,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 30,
+          "notes": "Shown as 2 credits."
+        },
+        {
           "name": "Pack 10 sessions - Reformer",
           "classes": 10,
           "total_price": 260,
@@ -21734,6 +21815,15 @@
           "discount_vs_dropin_pct": 33.33,
           "validity_days": 365,
           "notes": "Pack sharing indicated; 20 and 50 packs can be paid in 3 installments."
+        },
+        {
+          "name": "1 Reformer",
+          "classes": 1,
+          "total_price": 45,
+          "price_per_class": 45,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 30,
+          "notes": ""
         },
         {
           "name": "5 Reformers",
@@ -23911,6 +24001,15 @@
           "notes": "Reserved to under-25 with student proof."
         },
         {
+          "name": "Reformer l unite",
+          "classes": 1,
+          "total_price": 55,
+          "price_per_class": 55,
+          "discount_vs_dropin_pct": null,
+          "validity_days": 90,
+          "notes": "Sans engagement. Reformer pricing block."
+        },
+        {
           "name": "Pack de 5 seances reformer (offre de lancement)",
           "classes": 5,
           "total_price": 209,
@@ -25672,6 +25771,15 @@
           "notes": "480 credits. Sessions shareable."
         },
         {
+          "name": "Reformer - 1 session",
+          "classes": 1,
+          "total_price": 45,
+          "price_per_class": 45,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "18 credits."
+        },
+        {
           "name": "Reformer - Pack 5 sessions",
           "classes": 5,
           "total_price": 199,
@@ -26063,6 +26171,15 @@
       ],
       "class_packs": [
         {
+          "name": "Solo - 1 seance Reformer",
+          "classes": 1,
+          "total_price": 42,
+          "price_per_class": 42,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 30,
+          "notes": "Valid 1 month."
+        },
+        {
           "name": "Pack 5 seances Reformer",
           "classes": 5,
           "total_price": 200,
@@ -26236,6 +26353,15 @@
           "discount_vs_dropin_pct": 33.33,
           "validity_days": 120,
           "notes": "No reformer access. Valid 4 months."
+        },
+        {
+          "name": "Reformer - Cours unitaire",
+          "classes": 1,
+          "total_price": 35,
+          "price_per_class": 35,
+          "discount_vs_dropin_pct": null,
+          "validity_days": null,
+          "notes": "Standalone reformer single session."
         },
         {
           "name": "Reformer - Pack 5 sessions",
@@ -27974,6 +28100,15 @@
         }
       ],
       "class_packs": [
+        {
+          "name": "A la carte - 1 seance",
+          "classes": 1,
+          "total_price": 45,
+          "price_per_class": 45,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": null,
+          "notes": "Reformer single session."
+        },
         {
           "name": "Carnet 5 seances",
           "classes": 5,
@@ -30086,6 +30221,15 @@
           "classes": 1,
           "total_price": 30,
           "price_per_class": 30,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 90,
+          "notes": "Cours a l unite valable 3 mois."
+        },
+        {
+          "name": "Reformer/Tower - 1 cours",
+          "classes": 1,
+          "total_price": 40,
+          "price_per_class": 40,
           "discount_vs_dropin_pct": 0,
           "validity_days": 90,
           "notes": "Cours a l unite valable 3 mois."
@@ -33500,6 +33644,15 @@
           "notes": "Valid for 9 months."
         },
         {
+          "name": "Reformer - Cours a l unite",
+          "classes": 1,
+          "total_price": 40,
+          "price_per_class": 40,
+          "discount_vs_dropin_pct": 0,
+          "validity_days": 15,
+          "notes": "Valid for 15 days."
+        },
+        {
           "name": "Reformer - Pack 5 cours",
           "classes": 5,
           "total_price": 190,
@@ -33637,6 +33790,15 @@
           "total_price": 800,
           "price_per_class": 20,
           "discount_vs_dropin_pct": 23.08,
+          "validity_days": 304,
+          "notes": "Card displays validite 10 mois."
+        },
+        {
+          "name": "Le Reformer - Carnet 1 cours",
+          "classes": 1,
+          "total_price": 38,
+          "price_per_class": 38,
+          "discount_vs_dropin_pct": 0,
           "validity_days": 304,
           "notes": "Card displays validite 10 mois."
         },

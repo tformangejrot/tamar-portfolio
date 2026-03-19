@@ -141,6 +141,31 @@ const GEO_BUCKETS = [
   { key: "south_southeast", label: "South+Southeast", arrs: [13, 14] },
 ];
 
+const STUDIO_MODALITY_OVERRIDES = {
+  // These studios should be reformer-only in reporting.
+  force_reformer_only_domains: new Set([
+    "definestudio.fr",
+    "dnapilatesparis.com",
+    "carbonnestudio.com",
+    "coresociety.fr",
+    "deeply-studiodepilates.com",
+    "kore-studio.com",
+    "navapilates.com",
+    "thegravitystudioparis.com",
+    "lehyve.fr",
+    "muchopilates-studio.com",
+  ]),
+  // Remove all pilates attribution for this studio.
+  remove_all_pilates_domains: new Set(["lasuitecoaching.com"]),
+  // Remove these specific modality attributions for this studio.
+  remove_specific_modalities_by_domain: {
+    "lecubefightclub.fr": new Set(["mat_pilates", "reformer_pilates", "indoor_cycling", "aqua_cycling"]),
+    "bikramyogaparis.com": new Set(["reformer_pilates"]),
+  },
+  // This studio has intro-only offers but no valid drop-in price.
+  treat_shared_dropin_as_missing_domains: new Set(["biopilates.fr"]),
+};
+
 function round(value, digits = 2) {
   if (value == null || !Number.isFinite(value)) return null;
   const p = 10 ** digits;
@@ -368,7 +393,7 @@ function normalizeModalityKey(rawKey) {
 function mapDropInByModalityKeyToCanonical(rawKey) {
   const key = normalizeModalityKey(rawKey);
   if (!key) return null;
-  if (/(reformer|lagree|tower)/.test(key)) return "reformer_pilates";
+  if (/(reformer|lagree|tower|megaformer)/.test(key)) return "reformer_pilates";
   if (/(aqua).*(cycl|bike)|aquabike/.test(key)) return "aqua_cycling";
   if (/(cycl|bike|spin)/.test(key)) return "indoor_cycling";
   if (/(kickbox|shadowbox|cardio_box|heavy_bag|boxing)/.test(key)) return "boxing_striking";
@@ -384,6 +409,12 @@ function mapDropInByModalityKeyToCanonical(rawKey) {
   if (/pilates/.test(key)) return "mat_pilates";
   if (/(strength|hiit|bootcamp|crossfit|hyrox|weight|trx|functional|circuit)/.test(key)) return "strength_conditioning";
   return null;
+}
+
+function normalizedDomain(record) {
+  return String(record?.domain || "")
+    .toLowerCase()
+    .trim();
 }
 
 function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
@@ -508,6 +539,7 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
   const modalityAttributionRows = [];
   const multiModalityAuditRows = [];
   for (const studio of active) {
+    const studioDomain = normalizedDomain(studio);
     const categories = Array.isArray(studio.categories) ? [...new Set(studio.categories.filter(Boolean))] : [];
     const canonicalSet = new Set();
     const excludedTags = [];
@@ -518,6 +550,19 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
       } else if (EXCLUDED_MODALITY_TAGS.has(rawCategory)) {
         excludedTags.push(rawCategory);
       }
+    }
+
+    if (STUDIO_MODALITY_OVERRIDES.force_reformer_only_domains.has(studioDomain)) {
+      canonicalSet.delete("mat_pilates");
+      canonicalSet.add("reformer_pilates");
+    }
+    if (STUDIO_MODALITY_OVERRIDES.remove_all_pilates_domains.has(studioDomain)) {
+      canonicalSet.delete("mat_pilates");
+      canonicalSet.delete("reformer_pilates");
+    }
+    const removeForDomain = STUDIO_MODALITY_OVERRIDES.remove_specific_modalities_by_domain[studioDomain];
+    if (removeForDomain) {
+      for (const modality of removeForDomain) canonicalSet.delete(modality);
     }
 
     const modalitySpecificPriceMap = new Map();
@@ -541,6 +586,13 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
         }
       }
     }
+    if (
+      STUDIO_MODALITY_OVERRIDES.force_reformer_only_domains.has(studioDomain) &&
+      !modalitySpecificPriceMap.has("reformer_pilates") &&
+      modalitySpecificPriceMap.has("mat_pilates")
+    ) {
+      modalitySpecificPriceMap.set("reformer_pilates", modalitySpecificPriceMap.get("mat_pilates"));
+    }
     const reformerOnlySpecificPricing =
       hasReformerSpecificKey &&
       !hasNonReformerMappedKey &&
@@ -550,7 +602,9 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
       canonicalSet.has("mat_pilates") &&
       (!byModality || Object.keys(byModality).length === 0);
 
-    const sharedDropIn = Number(studio?.drop_in?.price);
+    const sharedDropIn = STUDIO_MODALITY_OVERRIDES.treat_shared_dropin_as_missing_domains.has(studioDomain)
+      ? null
+      : Number(studio?.drop_in?.price);
     for (const canonical of canonicalSet) {
       // If a studio only exposes explicit reformer/lagree modality pricing,
       // avoid attributing shared drop-in to mat pilates.

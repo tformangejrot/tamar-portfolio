@@ -1,6 +1,6 @@
 # Paris Pricing Snapshot
 
-Generated: 2026-03-18T20:42:20.108Z
+Generated: 2026-03-19T08:53:01.534Z
 
 ## Coverage
 
@@ -15,7 +15,7 @@ Generated: 2026-03-18T20:42:20.108Z
 ## Modality Audit
 
 - Attribution mode: **count_all_cleaned_categories**
-- Studios with 2+ cleaned categories: **159**
+- Studios with 2+ cleaned categories: **153**
 - Studios with 0 cleaned categories: **9**
 
 ## Layer 1 quick metrics
