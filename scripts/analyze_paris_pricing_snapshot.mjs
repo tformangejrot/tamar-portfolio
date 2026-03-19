@@ -1092,14 +1092,17 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
     for (const studio of active) {
       const memberships = studio.memberships || [];
       if (!memberships.length) continue;
-      const commitments = memberships
-        .map((m) => Number(m.commitment_months))
-        .filter((c) => Number.isFinite(c) && c > 0);
-      const maxCommitment = commitments.length ? Math.max(...commitments) : 0;
-      if (maxCommitment <= 1) commitmentCounts.no_commitment += 1;
-      else if (maxCommitment <= 3) commitmentCounts.commitment_3_months += 1;
-      else if (maxCommitment <= 6) commitmentCounts.commitment_6_months += 1;
-      else commitmentCounts.commitment_12_months += 1;
+      const studioBuckets = new Set();
+      for (const membership of memberships) {
+        const commitment = Number(membership.commitment_months);
+        if (!Number.isFinite(commitment) || commitment <= 1) studioBuckets.add("no_commitment");
+        else if (commitment <= 3) studioBuckets.add("commitment_3_months");
+        else if (commitment <= 6) studioBuckets.add("commitment_6_months");
+        else studioBuckets.add("commitment_12_months");
+      }
+      for (const key of studioBuckets) {
+        commitmentCounts[key] += 1;
+      }
     }
 
     return {
@@ -1125,7 +1128,7 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
       commitment_structure: {
         denominator_studios_with_memberships: denom,
         methodology:
-          "Mutually exclusive studio buckets by highest commitment found across memberships: <=1 month no commitment, <=3 months, <=6 months, >6 months.",
+          "Non-mutually-exclusive studio buckets based on all memberships offered by each studio: <=1 month/no commitment, <=3 months, <=6 months, >6 months. A studio can appear in multiple buckets.",
         pct_no_commitment: round((commitmentCounts.no_commitment / denom) * 100, 1),
         pct_3_month_commitment: round((commitmentCounts.commitment_3_months / denom) * 100, 1),
         pct_6_month_commitment: round((commitmentCounts.commitment_6_months / denom) * 100, 1),

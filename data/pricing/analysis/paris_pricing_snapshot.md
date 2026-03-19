@@ -1,6 +1,6 @@
 # Paris Pricing Snapshot
 
-Generated: 2026-03-19T11:21:02.197Z
+Generated: 2026-03-19T11:37:59.159Z
 
 ## Coverage
 
@@ -38,7 +38,7 @@ Generated: 2026-03-19T11:21:02.197Z
 
 | No commitment % | 3 months % | 6 months % | 12 months % |
 | --- | --- | --- | --- |
-| 22.4 | 8.1 | 11.8 | 57.8 |
+| 44.1 | 37.9 | 29.8 | 57.8 |
 
 ---
 

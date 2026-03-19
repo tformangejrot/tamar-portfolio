@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T11:21:02.197Z",
+  "generated_at": "2026-03-19T11:37:59.159Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
     "approved_records_total": 228,
@@ -5014,10 +5014,10 @@
       },
       "commitment_structure": {
         "denominator_studios_with_memberships": 161,
-        "methodology": "Mutually exclusive studio buckets by highest commitment found across memberships: <=1 month no commitment, <=3 months, <=6 months, >6 months.",
-        "pct_no_commitment": 22.4,
-        "pct_3_month_commitment": 8.1,
-        "pct_6_month_commitment": 11.8,
+        "methodology": "Non-mutually-exclusive studio buckets based on all memberships offered by each studio: <=1 month/no commitment, <=3 months, <=6 months, >6 months. A studio can appear in multiple buckets.",
+        "pct_no_commitment": 44.1,
+        "pct_3_month_commitment": 37.9,
+        "pct_6_month_commitment": 29.8,
         "pct_12_month_commitment": 57.8
       }
     },

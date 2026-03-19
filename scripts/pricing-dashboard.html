@@ -212,8 +212,9 @@
         </article>
         <article class="card">
           <h3>Commitment Structure</h3>
-          <p class="explain">How to read: percentages are now mutually exclusive studio buckets and sum to 100% across studios with memberships.</p>
-          <div id="l4Commitment"></div>
+          <p class="explain">How to read: studios can appear in multiple buckets if they offer multiple commitment lengths, so percentages may not sum to 100%.</p>
+          <div id="l4CommitmentMeta"></div>
+          <div class="chart-box"><canvas id="l4CommitmentChart"></canvas></div>
         </article>
         <article class="card wide">
           <h3>Membership Types</h3>
@@ -608,23 +609,75 @@
       document.getElementById("l4Stats").innerHTML = cards.map(([k, v]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
 
       const pie = layer.membership_adoption_pie || [];
+      const pieTotal = pie.reduce((acc, p) => acc + (Number(p.count) || 0), 0);
+      const pieLabels = pie.map((p) => {
+        const label = p.type.replace(/_/g, " ");
+        const count = Number(p.count) || 0;
+        const share = pieTotal > 0 ? (count / pieTotal) * 100 : 0;
+        return `${label} (${share.toFixed(1)}%)`;
+      });
       charts.l4Adoption = new Chart(document.getElementById("l4AdoptionChart"), {
         type: "pie",
         data: {
-          labels: pie.map((p) => p.type.replace(/_/g, " ")),
+          labels: pieLabels,
           datasets: [{ data: pie.map((p) => p.count), backgroundColor: ["#64748b", "#22c55e", "#f59e0b", "#8b5cf6"] }]
         },
-        options: { responsive: true, maintainAspectRatio: false }
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: (ctx) => {
+                  const count = Number(ctx.parsed) || 0;
+                  const share = pieTotal > 0 ? (count / pieTotal) * 100 : 0;
+                  return `${ctx.label}: ${count} studios (${share.toFixed(1)}%)`;
+                }
+              }
+            }
+          }
+        }
       });
 
       const c = layer.commitment_structure || {};
-      document.getElementById("l4Commitment").innerHTML = `
-        <span class="chip">No commitment: ${pct(c.pct_no_commitment)}</span>
-        <span class="chip">3-month: ${pct(c.pct_3_month_commitment)}</span>
-        <span class="chip">6-month: ${pct(c.pct_6_month_commitment)}</span>
-        <span class="chip">12-month: ${pct(c.pct_12_month_commitment)}</span>
+      document.getElementById("l4CommitmentMeta").innerHTML = `
         <span class="chip">Denominator studios: ${c.denominator_studios_with_memberships ?? "-"}</span>
+        <span class="chip">${c.methodology || "Mutually exclusive commitment buckets by maximum observed commitment."}</span>
       `;
+      const commitmentLabels = ["No commitment", "3-month", "6-month", "12-month"];
+      const commitmentValues = [
+        Number(c.pct_no_commitment) || 0,
+        Number(c.pct_3_month_commitment) || 0,
+        Number(c.pct_6_month_commitment) || 0,
+        Number(c.pct_12_month_commitment) || 0
+      ];
+      charts.l4Commitment = new Chart(document.getElementById("l4CommitmentChart"), {
+        type: "bar",
+        data: {
+          labels: commitmentLabels,
+          datasets: [{ data: commitmentValues, backgroundColor: ["#38bdf8", "#8b5cf6", "#22c55e", "#f59e0b"], borderRadius: 8 }]
+        },
+        options: {
+          indexAxis: "y",
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => `${Number(ctx.parsed.x).toFixed(1)}%`
+              }
+            }
+          },
+          scales: {
+            x: {
+              beginAtZero: true,
+              max: 100,
+              ticks: { callback: (value) => `${value}%` }
+            }
+          }
+        }
+      });
 
       const methodologyUnlimited = layer.membership_type_methodology && layer.membership_type_methodology.unlimited_effective_price_per_class
         ? layer.membership_type_methodology.unlimited_effective_price_per_class
