@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T09:15:38.131Z",
+  "generated_at": "2026-03-19T10:20:16.813Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
     "approved_records_total": 228,
@@ -302,18 +302,6 @@
       "q1": 35,
       "q3": 36,
       "range": 2
-    },
-    {
-      "modality": "running",
-      "n": 7,
-      "observations": 7,
-      "avg_drop_in": 31.57,
-      "median_drop_in": 30,
-      "min_drop_in": 25,
-      "max_drop_in": 38,
-      "q1": 29.5,
-      "q3": 34.5,
-      "range": 13
     },
     {
       "modality": "stretching_mobility",
@@ -897,13 +885,13 @@
           "meditation"
         ],
         "total_studios": 228,
-        "studios_with_2_plus_categories": 151,
+        "studios_with_2_plus_categories": 149,
         "distribution": {
           "0": 9,
-          "1": 68,
+          "1": 70,
           "2": 74,
           "3": 36,
-          "4+": 41
+          "4+": 39
         },
         "zero_category_studios": [
           {
@@ -1080,22 +1068,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "R2 Training",
-            "domain": "r2training.fr",
-            "category_count": 6,
-            "categories": [
-              "boxing_striking",
-              "mat_pilates",
-              "running",
-              "strength_conditioning",
-              "stretching_mobility",
-              "yoga"
-            ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "Reformation",
             "domain": "reformation-pilates.com",
             "category_count": 6,
@@ -1261,6 +1233,21 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
+            "studio_name": "R2 Training",
+            "domain": "r2training.fr",
+            "category_count": 5,
+            "categories": [
+              "boxing_striking",
+              "mat_pilates",
+              "strength_conditioning",
+              "stretching_mobility",
+              "yoga"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
             "studio_name": "Studio 3C",
             "domain": "studio3c.fr",
             "category_count": 5,
@@ -1361,20 +1348,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "becoached",
-            "domain": "becoached.fr",
-            "category_count": 4,
-            "categories": [
-              "indoor_cycling",
-              "running",
-              "strength_conditioning",
-              "stretching_mobility"
-            ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "Studio Brume",
             "domain": "brumestudios.fr",
             "category_count": 4,
@@ -1398,20 +1371,6 @@
               "stretching_mobility"
             ],
             "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
-            "studio_name": "Galeries Lafayette Sports Club",
-            "domain": "haussmann.galerieslafayette.com",
-            "category_count": 4,
-            "categories": [
-              "mat_pilates",
-              "running",
-              "strength_conditioning",
-              "yoga"
-            ],
-            "has_modality_specific_pricing": true,
             "reformer_only_specific_pricing": false,
             "reformer_and_mat_no_split_pricing": false
           },
@@ -1662,19 +1621,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "Zones Sport Studio",
-            "domain": "zones.paris",
-            "category_count": 3,
-            "categories": [
-              "mat_pilates",
-              "running",
-              "strength_conditioning"
-            ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "Apollo Sporting Club",
             "domain": "apollosportingclub.com",
             "category_count": 3,
@@ -1701,13 +1647,13 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "Battesti coaching",
-            "domain": "battesticoaching.com",
+            "studio_name": "becoached",
+            "domain": "becoached.fr",
             "category_count": 3,
             "categories": [
-              "boxing_striking",
-              "running",
-              "strength_conditioning"
+              "indoor_cycling",
+              "strength_conditioning",
+              "stretching_mobility"
             ],
             "has_modality_specific_pricing": false,
             "reformer_only_specific_pricing": false,
@@ -1811,6 +1757,19 @@
               "yoga"
             ],
             "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
+            "studio_name": "Galeries Lafayette Sports Club",
+            "domain": "haussmann.galerieslafayette.com",
+            "category_count": 3,
+            "categories": [
+              "mat_pilates",
+              "strength_conditioning",
+              "yoga"
+            ],
+            "has_modality_specific_pricing": true,
             "reformer_only_specific_pricing": false,
             "reformer_and_mat_no_split_pricing": false
           },
@@ -2193,6 +2152,18 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
+            "studio_name": "Zones Sport Studio",
+            "domain": "zones.paris",
+            "category_count": 2,
+            "categories": [
+              "mat_pilates",
+              "strength_conditioning"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
             "studio_name": "Apyzen",
             "domain": "apycem.com",
             "category_count": 2,
@@ -2277,6 +2248,18 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
+            "studio_name": "Battesti coaching",
+            "domain": "battesticoaching.com",
+            "category_count": 2,
+            "categories": [
+              "boxing_striking",
+              "strength_conditioning"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
             "studio_name": "Yoga Bikram Paris - Grands Boulevards",
             "domain": "bikramyogaparis.com",
             "category_count": 2,
@@ -2298,18 +2281,6 @@
             ],
             "has_modality_specific_pricing": true,
             "reformer_only_specific_pricing": true,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
-            "studio_name": "CrossFit Factory - Boulogne Billancourt",
-            "domain": "crossfitfactory-boulogne.fr",
-            "category_count": 2,
-            "categories": [
-              "running",
-              "strength_conditioning"
-            ],
-            "has_modality_specific_pricing": true,
-            "reformer_only_specific_pricing": false,
             "reformer_and_mat_no_split_pricing": false
           },
           {
@@ -2355,17 +2326,6 @@
             ],
             "has_modality_specific_pricing": true,
             "reformer_only_specific_pricing": true,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
-            "domain": "fr.barrys.com",
-            "category_count": 2,
-            "categories": [
-              "running",
-              "strength_conditioning"
-            ],
-            "has_modality_specific_pricing": true,
-            "reformer_only_specific_pricing": false,
             "reformer_and_mat_no_split_pricing": false
           },
           {
@@ -3071,16 +3031,6 @@
           "min_drop_in": 35,
           "max_drop_in": 37,
           "range": 2
-        },
-        {
-          "modality": "running",
-          "n_studios": 7,
-          "n_observations": 7,
-          "avg_drop_in": 31.57,
-          "median_drop_in": 30,
-          "min_drop_in": 25,
-          "max_drop_in": 38,
-          "range": 13
         },
         {
           "modality": "stretching_mobility",
@@ -5331,7 +5281,6 @@
           "martial_arts": 20,
           "indoor_cycling": 45,
           "aqua_cycling": 14,
-          "running": 35,
           "stretching_mobility": 15,
           "aerial_pole": 10,
           "trampoline": 18
@@ -5403,12 +5352,6 @@
           "avg_drop_in_price": 35.67,
           "avg_capacity": 14,
           "estimated_max_revenue_per_class": 499.38
-        },
-        {
-          "modality": "running",
-          "avg_drop_in_price": 31.57,
-          "avg_capacity": 35,
-          "estimated_max_revenue_per_class": 1104.95
         },
         {
           "modality": "stretching_mobility",
@@ -5519,14 +5462,6 @@
           "median": 35,
           "q3": 36,
           "max": 37
-        },
-        {
-          "modality": "running",
-          "min": 25,
-          "q1": 29.5,
-          "median": 30,
-          "q3": 34.5,
-          "max": 38
         },
         {
           "modality": "stretching_mobility",

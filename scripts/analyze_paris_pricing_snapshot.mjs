@@ -25,7 +25,6 @@ const CANONICAL_MODALITIES = [
   "martial_arts",
   "indoor_cycling",
   "aqua_cycling",
-  "running",
   "stretching_mobility",
   "aerial_pole",
   "trampoline",
@@ -94,7 +93,6 @@ const RAW_TO_CANONICAL_MODALITY = {
   cycling: "indoor_cycling",
   "indoor-cycling": "indoor_cycling",
   "aqua-cycling": "aqua_cycling",
-  running: "running",
   stretching: "stretching_mobility",
   mobility: "stretching_mobility",
   "qi-gong": "stretching_mobility",
@@ -128,7 +126,6 @@ const MODALITY_CAPACITY_PROXY = {
   martial_arts: 20,
   indoor_cycling: 45,
   aqua_cycling: 14,
-  running: 35,
   stretching_mobility: 15,
   aerial_pole: 10,
   trampoline: 18,
@@ -405,7 +402,6 @@ function mapDropInByModalityKeyToCanonical(rawKey) {
   if (/trampoline/.test(key)) return "trampoline";
   if (/(aerial|pole|antigravity)/.test(key)) return "aerial_pole";
   if (/(stretch|mobil|qigong|qi_gong)/.test(key)) return "stretching_mobility";
-  if (/running/.test(key)) return "running";
   if (/barre/.test(key)) return "barre";
   if (/(dance|zumba|salsa|ballet|hip_hop|street_jazz|jazz)/.test(key)) return "dance";
   if (/(prenatal|postnatal)/.test(key)) return "prenatal_postnatal";
