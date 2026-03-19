@@ -428,6 +428,23 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
 
   const dropInPrices = studiosWithDropIn.map((r) => Number(r.drop_in.price)).filter((v) => Number.isFinite(v) && v > 0);
   const dropInStats = stats(dropInPrices);
+  const layer1DistributionPrices = [];
+  for (const studio of active) {
+    const studioPrices = new Set();
+    const sharedDropIn = Number(studio?.drop_in?.price);
+    if (Number.isFinite(sharedDropIn) && sharedDropIn > 0) {
+      studioPrices.add(sharedDropIn);
+    }
+    if (studio?.drop_in_by_modality && typeof studio.drop_in_by_modality === "object") {
+      for (const rawPrice of Object.values(studio.drop_in_by_modality)) {
+        const price = Number(rawPrice);
+        if (Number.isFinite(price) && price > 0) {
+          studioPrices.add(price);
+        }
+      }
+    }
+    layer1DistributionPrices.push(...studioPrices);
+  }
 
   const allPacks = [];
   const allMemberships = [];
@@ -526,15 +543,29 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
   const unlimitedRows = allMemberships.filter((m) => m.is_unlimited);
   const unlimitedStats = stats(unlimitedRows.map((m) => m.monthly_price));
 
-  const layer1DropInBins = buildRangeHistogram(dropInPrices, [
-    { label: "<25EUR", min: Number.NEGATIVE_INFINITY, max: 25 },
-    { label: "25-28EUR", min: 25, max: 28 },
-    { label: "28-30EUR", min: 28, max: 30 },
-    { label: "30-32EUR", min: 30, max: 32 },
-    { label: "32-35EUR", min: 32, max: 35 },
-    { label: "35-40EUR", min: 35, max: 40 },
-    { label: "40EUR+", min: 40, max: null },
+  const layer1DropInBins = buildRangeHistogram(layer1DistributionPrices, [
+    { label: "<€18", min: Number.NEGATIVE_INFINITY, max: 18 },
+    { label: "€18-20.99", min: 18, max: 21 },
+    { label: "€21-24.99", min: 21, max: 25 },
+    { label: "€25-27.99", min: 25, max: 28 },
+    { label: "€28-31.99", min: 28, max: 32 },
+    { label: "€32-35.99", min: 32, max: 36 },
+    { label: "€36-39.99", min: 36, max: 40 },
+    { label: "€40-44.99", min: 40, max: 45 },
+    { label: "€45-49.99", min: 45, max: 50 },
+    { label: "€50+", min: 50, max: null },
   ]);
+  const layer1DropInSpectrum = (() => {
+    const counts = new Map();
+    for (const raw of layer1DistributionPrices) {
+      const price = round(Number(raw), 2);
+      if (!Number.isFinite(price) || price <= 0) continue;
+      counts.set(price, (counts.get(price) || 0) + 1);
+    }
+    return Array.from(counts.entries())
+      .sort((a, b) => a[0] - b[0])
+      .map(([price, count]) => ({ price, count }));
+  })();
 
   const modalityAttributionRows = [];
   const multiModalityAuditRows = [];
@@ -859,11 +890,64 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
     }
     for (const i of allIntros) byTypeMap.set(i.type, (byTypeMap.get(i.type) || 0) + 1);
     byTypeMap.set("no_intro_offer", active.length - studiosWithIntro.length);
+    const priceTierDefs = [
+      { tier: "low", label: "Low", min: Number.NEGATIVE_INFINITY, max: 28 },
+      { tier: "mid", label: "Mid", min: 28, max: 40 },
+      { tier: "premium", label: "Premium", min: 40, max: Number.POSITIVE_INFINITY },
+    ];
+    const introUsageByPriceTier = priceTierDefs.map((tierDef) => {
+      const rows = active.filter((studio) => {
+        const drop = Number(studio?.drop_in?.price);
+        return Number.isFinite(drop) && drop > 0 && drop >= tierDef.min && drop < tierDef.max;
+      });
+      let withIntro = 0;
+      let noIntro = 0;
+      let singleOnly = 0;
+      let pack3Only = 0;
+      let bothSingleAndPack3 = 0;
+      let otherIntro = 0;
+      for (const studio of rows) {
+        const intros = studio?.intro_offers || [];
+        if (!intros.length) {
+          noIntro += 1;
+          continue;
+        }
+        withIntro += 1;
+        const introTypes = intros.map((offer) => classifyIntroType(offer));
+        const hasSingle = introTypes.includes("single_discounted_class");
+        const hasPack3 = introTypes.includes("pack_3");
+        if (hasSingle && hasPack3) bothSingleAndPack3 += 1;
+        else if (hasSingle) singleOnly += 1;
+        else if (hasPack3) pack3Only += 1;
+        else otherIntro += 1;
+      }
+      const withIntroDenom = withIntro || 1;
+      return {
+        tier: tierDef.tier,
+        label: tierDef.label,
+        studios_in_tier: rows.length,
+        studios_with_intro: withIntro,
+        studios_without_intro: noIntro,
+        usage_counts: {
+          single_only: singleOnly,
+          pack3_only: pack3Only,
+          both_single_and_pack3: bothSingleAndPack3,
+          other_intro: otherIntro,
+        },
+        usage_pct_of_intro_studios: {
+          single_only: round((singleOnly / withIntroDenom) * 100, 1),
+          pack3_only: round((pack3Only / withIntroDenom) * 100, 1),
+          both_single_and_pack3: round((bothSingleAndPack3 / withIntroDenom) * 100, 1),
+          other_intro: round((otherIntro / withIntroDenom) * 100, 1),
+        },
+      };
+    });
     return {
       pct_studios_with_intro: round((studiosWithIntro.length / totalStudios) * 100, 1),
       average_intro_price: round(introPrices.reduce((a, b) => a + b, 0) / (introPrices.length || 1)),
       average_intro_price_per_class: round(introPpcs.reduce((a, b) => a + b, 0) / (introPpcs.length || 1)),
       intro_types: Array.from(byTypeMap.entries()).map(([type, count]) => ({ type, count })),
+      intro_usage_by_price_tier: introUsageByPriceTier,
       intro_discount_histogram: buildRangeHistogram(discounts, [
         { label: "0-10%", min: 0, max: 10 },
         { label: "10-20%", min: 10, max: 20 },
@@ -932,18 +1016,19 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
         ],
       };
     };
+    const packRowsForExpiration = allPacks.filter((p) => Number.isFinite(p.classes) && p.classes > 1);
     const uniquePackSizes = Array.from(
       new Set(
-        allPacks
+        packRowsForExpiration
           .map((p) => p.classes)
-          .filter((v) => Number.isFinite(v) && v > 0)
+          .filter((v) => Number.isFinite(v) && v > 1)
       )
     ).sort((a, b) => a - b);
     const expirationByPackSize = {
-      all: buildExpirationSlice(allPacks, "All pack sizes"),
+      all: buildExpirationSlice(packRowsForExpiration, "All pack sizes"),
     };
     for (const size of uniquePackSizes) {
-      const rows = allPacks.filter((p) => p.classes === size);
+      const rows = packRowsForExpiration.filter((p) => p.classes === size);
       expirationByPackSize[String(size)] = buildExpirationSlice(rows, `${size}-pack only`);
     }
     return {
@@ -980,13 +1065,20 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
       const rows = allMemberships.filter(matcher);
       const monthly = rows.map((r) => r.monthly_price).filter(Number.isFinite);
       const ppc = rows.map((r) => r.effective_price_per_class).filter(Number.isFinite);
+      const discountVsDropIn = rows.map((r) => r.discount_vs_dropin_pct).filter(Number.isFinite);
       const studios = new Set(rows.map((r) => r.domain).filter(Boolean));
+      const isUnlimitedRow = label === "Unlimited";
       return {
         membership_type: label,
         n_memberships: rows.length,
         n_studios: studios.size,
         avg_monthly_price: round(monthly.reduce((a, b) => a + b, 0) / (monthly.length || 1)),
-        avg_effective_price_per_class: round(ppc.reduce((a, b) => a + b, 0) / (ppc.length || 1)),
+        avg_effective_price_per_class: isUnlimitedRow
+          ? null
+          : round(ppc.reduce((a, b) => a + b, 0) / (ppc.length || 1)),
+        avg_discount_vs_dropin_pct: isUnlimitedRow
+          ? null
+          : round(discountVsDropIn.reduce((a, b) => a + b, 0) / (discountVsDropIn.length || 1)),
       };
     });
 
@@ -1027,6 +1119,8 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
       membership_type_methodology: {
         unlimited_effective_price_per_class:
           "Uses explicit effective_price_per_class where available. No synthetic classes-per-month is assumed for unlimited plans.",
+        avg_discount_vs_dropin_pct:
+          "Average discount is computed from membership discount_vs_dropin_pct using explicit values where available, otherwise inferred from effective price/class against studio drop-in.",
       },
       commitment_structure: {
         denominator_studios_with_memberships: denom,
@@ -1220,6 +1314,7 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
     benchmarks: {
       drop_in: dropInStats,
       drop_in_distribution: layer1DropInBins,
+      drop_in_spectrum: layer1DropInSpectrum,
       class_pack_price_per_class: packBenchmarks,
       memberships_monthly_price_by_classes_per_month: membershipBenchmarks,
       unlimited_memberships_monthly_price: unlimitedStats,
@@ -1247,10 +1342,12 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
           stddev: dropInStats.stddev ?? null,
         },
         methodology: {
-          dropin_distribution_source: "Drop-in distribution is built only from drop_in.price values (not intro offers, packs, or memberships).",
+          dropin_distribution_source:
+            "Drop-in distribution uses all available drop-in rates (shared drop_in.price plus drop_in_by_modality), deduped by studio+price. Bins are non-overlapping: lower bound inclusive, upper bound exclusive (e.g., €30 is in €28-31.99, not €32-35.99).",
         },
         modality_audit: modalityAudit,
         dropin_distribution: layer1DropInBins,
+        dropin_spectrum: layer1DropInSpectrum,
         modality_pricing_table: modalityDropInComparison.map((m) => ({
           modality: m.modality,
           n_studios: m.n,

@@ -115,8 +115,8 @@
       <section class="grid">
         <article class="card">
           <h3>Drop-in Price Distribution</h3>
-          <p class="sub">&lt;25EUR · 25-28 · 28-30 · 30-32 · 32-35 · 35-40 · 40+</p>
-          <p class="explain">How to read: each bar is the number of studios in a price bracket. Taller bars show where market pricing clusters.</p>
+          <p class="sub">&lt;€18 · €18-20.99 · €21-24.99 · €25-27.99 · €28-31.99 · €32-35.99 · €36-39.99 · €40-44.99 · €45-49.99 · €50+</p>
+          <p class="explain">How to read: each bar is the number of observations in a non-overlapping price bracket.</p>
           <div id="l1DropinMeta"></div>
           <div class="chart-box"><canvas id="l1DropinChart"></canvas></div>
         </article>
@@ -157,6 +157,13 @@
           <p class="sub">0-10% · 10-20% · 20-30% · 30-40% · 40%+</p>
           <p class="explain">How to read: bars show how aggressive first-purchase discounts are versus standard drop-in price. Right-side concentration means stronger acquisition promos.</p>
           <div class="chart-box"><canvas id="l2IntroDiscountChart"></canvas></div>
+        </article>
+        <article class="card wide">
+          <h3>Intro Model Mix by Price Tier</h3>
+          <p class="sub">Low (&lt;€28) · Mid (€28-39.99) · Premium (€40+)</p>
+          <p class="explain">How to read: stacked bars show intro model mix among studios that have intro offers in each tier.</p>
+          <div id="l2TierMeta"></div>
+          <div class="chart-box"><canvas id="l2IntroTierChart"></canvas></div>
         </article>
       </section>
     </section>
@@ -213,7 +220,7 @@
           <div id="l4MembershipMeta"></div>
           <table>
             <thead>
-              <tr><th>Type</th><th>Memberships</th><th>Studios</th><th>Avg Monthly Price</th><th>Avg Effective Price/Class</th></tr>
+              <tr><th>Type</th><th>Memberships</th><th>Studios</th><th>Avg Monthly Price</th><th>Avg Effective Price/Class</th><th>Avg Discount vs Drop-in</th></tr>
             </thead>
             <tbody id="l4MembershipTypeRows"></tbody>
           </table>
@@ -333,8 +340,10 @@
           dropin_distribution: [],
           modality_pricing_table: [],
           modality_audit: { attribution_mode: "", studios_with_2_plus_categories: 0, distribution: { "0": 0, "1": 0, "2": 0, "3": 0, "4+": 0 } }
+          ,
+          dropin_spectrum: []
         },
-        layer2_pricing_structure: { pct_studios_with_intro: 0, average_intro_price: null, average_intro_price_per_class: null, intro_types: [], intro_discount_histogram: [] },
+        layer2_pricing_structure: { pct_studios_with_intro: 0, average_intro_price: null, average_intro_price_per_class: null, intro_types: [], intro_usage_by_price_tier: [], intro_discount_histogram: [] },
         layer3_pack_pricing: {
           pack_table: [],
           pack_expiration_histogram: [],
@@ -422,7 +431,12 @@
           labels: dist.map((d) => d.label),
           datasets: [{ data: dist.map((d) => d.count), backgroundColor: "#38bdf8", borderRadius: 8 }]
         },
-        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: { y: { beginAtZero: true, ticks: { precision: 0 } } }
+        }
       });
       const sourceNote = layer.methodology && layer.methodology.dropin_distribution_source ? layer.methodology.dropin_distribution_source : "";
       document.getElementById("l1DropinMeta").innerHTML = sourceNote ? `<span class="chip">${sourceNote}</span>` : "";
@@ -490,6 +504,55 @@
           datasets: [{ data: hist.map((h) => h.count), backgroundColor: "#f97316", borderRadius: 8 }]
         },
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+      });
+
+      const tiers = layer.intro_usage_by_price_tier || [];
+      document.getElementById("l2TierMeta").innerHTML = tiers
+        .map((t) => `<span class="chip">${t.label}: ${t.studios_with_intro ?? 0} with intro / ${t.studios_in_tier ?? 0} total</span>`)
+        .join("");
+      charts.l2Tier = new Chart(document.getElementById("l2IntroTierChart"), {
+        type: "bar",
+        data: {
+          labels: tiers.map((t) => t.label),
+          datasets: [
+            {
+              label: "Single only",
+              data: tiers.map((t) => Number(t?.usage_pct_of_intro_studios?.single_only) || 0),
+              backgroundColor: "#38bdf8"
+            },
+            {
+              label: "3-pack only",
+              data: tiers.map((t) => Number(t?.usage_pct_of_intro_studios?.pack3_only) || 0),
+              backgroundColor: "#8b5cf6"
+            },
+            {
+              label: "Both single + 3-pack",
+              data: tiers.map((t) => Number(t?.usage_pct_of_intro_studios?.both_single_and_pack3) || 0),
+              backgroundColor: "#22c55e"
+            },
+            {
+              label: "Other intro model",
+              data: tiers.map((t) => Number(t?.usage_pct_of_intro_studios?.other_intro) || 0),
+              backgroundColor: "#f59e0b"
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { stacked: true },
+            y: { stacked: true, beginAtZero: true, max: 100, ticks: { callback: (v) => `${v}%` } }
+          },
+          plugins: {
+            legend: { position: "bottom" },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => `${ctx.dataset.label}: ${Number(ctx.parsed.y).toFixed(1)}%`
+              }
+            }
+          }
+        }
       });
     }
 
@@ -563,10 +626,16 @@
         <span class="chip">Denominator studios: ${c.denominator_studios_with_memberships ?? "-"}</span>
       `;
 
-      const methodology = layer.membership_type_methodology && layer.membership_type_methodology.unlimited_effective_price_per_class
+      const methodologyUnlimited = layer.membership_type_methodology && layer.membership_type_methodology.unlimited_effective_price_per_class
         ? layer.membership_type_methodology.unlimited_effective_price_per_class
         : "";
-      document.getElementById("l4MembershipMeta").innerHTML = methodology ? `<span class="chip">${methodology}</span>` : "";
+      const methodologyDiscount = layer.membership_type_methodology && layer.membership_type_methodology.avg_discount_vs_dropin_pct
+        ? layer.membership_type_methodology.avg_discount_vs_dropin_pct
+        : "";
+      document.getElementById("l4MembershipMeta").innerHTML = [methodologyUnlimited, methodologyDiscount]
+        .filter(Boolean)
+        .map((txt) => `<span class="chip">${txt}</span>`)
+        .join("");
 
       document.getElementById("l4MembershipTypeRows").innerHTML = (layer.membership_types_table || []).map((r) => `
         <tr>
@@ -575,8 +644,9 @@
           <td>${r.n_studios ?? "-"}</td>
           <td>${money(r.avg_monthly_price)}</td>
           <td>${money(r.avg_effective_price_per_class)}</td>
+          <td>${pct(r.avg_discount_vs_dropin_pct)}</td>
         </tr>
-      `).join("") || `<tr><td colspan="5">No membership type data.</td></tr>`;
+      `).join("") || `<tr><td colspan="6">No membership type data.</td></tr>`;
     }
 
     function renderLayer5(layer) {
