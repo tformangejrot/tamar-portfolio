@@ -6,31 +6,53 @@
   <title>Paris Pricing Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
     * { box-sizing: border-box; }
+    :root {
+      --bg: #FAF7F2;
+      --surface: #FFFEFC;
+      --text: #2C2A26;
+      --muted: #7A6B5D;
+      --accent: #8B7355;
+      --accent-warm: #B8986B;
+      --border: rgba(139, 115, 85, 0.22);
+      --border-strong: rgba(139, 115, 85, 0.35);
+      --chip-bg: rgba(139, 115, 85, 0.12);
+    }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-      background: #05060a;
-      color: #f5f7ff;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
     .hero {
       padding: 56px 24px 28px;
       text-align: center;
-      background: radial-gradient(circle at top, #0b1c3a 0, #05060a 65%);
+      background: linear-gradient(rgba(250, 247, 242, 0.9), rgba(250, 247, 242, 0.9)),
+        url("https://res.cloudinary.com/dqv8bler7/image/upload/v1769771513/hero-texture_vhbkiv.png");
+      background-size: cover;
+      background-position: center;
+      border-bottom: 1px solid var(--border);
     }
     .hero h1 {
       margin: 0 0 10px;
       font-size: 38px;
-      background: linear-gradient(135deg, #7dd3ff 0%, #a78bfa 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-weight: 400;
+      color: var(--text);
     }
-    .hero p { margin: 0; color: #cbd5f5; }
+    .hero p { margin: 0; color: var(--muted); }
     .wrap { max-width: 1300px; margin: 0 auto; padding: 24px; }
     .layer { margin-bottom: 26px; }
     .layer-head { margin-bottom: 12px; }
-    .layer-head h2 { margin: 0 0 6px; font-size: 22px; }
-    .layer-head p { margin: 0; color: #9ca3ff; font-size: 13px; }
+    .layer-head h2 {
+      margin: 0 0 6px;
+      font-size: 24px;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-weight: 400;
+      color: var(--text);
+    }
+    .layer-head p { margin: 0; color: var(--muted); font-size: 13px; }
     .stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -38,13 +60,13 @@
       margin-bottom: 18px;
     }
     .stat {
-      background: linear-gradient(135deg, rgba(56, 189, 248, 0.10), rgba(139, 92, 246, 0.10));
-      border: 1px solid rgba(148, 163, 255, 0.2);
-      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
       padding: 16px;
     }
-    .stat .v { font-size: 26px; font-weight: 700; color: #7dd3ff; }
-    .stat .k { font-size: 11px; color: #cbd5f5; text-transform: uppercase; letter-spacing: .06em; }
+    .stat .v { font-size: 26px; font-weight: 600; color: var(--accent); }
+    .stat .k { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -52,17 +74,26 @@
     }
     @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } }
     .card {
-      background: linear-gradient(135deg, rgba(15,23,42,0.92), rgba(15,23,42,0.98));
-      border-radius: 16px;
-      box-shadow: 0 0 0 1px rgba(148,163,255,0.12), 0 22px 60px rgba(15,23,42,.85);
+      background: var(--surface);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 22px rgba(44, 42, 38, 0.06);
       padding: 18px;
+      transition: border-color 0.4s ease;
     }
-    .card h3 { margin: 0 0 8px; font-size: 17px; }
-    .sub { margin: 0 0 12px; font-size: 12px; color: #9ca3ff; text-transform: uppercase; letter-spacing: .08em; }
+    .card:hover { border-color: var(--border-strong); }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-weight: 400;
+      color: var(--text);
+    }
+    .sub { margin: 0 0 12px; font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
     .chart-box { height: 300px; }
     .explain {
       margin: 8px 0 12px;
-      color: #c7d2fe;
+      color: var(--muted);
       font-size: 12px;
       line-height: 1.45;
     }
@@ -71,19 +102,19 @@
       width: 100%;
       border-collapse: collapse;
       font-size: 13px;
-      color: #dbe4ff;
+      color: var(--text);
     }
     th, td {
-      border-bottom: 1px solid rgba(148, 163, 255, 0.15);
+      border-bottom: 1px solid var(--border);
       text-align: left;
       padding: 8px 6px;
       vertical-align: top;
     }
-    th { color: #9ca3ff; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+    th { color: var(--accent); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
     .chip {
       display: inline-block;
-      background: rgba(56, 189, 248, 0.15);
-      color: #7dd3ff;
+      background: var(--chip-bg);
+      color: var(--accent);
       border-radius: 999px;
       padding: 4px 10px;
       font-size: 11px;
@@ -91,10 +122,10 @@
     }
     .footer {
       text-align: center;
-      color: #9ca3ff;
+      color: var(--muted);
       font-size: 12px;
       padding: 24px;
-      border-top: 1px solid rgba(148,163,255,.12);
+      border-top: 1px solid var(--border);
       margin-top: 20px;
     }
   </style>
@@ -189,8 +220,8 @@
           <p class="sub">Usage pressure and breakage profile</p>
           <p class="explain">How to read: shorter validity windows indicate stronger pressure to consume quickly (and potentially higher breakage risk).</p>
           <div style="display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-bottom:8px;">
-            <label for="l3PackSizeFilter" style="font-size:11px;color:#9ca3ff;text-transform:uppercase;letter-spacing:.06em;">Pack filter</label>
-            <select id="l3PackSizeFilter" style="background:#0f172a;color:#e2e8ff;border:1px solid rgba(148, 163, 255, 0.35);border-radius:8px;padding:6px 8px;"></select>
+            <label for="l3PackSizeFilter" style="font-size:11px;color:#8B7355;text-transform:uppercase;letter-spacing:.06em;">Pack filter</label>
+            <select id="l3PackSizeFilter" style="background:#FFFEFC;color:#2C2A26;border:1px solid rgba(139, 115, 85, 0.35);border-radius:8px;padding:6px 8px;"></select>
           </div>
           <div id="l3ExpirationMeta"></div>
           <div class="chart-box"><canvas id="l3PackExpirationChart"></canvas></div>
@@ -324,8 +355,8 @@
   <footer class="footer" id="footer"></footer>
 
   <script>
-    Chart.defaults.color = "#cbd5f5";
-    Chart.defaults.borderColor = "rgba(148, 163, 255, 0.15)";
+    Chart.defaults.color = "#5f5448";
+    Chart.defaults.borderColor = "rgba(139, 115, 85, 0.22)";
 
     const FALLBACK_SNAPSHOT = {
       generated_at: "fallback",
@@ -361,6 +392,17 @@
     };
 
     const charts = {};
+    const PALETTE = {
+      accent: "#8B7355",
+      accentWarm: "#B8986B",
+      earth: "#6F5A43",
+      sage: "#7D9B76",
+      clay: "#B07A4E",
+      lilac: "#9A8AA6",
+      slate: "#8C887F",
+      rose: "#B07C72",
+      lineMuted: "#9B9286"
+    };
     const modalityLabelMap = {
       reformer_pilates: "Reformer Pilates",
       mat_pilates: "Mat Pilates",
@@ -430,7 +472,7 @@
         type: "bar",
         data: {
           labels: dist.map((d) => d.label),
-          datasets: [{ data: dist.map((d) => d.count), backgroundColor: "#38bdf8", borderRadius: 8 }]
+          datasets: [{ data: dist.map((d) => d.count), backgroundColor: PALETTE.accentWarm, borderRadius: 8 }]
         },
         options: {
           responsive: true,
@@ -460,8 +502,8 @@
         data: {
           labels: modality.map((m) => formatModalityLabel(m.modality)),
           datasets: [
-            { label: "Avg drop-in", data: modality.map((m) => m.avg_drop_in), backgroundColor: "rgba(125, 211, 255, 0.6)", borderRadius: 6 },
-            { label: "Median", data: modality.map((m) => m.median_drop_in), backgroundColor: "rgba(167, 139, 250, 0.7)", borderRadius: 6 }
+            { label: "Avg drop-in", data: modality.map((m) => m.avg_drop_in), backgroundColor: "rgba(184, 152, 107, 0.65)", borderRadius: 6 },
+            { label: "Median", data: modality.map((m) => m.median_drop_in), backgroundColor: "rgba(139, 115, 85, 0.72)", borderRadius: 6 }
           ]
         },
         options: { responsive: true, maintainAspectRatio: false }
@@ -492,7 +534,7 @@
         type: "pie",
         data: {
           labels: types.map((t) => introTypeLabels[t.type] || t.type),
-          datasets: [{ data: types.map((t) => t.count), backgroundColor: ["#38bdf8", "#8b5cf6", "#22c55e", "#f59e0b", "#64748b"] }]
+          datasets: [{ data: types.map((t) => t.count), backgroundColor: [PALETTE.accentWarm, PALETTE.lilac, PALETTE.sage, PALETTE.clay, PALETTE.slate] }]
         },
         options: { responsive: true, maintainAspectRatio: false }
       });
@@ -502,7 +544,7 @@
         type: "bar",
         data: {
           labels: hist.map((h) => h.label),
-          datasets: [{ data: hist.map((h) => h.count), backgroundColor: "#f97316", borderRadius: 8 }]
+          datasets: [{ data: hist.map((h) => h.count), backgroundColor: PALETTE.clay, borderRadius: 8 }]
         },
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
       });
@@ -519,22 +561,22 @@
             {
               label: "Single only",
               data: tiers.map((t) => Number(t?.usage_pct_of_intro_studios?.single_only) || 0),
-              backgroundColor: "#38bdf8"
+              backgroundColor: PALETTE.accentWarm
             },
             {
               label: "3-pack only",
               data: tiers.map((t) => Number(t?.usage_pct_of_intro_studios?.pack3_only) || 0),
-              backgroundColor: "#8b5cf6"
+              backgroundColor: PALETTE.lilac
             },
             {
               label: "Both single + 3-pack",
               data: tiers.map((t) => Number(t?.usage_pct_of_intro_studios?.both_single_and_pack3) || 0),
-              backgroundColor: "#22c55e"
+              backgroundColor: PALETTE.sage
             },
             {
               label: "Other intro model",
               data: tiers.map((t) => Number(t?.usage_pct_of_intro_studios?.other_intro) || 0),
-              backgroundColor: "#f59e0b"
+              backgroundColor: PALETTE.clay
             }
           ]
         },
@@ -594,7 +636,7 @@
         type: "bar",
         data: {
           labels: hist.map((h) => h.label),
-          datasets: [{ data: hist.map((h) => h.count), backgroundColor: "#06b6d4", borderRadius: 8 }]
+          datasets: [{ data: hist.map((h) => h.count), backgroundColor: PALETTE.earth, borderRadius: 8 }]
         },
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
       });
@@ -620,7 +662,7 @@
         type: "pie",
         data: {
           labels: pieLabels,
-          datasets: [{ data: pie.map((p) => p.count), backgroundColor: ["#64748b", "#22c55e", "#f59e0b", "#8b5cf6"] }]
+          datasets: [{ data: pie.map((p) => p.count), backgroundColor: [PALETTE.slate, PALETTE.sage, PALETTE.clay, PALETTE.lilac] }]
         },
         options: {
           responsive: true,
@@ -655,7 +697,7 @@
         type: "bar",
         data: {
           labels: commitmentLabels,
-          datasets: [{ data: commitmentValues, backgroundColor: ["#38bdf8", "#8b5cf6", "#22c55e", "#f59e0b"], borderRadius: 8 }]
+          datasets: [{ data: commitmentValues, backgroundColor: [PALETTE.accentWarm, PALETTE.lilac, PALETTE.sage, PALETTE.clay], borderRadius: 8 }]
         },
         options: {
           indexAxis: "y",
@@ -709,7 +751,7 @@
       const hist = layer.dropin_vs_10pack_discount_histogram || [];
       charts.l5Gap = new Chart(document.getElementById("l5GapChart"), {
         type: "bar",
-        data: { labels: hist.map((h) => h.label), datasets: [{ data: hist.map((h) => h.count), backgroundColor: "#f43f5e", borderRadius: 8 }] },
+        data: { labels: hist.map((h) => h.label), datasets: [{ data: hist.map((h) => h.count), backgroundColor: PALETTE.rose, borderRadius: 8 }] },
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
       });
 
@@ -728,8 +770,8 @@
         type: "scatter",
         data: {
           datasets: [
-            { label: "Studios", data: scatter, backgroundColor: "#7dd3ff", pointRadius: 4, pointHoverRadius: 6 },
-            { label: "Parity line (y=x)", type: "line", data: diagonal, borderColor: "#f97316", borderWidth: 2, pointRadius: 0, tension: 0 }
+            { label: "Studios", data: scatter, backgroundColor: PALETTE.accentWarm, pointRadius: 4, pointHoverRadius: 6 },
+            { label: "Parity line (y=x)", type: "line", data: diagonal, borderColor: PALETTE.clay, borderWidth: 2, pointRadius: 0, tension: 0 }
           ]
         },
         options: {
@@ -782,10 +824,10 @@
         data: {
           labels,
           datasets: [
-            { label: "Q1-Q3", data: box.map((b) => [b.q1, b.q3]), backgroundColor: "rgba(139, 92, 246, 0.5)", borderRadius: 4 },
-            { label: "Median", type: "line", data: box.map((b) => b.median), borderColor: "#22c55e", pointRadius: 4, tension: 0 },
-            { label: "Min", type: "line", data: box.map((b) => b.min), borderColor: "#64748b", pointRadius: 3, tension: 0 },
-            { label: "Max", type: "line", data: box.map((b) => b.max), borderColor: "#f59e0b", pointRadius: 3, tension: 0 }
+            { label: "Q1-Q3", data: box.map((b) => [b.q1, b.q3]), backgroundColor: "rgba(154, 138, 166, 0.5)", borderRadius: 4 },
+            { label: "Median", type: "line", data: box.map((b) => b.median), borderColor: PALETTE.sage, pointRadius: 4, tension: 0 },
+            { label: "Min", type: "line", data: box.map((b) => b.min), borderColor: PALETTE.slate, pointRadius: 3, tension: 0 },
+            { label: "Max", type: "line", data: box.map((b) => b.max), borderColor: PALETTE.clay, pointRadius: 3, tension: 0 }
           ]
         },
         options: { responsive: true, maintainAspectRatio: false }
@@ -806,7 +848,7 @@
         type: "bar",
         data: {
           labels: rows.map((r) => profileLabels[r.studio_type] || r.studio_type),
-          datasets: [{ data: rows.map((r) => r.count), backgroundColor: ["#38bdf8", "#22c55e", "#8b5cf6", "#64748b"], borderRadius: 8 }]
+          datasets: [{ data: rows.map((r) => r.count), backgroundColor: [PALETTE.accentWarm, PALETTE.sage, PALETTE.lilac, PALETTE.slate], borderRadius: 8 }]
         },
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
       });

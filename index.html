@@ -5,20 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tamar Forman-Gejrot</title>
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
     * {
       box-sizing: border-box;
     }
     
     body {
       margin: 0;
-      font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-      background: #05060a;
-      color: #f5f7ff;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FAF7F2;
+      color: #2C2A26;
       overflow-x: hidden;
     }
-
-    /* Load fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
 
     /* Hero Section */
     .hero {
@@ -27,7 +25,7 @@
       justify-content: center;
       align-items: center;
       padding: 80px 24px 60px;
-      background: radial-gradient(circle at top, #0b1c3a 0, #05060a 60%);
+      background: radial-gradient(circle at top, #EDE9E2 0, #FAF7F2 60%);
       position: relative;
       overflow: hidden;
     }
@@ -40,8 +38,8 @@
       right: 0;
       bottom: 0;
       background: 
-        radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.1) 0, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(184, 152, 107, 0.1) 0, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(154, 138, 166, 0.1) 0, transparent 50%);
       pointer-events: none;
     }
 
@@ -53,11 +51,11 @@
     }
 
     .hero h1 {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      font-family: "Libre Baskerville", Georgia, serif;
       font-size: 64px;
       font-weight: 700;
       margin: 0 0 16px;
-      background: linear-gradient(135deg, #7dd3ff 0%, #a78bfa 100%);
+      background: linear-gradient(135deg, #8B7355 0%, #B8986B 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -65,9 +63,9 @@
     }
 
     .hero .tagline {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      font-family: "Libre Baskerville", Georgia, serif;
       font-size: 20px;
-      color: #cbd5f5;
+      color: #7A6B5D;
       font-weight: 400;
       margin-bottom: 40px;
       letter-spacing: 0.02em;
@@ -86,17 +84,17 @@
     }
 
     .section-label {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      font-family: "Libre Baskerville", Georgia, serif;
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       font-size: 12px;
-      color: #7dd3ff;
+      color: #8B7355;
       margin-bottom: 8px;
     }
 
     .section-title {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      font-family: "Libre Baskerville", Georgia, serif;
       font-size: 36px;
       font-weight: 600;
       margin: 0 0 16px;
@@ -104,18 +102,19 @@
 
     .section-content {
       font-size: 18px;
-      color: #cbd5f5;
+      color: #7A6B5D;
       line-height: 1.8;
       max-width: 700px;
     }
 
     /* About Section */
     .about {
-      background: linear-gradient(135deg, rgba(15,23,42,0.3), rgba(15,23,42,0.5));
-      border-radius: 18px;
+      background: #FFFEFC;
+      border-radius: 8px;
       padding: 32px;
       margin-bottom: 24px;
-      border: 1px solid rgba(148, 163, 255, 0.1);
+      border: 1px solid rgba(139, 115, 85, 0.22);
+      box-shadow: 0 8px 22px rgba(44, 42, 38, 0.06);
     }
 
     /* Projects Section */
@@ -127,31 +126,27 @@
     }
 
     .project-card {
-      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
-      border-radius: 18px;
-      box-shadow:
-        0 0 0 1px rgba(148, 163, 255, 0.12),
-        0 35px 80px rgba(15, 23, 42, 0.8);
+      background: linear-gradient(135deg, rgba(255, 254, 252, 0.96), rgba(255, 254, 252, 0.98));
+      border-radius: 8px;
+      border: 1px solid rgba(139, 115, 85, 0.22);
+      box-shadow: 0 8px 22px rgba(44, 42, 38, 0.06);
       padding: 24px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: border-color 0.35s ease;
       text-decoration: none;
       color: inherit;
       display: block;
     }
 
     .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow:
-        0 0 0 1px rgba(148, 163, 255, 0.2),
-        0 40px 100px rgba(15, 23, 42, 1);
+      border-color: rgba(139, 115, 85, 0.35);
     }
 
     .project-card h3 {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      font-family: "Libre Baskerville", Georgia, serif;
       margin: 0 0 12px;
       font-size: 20px;
       font-weight: 600;
-      background: linear-gradient(135deg, #7dd3ff 0%, #a78bfa 100%);
+      background: linear-gradient(135deg, #8B7355 0%, #B8986B 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -160,7 +155,7 @@
     .project-card p {
       margin: 0;
       font-size: 15px;
-      color: #cbd5f5;
+      color: #7A6B5D;
       line-height: 1.6;
     }
 
@@ -169,7 +164,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: #7dd3ff;
+      color: #8B7355;
       font-size: 13px;
       font-weight: 500;
       text-transform: uppercase;
@@ -177,7 +172,7 @@
     }
 
     .project-card:hover .project-link {
-      color: #a78bfa;
+      color: #B8986B;
     }
 
     .project-card .project-link::after {
@@ -193,9 +188,9 @@
     .footer {
       padding: 40px 24px;
       text-align: center;
-      color: #9ca3ff;
+      color: #8B7355;
       font-size: 12px;
-      border-top: 1px solid rgba(148, 163, 255, 0.1);
+      border-top: 1px solid rgba(139, 115, 85, 0.1);
       margin-top: 40px;
     }
 
@@ -278,6 +273,13 @@
           discover where Nairobians are working out and how the landscape is evolving.
         </p>
         <span class="project-link">View Dashboard</span>
+      </a>
+      <a href="scripts/pricing-dashboard.html" class="project-card">
+        <h3>Paris Pricing Intelligence Dashboard</h3>
+        <p>
+          A pricing-focused dashboard covering drop-ins, intro offers, pack structures, and memberships across Paris boutique fitness studios.
+        </p>
+        <span class="project-link">View Pricing Dashboard</span>
       </a>
       <a href="https://substack.com/@tamarformangejrot/posts" target="_blank" rel="noopener noreferrer" class="project-card">
         <h3>Substack</h3>

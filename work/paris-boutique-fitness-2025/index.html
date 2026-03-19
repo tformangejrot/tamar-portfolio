@@ -9,15 +9,16 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
     * {
       box-sizing: border-box;
     }
     
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-      background: #05060a;
-      color: #f5f7ff;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FAF7F2;
+      color: #2C2A26;
       overflow-x: hidden;
     }
 
@@ -29,7 +30,7 @@
       justify-content: center;
       align-items: center;
       padding: 40px 24px;
-      background: radial-gradient(circle at top, #0b1c3a 0, #05060a 60%);
+      background: radial-gradient(circle at top, #EDE9E2 0, #FAF7F2 60%);
       position: relative;
       overflow: hidden;
     }
@@ -42,8 +43,8 @@
       right: 0;
       bottom: 0;
       background: 
-        radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.1) 0, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(184, 152, 107, 0.1) 0, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(154, 138, 166, 0.1) 0, transparent 50%);
       pointer-events: none;
     }
 
@@ -59,7 +60,7 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       font-size: 14px;
-      color: #7dd3ff;
+      color: #8B7355;
       margin-bottom: 16px;
     }
 
@@ -67,7 +68,7 @@
       font-size: 48px;
       font-weight: 700;
       margin: 0 0 24px;
-      background: linear-gradient(135deg, #7dd3ff 0%, #a78bfa 100%);
+      background: linear-gradient(135deg, #8B7355 0%, #B8986B 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -75,7 +76,7 @@
 
     .hero p {
       font-size: 18px;
-      color: #cbd5f5;
+      color: #7A6B5D;
       line-height: 1.6;
       margin-bottom: 40px;
     }
@@ -88,7 +89,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: #7dd3ff;
+      color: #8B7355;
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
@@ -96,7 +97,7 @@
     }
 
     .nav-link:hover {
-      color: #a78bfa;
+      color: #B8986B;
     }
 
     .nav-link svg {
@@ -113,7 +114,7 @@
       flex-direction: column;
       align-items: center;
       gap: 8px;
-      color: #7dd3ff;
+      color: #8B7355;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -142,7 +143,7 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       font-size: 12px;
-      color: #7dd3ff;
+      color: #8B7355;
       margin-bottom: 8px;
     }
 
@@ -154,7 +155,7 @@
 
     .section-subtitle {
       font-size: 16px;
-      color: #cbd5f5;
+      color: #7A6B5D;
       line-height: 1.6;
       max-width: 700px;
       margin: 0 auto;
@@ -162,21 +163,17 @@
 
     /* Card Styles */
     .card {
-      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
-      border-radius: 18px;
-      box-shadow:
-        0 0 0 1px rgba(148, 163, 255, 0.12),
-        0 35px 80px rgba(15, 23, 42, 0.8);
+      background: linear-gradient(135deg, rgba(255, 254, 252, 0.96), rgba(255, 254, 252, 0.98));
+      border-radius: 8px;
+      border: 1px solid rgba(139, 115, 85, 0.22);
+      box-shadow: 0 8px 22px rgba(44, 42, 38, 0.06);
       padding: 32px;
       margin-bottom: 32px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: border-color 0.35s ease;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow:
-        0 0 0 1px rgba(148, 163, 255, 0.2),
-        0 40px 100px rgba(15, 23, 42, 1);
+      border-color: rgba(139, 115, 85, 0.35);
     }
 
     .card-header {
@@ -194,7 +191,7 @@
 
     .card-header span {
       font-size: 12px;
-      color: #9ca3ff;
+      color: #8B7355;
       text-transform: uppercase;
       letter-spacing: 0.12em;
     }
@@ -215,17 +212,17 @@
     .note {
       margin-top: 16px;
       font-size: 12px;
-      color: #9ca3ff;
+      color: #8B7355;
       line-height: 1.5;
     }
 
     .stat-highlight {
       display: inline-block;
-      background: rgba(56, 189, 248, 0.15);
+      background: rgba(184, 152, 107, 0.15);
       padding: 2px 8px;
       border-radius: 4px;
       font-weight: 600;
-      color: #7dd3ff;
+      color: #8B7355;
     }
 
     /* Two-column layout for some sections */
@@ -250,7 +247,7 @@
 
     /* Dark theme for Leaflet */
     .leaflet-container {
-      background: #0f172a;
+      background: #FFFEFC;
       border-radius: 12px;
     }
 
@@ -260,31 +257,31 @@
 
     .leaflet-control {
       background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 255, 0.2);
-      color: #f5f7ff;
+      border: 1px solid rgba(139, 115, 85, 0.2);
+      color: #2C2A26;
     }
 
     .leaflet-control-zoom a {
-      color: #f5f7ff;
+      color: #2C2A26;
       background: rgba(15, 23, 42, 0.9);
     }
 
     .leaflet-control-zoom a:hover {
-      background: rgba(56, 189, 248, 0.2);
+      background: rgba(184, 152, 107, 0.2);
     }
 
     .info {
       background: rgba(15, 23, 42, 0.95);
       padding: 12px;
       border-radius: 8px;
-      color: #f5f7ff;
+      color: #2C2A26;
       font-size: 12px;
-      border: 1px solid rgba(148, 163, 255, 0.2);
+      border: 1px solid rgba(139, 115, 85, 0.2);
     }
 
     .info h4 {
       margin: 0 0 8px 0;
-      color: #7dd3ff;
+      color: #8B7355;
       font-size: 14px;
     }
 
@@ -310,23 +307,24 @@
     }
 
     .stat-card {
-      background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(139, 92, 246, 0.1));
-      border: 1px solid rgba(148, 163, 255, 0.2);
-      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(184, 152, 107, 0.1), rgba(154, 138, 166, 0.1));
+      border: 1px solid rgba(139, 115, 85, 0.22);
+      border-radius: 8px;
       padding: 24px;
       text-align: center;
+      box-shadow: 0 8px 22px rgba(44, 42, 38, 0.06);
     }
 
     .stat-value {
       font-size: 36px;
       font-weight: 700;
-      color: #7dd3ff;
+      color: #8B7355;
       margin-bottom: 8px;
     }
 
     .stat-label {
       font-size: 14px;
-      color: #cbd5f5;
+      color: #7A6B5D;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
@@ -335,9 +333,9 @@
     .footer {
       padding: 60px 24px;
       text-align: center;
-      color: #9ca3ff;
+      color: #8B7355;
       font-size: 12px;
-      border-top: 1px solid rgba(148, 163, 255, 0.1);
+      border-top: 1px solid rgba(139, 115, 85, 0.1);
       margin-top: 80px;
     }
   </style>
@@ -534,7 +532,7 @@
     <div class="card" style="margin-top: 32px;">
       <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
         Of the <span class="stat-highlight">62 new pilates studios</span>, <span class="stat-highlight">43 offer reformer classes</span>. This is even more stark when you look at the growth of pilates as a whole. <span class="stat-highlight">20.7% of all pilates studios</span> opened in the past 16 months*, although <span class="stat-highlight">37.4% of reformer studios</span> opened in that period, again highlighting its dominance. Low-impact (which overlaps with a lot of pilates classes studios) has seen the second-largest growth, with <span class="stat-highlight">27.9% of these studios</span> opening since mid-2024. This also shows the shift toward less-stress movement, likely caused by greater awareness of longevity and a maturing of the client population.<br><br>
-        <em style="font-size: 14px; color: #9ca3ff;">*Note that this is probably more accurately the past 12-14 months since opening dates are estimated based on domain registration.</em>
+        <em style="font-size: 14px; color: #8B7355;">*Note that this is probably more accurately the past 12-14 months since opening dates are estimated based on domain registration.</em>
       </p>
     </div>
   </section>
@@ -610,8 +608,8 @@
 
   <script>
     // Chart.js default config
-    Chart.defaults.color = '#cbd5f5';
-    Chart.defaults.borderColor = 'rgba(148, 163, 255, 0.15)';
+    Chart.defaults.color = '#7A6B5D';
+    Chart.defaults.borderColor = 'rgba(139, 115, 85, 0.15)';
 
     // Store chart instances
     const charts = {};
@@ -736,7 +734,7 @@
       const modalityPcts = modalities.map(m => m.pct);
       const modalityCtx = document.getElementById('modalityChart').getContext('2d');
       const modalityGradient = modalityCtx.createLinearGradient(0, 0, 600, 0);
-      modalityGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
+      modalityGradient.addColorStop(0, 'rgba(184, 152, 107, 0.9)');
       modalityGradient.addColorStop(1, 'rgba(59, 130, 246, 0.9)');
 
       charts['modalityChart'] = new Chart(modalityCtx, {
@@ -768,11 +766,11 @@
         },
         scales: {
           x: {
-            ticks: { color: '#e5e7ff', font: { size: 11 } },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            ticks: { color: '#5f5448', font: { size: 11 } },
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
           },
           y: {
-            ticks: { color: '#cbd5ff', font: { size: 11 } },
+            ticks: { color: '#7A6B5D', font: { size: 11 } },
             grid: { display: false }
           }
         },
@@ -800,8 +798,8 @@
     chartInitFunctions['reformerChart'] = function() {
       const reformerCtx = document.getElementById('reformerChart').getContext('2d');
       const reformerGradient = reformerCtx.createLinearGradient(0, 0, 0, 400);
-      reformerGradient.addColorStop(0, 'rgba(56, 189, 248, 0.4)');
-      reformerGradient.addColorStop(1, 'rgba(56, 189, 248, 0.05)');
+      reformerGradient.addColorStop(0, 'rgba(184, 152, 107, 0.4)');
+      reformerGradient.addColorStop(1, 'rgba(184, 152, 107, 0.05)');
 
       charts['reformerChart'] = new Chart(reformerCtx, {
       type: 'line',
@@ -810,15 +808,15 @@
         datasets: [{
           label: 'New Studios',
           data: reformerCounts,
-          borderColor: 'rgba(56, 189, 248, 1)',
+          borderColor: 'rgba(184, 152, 107, 1)',
           backgroundColor: reformerGradient,
           borderWidth: 3,
           fill: true,
           tension: 0.4,
           pointRadius: 5,
           pointHoverRadius: 7,
-          pointBackgroundColor: 'rgba(56, 189, 248, 1)',
-          pointBorderColor: '#05060a',
+          pointBackgroundColor: 'rgba(184, 152, 107, 1)',
+          pointBorderColor: '#FAF7F2',
           pointBorderWidth: 2,
         }]
       },
@@ -837,13 +835,13 @@
         },
         scales: {
           x: {
-            ticks: { color: '#e5e7ff', font: { size: 11 } },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            ticks: { color: '#5f5448', font: { size: 11 } },
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
           },
           y: {
             beginAtZero: true,
-            ticks: { color: '#cbd5ff', font: { size: 11 }, stepSize: 5 },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            ticks: { color: '#7A6B5D', font: { size: 11 }, stepSize: 5 },
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
           }
         },
         animation: {
@@ -865,7 +863,7 @@
       const pctsOfModality = newModalities.map(m => m.pctOfModality || 0);
       const newCtx = document.getElementById('newModalityChart').getContext('2d');
       const newGradient = newCtx.createLinearGradient(0, 0, 600, 0);
-      newGradient.addColorStop(0, 'rgba(139, 92, 246, 0.9)');
+      newGradient.addColorStop(0, 'rgba(154, 138, 166, 0.9)');
       newGradient.addColorStop(1, 'rgba(236, 72, 153, 0.9)');
 
       charts['newModalityChart'] = new Chart(newCtx, {
@@ -897,11 +895,11 @@
         },
         scales: {
           x: {
-            ticks: { color: '#e5e7ff', font: { size: 11 } },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            ticks: { color: '#5f5448', font: { size: 11 } },
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
           },
           y: {
-            ticks: { color: '#cbd5ff', font: { size: 11 } },
+            ticks: { color: '#7A6B5D', font: { size: 11 } },
             grid: { display: false }
           }
         },
@@ -940,7 +938,7 @@
       const growthCtx = document.getElementById('growthRateChart').getContext('2d');
       const growthGradient = growthCtx.createLinearGradient(0, 0, 600, 0);
       growthGradient.addColorStop(0, 'rgba(34, 197, 94, 0.9)');
-      growthGradient.addColorStop(1, 'rgba(56, 189, 248, 0.9)');
+      growthGradient.addColorStop(1, 'rgba(184, 152, 107, 0.9)');
 
       charts['growthRateChart'] = new Chart(growthCtx, {
       type: 'bar',
@@ -972,16 +970,16 @@
         scales: {
           x: {
             ticks: {
-              color: '#e5e7ff',
+              color: '#5f5448',
               font: { size: 11 },
               callback: function(value) {
                 return value + '%';
               }
             },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
           },
           y: {
-            ticks: { color: '#cbd5ff', font: { size: 11 } },
+            ticks: { color: '#7A6B5D', font: { size: 11 } },
             grid: { display: false }
           }
         },
@@ -1000,8 +998,8 @@
       const yearCounts = yearData.map(d => d.count);
       const yearCtx = document.getElementById('yearChart').getContext('2d');
       const yearGradient = yearCtx.createLinearGradient(0, 0, 0, 450);
-      yearGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
-      yearGradient.addColorStop(1, 'rgba(56, 189, 248, 0.3)');
+      yearGradient.addColorStop(0, 'rgba(184, 152, 107, 0.9)');
+      yearGradient.addColorStop(1, 'rgba(184, 152, 107, 0.3)');
 
       charts['yearChart'] = new Chart(yearCtx, {
       type: 'bar',
@@ -1031,21 +1029,21 @@
         scales: {
           x: {
             ticks: {
-              color: '#e5e7ff',
+              color: '#5f5448',
               font: { size: 10 },
               maxRotation: 45,
               minRotation: 45
             },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
           },
           y: {
             beginAtZero: true,
             ticks: {
-              color: '#cbd5ff',
+              color: '#7A6B5D',
               font: { size: 11 },
               stepSize: 10
             },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
           }
         },
         animation: {
@@ -1095,11 +1093,11 @@
         },
         scales: {
           x: {
-            ticks: { color: '#e5e7ff', font: { size: 11 } },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            ticks: { color: '#5f5448', font: { size: 11 } },
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
           },
           y: {
-            ticks: { color: '#cbd5ff', font: { size: 11 } },
+            ticks: { color: '#7A6B5D', font: { size: 11 } },
             grid: { display: false }
           }
         },
@@ -1123,8 +1121,8 @@
       const arrCounts = arrData.map(d => d.count);
       const arrCtx = document.getElementById('arrChart').getContext('2d');
       const arrGradient = arrCtx.createLinearGradient(0, 0, 600, 0);
-      arrGradient.addColorStop(0, 'rgba(56, 189, 248, 0.9)');
-      arrGradient.addColorStop(1, 'rgba(139, 92, 246, 0.9)');
+      arrGradient.addColorStop(0, 'rgba(184, 152, 107, 0.9)');
+      arrGradient.addColorStop(1, 'rgba(154, 138, 166, 0.9)');
 
       charts['arrChart'] = new Chart(arrCtx, {
       type: 'bar',
@@ -1154,11 +1152,11 @@
         },
         scales: {
           x: {
-            ticks: { color: '#e5e7ff', font: { size: 11 } },
-            grid: { color: 'rgba(148, 163, 255, 0.15)', drawBorder: false }
+            ticks: { color: '#5f5448', font: { size: 11 } },
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
           },
           y: {
-            ticks: { color: '#cbd5ff', font: { size: 11 } },
+            ticks: { color: '#7A6B5D', font: { size: 11 } },
             grid: { display: false }
           }
         },
@@ -1243,9 +1241,9 @@
               maxZoom: 17,
               max: 1.0,
               gradient: {
-                0.0: 'rgba(56, 189, 248, 0)',
-                0.2: 'rgba(56, 189, 248, 0.4)',
-                0.4: 'rgba(139, 92, 246, 0.6)',
+                0.0: 'rgba(184, 152, 107, 0)',
+                0.2: 'rgba(184, 152, 107, 0.4)',
+                0.4: 'rgba(154, 138, 166, 0.6)',
                 0.6: 'rgba(236, 72, 153, 0.7)',
                 0.8: 'rgba(239, 68, 68, 0.8)',
                 1.0: 'rgba(251, 146, 60, 1.0)'
@@ -1260,8 +1258,8 @@
             
             L.circleMarker([lat, lng], {
               radius: Math.min(12, 4 + (count / maxCount) * 8),
-              fillColor: '#7dd3ff',
-              color: '#3b82f6',
+              fillColor: '#8B7355',
+              color: '#8B7355',
               weight: 2,
               opacity: 0.8,
               fillOpacity: opacity
@@ -1280,8 +1278,8 @@
                 <i style="background: rgba(251, 146, 60, 1.0);"></i> 60+ studios<br/>
                 <i style="background: rgba(239, 68, 68, 0.8);"></i> 40-59 studios<br/>
                 <i style="background: rgba(236, 72, 153, 0.7);"></i> 20-39 studios<br/>
-                <i style="background: rgba(139, 92, 246, 0.6);"></i> 10-19 studios<br/>
-                <i style="background: rgba(56, 189, 248, 0.4);"></i> &lt;10 studios
+                <i style="background: rgba(154, 138, 166, 0.6);"></i> 10-19 studios<br/>
+                <i style="background: rgba(184, 152, 107, 0.4);"></i> &lt;10 studios
               </div>
             `;
             return div;
@@ -1291,14 +1289,14 @@
           // If map can't be initialized (e.g., Leaflet not loaded or file:// protocol issues)
           const mapElement = document.getElementById('map');
           if (mapElement) {
-            mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
+            mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8B7355; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
           }
         }
       } catch (error) {
         console.warn('Map initialization failed:', error);
         const mapElement = document.getElementById('map');
         if (mapElement) {
-          mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3ff; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
+          mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8B7355; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
         }
       }
     }
