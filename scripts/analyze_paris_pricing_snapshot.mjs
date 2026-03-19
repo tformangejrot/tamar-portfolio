@@ -286,7 +286,7 @@ function inferUnlimitedDurationMonths(membership) {
 
 function parseArrondissementNumber(value) {
   const txt = String(value || "").toLowerCase();
-  const match = txt.match(/\b([1-9]|1[0-9]|20)\b/);
+  const match = txt.match(/\b(0?[1-9]|1[0-9]|20)\b/);
   if (!match) return null;
   const n = Number(match[1]);
   if (n >= 1 && n <= 20) return n;
@@ -298,6 +298,22 @@ function getGeoBucket(arrondissementNumber) {
     if (b.arrs.includes(arrondissementNumber)) return b;
   }
   return null;
+}
+
+function getLocationArrondissementNumbers(studio) {
+  const out = [];
+  const locations = Array.isArray(studio?.locations) ? studio.locations : [];
+
+  if (locations.length > 0) {
+    for (const loc of locations) {
+      out.push(parseArrondissementNumber(loc?.arrondissement));
+    }
+    return out;
+  }
+
+  // Fallback for records that still only have top-level arrondissement.
+  out.push(parseArrondissementNumber(studio?.arrondissement));
+  return out;
 }
 
 function classifyIntroType(offer) {
@@ -1241,17 +1257,20 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
     for (const studio of active) {
       const drop = Number(studio?.drop_in?.price);
       if (!Number.isFinite(drop) || drop <= 0) continue;
-      const arr = parseArrondissementNumber(studio.arrondissement);
-      if (!arr) {
-        unknownCount += 1;
-        continue;
+
+      const arrondissementNumbers = getLocationArrondissementNumbers(studio);
+      for (const arr of arrondissementNumbers) {
+        if (!arr) {
+          unknownCount += 1;
+          continue;
+        }
+        const bucket = getGeoBucket(arr);
+        if (!bucket) {
+          unknownCount += 1;
+          continue;
+        }
+        bucketValues.get(bucket.key).push(drop);
       }
-      const bucket = getGeoBucket(arr);
-      if (!bucket) {
-        unknownCount += 1;
-        continue;
-      }
-      bucketValues.get(bucket.key).push(drop);
     }
 
     const geographic = GEO_BUCKETS.map((bucket) => {

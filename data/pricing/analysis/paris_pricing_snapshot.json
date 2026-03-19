@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T11:37:59.159Z",
+  "generated_at": "2026-03-19T19:28:02.007Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
     "approved_records_total": 228,
@@ -5956,26 +5956,26 @@
         "area_avg_dropin": [
           {
             "area": "Central",
-            "avg_drop_in": 18,
-            "studio_count": 1
+            "avg_drop_in": 31.19,
+            "studio_count": 52
           },
           {
             "area": "West+Southwest",
-            "avg_drop_in": 31.6,
-            "studio_count": 35
+            "avg_drop_in": 35.9,
+            "studio_count": 101
           },
           {
             "area": "East+Northeast",
-            "avg_drop_in": 26.97,
-            "studio_count": 43
+            "avg_drop_in": 27.44,
+            "studio_count": 110
           },
           {
             "area": "South+Southeast",
-            "avg_drop_in": 24.5,
-            "studio_count": 6
+            "avg_drop_in": 22.85,
+            "studio_count": 13
           }
         ],
-        "unknown_arrondissement_count": 129
+        "unknown_arrondissement_count": 58
       }
     },
     "layer8_business_model_profiles": {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T08:02:30.112Z",
+  "generated_at": "2026-03-19T19:28:02.072Z",
   "source_files": {
     "consolidated": "data/processed/studios_consolidated_boutique.json",
     "approved": "data/pricing/paris_pricing_approved_records.json",
@@ -7,8 +7,8 @@
   },
   "summary": {
     "queue_size": 0,
-    "excluded_already_approved": 243,
-    "excluded_manual": 119
+    "excluded_already_approved": 242,
+    "excluded_manual": 120
   },
   "records": []
 }
