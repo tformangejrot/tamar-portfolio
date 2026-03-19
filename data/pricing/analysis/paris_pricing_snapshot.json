@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T10:20:16.813Z",
+  "generated_at": "2026-03-19T10:30:09.061Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
     "approved_records_total": 228,
@@ -197,15 +197,15 @@
     },
     {
       "modality": "yoga",
-      "n": 101,
-      "observations": 101,
-      "avg_drop_in": 27.24,
+      "n": 97,
+      "observations": 97,
+      "avg_drop_in": 26.4,
       "median_drop_in": 26,
       "min_drop_in": 14,
-      "max_drop_in": 55,
+      "max_drop_in": 40,
       "q1": 23,
       "q3": 30,
-      "range": 41
+      "range": 26
     },
     {
       "modality": "prenatal_postnatal",
@@ -889,9 +889,9 @@
         "distribution": {
           "0": 9,
           "1": 70,
-          "2": 74,
-          "3": 36,
-          "4+": 39
+          "2": 76,
+          "3": 35,
+          "4+": 38
         },
         "zero_category_studios": [
           {
@@ -1068,22 +1068,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "Reformation",
-            "domain": "reformation-pilates.com",
-            "category_count": 6,
-            "categories": [
-              "barre",
-              "mat_pilates",
-              "prenatal_postnatal",
-              "reformer_pilates",
-              "strength_conditioning",
-              "yoga"
-            ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": true
-          },
-          {
             "studio_name": "Athletx Rebel",
             "domain": "athletxrebel.com",
             "category_count": 5,
@@ -1246,6 +1230,21 @@
             "has_modality_specific_pricing": false,
             "reformer_only_specific_pricing": false,
             "reformer_and_mat_no_split_pricing": false
+          },
+          {
+            "studio_name": "Reformation",
+            "domain": "reformation-pilates.com",
+            "category_count": 5,
+            "categories": [
+              "barre",
+              "mat_pilates",
+              "prenatal_postnatal",
+              "reformer_pilates",
+              "strength_conditioning"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "Studio 3C",
@@ -1457,20 +1456,6 @@
             "has_modality_specific_pricing": false,
             "reformer_only_specific_pricing": false,
             "reformer_and_mat_no_split_pricing": false
-          },
-          {
-            "studio_name": "Sense Club",
-            "domain": "sense-club.fr",
-            "category_count": 4,
-            "categories": [
-              "mat_pilates",
-              "reformer_pilates",
-              "strength_conditioning",
-              "yoga"
-            ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "Slowe Wellness House",
@@ -1839,19 +1824,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "Le Studio Lagree",
-            "domain": "lestudiolagree.com",
-            "category_count": 3,
-            "categories": [
-              "mat_pilates",
-              "reformer_pilates",
-              "yoga"
-            ],
-            "has_modality_specific_pricing": true,
-            "reformer_only_specific_pricing": true,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "Noble Art Club",
             "domain": "nobleartclub.fr",
             "category_count": 3,
@@ -1865,17 +1837,17 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "Sculpt",
-            "domain": "sculptclub.fr",
+            "studio_name": "Sense Club",
+            "domain": "sense-club.fr",
             "category_count": 3,
             "categories": [
               "mat_pilates",
               "reformer_pilates",
-              "yoga"
+              "strength_conditioning"
             ],
-            "has_modality_specific_pricing": true,
-            "reformer_only_specific_pricing": true,
-            "reformer_and_mat_no_split_pricing": false
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": true
           },
           {
             "studio_name": "Snake & Twist",
@@ -2482,6 +2454,18 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
+            "studio_name": "Le Studio Lagree",
+            "domain": "lestudiolagree.com",
+            "category_count": 2,
+            "categories": [
+              "mat_pilates",
+              "reformer_pilates"
+            ],
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
             "studio_name": "Le Vestiaire Vincennes",
             "domain": "levestiairevincennes.fr",
             "category_count": 2,
@@ -2734,6 +2718,18 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
+            "studio_name": "Sculpt",
+            "domain": "sculptclub.fr",
+            "category_count": 2,
+            "categories": [
+              "mat_pilates",
+              "reformer_pilates"
+            ],
+            "has_modality_specific_pricing": true,
+            "reformer_only_specific_pricing": true,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
             "studio_name": "SEQUOIIA",
             "domain": "sequoiia.com",
             "category_count": 2,
@@ -2944,13 +2940,13 @@
         },
         {
           "modality": "yoga",
-          "n_studios": 101,
-          "n_observations": 101,
-          "avg_drop_in": 27.24,
+          "n_studios": 97,
+          "n_observations": 97,
+          "avg_drop_in": 26.4,
           "median_drop_in": 26,
           "min_drop_in": 14,
-          "max_drop_in": 55,
-          "range": 41
+          "max_drop_in": 40,
+          "range": 26
         },
         {
           "modality": "prenatal_postnatal",
@@ -5301,9 +5297,9 @@
         },
         {
           "modality": "yoga",
-          "avg_drop_in_price": 27.24,
+          "avg_drop_in_price": 26.4,
           "avg_capacity": 22,
-          "estimated_max_revenue_per_class": 599.28
+          "estimated_max_revenue_per_class": 580.8
         },
         {
           "modality": "prenatal_postnatal",
@@ -5397,7 +5393,7 @@
           "q1": 23,
           "median": 26,
           "q3": 30,
-          "max": 55
+          "max": 40
         },
         {
           "modality": "prenatal_postnatal",

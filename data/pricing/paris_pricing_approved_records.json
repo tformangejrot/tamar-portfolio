@@ -8674,8 +8674,7 @@
         "fitness",
         "lagree",
         "pilates",
-        "vinyasa-yoga",
-        "yoga"
+        "vinyasa-yoga"
       ],
       "arrondissement": null,
       "data_collected_date": "2026-03-11",
@@ -20570,8 +20569,7 @@
       "categories": [
         "lagree",
         "pilates",
-        "fitness",
-        "yoga"
+        "fitness"
       ],
       "arrondissement": "Paris",
       "data_collected_date": "2026-03-11",
@@ -26737,8 +26735,7 @@
         "pilates",
         "prenatal",
         "reformer-pilates",
-        "strength-training",
-        "yoga"
+        "strength-training"
       ],
       "arrondissement": "Paris 01",
       "data_collected_date": "2026-03-11",
@@ -27976,8 +27973,7 @@
         "mat-pilates",
         "pilates",
         "reformer-pilates",
-        "sculpt",
-        "yoga"
+        "sculpt"
       ],
       "arrondissement": "Paris 17",
       "data_collected_date": "2026-03-11",
@@ -28321,8 +28317,7 @@
         "fitness",
         "pilates",
         "reformer-pilates",
-        "strength-training",
-        "yoga"
+        "strength-training"
       ],
       "arrondissement": "Paris 06",
       "data_collected_date": "2026-03-11",
