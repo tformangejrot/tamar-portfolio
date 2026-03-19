@@ -161,6 +161,10 @@ const STUDIO_MODALITY_OVERRIDES = {
   remove_specific_modalities_by_domain: {
     "lecubefightclub.fr": new Set(["mat_pilates", "reformer_pilates", "indoor_cycling", "aqua_cycling"]),
     "bikramyogaparis.com": new Set(["reformer_pilates"]),
+    "jumpmanfitness.com": new Set(["indoor_cycling", "aqua_cycling"]),
+    "aqua-by.com": new Set(["indoor_cycling"]),
+    "ateliermood.com": new Set(["indoor_cycling"]),
+    "lehyve.fr": new Set(["indoor_cycling"]),
   },
   // This studio has intro-only offers but no valid drop-in price.
   treat_shared_dropin_as_missing_domains: new Set(["biopilates.fr"]),

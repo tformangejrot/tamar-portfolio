@@ -6369,106 +6369,6 @@
       "manual_verified": true
     },
     {
-      "studio_name": "A l'Eau Bike Paris",
-      "domain": "aleaubike.fr",
-      "website": "http://www.aleaubike.fr/",
-      "pricing_url": "http://www.aleaubike.fr/tarifs/",
-      "categories": [
-        "aqua-cycling",
-        "cycling",
-        "fitness",
-        "indoor-cycling"
-      ],
-      "arrondissement": "Paris 02",
-      "data_collected_date": "2026-03-11",
-      "booking_software": "proprietary",
-      "currency": "EUR",
-      "pricing_publicly_available": true,
-      "notes": "Manual update from provided screenshot; values captured from 45-minute aquabiking pricing column only.",
-      "drop_in": {
-        "price": 45,
-        "duration_minutes": 45
-      },
-      "intro_offers": [],
-      "class_packs": [
-        {
-          "name": "Aquabiking 45 min - 6 seances",
-          "classes": 6,
-          "total_price": 200,
-          "price_per_class": 33.33,
-          "discount_vs_dropin_pct": 25.93,
-          "validity_days": null,
-          "notes": ""
-        },
-        {
-          "name": "Aquabiking 45 min - 12 seances",
-          "classes": 12,
-          "total_price": 360,
-          "price_per_class": 30,
-          "discount_vs_dropin_pct": 33.33,
-          "validity_days": null,
-          "notes": ""
-        },
-        {
-          "name": "Aquabiking 45 min - 20 seances",
-          "classes": 20,
-          "total_price": 520,
-          "price_per_class": 26,
-          "discount_vs_dropin_pct": 42.22,
-          "validity_days": null,
-          "notes": ""
-        }
-      ],
-      "memberships": [
-        {
-          "name": "Abonnement 6 mois (45 min)",
-          "monthly_price": 90,
-          "classes_included": null,
-          "estimated_classes_per_month": null,
-          "effective_price_per_class": null,
-          "discount_vs_dropin_pct": null,
-          "commitment_months": 6,
-          "notes": "Additional 12 EUR per session."
-        },
-        {
-          "name": "Abonnement annuel illimite (45 min)",
-          "monthly_price": 190,
-          "classes_included": "unlimited",
-          "estimated_classes_per_month": null,
-          "effective_price_per_class": null,
-          "discount_vs_dropin_pct": null,
-          "commitment_months": 12,
-          "notes": "1 session max per day."
-        }
-      ],
-      "discounts": [],
-      "expiration_policy": {
-        "single_class_validity_days": null,
-        "pack_validity_days": null,
-        "notes": "Validity periods are not specified in the provided screenshot."
-      },
-      "uses_credit_system": false,
-      "credit_system_notes": null,
-      "drop_in_by_modality": {
-        "aquabiking_45min_single": 45
-      },
-      "extraction_meta": {
-        "source": "manual_update",
-        "evidence_urls": [
-          "http://www.aleaubike.fr/tarifs/"
-        ],
-        "evidence_line_count": 1,
-        "extracted_at": "2026-03-11T00:00:00.000Z"
-      },
-      "confidence_score": 100,
-      "confidence_tier": "high",
-      "review_required": false,
-      "confidence_reasons": [
-        "manual_verified"
-      ],
-      "manual_verified": true
-    },
-    {
       "studio_name": "Apollo Sporting Club",
       "domain": "apollosportingclub.com",
       "website": "https://apollosportingclub.com/",
@@ -19733,7 +19633,6 @@
         "strength-training",
         "pilates",
         "reformer-pilates",
-        "cycling",
         "aqua-cycling",
         "hyrox"
       ],

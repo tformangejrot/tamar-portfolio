@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-03-19T08:53:01.534Z",
+  "generated_at": "2026-03-19T09:15:38.131Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
-    "approved_records_total": 229,
-    "in_scope_records": 229,
+    "approved_records_total": 228,
+    "in_scope_records": 228,
     "coverage": {
-      "with_drop_in": 215,
-      "with_class_packs": 219,
-      "with_memberships": 162,
+      "with_drop_in": 214,
+      "with_class_packs": 218,
+      "with_memberships": 161,
       "with_intro_offers": 185
     },
     "credit_systems": {
       "count": 58,
-      "pct": 25.3,
+      "pct": 25.4,
       "examples": [
         "20edanse.com",
         "adrenaline-sport-cafe.fr",
@@ -43,18 +43,18 @@
       }
     },
     "excluded_records": 0,
-    "source_records_before_dedupe": 243
+    "source_records_before_dedupe": 242
   },
   "benchmarks": {
     "drop_in": {
-      "n": 215,
+      "n": 214,
       "min": 13,
       "q1": 24,
       "median": 29,
       "q3": 35,
       "max": 60,
-      "mean": 30.31,
-      "stddev": 9.28
+      "mean": 30.24,
+      "stddev": 9.25
     },
     "drop_in_distribution": [
       {
@@ -83,7 +83,7 @@
       },
       {
         "label": "40EUR+",
-        "count": 38
+        "count": 37
       }
     ],
     "class_pack_price_per_class": [
@@ -111,14 +111,14 @@
       },
       {
         "bucket": "20 classes",
-        "n": 159,
+        "n": 158,
         "min": 10,
         "q1": 19.45,
         "median": 24,
         "q3": 30,
         "max": 42,
-        "mean": 24.72,
-        "stddev": 6.7
+        "mean": 24.71,
+        "stddev": 6.72
       }
     ],
     "memberships_monthly_price_by_classes_per_month": [
@@ -160,14 +160,14 @@
       }
     ],
     "unlimited_memberships_monthly_price": {
-      "n": 210,
+      "n": 209,
       "min": 36,
-      "q1": 131.88,
+      "q1": 131.67,
       "median": 169,
-      "q3": 229.75,
+      "q3": 230,
       "max": 790,
-      "mean": 198.23,
-      "stddev": 110.19
+      "mean": 198.27,
+      "stddev": 110.45
     }
   },
   "modality_drop_in_comparison": [
@@ -281,27 +281,27 @@
     },
     {
       "modality": "indoor_cycling",
-      "n": 11,
-      "observations": 11,
-      "avg_drop_in": 33.27,
-      "median_drop_in": 34,
-      "min_drop_in": 27,
-      "max_drop_in": 45,
-      "q1": 29.5,
-      "q3": 35,
-      "range": 18
+      "n": 6,
+      "observations": 6,
+      "avg_drop_in": 31.17,
+      "median_drop_in": 30,
+      "min_drop_in": 29,
+      "max_drop_in": 35,
+      "q1": 29.25,
+      "q3": 33,
+      "range": 6
     },
     {
       "modality": "aqua_cycling",
-      "n": 4,
-      "observations": 4,
-      "avg_drop_in": 38,
-      "median_drop_in": 36,
+      "n": 3,
+      "observations": 3,
+      "avg_drop_in": 35.67,
+      "median_drop_in": 35,
       "min_drop_in": 35,
-      "max_drop_in": 45,
+      "max_drop_in": 37,
       "q1": 35,
-      "q3": 39,
-      "range": 10
+      "q3": 36,
+      "range": 2
     },
     {
       "modality": "running",
@@ -355,28 +355,28 @@
   "pricing_option_coverage": [
     {
       "option": "drop_in",
-      "count": 229,
+      "count": 228,
       "pct": 100
     },
     {
       "option": "pack_5",
       "count": 155,
-      "pct": 67.7
+      "pct": 68
     },
     {
       "option": "pack_10",
       "count": 195,
-      "pct": 85.2
+      "pct": 85.5
     },
     {
       "option": "pack_20",
-      "count": 159,
-      "pct": 69.4
+      "count": 158,
+      "pct": 69.3
     },
     {
       "option": "pack_30",
       "count": 49,
-      "pct": 21.4
+      "pct": 21.5
     },
     {
       "option": "pack_40",
@@ -386,22 +386,22 @@
     {
       "option": "pack_50",
       "count": 41,
-      "pct": 17.9
+      "pct": 18
     },
     {
       "option": "membership_4_per_month",
       "count": 53,
-      "pct": 23.1
+      "pct": 23.2
     },
     {
       "option": "membership_8_per_month",
       "count": 62,
-      "pct": 27.1
+      "pct": 27.2
     },
     {
       "option": "membership_12_per_month",
       "count": 41,
-      "pct": 17.9
+      "pct": 18
     },
     {
       "option": "unlimited_1_week",
@@ -416,22 +416,22 @@
     {
       "option": "unlimited_3_months",
       "count": 28,
-      "pct": 12.2
+      "pct": 12.3
     },
     {
       "option": "unlimited_annual",
-      "count": 56,
-      "pct": 24.5
+      "count": 55,
+      "pct": 24.1
     },
     {
       "option": "intro_3_class_pack",
       "count": 94,
-      "pct": 41
+      "pct": 41.2
     },
     {
       "option": "single_trial_class",
       "count": 107,
-      "pct": 46.7
+      "pct": 46.9
     }
   ],
   "discount_curves": {
@@ -460,14 +460,14 @@
       },
       {
         "bucket": "20 classes",
-        "n": 186,
+        "n": 185,
         "min": 0,
-        "q1": 17.21,
-        "median": 22.46,
-        "q3": 28.49,
+        "q1": 17.2,
+        "median": 22.41,
+        "q3": 28.26,
         "max": 50,
-        "mean": 21.81,
-        "stddev": 9.73
+        "mean": 21.7,
+        "stddev": 9.64
       },
       {
         "bucket": "30 classes",
@@ -540,11 +540,11 @@
     ]
   },
   "unlimited_break_even": {
-    "studios_considered": 67,
-    "average_break_even_classes_per_month": 10.62,
-    "median_break_even_classes_per_month": 9.46,
-    "p25_break_even_classes_per_month": 7.41,
-    "p75_break_even_classes_per_month": 12.54,
+    "studios_considered": 66,
+    "average_break_even_classes_per_month": 10.67,
+    "median_break_even_classes_per_month": 9.6,
+    "p25_break_even_classes_per_month": 7.5,
+    "p75_break_even_classes_per_month": 12.55,
     "details_preview": [
       {
         "domain": "tffacademy.fr",
@@ -870,16 +870,16 @@
   ],
   "layers": {
     "layer1_market_overview": {
-      "studios_analyzed": 229,
-      "with_pricing_available": 215,
-      "with_memberships": 162,
+      "studios_analyzed": 228,
+      "with_pricing_available": 214,
+      "with_memberships": 161,
       "offering_intro_offers": 185,
       "dropin_metrics": {
-        "average": 30.31,
+        "average": 30.24,
         "median": 29,
         "lowest": 13,
         "highest": 60,
-        "stddev": 9.28
+        "stddev": 9.25
       },
       "methodology": {
         "dropin_distribution_source": "Drop-in distribution is built only from drop_in.price values (not intro offers, packs, or memberships)."
@@ -896,14 +896,14 @@
           "wellness",
           "meditation"
         ],
-        "total_studios": 229,
-        "studios_with_2_plus_categories": 153,
+        "total_studios": 228,
+        "studios_with_2_plus_categories": 151,
         "distribution": {
           "0": 9,
-          "1": 67,
-          "2": 75,
+          "1": 68,
+          "2": 74,
           "3": 36,
-          "4+": 42
+          "4+": 41
         },
         "zero_category_studios": [
           {
@@ -1231,21 +1231,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "Jumpman",
-            "domain": "jumpmanfitness.com",
-            "category_count": 5,
-            "categories": [
-              "dance",
-              "indoor_cycling",
-              "mat_pilates",
-              "strength_conditioning",
-              "trampoline"
-            ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "KAH Studio",
             "domain": "kahstudioandcoffee.com",
             "category_count": 5,
@@ -1431,6 +1416,20 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
+            "studio_name": "Jumpman",
+            "domain": "jumpmanfitness.com",
+            "category_count": 4,
+            "categories": [
+              "dance",
+              "mat_pilates",
+              "strength_conditioning",
+              "trampoline"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
             "studio_name": "la Clairiere",
             "domain": "laclairiere-bienetre.com",
             "category_count": 4,
@@ -1441,20 +1440,6 @@
               "yoga"
             ],
             "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
-            "studio_name": "Le Hyve",
-            "domain": "lehyve.fr",
-            "category_count": 4,
-            "categories": [
-              "aqua_cycling",
-              "indoor_cycling",
-              "reformer_pilates",
-              "strength_conditioning"
-            ],
-            "has_modality_specific_pricing": true,
             "reformer_only_specific_pricing": false,
             "reformer_and_mat_no_split_pricing": false
           },
@@ -1703,19 +1688,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "Aqua by",
-            "domain": "aqua-by.com",
-            "category_count": 3,
-            "categories": [
-              "aqua_cycling",
-              "indoor_cycling",
-              "strength_conditioning"
-            ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "Naamaste",
             "domain": "backoffice.bsport.io",
             "category_count": 3,
@@ -1878,6 +1850,19 @@
               "yoga"
             ],
             "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
+            "studio_name": "Le Hyve",
+            "domain": "lehyve.fr",
+            "category_count": 3,
+            "categories": [
+              "aqua_cycling",
+              "reformer_pilates",
+              "strength_conditioning"
+            ],
+            "has_modality_specific_pricing": true,
             "reformer_only_specific_pricing": false,
             "reformer_and_mat_no_split_pricing": false
           },
@@ -2208,18 +2193,6 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
-            "studio_name": "A l'Eau Bike Paris",
-            "domain": "aleaubike.fr",
-            "category_count": 2,
-            "categories": [
-              "aqua_cycling",
-              "indoor_cycling"
-            ],
-            "has_modality_specific_pricing": false,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
             "studio_name": "Apyzen",
             "domain": "apycem.com",
             "category_count": 2,
@@ -2232,24 +2205,24 @@
             "reformer_and_mat_no_split_pricing": false
           },
           {
+            "studio_name": "Aqua by",
+            "domain": "aqua-by.com",
+            "category_count": 2,
+            "categories": [
+              "aqua_cycling",
+              "strength_conditioning"
+            ],
+            "has_modality_specific_pricing": false,
+            "reformer_only_specific_pricing": false,
+            "reformer_and_mat_no_split_pricing": false
+          },
+          {
             "studio_name": "AT AUM",
             "domain": "ataum-paris.fr",
             "category_count": 2,
             "categories": [
               "mat_pilates",
               "yoga"
-            ],
-            "has_modality_specific_pricing": true,
-            "reformer_only_specific_pricing": false,
-            "reformer_and_mat_no_split_pricing": false
-          },
-          {
-            "studio_name": "Atelier Mood",
-            "domain": "ateliermood.com",
-            "category_count": 2,
-            "categories": [
-              "aqua_cycling",
-              "indoor_cycling"
             ],
             "has_modality_specific_pricing": true,
             "reformer_only_specific_pricing": false,
@@ -2985,7 +2958,7 @@
         },
         {
           "label": "40EUR+",
-          "count": 38
+          "count": 37
         }
       ],
       "modality_pricing_table": [
@@ -3081,23 +3054,23 @@
         },
         {
           "modality": "indoor_cycling",
-          "n_studios": 11,
-          "n_observations": 11,
-          "avg_drop_in": 33.27,
-          "median_drop_in": 34,
-          "min_drop_in": 27,
-          "max_drop_in": 45,
-          "range": 18
+          "n_studios": 6,
+          "n_observations": 6,
+          "avg_drop_in": 31.17,
+          "median_drop_in": 30,
+          "min_drop_in": 29,
+          "max_drop_in": 35,
+          "range": 6
         },
         {
           "modality": "aqua_cycling",
-          "n_studios": 4,
-          "n_observations": 4,
-          "avg_drop_in": 38,
-          "median_drop_in": 36,
+          "n_studios": 3,
+          "n_observations": 3,
+          "avg_drop_in": 35.67,
+          "median_drop_in": 35,
           "min_drop_in": 35,
-          "max_drop_in": 45,
-          "range": 10
+          "max_drop_in": 37,
+          "range": 2
         },
         {
           "modality": "running",
@@ -3142,7 +3115,7 @@
       ]
     },
     "layer2_pricing_structure": {
-      "pct_studios_with_intro": 80.8,
+      "pct_studios_with_intro": 81.1,
       "average_intro_price": 52.37,
       "average_intro_price_per_class": 26.26,
       "intro_types": [
@@ -3164,7 +3137,7 @@
         },
         {
           "type": "no_intro_offer",
-          "count": 44
+          "count": 43
         }
       ],
       "intro_discount_histogram": [
@@ -3206,9 +3179,9 @@
         },
         {
           "pack": "20 pack",
-          "n_studios": 159,
-          "avg_price_per_class": 24.72,
-          "avg_discount_vs_dropin_pct": 22.25
+          "n_studios": 158,
+          "avg_price_per_class": 24.71,
+          "avg_discount_vs_dropin_pct": 22.12
         },
         {
           "pack": "30 pack",
@@ -3431,9 +3404,9 @@
         },
         "6": {
           "scope_label": "6-pack only",
-          "n_pack_rows": 10,
+          "n_pack_rows": 9,
           "n_pack_rows_with_validity": 9,
-          "n_studios": 8,
+          "n_studios": 7,
           "n_studios_with_validity": 7,
           "histogram": [
             {
@@ -3596,9 +3569,9 @@
         },
         "12": {
           "scope_label": "12-pack only",
-          "n_pack_rows": 17,
+          "n_pack_rows": 16,
           "n_pack_rows_with_validity": 14,
-          "n_studios": 15,
+          "n_studios": 14,
           "n_studios_with_validity": 12,
           "histogram": [
             {
@@ -3728,9 +3701,9 @@
         },
         "20": {
           "scope_label": "20-pack only",
-          "n_pack_rows": 186,
+          "n_pack_rows": 185,
           "n_pack_rows_with_validity": 157,
-          "n_studios": 159,
+          "n_studios": 158,
           "n_studios_with_validity": 135,
           "histogram": [
             {
@@ -4520,9 +4493,9 @@
         },
         "all": {
           "scope_label": "All pack sizes",
-          "n_pack_rows": 1104,
+          "n_pack_rows": 1101,
           "n_pack_rows_with_validity": 909,
-          "n_studios": 219,
+          "n_studios": 218,
           "n_studios_with_validity": 178,
           "histogram": [
             {
@@ -4613,9 +4586,9 @@
       ]
     },
     "layer4_membership_models": {
-      "pct_studios_with_memberships": 70.7,
-      "pct_with_unlimited_memberships": 43.2,
-      "pct_with_class_based_memberships": 55.9,
+      "pct_studios_with_memberships": 70.6,
+      "pct_with_unlimited_memberships": 43,
+      "pct_with_class_based_memberships": 55.7,
       "membership_adoption_pie": [
         {
           "type": "no_membership",
@@ -4631,7 +4604,7 @@
         },
         {
           "type": "both",
-          "count": 65
+          "count": 64
         }
       ],
       "membership_types_table": [
@@ -4658,9 +4631,9 @@
         },
         {
           "membership_type": "Unlimited",
-          "n_memberships": 210,
-          "n_studios": 97,
-          "avg_monthly_price": 198.23,
+          "n_memberships": 209,
+          "n_studios": 96,
+          "avg_monthly_price": 198.27,
           "avg_effective_price_per_class": 17.17
         }
       ],
@@ -4668,12 +4641,12 @@
         "unlimited_effective_price_per_class": "Uses explicit effective_price_per_class where available. No synthetic classes-per-month is assumed for unlimited plans."
       },
       "commitment_structure": {
-        "denominator_studios_with_memberships": 162,
+        "denominator_studios_with_memberships": 161,
         "methodology": "Mutually exclusive studio buckets by highest commitment found across memberships: <=1 month no commitment, <=3 months, <=6 months, >6 months.",
-        "pct_no_commitment": 22.2,
-        "pct_3_month_commitment": 8,
-        "pct_6_month_commitment": 11.7,
-        "pct_12_month_commitment": 58
+        "pct_no_commitment": 22.4,
+        "pct_3_month_commitment": 8.1,
+        "pct_6_month_commitment": 11.8,
+        "pct_12_month_commitment": 57.8
       }
     },
     "layer5_pricing_strategy": {
@@ -5421,15 +5394,15 @@
         },
         {
           "modality": "indoor_cycling",
-          "avg_drop_in_price": 33.27,
+          "avg_drop_in_price": 31.17,
           "avg_capacity": 45,
-          "estimated_max_revenue_per_class": 1497.15
+          "estimated_max_revenue_per_class": 1402.65
         },
         {
           "modality": "aqua_cycling",
-          "avg_drop_in_price": 38,
+          "avg_drop_in_price": 35.67,
           "avg_capacity": 14,
-          "estimated_max_revenue_per_class": 532
+          "estimated_max_revenue_per_class": 499.38
         },
         {
           "modality": "running",
@@ -5533,19 +5506,19 @@
         },
         {
           "modality": "indoor_cycling",
-          "min": 27,
-          "q1": 29.5,
-          "median": 34,
-          "q3": 35,
-          "max": 45
+          "min": 29,
+          "q1": 29.25,
+          "median": 30,
+          "q3": 33,
+          "max": 35
         },
         {
           "modality": "aqua_cycling",
           "min": 35,
           "q1": 35,
-          "median": 36,
-          "q3": 39,
-          "max": 45
+          "median": 35,
+          "q3": 36,
+          "max": 37
         },
         {
           "modality": "running",
@@ -5645,7 +5618,7 @@
             "studio_count": 6
           }
         ],
-        "unknown_arrondissement_count": 130
+        "unknown_arrondissement_count": 129
       }
     },
     "layer8_business_model_profiles": {
@@ -5653,7 +5626,7 @@
         {
           "studio_type": "pack_driven",
           "count": 65,
-          "pct": 28.4
+          "pct": 28.5
         },
         {
           "studio_type": "membership_driven",
@@ -5662,8 +5635,8 @@
         },
         {
           "studio_type": "hybrid",
-          "count": 154,
-          "pct": 67.2
+          "count": 153,
+          "pct": 67.1
         },
         {
           "studio_type": "no_offer_other",

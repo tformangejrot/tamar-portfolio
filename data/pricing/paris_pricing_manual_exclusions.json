@@ -23,6 +23,10 @@
       "reason": "not_standard_boutique_pricing"
     },
     {
+      "domain": "aleaubike.fr",
+      "reason": "exclude_requested"
+    },
+    {
       "domain": "astrabody-paris8.fr",
       "reason": "infrabiking_out_of_scope"
     },
