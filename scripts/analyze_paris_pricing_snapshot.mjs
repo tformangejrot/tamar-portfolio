@@ -1253,6 +1253,7 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
 
     const bucketValues = new Map();
     for (const bucket of GEO_BUCKETS) bucketValues.set(bucket.key, []);
+    const arrondissementValues = new Map();
     let unknownCount = 0;
     for (const studio of active) {
       const drop = Number(studio?.drop_in?.price);
@@ -1270,6 +1271,9 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
           continue;
         }
         bucketValues.get(bucket.key).push(drop);
+        const arrRows = arrondissementValues.get(arr) || [];
+        arrRows.push(drop);
+        arrondissementValues.set(arr, arrRows);
       }
     }
 
@@ -1281,11 +1285,20 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
         studio_count: values.length,
       };
     });
+    const arrondissementBreakdown = Array.from(arrondissementValues.entries())
+      .sort((a, b) => a[0] - b[0])
+      .map(([arrondissementNumber, values]) => ({
+        arrondissement_number: arrondissementNumber,
+        arrondissement: `Paris ${arrondissementNumber}`,
+        avg_drop_in: round(values.reduce((a, b) => a + b, 0) / (values.length || 1)),
+        studio_count: values.length,
+      }));
     return {
       pricing_spread_boxplots: boxplots,
       geographic_pricing: {
         bucket_mapping: GEO_BUCKETS.map((b) => ({ area: b.label, arrondissements: b.arrs })),
         area_avg_dropin: geographic,
+        arrondissement_avg_dropin: arrondissementBreakdown,
         unknown_arrondissement_count: unknownCount,
       },
     };

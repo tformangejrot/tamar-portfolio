@@ -315,11 +315,18 @@
           <div class="chart-box"><canvas id="l7BoxplotChart"></canvas></div>
         </article>
         <article class="card">
-          <h3>Geographic Pricing (4 Buckets)</h3>
-          <p class="explain">How to read: compare average drop-in by area bucket to identify spatial premiums. "Unknown arrondissement" records are excluded from area averages.</p>
+          <h3>Geographic Pricing</h3>
+          <p class="explain">How to read: compare average drop-in by geography. Toggle between 4 macro buckets and arrondissement-level detail. "Unknown arrondissement" records are excluded from averages.</p>
+          <div style="display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-bottom:8px;">
+            <label for="l7GeoView" style="font-size:11px;color:#8B7355;text-transform:uppercase;letter-spacing:.06em;">View</label>
+            <select id="l7GeoView" style="background:#FFFEFC;color:#2C2A26;border:1px solid rgba(139, 115, 85, 0.35);border-radius:8px;padding:6px 8px;">
+              <option value="buckets">4 buckets</option>
+              <option value="arrondissement">By arrondissement</option>
+            </select>
+          </div>
           <table>
             <thead>
-              <tr><th>Area</th><th>Avg Drop-in</th><th>Studios</th></tr>
+              <tr><th id="l7GeoLabelHeader">Area</th><th>Avg Drop-in</th><th>Studios</th></tr>
             </thead>
             <tbody id="l7GeoRows"></tbody>
           </table>
@@ -386,7 +393,7 @@
         layer4_membership_models: { pct_studios_with_memberships: 0, pct_with_unlimited_memberships: 0, pct_with_class_based_memberships: 0, membership_adoption_pie: [], membership_types_table: [], commitment_structure: {} },
         layer5_pricing_strategy: { avg_drop_in_to_10_pack_price_diff_pct: null, dropin_vs_10pack_discount_histogram: [], membership_vs_pack_scatter: [] },
         layer6_modality_economics_v1: { assumptions: {}, modality_revenue_table: [] },
-        layer7_market_structure: { pricing_spread_boxplots: [], geographic_pricing: { bucket_mapping: [], area_avg_dropin: [], unknown_arrondissement_count: 0 } },
+        layer7_market_structure: { pricing_spread_boxplots: [], geographic_pricing: { bucket_mapping: [], area_avg_dropin: [], arrondissement_avg_dropin: [], unknown_arrondissement_count: 0 } },
         layer8_business_model_profiles: { distribution: [] }
       }
     };
@@ -817,8 +824,18 @@
     }
 
     function renderLayer7(layer) {
-      const box = (layer.pricing_spread_boxplots || []).slice().sort((a, b) => (b.median || 0) - (a.median || 0)).slice(0, 10);
+      const box = (layer.pricing_spread_boxplots || [])
+        .slice()
+        .filter((b) =>
+          Number.isFinite(b?.q1) &&
+          Number.isFinite(b?.q3) &&
+          Number.isFinite(b?.median) &&
+          Number.isFinite(b?.min) &&
+          Number.isFinite(b?.max)
+        )
+        .sort((a, b) => (b.median || 0) - (a.median || 0));
       const labels = box.map((b) => formatModalityLabel(b.modality));
+      if (charts.l7Box) charts.l7Box.destroy();
       charts.l7Box = new Chart(document.getElementById("l7BoxplotChart"), {
         type: "bar",
         data: {
@@ -830,16 +847,47 @@
             { label: "Max", type: "line", data: box.map((b) => b.max), borderColor: PALETTE.clay, pointRadius: 3, tension: 0 }
           ]
         },
-        options: { responsive: true, maintainAspectRatio: false }
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              ticks: {
+                autoSkip: false,
+                minRotation: 28,
+                maxRotation: 35
+              }
+            }
+          }
+        }
       });
 
-      const geo = (layer.geographic_pricing && layer.geographic_pricing.area_avg_dropin) || [];
-      document.getElementById("l7GeoRows").innerHTML = geo.map((r) => `
-        <tr><td>${r.area}</td><td>${money(r.avg_drop_in)}</td><td>${r.studio_count}</td></tr>
-      `).join("") || `<tr><td colspan="3">No geographic pricing data.</td></tr>`;
+      const geoPricing = layer.geographic_pricing || {};
+      const byBuckets = geoPricing.area_avg_dropin || [];
+      const byArrondissement = geoPricing.arrondissement_avg_dropin || [];
+      const geoSelect = document.getElementById("l7GeoView");
+      const renderGeoRows = () => {
+        const requestedView = geoSelect.value || "buckets";
+        const selectedView = requestedView === "arrondissement" && byArrondissement.length ? "arrondissement" : "buckets";
+        geoSelect.value = selectedView;
+        const rows = selectedView === "arrondissement" ? byArrondissement : byBuckets;
+        document.getElementById("l7GeoLabelHeader").textContent = selectedView === "arrondissement" ? "Arrondissement" : "Area";
+        document.getElementById("l7GeoRows").innerHTML = rows.map((r) => `
+          <tr><td>${selectedView === "arrondissement" ? (r.arrondissement || `Paris ${r.arrondissement_number}`) : r.area}</td><td>${money(r.avg_drop_in)}</td><td>${r.studio_count}</td></tr>
+        `).join("") || `<tr><td colspan="3">No geographic pricing data.</td></tr>`;
 
-      const unknown = layer.geographic_pricing ? layer.geographic_pricing.unknown_arrondissement_count : 0;
-      document.getElementById("l7GeoMeta").innerHTML = `<span class="chip">Unknown arrondissement count: ${unknown}</span>`;
+        const unknown = Number(geoPricing.unknown_arrondissement_count) || 0;
+        document.getElementById("l7GeoMeta").innerHTML = `
+          <span class="chip">View: ${selectedView === "arrondissement" ? "Arrondissement" : "4 buckets"}</span>
+          <span class="chip">Rows shown: ${rows.length}</span>
+          <span class="chip">Unknown arrondissement count: ${unknown}</span>
+        `;
+      };
+      if (!geoSelect.dataset.boundLayer7Toggle) {
+        geoSelect.addEventListener("change", renderGeoRows);
+        geoSelect.dataset.boundLayer7Toggle = "1";
+      }
+      renderGeoRows();
     }
 
     function renderLayer8(layer) {

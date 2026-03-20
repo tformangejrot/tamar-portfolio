@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T19:28:02.007Z",
+  "generated_at": "2026-03-19T19:38:39.219Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
     "approved_records_total": 228,
@@ -5973,6 +5973,128 @@
             "area": "South+Southeast",
             "avg_drop_in": 22.85,
             "studio_count": 13
+          }
+        ],
+        "arrondissement_avg_dropin": [
+          {
+            "arrondissement_number": 1,
+            "arrondissement": "Paris 1",
+            "avg_drop_in": 30.5,
+            "studio_count": 6
+          },
+          {
+            "arrondissement_number": 2,
+            "arrondissement": "Paris 2",
+            "avg_drop_in": 31.72,
+            "studio_count": 26
+          },
+          {
+            "arrondissement_number": 3,
+            "arrondissement": "Paris 3",
+            "avg_drop_in": 30.89,
+            "studio_count": 9
+          },
+          {
+            "arrondissement_number": 4,
+            "arrondissement": "Paris 4",
+            "avg_drop_in": 30.55,
+            "studio_count": 11
+          },
+          {
+            "arrondissement_number": 5,
+            "arrondissement": "Paris 5",
+            "avg_drop_in": 27.33,
+            "studio_count": 3
+          },
+          {
+            "arrondissement_number": 6,
+            "arrondissement": "Paris 6",
+            "avg_drop_in": 37.27,
+            "studio_count": 11
+          },
+          {
+            "arrondissement_number": 7,
+            "arrondissement": "Paris 7",
+            "avg_drop_in": 38.29,
+            "studio_count": 7
+          },
+          {
+            "arrondissement_number": 8,
+            "arrondissement": "Paris 8",
+            "avg_drop_in": 37.92,
+            "studio_count": 12
+          },
+          {
+            "arrondissement_number": 9,
+            "arrondissement": "Paris 9",
+            "avg_drop_in": 29.87,
+            "studio_count": 23
+          },
+          {
+            "arrondissement_number": 10,
+            "arrondissement": "Paris 10",
+            "avg_drop_in": 27.4,
+            "studio_count": 22
+          },
+          {
+            "arrondissement_number": 11,
+            "arrondissement": "Paris 11",
+            "avg_drop_in": 29.33,
+            "studio_count": 30
+          },
+          {
+            "arrondissement_number": 12,
+            "arrondissement": "Paris 12",
+            "avg_drop_in": 28.2,
+            "studio_count": 10
+          },
+          {
+            "arrondissement_number": 13,
+            "arrondissement": "Paris 13",
+            "avg_drop_in": 22.57,
+            "studio_count": 7
+          },
+          {
+            "arrondissement_number": 14,
+            "arrondissement": "Paris 14",
+            "avg_drop_in": 23.17,
+            "studio_count": 6
+          },
+          {
+            "arrondissement_number": 15,
+            "arrondissement": "Paris 15",
+            "avg_drop_in": 30.87,
+            "studio_count": 15
+          },
+          {
+            "arrondissement_number": 16,
+            "arrondissement": "Paris 16",
+            "avg_drop_in": 39.08,
+            "studio_count": 25
+          },
+          {
+            "arrondissement_number": 17,
+            "arrondissement": "Paris 17",
+            "avg_drop_in": 34.68,
+            "studio_count": 28
+          },
+          {
+            "arrondissement_number": 18,
+            "arrondissement": "Paris 18",
+            "avg_drop_in": 27.38,
+            "studio_count": 8
+          },
+          {
+            "arrondissement_number": 19,
+            "arrondissement": "Paris 19",
+            "avg_drop_in": 18.89,
+            "studio_count": 9
+          },
+          {
+            "arrondissement_number": 20,
+            "arrondissement": "Paris 20",
+            "avg_drop_in": 22.25,
+            "studio_count": 8
           }
         ],
         "unknown_arrondissement_count": 58
