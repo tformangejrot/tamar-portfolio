@@ -433,6 +433,14 @@ function normalizedDomain(record) {
     .trim();
 }
 
+function getStudioLocationCount(studio) {
+  const explicitCount = Number(studio?.location_count);
+  if (Number.isFinite(explicitCount) && explicitCount > 0) return explicitCount;
+  const locations = Array.isArray(studio?.locations) ? studio.locations.length : 0;
+  if (locations > 0) return locations;
+  return 1;
+}
+
 function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
   const active = activeRecords;
   const studiosWithDropIn = active.filter((r) => Number.isFinite(r.drop_in?.price));
@@ -441,6 +449,10 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
   const studiosWithIntro = active.filter((r) => (r.intro_offers || []).length > 0);
   const studiosUsingCredits = active.filter((r) => r.uses_credit_system === true);
   const totalStudios = active.length || 1;
+  const locationsRepresented = active
+    .map((studio) => getStudioLocationCount(studio))
+    .filter((v) => Number.isFinite(v) && v > 0)
+    .reduce((acc, v) => acc + v, 0);
 
   const dropInPrices = studiosWithDropIn.map((r) => Number(r.drop_in.price)).filter((v) => Number.isFinite(v) && v > 0);
   const dropInStats = stats(dropInPrices);
@@ -587,6 +599,7 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
   const multiModalityAuditRows = [];
   for (const studio of active) {
     const studioDomain = normalizedDomain(studio);
+    const studioLocationCount = getStudioLocationCount(studio);
     const categories = Array.isArray(studio.categories) ? [...new Set(studio.categories.filter(Boolean))] : [];
     const canonicalSet = new Set();
     const excludedTags = [];
@@ -667,6 +680,7 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
         domain: studio.domain,
         studio_name: studio.studio_name,
         modality: canonical,
+        location_count: studioLocationCount,
         price,
         price_source: Number.isFinite(modalitySpecific) && modalitySpecific > 0 ? "modality_specific" : "shared_drop_in",
       });
@@ -688,10 +702,15 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
     const rows = modalityAttributionRows.filter((r) => r.modality === modality);
     const values = rows.map((r) => r.price).filter((v) => Number.isFinite(v) && v > 0);
     const studioSet = new Set(rows.map((r) => String(r.domain || r.studio_name || "")).filter(Boolean));
+    const locationCount = rows
+      .map((r) => Number(r.location_count))
+      .filter((v) => Number.isFinite(v) && v > 0)
+      .reduce((acc, v) => acc + v, 0);
     const st = stats(values);
     return {
       modality,
       n: studioSet.size,
+      n_locations: locationCount,
       observations: st.n || 0,
       avg_drop_in: st.mean ?? null,
       median_drop_in: st.median ?? null,
@@ -1366,6 +1385,7 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
     layers: {
       layer1_market_overview: {
         studios_analyzed: active.length,
+        locations_represented: locationsRepresented,
         with_pricing_available: studiosWithDropIn.length,
         with_memberships: studiosWithMemberships.length,
         offering_intro_offers: studiosWithIntro.length,
@@ -1386,6 +1406,7 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
         modality_pricing_table: modalityDropInComparison.map((m) => ({
           modality: m.modality,
           n_studios: m.n,
+          n_locations: m.n_locations ?? null,
           n_observations: m.observations,
           avg_drop_in: m.avg_drop_in,
           median_drop_in: m.median_drop_in,

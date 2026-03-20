@@ -162,7 +162,7 @@
           <div id="l1ModalityMeta"></div>
           <table>
             <thead>
-              <tr><th>Modality</th><th>Studios</th><th>Avg Drop-in</th><th>Median</th><th>Low</th><th>High</th></tr>
+              <tr><th>Modality</th><th>Studios</th><th>Locations</th><th>Avg Drop-in</th><th>Median</th><th>Low</th><th>High</th></tr>
             </thead>
             <tbody id="l1ModalityRows"></tbody>
           </table>
@@ -372,6 +372,7 @@
       layers: {
         layer1_market_overview: {
           studios_analyzed: 0,
+          locations_represented: 0,
           with_pricing_available: 0,
           with_memberships: 0,
           offering_intro_offers: 0,
@@ -466,6 +467,7 @@
         ["Studios analyzed", layer.studios_analyzed],
         ["With memberships", layer.with_memberships],
         ["Offering intro offers", layer.offering_intro_offers],
+        ["Locations represented", layer.locations_represented],
         ["Average drop-in", money(metrics.average)],
         ["Median drop-in", money(metrics.median)],
         ["Lowest drop-in", money(metrics.lowest)],
@@ -520,12 +522,13 @@
         <tr>
           <td>${formatModalityLabel(m.modality)}</td>
           <td>${m.n_studios ?? "-"}</td>
+          <td>${m.n_locations ?? "-"}</td>
           <td>${money(m.avg_drop_in)}</td>
           <td>${money(m.median_drop_in)}</td>
           <td>${money(m.min_drop_in)}</td>
           <td>${money(m.max_drop_in)}</td>
         </tr>
-      `).join("") || `<tr><td colspan="6">No modality data.</td></tr>`;
+      `).join("") || `<tr><td colspan="7">No modality data.</td></tr>`;
     }
 
     function renderLayer2(layer) {
@@ -553,7 +556,15 @@
           labels: hist.map((h) => h.label),
           datasets: [{ data: hist.map((h) => h.count), backgroundColor: PALETTE.clay, borderRadius: 8 }]
         },
-        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { title: { display: true, text: "Discount bucket" } },
+            y: { beginAtZero: true, ticks: { precision: 0 }, title: { display: true, text: "Studios" } }
+          }
+        }
       });
 
       const tiers = layer.intro_usage_by_price_tier || [];

@@ -1,6 +1,6 @@
 # Paris Pricing Snapshot
 
-Generated: 2026-03-19T19:38:39.219Z
+Generated: 2026-03-20T08:35:17.093Z
 
 ## Coverage
 
