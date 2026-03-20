@@ -40,10 +40,11 @@
       font-family: "Libre Baskerville", Georgia, serif;
       font-weight: 400;
       color: var(--text);
+      line-height: normal;
     }
     .hero p { margin: 0; color: var(--muted); }
     .wrap { max-width: 1300px; margin: 0 auto; padding: 24px; }
-    .layer { margin-bottom: 26px; }
+    .layer { margin-bottom: 44px; }
     .layer-head { margin-bottom: 12px; }
     .layer-head h2 {
       margin: 0 0 6px;
@@ -51,8 +52,69 @@
       font-family: "Libre Baskerville", Georgia, serif;
       font-weight: 400;
       color: var(--text);
+      line-height: normal;
     }
     .layer-head p { margin: 0; color: var(--muted); font-size: 13px; }
+    #l1Stats { display: none; }
+    .section-text-box {
+      max-width: none;
+      width: 100%;
+      background: #e4dfd8;
+      border: 1px solid rgba(118, 99, 77, 0.22);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+    }
+    .story-copy {
+      max-width: none;
+      margin-bottom: 10px;
+      line-height: 1.7;
+      color: var(--text);
+      font-size: 16px;
+    }
+    .insight-callout {
+      margin: 18px 0 12px;
+      max-width: 760px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--accent);
+      background: rgba(255, 254, 252, 0.7);
+      border-radius: 0 8px 8px 0;
+      font-size: 20px;
+      line-height: 1.35;
+      color: #3f352b;
+      font-weight: 600;
+      letter-spacing: normal;
+    }
+    .story-list {
+      max-width: none;
+      margin: 8px 0 14px 18px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .mini-tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .mini-tile {
+      background: rgba(255, 254, 252, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .mini-tile .k {
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+    .mini-tile .v {
+      margin-top: 3px;
+      font-size: 16px;
+      color: var(--text);
+      font-weight: 600;
+    }
     .stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -133,16 +195,34 @@
 <body>
   <section class="hero">
     <h1>Paris Pricing Dashboard</h1>
-    <p>Multi-layer market structure and pricing strategy view</p>
+    <p>Paris boutique fitness pricing looks standardized — but underneath, the economics are wildly different.</p>
   </section>
 
   <main class="wrap">
     <section class="layer">
       <div class="layer-head">
-        <h2>Layer 1 — Market Overview</h2>
-        <p>Overall pricing landscape and modality premiums.</p>
+        <h2>Why This Matters</h2>
+      </div>
+      <div class="section-text-box">
+        <p class="story-copy">Pricing is one of the most foundational — and least questioned — elements of how boutique fitness studios operate.</p>
+        <p class="story-copy">Over the past decade, pricing in Paris has quietly converged toward a narrow range, regardless of modality, cost structure, or class capacity. While studios differ widely in format and economics, the prices they charge are often strikingly similar.</p>
+        <p class="story-copy">This report analyzes 228 studios (~350 locations) across Paris to understand how pricing is structured today — from drop-ins to memberships — and what that means for how these businesses actually operate.</p>
+        <div class="insight-callout">Average drop-in price: ~€30<br>Range: €13 → €60</div>
       </div>
       <section class="stats" id="l1Stats"></section>
+    </section>
+
+    <section class="layer">
+      <div class="layer-head">
+        <h2>Pricing Clusters</h2>
+      </div>
+      <div class="section-text-box">
+        <p class="story-copy">Paris boutique fitness pricing clusters into a few clearly defined zones.</p>
+        <p class="story-copy">The majority of studios fall within a narrow range of €25 to €35 per class, effectively defining what “boutique fitness” costs in Paris today.</p>
+        <p class="story-copy">Below this sits a smaller budget segment (€18–€21), while a new premium tier is emerging above €45 — primarily driven by Reformer Pilates studios.</p>
+        <p class="story-copy">Despite differences in concept, location, and cost structure, most studios price within a surprisingly tight band.</p>
+        <div class="insight-callout">~80% of studios fall within a €10 range (€25–€35)</div>
+      </div>
       <section class="grid">
         <article class="card">
           <h3>Drop-in Price Distribution</h3>
@@ -152,6 +232,39 @@
           <div class="chart-box"><canvas id="l1DropinChart"></canvas></div>
         </article>
         <article class="card">
+          <h3>Geographic Pricing</h3>
+          <p class="explain">How to read: compare average drop-in by geography. This gives a location lens on the same broader cluster story and can be toggled between macro zones and arrondissement detail.</p>
+          <div style="display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-bottom:8px;">
+            <label for="l7GeoView" style="font-size:11px;color:#8B7355;text-transform:uppercase;letter-spacing:.06em;">View</label>
+            <select id="l7GeoView" style="background:#FFFEFC;color:#2C2A26;border:1px solid rgba(139, 115, 85, 0.35);border-radius:8px;padding:6px 8px;">
+              <option value="buckets">4 buckets</option>
+              <option value="arrondissement">By arrondissement</option>
+            </select>
+          </div>
+          <table>
+            <thead>
+              <tr><th id="l7GeoLabelHeader">Area</th><th>Avg Drop-in</th><th>Studios</th></tr>
+            </thead>
+            <tbody id="l7GeoRows"></tbody>
+          </table>
+          <div id="l7GeoMeta" style="margin-top:10px;"></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="layer">
+      <div class="layer-head">
+        <h2>Pricing by Modality</h2>
+      </div>
+      <div class="section-text-box">
+        <p class="story-copy">At a surface level, pricing appears to follow equipment intensity. Modalities like dance and martial arts, which require little to no equipment, tend to charge less, while cycling and reformer — which require significant upfront investment — charge more.</p>
+        <p class="story-copy">But the reality is more compressed than expected.</p>
+        <p class="story-copy">Across most modalities, pricing still clusters around €25–€30, suggesting that studios are anchoring to a shared market expectation rather than pricing purely based on underlying costs.</p>
+        <p class="story-copy">For years, many operators assumed that ~€30 represented a pricing ceiling. That assumption has had lasting implications for how studios design their business models.</p>
+        <div class="insight-callout">Most modalities cluster around €25–€30 — regardless of cost structure</div>
+      </div>
+      <section class="grid">
+        <article class="card wide">
           <h3>Pricing by Modality</h3>
           <p class="sub">Average and median drop-in by modality</p>
           <p class="explain">How to read: compare avg vs median within each cleaned modality. Studios can contribute to multiple cleaned categories; modality-specific drop-ins are used when available, otherwise shared drop-in is used.</p>
@@ -172,8 +285,18 @@
 
     <section class="layer">
       <div class="layer-head">
-        <h2>Layer 2 — Pricing Structure</h2>
-        <p>Intro acquisition mechanics and discount aggressiveness.</p>
+        <h2>Intro Offers</h2>
+      </div>
+      <div class="section-text-box">
+        <p class="story-copy">Introductory offers are widely used across the market to attract first-time customers.</p>
+        <p class="story-copy">These offers are typically steeply discounted, reflecting the cost of customer acquisition in an increasingly competitive landscape.</p>
+        <p class="story-copy">Two formats dominate:</p>
+        <ul class="story-list">
+          <li>A single discounted first class</li>
+          <li>A 3-class introductory pack</li>
+        </ul>
+        <p class="story-copy">These formats reflect different conversion strategies. Lower-priced studios often rely on single-class trials, while more premium studios lean toward multi-class packs, recognizing that it may take multiple visits to convert a new client.</p>
+        <div class="insight-callout">Average intro discount: ~40% vs drop-in price</div>
       </div>
       <section class="stats" id="l2Stats"></section>
       <section class="grid">
@@ -201,9 +324,22 @@
 
     <section class="layer">
       <div class="layer-head">
-        <h2>Layer 3 — Pack Pricing</h2>
-        <p>Bulk purchase incentive and expiration structure.</p>
+        <h2>Packages</h2>
       </div>
+      <div class="section-text-box">
+        <p class="story-copy">Class packages remain a core pricing mechanism across boutique fitness studios in Paris.</p>
+        <p class="story-copy">The structure of these packages is remarkably consistent. The 10-class pack is the most common offering, and larger packages are typically incentivized with higher discounts.</p>
+        <p class="story-copy">Discounting follows predictable patterns, generally ranging from ~10% to ~35% depending on pack size.</p>
+        <p class="story-copy">Expiration policies are also highly standardized:</p>
+        <ul class="story-list">
+          <li>Small packs (5 classes): ~2–3 months</li>
+          <li>Mid-size packs (10 classes): ~6 months</li>
+          <li>Large packs: ~12 months</li>
+        </ul>
+        <p class="story-copy">This consistency suggests a strong level of market convergence, not just in pricing, but in product design.</p>
+        <div class="insight-callout">The 10-pack is the dominant pricing product across Paris</div>
+      </div>
+      <section class="stats" id="l5Stats"></section>
       <section class="grid">
         <article class="card">
           <h3>Pack Discount Table</h3>
@@ -226,13 +362,30 @@
           <div id="l3ExpirationMeta"></div>
           <div class="chart-box"><canvas id="l3PackExpirationChart"></canvas></div>
         </article>
+        <article class="card wide">
+          <h3>Drop-in vs 10-Pack Discount</h3>
+          <p class="explain">How to read: this distribution shows how strongly studios anchor on drop-in and push customers to 10-packs. Higher bins mean more aggressive pack incentives.</p>
+          <div class="chart-box"><canvas id="l5GapChart"></canvas></div>
+        </article>
       </section>
     </section>
 
     <section class="layer">
       <div class="layer-head">
-        <h2>Layer 4 — Membership Models</h2>
-        <p>Adoption, membership value and commitment risk.</p>
+        <h2>Memberships</h2>
+      </div>
+      <div class="section-text-box">
+        <p class="story-copy">As the industry matures, studios are gradually shifting toward subscription-based memberships. However, adoption remains uneven.</p>
+        <p class="story-copy">Nearly 30% of studios offer no memberships at all, continuing to rely primarily on class packs.</p>
+        <p class="story-copy">Among those that do offer memberships, most follow a familiar structure:</p>
+        <ul class="story-list">
+          <li>4, 8, or 12 classes per month</li>
+          <li>Unlimited memberships</li>
+        </ul>
+        <p class="story-copy">Interestingly, many studios offer memberships with no long-term commitment, even when pricing is heavily discounted.</p>
+        <p class="story-copy">This creates a potential tension: memberships are often discounted significantly more than class packages, yet without requiring the stability that long-term commitments typically provide.</p>
+        <div class="insight-callout">~30% of studios offer no memberships</div>
+        <div class="insight-callout">Memberships are often discounted more than packages — sometimes without commitment</div>
       </div>
       <section class="stats" id="l4Stats"></section>
       <section class="grid">
@@ -257,22 +410,7 @@
             <tbody id="l4MembershipTypeRows"></tbody>
           </table>
         </article>
-      </section>
-    </section>
-
-    <section class="layer">
-      <div class="layer-head">
-        <h2>Layer 5 — Pricing Strategy</h2>
-        <p>Drop-in anchoring gap and membership-versus-pack value.</p>
-      </div>
-      <section class="stats" id="l5Stats"></section>
-      <section class="grid">
-        <article class="card">
-          <h3>Drop-in vs 10-Pack Discount</h3>
-          <p class="explain">How to read: this distribution shows how strongly studios anchor on drop-in and push customers to 10-packs. Higher bins mean more aggressive pack incentives.</p>
-          <div class="chart-box"><canvas id="l5GapChart"></canvas></div>
-        </article>
-        <article class="card">
+        <article class="card wide">
           <h3>Membership vs 10-Pack Value</h3>
           <p class="sub">X = 10-pack EUR/class · Y = membership EUR/class</p>
           <p class="explain">How to read: each point is one studio. Y uses that studio's lowest available class-based membership tier (4, 5, 8, etc.). Below the diagonal (y &lt; x) means membership is cheaper per class than a 10-pack.</p>
@@ -284,8 +422,21 @@
 
     <section class="layer">
       <div class="layer-head">
-        <h2>Layer 6 — Modality Economics (V1)</h2>
-        <p>Estimated max revenue per class using proxy capacities.</p>
+        <h2>Revenue per Class</h2>
+      </div>
+      <div class="section-text-box">
+        <p class="story-copy">While pricing across boutique fitness has largely converged, the underlying economics of these businesses vary dramatically.</p>
+        <p class="story-copy">Different modalities operate with very different class capacities, which directly impacts how much revenue each class can generate.</p>
+        <p class="story-copy">Studios offering high-capacity classes — such as cycling or HIIT — can generate significantly more revenue per session than lower-capacity formats like reformer or aerial.</p>
+        <p class="story-copy">At similar price points, this can result in 2–3x differences in revenue per class.</p>
+        <p class="story-copy">This has major implications for:</p>
+        <ul class="story-list">
+          <li>profitability</li>
+          <li>studio size and layout</li>
+          <li>scheduling flexibility</li>
+          <li>pricing strategy</li>
+        </ul>
+        <div class="insight-callout">Revenue per class can vary by 2–3x depending on modality</div>
       </div>
       <section class="grid">
         <article class="card wide">
@@ -304,56 +455,25 @@
 
     <section class="layer">
       <div class="layer-head">
-        <h2>Layer 7 — Market Structure</h2>
-        <p>Distribution spread by modality and 4-bucket geography.</p>
+        <h2>Reformer Case Study</h2>
+      </div>
+      <div class="section-text-box">
+        <p class="story-copy">Reformer Pilates stands out as one of the few modalities that has successfully broken away from the industry’s historical pricing ceiling.</p>
+        <p class="story-copy">While most boutique fitness classes cluster around €25–€30, reformer studios frequently charge €35–€45+ per class.</p>
+        <p class="story-copy">This is significant because reformer classes typically operate with much lower capacity, making higher pricing essential to the viability of the model.</p>
+        <p class="story-copy">The success of reformer suggests that pricing ceilings in boutique fitness may be more flexible than previously assumed — when paired with strong positioning and product-market fit.</p>
+        <p class="story-copy">Several factors have enabled this shift:</p>
+        <ul class="story-list">
+          <li>Premium positioning and branding</li>
+          <li>Efficient use of smaller studio spaces</li>
+          <li>A target clientele willing to pay for a specialized experience</li>
+        </ul>
+        <div class="insight-callout">Reformer is the clearest example that €30 is not a true ceiling</div>
       </div>
       <section class="grid">
-        <article class="card">
-          <h3>Pricing Spread by Modality</h3>
-          <p class="sub">Boxplot-style: min/q1/median/q3/max</p>
-          <p class="explain">How to read: purple band approximates the middle 50% (Q1 to Q3). Green line is median; gray/orange lines show min/max. Wider spreads indicate less pricing consistency.</p>
-          <div class="chart-box"><canvas id="l7BoxplotChart"></canvas></div>
-        </article>
-        <article class="card">
-          <h3>Geographic Pricing</h3>
-          <p class="explain">How to read: compare average drop-in by geography. Toggle between 4 macro buckets and arrondissement-level detail. "Unknown arrondissement" records are excluded from averages.</p>
-          <div style="display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-bottom:8px;">
-            <label for="l7GeoView" style="font-size:11px;color:#8B7355;text-transform:uppercase;letter-spacing:.06em;">View</label>
-            <select id="l7GeoView" style="background:#FFFEFC;color:#2C2A26;border:1px solid rgba(139, 115, 85, 0.35);border-radius:8px;padding:6px 8px;">
-              <option value="buckets">4 buckets</option>
-              <option value="arrondissement">By arrondissement</option>
-            </select>
-          </div>
-          <table>
-            <thead>
-              <tr><th id="l7GeoLabelHeader">Area</th><th>Avg Drop-in</th><th>Studios</th></tr>
-            </thead>
-            <tbody id="l7GeoRows"></tbody>
-          </table>
-          <div id="l7GeoMeta" style="margin-top:10px;"></div>
-        </article>
-      </section>
-    </section>
-
-    <section class="layer">
-      <div class="layer-head">
-        <h2>Layer 8 — Studio Business Model Profiles</h2>
-        <p>Pack-driven, membership-driven, hybrid, and no-offer mix.</p>
-      </div>
-      <section class="grid">
-        <article class="card">
-          <h3>Distribution by Profile</h3>
-          <p class="explain">How to read: this shows which commercial model dominates in the market mix. A higher hybrid share usually indicates broader pricing architecture sophistication.</p>
-          <div class="chart-box"><canvas id="l8ProfilesChart"></canvas></div>
-        </article>
-        <article class="card">
-          <h3>Profile Breakdown</h3>
-          <table>
-            <thead>
-              <tr><th>Studio Type</th><th>Count</th><th>Share</th></tr>
-            </thead>
-            <tbody id="l8ProfileRows"></tbody>
-          </table>
+        <article class="card wide">
+          <h3>Reformer vs Market</h3>
+          <div class="mini-tiles" id="l8ReformerCompare"></div>
         </article>
       </section>
     </section>
@@ -434,13 +554,6 @@
       intro_unlimited: "Intro unlimited",
       no_intro_offer: "No intro offer"
     };
-    const profileLabels = {
-      pack_driven: "Pack-driven",
-      membership_driven: "Membership-driven",
-      hybrid: "Hybrid",
-      no_offer_other: "No offer / Other"
-    };
-
     function money(v) {
       if (v == null || !Number.isFinite(v)) return "-";
       return `€${Number(v).toFixed(Number.isInteger(v) ? 0 : 2)}`;
@@ -825,54 +938,40 @@
       `;
       const rows = (layer.modality_revenue_table || []).slice().sort((a, b) => (b.estimated_max_revenue_per_class || 0) - (a.estimated_max_revenue_per_class || 0));
       document.getElementById("l6EconomicsRows").innerHTML = rows.map((r) => `
-        <tr>
+        <tr${String(r.modality || "") === "reformer_pilates" ? " style=\"background:rgba(184, 152, 107, 0.13);\"" : ""}>
           <td>${formatModalityLabel(r.modality)}</td>
           <td>${money(r.avg_drop_in_price)}</td>
           <td>${r.avg_capacity}</td>
           <td>${money(r.estimated_max_revenue_per_class)}</td>
         </tr>
       `).join("") || `<tr><td colspan="4">No modality economics data.</td></tr>`;
+
+      const reformer = rows.find((r) => String(r.modality || "") === "reformer_pilates");
+      const top = rows[0];
+      const marketAvg = rows.length
+        ? rows.reduce((acc, r) => acc + (Number(r.avg_drop_in_price) || 0), 0) / rows.length
+        : null;
+      const revenueGap = Number.isFinite(top?.estimated_max_revenue_per_class) && Number.isFinite(reformer?.estimated_max_revenue_per_class)
+        ? Number(top.estimated_max_revenue_per_class) / Number(reformer.estimated_max_revenue_per_class)
+        : null;
+      const tileRows = [
+        { key: "Reformer avg drop-in", val: money(reformer?.avg_drop_in_price) },
+        { key: "Market avg drop-in", val: money(marketAvg) },
+        { key: "Reformer est. revenue/class", val: money(reformer?.estimated_max_revenue_per_class) },
+        { key: "Top modality vs reformer", val: Number.isFinite(revenueGap) ? `${fmt(revenueGap)}x` : "-" },
+      ];
+      const comp = document.getElementById("l8ReformerCompare");
+      if (comp) {
+        comp.innerHTML = tileRows.map((t) => `
+          <div class="mini-tile">
+            <div class="k">${t.key}</div>
+            <div class="v">${t.val}</div>
+          </div>
+        `).join("");
+      }
     }
 
     function renderLayer7(layer) {
-      const box = (layer.pricing_spread_boxplots || [])
-        .slice()
-        .filter((b) =>
-          Number.isFinite(b?.q1) &&
-          Number.isFinite(b?.q3) &&
-          Number.isFinite(b?.median) &&
-          Number.isFinite(b?.min) &&
-          Number.isFinite(b?.max)
-        )
-        .sort((a, b) => (b.median || 0) - (a.median || 0));
-      const labels = box.map((b) => formatModalityLabel(b.modality));
-      if (charts.l7Box) charts.l7Box.destroy();
-      charts.l7Box = new Chart(document.getElementById("l7BoxplotChart"), {
-        type: "bar",
-        data: {
-          labels,
-          datasets: [
-            { label: "Q1-Q3", data: box.map((b) => [b.q1, b.q3]), backgroundColor: "rgba(154, 138, 166, 0.5)", borderRadius: 4 },
-            { label: "Median", type: "line", data: box.map((b) => b.median), borderColor: PALETTE.sage, pointRadius: 4, tension: 0 },
-            { label: "Min", type: "line", data: box.map((b) => b.min), borderColor: PALETTE.slate, pointRadius: 3, tension: 0 },
-            { label: "Max", type: "line", data: box.map((b) => b.max), borderColor: PALETTE.clay, pointRadius: 3, tension: 0 }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              ticks: {
-                autoSkip: false,
-                minRotation: 28,
-                maxRotation: 35
-              }
-            }
-          }
-        }
-      });
-
       const geoPricing = layer.geographic_pricing || {};
       const byBuckets = geoPricing.area_avg_dropin || [];
       const byArrondissement = geoPricing.arrondissement_avg_dropin || [];
@@ -901,25 +1000,6 @@
       renderGeoRows();
     }
 
-    function renderLayer8(layer) {
-      const rows = layer.distribution || [];
-      charts.l8Profile = new Chart(document.getElementById("l8ProfilesChart"), {
-        type: "bar",
-        data: {
-          labels: rows.map((r) => profileLabels[r.studio_type] || r.studio_type),
-          datasets: [{ data: rows.map((r) => r.count), backgroundColor: [PALETTE.accentWarm, PALETTE.sage, PALETTE.lilac, PALETTE.slate], borderRadius: 8 }]
-        },
-        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
-      });
-      document.getElementById("l8ProfileRows").innerHTML = rows.map((r) => `
-        <tr>
-          <td>${profileLabels[r.studio_type] || r.studio_type}</td>
-          <td>${r.count}</td>
-          <td>${pct(r.pct)}</td>
-        </tr>
-      `).join("") || `<tr><td colspan="3">No profile data.</td></tr>`;
-    }
-
     function render(snapshot) {
       destroyCharts();
       const layers = snapshot.layers || FALLBACK_SNAPSHOT.layers;
@@ -930,7 +1010,6 @@
       renderLayer5(layers.layer5_pricing_strategy || FALLBACK_SNAPSHOT.layers.layer5_pricing_strategy);
       renderLayer6(layers.layer6_modality_economics_v1 || FALLBACK_SNAPSHOT.layers.layer6_modality_economics_v1);
       renderLayer7(layers.layer7_market_structure || FALLBACK_SNAPSHOT.layers.layer7_market_structure);
-      renderLayer8(layers.layer8_business_model_profiles || FALLBACK_SNAPSHOT.layers.layer8_business_model_profiles);
       document.getElementById("footer").textContent = `Generated ${new Date(snapshot.generated_at).toLocaleString()} · Source: ${snapshot.source}`;
     }
 
