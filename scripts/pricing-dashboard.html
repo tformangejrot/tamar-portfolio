@@ -59,10 +59,10 @@
     .section-text-box {
       max-width: none;
       width: 100%;
-      background: #e4dfd8;
-      border: 1px solid rgba(118, 99, 77, 0.22);
-      border-radius: 12px;
-      padding: 16px 18px;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
       margin-bottom: 14px;
     }
     .story-copy {
@@ -70,20 +70,25 @@
       margin-bottom: 10px;
       line-height: 1.7;
       color: var(--text);
-      font-size: 16px;
+      font-size: 15px;
     }
     .insight-callout {
       margin: 18px 0 12px;
       max-width: 760px;
-      padding: 14px 16px;
+      padding: 14px 0 14px 20px;
       border-left: 3px solid var(--accent);
-      background: rgba(255, 254, 252, 0.7);
+      background: transparent;
       border-radius: 0 8px 8px 0;
       font-size: 20px;
       line-height: 1.35;
       color: #3f352b;
       font-weight: 600;
       letter-spacing: normal;
+      font-style: italic;
+      font-family: "Libre Baskerville", Georgia, serif;
+    }
+    .insight-callout strong {
+      font-weight: 700;
     }
     .story-list {
       max-width: none;
@@ -114,6 +119,30 @@
       font-size: 16px;
       color: var(--text);
       font-weight: 600;
+    }
+    .modality-kpi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .modality-kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 14px;
+    }
+    .modality-kpi-card .v {
+      font-size: 36px;
+      line-height: 1.05;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .modality-kpi-card .k {
+      margin-top: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent);
     }
     .stats {
       display: grid;
@@ -207,7 +236,7 @@
         <p class="story-copy">Pricing is one of the most foundational — and least questioned — elements of how boutique fitness studios operate.</p>
         <p class="story-copy">Over the past decade, pricing in Paris has quietly converged toward a narrow range, regardless of modality, cost structure, or class capacity. While studios differ widely in format and economics, the prices they charge are often strikingly similar.</p>
         <p class="story-copy">This report analyzes 228 studios (~350 locations) across Paris to understand how pricing is structured today — from drop-ins to memberships — and what that means for how these businesses actually operate.</p>
-        <div class="insight-callout">Average drop-in price: ~€30<br>Range: €13 → €60</div>
+        <div class="insight-callout">Average drop-in price: <strong>~€30</strong><br>Range: <strong>€13 → €60</strong></div>
       </div>
       <section class="stats" id="l1Stats"></section>
     </section>
@@ -221,7 +250,7 @@
         <p class="story-copy">The majority of studios fall within a narrow range of €25 to €35 per class, effectively defining what “boutique fitness” costs in Paris today.</p>
         <p class="story-copy">Below this sits a smaller budget segment (€18–€21), while a new premium tier is emerging above €45 — primarily driven by Reformer Pilates studios.</p>
         <p class="story-copy">Despite differences in concept, location, and cost structure, most studios price within a surprisingly tight band.</p>
-        <div class="insight-callout">~80% of studios fall within a €10 range (€25–€35)</div>
+        <div class="insight-callout"><strong>~80%</strong> of studios fall within a <strong>€10</strong> range (<strong>€25–€35</strong>)</div>
       </div>
       <section class="grid">
         <article class="card">
@@ -261,10 +290,13 @@
         <p class="story-copy">But the reality is more compressed than expected.</p>
         <p class="story-copy">Across most modalities, pricing still clusters around €25–€30, suggesting that studios are anchoring to a shared market expectation rather than pricing purely based on underlying costs.</p>
         <p class="story-copy">For years, many operators assumed that ~€30 represented a pricing ceiling. That assumption has had lasting implications for how studios design their business models.</p>
-        <div class="insight-callout">Most modalities cluster around €25–€30 — regardless of cost structure</div>
       </div>
       <section class="grid">
-        <article class="card wide">
+        <article class="card">
+          <div class="insight-callout">Most modalities cluster around <strong>€25–€30</strong> — regardless of cost structure</div>
+          <div id="l1ModalityBenchmarks" class="modality-kpi-grid"></div>
+        </article>
+        <article class="card">
           <h3>Pricing by Modality</h3>
           <p class="sub">Average and median drop-in by modality</p>
           <p class="explain">How to read: compare avg vs median within each cleaned modality. Studios can contribute to multiple cleaned categories; modality-specific drop-ins are used when available, otherwise shared drop-in is used.</p>
@@ -296,7 +328,7 @@
           <li>A 3-class introductory pack</li>
         </ul>
         <p class="story-copy">These formats reflect different conversion strategies. Lower-priced studios often rely on single-class trials, while more premium studios lean toward multi-class packs, recognizing that it may take multiple visits to convert a new client.</p>
-        <div class="insight-callout">Average intro discount: ~40% vs drop-in price</div>
+        <div class="insight-callout">Average intro discount: <strong>~40%</strong> vs drop-in price</div>
       </div>
       <section class="stats" id="l2Stats"></section>
       <section class="grid">
@@ -337,7 +369,7 @@
           <li>Large packs: ~12 months</li>
         </ul>
         <p class="story-copy">This consistency suggests a strong level of market convergence, not just in pricing, but in product design.</p>
-        <div class="insight-callout">The 10-pack is the dominant pricing product across Paris</div>
+        <div class="insight-callout">The <strong>10-pack</strong> is the dominant pricing product across Paris</div>
       </div>
       <section class="stats" id="l5Stats"></section>
       <section class="grid">
@@ -384,7 +416,7 @@
         </ul>
         <p class="story-copy">Interestingly, many studios offer memberships with no long-term commitment, even when pricing is heavily discounted.</p>
         <p class="story-copy">This creates a potential tension: memberships are often discounted significantly more than class packages, yet without requiring the stability that long-term commitments typically provide.</p>
-        <div class="insight-callout">~30% of studios offer no memberships</div>
+        <div class="insight-callout"><strong>~30%</strong> of studios offer no memberships</div>
         <div class="insight-callout">Memberships are often discounted more than packages — sometimes without commitment</div>
       </div>
       <section class="stats" id="l4Stats"></section>
@@ -436,7 +468,7 @@
           <li>scheduling flexibility</li>
           <li>pricing strategy</li>
         </ul>
-        <div class="insight-callout">Revenue per class can vary by 2–3x depending on modality</div>
+        <div class="insight-callout">Revenue per class can vary by <strong>2–3x</strong> depending on modality</div>
       </div>
       <section class="grid">
         <article class="card wide">
@@ -468,7 +500,7 @@
           <li>Efficient use of smaller studio spaces</li>
           <li>A target clientele willing to pay for a specialized experience</li>
         </ul>
-        <div class="insight-callout">Reformer is the clearest example that €30 is not a true ceiling</div>
+        <div class="insight-callout">Reformer is the clearest example that <strong>€30</strong> is not a true ceiling</div>
       </div>
       <section class="grid">
         <article class="card wide">
@@ -618,6 +650,19 @@
         <span class="chip">Attribution: ${audit.attribution_mode || "count_all_cleaned_categories"}</span>
         <span class="chip">Studios with 2+ categories: ${audit.studios_with_2_plus_categories ?? "-"}</span>
         <span class="chip">0-category studios: ${distribution["0"] ?? "-"}</span>
+      `;
+
+      const reformerAvg = modality.find((m) => String(m.modality) === "reformer_pilates")?.avg_drop_in;
+      const scAvg = modality.find((m) => String(m.modality) === "strength_conditioning")?.avg_drop_in;
+      const martialAvg = modality.find((m) => String(m.modality) === "martial_arts")?.avg_drop_in;
+      const priced = modality.filter((m) => Number.isFinite(m.avg_drop_in));
+      const inBand = priced.filter((m) => m.avg_drop_in >= 25 && m.avg_drop_in <= 32).length;
+      const pctInBand = priced.length ? (inBand / priced.length) * 100 : null;
+      document.getElementById("l1ModalityBenchmarks").innerHTML = `
+        <div class="modality-kpi-card"><div class="v">${money(reformerAvg)}</div><div class="k">Reformer average price</div></div>
+        <div class="modality-kpi-card"><div class="v">${money(scAvg)}</div><div class="k">Strength &amp; Conditioning average price</div></div>
+        <div class="modality-kpi-card"><div class="v">${money(martialAvg)}</div><div class="k">Martial Arts average price</div></div>
+        <div class="modality-kpi-card"><div class="v">${pct(pctInBand)}</div><div class="k">Modalities with avg price between €25 and €32</div></div>
       `;
       charts.l1Modality = new Chart(document.getElementById("l1ModalityChart"), {
         type: "bar",
