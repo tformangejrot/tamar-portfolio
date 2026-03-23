@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paris Pricing Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
     * { box-sizing: border-box; }
@@ -43,10 +46,10 @@
       line-height: normal;
     }
     .hero p { margin: 0; color: var(--muted); }
-    .wrap { max-width: 1300px; margin: 0 auto; padding: 24px; }
-    .layer { margin-bottom: 72px; }
+    .wrap { max-width: 1300px; margin: 0 auto; padding: 40px 24px; }
+    .layer { margin-bottom: 150px; }
     .layer-head {
-      margin-bottom: 12px;
+      margin-bottom: 36px;
       text-align: center;
     }
     .layer-head h2 {
@@ -62,7 +65,7 @@
       color: var(--muted);
       font-size: 13px;
     }
-    #l1Stats { display: none; }
+    #l1Stats { display: grid; }
     .section-text-box {
       max-width: none;
       width: 100%;
@@ -70,19 +73,19 @@
       border: 0;
       border-radius: 0;
       padding: 0;
-      margin-bottom: 14px;
+      margin-bottom: 40px;
     }
     .story-copy {
       max-width: 820px;
-      margin: 0 auto 10px;
+      margin: 0 auto 22px;
       line-height: 1.7;
       color: var(--text);
       font-size: 15px;
     }
     .insight-callout {
-      margin: 20px auto 14px;
+      margin: 34px auto 26px;
       max-width: 760px;
-      padding: 14px 0 14px 20px;
+      padding: 18px 0 18px 20px;
       border-left: 3px solid var(--accent);
       background: transparent;
       border-radius: 0 8px 8px 0;
@@ -157,7 +160,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 16px;
-      margin-bottom: 18px;
+      margin: 38px 0 42px;
     }
     .stat {
       background: var(--surface);
@@ -172,6 +175,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
+      margin-top: 38px;
     }
     @media (max-width: 980px) {
       .grid { grid-template-columns: 1fr; }
@@ -186,19 +190,31 @@
     }
     .card:hover { border-color: var(--border-strong); }
     .card h3 {
-      margin: 0 0 8px;
+      margin: 0 0 10px;
       font-size: 20px;
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 700;
       color: var(--text);
     }
-    .sub { margin: 0 0 12px; font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
+    .sub { margin: 0 0 22px; font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
     .chart-box { height: 300px; }
     .explain {
-      margin: 8px 0 12px;
+      margin: 18px 0 24px;
       color: var(--muted);
       font-size: 12px;
       line-height: 1.45;
+    }
+    .heatmap-box {
+      height: 560px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      margin-top: 10px;
+    }
+    .leaflet-container {
+      width: 100%;
+      background: #FFFEFC;
     }
     .wide { grid-column: 1 / -1; }
     table {
@@ -236,7 +252,7 @@
 <body>
   <section class="hero">
     <h1>Paris Pricing Dashboard</h1>
-    <p>Paris boutique fitness pricing looks standardized — but underneath, the economics are wildly different.</p>
+    <p>Paris boutique fitness pricing looks standardized – but underneath, the economics are wildly different.</p>
   </section>
 
   <main class="wrap">
@@ -245,10 +261,9 @@
         <h2>Why This Matters</h2>
       </div>
       <div class="section-text-box">
-        <p class="story-copy">Pricing is one of the most foundational — and least questioned — elements of how boutique fitness studios operate.</p>
+        <p class="story-copy">Pricing is one of the most foundational and least questioned elements of how boutique fitness studios operate.</p>
         <p class="story-copy">Over the past decade, pricing in Paris has quietly converged toward a narrow range, regardless of modality, cost structure, or class capacity. While studios differ widely in format and economics, the prices they charge are often strikingly similar.</p>
-        <p class="story-copy">This report analyzes 228 studios (~350 locations) across Paris to understand how pricing is structured today — from drop-ins to memberships — and what that means for how these businesses actually operate.</p>
-        <div class="insight-callout">Average drop-in price: <strong>~€30</strong><br>Range: <strong>€13 → €60</strong></div>
+        <p class="story-copy">This report analyzes 228 studios (~350 locations) across Paris to understand how pricing is structured today, from drop-ins to memberships, and what that means for how these businesses actually operate.</p>
       </div>
       <section class="stats" id="l1Stats"></section>
     </section>
@@ -260,9 +275,12 @@
       <div class="section-text-box">
         <p class="story-copy">Paris boutique fitness pricing clusters into a few clearly defined zones.</p>
         <p class="story-copy">The majority of studios fall within a narrow range of €25 to €35 per class, effectively defining what “boutique fitness” costs in Paris today.</p>
-        <p class="story-copy">Below this sits a smaller budget segment (€18–€21), while a new premium tier is emerging above €45 — primarily driven by Reformer Pilates studios.</p>
+        <p class="story-copy">Below this sits a smaller budget segment (€18–€21), while a new premium tier is emerging above €45, primarily driven by Reformer Pilates studios.</p>
         <p class="story-copy">Despite differences in concept, location, and cost structure, most studios price within a surprisingly tight band.</p>
         <div class="insight-callout"><strong>~80%</strong> of studios fall within a <strong>€10</strong> range (<strong>€25–€35</strong>)</div>
+        <p class="story-copy">However, when we look at geographic distribution of drop-in rates, we actually discover rather stark differences.</p>
+        <p class="story-copy">The west (in particular the 7th, 8th, 16th, and 17th arrondissements) have average drop-in rates between €34 and €39, while in the east and south drop-in rates average about €15 lower.</p>
+        <p class="story-copy">We also see that more expensive areas have a higher density of studios, creating true hot zones for boutique fitness.</p>
       </div>
       <section class="grid">
         <article class="card">
@@ -298,10 +316,11 @@
         <h2>Pricing by Modality</h2>
       </div>
       <div class="section-text-box">
-        <p class="story-copy">At a surface level, pricing appears to follow equipment intensity. Modalities like dance and martial arts, which require little to no equipment, tend to charge less, while cycling and reformer — which require significant upfront investment — charge more.</p>
-        <p class="story-copy">But the reality is more compressed than expected.</p>
-        <p class="story-copy">Across most modalities, pricing still clusters around €25–€30, suggesting that studios are anchoring to a shared market expectation rather than pricing purely based on underlying costs.</p>
-        <p class="story-copy">For years, many operators assumed that ~€30 represented a pricing ceiling. That assumption has had lasting implications for how studios design their business models.</p>
+        <p class="story-copy">At a surface level, pricing appears to follow equipment intensity. Modalities like dance and martial arts, which require little to no equipment, tend to charge less, while cycling and reformer, which require significant upfront investment, charge more.</p>
+        <p class="story-copy">But the reality is more surprising. What differentiates these modalities is more than upfront investment: it's also space required and capacity, both of which have huge impacts on the studio's business model.</p>
+        <p class="story-copy">Nonetheless, across most modalities, pricing still clusters around €25-€30, suggesting that studios are anchoring to a shared market expectation rather than pricing purely based on underlying costs.</p>
+        <p class="story-copy">For years, many operators assumed that ~€30 represented a pricing ceiling. That assumption has had lasting implications for how studios design their business models. This assumptions is starting to be questioned and broken by trends such as Reformer Pilates / Lagree and to a lesser extent Aqua Cycling.</p>
+        <p class="story-copy">Scroll down to read more about Reformer Pilates specifically.</p>
       </div>
       <section class="grid">
         <article class="card">
@@ -518,6 +537,9 @@
         <article class="card wide">
           <h3>Reformer vs Market</h3>
           <div class="mini-tiles" id="l8ReformerCompare"></div>
+          <h3 style="margin-top:24px;">Reformer studios by arrondissement</h3>
+          <p class="explain">Heat intensity shows the number of reformer studios by arrondissement.</p>
+          <div id="l8ReformerHeatmap" class="heatmap-box"></div>
         </article>
       </section>
     </section>
@@ -558,7 +580,7 @@
         layer4_membership_models: { pct_studios_with_memberships: 0, pct_with_unlimited_memberships: 0, pct_with_class_based_memberships: 0, membership_adoption_pie: [], membership_types_table: [], commitment_structure: {} },
         layer5_pricing_strategy: { avg_drop_in_to_10_pack_price_diff_pct: null, dropin_vs_10pack_discount_histogram: [], membership_vs_pack_scatter: [] },
         layer6_modality_economics_v1: { assumptions: {}, modality_revenue_table: [] },
-        layer7_market_structure: { pricing_spread_boxplots: [], geographic_pricing: { bucket_mapping: [], area_avg_dropin: [], arrondissement_avg_dropin: [], unknown_arrondissement_count: 0 } },
+        layer7_market_structure: { pricing_spread_boxplots: [], geographic_pricing: { bucket_mapping: [], area_avg_dropin: [], arrondissement_avg_dropin: [], unknown_arrondissement_count: 0 }, reformer_studios_by_arrondissement: [] },
         layer8_business_model_profiles: { distribution: [] }
       }
     };
@@ -618,22 +640,41 @@
       Object.values(charts).forEach((c) => c && c.destroy && c.destroy());
     }
 
-    function renderLayer1(layer) {
-      const metrics = layer.dropin_metrics || {};
-      const cards = [
-        ["Studios analyzed", layer.studios_analyzed],
-        ["With memberships", layer.with_memberships],
-        ["Offering intro offers", layer.offering_intro_offers],
-        ["Locations represented", layer.locations_represented],
-        ["Average drop-in", money(metrics.average)],
-        ["Median drop-in", money(metrics.median)],
-        ["Lowest drop-in", money(metrics.lowest)],
-        ["Highest drop-in", money(metrics.highest)],
-        ["Drop-in std dev", fmt(metrics.stddev)]
-      ];
-      document.getElementById("l1Stats").innerHTML = cards.map(([k, v]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
+    function renderLayer1(layer1, layer2, layer4) {
+      const metrics = layer1.dropin_metrics || {};
 
-      const dist = layer.dropin_distribution || [];
+      // Approximate avg intro discount from the histogram bins.
+      // The snapshot only provides binned counts, so we need a midpoint assumption for the open-ended "40%+" bin.
+      const introHist = layer2.intro_discount_histogram || [];
+      const midpointByLabel = {
+        "0-10%": 5,
+        "10-20%": 15,
+        "20-30%": 25,
+        "30-40%": 35,
+        "40%+": 60
+      };
+      const introTotal = introHist.reduce((acc, h) => acc + (Number(h.count) || 0), 0);
+      const introWeightedSum = introHist.reduce((acc, h) => {
+        const mid = midpointByLabel[h.label];
+        const count = Number(h.count) || 0;
+        if (mid == null || count <= 0) return acc;
+        return acc + mid * count;
+      }, 0);
+      const introAvgDiscount = introTotal > 0 ? introWeightedSum / introTotal : null;
+      const introAvgDiscountDisplay = introAvgDiscount == null ? "-" : `${Math.round(introAvgDiscount)}%`;
+
+      const cards = [
+        ["Studios", layer1.studios_analyzed],
+        ["Avg drop-in", money(metrics.average)],
+        ["% with memberships", pct(layer4.pct_studios_with_memberships)],
+        ["Avg intro discount (vs drop-in)", introAvgDiscountDisplay]
+      ];
+
+      document.getElementById("l1Stats").innerHTML = cards
+        .map(([k, v]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`)
+        .join("");
+
+      const dist = layer1.dropin_distribution || [];
       charts.l1Dropin = new Chart(document.getElementById("l1DropinChart"), {
         type: "bar",
         data: {
@@ -647,13 +688,13 @@
           scales: { y: { beginAtZero: true, ticks: { precision: 0 } } }
         }
       });
-      const sourceNote = layer.methodology && layer.methodology.dropin_distribution_source ? layer.methodology.dropin_distribution_source : "";
+      const sourceNote = layer1.methodology && layer1.methodology.dropin_distribution_source ? layer1.methodology.dropin_distribution_source : "";
       document.getElementById("l1DropinMeta").innerHTML = sourceNote ? `<span class="chip">${sourceNote}</span>` : "";
 
-      const modality = (layer.modality_pricing_table || []).slice().sort((a, b) => (b.avg_drop_in || 0) - (a.avg_drop_in || 0));
+      const modality = (layer1.modality_pricing_table || []).slice().sort((a, b) => (b.avg_drop_in || 0) - (a.avg_drop_in || 0));
       const modalityStudios = modality.reduce((acc, m) => acc + (Number(m.n_studios) || 0), 0);
       const modalityObservations = modality.reduce((acc, m) => acc + (Number(m.n_observations) || 0), 0);
-      const audit = layer.modality_audit || {};
+      const audit = layer1.modality_audit || {};
       const distribution = audit.distribution || {};
       document.getElementById("l1ModalityMeta").innerHTML = `
         <span class="chip">Rows: ${modality.length}</span>
@@ -1028,6 +1069,8 @@
       }
     }
 
+    let reformerHeatmapInitialized = false;
+
     function renderLayer7(layer) {
       const geoPricing = layer.geographic_pricing || {};
       const byBuckets = geoPricing.area_avg_dropin || [];
@@ -1055,12 +1098,132 @@
         geoSelect.dataset.boundLayer7Toggle = "1";
       }
       renderGeoRows();
+
+      // Reformer studios heat map
+      const heatEl = document.getElementById("l8ReformerHeatmap");
+      if (heatEl && !reformerHeatmapInitialized) {
+        reformerHeatmapInitialized = true;
+        const map = L.map("l8ReformerHeatmap", {
+          center: [48.8566, 2.3522],
+          zoom: 14,
+          zoomControl: true,
+          attributionControl: false,
+          scrollWheelZoom: false
+        });
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19
+        }).addTo(map);
+
+        const arrCenters = {
+          1: [48.8606, 2.3376],
+          2: [48.8698, 2.3412],
+          3: [48.8630, 2.3622],
+          4: [48.8546, 2.3522],
+          5: [48.8440, 2.3438],
+          6: [48.8449, 2.3327],
+          7: [48.8565, 2.3122],
+          8: [48.8750, 2.3181],
+          9: [48.8750, 2.3394],
+          10: [48.8720, 2.3600],
+          11: [48.8610, 2.3794],
+          12: [48.8447, 2.3732],
+          13: [48.8322, 2.3561],
+          14: [48.8331, 2.3264],
+          15: [48.8422, 2.2995],
+          16: [48.8500, 2.2669],
+          17: [48.8846, 2.3222],
+          18: [48.8932, 2.3484],
+          19: [48.8827, 2.3742],
+          20: [48.8630, 2.3987]
+        };
+
+        const heatData = layer.reformer_studios_by_arrondissement || [];
+        const normalized = heatData.map((r) => ({
+          arr: Number(r.arrondissement_number),
+          count: Number(r.studio_count) || 0
+        })).filter((r) => Number.isFinite(r.arr) && r.arr >= 1 && r.arr <= 20);
+
+        const maxCount = Math.max(...normalized.map((r) => r.count), 1);
+        const heatmapPoints = [];
+        const pointsPerStudio = 8;
+        normalized.forEach(({ arr, count }) => {
+          if (!count) return;
+          const center = arrCenters[arr];
+          if (!center) return;
+          const [lat, lng] = center;
+          const intensity = count / maxCount;
+          for (let i = 0; i < count * pointsPerStudio; i++) {
+            const angle = (i / (count * pointsPerStudio || 1)) * Math.PI * 2;
+            const radius = Math.random() * 0.012;
+            const offsetLat = Math.cos(angle) * radius;
+            const offsetLng = Math.sin(angle) * radius;
+            heatmapPoints.push([
+              lat + offsetLat + (Math.random() - 0.5) * 0.004,
+              lng + offsetLng + (Math.random() - 0.5) * 0.004,
+              intensity // keep weight in ~0-1 range
+            ]);
+          }
+        });
+
+        // Debug hooks so we can verify the heat layer is receiving points.
+        window.__reformerHeatmapDebug = {
+          normalized,
+          maxCount,
+          heatmapPointsLen: heatmapPoints.length,
+          maxWeight: heatmapPoints.length ? Math.max(...heatmapPoints.map((p) => p[2])) : 0
+        };
+
+        if (heatmapPoints.length > 0) {
+          L.heatLayer(heatmapPoints, {
+            radius: 48,
+            blur: 18,
+            maxZoom: 17,
+            max: 1.0,
+            minOpacity: 0.15,
+            gradient: {
+              0.0: "rgba(184, 152, 107, 0)",
+              0.12: "rgba(184, 152, 107, 0.55)",
+              0.25: "rgba(154, 138, 166, 0.75)",
+              0.5: "rgba(236, 72, 153, 0.82)",
+              0.75: "rgba(239, 68, 68, 0.9)",
+              1.0: "rgba(251, 146, 60, 1.0)"
+            }
+          }).addTo(map);
+        }
+
+        // Add visible density markers so the map is not “blank” if the heat overlay is subtle.
+        normalized
+          .filter((r) => r.count > 0)
+          .forEach(({ arr, count }) => {
+            const center = arrCenters[arr];
+            if (!center) return;
+            const [lat, lng] = center;
+            const t = maxCount > 0 ? count / maxCount : 0;
+            const radius = Math.min(34, 10 + t * 28);
+            const color = t > 0.75 ? "#EF4444" : t > 0.5 ? "#E236A3" : t > 0.25 ? "#9A8AA6" : "#B8986B";
+            L.circleMarker([lat, lng], {
+              radius,
+              fillColor: color,
+              color: "#8B7355",
+              weight: 1,
+              opacity: 0.9,
+              fillOpacity: 0.12 + t * 0.72
+            }).bindTooltip(`Paris ${arr}: ${count} reformer studios`, { direction: "top" }).addTo(map);
+          });
+
+        window.__reformerHeatmapInitialized = true;
+      }
     }
 
     function render(snapshot) {
       destroyCharts();
       const layers = snapshot.layers || FALLBACK_SNAPSHOT.layers;
-      renderLayer1(layers.layer1_market_overview || FALLBACK_SNAPSHOT.layers.layer1_market_overview);
+      renderLayer1(
+        layers.layer1_market_overview || FALLBACK_SNAPSHOT.layers.layer1_market_overview,
+        layers.layer2_pricing_structure || FALLBACK_SNAPSHOT.layers.layer2_pricing_structure,
+        layers.layer4_membership_models || FALLBACK_SNAPSHOT.layers.layer4_membership_models
+      );
       renderLayer2(layers.layer2_pricing_structure || FALLBACK_SNAPSHOT.layers.layer2_pricing_structure);
       renderLayer3(layers.layer3_pack_pricing || FALLBACK_SNAPSHOT.layers.layer3_pack_pricing);
       renderLayer4(layers.layer4_membership_models || FALLBACK_SNAPSHOT.layers.layer4_membership_models);

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-20T08:35:17.093Z",
+  "generated_at": "2026-03-23T14:42:37.366Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
     "approved_records_total": 228,
@@ -6127,7 +6127,109 @@
           }
         ],
         "unknown_arrondissement_count": 58
-      }
+      },
+      "reformer_studios_by_arrondissement": [
+        {
+          "arrondissement_number": 1,
+          "arrondissement": "Paris 1",
+          "studio_count": 3
+        },
+        {
+          "arrondissement_number": 2,
+          "arrondissement": "Paris 2",
+          "studio_count": 8
+        },
+        {
+          "arrondissement_number": 3,
+          "arrondissement": "Paris 3",
+          "studio_count": 3
+        },
+        {
+          "arrondissement_number": 4,
+          "arrondissement": "Paris 4",
+          "studio_count": 1
+        },
+        {
+          "arrondissement_number": 5,
+          "arrondissement": "Paris 5",
+          "studio_count": 0
+        },
+        {
+          "arrondissement_number": 6,
+          "arrondissement": "Paris 6",
+          "studio_count": 5
+        },
+        {
+          "arrondissement_number": 7,
+          "arrondissement": "Paris 7",
+          "studio_count": 5
+        },
+        {
+          "arrondissement_number": 8,
+          "arrondissement": "Paris 8",
+          "studio_count": 7
+        },
+        {
+          "arrondissement_number": 9,
+          "arrondissement": "Paris 9",
+          "studio_count": 7
+        },
+        {
+          "arrondissement_number": 10,
+          "arrondissement": "Paris 10",
+          "studio_count": 5
+        },
+        {
+          "arrondissement_number": 11,
+          "arrondissement": "Paris 11",
+          "studio_count": 4
+        },
+        {
+          "arrondissement_number": 12,
+          "arrondissement": "Paris 12",
+          "studio_count": 5
+        },
+        {
+          "arrondissement_number": 13,
+          "arrondissement": "Paris 13",
+          "studio_count": 1
+        },
+        {
+          "arrondissement_number": 14,
+          "arrondissement": "Paris 14",
+          "studio_count": 1
+        },
+        {
+          "arrondissement_number": 15,
+          "arrondissement": "Paris 15",
+          "studio_count": 5
+        },
+        {
+          "arrondissement_number": 16,
+          "arrondissement": "Paris 16",
+          "studio_count": 9
+        },
+        {
+          "arrondissement_number": 17,
+          "arrondissement": "Paris 17",
+          "studio_count": 11
+        },
+        {
+          "arrondissement_number": 18,
+          "arrondissement": "Paris 18",
+          "studio_count": 1
+        },
+        {
+          "arrondissement_number": 19,
+          "arrondissement": "Paris 19",
+          "studio_count": 0
+        },
+        {
+          "arrondissement_number": 20,
+          "arrondissement": "Paris 20",
+          "studio_count": 1
+        }
+      ]
     },
     "layer8_business_model_profiles": {
       "distribution": [

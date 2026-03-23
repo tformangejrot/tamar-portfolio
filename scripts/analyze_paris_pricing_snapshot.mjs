@@ -597,6 +597,7 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
 
   const modalityAttributionRows = [];
   const multiModalityAuditRows = [];
+  const reformerStudioDomains = new Set();
   for (const studio of active) {
     const studioDomain = normalizedDomain(studio);
     const studioLocationCount = getStudioLocationCount(studio);
@@ -623,6 +624,11 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
     const removeForDomain = STUDIO_MODALITY_OVERRIDES.remove_specific_modalities_by_domain[studioDomain];
     if (removeForDomain) {
       for (const modality of removeForDomain) canonicalSet.delete(modality);
+    }
+
+    // Track which studios should be treated as reformer for arrondissement-level reporting.
+    if (studioDomain && canonicalSet.has("reformer_pilates")) {
+      reformerStudioDomains.add(studioDomain);
     }
 
     const modalitySpecificPriceMap = new Map();
@@ -1273,10 +1279,14 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
     const bucketValues = new Map();
     for (const bucket of GEO_BUCKETS) bucketValues.set(bucket.key, []);
     const arrondissementValues = new Map();
+    const arrondissementReformerStudios = new Map(); // arr -> Set(domain) for reformer studios
     let unknownCount = 0;
     for (const studio of active) {
       const drop = Number(studio?.drop_in?.price);
       if (!Number.isFinite(drop) || drop <= 0) continue;
+
+      const studioKey = normalizedDomain(studio);
+      const isReformerStudio = studioKey && reformerStudioDomains.has(studioKey);
 
       const arrondissementNumbers = getLocationArrondissementNumbers(studio);
       for (const arr of arrondissementNumbers) {
@@ -1289,6 +1299,13 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
           unknownCount += 1;
           continue;
         }
+
+        if (isReformerStudio) {
+          const set = arrondissementReformerStudios.get(arr) || new Set();
+          set.add(studioKey);
+          arrondissementReformerStudios.set(arr, set);
+        }
+
         bucketValues.get(bucket.key).push(drop);
         const arrRows = arrondissementValues.get(arr) || [];
         arrRows.push(drop);
@@ -1312,6 +1329,16 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
         avg_drop_in: round(values.reduce((a, b) => a + b, 0) / (values.length || 1)),
         studio_count: values.length,
       }));
+
+    const allArrondissements = Array.from(new Set(GEO_BUCKETS.flatMap((b) => b.arrs))).sort((a, b) => a - b);
+    const reformerArrondissementBreakdown = allArrondissements.map((arrondissementNumber) => {
+      const set = arrondissementReformerStudios.get(arrondissementNumber);
+      return {
+        arrondissement_number: arrondissementNumber,
+        arrondissement: `Paris ${arrondissementNumber}`,
+        studio_count: set ? set.size : 0,
+      };
+    });
     return {
       pricing_spread_boxplots: boxplots,
       geographic_pricing: {
@@ -1320,6 +1347,7 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
         arrondissement_avg_dropin: arrondissementBreakdown,
         unknown_arrondissement_count: unknownCount,
       },
+      reformer_studios_by_arrondissement: reformerArrondissementBreakdown,
     };
   })();
 
