@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T14:42:37.366Z",
+  "generated_at": "2026-03-23T19:49:01.688Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
     "approved_records_total": 228,
@@ -5051,19 +5051,19 @@
       }
     },
     "layer5_pricing_strategy": {
-      "avg_drop_in_to_10_pack_price_diff_pct": 14.96,
+      "avg_drop_in_to_10_pack_price_diff_pct": 16.14,
       "dropin_vs_10pack_discount_histogram": [
         {
           "label": "0-10%",
-          "count": 17
+          "count": 31
         },
         {
           "label": "10-20%",
-          "count": 87
+          "count": 98
         },
         {
           "label": "20-30%",
-          "count": 57
+          "count": 58
         },
         {
           "label": "30-40%",
@@ -5074,6 +5074,7 @@
           "count": 1
         }
       ],
+      "dropin_vs_10pack_methodology": "Matches Pack Discount Table 10-pack column: per studio, median discount_vs_dropin_pct across 10-class packs (dataset explicit value when present, else inferred vs studio drop_in.price); histogram uses those per-studio medians; average equals pack_table 10-pack avg_discount_vs_dropin_pct.",
       "scatter_methodology": "Each point compares 10-pack EUR/class (x) vs lowest available non-unlimited membership tier EUR/class (y) for that studio.",
       "scatter_sample_size": 92,
       "scatter_diagonal_reference": [

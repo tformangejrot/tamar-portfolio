@@ -1179,7 +1179,26 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
   })();
 
   const layer5Strategy = (() => {
-    const gapRows = [];
+    // Align with layer3Pack "10 pack" row: per studio, median of discount_vs_dropin_pct across
+    // 10-class packs (explicit field when present on the row, else inferred vs drop_in in allPacks).
+    const tenPackTableRow = layer3Pack.pack_table.find((r) => r.pack === "10 pack");
+    const gapRows = (() => {
+      const rows = allPacks.filter((p) => p.classes === 10 && Number.isFinite(p.price_per_class));
+      const byStudio = new Map();
+      for (const p of rows) {
+        const list = byStudio.get(p.domain) || [];
+        list.push(p);
+        byStudio.set(p.domain, list);
+      }
+      return Array.from(byStudio.values())
+        .map((items) => {
+          const discounts = items.map((i) => i.discount_vs_dropin_pct).filter(Number.isFinite);
+          if (!discounts.length) return null;
+          return percentile(discounts, 0.5);
+        })
+        .filter((v) => Number.isFinite(v));
+    })();
+
     const scatter = [];
     for (const studio of active) {
       const drop = Number(studio?.drop_in?.price);
@@ -1190,8 +1209,6 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
         .filter((v) => Number.isFinite(v) && v > 0);
       if (!tenPacks.length) continue;
       const tenPackPpc = percentile(tenPacks, 0.5);
-      const discountPct = ((drop - tenPackPpc) / drop) * 100;
-      gapRows.push(discountPct);
 
       const classMembershipRows = (studio.memberships || [])
         .map((m) => {
@@ -1226,7 +1243,12 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
     const minAxis = xs.length && ys.length ? round(Math.min(...xs, ...ys)) : null;
     const maxAxis = xs.length && ys.length ? round(Math.max(...xs, ...ys)) : null;
     return {
-      avg_drop_in_to_10_pack_price_diff_pct: round(gapRows.reduce((a, b) => a + b, 0) / (gapRows.length || 1)),
+      avg_drop_in_to_10_pack_price_diff_pct:
+        tenPackTableRow && Number.isFinite(tenPackTableRow.avg_discount_vs_dropin_pct)
+          ? tenPackTableRow.avg_discount_vs_dropin_pct
+          : gapRows.length
+            ? round(gapRows.reduce((a, b) => a + b, 0) / gapRows.length)
+            : null,
       dropin_vs_10pack_discount_histogram: buildRangeHistogram(gapRows, [
         { label: "0-10%", min: 0, max: 10 },
         { label: "10-20%", min: 10, max: 20 },
@@ -1234,6 +1256,8 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
         { label: "30-40%", min: 30, max: 40 },
         { label: "40%+", min: 40, max: null },
       ]),
+      dropin_vs_10pack_methodology:
+        "Matches Pack Discount Table 10-pack column: per studio, median discount_vs_dropin_pct across 10-class packs (dataset explicit value when present, else inferred vs studio drop_in.price); histogram uses those per-studio medians; average equals pack_table 10-pack avg_discount_vs_dropin_pct.",
       scatter_methodology:
         "Each point compares 10-pack EUR/class (x) vs lowest available non-unlimited membership tier EUR/class (y) for that studio.",
       scatter_sample_size: scatter.length,
