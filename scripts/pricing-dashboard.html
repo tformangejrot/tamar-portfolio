@@ -239,6 +239,70 @@
       font-size: 11px;
       margin: 0 6px 6px 0;
     }
+    .sticky-cta {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: min(300px, calc(100vw - 28px));
+      border: 1px solid var(--border-strong);
+      border-radius: 12px;
+      background: #fffdf9;
+      padding: 16px 14px 14px;
+      box-shadow: 0 12px 30px rgba(44, 42, 38, 0.16);
+      z-index: 1200;
+      opacity: 0;
+      transform: translateY(8px);
+      pointer-events: none;
+      transition: opacity 220ms ease, transform 220ms ease;
+    }
+    .sticky-cta.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .sticky-cta p {
+      margin: 0;
+      color: var(--text);
+      line-height: 1.4;
+      font-size: 13px;
+      padding-right: 24px;
+    }
+    .sticky-cta-close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 2px 4px;
+    }
+    .sticky-cta-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 12px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(139, 115, 85, 0.5);
+      padding-bottom: 2px;
+    }
+    .sticky-cta-link:hover {
+      color: var(--earth);
+      border-bottom-color: var(--earth);
+    }
+    @media (max-width: 720px) {
+      .sticky-cta {
+        right: 10px;
+        left: 10px;
+        bottom: 10px;
+        width: auto;
+      }
+    }
     .footer {
       text-align: center;
       color: var(--muted);
@@ -546,6 +610,11 @@
   </main>
 
   <footer class="footer" id="footer"></footer>
+  <aside class="sticky-cta" id="stickyCta">
+    <button class="sticky-cta-close" id="stickyCtaClose" aria-label="Close callout">×</button>
+    <p>Want to see similar data for your city? Or interested in diving deep on a potential investment/project? Let's chat.</p>
+    <a class="sticky-cta-link" href="https://sweat-and-scale.vercel.app/contact" target="_blank" rel="noopener noreferrer">Book a 30-minute call</a>
+  </aside>
 
   <script>
     Chart.defaults.color = "#5f5448";
@@ -1263,6 +1332,27 @@
         document.getElementById("footer").textContent += " · (fallback data loaded)";
       }
     }
+    const stickyCtaClose = document.getElementById("stickyCtaClose");
+    const stickyCta = document.getElementById("stickyCta");
+    const revealStickyCta = () => {
+      if (!stickyCta || stickyCta.dataset.dismissed === "1") return;
+      const threshold = Math.min(320, Math.max(120, window.innerHeight * 0.22));
+      if (window.scrollY > threshold) stickyCta.classList.add("is-visible");
+      else stickyCta.classList.remove("is-visible");
+    };
+    if (stickyCta) {
+      window.addEventListener("scroll", revealStickyCta, { passive: true });
+      window.addEventListener("resize", revealStickyCta);
+      revealStickyCta();
+    }
+    if (stickyCtaClose) {
+      stickyCtaClose.addEventListener("click", () => {
+        if (!stickyCta) return;
+        stickyCta.dataset.dismissed = "1";
+        stickyCta.classList.remove("is-visible");
+      });
+    }
+
     boot();
   </script>
 </body>
