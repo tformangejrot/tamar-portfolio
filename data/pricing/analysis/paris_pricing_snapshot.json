@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T19:49:01.688Z",
+  "generated_at": "2026-03-30T13:03:28.893Z",
   "source": "data/pricing/paris_pricing_approved_records.json",
   "sample": {
     "approved_records_total": 228,
@@ -449,16 +449,16 @@
     },
     {
       "modality": "strength_conditioning",
-      "n": 60,
-      "n_locations": 94,
-      "observations": 60,
-      "avg_drop_in": 30.92,
-      "median_drop_in": 30,
+      "n": 48,
+      "n_locations": 68,
+      "observations": 48,
+      "avg_drop_in": 29.44,
+      "median_drop_in": 29,
       "min_drop_in": 18,
-      "max_drop_in": 55,
+      "max_drop_in": 45,
       "q1": 25,
       "q3": 35,
-      "range": 37
+      "range": 27
     },
     {
       "modality": "boxing_striking",
@@ -3397,14 +3397,14 @@
         },
         {
           "modality": "strength_conditioning",
-          "n_studios": 60,
-          "n_locations": 94,
-          "n_observations": 60,
-          "avg_drop_in": 30.92,
-          "median_drop_in": 30,
+          "n_studios": 48,
+          "n_locations": 68,
+          "n_observations": 48,
+          "avg_drop_in": 29.44,
+          "median_drop_in": 29,
           "min_drop_in": 18,
-          "max_drop_in": 55,
-          "range": 37
+          "max_drop_in": 45,
+          "range": 27
         },
         {
           "modality": "boxing_striking",
@@ -5777,9 +5777,9 @@
         },
         {
           "modality": "strength_conditioning",
-          "avg_drop_in_price": 30.92,
+          "avg_drop_in_price": 29.44,
           "avg_capacity": 34,
-          "estimated_max_revenue_per_class": 1051.28
+          "estimated_max_revenue_per_class": 1000.96
         },
         {
           "modality": "boxing_striking",
@@ -5879,9 +5879,9 @@
           "modality": "strength_conditioning",
           "min": 18,
           "q1": 25,
-          "median": 30,
+          "median": 29,
           "q3": 35,
-          "max": 55
+          "max": 45
         },
         {
           "modality": "boxing_striking",

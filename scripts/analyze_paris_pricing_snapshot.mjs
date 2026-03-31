@@ -671,10 +671,12 @@ function computeSlice(activeRecords, approvedTotal = null, extra = {}) {
     const sharedDropIn = STUDIO_MODALITY_OVERRIDES.treat_shared_dropin_as_missing_domains.has(studioDomain)
       ? null
       : Number(studio?.drop_in?.price);
+    const REFORMER_OVERLAP_EXCLUSIONS = new Set(["strength_conditioning"]);
     for (const canonical of canonicalSet) {
       // If a studio only exposes explicit reformer/lagree modality pricing,
       // avoid attributing shared drop-in to mat pilates.
       if (canonical === "mat_pilates" && (reformerOnlySpecificPricing || reformerAndMatNoSplitPricing)) continue;
+      if (REFORMER_OVERLAP_EXCLUSIONS.has(canonical) && canonicalSet.has("reformer_pilates")) continue;
       const modalitySpecific = modalitySpecificPriceMap.get(canonical);
       const price = Number.isFinite(modalitySpecific) && modalitySpecific > 0
         ? modalitySpecific
