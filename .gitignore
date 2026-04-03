@@ -1,6 +1,7 @@
 # Data files (too large for GitHub)
 data/raw/**/*.json
 data/processed/*.json
+data/processed/*.jsonl
 
 # Keep reference files and category mappings
 !data/reference/

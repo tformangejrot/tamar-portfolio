@@ -102,7 +102,12 @@ function isBoutique(studio, excludedCategories) {
 }
 
 async function loadAllRawData() {
-  const files = await fs.readdir(RAW_DIR);
+  let files = [];
+  try {
+    files = await fs.readdir(RAW_DIR);
+  } catch {
+    return [];
+  }
   const jsonFiles = files.filter(f => f.endsWith('.json'));
   const studiosByPlaceId = new Map();
   
@@ -152,6 +157,14 @@ async function main() {
   // Load raw Google Places data
   const rawStudios = await loadAllRawData();
   console.log(`- Raw studios (deduplicated): ${rawStudios.length}`);
+
+  if (rawStudios.length === 0) {
+    console.log('\nNo studios to merge (empty data/raw/google_places_nairobi/ or every result missing place_id). Run fetch_google_places_nairobi.mjs or re-fetch with an updated Places fields mask.');
+    await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
+    await fs.writeFile(OUTPUT_PATH, '[]\n');
+    await fs.writeFile(BOUTIQUE_OUTPUT_PATH, '[]\n');
+    return;
+  }
   
   // Load WHOIS data
   let whoisData = [];
@@ -267,14 +280,19 @@ async function main() {
   console.log(`  - WHOIS domain dates: ${withWhoisDates.length}`);
   console.log(`- With neighborhood: ${withNeighborhood.length} (${(withNeighborhood.length / consolidated.length * 100).toFixed(1)}%)`);
   console.log(`- With categories: ${withCategories.length} (${(withCategories.length / consolidated.length * 100).toFixed(1)}%)`);
-  console.log(`- Average categories per studio: ${(consolidated.reduce((sum, s) => sum + (s.category_count || 0), 0) / consolidated.length).toFixed(1)}`);
+  const avgCat =
+    consolidated.length > 0
+      ? (consolidated.reduce((sum, s) => sum + (s.category_count || 0), 0) / consolidated.length).toFixed(1)
+      : '0.0';
+  console.log(`- Average categories per studio: ${avgCat}`);
   
   console.log('\nSummary (Boutique Studios):');
   console.log(`- Total boutique studios: ${boutiqueStudios.length}`);
   const boutiqueWithDates = boutiqueStudios.filter(s => s.estimated_opening_date);
   const boutiqueWithNeighborhood = boutiqueStudios.filter(s => s.neighborhood);
-  console.log(`- With opening dates: ${boutiqueWithDates.length} (${(boutiqueWithDates.length / boutiqueStudios.length * 100).toFixed(1)}%)`);
-  console.log(`- With neighborhood: ${boutiqueWithNeighborhood.length} (${(boutiqueWithNeighborhood.length / boutiqueStudios.length * 100).toFixed(1)}%)`);
+  const bLen = boutiqueStudios.length || 1;
+  console.log(`- With opening dates: ${boutiqueWithDates.length} (${(boutiqueWithDates.length / bLen * 100).toFixed(1)}%)`);
+  console.log(`- With neighborhood: ${boutiqueWithNeighborhood.length} (${(boutiqueWithNeighborhood.length / bLen * 100).toFixed(1)}%)`);
 }
 
 main().catch((err) => {

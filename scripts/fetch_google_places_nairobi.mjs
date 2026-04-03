@@ -7,12 +7,14 @@
  * to data/raw/google_places_nairobi/.
  * 
  * Requirements:
- *   - GOOGLE_MAPS_API_KEY environment variable
+ *   - GOOGLE_MAPS_API_KEY environment variable (see repo .env.example for GCP setup)
+ *
+ * Each category runs Text Search for every string in search_terms (not only the first).
  * 
  * Usage examples:
- *   node scripts/fetch_google_places_nairobi.mjs
- *   node scripts/fetch_google_places_nairobi.mjs --slug pilates
- *   node scripts/fetch_google_places_nairobi.mjs --dry-run
+ *   node --env-file=.env.local scripts/fetch_google_places_nairobi.mjs
+ *   node --env-file=.env.local scripts/fetch_google_places_nairobi.mjs --slug pilates
+ *   GOOGLE_MAPS_API_KEY=... node scripts/fetch_google_places_nairobi.mjs --dry-run
  */
 
 import fs from 'fs/promises';
@@ -109,7 +111,10 @@ async function textSearch(query, location = 'Nairobi, Kenya', nextPageToken = nu
 async function fetchPlaceDetails(placeId) {
   const url = new URL('https://maps.googleapis.com/maps/api/place/details/json');
   url.searchParams.set('place_id', placeId);
-  url.searchParams.set('fields', 'name,formatted_address,website,url,rating,types,geometry');
+  url.searchParams.set(
+    'fields',
+    'place_id,name,formatted_address,website,url,rating,user_ratings_total,types,geometry',
+  );
   url.searchParams.set('key', API_KEY);
 
   const resp = await fetch(url);
@@ -144,59 +149,62 @@ function placeToCard(place, category) {
 async function fetchCategory({ slug, label, search_terms }) {
   const allResults = [];
   const seenPlaceIds = new Set();
-  
-  // Use the first search term as primary query
-  const primaryQuery = search_terms[0] || `${label} Nairobi`;
-  
-  console.log(`→ Searching for ${slug} (${primaryQuery})`);
-  
-  let nextPageToken = null;
-  let pageCount = 0;
-  const maxPages = 10; // Limit to prevent infinite loops
-  
-  do {
-    if (nextPageToken) {
-      // Wait before fetching next page (required by Google API)
-      await delay(2000);
-    }
-    
-    const searchResult = await textSearch(primaryQuery, 'Nairobi, Kenya', nextPageToken);
-    const results = searchResult.results || [];
-    
-    // Fetch details for each place to get website and full info
-    for (const place of results) {
-      if (seenPlaceIds.has(place.place_id)) {
-        continue;
+  const terms =
+    Array.isArray(search_terms) && search_terms.length > 0
+      ? search_terms
+      : [`${label} Nairobi`];
+
+  for (const primaryQuery of terms) {
+    console.log(`→ Searching for ${slug} (${primaryQuery})`);
+
+    let nextPageToken = null;
+    let pageCount = 0;
+    const maxPages = 10; // Limit to prevent infinite loops
+
+    do {
+      if (nextPageToken) {
+        // Wait before fetching next page (required by Google API)
+        await delay(2000);
       }
-      seenPlaceIds.add(place.place_id);
-      
-      try {
-        await delay(150); // Rate limiting
-        const details = await fetchPlaceDetails(place.place_id);
-        const card = placeToCard(details, slug);
-        allResults.push(card);
-        console.log(`  ✓ ${card.name}`);
-      } catch (err) {
-        // If details fetch fails, use basic info from search result
-        const card = placeToCard(place, slug);
-        allResults.push(card);
-        console.warn(`  ⚠ ${card.name} (details fetch failed: ${err.message})`);
+
+      const searchResult = await textSearch(primaryQuery, 'Nairobi, Kenya', nextPageToken);
+      const results = searchResult.results || [];
+
+      // Fetch details for each place to get website and full info
+      for (const place of results) {
+        if (seenPlaceIds.has(place.place_id)) {
+          continue;
+        }
+        seenPlaceIds.add(place.place_id);
+
+        try {
+          await delay(150); // Rate limiting
+          const details = await fetchPlaceDetails(place.place_id);
+          const card = placeToCard(details, slug);
+          allResults.push(card);
+          console.log(`  ✓ ${card.name}`);
+        } catch (err) {
+          // If details fetch fails, use basic info from search result
+          const card = placeToCard(place, slug);
+          allResults.push(card);
+          console.warn(`  ⚠ ${card.name} (details fetch failed: ${err.message})`);
+        }
       }
-    }
-    
-    nextPageToken = searchResult.next_page_token;
-    pageCount += 1;
-    
-    if (!nextPageToken || pageCount >= maxPages) {
-      break;
-    }
-  } while (nextPageToken);
-  
+
+      nextPageToken = searchResult.next_page_token;
+      pageCount += 1;
+
+      if (!nextPageToken || pageCount >= maxPages) {
+        break;
+      }
+    } while (nextPageToken);
+  }
+
   return {
     slug,
     label,
     fetched_at: new Date().toISOString(),
-    query: primaryQuery,
+    queries_used: terms,
     total_results: allResults.length,
     results: allResults,
   };
