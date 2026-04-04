@@ -1,6 +1,18 @@
 {
   "buildCommand": null,
   "outputDirectory": ".",
-  "framework": null
+  "framework": null,
+  "redirects": [
+    {
+      "source": "/work/nairobi-boutique-fitness-2025",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/work/nairobi-boutique-fitness-2025/:path*",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
 }
 
