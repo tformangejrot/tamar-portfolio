@@ -8,23 +8,26 @@ This is a static website portfolio hosted on Vercel.
 - **Framework**: None - pure HTML/CSS/JavaScript
 
 ## Project Structure
-- `index.html` - Main portfolio homepage (served at `/`)
-- `scripts/dashboard.html` - Interactive dashboard (served at `/scripts/dashboard.html`)
-- `vercel.json` - Vercel deployment configuration
+- `index.html` - Portfolio homepage (served at `/`); featured work links, about copy
+- `work/<project>/index.html` - Shipped case-study dashboards (Paris, London, …); self-contained HTML with embedded JS data
+- `work/nairobi-boutique-fitness-2025/` - Nairobi dashboard exists in repo but project is on hold; `vercel.json` redirects those URLs to `/`; keep local data/scripts if useful
+- `scripts/*.html` - Pricing dashboard, `dashboard.html`, `visual*.html`, prototypes; not all linked from `index.html`
+- `scripts/*.mjs` - Data pipelines (ClassPass, Google, WHOIS, consolidate; city-specific variants)
+- `studio-grow-workbook/` - One-off demo mini-site (`npm run dev`); not core portfolio
+- `data/reference/` - Committed reference data; `data/raw/` and `data/processed/` largely gitignored
+- `vercel.json` - Vercel configuration (redirects, static output)
 
 ## Key Technologies
 - **Visualization**: Chart.js, Leaflet.js (loaded via CDN)
 - **Styling**: Inline CSS in HTML files
-- **Data**: Hardcoded in JavaScript (no external data files needed for deployment)
+- **Shipped dashboards**: Data hardcoded in the relevant `work/.../index.html` (or specific `scripts/*.html`); no runtime JSON fetch for production dashboards
 
 ## Deployment Notes
 - All dependencies are loaded from CDNs (no npm packages needed for runtime)
 - Large data files are gitignored and not deployed
-- Dashboard data is embedded directly in the HTML/JS
-- Vercel auto-detects static sites and serves files from root directory
+- Vercel serves files from the repository root
 
 ## Development
-- No build step required
-- Edit HTML files directly
-- Test locally by opening HTML files in browser or using a simple HTTP server
-
+- No build step required for the portfolio
+- Edit HTML files directly; use a simple HTTP server from repo root for correct paths
+- For enrichment scripts: Node.js, `.env` / `.env.local` for API keys (gitignored)
