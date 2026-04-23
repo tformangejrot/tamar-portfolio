@@ -35,22 +35,108 @@ npm run dev
 
 ## Data and Node scripts
 
-- **`data/reference/`** — Committed reference files (e.g. category mappings).
+- **`data/reference/`** — Committed reference files (e.g. category mappings, city-specific modality lists).
 - **`data/raw/`** and **`data/processed/`** — Large JSON/JSONL outputs are **gitignored** (see `.gitignore`); clone the repo on a machine that already has them, or regenerate.
+- **`data/aggregates/<city>/`** — Small pre-computed JSON files consumed by dashboards. These **are** committed.
 
-**Paris (example pipeline):**
+API keys and secrets for enrichment live in **`.env` / `.env.local`** (ignored by git).
 
-1. `scripts/fetch_classpass.mjs` — scrape ClassPass  
-2. `scripts/normalize_classpass.mjs` — normalize  
-3. `scripts/enrich_with_google.mjs` — Google Places  
-4. `scripts/enrich_with_whois.mjs` — domain / WHOIS  
-5. `scripts/consolidate_studio_data.mjs` — consolidated dataset  
+---
 
-London and other cities use **parallel** scripts (often suffixed `_london.mjs` or named for the city, e.g. Nairobi Google Places fetchers). Browse `scripts/*.mjs` for the full set.
+### Pipeline A — ClassPass approach (Paris, London)
 
-API keys and secrets for enrichment live in **`.env` / `.env.local`** (ignored by git). Copy from your own machine when setting up elsewhere.
+Used for cities with strong ClassPass coverage. ClassPass provides a pre-filtered, boutique-specific starting point.
 
-**Nairobi:** Pipelines and raw/processed data can stay in the repo locally for future use even if the public Nairobi dashboard never ships; nothing in this README requires deleting those files.
+1. `fetch_classpass.mjs` — scrape ClassPass studio listings
+2. `normalize_classpass.mjs` — parse and normalize categories
+3. `enrich_with_google.mjs` — Google Places enrichment (address, rating, coordinates)
+4. `enrich_with_whois.mjs` — domain registration dates (opening date estimates)
+5. `consolidate_studio_data.mjs` — merge, deduplicate, apply category consolidation
+6. `create_boutique_only.mjs` — filter to boutique studios
+7. `compute_<city>_aggregates.mjs` — generate JSON metrics for dashboard
+
+---
+
+### Pipeline B — Google Maps approach (Berlin, Nairobi, Amsterdam, Stockholm)
+
+Used for cities without reliable ClassPass coverage. Searches Google Places for each modality category directly.
+
+#### Step 1 — Fetch raw data
+```bash
+node --env-file=.env.local scripts/fetch_google_places_<city>.mjs
+```
+- Reads `data/reference/<city>_categories.json` (71 modality search terms)
+- Saves one JSON file per modality to `data/raw/google_places_<city>/`
+- Supports `--slug <modality>` to fetch a single category, `--no-resume` to re-fetch all
+- Retries transient API errors (DEADLINE_EXCEEDED, OVER_QUERY_LIMIT) automatically
+- Skips already-fetched slugs by default (safe to re-run after interruption)
+
+#### Step 2 — WHOIS enrichment (opening date estimates)
+```bash
+node --env-file=.env.local scripts/enrich_<city>_with_whois.mjs
+```
+- Deduplicates by `place_id` before lookups — each studio queried once only
+- Writes `data/processed/<city>_studios_whois.json`
+- Supports `--limit N` / `--offset N` for batching; resumable by default
+- Note: German `.de` domains via DENIC often return `1986-11-05` as a placeholder
+  when no real date exists — this is filtered out during consolidation
+
+#### Step 3 — Wayback Machine enrichment (fallback opening dates)
+```bash
+node scripts/enrich_<city>_with_wayback.mjs
+```
+- Only targets studios that have a domain but no valid WHOIS date
+- Queries the public Wayback CDX API for the earliest HTTP 200 capture of each domain
+- 1-second delay per request (free public API — be polite)
+- Writes `data/processed/<city>_studios_wayback.json`
+- Supports `--limit` / `--offset` / `--no-resume`; `--all` to run on all studios
+- Priority in final data: WHOIS date > Wayback date > null
+
+#### Step 4 — Consolidate
+```bash
+node scripts/consolidate_<city>_studios.mjs
+```
+- Merges all modality files, deduplicates by `place_id`
+- Extracts neighborhood/district from address strings
+- Joins WHOIS and Wayback date files (both optional — skipped gracefully if absent)
+- Applies `data/reference/category_consolidation.json` to standardize modalities
+- Outputs:
+  - `data/processed/<city>_studios_consolidated.json` — all studios
+  - `data/processed/<city>_studios_consolidated_boutique.json` — category-filtered
+
+#### Step 5 — Manual data review & exclusions
+After consolidation, export to CSV and review in a spreadsheet:
+```bash
+node scripts/export_<city>_studios_csv.mjs
+```
+Google Places searches return broad results — expect to find:
+- Supermarkets/retailers matched on category keywords (e.g. "boxing" matching store names)
+- Nightclubs and social dance venues matched on "dance" searches
+- Medical/beauty clinics matched on wellness categories
+- Department stores, shopping malls, food venues
+
+Confirmed exclusions are added to `create_boutique_only_<city>.mjs` as name-based regex patterns.
+
+#### Step 6 — Apply exclusions
+```bash
+node scripts/create_boutique_only_<city>.mjs
+```
+- Re-applies category filter + name exclusion list
+- Overwrites `data/processed/<city>_studios_consolidated_boutique.json` with clean data
+
+#### Step 7 — Compute aggregates
+```bash
+node scripts/compute_<city>_aggregates.mjs
+```
+- Reads the clean boutique file
+- Outputs ~10 JSON files to `data/aggregates/<city>/` — these are committed to git
+
+#### Step 8 — Dashboard
+`work/<city>-boutique-fitness-2025/index.html` — fetches from `data/aggregates/<city>/`
+
+---
+
+**Nairobi:** Pipelines and raw/processed data stay in the repo locally for future use even if the public dashboard never ships.
 
 **Pricing workflow:** See `data/pricing/HANDOFF_STUDIO_UPDATES.md` for handoff notes on studio pricing updates.
 

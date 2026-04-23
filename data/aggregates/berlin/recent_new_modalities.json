@@ -1,0 +1,62 @@
+[
+  {
+    "modality": "strength-training",
+    "count": 22,
+    "pctOfAllNew": 27.8,
+    "pctOfModality": 13.3
+  },
+  {
+    "modality": "martial-arts",
+    "count": 17,
+    "pctOfAllNew": 21.5,
+    "pctOfModality": 5.8
+  },
+  {
+    "modality": "boxing",
+    "count": 16,
+    "pctOfAllNew": 20.3,
+    "pctOfModality": 12.6
+  },
+  {
+    "modality": "yoga",
+    "count": 14,
+    "pctOfAllNew": 17.7,
+    "pctOfModality": 5.8
+  },
+  {
+    "modality": "pilates",
+    "count": 10,
+    "pctOfAllNew": 12.7,
+    "pctOfModality": 8.2
+  },
+  {
+    "modality": "aerial",
+    "count": 7,
+    "pctOfAllNew": 8.9,
+    "pctOfModality": 11.1
+  },
+  {
+    "modality": "low-impact-training",
+    "count": 6,
+    "pctOfAllNew": 7.6,
+    "pctOfModality": 7.4
+  },
+  {
+    "modality": "reformer-pilates",
+    "count": 5,
+    "pctOfAllNew": 6.3,
+    "pctOfModality": 7.4
+  },
+  {
+    "modality": "dance",
+    "count": 5,
+    "pctOfAllNew": 6.3,
+    "pctOfModality": 1.7
+  },
+  {
+    "modality": "stretching",
+    "count": 4,
+    "pctOfAllNew": 5.1,
+    "pctOfModality": 5.6
+  }
+]

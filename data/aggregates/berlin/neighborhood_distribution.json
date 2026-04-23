@@ -1,0 +1,210 @@
+[
+  {
+    "neighborhood": "Kreuzberg",
+    "count": 196,
+    "center": [
+      52.499,
+      13.403
+    ]
+  },
+  {
+    "neighborhood": "Prenzlauer Berg",
+    "count": 151,
+    "center": [
+      52.538,
+      13.42
+    ]
+  },
+  {
+    "neighborhood": "Mitte",
+    "count": 145,
+    "center": [
+      52.52,
+      13.405
+    ]
+  },
+  {
+    "neighborhood": "Friedrichshain",
+    "count": 91,
+    "center": [
+      52.516,
+      13.454
+    ]
+  },
+  {
+    "neighborhood": "Schoeneberg",
+    "count": 80,
+    "center": [
+      52.479,
+      13.354
+    ]
+  },
+  {
+    "neighborhood": "Charlottenburg",
+    "count": 79,
+    "center": [
+      52.516,
+      13.304
+    ]
+  },
+  {
+    "neighborhood": "Wilmersdorf",
+    "count": 74,
+    "center": [
+      52.488,
+      13.325
+    ]
+  },
+  {
+    "neighborhood": "Steglitz",
+    "count": 72,
+    "center": [
+      52.459,
+      13.323
+    ]
+  },
+  {
+    "neighborhood": "Wedding",
+    "count": 56,
+    "center": [
+      52.551,
+      13.362
+    ]
+  },
+  {
+    "neighborhood": "Neukoelln",
+    "count": 53,
+    "center": [
+      52.481,
+      13.435
+    ]
+  },
+  {
+    "neighborhood": "Tempelhof",
+    "count": 45,
+    "center": [
+      52.468,
+      13.385
+    ]
+  },
+  {
+    "neighborhood": "Lichtenberg",
+    "count": 41,
+    "center": [
+      52.512,
+      13.5
+    ]
+  },
+  {
+    "neighborhood": "Pankow",
+    "count": 33,
+    "center": [
+      52.569,
+      13.402
+    ]
+  },
+  {
+    "neighborhood": "Weissensee",
+    "count": 31,
+    "center": [
+      52.554,
+      13.466
+    ]
+  },
+  {
+    "neighborhood": "Moabit",
+    "count": 30,
+    "center": [
+      52.531,
+      13.34
+    ]
+  },
+  {
+    "neighborhood": "Treptow",
+    "count": 27,
+    "center": [
+      52.486,
+      13.47
+    ]
+  },
+  {
+    "neighborhood": "Zehlendorf",
+    "count": 22,
+    "center": [
+      52.431,
+      13.258
+    ]
+  },
+  {
+    "neighborhood": "Marzahn",
+    "count": 22,
+    "center": [
+      52.539,
+      13.563
+    ]
+  },
+  {
+    "neighborhood": "Reinickendorf",
+    "count": 21,
+    "center": [
+      52.59,
+      13.338
+    ]
+  },
+  {
+    "neighborhood": "Koepenick",
+    "count": 19,
+    "center": [
+      52.441,
+      13.582
+    ]
+  },
+  {
+    "neighborhood": "Spandau",
+    "count": 19,
+    "center": [
+      52.535,
+      13.199
+    ]
+  },
+  {
+    "neighborhood": "Tiergarten",
+    "count": 14,
+    "center": [
+      52.5145,
+      13.3502
+    ]
+  },
+  {
+    "neighborhood": "Adlershof",
+    "count": 14,
+    "center": [
+      52.433,
+      13.535
+    ]
+  },
+  {
+    "neighborhood": "Dahlem",
+    "count": 14,
+    "center": [
+      52.457,
+      13.287
+    ]
+  },
+  {
+    "neighborhood": "Hellersdorf",
+    "count": 12,
+    "center": [
+      52.525,
+      13.602
+    ]
+  },
+  {
+    "neighborhood": "Gesundbrunnen",
+    "count": 9,
+    "center": [
+      52.548,
+      13.389
+    ]
+  }
+]

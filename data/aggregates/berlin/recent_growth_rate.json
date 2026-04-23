@@ -1,0 +1,52 @@
+[
+  {
+    "modality": "personal-training",
+    "count": 3,
+    "pctOfModality": 15
+  },
+  {
+    "modality": "strength-training",
+    "count": 22,
+    "pctOfModality": 13.3
+  },
+  {
+    "modality": "boxing",
+    "count": 16,
+    "pctOfModality": 12.6
+  },
+  {
+    "modality": "cycling",
+    "count": 3,
+    "pctOfModality": 12.5
+  },
+  {
+    "modality": "aerial",
+    "count": 7,
+    "pctOfModality": 11.1
+  },
+  {
+    "modality": "pilates",
+    "count": 10,
+    "pctOfModality": 8.2
+  },
+  {
+    "modality": "running",
+    "count": 4,
+    "pctOfModality": 7.8
+  },
+  {
+    "modality": "reformer-pilates",
+    "count": 5,
+    "pctOfModality": 7.4
+  },
+  {
+    "modality": "low-impact-training",
+    "count": 6,
+    "pctOfModality": 7.4
+  },
+  {
+    "modality": "yoga",
+    "count": 14,
+    "pctOfModality": 5.8
+  }
+]

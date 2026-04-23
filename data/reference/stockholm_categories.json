@@ -1,0 +1,698 @@
+[
+  {
+    "label": "Aerial Studios in Stockholm",
+    "short_label": "Aerial",
+    "slug": "aerial",
+    "search_terms": [
+      "Aerial Stockholm",
+      "Aerial studio Stockholm",
+      "Aerial class Stockholm"
+    ]
+  },
+  {
+    "label": "Aerial/Antigravity Yoga Studios in Stockholm",
+    "short_label": "Aerial/Antigravity Yoga",
+    "slug": "aerial-antigravity-yoga",
+    "search_terms": [
+      "Aerial/Antigravity Yoga Stockholm",
+      "Aerial/Antigravity Yoga studio Stockholm",
+      "Aerial/Antigravity Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Ashtanga Yoga Studios in Stockholm",
+    "short_label": "Ashtanga Yoga",
+    "slug": "ashtanga-yoga",
+    "search_terms": [
+      "Ashtanga Yoga Stockholm",
+      "Ashtanga Yoga studio Stockholm",
+      "Ashtanga Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Ballet Dance Studios in Stockholm",
+    "short_label": "Ballet Dance",
+    "slug": "ballet-dance",
+    "search_terms": [
+      "Ballet Dance Stockholm",
+      "Ballet Dance studio Stockholm",
+      "Ballet Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Ballroom Dance Studios in Stockholm",
+    "short_label": "Ballroom Dance",
+    "slug": "ballroom-dance",
+    "search_terms": [
+      "Ballroom Dance Stockholm",
+      "Ballroom Dance studio Stockholm",
+      "Ballroom Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Barre Studios in Stockholm",
+    "short_label": "Barre",
+    "slug": "barre",
+    "search_terms": [
+      "Barre Stockholm",
+      "Barre studio Stockholm",
+      "Barre class Stockholm"
+    ]
+  },
+  {
+    "label": "Belly Dance Studios in Stockholm",
+    "short_label": "Belly Dance",
+    "slug": "belly-dance",
+    "search_terms": [
+      "Belly Dance Stockholm",
+      "Belly Dance studio Stockholm",
+      "Belly Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Bollywood Dance Studios in Stockholm",
+    "short_label": "Bollywood Dance",
+    "slug": "bollywood-dance",
+    "search_terms": [
+      "Bollywood Dance Stockholm",
+      "Bollywood Dance studio Stockholm",
+      "Bollywood Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Bootcamp Studios in Stockholm",
+    "short_label": "Bootcamp",
+    "slug": "bootcamp",
+    "search_terms": [
+      "Bootcamp Stockholm",
+      "Bootcamp studio Stockholm",
+      "Bootcamp class Stockholm"
+    ]
+  },
+  {
+    "label": "Boxing Studios in Stockholm",
+    "short_label": "Boxing",
+    "slug": "boxing",
+    "search_terms": [
+      "Boxing Stockholm",
+      "Boxing studio Stockholm",
+      "Boxing class Stockholm",
+      "Boxing gym Stockholm"
+    ]
+  },
+  {
+    "label": "Cardio Dance Studios in Stockholm",
+    "short_label": "Cardio Dance",
+    "slug": "cardio-dance",
+    "search_terms": [
+      "Cardio Dance Stockholm",
+      "Cardio Dance studio Stockholm",
+      "Cardio Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Circuit Training Studios in Stockholm",
+    "short_label": "Circuit Training",
+    "slug": "circuit-training",
+    "search_terms": [
+      "Circuit Training Stockholm",
+      "Circuit Training studio Stockholm",
+      "Circuit Training class Stockholm"
+    ]
+  },
+  {
+    "label": "Contemporary Dance Studios in Stockholm",
+    "short_label": "Contemporary Dance",
+    "slug": "contemporary-dance",
+    "search_terms": [
+      "Contemporary Dance Stockholm",
+      "Contemporary Dance studio Stockholm",
+      "Contemporary Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "CrossFit Studios in Stockholm",
+    "short_label": "CrossFit",
+    "slug": "crossfit",
+    "search_terms": [
+      "CrossFit Stockholm",
+      "CrossFit studio Stockholm",
+      "CrossFit class Stockholm",
+      "CrossFit gym Stockholm"
+    ]
+  },
+  {
+    "label": "Cycling Studios in Stockholm",
+    "short_label": "Cycling",
+    "slug": "cycling",
+    "search_terms": [
+      "Cycling Stockholm",
+      "Cycling studio Stockholm",
+      "Cycling class Stockholm",
+      "Indoor cycling Stockholm"
+    ]
+  },
+  {
+    "label": "Dance Studios in Stockholm",
+    "short_label": "Dance",
+    "slug": "dance",
+    "search_terms": [
+      "Dance Stockholm",
+      "Dance studio Stockholm",
+      "Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Electrical muscle stimulation Studios in Stockholm",
+    "short_label": "Electrical muscle stimulation",
+    "slug": "electrical-muscle-stimulation",
+    "search_terms": [
+      "Electrical muscle stimulation Stockholm",
+      "EMS Stockholm",
+      "EMS studio Stockholm",
+      "EMS class Stockholm"
+    ]
+  },
+  {
+    "label": "Fitness Studios in Stockholm",
+    "short_label": "Fitness",
+    "slug": "fitness",
+    "search_terms": [
+      "Fitness Stockholm",
+      "Fitness studio Stockholm",
+      "Fitness class Stockholm"
+    ]
+  },
+  {
+    "label": "Gym Time Studios in Stockholm",
+    "short_label": "Gym Time",
+    "slug": "gym-time",
+    "search_terms": [
+      "Gym Time Stockholm",
+      "Gym Time studio Stockholm",
+      "Gym Time class Stockholm"
+    ]
+  },
+  {
+    "label": "Hatha Yoga Studios in Stockholm",
+    "short_label": "Hatha Yoga",
+    "slug": "hatha-yoga",
+    "search_terms": [
+      "Hatha Yoga Stockholm",
+      "Hatha Yoga studio Stockholm",
+      "Hatha Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Heavy bag Studios in Stockholm",
+    "short_label": "Heavy bag",
+    "slug": "heavy-bag",
+    "search_terms": [
+      "Heavy bag Stockholm",
+      "Heavy bag studio Stockholm",
+      "Heavy bag class Stockholm"
+    ]
+  },
+  {
+    "label": "High-intensity Pilates Studios in Stockholm",
+    "short_label": "High-intensity Pilates",
+    "slug": "high-intensity-pilates",
+    "search_terms": [
+      "High-intensity Pilates Stockholm",
+      "High-intensity Pilates studio Stockholm",
+      "High-intensity Pilates class Stockholm"
+    ]
+  },
+  {
+    "label": "HIIT Studios in Stockholm",
+    "short_label": "HIIT",
+    "slug": "hiit",
+    "search_terms": [
+      "HIIT Stockholm",
+      "HIIT studio Stockholm",
+      "HIIT class Stockholm"
+    ]
+  },
+  {
+    "label": "Hip Hop Dance Studios in Stockholm",
+    "short_label": "Hip Hop Dance",
+    "slug": "hip-hop-dance",
+    "search_terms": [
+      "Hip Hop Dance Stockholm",
+      "Hip Hop Dance studio Stockholm",
+      "Hip Hop Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Hot Yoga Studios in Stockholm",
+    "short_label": "Hot Yoga",
+    "slug": "hot-yoga",
+    "search_terms": [
+      "Hot Yoga Stockholm",
+      "Hot Yoga studio Stockholm",
+      "Hot Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Indoor Cycling Studios in Stockholm",
+    "short_label": "Indoor Cycling",
+    "slug": "indoor-cycling",
+    "search_terms": [
+      "Indoor Cycling Stockholm",
+      "Indoor Cycling studio Stockholm",
+      "Indoor Cycling class Stockholm"
+    ]
+  },
+  {
+    "label": "Iyengar Yoga Studios in Stockholm",
+    "short_label": "Iyengar Yoga",
+    "slug": "iyengar-yoga",
+    "search_terms": [
+      "Iyengar Yoga Stockholm",
+      "Iyengar Yoga studio Stockholm",
+      "Iyengar Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Jazz Dance Studios in Stockholm",
+    "short_label": "Jazz Dance",
+    "slug": "jazz-dance",
+    "search_terms": [
+      "Jazz Dance Stockholm",
+      "Jazz Dance studio Stockholm",
+      "Jazz Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Jiu Jitsu Studios in Stockholm",
+    "short_label": "Jiu Jitsu",
+    "slug": "jiu-jitsu",
+    "search_terms": [
+      "Jiu Jitsu Stockholm",
+      "Jiu Jitsu studio Stockholm",
+      "Jiu Jitsu class Stockholm"
+    ]
+  },
+  {
+    "label": "Jivamukti Yoga Studios in Stockholm",
+    "short_label": "Jivamukti Yoga",
+    "slug": "jivamukti-yoga",
+    "search_terms": [
+      "Jivamukti Yoga Stockholm",
+      "Jivamukti Yoga studio Stockholm",
+      "Jivamukti Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Karate Studios in Stockholm",
+    "short_label": "Karate",
+    "slug": "karate",
+    "search_terms": [
+      "Karate Stockholm",
+      "Karate studio Stockholm",
+      "Karate class Stockholm"
+    ]
+  },
+  {
+    "label": "Kickboxing Studios in Stockholm",
+    "short_label": "Kickboxing",
+    "slug": "kickboxing",
+    "search_terms": [
+      "Kickboxing Stockholm",
+      "Kickboxing studio Stockholm",
+      "Kickboxing class Stockholm"
+    ]
+  },
+  {
+    "label": "Krav Maga Studios in Stockholm",
+    "short_label": "Krav Maga",
+    "slug": "krav-maga",
+    "search_terms": [
+      "Krav Maga Stockholm",
+      "Krav Maga studio Stockholm",
+      "Krav Maga class Stockholm"
+    ]
+  },
+  {
+    "label": "Kundalini Yoga Studios in Stockholm",
+    "short_label": "Kundalini Yoga",
+    "slug": "kundalini-yoga",
+    "search_terms": [
+      "Kundalini Yoga Stockholm",
+      "Kundalini Yoga studio Stockholm",
+      "Kundalini Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Lagree Studios in Stockholm",
+    "short_label": "Lagree",
+    "slug": "lagree",
+    "search_terms": [
+      "Lagree Stockholm",
+      "Lagree studio Stockholm",
+      "Lagree class Stockholm"
+    ]
+  },
+  {
+    "label": "Latin Dance Studios in Stockholm",
+    "short_label": "Latin Dance",
+    "slug": "latin-dance",
+    "search_terms": [
+      "Latin Dance Stockholm",
+      "Latin Dance studio Stockholm",
+      "Latin Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Low-impact Training Studios in Stockholm",
+    "short_label": "Low-impact Training",
+    "slug": "low-impact-training",
+    "search_terms": [
+      "Low-impact Training Stockholm",
+      "Low-impact Training studio Stockholm",
+      "Low-impact Training class Stockholm"
+    ]
+  },
+  {
+    "label": "Martial Arts Studios in Stockholm",
+    "short_label": "Martial Arts",
+    "slug": "martial-arts",
+    "search_terms": [
+      "Martial Arts Stockholm",
+      "Martial Arts studio Stockholm",
+      "Martial Arts class Stockholm"
+    ]
+  },
+  {
+    "label": "Mat Pilates Studios in Stockholm",
+    "short_label": "Mat Pilates",
+    "slug": "mat-pilates",
+    "search_terms": [
+      "Mat Pilates Stockholm",
+      "Mat Pilates studio Stockholm",
+      "Mat Pilates class Stockholm"
+    ]
+  },
+  {
+    "label": "Mixed Martial Arts Studios in Stockholm",
+    "short_label": "Mixed Martial Arts",
+    "slug": "mixed-martial-arts",
+    "search_terms": [
+      "Mixed Martial Arts Stockholm",
+      "MMA Stockholm",
+      "MMA studio Stockholm",
+      "MMA class Stockholm"
+    ]
+  },
+  {
+    "label": "Modern Dance Studios in Stockholm",
+    "short_label": "Modern Dance",
+    "slug": "modern-dance",
+    "search_terms": [
+      "Modern Dance Stockholm",
+      "Modern Dance studio Stockholm",
+      "Modern Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Muay Thai Studios in Stockholm",
+    "short_label": "Muay Thai",
+    "slug": "muay-thai",
+    "search_terms": [
+      "Muay Thai Stockholm",
+      "Muay Thai studio Stockholm",
+      "Muay Thai class Stockholm"
+    ]
+  },
+  {
+    "label": "Outdoors Studios in Stockholm",
+    "short_label": "Outdoors",
+    "slug": "outdoors",
+    "search_terms": [
+      "Outdoors Stockholm",
+      "Outdoor fitness Stockholm",
+      "Outdoor training Stockholm"
+    ]
+  },
+  {
+    "label": "Personal Training Studios in Stockholm",
+    "short_label": "Personal Training",
+    "slug": "personal-training",
+    "search_terms": [
+      "Personal Training Stockholm",
+      "Personal Training studio Stockholm",
+      "Personal trainer Stockholm"
+    ]
+  },
+  {
+    "label": "Pilates Studios in Stockholm",
+    "short_label": "Pilates",
+    "slug": "pilates",
+    "search_terms": [
+      "Pilates Stockholm",
+      "Pilates studio Stockholm",
+      "Pilates class Stockholm"
+    ]
+  },
+  {
+    "label": "Pole Dance Studios in Stockholm",
+    "short_label": "Pole Dance",
+    "slug": "pole-dance",
+    "search_terms": [
+      "Pole Dance Stockholm",
+      "Pole Dance studio Stockholm",
+      "Pole Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Postnatal Studios in Stockholm",
+    "short_label": "Postnatal",
+    "slug": "postnatal",
+    "search_terms": [
+      "Postnatal Stockholm",
+      "Postnatal studio Stockholm",
+      "Postnatal class Stockholm"
+    ]
+  },
+  {
+    "label": "Power Yoga Studios in Stockholm",
+    "short_label": "Power Yoga",
+    "slug": "power-yoga",
+    "search_terms": [
+      "Power Yoga Stockholm",
+      "Power Yoga studio Stockholm",
+      "Power Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Prenatal Studios in Stockholm",
+    "short_label": "Prenatal",
+    "slug": "prenatal",
+    "search_terms": [
+      "Prenatal Stockholm",
+      "Prenatal studio Stockholm",
+      "Prenatal class Stockholm"
+    ]
+  },
+  {
+    "label": "Prenatal Yoga Studios in Stockholm",
+    "short_label": "Prenatal Yoga",
+    "slug": "prenatal-yoga",
+    "search_terms": [
+      "Prenatal Yoga Stockholm",
+      "Prenatal Yoga studio Stockholm",
+      "Prenatal Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Qi Gong Studios in Stockholm",
+    "short_label": "Qi Gong",
+    "slug": "qi-gong",
+    "search_terms": [
+      "Qi Gong Stockholm",
+      "Qi Gong studio Stockholm",
+      "Qi Gong class Stockholm"
+    ]
+  },
+  {
+    "label": "Reformer Pilates Studios in Stockholm",
+    "short_label": "Reformer Pilates",
+    "slug": "reformer-pilates",
+    "search_terms": [
+      "Reformer Pilates Stockholm",
+      "Reformer Pilates studio Stockholm",
+      "Reformer Pilates class Stockholm"
+    ]
+  },
+  {
+    "label": "Restorative Yoga Studios in Stockholm",
+    "short_label": "Restorative Yoga",
+    "slug": "restorative-yoga",
+    "search_terms": [
+      "Restorative Yoga Stockholm",
+      "Restorative Yoga studio Stockholm",
+      "Restorative Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Running Studios in Stockholm",
+    "short_label": "Running",
+    "slug": "running",
+    "search_terms": [
+      "Running Stockholm",
+      "Running studio Stockholm",
+      "Running class Stockholm"
+    ]
+  },
+  {
+    "label": "Salsa Dance Studios in Stockholm",
+    "short_label": "Salsa Dance",
+    "slug": "salsa-dance",
+    "search_terms": [
+      "Salsa Dance Stockholm",
+      "Salsa Dance studio Stockholm",
+      "Salsa Dance class Stockholm"
+    ]
+  },
+  {
+    "label": "Sculpt Studios in Stockholm",
+    "short_label": "Sculpt",
+    "slug": "sculpt",
+    "search_terms": [
+      "Sculpt Stockholm",
+      "Sculpt studio Stockholm",
+      "Sculpt class Stockholm"
+    ]
+  },
+  {
+    "label": "Shadowboxing Studios in Stockholm",
+    "short_label": "Shadowboxing",
+    "slug": "shadowboxing",
+    "search_terms": [
+      "Shadowboxing Stockholm",
+      "Shadowboxing studio Stockholm",
+      "Shadowboxing class Stockholm"
+    ]
+  },
+  {
+    "label": "Strength Training Studios in Stockholm",
+    "short_label": "Strength Training",
+    "slug": "strength-training",
+    "search_terms": [
+      "Strength Training Stockholm",
+      "Strength Training studio Stockholm",
+      "Strength Training class Stockholm"
+    ]
+  },
+  {
+    "label": "Stretching Studios in Stockholm",
+    "short_label": "Stretching",
+    "slug": "stretching",
+    "search_terms": [
+      "Stretching Stockholm",
+      "Stretching studio Stockholm",
+      "Stretching class Stockholm"
+    ]
+  },
+  {
+    "label": "Taekwondo Studios in Stockholm",
+    "short_label": "Taekwondo",
+    "slug": "taekwondo",
+    "search_terms": [
+      "Taekwondo Stockholm",
+      "Taekwondo studio Stockholm",
+      "Taekwondo class Stockholm"
+    ]
+  },
+  {
+    "label": "Tai Chi Studios in Stockholm",
+    "short_label": "Tai Chi",
+    "slug": "tai-chi",
+    "search_terms": [
+      "Tai Chi Stockholm",
+      "Tai Chi studio Stockholm",
+      "Tai Chi class Stockholm"
+    ]
+  },
+  {
+    "label": "Trampoline Studios in Stockholm",
+    "short_label": "Trampoline",
+    "slug": "trampoline",
+    "search_terms": [
+      "Trampoline Stockholm",
+      "Trampoline studio Stockholm",
+      "Trampoline class Stockholm"
+    ]
+  },
+  {
+    "label": "TRX Studios in Stockholm",
+    "short_label": "TRX",
+    "slug": "trx",
+    "search_terms": [
+      "TRX Stockholm",
+      "TRX studio Stockholm",
+      "TRX class Stockholm"
+    ]
+  },
+  {
+    "label": "Vinyasa Yoga Studios in Stockholm",
+    "short_label": "Vinyasa Yoga",
+    "slug": "vinyasa-yoga",
+    "search_terms": [
+      "Vinyasa Yoga Stockholm",
+      "Vinyasa Yoga studio Stockholm",
+      "Vinyasa Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Weightlifting Studios in Stockholm",
+    "short_label": "Weightlifting",
+    "slug": "weightlifting",
+    "search_terms": [
+      "Weightlifting Stockholm",
+      "Weightlifting studio Stockholm",
+      "Weightlifting class Stockholm"
+    ]
+  },
+  {
+    "label": "Yin Yoga Studios in Stockholm",
+    "short_label": "Yin Yoga",
+    "slug": "yin-yoga",
+    "search_terms": [
+      "Yin Yoga Stockholm",
+      "Yin Yoga studio Stockholm",
+      "Yin Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Yoga Studios in Stockholm",
+    "short_label": "Yoga",
+    "slug": "yoga",
+    "search_terms": [
+      "Yoga Stockholm",
+      "Yoga studio Stockholm",
+      "Yoga class Stockholm"
+    ]
+  },
+  {
+    "label": "Yoga Nidra Studios in Stockholm",
+    "short_label": "Yoga Nidra",
+    "slug": "yoga-nidra",
+    "search_terms": [
+      "Yoga Nidra Stockholm",
+      "Yoga Nidra studio Stockholm",
+      "Yoga Nidra class Stockholm"
+    ]
+  },
+  {
+    "label": "Zumba Dance Studios in Stockholm",
+    "short_label": "Zumba Dance",
+    "slug": "zumba-dance",
+    "search_terms": [
+      "Zumba Dance Stockholm",
+      "Zumba Dance studio Stockholm",
+      "Zumba Dance class Stockholm",
+      "Zumba Stockholm"
+    ]
+  }
+]

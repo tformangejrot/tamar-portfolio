@@ -1,0 +1,698 @@
+[
+  {
+    "label": "Aerial Studios in Amsterdam",
+    "short_label": "Aerial",
+    "slug": "aerial",
+    "search_terms": [
+      "Aerial Amsterdam",
+      "Aerial studio Amsterdam",
+      "Aerial class Amsterdam"
+    ]
+  },
+  {
+    "label": "Aerial/Antigravity Yoga Studios in Amsterdam",
+    "short_label": "Aerial/Antigravity Yoga",
+    "slug": "aerial-antigravity-yoga",
+    "search_terms": [
+      "Aerial/Antigravity Yoga Amsterdam",
+      "Aerial/Antigravity Yoga studio Amsterdam",
+      "Aerial/Antigravity Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Ashtanga Yoga Studios in Amsterdam",
+    "short_label": "Ashtanga Yoga",
+    "slug": "ashtanga-yoga",
+    "search_terms": [
+      "Ashtanga Yoga Amsterdam",
+      "Ashtanga Yoga studio Amsterdam",
+      "Ashtanga Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Ballet Dance Studios in Amsterdam",
+    "short_label": "Ballet Dance",
+    "slug": "ballet-dance",
+    "search_terms": [
+      "Ballet Dance Amsterdam",
+      "Ballet Dance studio Amsterdam",
+      "Ballet Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Ballroom Dance Studios in Amsterdam",
+    "short_label": "Ballroom Dance",
+    "slug": "ballroom-dance",
+    "search_terms": [
+      "Ballroom Dance Amsterdam",
+      "Ballroom Dance studio Amsterdam",
+      "Ballroom Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Barre Studios in Amsterdam",
+    "short_label": "Barre",
+    "slug": "barre",
+    "search_terms": [
+      "Barre Amsterdam",
+      "Barre studio Amsterdam",
+      "Barre class Amsterdam"
+    ]
+  },
+  {
+    "label": "Belly Dance Studios in Amsterdam",
+    "short_label": "Belly Dance",
+    "slug": "belly-dance",
+    "search_terms": [
+      "Belly Dance Amsterdam",
+      "Belly Dance studio Amsterdam",
+      "Belly Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Bollywood Dance Studios in Amsterdam",
+    "short_label": "Bollywood Dance",
+    "slug": "bollywood-dance",
+    "search_terms": [
+      "Bollywood Dance Amsterdam",
+      "Bollywood Dance studio Amsterdam",
+      "Bollywood Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Bootcamp Studios in Amsterdam",
+    "short_label": "Bootcamp",
+    "slug": "bootcamp",
+    "search_terms": [
+      "Bootcamp Amsterdam",
+      "Bootcamp studio Amsterdam",
+      "Bootcamp class Amsterdam"
+    ]
+  },
+  {
+    "label": "Boxing Studios in Amsterdam",
+    "short_label": "Boxing",
+    "slug": "boxing",
+    "search_terms": [
+      "Boxing Amsterdam",
+      "Boxing studio Amsterdam",
+      "Boxing class Amsterdam",
+      "Boxing gym Amsterdam"
+    ]
+  },
+  {
+    "label": "Cardio Dance Studios in Amsterdam",
+    "short_label": "Cardio Dance",
+    "slug": "cardio-dance",
+    "search_terms": [
+      "Cardio Dance Amsterdam",
+      "Cardio Dance studio Amsterdam",
+      "Cardio Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Circuit Training Studios in Amsterdam",
+    "short_label": "Circuit Training",
+    "slug": "circuit-training",
+    "search_terms": [
+      "Circuit Training Amsterdam",
+      "Circuit Training studio Amsterdam",
+      "Circuit Training class Amsterdam"
+    ]
+  },
+  {
+    "label": "Contemporary Dance Studios in Amsterdam",
+    "short_label": "Contemporary Dance",
+    "slug": "contemporary-dance",
+    "search_terms": [
+      "Contemporary Dance Amsterdam",
+      "Contemporary Dance studio Amsterdam",
+      "Contemporary Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "CrossFit Studios in Amsterdam",
+    "short_label": "CrossFit",
+    "slug": "crossfit",
+    "search_terms": [
+      "CrossFit Amsterdam",
+      "CrossFit studio Amsterdam",
+      "CrossFit class Amsterdam",
+      "CrossFit gym Amsterdam"
+    ]
+  },
+  {
+    "label": "Cycling Studios in Amsterdam",
+    "short_label": "Cycling",
+    "slug": "cycling",
+    "search_terms": [
+      "Cycling Amsterdam",
+      "Cycling studio Amsterdam",
+      "Cycling class Amsterdam",
+      "Indoor cycling Amsterdam"
+    ]
+  },
+  {
+    "label": "Dance Studios in Amsterdam",
+    "short_label": "Dance",
+    "slug": "dance",
+    "search_terms": [
+      "Dance Amsterdam",
+      "Dance studio Amsterdam",
+      "Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Electrical muscle stimulation Studios in Amsterdam",
+    "short_label": "Electrical muscle stimulation",
+    "slug": "electrical-muscle-stimulation",
+    "search_terms": [
+      "Electrical muscle stimulation Amsterdam",
+      "EMS Amsterdam",
+      "EMS studio Amsterdam",
+      "EMS class Amsterdam"
+    ]
+  },
+  {
+    "label": "Fitness Studios in Amsterdam",
+    "short_label": "Fitness",
+    "slug": "fitness",
+    "search_terms": [
+      "Fitness Amsterdam",
+      "Fitness studio Amsterdam",
+      "Fitness class Amsterdam"
+    ]
+  },
+  {
+    "label": "Gym Time Studios in Amsterdam",
+    "short_label": "Gym Time",
+    "slug": "gym-time",
+    "search_terms": [
+      "Gym Time Amsterdam",
+      "Gym Time studio Amsterdam",
+      "Gym Time class Amsterdam"
+    ]
+  },
+  {
+    "label": "Hatha Yoga Studios in Amsterdam",
+    "short_label": "Hatha Yoga",
+    "slug": "hatha-yoga",
+    "search_terms": [
+      "Hatha Yoga Amsterdam",
+      "Hatha Yoga studio Amsterdam",
+      "Hatha Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Heavy bag Studios in Amsterdam",
+    "short_label": "Heavy bag",
+    "slug": "heavy-bag",
+    "search_terms": [
+      "Heavy bag Amsterdam",
+      "Heavy bag studio Amsterdam",
+      "Heavy bag class Amsterdam"
+    ]
+  },
+  {
+    "label": "High-intensity Pilates Studios in Amsterdam",
+    "short_label": "High-intensity Pilates",
+    "slug": "high-intensity-pilates",
+    "search_terms": [
+      "High-intensity Pilates Amsterdam",
+      "High-intensity Pilates studio Amsterdam",
+      "High-intensity Pilates class Amsterdam"
+    ]
+  },
+  {
+    "label": "HIIT Studios in Amsterdam",
+    "short_label": "HIIT",
+    "slug": "hiit",
+    "search_terms": [
+      "HIIT Amsterdam",
+      "HIIT studio Amsterdam",
+      "HIIT class Amsterdam"
+    ]
+  },
+  {
+    "label": "Hip Hop Dance Studios in Amsterdam",
+    "short_label": "Hip Hop Dance",
+    "slug": "hip-hop-dance",
+    "search_terms": [
+      "Hip Hop Dance Amsterdam",
+      "Hip Hop Dance studio Amsterdam",
+      "Hip Hop Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Hot Yoga Studios in Amsterdam",
+    "short_label": "Hot Yoga",
+    "slug": "hot-yoga",
+    "search_terms": [
+      "Hot Yoga Amsterdam",
+      "Hot Yoga studio Amsterdam",
+      "Hot Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Indoor Cycling Studios in Amsterdam",
+    "short_label": "Indoor Cycling",
+    "slug": "indoor-cycling",
+    "search_terms": [
+      "Indoor Cycling Amsterdam",
+      "Indoor Cycling studio Amsterdam",
+      "Indoor Cycling class Amsterdam"
+    ]
+  },
+  {
+    "label": "Iyengar Yoga Studios in Amsterdam",
+    "short_label": "Iyengar Yoga",
+    "slug": "iyengar-yoga",
+    "search_terms": [
+      "Iyengar Yoga Amsterdam",
+      "Iyengar Yoga studio Amsterdam",
+      "Iyengar Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Jazz Dance Studios in Amsterdam",
+    "short_label": "Jazz Dance",
+    "slug": "jazz-dance",
+    "search_terms": [
+      "Jazz Dance Amsterdam",
+      "Jazz Dance studio Amsterdam",
+      "Jazz Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Jiu Jitsu Studios in Amsterdam",
+    "short_label": "Jiu Jitsu",
+    "slug": "jiu-jitsu",
+    "search_terms": [
+      "Jiu Jitsu Amsterdam",
+      "Jiu Jitsu studio Amsterdam",
+      "Jiu Jitsu class Amsterdam"
+    ]
+  },
+  {
+    "label": "Jivamukti Yoga Studios in Amsterdam",
+    "short_label": "Jivamukti Yoga",
+    "slug": "jivamukti-yoga",
+    "search_terms": [
+      "Jivamukti Yoga Amsterdam",
+      "Jivamukti Yoga studio Amsterdam",
+      "Jivamukti Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Karate Studios in Amsterdam",
+    "short_label": "Karate",
+    "slug": "karate",
+    "search_terms": [
+      "Karate Amsterdam",
+      "Karate studio Amsterdam",
+      "Karate class Amsterdam"
+    ]
+  },
+  {
+    "label": "Kickboxing Studios in Amsterdam",
+    "short_label": "Kickboxing",
+    "slug": "kickboxing",
+    "search_terms": [
+      "Kickboxing Amsterdam",
+      "Kickboxing studio Amsterdam",
+      "Kickboxing class Amsterdam"
+    ]
+  },
+  {
+    "label": "Krav Maga Studios in Amsterdam",
+    "short_label": "Krav Maga",
+    "slug": "krav-maga",
+    "search_terms": [
+      "Krav Maga Amsterdam",
+      "Krav Maga studio Amsterdam",
+      "Krav Maga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Kundalini Yoga Studios in Amsterdam",
+    "short_label": "Kundalini Yoga",
+    "slug": "kundalini-yoga",
+    "search_terms": [
+      "Kundalini Yoga Amsterdam",
+      "Kundalini Yoga studio Amsterdam",
+      "Kundalini Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Lagree Studios in Amsterdam",
+    "short_label": "Lagree",
+    "slug": "lagree",
+    "search_terms": [
+      "Lagree Amsterdam",
+      "Lagree studio Amsterdam",
+      "Lagree class Amsterdam"
+    ]
+  },
+  {
+    "label": "Latin Dance Studios in Amsterdam",
+    "short_label": "Latin Dance",
+    "slug": "latin-dance",
+    "search_terms": [
+      "Latin Dance Amsterdam",
+      "Latin Dance studio Amsterdam",
+      "Latin Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Low-impact Training Studios in Amsterdam",
+    "short_label": "Low-impact Training",
+    "slug": "low-impact-training",
+    "search_terms": [
+      "Low-impact Training Amsterdam",
+      "Low-impact Training studio Amsterdam",
+      "Low-impact Training class Amsterdam"
+    ]
+  },
+  {
+    "label": "Martial Arts Studios in Amsterdam",
+    "short_label": "Martial Arts",
+    "slug": "martial-arts",
+    "search_terms": [
+      "Martial Arts Amsterdam",
+      "Martial Arts studio Amsterdam",
+      "Martial Arts class Amsterdam"
+    ]
+  },
+  {
+    "label": "Mat Pilates Studios in Amsterdam",
+    "short_label": "Mat Pilates",
+    "slug": "mat-pilates",
+    "search_terms": [
+      "Mat Pilates Amsterdam",
+      "Mat Pilates studio Amsterdam",
+      "Mat Pilates class Amsterdam"
+    ]
+  },
+  {
+    "label": "Mixed Martial Arts Studios in Amsterdam",
+    "short_label": "Mixed Martial Arts",
+    "slug": "mixed-martial-arts",
+    "search_terms": [
+      "Mixed Martial Arts Amsterdam",
+      "MMA Amsterdam",
+      "MMA studio Amsterdam",
+      "MMA class Amsterdam"
+    ]
+  },
+  {
+    "label": "Modern Dance Studios in Amsterdam",
+    "short_label": "Modern Dance",
+    "slug": "modern-dance",
+    "search_terms": [
+      "Modern Dance Amsterdam",
+      "Modern Dance studio Amsterdam",
+      "Modern Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Muay Thai Studios in Amsterdam",
+    "short_label": "Muay Thai",
+    "slug": "muay-thai",
+    "search_terms": [
+      "Muay Thai Amsterdam",
+      "Muay Thai studio Amsterdam",
+      "Muay Thai class Amsterdam"
+    ]
+  },
+  {
+    "label": "Outdoors Studios in Amsterdam",
+    "short_label": "Outdoors",
+    "slug": "outdoors",
+    "search_terms": [
+      "Outdoors Amsterdam",
+      "Outdoor fitness Amsterdam",
+      "Outdoor training Amsterdam"
+    ]
+  },
+  {
+    "label": "Personal Training Studios in Amsterdam",
+    "short_label": "Personal Training",
+    "slug": "personal-training",
+    "search_terms": [
+      "Personal Training Amsterdam",
+      "Personal Training studio Amsterdam",
+      "Personal trainer Amsterdam"
+    ]
+  },
+  {
+    "label": "Pilates Studios in Amsterdam",
+    "short_label": "Pilates",
+    "slug": "pilates",
+    "search_terms": [
+      "Pilates Amsterdam",
+      "Pilates studio Amsterdam",
+      "Pilates class Amsterdam"
+    ]
+  },
+  {
+    "label": "Pole Dance Studios in Amsterdam",
+    "short_label": "Pole Dance",
+    "slug": "pole-dance",
+    "search_terms": [
+      "Pole Dance Amsterdam",
+      "Pole Dance studio Amsterdam",
+      "Pole Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Postnatal Studios in Amsterdam",
+    "short_label": "Postnatal",
+    "slug": "postnatal",
+    "search_terms": [
+      "Postnatal Amsterdam",
+      "Postnatal studio Amsterdam",
+      "Postnatal class Amsterdam"
+    ]
+  },
+  {
+    "label": "Power Yoga Studios in Amsterdam",
+    "short_label": "Power Yoga",
+    "slug": "power-yoga",
+    "search_terms": [
+      "Power Yoga Amsterdam",
+      "Power Yoga studio Amsterdam",
+      "Power Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Prenatal Studios in Amsterdam",
+    "short_label": "Prenatal",
+    "slug": "prenatal",
+    "search_terms": [
+      "Prenatal Amsterdam",
+      "Prenatal studio Amsterdam",
+      "Prenatal class Amsterdam"
+    ]
+  },
+  {
+    "label": "Prenatal Yoga Studios in Amsterdam",
+    "short_label": "Prenatal Yoga",
+    "slug": "prenatal-yoga",
+    "search_terms": [
+      "Prenatal Yoga Amsterdam",
+      "Prenatal Yoga studio Amsterdam",
+      "Prenatal Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Qi Gong Studios in Amsterdam",
+    "short_label": "Qi Gong",
+    "slug": "qi-gong",
+    "search_terms": [
+      "Qi Gong Amsterdam",
+      "Qi Gong studio Amsterdam",
+      "Qi Gong class Amsterdam"
+    ]
+  },
+  {
+    "label": "Reformer Pilates Studios in Amsterdam",
+    "short_label": "Reformer Pilates",
+    "slug": "reformer-pilates",
+    "search_terms": [
+      "Reformer Pilates Amsterdam",
+      "Reformer Pilates studio Amsterdam",
+      "Reformer Pilates class Amsterdam"
+    ]
+  },
+  {
+    "label": "Restorative Yoga Studios in Amsterdam",
+    "short_label": "Restorative Yoga",
+    "slug": "restorative-yoga",
+    "search_terms": [
+      "Restorative Yoga Amsterdam",
+      "Restorative Yoga studio Amsterdam",
+      "Restorative Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Running Studios in Amsterdam",
+    "short_label": "Running",
+    "slug": "running",
+    "search_terms": [
+      "Running Amsterdam",
+      "Running studio Amsterdam",
+      "Running class Amsterdam"
+    ]
+  },
+  {
+    "label": "Salsa Dance Studios in Amsterdam",
+    "short_label": "Salsa Dance",
+    "slug": "salsa-dance",
+    "search_terms": [
+      "Salsa Dance Amsterdam",
+      "Salsa Dance studio Amsterdam",
+      "Salsa Dance class Amsterdam"
+    ]
+  },
+  {
+    "label": "Sculpt Studios in Amsterdam",
+    "short_label": "Sculpt",
+    "slug": "sculpt",
+    "search_terms": [
+      "Sculpt Amsterdam",
+      "Sculpt studio Amsterdam",
+      "Sculpt class Amsterdam"
+    ]
+  },
+  {
+    "label": "Shadowboxing Studios in Amsterdam",
+    "short_label": "Shadowboxing",
+    "slug": "shadowboxing",
+    "search_terms": [
+      "Shadowboxing Amsterdam",
+      "Shadowboxing studio Amsterdam",
+      "Shadowboxing class Amsterdam"
+    ]
+  },
+  {
+    "label": "Strength Training Studios in Amsterdam",
+    "short_label": "Strength Training",
+    "slug": "strength-training",
+    "search_terms": [
+      "Strength Training Amsterdam",
+      "Strength Training studio Amsterdam",
+      "Strength Training class Amsterdam"
+    ]
+  },
+  {
+    "label": "Stretching Studios in Amsterdam",
+    "short_label": "Stretching",
+    "slug": "stretching",
+    "search_terms": [
+      "Stretching Amsterdam",
+      "Stretching studio Amsterdam",
+      "Stretching class Amsterdam"
+    ]
+  },
+  {
+    "label": "Taekwondo Studios in Amsterdam",
+    "short_label": "Taekwondo",
+    "slug": "taekwondo",
+    "search_terms": [
+      "Taekwondo Amsterdam",
+      "Taekwondo studio Amsterdam",
+      "Taekwondo class Amsterdam"
+    ]
+  },
+  {
+    "label": "Tai Chi Studios in Amsterdam",
+    "short_label": "Tai Chi",
+    "slug": "tai-chi",
+    "search_terms": [
+      "Tai Chi Amsterdam",
+      "Tai Chi studio Amsterdam",
+      "Tai Chi class Amsterdam"
+    ]
+  },
+  {
+    "label": "Trampoline Studios in Amsterdam",
+    "short_label": "Trampoline",
+    "slug": "trampoline",
+    "search_terms": [
+      "Trampoline Amsterdam",
+      "Trampoline studio Amsterdam",
+      "Trampoline class Amsterdam"
+    ]
+  },
+  {
+    "label": "TRX Studios in Amsterdam",
+    "short_label": "TRX",
+    "slug": "trx",
+    "search_terms": [
+      "TRX Amsterdam",
+      "TRX studio Amsterdam",
+      "TRX class Amsterdam"
+    ]
+  },
+  {
+    "label": "Vinyasa Yoga Studios in Amsterdam",
+    "short_label": "Vinyasa Yoga",
+    "slug": "vinyasa-yoga",
+    "search_terms": [
+      "Vinyasa Yoga Amsterdam",
+      "Vinyasa Yoga studio Amsterdam",
+      "Vinyasa Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Weightlifting Studios in Amsterdam",
+    "short_label": "Weightlifting",
+    "slug": "weightlifting",
+    "search_terms": [
+      "Weightlifting Amsterdam",
+      "Weightlifting studio Amsterdam",
+      "Weightlifting class Amsterdam"
+    ]
+  },
+  {
+    "label": "Yin Yoga Studios in Amsterdam",
+    "short_label": "Yin Yoga",
+    "slug": "yin-yoga",
+    "search_terms": [
+      "Yin Yoga Amsterdam",
+      "Yin Yoga studio Amsterdam",
+      "Yin Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Yoga Studios in Amsterdam",
+    "short_label": "Yoga",
+    "slug": "yoga",
+    "search_terms": [
+      "Yoga Amsterdam",
+      "Yoga studio Amsterdam",
+      "Yoga class Amsterdam"
+    ]
+  },
+  {
+    "label": "Yoga Nidra Studios in Amsterdam",
+    "short_label": "Yoga Nidra",
+    "slug": "yoga-nidra",
+    "search_terms": [
+      "Yoga Nidra Amsterdam",
+      "Yoga Nidra studio Amsterdam",
+      "Yoga Nidra class Amsterdam"
+    ]
+  },
+  {
+    "label": "Zumba Dance Studios in Amsterdam",
+    "short_label": "Zumba Dance",
+    "slug": "zumba-dance",
+    "search_terms": [
+      "Zumba Dance Amsterdam",
+      "Zumba Dance studio Amsterdam",
+      "Zumba Dance class Amsterdam",
+      "Zumba Amsterdam"
+    ]
+  }
+]

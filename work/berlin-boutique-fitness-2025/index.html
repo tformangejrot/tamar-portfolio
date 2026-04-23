@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berlin Boutique Fitness Trends Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FAF7F2;
+      color: #2C2A26;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 24px;
+      background: radial-gradient(circle at top, #EDE9E2 0, #FAF7F2 60%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(184, 152, 107, 0.1) 0, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(154, 138, 166, 0.1) 0, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #8B7355;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0 0 24px;
+      background: linear-gradient(135deg, #8B7355 0%, #B8986B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #7A6B5D;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .nav-link {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #8B7355;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #B8986B;
+    }
+
+    .nav-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: #8B7355;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 80px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .section-label {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #8B7355;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 600;
+      margin: 0 0 16px;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: #7A6B5D;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Card Styles */
+    .card {
+      background: linear-gradient(135deg, rgba(255, 254, 252, 0.96), rgba(255, 254, 252, 0.98));
+      border-radius: 8px;
+      border: 1px solid rgba(139, 115, 85, 0.22);
+      box-shadow: 0 8px 22px rgba(44, 42, 38, 0.06);
+      padding: 32px;
+      margin-bottom: 32px;
+      transition: border-color 0.35s ease;
+    }
+
+    .card:hover {
+      border-color: rgba(139, 115, 85, 0.35);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 24px;
+    }
+
+    .card-header h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .card-header span {
+      font-size: 12px;
+      color: #8B7355;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 400px;
+    }
+
+    .chart-container-large {
+      height: 500px;
+    }
+
+    .chart-container-map {
+      height: 600px;
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #8B7355;
+      line-height: 1.5;
+    }
+
+    /* Make legend items clearly clickable */
+    canvas + div[style*="position"] {
+      cursor: default;
+    }
+
+    canvas + div[style*="position"] > ul > li {
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+
+    canvas + div[style*="position"] > ul > li:hover {
+      opacity: 0.8;
+    }
+
+    .stat-highlight {
+      display: inline-block;
+      background: rgba(184, 152, 107, 0.15);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      color: #8B7355;
+    }
+
+    .year-chart-toggle-btn {
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #7A6B5D;
+      background: #FFFEFC;
+      border: 1px solid rgba(139, 115, 85, 0.25);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .year-chart-toggle-btn:hover {
+      background: rgba(184, 152, 107, 0.15);
+      border-color: rgba(184, 152, 107, 0.4);
+      color: #2C2A26;
+    }
+
+    .year-chart-toggle-btn.active {
+      background: rgba(184, 152, 107, 0.2);
+      border-color: rgba(184, 152, 107, 0.6);
+      color: #8B7355;
+    }
+
+    /* Two-column layout for some sections */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-link {
+        top: 24px;
+        left: 24px;
+        font-size: 13px;
+      }
+    }
+
+    /* Dark theme for Leaflet */
+    .leaflet-container {
+      background: #FFFEFC;
+      border-radius: 12px;
+    }
+
+    .leaflet-tile {
+      filter: brightness(0.4) invert(1) hue-rotate(200deg) saturate(0.3) brightness(1.1) contrast(1.2);
+    }
+
+    .leaflet-control {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(139, 115, 85, 0.2);
+      color: #2C2A26;
+    }
+
+    .leaflet-control-zoom a {
+      color: #2C2A26;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .leaflet-control-zoom a:hover {
+      background: rgba(184, 152, 107, 0.2);
+    }
+
+    .info {
+      background: rgba(15, 23, 42, 0.95);
+      padding: 12px;
+      border-radius: 8px;
+      color: #2C2A26;
+      font-size: 12px;
+      border: 1px solid rgba(139, 115, 85, 0.2);
+    }
+
+    .info h4 {
+      margin: 0 0 8px 0;
+      color: #8B7355;
+      font-size: 14px;
+    }
+
+    .legend {
+      line-height: 1.8;
+    }
+
+    .legend i {
+      width: 12px;
+      height: 12px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.8;
+      border-radius: 2px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, rgba(184, 152, 107, 0.1), rgba(154, 138, 166, 0.1));
+      border: 1px solid rgba(139, 115, 85, 0.22);
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 8px 22px rgba(44, 42, 38, 0.06);
+    }
+
+    .stat-value {
+      font-size: 36px;
+      font-weight: 700;
+      color: #8B7355;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #7A6B5D;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 60px 24px;
+      text-align: center;
+      color: #8B7355;
+      font-size: 12px;
+      border-top: 1px solid rgba(139, 115, 85, 0.1);
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <a href="/" class="nav-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Home
+    </a>
+    <div class="hero-content">
+      <h1>Berlin Boutique Fitness</h1>
+      <h2>The Berlin Boutique Fitness Landscape in 2025</h2>
+      <p>
+        An exploration of boutique fitness trends across Berlin. From pilates to boxing studios, 
+        discover where Berliners are working out and how the landscape is evolving.
+      </p>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll to explore</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="section">
+    <div class="card">
+      <h3 style="margin: 0 0 16px; font-size: 24px; font-weight: 600;">What is this report?</h3>
+      <p class="section-content" style="margin: 0 0 16px; font-size: 16px; line-height: 1.8;">
+        Berlin is one of the most developed and dynamic boutique fitness markets in Europe — often setting trends that ripple to other global cities. While boutique fitness remains inherently trend-driven and still evolving even in Berlin, this report provides a data-driven snapshot of the market as of 2025.
+      </p>
+      <p class="section-content" style="margin: 0 0 12px; font-size: 16px; line-height: 1.8;">
+        Using a large and representative dataset of boutique fitness studios across Berlin, this analysis explores:
+      </p>
+      <ul class="section-content" style="margin: 0 0 16px; padding-left: 24px; font-size: 16px; line-height: 1.8; color: #7A6B5D;">
+        <li style="margin-bottom: 8px;">Market size and growth</li>
+        <li style="margin-bottom: 8px;">Evolution of key modalities</li>
+        <li style="margin-bottom: 8px;">Patterns of market maturity</li>
+        <li style="margin-bottom: 8px;">Geographic distribution and clustering</li>
+      </ul>
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        Rather than exact studio counts, this report emphasizes relative market shares, growth trajectories, and spatial trends to deliver meaningful insights for operators, investors, and planners.
+      </p>
+    </div>
+  </section>
+
+  <!-- Key Stats -->
+  <section class="section">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-total">-</div>
+        <div class="stat-label">Boutique Studios</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-recent">-</div>
+        <div class="stat-label">Opened in 2024-2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-modalities">-</div>
+        <div class="stat-label">Modality Categories</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-top-modality">-</div>
+        <div class="stat-label" id="stat-top-modality-label">Top Modality</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Growth Over Time -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">The Growth Story</div>
+      <h2 class="section-title">Evolution Over Time</h2>
+      <p class="section-subtitle">
+        Boutique fitness studios opened by year. Dates are adjusted to account for domain registration typically preceding actual openings by ~2 months. The number of new studios opening has increased steadily since around 2006.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Studios by Opening Year</h3>
+        <span id="year-chart-subtitle">1167 studios total · Each location counted separately</span>
+      </div>
+      <div class="year-chart-toggle" style="margin-bottom: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
+        <button type="button" id="year-chart-mode-openings" class="year-chart-toggle-btn active" aria-pressed="true">Openings by year</button>
+        <button type="button" id="year-chart-mode-cumulative" class="year-chart-toggle-btn" aria-pressed="false">Cumulative studios</button>
+      </div>
+      <div class="chart-container">
+        <canvas id="yearChart"></canvas>
+      </div>
+      <p class="note">
+        Opening dates are estimated from location pages, domain registration, and other sources.
+        Dates are adjusted to account for domain registration typically preceding actual studio openings by ~2 months.
+        Multi-location studios count each location separately.
+      </p>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        Berlin's boutique fitness scene has been growing steadily. Since the COVID dip in openings, boutique fitness has continued to thrive. These are openings of studios from our current data set, so there are studios that opened but aren't included and also studios that may have opened but have since closed. Nonetheless, the growth patterns provide insights into how the market is evolving.
+      </p>
+    </div>
+  </section>
+
+  <!-- Modality Mix -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">What are people training for?</div>
+      <h2 class="section-title">The Modality Landscape</h2>
+      <p class="section-subtitle">
+        Distribution of boutique studios by primary modalities across Berlin. Strength training, pilates, hiit, and yoga dominate the industry.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Studios by Modality</h3>
+        <span id="modality-chart-subtitle">Top modalities</span>
+      </div>
+      <div class="chart-container chart-container-large">
+        <canvas id="modalityChart"></canvas>
+      </div>
+      <p class="note">
+        Studios can appear in multiple modalities; counts are locations, not unique brands.
+        Categories have been consolidated (e.g., all yoga variants → "yoga").
+      </p>
+    </div>
+  </section>
+
+  <!-- Modality Growth Over Time -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Modality Trends</div>
+      <h2 class="section-title">Growth by Modality</h2>
+      <p class="section-subtitle">
+        Number of studio locations opened each year by modality, highlighting how the leading categories have evolved over time.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Studio Openings by Modality Over Time</h3>
+        <span>All modalities - click legend items to show/hide</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="modalityGrowthChart"></canvas>
+      </div>
+      <p class="note">
+        Studios can appear in multiple modalities, so a single studio opening may be counted in multiple categories.
+        Opening dates are estimated from location pages, domain registration, and other sources.
+        Click on legend items to toggle visibility of each modality.
+      </p>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        Strength training, pilates, hiit, and yoga are the drivers of boutique fitness with over 400 studios, while all other modalities have less than half of that. This shows that overall, users crave a mix of intensity and recovery that these four modalities cover, while other exercises may be seen as more recreational. In the early years of boutique fitness (prior to 2011), there is still a fairly even spread of openings across modalities, but one can clearly observe the four top modalities rising to the top beginning in 2012. Yoga and pilates, which trended very similar for most of the life of the industry, have seen a split recently, with pilates booming (largely thanks to reformer) since 2019.
+      </p>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        Multi-modality studios are everywhere. Only <span class="stat-highlight">28% of studios</span> offer just one modality, while the majority (<span class="stat-highlight">72%</span>) offer multiple. But with more and more unique and hybrid concepts, even the idea of a single modality needs to be questioned. Rather, we are starting to see variations on multi-modality: classes fusing different exercises into one, flagship locations with open gym space, and of course studios offering a primary modality but filling extra space and time with complementary classes.
+      </p>
+    </div>
+  </section>
+
+  <!-- New Studios -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">What's opening now?</div>
+      <h2 class="section-title">Recent Growth</h2>
+      <p class="section-subtitle">
+        New boutique studios opened in the past 16 months.
+      </p>
+    </div>
+    <div class="two-column">
+      <div class="card">
+        <div class="card-header">
+          <h3>New Studios by Modality</h3>
+          <span id="new-studios-count">New studios</span>
+        </div>
+        <div class="chart-container">
+          <canvas id="newModalityChart"></canvas>
+        </div>
+        <p class="note" style="margin-top: 16px;">
+          Note: Studios can appear in multiple modalities, so a single studio opening may be counted in multiple categories.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h3>Growth Rate by Modality</h3>
+          <span>% of modality total</span>
+        </div>
+        <div class="chart-container">
+          <canvas id="growthRateChart"></canvas>
+        </div>
+        <p class="note" style="margin-top: 16px;">
+          Note: Studios can appear in multiple modalities, so a single studio opening may be counted in multiple categories.
+        </p>
+      </div>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        As in other markets, reformer pilates and low-impact training have seen the greatest recent growth, with <span class="stat-highlight">16% of reformer studios</span> and <span class="stat-highlight">15% of low-impact studios</span> opening in the past 16 months. Given the cost of reformer classes and the extreme density of new studios with relatively low differentiation, this trend will likely smooth out over coming years.
+      </p>
+    </div>
+  </section>
+
+  <!-- Studios by Locations -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Single Studios vs. Chains</div>
+      <h2 class="section-title">The Boutique Model</h2>
+      <p class="section-subtitle">
+        Distribution of studio brands by number of locations. The vast majority operate as single-location studios, 
+        reflecting the personalized, neighborhood-focused nature of boutique fitness as well as the challenges studios face in becoming profitable and expanding.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Studio Brands by Number of Locations</h3>
+        <span id="location-chart-subtitle">843 unique brands · 1167 total locations</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="locationChart"></canvas>
+      </div>
+      <p class="note">
+        Studios are grouped by domain (or name if no domain). Most boutique fitness brands remain single-location operations.
+      </p>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        This chart shows how studio brands are distributed by size, from single-location studios to larger multi-location chains.
+      </p>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <div class="card-header">
+        <h3>Chain vs Independent Studios by Modality</h3>
+        <span>% of studios that are part of chains (2+ locations)</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="chainPercentageChart"></canvas>
+      </div>
+      <p class="note">
+        Chains are defined as brands with 2+ locations. Studios can appear in multiple modalities, so a single studio may be counted in multiple categories.
+      </p>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        Despite being a relatively mature boutique fitness market, the majority of studios (<span class="stat-highlight">60.3%</span>) do not belong to a chain. That being said, independence varies significantly by modality. Running and cycling show the highest chain percentages, with strong brands in these categories and likely a greater need for operational efficiency than novelty. Martial arts and boxing remain more independent, with lower chain percentages, indicating that these modalities are still idea-driven, experiential, and founder-led.
+      </p>
+    </div>
+  </section>
+
+  <!-- Spatial Distribution -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Where are the studios?</div>
+      <h2 class="section-title">Spatial Distribution</h2>
+      <p class="section-subtitle">
+        Spatial distribution of boutique fitness studios across Berlin districts. Boutique fitness thrives where there is a dense, lifestyle-oriented population with disposable income, predictable routines, strong connectivity, and an embedded culture of physical activity.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Studios by District</h3>
+        <span>Berlin districts (Ortsteile)</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="arrChart"></canvas>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Berlin Heatmap</h3>
+        <span>Studio density visualization</span>
+      </div>
+      <div class="chart-container chart-container-map">
+        <div id="map" style="height: 100%; border-radius: 12px;"></div>
+      </div>
+      <p class="note">
+        Heatmap shows studio density based on district data. Warmer colors indicate higher studio counts.
+        Studio locations are approximated based on district centers.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Growth by District Over Time</h3>
+        <span>Select districts via the legend · Kreuzberg shown by default</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="neighborhoodGrowthChart"></canvas>
+      </div>
+      <p class="note">
+        Each line shows the number of boutique studio locations opened per year in a given district.
+        By default only Kreuzberg is visible; click legend items to add or remove other districts for comparison.
+      </p>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0 0 16px; font-size: 16px; line-height: 1.8;">
+        <strong>Kreuzberg, Prenzlauer Berg, and Mitte lead Berlin's boutique fitness density — each shaped by different neighbourhood dynamics.</strong>
+      </p>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.6;">
+          <thead>
+            <tr>
+              <th style="text-align: left; padding: 8px 0; border-bottom: 1px solid rgba(139, 115, 85, 0.3);">District</th>
+              <th style="text-align: left; padding: 8px 0; border-bottom: 1px solid rgba(139, 115, 85, 0.3);">Character</th>
+              <th style="text-align: left; padding: 8px 0; border-bottom: 1px solid rgba(139, 115, 85, 0.3);">Primary Demand Driver</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid rgba(31, 41, 55, 0.7);"><strong>Kreuzberg</strong></td>
+              <td style="padding: 8px 0; border-bottom: 1px solid rgba(31, 41, 55, 0.7);">Creative / counter-culture hub</td>
+              <td style="padding: 8px 0; border-bottom: 1px solid rgba(31, 41, 55, 0.7);">Young professionals + international residents</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid rgba(31, 41, 55, 0.7);"><strong>Prenzlauer Berg</strong></td>
+              <td style="padding: 8px 0; border-bottom: 1px solid rgba(31, 41, 55, 0.7);">Family-friendly / established</td>
+              <td style="padding: 8px 0; border-bottom: 1px solid rgba(31, 41, 55, 0.7);">Affluent families + wellness-oriented consumers</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid rgba(31, 41, 55, 0.7);"><strong>Mitte</strong></td>
+              <td style="padding: 8px 0; border-bottom: 1px solid rgba(31, 41, 55, 0.7);">Central / commercial</td>
+              <td style="padding: 8px 0; border-bottom: 1px solid rgba(31, 41, 55, 0.7);">Office workers, tourists &amp; high foot traffic</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0;"><strong>Friedrichshain</strong></td>
+              <td style="padding: 8px 0;">Young / nightlife-adjacent</td>
+              <td style="padding: 8px 0;">Student &amp; young professional demand</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card" style="margin-top: 32px;">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        Kreuzberg, Prenzlauer Berg, and Mitte have the greatest concentration of boutique studios. Kreuzberg's density reflects its long-standing role as a creative and alternative lifestyle hub, while Prenzlauer Berg's high count tracks the district's gentrification wave and influx of wellness-oriented families. Mitte benefits from central location and high daytime population. Charlottenburg and Wilmersdorf represent more traditional, affluent catchments in the west with steady demand.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Berlin Boutique Fitness Trends Dashboard</p>
+    <p>Data collected from multiple sources including Google Places API and domain registration records</p>
+  </footer>
+
+  <script>
+    // Chart.js default config
+    Chart.defaults.color = '#7A6B5D';
+    Chart.defaults.borderColor = 'rgba(139, 115, 85, 0.15)';
+
+    // Store chart instances
+    const charts = {};
+
+    // Intersection Observer for scroll-triggered animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const chartObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !charts[entry.target.id]) {
+          const chartId = entry.target.id;
+          if (chartInitFunctions[chartId]) {
+            chartInitFunctions[chartId]();
+            chartObserver.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Chart initialization functions
+    const chartInitFunctions = {};
+
+    // Data loading function
+    async function loadData() {
+      try {
+        const basePath = '../../data/aggregates/berlin/';
+        
+        const [
+          modalityData,
+          newModalityData,
+          yearData,
+          neighborhoodData,
+          statsData,
+          growthData,
+          chainsData,
+          modalityGrowthData,
+          chainPercentageData,
+          neighborhoodGrowthData
+        ] = await Promise.all([
+          fetch(`${basePath}modality_mix.json`).then(r => r.json()),
+          fetch(`${basePath}recent_new_modalities.json`).then(r => r.json()),
+          fetch(`${basePath}growth_over_time.json`).then(r => r.json()),
+          fetch(`${basePath}neighborhood_distribution.json`).then(r => r.json()),
+          fetch(`${basePath}overall_stats.json`).then(r => r.json()),
+          fetch(`${basePath}recent_growth_rate.json`).then(r => r.json()),
+          fetch(`${basePath}chains_vs_single_location.json`).then(r => r.json()),
+          fetch(`${basePath}modality_growth_by_year.json`).then(r => r.json()),
+          fetch(`${basePath}chain_percentage_by_modality.json`).then(r => r.json()),
+          // Borough growth is optional so that missing data
+          // doesn't break the rest of the dashboard.
+          fetch(`${basePath}neighborhood_growth_by_year.json`).then(async r => {
+            if (!r.ok) return [];
+            try {
+              return await r.json();
+            } catch {
+              return [];
+            }
+          })
+        ]);
+
+        // Populate global data variables
+        window.modalities = modalityData;
+        window.newModalities = newModalityData;
+        window.yearData = yearData;
+        window.neighborhoodData = neighborhoodData;
+        window.stats = statsData;
+        window.growthData = growthData;
+        window.chainsData = chainsData;
+        window.modalityGrowthData = modalityGrowthData;
+        window.chainPercentageData = chainPercentageData;
+        window.neighborhoodGrowthData = neighborhoodGrowthData;
+        window.totalNewStudios = statsData.totalNewStudios || 0;
+
+        // Update summary stat cards
+        updateSummaryStats();
+
+        // Initialize all charts after data is loaded
+        initializeAllCharts();
+        initializeMap();
+      } catch (error) {
+        console.error('Error loading data:', error);
+        // Fallback to empty data
+        window.modalities = [];
+        window.newModalities = [];
+        window.yearData = [];
+        window.neighborhoodData = [];
+        window.stats = {};
+        window.growthData = [];
+        window.chainsData = [];
+        window.modalityGrowthData = [];
+        window.chainPercentageData = { overall: {}, byModality: [] };
+        window.neighborhoodGrowthData = [];
+        window.totalNewStudios = 0;
+        updateSummaryStats();
+        initializeAllCharts();
+      }
+    }
+
+    // 1. Modality Chart - Data will be loaded from aggregates
+    chartInitFunctions['modalityChart'] = function() {
+      const modalities = window.modalities || [];
+      const modalityLabels = modalities.map(m => m.modality.replace(/-/g, ' '));
+      const modalityCounts = modalities.map(m => m.count);
+      const modalityPcts = modalities.map(m => m.pct);
+
+      const modalityCtx = document.getElementById('modalityChart').getContext('2d');
+      const modalityGradient = modalityCtx.createLinearGradient(0, 0, 600, 0);
+      modalityGradient.addColorStop(0, 'rgba(184, 152, 107, 0.9)');
+      modalityGradient.addColorStop(1, 'rgba(59, 130, 246, 0.9)');
+
+      charts['modalityChart'] = new Chart(modalityCtx, {
+      type: 'bar',
+      data: {
+        labels: modalityLabels,
+        datasets: [{
+          label: 'Studios',
+          data: modalityCounts,
+          backgroundColor: modalityGradient,
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const i = context.dataIndex;
+                return ` ${modalityCounts[i]} studios (${modalityPcts[i]}%)`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: '#5f5448', font: { size: 11 } },
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
+          },
+          y: {
+            ticks: { color: '#7A6B5D', font: { size: 11 } },
+            grid: { display: false }
+          }
+        },
+        animation: {
+          duration: 1200,
+          easing: 'easeOutQuart'
+        }
+      }
+    });
+    };
+
+    // 2. New Studios Charts
+    chartInitFunctions['newModalityChart'] = function() {
+      const newModalities = window.newModalities || [];
+      const totalNewStudios = window.totalNewStudios || 0;
+      const newLabels = newModalities.map(m => m.modality.replace(/-/g, ' '));
+      const newCounts = newModalities.map(m => m.count);
+      const pctsOfAllNew = newModalities.map(m => totalNewStudios > 0 ? +((m.count / totalNewStudios) * 100).toFixed(1) : 0);
+      const pctsOfModality = newModalities.map(m => m.pctOfModality || 0);
+
+      const newCtx = document.getElementById('newModalityChart').getContext('2d');
+      const newGradient = newCtx.createLinearGradient(0, 0, 600, 0);
+      newGradient.addColorStop(0, 'rgba(154, 138, 166, 0.9)');
+      newGradient.addColorStop(1, 'rgba(236, 72, 153, 0.9)');
+
+      charts['newModalityChart'] = new Chart(newCtx, {
+      type: 'bar',
+      data: {
+        labels: newLabels,
+        datasets: [{
+          label: 'New Studios',
+          data: newCounts,
+          backgroundColor: newGradient,
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const i = context.dataIndex;
+                return ` ${newCounts[i]} new studios (${pctsOfAllNew[i]}% of all new studios)`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: '#5f5448', font: { size: 11 } },
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
+          },
+          y: {
+            ticks: { color: '#7A6B5D', font: { size: 11 } },
+            grid: { display: false }
+          }
+        },
+        animation: {
+          duration: 1200,
+          easing: 'easeOutQuart'
+        }
+      }
+    });
+    };
+
+    chartInitFunctions['growthRateChart'] = function() {
+      const newModalities = window.newModalities || [];
+      const newLabels = newModalities.map(m => m.modality.replace(/-/g, ' '));
+      const newCounts = newModalities.map(m => m.count);
+      const pctsOfModality = newModalities.map(m => m.pctOfModality || 0);
+
+      const growthCtx = document.getElementById('growthRateChart').getContext('2d');
+      const growthGradient = growthCtx.createLinearGradient(0, 0, 600, 0);
+      growthGradient.addColorStop(0, 'rgba(34, 197, 94, 0.9)');
+      growthGradient.addColorStop(1, 'rgba(184, 152, 107, 0.9)');
+
+      charts['growthRateChart'] = new Chart(growthCtx, {
+      type: 'bar',
+      data: {
+        labels: newLabels,
+        datasets: [{
+          label: 'Growth Rate',
+          data: pctsOfModality,
+          backgroundColor: growthGradient,
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const i = context.dataIndex;
+                return ` ${pctsOfModality[i]}% of ${newLabels[i]} studios are new (${newCounts[i]} new studios)`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#5f5448',
+              font: { size: 11 },
+              callback: function(value) {
+                return value + '%';
+              }
+            },
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
+          },
+          y: {
+            ticks: { color: '#7A6B5D', font: { size: 11 } },
+            grid: { display: false }
+          }
+        },
+        animation: {
+          duration: 1200,
+          easing: 'easeOutQuart'
+        }
+      }
+    });
+    };
+
+    // 3. Year Chart - Data will be loaded from aggregates (openings by year or cumulative)
+    chartInitFunctions['yearChart'] = function() {
+      const yearData = window.yearData || [];
+      const yearLabels = yearData.map(d => d.year.toString());
+      const yearCounts = yearData.map(d => d.count);
+      const cumulativeCounts = yearCounts.reduce((acc, count) => {
+        acc.push((acc.length ? acc[acc.length - 1] : 0) + count);
+        return acc;
+      }, []);
+
+      const totalStudios = cumulativeCounts.length ? cumulativeCounts[cumulativeCounts.length - 1] : 0;
+      const subtitleEl = document.getElementById('year-chart-subtitle');
+      const btnOpenings = document.getElementById('year-chart-mode-openings');
+      const btnCumulative = document.getElementById('year-chart-mode-cumulative');
+
+      const yearCtx = document.getElementById('yearChart').getContext('2d');
+      const yearGradient = yearCtx.createLinearGradient(0, 0, 0, 450);
+      yearGradient.addColorStop(0, 'rgba(184, 152, 107, 0.9)');
+      yearGradient.addColorStop(1, 'rgba(184, 152, 107, 0.3)');
+
+      const chart = new Chart(yearCtx, {
+        type: 'bar',
+        data: {
+          labels: yearLabels,
+          datasets: [{
+            label: 'New Studios',
+            data: yearCounts,
+            backgroundColor: yearGradient,
+            borderRadius: 4,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const y = context.parsed.y;
+                  return window._yearChartMode === 'cumulative'
+                    ? ` ${y} studio${y !== 1 ? 's' : ''} (cumulative)`
+                    : ` ${y} new studio${y !== 1 ? 's' : ''}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#5f5448',
+                font: { size: 10 },
+                maxRotation: 45,
+                minRotation: 45
+              },
+              grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
+            },
+            y: {
+              beginAtZero: true,
+              ticks: {
+                color: '#7A6B5D',
+                font: { size: 11 },
+                stepSize: 10
+              },
+              grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
+            }
+          },
+          animation: {
+            duration: 1200,
+            easing: 'easeOutQuart'
+          }
+        }
+      });
+
+      window._yearChartMode = 'openings';
+
+      function setYearChartMode(mode) {
+        window._yearChartMode = mode;
+        const ds = chart.data.datasets[0];
+        if (mode === 'cumulative') {
+          ds.data = cumulativeCounts;
+          ds.label = 'Cumulative Studios';
+          if (subtitleEl) subtitleEl.textContent = `${totalStudios} studios total · Cumulative count by year`;
+          if (btnOpenings) { btnOpenings.classList.remove('active'); btnOpenings.setAttribute('aria-pressed', 'false'); }
+          if (btnCumulative) { btnCumulative.classList.add('active'); btnCumulative.setAttribute('aria-pressed', 'true'); }
+        } else {
+          ds.data = yearCounts;
+          ds.label = 'New Studios';
+          if (subtitleEl) subtitleEl.textContent = `${totalStudios} studios total · Each location counted separately`;
+          if (btnOpenings) { btnOpenings.classList.add('active'); btnOpenings.setAttribute('aria-pressed', 'true'); }
+          if (btnCumulative) { btnCumulative.classList.remove('active'); btnCumulative.setAttribute('aria-pressed', 'false'); }
+        }
+        chart.update();
+      }
+
+      if (btnOpenings) btnOpenings.addEventListener('click', function() { setYearChartMode('openings'); });
+      if (btnCumulative) btnCumulative.addEventListener('click', function() { setYearChartMode('cumulative'); });
+
+      charts['yearChart'] = chart;
+    };
+
+    // 4. Location Chart - Data will be loaded from aggregates
+    chartInitFunctions['locationChart'] = function() {
+      // Load chains vs single location data
+      const chainsData = window.chainsData || [];
+      const locationData = chainsData.slice(0, 10).filter(d => d.studioBrands > 0);
+
+      const locationLabels = locationData.map(d => d.locations === 1 ? '1 location' : `${d.locations} locations`);
+      const locationBrands = locationData.map(d => d.studioBrands);
+
+      const locationCtx = document.getElementById('locationChart').getContext('2d');
+      const locationGradient = locationCtx.createLinearGradient(0, 0, 600, 0);
+      locationGradient.addColorStop(0, 'rgba(34, 197, 94, 0.9)');
+      locationGradient.addColorStop(1, 'rgba(59, 130, 246, 0.9)');
+
+      charts['locationChart'] = new Chart(locationCtx, {
+      type: 'bar',
+      data: {
+        labels: locationLabels,
+        datasets: [{
+          label: 'Studio Brands',
+          data: locationBrands,
+          backgroundColor: locationGradient,
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return ` ${context.parsed.x} studio brand${context.parsed.x !== 1 ? 's' : ''}`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: '#5f5448', font: { size: 11 } },
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
+          },
+          y: {
+            ticks: { color: '#7A6B5D', font: { size: 11 } },
+            grid: { display: false }
+          }
+        },
+        animation: {
+          duration: 1200,
+          easing: 'easeOutQuart'
+        }
+      }
+    });
+    };
+
+    // 5. Modality Growth Over Time Chart - All Modalities
+    chartInitFunctions['modalityGrowthChart'] = function() {
+      const modalityGrowthData = window.modalityGrowthData || [];
+      if (modalityGrowthData.length === 0) return;
+      
+      const yearLabels = modalityGrowthData.map(d => d.year.toString());
+      
+      // Get all modalities (exclude 'year' field)
+      const firstDataPoint = modalityGrowthData[0];
+      const allModalities = Object.keys(firstDataPoint).filter(key => key !== 'year').sort();
+      
+      // Default visible modalities
+      const defaultVisibleModalities = ['pilates', 'yoga', 'strength-training', 'hiit-bootcamp'];
+      
+      // Color palette for modalities (extended)
+      const colorPalette = [
+        { border: 'rgba(184, 152, 107, 1)', bg: 'rgba(184, 152, 107, 0.1)' },   // Sky blue
+        { border: 'rgba(154, 138, 166, 1)', bg: 'rgba(154, 138, 166, 0.1)' },  // Purple
+        { border: 'rgba(34, 197, 94, 1)', bg: 'rgba(34, 197, 94, 0.1)' },     // Green
+        { border: 'rgba(236, 72, 153, 1)', bg: 'rgba(236, 72, 153, 0.1)' },  // Pink
+        { border: 'rgba(251, 146, 60, 1)', bg: 'rgba(251, 146, 60, 0.1)' },   // Orange
+        { border: 'rgba(239, 68, 68, 1)', bg: 'rgba(239, 68, 68, 0.1)' },    // Red
+        { border: 'rgba(168, 85, 247, 1)', bg: 'rgba(168, 85, 247, 0.1)' },  // Violet
+        { border: 'rgba(59, 130, 246, 1)', bg: 'rgba(59, 130, 246, 0.1)' },  // Blue
+        { border: 'rgba(16, 185, 129, 1)', bg: 'rgba(16, 185, 129, 0.1)' },   // Emerald
+        { border: 'rgba(245, 101, 101, 1)', bg: 'rgba(245, 101, 101, 0.1)' }, // Light red
+        { border: 'rgba(249, 115, 22, 1)', bg: 'rgba(249, 115, 22, 0.1)' },   // Orange
+        { border: 'rgba(147, 51, 234, 1)', bg: 'rgba(147, 51, 234, 0.1)' },   // Purple
+        { border: 'rgba(14, 165, 233, 1)', bg: 'rgba(14, 165, 233, 0.1)' },   // Cyan
+        { border: 'rgba(20, 184, 166, 1)', bg: 'rgba(20, 184, 166, 0.1)' },   // Teal
+        { border: 'rgba(244, 63, 94, 1)', bg: 'rgba(244, 63, 94, 0.1)' },     // Rose
+        { border: 'rgba(217, 70, 239, 1)', bg: 'rgba(217, 70, 239, 0.1)' },    // Fuchsia
+        { border: 'rgba(99, 102, 241, 1)', bg: 'rgba(99, 102, 241, 0.1)' },   // Indigo
+        { border: 'rgba(34, 211, 238, 1)', bg: 'rgba(34, 211, 238, 0.1)' },    // Cyan
+        { border: 'rgba(251, 191, 36, 1)', bg: 'rgba(251, 191, 36, 0.1)' },   // Yellow
+        { border: 'rgba(190, 24, 93, 1)', bg: 'rgba(190, 24, 93, 0.1)' }      // Pink
+      ];
+      
+      // Generate datasets for each modality
+      const datasets = allModalities.map((modality, index) => {
+        const color = colorPalette[index % colorPalette.length];
+        const modalityData = modalityGrowthData.map(d => d[modality] || 0);
+        
+        // Format label: replace hyphens with spaces and capitalize
+        const label = modality.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        
+        // Hide modalities that are not in the default visible list
+        const isHidden = !defaultVisibleModalities.includes(modality);
+        
+        return {
+          label: label,
+          data: modalityData,
+          borderColor: color.border,
+          backgroundColor: color.bg,
+          tension: 0.4,
+          fill: false,
+          pointRadius: 3,
+          pointHoverRadius: 5,
+          pointBackgroundColor: color.border,
+          pointBorderColor: '#FAF7F2',
+          pointBorderWidth: 1.5,
+          hidden: isHidden
+        };
+      });
+
+      const modalityGrowthCtx = document.getElementById('modalityGrowthChart').getContext('2d');
+
+      charts['modalityGrowthChart'] = new Chart(modalityGrowthCtx, {
+        type: 'line',
+        data: {
+          labels: yearLabels,
+          datasets: datasets
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top',
+              onClick: function(e, legendItem, legend) {
+                // Default Chart.js behavior - toggle dataset visibility
+                const index = legendItem.datasetIndex;
+                const chart = legend.chart;
+                const meta = chart.getDatasetMeta(index);
+                
+                // Toggle visibility
+                meta.hidden = meta.hidden === null ? !chart.data.datasets[index].hidden : null;
+                
+                // Update the chart
+                chart.update();
+              },
+              onHover: function(e, legendItem, legend) {
+                // Change cursor to pointer on hover
+                if (e.native && e.native.target) {
+                  e.native.target.style.cursor = 'pointer';
+                }
+              },
+              onLeave: function(e, legendItem, legend) {
+                // Reset cursor
+                if (e.native && e.native.target) {
+                  e.native.target.style.cursor = 'default';
+                }
+              },
+              labels: {
+                color: function(context) {
+                  // Dim hidden items
+                  if (context.hidden) {
+                    return 'rgba(203, 213, 245, 0.4)';
+                  }
+                  return '#7A6B5D';
+                },
+                font: { size: 10 },
+                padding: 8,
+                usePointStyle: true,
+                pointStyle: 'circle',
+                boxWidth: 12,
+                boxHeight: 12
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return ` ${context.dataset.label}: ${context.parsed.y} location${context.parsed.y !== 1 ? 's' : ''}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#5f5448',
+                font: { size: 11 },
+                maxRotation: 45,
+                minRotation: 45
+              },
+              grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
+            },
+            y: {
+              beginAtZero: true,
+              ticks: {
+                color: '#7A6B5D',
+                font: { size: 11 },
+                stepSize: 5
+              },
+              grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
+            }
+          },
+          animation: {
+            duration: 1200,
+            easing: 'easeOutQuart'
+          }
+        }
+      });
+    };
+
+    // 6. Spatial Distribution - Data will be loaded from aggregates
+    chartInitFunctions['arrChart'] = function() {
+      const neighborhoodData = (window.neighborhoodData || []).slice(0, 15).sort((a, b) => b.count - a.count);
+      const neighborhoodLabels = neighborhoodData.map(d => d.neighborhood);
+      const neighborhoodCounts = neighborhoodData.map(d => d.count);
+
+      const arrCtx = document.getElementById('arrChart').getContext('2d');
+      const arrGradient = arrCtx.createLinearGradient(0, 0, 600, 0);
+      arrGradient.addColorStop(0, 'rgba(184, 152, 107, 0.9)');
+      arrGradient.addColorStop(1, 'rgba(154, 138, 166, 0.9)');
+
+      charts['arrChart'] = new Chart(arrCtx, {
+      type: 'bar',
+      data: {
+        labels: neighborhoodLabels,
+        datasets: [{
+          label: 'Studios',
+          data: neighborhoodCounts,
+          backgroundColor: arrGradient,
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return ` ${context.parsed.x} studios`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: '#5f5448', font: { size: 11 } },
+            grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
+          },
+          y: {
+            ticks: { color: '#7A6B5D', font: { size: 11 } },
+            grid: { display: false }
+          }
+        },
+        animation: {
+          duration: 1200,
+          easing: 'easeOutQuart'
+        }
+      }
+    });
+    };
+
+    // 8. Borough Growth Over Time Chart
+    chartInitFunctions['neighborhoodGrowthChart'] = function() {
+      const neighborhoodGrowthData = window.neighborhoodGrowthData || [];
+      if (neighborhoodGrowthData.length === 0) return;
+
+      const yearLabels = neighborhoodGrowthData.map(d => d.year.toString());
+
+      // Get all neighborhoods (exclude 'year' field)
+      const firstDataPoint = neighborhoodGrowthData[0];
+      const allNeighborhoods = Object.keys(firstDataPoint).filter(key => key !== 'year').sort();
+
+      // Default visible neighborhood(s)
+      const defaultVisibleBoroughs = ['Kreuzberg'];
+
+      // Color palette (reuse the extended palette from modality growth)
+      const colorPalette = [
+        { border: 'rgba(184, 152, 107, 1)', bg: 'rgba(184, 152, 107, 0.1)' },
+        { border: 'rgba(154, 138, 166, 1)', bg: 'rgba(154, 138, 166, 0.1)' },
+        { border: 'rgba(34, 197, 94, 1)', bg: 'rgba(34, 197, 94, 0.1)' },
+        { border: 'rgba(236, 72, 153, 1)', bg: 'rgba(236, 72, 153, 0.1)' },
+        { border: 'rgba(251, 146, 60, 1)', bg: 'rgba(251, 146, 60, 0.1)' },
+        { border: 'rgba(239, 68, 68, 1)', bg: 'rgba(239, 68, 68, 0.1)' },
+        { border: 'rgba(168, 85, 247, 1)', bg: 'rgba(168, 85, 247, 0.1)' },
+        { border: 'rgba(59, 130, 246, 1)', bg: 'rgba(59, 130, 246, 0.1)' },
+        { border: 'rgba(16, 185, 129, 1)', bg: 'rgba(16, 185, 129, 0.1)' },
+        { border: 'rgba(245, 101, 101, 1)', bg: 'rgba(245, 101, 101, 0.1)' },
+        { border: 'rgba(249, 115, 22, 1)', bg: 'rgba(249, 115, 22, 0.1)' },
+        { border: 'rgba(147, 51, 234, 1)', bg: 'rgba(147, 51, 234, 0.1)' },
+        { border: 'rgba(14, 165, 233, 1)', bg: 'rgba(14, 165, 233, 0.1)' },
+        { border: 'rgba(20, 184, 166, 1)', bg: 'rgba(20, 184, 166, 0.1)' },
+        { border: 'rgba(244, 63, 94, 1)', bg: 'rgba(244, 63, 94, 0.1)' },
+        { border: 'rgba(217, 70, 239, 1)', bg: 'rgba(217, 70, 239, 0.1)' },
+        { border: 'rgba(99, 102, 241, 1)', bg: 'rgba(99, 102, 241, 0.1)' },
+        { border: 'rgba(34, 211, 238, 1)', bg: 'rgba(34, 211, 238, 0.1)' },
+        { border: 'rgba(251, 191, 36, 1)', bg: 'rgba(251, 191, 36, 0.1)' },
+        { border: 'rgba(190, 24, 93, 1)', bg: 'rgba(190, 24, 93, 0.1)' }
+      ];
+
+      const datasets = allNeighborhoods.map((neighborhood, index) => {
+        const color = colorPalette[index % colorPalette.length];
+        const data = neighborhoodGrowthData.map(d => d[neighborhood] || 0);
+        const isHidden = !defaultVisibleBoroughs.includes(neighborhood);
+
+        return {
+          label: neighborhood,
+          data,
+          borderColor: color.border,
+          backgroundColor: color.bg,
+          tension: 0.4,
+          fill: false,
+          pointRadius: 3,
+          pointHoverRadius: 5,
+          pointBackgroundColor: color.border,
+          pointBorderColor: '#FAF7F2',
+          pointBorderWidth: 1.5,
+          hidden: isHidden
+        };
+      });
+
+      const boroughGrowthCtx = document.getElementById('neighborhoodGrowthChart').getContext('2d');
+
+      charts['neighborhoodGrowthChart'] = new Chart(boroughGrowthCtx, {
+        type: 'line',
+        data: {
+          labels: yearLabels,
+          datasets
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top',
+              onClick: function(e, legendItem, legend) {
+                const index = legendItem.datasetIndex;
+                const chart = legend.chart;
+                const meta = chart.getDatasetMeta(index);
+
+                meta.hidden = meta.hidden === null ? !chart.data.datasets[index].hidden : null;
+                chart.update();
+              },
+              onHover: function(e) {
+                if (e.native && e.native.target) {
+                  e.native.target.style.cursor = 'pointer';
+                }
+              },
+              onLeave: function(e) {
+                if (e.native && e.native.target) {
+                  e.native.target.style.cursor = 'default';
+                }
+              },
+              labels: {
+                color: function(context) {
+                  if (context.hidden) {
+                    return 'rgba(203, 213, 245, 0.4)';
+                  }
+                  return '#7A6B5D';
+                },
+                font: { size: 10 },
+                padding: 8,
+                usePointStyle: true,
+                pointStyle: 'circle',
+                boxWidth: 12,
+                boxHeight: 12
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const value = context.parsed.y || 0;
+                  return ` ${context.dataset.label}: ${value} location${value !== 1 ? 's' : ''}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#5f5448',
+                font: { size: 11 },
+                maxRotation: 45,
+                minRotation: 45
+              },
+              grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
+            },
+            y: {
+              beginAtZero: true,
+              ticks: {
+                color: '#7A6B5D',
+                font: { size: 11 },
+                stepSize: 2
+              },
+              grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false }
+            }
+          },
+          animation: {
+            duration: 1200,
+            easing: 'easeOutQuart'
+          }
+        }
+      });
+    };
+
+    // 7. Chain Percentage by Modality Chart
+    chartInitFunctions['chainPercentageChart'] = function() {
+      const chainData = window.chainPercentageData || { overall: {}, byModality: [] };
+      const overall = chainData.overall || {};
+      const byModality = chainData.byModality || [];
+      
+      // Create labels and data: overall first, then modalities
+      const labels = ['Overall', ...byModality.map(m => m.modality.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()))];
+      const percentages = [overall.chainPercentage || 0, ...byModality.map(m => m.chainPercentage || 0)];
+      
+      const chainCtx = document.getElementById('chainPercentageChart').getContext('2d');
+      const chainGradient = chainCtx.createLinearGradient(0, 0, 600, 0);
+      chainGradient.addColorStop(0, 'rgba(236, 72, 153, 0.9)');
+      chainGradient.addColorStop(1, 'rgba(154, 138, 166, 0.9)');
+
+      charts['chainPercentageChart'] = new Chart(chainCtx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Chain Percentage',
+            data: percentages,
+            backgroundColor: function(context) {
+              // Highlight overall bar with different color
+              if (context.dataIndex === 0) {
+                return 'rgba(251, 146, 60, 0.9)'; // Orange for overall
+              }
+              return chainGradient;
+            },
+            borderRadius: 6,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const i = context.dataIndex;
+                  if (i === 0) {
+                    return ` ${percentages[i]}% of all studios are part of chains (${overall.chainStudios || 0} of ${overall.totalStudios || 0} studios)`;
+                  }
+                  const modality = byModality[i - 1];
+                  return ` ${percentages[i]}% of ${labels[i]} studios are part of chains (${modality.chainStudios || 0} of ${modality.totalStudios || 0} studios)`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#5f5448',
+                font: { size: 11 },
+                callback: function(value) {
+                  return value + '%';
+                }
+              },
+              grid: { color: 'rgba(139, 115, 85, 0.15)', drawBorder: false },
+              max: 100
+            },
+            y: {
+              ticks: { color: '#7A6B5D', font: { size: 11 } },
+              grid: { display: false }
+            }
+          },
+          animation: {
+            duration: 1200,
+            easing: 'easeOutQuart'
+          }
+        }
+      });
+    };
+
+    // Update summary statistics
+    function updateSummaryStats() {
+      const stats = window.stats || {};
+      const modalities = window.modalities || [];
+      
+      // Total boutique studios
+      const totalEl = document.getElementById('stat-total');
+      if (totalEl) {
+        totalEl.textContent = stats.totalBoutiqueStudios || 0;
+      }
+      
+      // Recent openings (2024-2025) - show as percentage
+      const recentEl = document.getElementById('stat-recent');
+      if (recentEl) {
+        const total = stats.totalBoutiqueStudios || 0;
+        const recent = stats.totalNewStudios || 0;
+        const pct = total > 0 ? ((recent / total) * 100).toFixed(1) : 0;
+        recentEl.textContent = `${pct}%`;
+      }
+      
+      // Modality categories
+      const modalitiesEl = document.getElementById('stat-modalities');
+      if (modalitiesEl) {
+        modalitiesEl.textContent = stats.totalModalityCategories || modalities.length || 0;
+      }
+      
+      // Top modality - show as percentage
+      const topModalityEl = document.getElementById('stat-top-modality');
+      const topModalityLabelEl = document.getElementById('stat-top-modality-label');
+      if (topModalityEl && modalities.length > 0) {
+        const topModality = modalities[0];
+        const total = stats.totalBoutiqueStudios || 0;
+        const pct = total > 0 ? parseFloat(topModality.pct || 0) : 0;
+        topModalityEl.textContent = `${pct}%`;
+        if (topModalityLabelEl) {
+          const modalityName = topModality.modality.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+          topModalityLabelEl.textContent = `Top Modality: ${modalityName}`;
+        }
+      }
+    }
+
+    // Initialize all charts function
+    function initializeAllCharts() {
+      const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart', 'chainPercentageChart', 'neighborhoodGrowthChart'];
+      chartIds.forEach(chartId => {
+        const chartElement = document.getElementById(chartId);
+        if (chartElement && chartInitFunctions[chartId]) {
+          // Check if chart is already visible on page load
+          const rect = chartElement.getBoundingClientRect();
+          const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+          if (isVisible) {
+            chartInitFunctions[chartId]();
+          } else {
+            chartObserver.observe(chartElement);
+          }
+        }
+      });
+    }
+
+    // Map initialization function
+    function initializeMap() {
+      try {
+        const mapElement = document.getElementById('map');
+        if (mapElement && typeof L !== 'undefined') {
+          const neighborhoodData = window.neighborhoodData || [];
+          const map = L.map('map', {
+            center: [52.52, 13.405],
+            zoom: 12,
+            zoomControl: true,
+            attributionControl: false
+          });
+
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 19
+          }).addTo(map);
+
+          const heatmapPoints = [];
+          const maxCount = neighborhoodData.length > 0 ? Math.max(...neighborhoodData.map(d => d.count)) : 1;
+          
+          neighborhoodData.forEach(({ neighborhood, count, center }) => {
+          const [lat, lng] = center;
+          const intensity = count / maxCount;
+          const pointsPerStudio = 3;
+          for (let i = 0; i < count * pointsPerStudio; i++) {
+            const angle = (i / count) * Math.PI * 2;
+            const radius = (Math.random() * 0.008);
+            const offsetLat = Math.cos(angle) * radius;
+            const offsetLng = Math.sin(angle) * radius;
+            heatmapPoints.push([
+              lat + offsetLat + (Math.random() - 0.5) * 0.003,
+              lng + offsetLng + (Math.random() - 0.5) * 0.003,
+              intensity * 0.8
+            ]);
+          }
+        });
+
+        if (heatmapPoints.length > 0) {
+          const heat = L.heatLayer(heatmapPoints, {
+            radius: 25,
+            blur: 20,
+            maxZoom: 17,
+            max: 1.0,
+            gradient: {
+              0.0: 'rgba(184, 152, 107, 0)',
+              0.2: 'rgba(184, 152, 107, 0.4)',
+              0.4: 'rgba(154, 138, 166, 0.6)',
+              0.6: 'rgba(236, 72, 153, 0.7)',
+              0.8: 'rgba(239, 68, 68, 0.8)',
+              1.0: 'rgba(251, 146, 60, 1.0)'
+          }
+          }).addTo(map);
+        }
+
+        neighborhoodData.forEach(({ neighborhood, count, center }) => {
+          const [lat, lng] = center;
+          const radius = Math.sqrt(count) * 150;
+          const opacity = Math.min(0.6, 0.3 + (count / maxCount) * 0.3);
+
+          L.circleMarker([lat, lng], {
+            radius: Math.min(12, 4 + (count / maxCount) * 8),
+            fillColor: '#8B7355',
+            color: '#8B7355',
+            weight: 2,
+            opacity: 0.8,
+            fillOpacity: opacity
+          }).bindTooltip(`${neighborhood}: ${count} studios`, {
+            permanent: false,
+            direction: 'top'
+          }).addTo(map);
+        });
+
+        const legend = L.control({ position: 'bottomright' });
+        legend.onAdd = function() {
+          const div = L.DomUtil.create('div', 'info legend');
+          div.innerHTML = `
+            <h4>Studio Density</h4>
+            <div class="legend">
+              <i style="background: rgba(251, 146, 60, 1.0);"></i> 60+ studios<br/>
+              <i style="background: rgba(239, 68, 68, 0.8);"></i> 40-59 studios<br/>
+              <i style="background: rgba(236, 72, 153, 0.7);"></i> 20-39 studios<br/>
+              <i style="background: rgba(154, 138, 166, 0.6);"></i> 10-19 studios<br/>
+              <i style="background: rgba(184, 152, 107, 0.4);"></i> &lt;10 studios
+            </div>
+          `;
+          return div;
+        };
+        legend.addTo(map);
+      } else {
+        // If map can't be initialized (e.g., Leaflet not loaded or file:// protocol issues)
+        const mapElement = document.getElementById('map');
+        if (mapElement) {
+          mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8B7355; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
+        }
+      }
+      } catch (error) {
+        console.warn('Map initialization failed:', error);
+        const mapElement = document.getElementById('map');
+        if (mapElement) {
+          mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8B7355; font-size: 14px;">Map unavailable when viewing locally. Please use a web server or view on Vercel.</div>';
+        }
+      }
+    }
+
+    // Initialize charts when they scroll into view (for initial page load before data is ready)
+    const chartIds = ['modalityChart', 'newModalityChart', 'growthRateChart', 'yearChart', 'modalityGrowthChart', 'locationChart', 'arrChart', 'chainPercentageChart', 'neighborhoodGrowthChart'];
+    chartIds.forEach(chartId => {
+      const chartElement = document.getElementById(chartId);
+      if (chartElement) {
+        chartObserver.observe(chartElement);
+      }
+    });
+
+    // Load data when page loads
+    loadData();
+  </script>
+</body>
+</html>
+

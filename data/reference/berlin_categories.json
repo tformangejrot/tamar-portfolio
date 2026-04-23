@@ -1,0 +1,698 @@
+[
+  {
+    "label": "Aerial Studios in Berlin",
+    "short_label": "Aerial",
+    "slug": "aerial",
+    "search_terms": [
+      "Aerial Berlin",
+      "Aerial studio Berlin",
+      "Aerial class Berlin"
+    ]
+  },
+  {
+    "label": "Aerial/Antigravity Yoga Studios in Berlin",
+    "short_label": "Aerial/Antigravity Yoga",
+    "slug": "aerial-antigravity-yoga",
+    "search_terms": [
+      "Aerial/Antigravity Yoga Berlin",
+      "Aerial/Antigravity Yoga studio Berlin",
+      "Aerial/Antigravity Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Ashtanga Yoga Studios in Berlin",
+    "short_label": "Ashtanga Yoga",
+    "slug": "ashtanga-yoga",
+    "search_terms": [
+      "Ashtanga Yoga Berlin",
+      "Ashtanga Yoga studio Berlin",
+      "Ashtanga Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Ballet Dance Studios in Berlin",
+    "short_label": "Ballet Dance",
+    "slug": "ballet-dance",
+    "search_terms": [
+      "Ballet Dance Berlin",
+      "Ballet Dance studio Berlin",
+      "Ballet Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Ballroom Dance Studios in Berlin",
+    "short_label": "Ballroom Dance",
+    "slug": "ballroom-dance",
+    "search_terms": [
+      "Ballroom Dance Berlin",
+      "Ballroom Dance studio Berlin",
+      "Ballroom Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Barre Studios in Berlin",
+    "short_label": "Barre",
+    "slug": "barre",
+    "search_terms": [
+      "Barre Berlin",
+      "Barre studio Berlin",
+      "Barre class Berlin"
+    ]
+  },
+  {
+    "label": "Belly Dance Studios in Berlin",
+    "short_label": "Belly Dance",
+    "slug": "belly-dance",
+    "search_terms": [
+      "Belly Dance Berlin",
+      "Belly Dance studio Berlin",
+      "Belly Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Bollywood Dance Studios in Berlin",
+    "short_label": "Bollywood Dance",
+    "slug": "bollywood-dance",
+    "search_terms": [
+      "Bollywood Dance Berlin",
+      "Bollywood Dance studio Berlin",
+      "Bollywood Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Bootcamp Studios in Berlin",
+    "short_label": "Bootcamp",
+    "slug": "bootcamp",
+    "search_terms": [
+      "Bootcamp Berlin",
+      "Bootcamp studio Berlin",
+      "Bootcamp class Berlin"
+    ]
+  },
+  {
+    "label": "Boxing Studios in Berlin",
+    "short_label": "Boxing",
+    "slug": "boxing",
+    "search_terms": [
+      "Boxing Berlin",
+      "Boxing studio Berlin",
+      "Boxing class Berlin",
+      "Boxing gym Berlin"
+    ]
+  },
+  {
+    "label": "Cardio Dance Studios in Berlin",
+    "short_label": "Cardio Dance",
+    "slug": "cardio-dance",
+    "search_terms": [
+      "Cardio Dance Berlin",
+      "Cardio Dance studio Berlin",
+      "Cardio Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Circuit Training Studios in Berlin",
+    "short_label": "Circuit Training",
+    "slug": "circuit-training",
+    "search_terms": [
+      "Circuit Training Berlin",
+      "Circuit Training studio Berlin",
+      "Circuit Training class Berlin"
+    ]
+  },
+  {
+    "label": "Contemporary Dance Studios in Berlin",
+    "short_label": "Contemporary Dance",
+    "slug": "contemporary-dance",
+    "search_terms": [
+      "Contemporary Dance Berlin",
+      "Contemporary Dance studio Berlin",
+      "Contemporary Dance class Berlin"
+    ]
+  },
+  {
+    "label": "CrossFit Studios in Berlin",
+    "short_label": "CrossFit",
+    "slug": "crossfit",
+    "search_terms": [
+      "CrossFit Berlin",
+      "CrossFit studio Berlin",
+      "CrossFit class Berlin",
+      "CrossFit gym Berlin"
+    ]
+  },
+  {
+    "label": "Cycling Studios in Berlin",
+    "short_label": "Cycling",
+    "slug": "cycling",
+    "search_terms": [
+      "Cycling Berlin",
+      "Cycling studio Berlin",
+      "Cycling class Berlin",
+      "Indoor cycling Berlin"
+    ]
+  },
+  {
+    "label": "Dance Studios in Berlin",
+    "short_label": "Dance",
+    "slug": "dance",
+    "search_terms": [
+      "Dance Berlin",
+      "Dance studio Berlin",
+      "Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Electrical muscle stimulation Studios in Berlin",
+    "short_label": "Electrical muscle stimulation",
+    "slug": "electrical-muscle-stimulation",
+    "search_terms": [
+      "Electrical muscle stimulation Berlin",
+      "EMS Berlin",
+      "EMS studio Berlin",
+      "EMS class Berlin"
+    ]
+  },
+  {
+    "label": "Fitness Studios in Berlin",
+    "short_label": "Fitness",
+    "slug": "fitness",
+    "search_terms": [
+      "Fitness Berlin",
+      "Fitness studio Berlin",
+      "Fitness class Berlin"
+    ]
+  },
+  {
+    "label": "Gym Time Studios in Berlin",
+    "short_label": "Gym Time",
+    "slug": "gym-time",
+    "search_terms": [
+      "Gym Time Berlin",
+      "Gym Time studio Berlin",
+      "Gym Time class Berlin"
+    ]
+  },
+  {
+    "label": "Hatha Yoga Studios in Berlin",
+    "short_label": "Hatha Yoga",
+    "slug": "hatha-yoga",
+    "search_terms": [
+      "Hatha Yoga Berlin",
+      "Hatha Yoga studio Berlin",
+      "Hatha Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Heavy bag Studios in Berlin",
+    "short_label": "Heavy bag",
+    "slug": "heavy-bag",
+    "search_terms": [
+      "Heavy bag Berlin",
+      "Heavy bag studio Berlin",
+      "Heavy bag class Berlin"
+    ]
+  },
+  {
+    "label": "High-intensity Pilates Studios in Berlin",
+    "short_label": "High-intensity Pilates",
+    "slug": "high-intensity-pilates",
+    "search_terms": [
+      "High-intensity Pilates Berlin",
+      "High-intensity Pilates studio Berlin",
+      "High-intensity Pilates class Berlin"
+    ]
+  },
+  {
+    "label": "HIIT Studios in Berlin",
+    "short_label": "HIIT",
+    "slug": "hiit",
+    "search_terms": [
+      "HIIT Berlin",
+      "HIIT studio Berlin",
+      "HIIT class Berlin"
+    ]
+  },
+  {
+    "label": "Hip Hop Dance Studios in Berlin",
+    "short_label": "Hip Hop Dance",
+    "slug": "hip-hop-dance",
+    "search_terms": [
+      "Hip Hop Dance Berlin",
+      "Hip Hop Dance studio Berlin",
+      "Hip Hop Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Hot Yoga Studios in Berlin",
+    "short_label": "Hot Yoga",
+    "slug": "hot-yoga",
+    "search_terms": [
+      "Hot Yoga Berlin",
+      "Hot Yoga studio Berlin",
+      "Hot Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Indoor Cycling Studios in Berlin",
+    "short_label": "Indoor Cycling",
+    "slug": "indoor-cycling",
+    "search_terms": [
+      "Indoor Cycling Berlin",
+      "Indoor Cycling studio Berlin",
+      "Indoor Cycling class Berlin"
+    ]
+  },
+  {
+    "label": "Iyengar Yoga Studios in Berlin",
+    "short_label": "Iyengar Yoga",
+    "slug": "iyengar-yoga",
+    "search_terms": [
+      "Iyengar Yoga Berlin",
+      "Iyengar Yoga studio Berlin",
+      "Iyengar Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Jazz Dance Studios in Berlin",
+    "short_label": "Jazz Dance",
+    "slug": "jazz-dance",
+    "search_terms": [
+      "Jazz Dance Berlin",
+      "Jazz Dance studio Berlin",
+      "Jazz Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Jiu Jitsu Studios in Berlin",
+    "short_label": "Jiu Jitsu",
+    "slug": "jiu-jitsu",
+    "search_terms": [
+      "Jiu Jitsu Berlin",
+      "Jiu Jitsu studio Berlin",
+      "Jiu Jitsu class Berlin"
+    ]
+  },
+  {
+    "label": "Jivamukti Yoga Studios in Berlin",
+    "short_label": "Jivamukti Yoga",
+    "slug": "jivamukti-yoga",
+    "search_terms": [
+      "Jivamukti Yoga Berlin",
+      "Jivamukti Yoga studio Berlin",
+      "Jivamukti Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Karate Studios in Berlin",
+    "short_label": "Karate",
+    "slug": "karate",
+    "search_terms": [
+      "Karate Berlin",
+      "Karate studio Berlin",
+      "Karate class Berlin"
+    ]
+  },
+  {
+    "label": "Kickboxing Studios in Berlin",
+    "short_label": "Kickboxing",
+    "slug": "kickboxing",
+    "search_terms": [
+      "Kickboxing Berlin",
+      "Kickboxing studio Berlin",
+      "Kickboxing class Berlin"
+    ]
+  },
+  {
+    "label": "Krav Maga Studios in Berlin",
+    "short_label": "Krav Maga",
+    "slug": "krav-maga",
+    "search_terms": [
+      "Krav Maga Berlin",
+      "Krav Maga studio Berlin",
+      "Krav Maga class Berlin"
+    ]
+  },
+  {
+    "label": "Kundalini Yoga Studios in Berlin",
+    "short_label": "Kundalini Yoga",
+    "slug": "kundalini-yoga",
+    "search_terms": [
+      "Kundalini Yoga Berlin",
+      "Kundalini Yoga studio Berlin",
+      "Kundalini Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Lagree Studios in Berlin",
+    "short_label": "Lagree",
+    "slug": "lagree",
+    "search_terms": [
+      "Lagree Berlin",
+      "Lagree studio Berlin",
+      "Lagree class Berlin"
+    ]
+  },
+  {
+    "label": "Latin Dance Studios in Berlin",
+    "short_label": "Latin Dance",
+    "slug": "latin-dance",
+    "search_terms": [
+      "Latin Dance Berlin",
+      "Latin Dance studio Berlin",
+      "Latin Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Low-impact Training Studios in Berlin",
+    "short_label": "Low-impact Training",
+    "slug": "low-impact-training",
+    "search_terms": [
+      "Low-impact Training Berlin",
+      "Low-impact Training studio Berlin",
+      "Low-impact Training class Berlin"
+    ]
+  },
+  {
+    "label": "Martial Arts Studios in Berlin",
+    "short_label": "Martial Arts",
+    "slug": "martial-arts",
+    "search_terms": [
+      "Martial Arts Berlin",
+      "Martial Arts studio Berlin",
+      "Martial Arts class Berlin"
+    ]
+  },
+  {
+    "label": "Mat Pilates Studios in Berlin",
+    "short_label": "Mat Pilates",
+    "slug": "mat-pilates",
+    "search_terms": [
+      "Mat Pilates Berlin",
+      "Mat Pilates studio Berlin",
+      "Mat Pilates class Berlin"
+    ]
+  },
+  {
+    "label": "Mixed Martial Arts Studios in Berlin",
+    "short_label": "Mixed Martial Arts",
+    "slug": "mixed-martial-arts",
+    "search_terms": [
+      "Mixed Martial Arts Berlin",
+      "MMA Berlin",
+      "MMA studio Berlin",
+      "MMA class Berlin"
+    ]
+  },
+  {
+    "label": "Modern Dance Studios in Berlin",
+    "short_label": "Modern Dance",
+    "slug": "modern-dance",
+    "search_terms": [
+      "Modern Dance Berlin",
+      "Modern Dance studio Berlin",
+      "Modern Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Muay Thai Studios in Berlin",
+    "short_label": "Muay Thai",
+    "slug": "muay-thai",
+    "search_terms": [
+      "Muay Thai Berlin",
+      "Muay Thai studio Berlin",
+      "Muay Thai class Berlin"
+    ]
+  },
+  {
+    "label": "Outdoors Studios in Berlin",
+    "short_label": "Outdoors",
+    "slug": "outdoors",
+    "search_terms": [
+      "Outdoors Berlin",
+      "Outdoor fitness Berlin",
+      "Outdoor training Berlin"
+    ]
+  },
+  {
+    "label": "Personal Training Studios in Berlin",
+    "short_label": "Personal Training",
+    "slug": "personal-training",
+    "search_terms": [
+      "Personal Training Berlin",
+      "Personal Training studio Berlin",
+      "Personal trainer Berlin"
+    ]
+  },
+  {
+    "label": "Pilates Studios in Berlin",
+    "short_label": "Pilates",
+    "slug": "pilates",
+    "search_terms": [
+      "Pilates Berlin",
+      "Pilates studio Berlin",
+      "Pilates class Berlin"
+    ]
+  },
+  {
+    "label": "Pole Dance Studios in Berlin",
+    "short_label": "Pole Dance",
+    "slug": "pole-dance",
+    "search_terms": [
+      "Pole Dance Berlin",
+      "Pole Dance studio Berlin",
+      "Pole Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Postnatal Studios in Berlin",
+    "short_label": "Postnatal",
+    "slug": "postnatal",
+    "search_terms": [
+      "Postnatal Berlin",
+      "Postnatal studio Berlin",
+      "Postnatal class Berlin"
+    ]
+  },
+  {
+    "label": "Power Yoga Studios in Berlin",
+    "short_label": "Power Yoga",
+    "slug": "power-yoga",
+    "search_terms": [
+      "Power Yoga Berlin",
+      "Power Yoga studio Berlin",
+      "Power Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Prenatal Studios in Berlin",
+    "short_label": "Prenatal",
+    "slug": "prenatal",
+    "search_terms": [
+      "Prenatal Berlin",
+      "Prenatal studio Berlin",
+      "Prenatal class Berlin"
+    ]
+  },
+  {
+    "label": "Prenatal Yoga Studios in Berlin",
+    "short_label": "Prenatal Yoga",
+    "slug": "prenatal-yoga",
+    "search_terms": [
+      "Prenatal Yoga Berlin",
+      "Prenatal Yoga studio Berlin",
+      "Prenatal Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Qi Gong Studios in Berlin",
+    "short_label": "Qi Gong",
+    "slug": "qi-gong",
+    "search_terms": [
+      "Qi Gong Berlin",
+      "Qi Gong studio Berlin",
+      "Qi Gong class Berlin"
+    ]
+  },
+  {
+    "label": "Reformer Pilates Studios in Berlin",
+    "short_label": "Reformer Pilates",
+    "slug": "reformer-pilates",
+    "search_terms": [
+      "Reformer Pilates Berlin",
+      "Reformer Pilates studio Berlin",
+      "Reformer Pilates class Berlin"
+    ]
+  },
+  {
+    "label": "Restorative Yoga Studios in Berlin",
+    "short_label": "Restorative Yoga",
+    "slug": "restorative-yoga",
+    "search_terms": [
+      "Restorative Yoga Berlin",
+      "Restorative Yoga studio Berlin",
+      "Restorative Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Running Studios in Berlin",
+    "short_label": "Running",
+    "slug": "running",
+    "search_terms": [
+      "Running Berlin",
+      "Running studio Berlin",
+      "Running class Berlin"
+    ]
+  },
+  {
+    "label": "Salsa Dance Studios in Berlin",
+    "short_label": "Salsa Dance",
+    "slug": "salsa-dance",
+    "search_terms": [
+      "Salsa Dance Berlin",
+      "Salsa Dance studio Berlin",
+      "Salsa Dance class Berlin"
+    ]
+  },
+  {
+    "label": "Sculpt Studios in Berlin",
+    "short_label": "Sculpt",
+    "slug": "sculpt",
+    "search_terms": [
+      "Sculpt Berlin",
+      "Sculpt studio Berlin",
+      "Sculpt class Berlin"
+    ]
+  },
+  {
+    "label": "Shadowboxing Studios in Berlin",
+    "short_label": "Shadowboxing",
+    "slug": "shadowboxing",
+    "search_terms": [
+      "Shadowboxing Berlin",
+      "Shadowboxing studio Berlin",
+      "Shadowboxing class Berlin"
+    ]
+  },
+  {
+    "label": "Strength Training Studios in Berlin",
+    "short_label": "Strength Training",
+    "slug": "strength-training",
+    "search_terms": [
+      "Strength Training Berlin",
+      "Strength Training studio Berlin",
+      "Strength Training class Berlin"
+    ]
+  },
+  {
+    "label": "Stretching Studios in Berlin",
+    "short_label": "Stretching",
+    "slug": "stretching",
+    "search_terms": [
+      "Stretching Berlin",
+      "Stretching studio Berlin",
+      "Stretching class Berlin"
+    ]
+  },
+  {
+    "label": "Taekwondo Studios in Berlin",
+    "short_label": "Taekwondo",
+    "slug": "taekwondo",
+    "search_terms": [
+      "Taekwondo Berlin",
+      "Taekwondo studio Berlin",
+      "Taekwondo class Berlin"
+    ]
+  },
+  {
+    "label": "Tai Chi Studios in Berlin",
+    "short_label": "Tai Chi",
+    "slug": "tai-chi",
+    "search_terms": [
+      "Tai Chi Berlin",
+      "Tai Chi studio Berlin",
+      "Tai Chi class Berlin"
+    ]
+  },
+  {
+    "label": "Trampoline Studios in Berlin",
+    "short_label": "Trampoline",
+    "slug": "trampoline",
+    "search_terms": [
+      "Trampoline Berlin",
+      "Trampoline studio Berlin",
+      "Trampoline class Berlin"
+    ]
+  },
+  {
+    "label": "TRX Studios in Berlin",
+    "short_label": "TRX",
+    "slug": "trx",
+    "search_terms": [
+      "TRX Berlin",
+      "TRX studio Berlin",
+      "TRX class Berlin"
+    ]
+  },
+  {
+    "label": "Vinyasa Yoga Studios in Berlin",
+    "short_label": "Vinyasa Yoga",
+    "slug": "vinyasa-yoga",
+    "search_terms": [
+      "Vinyasa Yoga Berlin",
+      "Vinyasa Yoga studio Berlin",
+      "Vinyasa Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Weightlifting Studios in Berlin",
+    "short_label": "Weightlifting",
+    "slug": "weightlifting",
+    "search_terms": [
+      "Weightlifting Berlin",
+      "Weightlifting studio Berlin",
+      "Weightlifting class Berlin"
+    ]
+  },
+  {
+    "label": "Yin Yoga Studios in Berlin",
+    "short_label": "Yin Yoga",
+    "slug": "yin-yoga",
+    "search_terms": [
+      "Yin Yoga Berlin",
+      "Yin Yoga studio Berlin",
+      "Yin Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Yoga Studios in Berlin",
+    "short_label": "Yoga",
+    "slug": "yoga",
+    "search_terms": [
+      "Yoga Berlin",
+      "Yoga studio Berlin",
+      "Yoga class Berlin"
+    ]
+  },
+  {
+    "label": "Yoga Nidra Studios in Berlin",
+    "short_label": "Yoga Nidra",
+    "slug": "yoga-nidra",
+    "search_terms": [
+      "Yoga Nidra Berlin",
+      "Yoga Nidra studio Berlin",
+      "Yoga Nidra class Berlin"
+    ]
+  },
+  {
+    "label": "Zumba Dance Studios in Berlin",
+    "short_label": "Zumba Dance",
+    "slug": "zumba-dance",
+    "search_terms": [
+      "Zumba Dance Berlin",
+      "Zumba Dance studio Berlin",
+      "Zumba Dance class Berlin",
+      "Zumba Berlin"
+    ]
+  }
+]
