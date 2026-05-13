@@ -69,10 +69,28 @@ async function main() {
 
   console.log(`Processing ${studios.length} boutique studios\n`);
 
-  // 1. Modality mix
+  // Dance and martial arts are treated separately — they include a mix of boutique
+  // fitness studios AND traditional schools (ballet academies, dojos, etc.) that
+  // operate on a different business model. We exclude them from the main modality
+  // analysis but show them in a dedicated section.
+  const EXCLUDED_FROM_MAIN = new Set(['dance', 'martial-arts']);
+
+  // "Pure" dance/MA studios: ALL their categories are dance/martial-arts only.
+  // Studios with dance/MA + yoga/pilates/etc. stay in main analysis under those other categories.
+  const pureDanceMA = studios.filter(s =>
+    (s.categories || []).length > 0 &&
+    (s.categories || []).every(c => EXCLUDED_FROM_MAIN.has(c))
+  );
+  const mainStudios = studios.filter(s =>
+    !(s.categories || []).every(c => EXCLUDED_FROM_MAIN.has(c)) ||
+    (s.categories || []).length === 0
+  );
+
+  // 1. Modality mix — exclude dance/martial-arts categories entirely
   const modalityCounts = {};
   studios.forEach(studio => {
-    const consolidatedCats = consolidateCategories(studio, consolidationMap);
+    const consolidatedCats = consolidateCategories(studio, consolidationMap)
+      .filter(c => !EXCLUDED_FROM_MAIN.has(c));
     consolidatedCats.forEach(cat => {
       modalityCounts[cat] = (modalityCounts[cat] || 0) + 1;
     });
@@ -87,15 +105,39 @@ async function main() {
     .sort((a, b) => b.count - a.count)
     .slice(0, 15);
 
+  // Dance & martial arts breakdown for separate section
+  const danceCount = studios.filter(s => (s.categories || []).includes('dance')).length;
+  const maCount = studios.filter(s => (s.categories || []).includes('martial-arts')).length;
+  const bothCount = studios.filter(s =>
+    (s.categories || []).includes('dance') && (s.categories || []).includes('martial-arts')
+  ).length;
+  const danceMartialArtsStats = {
+    total: pureDanceMA.length,
+    danceOnly: pureDanceMA.filter(s => (s.categories || []).includes('dance') && !(s.categories || []).includes('martial-arts')).length,
+    martialArtsOnly: pureDanceMA.filter(s => (s.categories || []).includes('martial-arts') && !(s.categories || []).includes('dance')).length,
+    both: pureDanceMA.filter(s => (s.categories || []).includes('dance') && (s.categories || []).includes('martial-arts')).length,
+    mixedWithOtherModalities: studios.length - pureDanceMA.length - mainStudios.filter(s => !(s.categories||[]).some(c => EXCLUDED_FROM_MAIN.has(c))).length,
+    note: 'Studios whose ONLY categories are dance and/or martial-arts. Studios with dance/MA plus yoga/pilates/etc. are counted in the main analysis under those other modalities.',
+  };
+
   // 2. Growth over time
+  // Exclude studios whose "website" is a social media page — those dates reflect
+  // when Instagram/Facebook's domain was registered, not when the studio opened.
+  const SHARED_DOMAINS = ['instagram.com', 'facebook.com', 'fb.com'];
+  function hasSocialMediaWebsite(studio) {
+    if (!studio.website) return false;
+    return SHARED_DOMAINS.some(d => studio.website.includes(d));
+  }
+
   const yearCounts = {};
   studios.forEach(studio => {
-    if (studio.estimated_opening_date) {
+    if (studio.estimated_opening_date && !hasSocialMediaWebsite(studio)) {
       const date = new Date(studio.estimated_opening_date);
       if (!isNaN(date.getTime())) {
         let year = date.getFullYear();
-        // Filter out dates before 2000 — boutique fitness is a recent phenomenon
-        if (year < 2000) return;
+        // Filter out dates before 2005 — pre-2005 Wayback captures are often
+        // from early web crawl expansions, not actual studio opening dates.
+        if (year < 2005) return;
         // Adjust for Nov/Dec domain registrations
         if (studio.opening_date_source === 'whois_domain_creation') {
           year = adjustYearForDomainRegistration(year, date.getMonth());
@@ -118,14 +160,16 @@ async function main() {
   const recentModalityTotals = {};
 
   studios.forEach(studio => {
-    const consolidatedCats = consolidateCategories(studio, consolidationMap);
+    const consolidatedCats = consolidateCategories(studio, consolidationMap)
+      .filter(c => !EXCLUDED_FROM_MAIN.has(c));
     consolidatedCats.forEach(cat => {
       recentModalityTotals[cat] = (recentModalityTotals[cat] || 0) + 1;
     });
   });
 
   recentStudios.forEach(studio => {
-    const consolidatedCats = consolidateCategories(studio, consolidationMap);
+    const consolidatedCats = consolidateCategories(studio, consolidationMap)
+      .filter(c => !EXCLUDED_FROM_MAIN.has(c));
     consolidatedCats.forEach(cat => {
       recentModalityCounts[cat] = (recentModalityCounts[cat] || 0) + 1;
     });
@@ -363,12 +407,32 @@ async function main() {
   }));
 
   // 9. Overall stats for the hero section
+  // Single vs multi modality: count non-excluded categories per studio
+  const singleModalityCount = studios.filter(s => {
+    const cats = (s.categories || []).filter(c => !EXCLUDED_FROM_MAIN.has(c));
+    return cats.length === 1;
+  }).length;
+  const multiModalityCount = studios.filter(s => {
+    const cats = (s.categories || []).filter(c => !EXCLUDED_FROM_MAIN.has(c));
+    return cats.length > 1;
+  }).length;
+  const studiosWithAnyCat = singleModalityCount + multiModalityCount;
+
+  // Brands and locations for location chart subtitle
+  const totalBrands = Array.from(new Set(
+    studios.map(s => s.domain || s.name?.toLowerCase().trim())
+  )).length;
+
   const overallStats = {
     totalBoutiqueStudios: totalStudios,
+    studiosWithDates: studios.filter(s => s.estimated_opening_date && !hasSocialMediaWebsite(s)).length,
     pctOpenedRecent: parseFloat(recentPct),
     totalModalityCategories: modalities.length,
     pilatesPct: modalities.find(m => m.modality === 'pilates')?.pct || 0,
-    totalNewStudios: recentCount
+    totalNewStudios: recentCount,
+    singleModalityPct: studiosWithAnyCat > 0 ? parseFloat((singleModalityCount / studiosWithAnyCat * 100).toFixed(0)) : 0,
+    multiModalityPct: studiosWithAnyCat > 0 ? parseFloat((multiModalityCount / studiosWithAnyCat * 100).toFixed(0)) : 0,
+    totalBrands,
   };
 
   // 10. Chain percentage by modality (chain = 2+ locations under same domain/brand)
@@ -448,6 +512,8 @@ async function main() {
     JSON.stringify(pilatesCombinationsData, null, 2));
   await fs.writeFile(path.join(OUTPUT_DIR, 'chain_percentage_by_modality.json'),
     JSON.stringify({ overall: overallChainPercentage, byModality: chainPercentageData }, null, 2));
+  await fs.writeFile(path.join(OUTPUT_DIR, 'dance_martial_arts.json'),
+    JSON.stringify(danceMartialArtsStats, null, 2));
 
   console.log('✓ Computed Berlin aggregates');
   console.log(`✓ Saved to ${OUTPUT_DIR}\n`);

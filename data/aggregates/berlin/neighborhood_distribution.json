@@ -1,7 +1,7 @@
 [
   {
     "neighborhood": "Kreuzberg",
-    "count": 196,
+    "count": 188,
     "center": [
       52.499,
       13.403
@@ -9,7 +9,7 @@
   },
   {
     "neighborhood": "Prenzlauer Berg",
-    "count": 151,
+    "count": 140,
     "center": [
       52.538,
       13.42
@@ -17,7 +17,7 @@
   },
   {
     "neighborhood": "Mitte",
-    "count": 145,
+    "count": 135,
     "center": [
       52.52,
       13.405
@@ -25,7 +25,7 @@
   },
   {
     "neighborhood": "Friedrichshain",
-    "count": 91,
+    "count": 88,
     "center": [
       52.516,
       13.454
@@ -33,7 +33,7 @@
   },
   {
     "neighborhood": "Schoeneberg",
-    "count": 80,
+    "count": 77,
     "center": [
       52.479,
       13.354
@@ -41,7 +41,7 @@
   },
   {
     "neighborhood": "Charlottenburg",
-    "count": 79,
+    "count": 75,
     "center": [
       52.516,
       13.304
@@ -49,7 +49,7 @@
   },
   {
     "neighborhood": "Wilmersdorf",
-    "count": 74,
+    "count": 71,
     "center": [
       52.488,
       13.325
@@ -57,18 +57,10 @@
   },
   {
     "neighborhood": "Steglitz",
-    "count": 72,
+    "count": 68,
     "center": [
       52.459,
       13.323
-    ]
-  },
-  {
-    "neighborhood": "Wedding",
-    "count": 56,
-    "center": [
-      52.551,
-      13.362
     ]
   },
   {
@@ -80,8 +72,16 @@
     ]
   },
   {
+    "neighborhood": "Wedding",
+    "count": 52,
+    "center": [
+      52.551,
+      13.362
+    ]
+  },
+  {
     "neighborhood": "Tempelhof",
-    "count": 45,
+    "count": 44,
     "center": [
       52.468,
       13.385
@@ -89,7 +89,7 @@
   },
   {
     "neighborhood": "Lichtenberg",
-    "count": 41,
+    "count": 38,
     "center": [
       52.512,
       13.5
@@ -97,7 +97,7 @@
   },
   {
     "neighborhood": "Pankow",
-    "count": 33,
+    "count": 32,
     "center": [
       52.569,
       13.402
@@ -105,7 +105,7 @@
   },
   {
     "neighborhood": "Weissensee",
-    "count": 31,
+    "count": 30,
     "center": [
       52.554,
       13.466
@@ -113,7 +113,7 @@
   },
   {
     "neighborhood": "Moabit",
-    "count": 30,
+    "count": 29,
     "center": [
       52.531,
       13.34
@@ -121,18 +121,10 @@
   },
   {
     "neighborhood": "Treptow",
-    "count": 27,
+    "count": 26,
     "center": [
       52.486,
       13.47
-    ]
-  },
-  {
-    "neighborhood": "Zehlendorf",
-    "count": 22,
-    "center": [
-      52.431,
-      13.258
     ]
   },
   {
@@ -144,43 +136,35 @@
     ]
   },
   {
-    "neighborhood": "Reinickendorf",
+    "neighborhood": "Zehlendorf",
     "count": 21,
     "center": [
-      52.59,
-      13.338
+      52.431,
+      13.258
     ]
   },
   {
     "neighborhood": "Koepenick",
-    "count": 19,
+    "count": 18,
     "center": [
       52.441,
       13.582
     ]
   },
   {
+    "neighborhood": "Reinickendorf",
+    "count": 18,
+    "center": [
+      52.59,
+      13.338
+    ]
+  },
+  {
     "neighborhood": "Spandau",
-    "count": 19,
+    "count": 18,
     "center": [
       52.535,
       13.199
-    ]
-  },
-  {
-    "neighborhood": "Tiergarten",
-    "count": 14,
-    "center": [
-      52.5145,
-      13.3502
-    ]
-  },
-  {
-    "neighborhood": "Adlershof",
-    "count": 14,
-    "center": [
-      52.433,
-      13.535
     ]
   },
   {
@@ -189,6 +173,22 @@
     "center": [
       52.457,
       13.287
+    ]
+  },
+  {
+    "neighborhood": "Tiergarten",
+    "count": 13,
+    "center": [
+      52.5145,
+      13.3502
+    ]
+  },
+  {
+    "neighborhood": "Adlershof",
+    "count": 13,
+    "center": [
+      52.433,
+      13.535
     ]
   },
   {

@@ -1,77 +1,77 @@
 [
   {
-    "modality": "martial-arts",
-    "count": 295,
-    "pct": "20.5"
-  },
-  {
-    "modality": "dance",
-    "count": 293,
-    "pct": "20.4"
-  },
-  {
     "modality": "yoga",
-    "count": 241,
-    "pct": "16.7"
-  },
-  {
-    "modality": "strength-training",
-    "count": 166,
-    "pct": "11.5"
-  },
-  {
-    "modality": "boxing",
-    "count": 127,
-    "pct": "8.8"
+    "count": 401,
+    "pct": "29.2"
   },
   {
     "modality": "pilates",
-    "count": 122,
-    "pct": "8.5"
+    "count": 228,
+    "pct": "16.6"
   },
   {
-    "modality": "outdoors",
-    "count": 89,
-    "pct": "6.2"
+    "modality": "strength-training",
+    "count": 188,
+    "pct": "13.7"
   },
   {
-    "modality": "low-impact-training",
-    "count": 81,
-    "pct": "5.6"
-  },
-  {
-    "modality": "stretching",
-    "count": 71,
-    "pct": "4.9"
-  },
-  {
-    "modality": "reformer-pilates",
-    "count": 68,
-    "pct": "4.7"
-  },
-  {
-    "modality": "electrical-muscle-stimulation",
-    "count": 66,
-    "pct": "4.6"
-  },
-  {
-    "modality": "aerial",
-    "count": 63,
-    "pct": "4.4"
+    "modality": "boxing",
+    "count": 184,
+    "pct": "13.4"
   },
   {
     "modality": "barre",
-    "count": 55,
-    "pct": "3.8"
+    "count": 89,
+    "pct": "6.5"
   },
   {
-    "modality": "running",
-    "count": 51,
-    "pct": "3.5"
+    "modality": "reformer-pilates",
+    "count": 81,
+    "pct": "5.9"
+  },
+  {
+    "modality": "low-impact-training",
+    "count": 57,
+    "pct": "4.2"
+  },
+  {
+    "modality": "outdoors",
+    "count": 57,
+    "pct": "4.2"
+  },
+  {
+    "modality": "electrical-muscle-stimulation",
+    "count": 57,
+    "pct": "4.2"
+  },
+  {
+    "modality": "aerial",
+    "count": 46,
+    "pct": "3.4"
   },
   {
     "modality": "cycling",
-    "count": 24,
-    "pct": "1.7"
+    "count": 40,
+    "pct": "2.9"
+  },
+  {
+    "modality": "running",
+    "count": 39,
+    "pct": "2.8"
+  },
+  {
+    "modality": "stretching",
+    "count": 26,
+    "pct": "1.9"
+  },
+  {
+    "modality": "trampoline",
+    "count": 19,
+    "pct": "1.4"
+  },
+  {
+    "modality": "personal-training",
+    "count": 5,
+    "pct": "0.4"
   }
 ]

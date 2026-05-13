@@ -89,6 +89,11 @@ const NAME_EXCLUSIONS = [
   /^box gym\b/i,            // Box Gym Coepenick
   /^koryo\b/i,              // Koryo GYM Berlin (box gym / Sportschule)
   /^hagius\b/i,             // luxury spa / wellness club
+  /^fitbox\b/i,             // Fitbox EMS chain (20+ locations)
+  /^bodystreet\b/i,         // Bodystreet EMS chain (10+ locations)
+  /^john reed\b/i,          // John Reed Fitness (McFit group chain)
+  /^john & jane/i,          // John & Jane's Soulbase (John Reed concept)
+  /^original bootcamp/i,    // Original Bootcamp outdoor chain (20+ locations)
 
   // ── RETAIL / HARDWARE / SPORTING GOODS / FASHION ────────────────────────────
   /^galeria\b/i,
@@ -119,6 +124,10 @@ const NAME_EXCLUSIONS = [
   /^studio lietz\b/i,       // yoga equipment retailer (not a studio)
   /^keiko sports/i,
   /^on running gmbh/i,
+  /^hoka berlin/i,          // HOKA shoe stores
+  /^odlo store/i,           // Odlo sportswear store
+  /^adidas sports base/i,   // adidas brand activation (not a studio)
+  /^arc'?teryx berlin/i,    // Arc'teryx outdoor clothing store
   /^titus berlin/i,         // skate/streetwear retail
   /^firmament berlin/i,     // streetwear retail
   /^kapten & son/i,         // accessories retail
@@ -303,6 +312,15 @@ const NAME_EXCLUSIONS = [
   /^plush-trail/i,
   /^dance gmbh/i,           // "Dance GmbH - E-Bike Rental Berlin"
 
+  // ── FIGHT / COMBAT EQUIPMENT RETAIL ─────────────────────────────────────────
+  /fight shop/i,            // Fight Shop Berlin (Kampfsportartikel = equipment retailer)
+  /kampfsportartikel/i,     // combat sports equipment shop
+
+  // ── BICYCLE SHOPS / PARKS (additional) ───────────────────────────────────────
+  /^bikepark berlin\b/i,    // bikePARK Berlin - Fahrrad Outlet (bike retail)
+  /fahrrad.?outlet/i,       // bicycle outlet store
+  /^mont k\b/i,             // Mont K / Mont K Kletterladen (outdoor gear shop)
+
   // ── PARKS / PLAYGROUNDS / OUTDOOR SPACES ────────────────────────────────────
   /^gleisdreieck\b/i,
   /^tempelhofer feld/i,     // public park / former airfield
@@ -312,6 +330,10 @@ const NAME_EXCLUSIONS = [
   /^molecule man/i,
   /^trampoline spielplatz|^trampoline am wohnheim|^trampolin$/i,  // playgrounds
   /^hüpfburgen oase/i,      // bouncy castle rental
+  /^calisthenics park\b/i,  // public outdoor calisthenics parks (parkinspector.de)
+  /^calisthenics sportplatz/i,
+  /^outdoor training spot/i,
+  /^trainings park\b/i,     // public park training areas
 
   // ── CHILDREN'S / FAMILY SERVICES ────────────────────────────────────────────
   /^bim & boom/i,           // kids' indoor play centre
@@ -319,6 +341,12 @@ const NAME_EXCLUSIONS = [
   /^miteinander wachsen/i,  // Montessori/Pikler play groups
   /^kinderyoga berlin/i,    // children's yoga service (not a studio)
   /^tobeins?el\b/i,
+
+  // ── ONLINE / VIRTUAL / MEETUP (no physical studio) ──────────────────────────
+  /^element yoga tv/i,      // online yoga streaming service (elementyoga.vhx.tv)
+  /^international salsa meetup/i, // Meetup.com group, not a physical studio
+  /^selfmade$/i,            // selfmade.com is an unrelated fashion brand
+  /^dance school academia jangada/i, // website is a Brazilian restaurant chain
 
   // ── MISC / OTHER ─────────────────────────────────────────────────────────────
   /^teufelsberg\b/i,        // Cold War listening station / museum

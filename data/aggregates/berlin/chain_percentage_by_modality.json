@@ -1,129 +1,129 @@
 {
   "overall": {
-    "totalStudios": 1439,
-    "chainStudios": 364,
-    "chainPercentage": 25.3,
-    "independentStudios": 1075
+    "totalStudios": 1372,
+    "chainStudios": 308,
+    "chainPercentage": 22.4,
+    "independentStudios": 1064
   },
   "byModality": [
     {
       "modality": "cycling",
-      "totalStudios": 24,
-      "chainStudios": 17,
-      "chainPercentage": 70.8,
-      "independentStudios": 7
+      "totalStudios": 40,
+      "chainStudios": 27,
+      "chainPercentage": 67.5,
+      "independentStudios": 13
     },
     {
       "modality": "electrical-muscle-stimulation",
-      "totalStudios": 66,
-      "chainStudios": 42,
-      "chainPercentage": 63.6,
-      "independentStudios": 24
-    },
-    {
-      "modality": "outdoors",
-      "totalStudios": 89,
-      "chainStudios": 45,
-      "chainPercentage": 50.6,
-      "independentStudios": 44
+      "totalStudios": 57,
+      "chainStudios": 34,
+      "chainPercentage": 59.6,
+      "independentStudios": 23
     },
     {
       "modality": "barre",
-      "totalStudios": 55,
-      "chainStudios": 24,
-      "chainPercentage": 43.6,
-      "independentStudios": 31
-    },
-    {
-      "modality": "pilates",
-      "totalStudios": 122,
-      "chainStudios": 46,
-      "chainPercentage": 37.7,
-      "independentStudios": 76
-    },
-    {
-      "modality": "stretching",
-      "totalStudios": 71,
-      "chainStudios": 26,
-      "chainPercentage": 36.6,
-      "independentStudios": 45
-    },
-    {
-      "modality": "strength-training",
-      "totalStudios": 166,
-      "chainStudios": 59,
-      "chainPercentage": 35.5,
-      "independentStudios": 107
+      "totalStudios": 89,
+      "chainStudios": 43,
+      "chainPercentage": 48.3,
+      "independentStudios": 46
     },
     {
       "modality": "reformer-pilates",
-      "totalStudios": 68,
-      "chainStudios": 24,
-      "chainPercentage": 35.3,
-      "independentStudios": 44
-    },
-    {
-      "modality": "low-impact-training",
       "totalStudios": 81,
-      "chainStudios": 22,
-      "chainPercentage": 27.2,
-      "independentStudios": 59
-    },
-    {
-      "modality": "boxing",
-      "totalStudios": 127,
       "chainStudios": 32,
-      "chainPercentage": 25.2,
-      "independentStudios": 95
-    },
-    {
-      "modality": "aerial",
-      "totalStudios": 63,
-      "chainStudios": 14,
-      "chainPercentage": 22.2,
+      "chainPercentage": 39.5,
       "independentStudios": 49
     },
     {
-      "modality": "yoga",
-      "totalStudios": 241,
-      "chainStudios": 53,
-      "chainPercentage": 22,
-      "independentStudios": 188
+      "modality": "strength-training",
+      "totalStudios": 188,
+      "chainStudios": 72,
+      "chainPercentage": 38.3,
+      "independentStudios": 116
     },
     {
-      "modality": "running",
-      "totalStudios": 51,
-      "chainStudios": 11,
-      "chainPercentage": 21.6,
-      "independentStudios": 40
+      "modality": "pilates",
+      "totalStudios": 228,
+      "chainStudios": 86,
+      "chainPercentage": 37.7,
+      "independentStudios": 142
+    },
+    {
+      "modality": "low-impact-training",
+      "totalStudios": 57,
+      "chainStudios": 21,
+      "chainPercentage": 36.8,
+      "independentStudios": 36
+    },
+    {
+      "modality": "outdoors",
+      "totalStudios": 57,
+      "chainStudios": 14,
+      "chainPercentage": 24.6,
+      "independentStudios": 43
+    },
+    {
+      "modality": "boxing",
+      "totalStudios": 184,
+      "chainStudios": 45,
+      "chainPercentage": 24.5,
+      "independentStudios": 139
     },
     {
       "modality": "martial-arts",
-      "totalStudios": 295,
-      "chainStudios": 60,
-      "chainPercentage": 20.3,
-      "independentStudios": 235
+      "totalStudios": 390,
+      "chainStudios": 95,
+      "chainPercentage": 24.4,
+      "independentStudios": 295
     },
     {
-      "modality": "trampoline",
-      "totalStudios": 21,
-      "chainStudios": 4,
-      "chainPercentage": 19,
-      "independentStudios": 17
+      "modality": "yoga",
+      "totalStudios": 401,
+      "chainStudios": 96,
+      "chainPercentage": 23.9,
+      "independentStudios": 305
     },
     {
       "modality": "dance",
-      "totalStudios": 293,
-      "chainStudios": 52,
-      "chainPercentage": 17.7,
-      "independentStudios": 241
+      "totalStudios": 301,
+      "chainStudios": 50,
+      "chainPercentage": 16.6,
+      "independentStudios": 251
+    },
+    {
+      "modality": "running",
+      "totalStudios": 39,
+      "chainStudios": 6,
+      "chainPercentage": 15.4,
+      "independentStudios": 33
+    },
+    {
+      "modality": "stretching",
+      "totalStudios": 26,
+      "chainStudios": 4,
+      "chainPercentage": 15.4,
+      "independentStudios": 22
+    },
+    {
+      "modality": "aerial",
+      "totalStudios": 46,
+      "chainStudios": 7,
+      "chainPercentage": 15.2,
+      "independentStudios": 39
+    },
+    {
+      "modality": "trampoline",
+      "totalStudios": 19,
+      "chainStudios": 2,
+      "chainPercentage": 10.5,
+      "independentStudios": 17
     },
     {
       "modality": "personal-training",
-      "totalStudios": 20,
-      "chainStudios": 2,
-      "chainPercentage": 10,
-      "independentStudios": 18
+      "totalStudios": 5,
+      "chainStudios": 0,
+      "chainPercentage": 0,
+      "independentStudios": 5
     }
   ]
 }

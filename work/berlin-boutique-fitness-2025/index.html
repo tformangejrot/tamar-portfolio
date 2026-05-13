@@ -453,13 +453,13 @@
       <div class="section-label">The Growth Story</div>
       <h2 class="section-title">Evolution Over Time</h2>
       <p class="section-subtitle">
-        Boutique fitness studios opened by year. Dates are adjusted to account for domain registration typically preceding actual openings by ~2 months. The number of new studios opening has increased steadily since around 2006.
+        Boutique fitness studios opened by year. Dates are adjusted to account for domain registration typically preceding actual openings by ~2 months.
       </p>
     </div>
     <div class="card">
       <div class="card-header">
         <h3>Studios by Opening Year</h3>
-        <span id="year-chart-subtitle">1167 studios total · Each location counted separately</span>
+        <span id="year-chart-subtitle">— studios total · Each location counted separately</span>
       </div>
       <div class="year-chart-toggle" style="margin-bottom: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
         <button type="button" id="year-chart-mode-openings" class="year-chart-toggle-btn active" aria-pressed="true">Openings by year</button>
@@ -472,11 +472,12 @@
         Opening dates are estimated from location pages, domain registration, and other sources.
         Dates are adjusted to account for domain registration typically preceding actual studio openings by ~2 months.
         Multi-location studios count each location separately.
+        <strong>Note on 2014:</strong> The <code>.berlin</code> top-level domain launched on 17 February 2014, and many studios registered a <code>.berlin</code> address on that day. This inflates 2014 openings slightly — some of those studios predate 2014 but their domain registration date falls on launch day.
       </p>
     </div>
     <div class="card" style="margin-top: 32px;">
       <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
-        Berlin's boutique fitness scene has been growing steadily. Since the COVID dip in openings, boutique fitness has continued to thrive. These are openings of studios from our current data set, so there are studios that opened but aren't included and also studios that may have opened but have since closed. Nonetheless, the growth patterns provide insights into how the market is evolving.
+        Berlin's boutique fitness growth story is one of steady, moderate expansion rather than the explosive curves seen in cities like London or Paris. Studios have been opening consistently since the mid-2000s, with a noticeable acceleration in the early 2010s, a spike around 2014, and a clear COVID dip in 2020. Post-COVID recovery is visible but not dramatic — the market is growing, but at a measured pace that likely reflects both the saturation of a city with a deeply established gym culture and the fact that a meaningful share of studios have no dated digital footprint in our dataset. As with all date-based analyses, these are signals rather than a complete census.
       </p>
     </div>
   </section>
@@ -487,7 +488,7 @@
       <div class="section-label">What are people training for?</div>
       <h2 class="section-title">The Modality Landscape</h2>
       <p class="section-subtitle">
-        Distribution of boutique studios by primary modalities across Berlin. Strength training, pilates, hiit, and yoga dominate the industry.
+        Distribution of boutique studios by primary modalities across Berlin. Yoga, pilates, strength training, and boxing lead the market. Dance and martial arts are discussed separately below.
       </p>
     </div>
     <div class="card">
@@ -530,12 +531,12 @@
     </div>
     <div class="card" style="margin-top: 32px;">
       <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
-        Strength training, pilates, hiit, and yoga are the drivers of boutique fitness with over 400 studios, while all other modalities have less than half of that. This shows that overall, users crave a mix of intensity and recovery that these four modalities cover, while other exercises may be seen as more recreational. In the early years of boutique fitness (prior to 2011), there is still a fairly even spread of openings across modalities, but one can clearly observe the four top modalities rising to the top beginning in 2012. Yoga and pilates, which trended very similar for most of the life of the industry, have seen a split recently, with pilates booming (largely thanks to reformer) since 2019.
+        Yoga leads Berlin's boutique fitness market with over 400 studios, followed by pilates, strength training, and boxing. The early years of boutique fitness (prior to 2012) saw a fairly even spread of openings across modalities, but yoga and pilates have since pulled clearly ahead. Yoga and pilates tracked closely together for most of the industry's life but have diverged recently, with pilates booming — largely driven by reformer — since 2019.
       </p>
     </div>
     <div class="card" style="margin-top: 32px;">
       <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
-        Multi-modality studios are everywhere. Only <span class="stat-highlight">28% of studios</span> offer just one modality, while the majority (<span class="stat-highlight">72%</span>) offer multiple. But with more and more unique and hybrid concepts, even the idea of a single modality needs to be questioned. Rather, we are starting to see variations on multi-modality: classes fusing different exercises into one, flagship locations with open gym space, and of course studios offering a primary modality but filling extra space and time with complementary classes.
+        Multi-modality studios are everywhere. Only <span class="stat-highlight" id="single-mod-pct">—%</span> of studios offer just one modality, while the majority (<span class="stat-highlight" id="multi-mod-pct">—%</span>) offer multiple. But with more and more unique and hybrid concepts, even the idea of a single modality needs to be questioned. Rather, we are starting to see variations on multi-modality: classes fusing different exercises into one, flagship locations with open gym space, and of course studios offering a primary modality but filling extra space and time with complementary classes.
       </p>
     </div>
   </section>
@@ -577,8 +578,39 @@
     </div>
     <div class="card" style="margin-top: 32px;">
       <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
-        As in other markets, reformer pilates and low-impact training have seen the greatest recent growth, with <span class="stat-highlight">16% of reformer studios</span> and <span class="stat-highlight">15% of low-impact studios</span> opening in the past 16 months. Given the cost of reformer classes and the extreme density of new studios with relatively low differentiation, this trend will likely smooth out over coming years.
+        As in other markets, reformer pilates and stretching have seen the greatest recent growth, with <span class="stat-highlight" id="reformer-growth-pct">—% of reformer studios</span> and <span class="stat-highlight" id="stretching-growth-pct">—% of stretching studios</span> opening in the past 16 months. Given the cost of reformer classes and the extreme density of new studios with relatively low differentiation, this trend will likely smooth out over coming years.
       </p>
+    </div>
+  </section>
+
+  <!-- Dance & Martial Arts -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">A note on categorisation</div>
+      <h2 class="section-title">Dance &amp; Martial Arts</h2>
+      <p class="section-subtitle">
+        Berlin has a large number of dance and martial arts spaces — but including them wholesale in the boutique fitness analysis would be misleading.
+      </p>
+    </div>
+    <div class="card">
+      <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
+        Berlin's data contains <span class="stat-highlight" id="dma-total">—</span> studios whose primary activity is dance or martial arts. These span a wide spectrum: on one end, contemporary dance studios and combat fitness gyms that operate on a drop-in, package, or monthly membership model that is indistinguishable from mainstream boutique fitness; on the other, traditional schools — ballet academies, dojos, ballroom studios — that tend to cater heavily to children, operate on semester or annual enrolment, and have been running for decades.
+      </p>
+      <p class="section-content" style="margin: 24px 0 0; font-size: 16px; line-height: 1.8;">
+        Including these in the main modality charts would inflate the numbers significantly and distort the picture of what Berliners are actually doing in boutique fitness. Studios that offer dance or martial arts <em>alongside</em> yoga, pilates, strength training, or barre are included in the main analysis under those other categories. The <span class="stat-highlight" id="dma-pure">—</span> studios whose entire offering is dance and/or martial arts are shown here separately.
+      </p>
+      <div class="two-column" style="margin-top: 32px; gap: 16px;">
+        <div style="background: var(--bg-card); border-radius: 12px; padding: 24px; text-align: center;">
+          <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); font-family: var(--font-serif);" id="dma-dance-count">—</div>
+          <div style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-top: 6px;">Dance Studios</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Ballet, contemporary, salsa, pole, hip-hop, and more</div>
+        </div>
+        <div style="background: var(--bg-card); border-radius: 12px; padding: 24px; text-align: center;">
+          <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); font-family: var(--font-serif);" id="dma-ma-count">—</div>
+          <div style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-top: 6px;">Martial Arts Studios</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">BJJ, karate, taekwondo, krav maga, MMA, and more</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -595,7 +627,7 @@
     <div class="card">
       <div class="card-header">
         <h3>Studio Brands by Number of Locations</h3>
-        <span id="location-chart-subtitle">843 unique brands · 1167 total locations</span>
+        <span id="location-chart-subtitle">— unique brands · — total locations</span>
       </div>
       <div class="chart-container">
         <canvas id="locationChart"></canvas>
@@ -623,7 +655,7 @@
     </div>
     <div class="card" style="margin-top: 32px;">
       <p class="section-content" style="margin: 0; font-size: 16px; line-height: 1.8;">
-        Despite being a relatively mature boutique fitness market, the majority of studios (<span class="stat-highlight">60.3%</span>) do not belong to a chain. That being said, independence varies significantly by modality. Running and cycling show the highest chain percentages, with strong brands in these categories and likely a greater need for operational efficiency than novelty. Martial arts and boxing remain more independent, with lower chain percentages, indicating that these modalities are still idea-driven, experiential, and founder-led.
+        Despite being a relatively mature boutique fitness market, the majority of studios (<span class="stat-highlight" id="independent-pct">—</span>) do not belong to a chain. That being said, independence varies significantly by modality. Running and cycling show the highest chain percentages, with strong brands in these categories and likely a greater need for operational efficiency than novelty. Boxing remains more independent, indicating it is still idea-driven, experiential, and founder-led.
       </p>
     </div>
   </section>
@@ -768,7 +800,8 @@
           chainsData,
           modalityGrowthData,
           chainPercentageData,
-          neighborhoodGrowthData
+          neighborhoodGrowthData,
+          danceMartialArtsData
         ] = await Promise.all([
           fetch(`${basePath}modality_mix.json`).then(r => r.json()),
           fetch(`${basePath}recent_new_modalities.json`).then(r => r.json()),
@@ -788,6 +821,10 @@
             } catch {
               return [];
             }
+          }),
+          fetch(`${basePath}dance_martial_arts.json`).then(async r => {
+            if (!r.ok) return null;
+            try { return await r.json(); } catch { return null; }
           })
         ]);
 
@@ -802,10 +839,24 @@
         window.modalityGrowthData = modalityGrowthData;
         window.chainPercentageData = chainPercentageData;
         window.neighborhoodGrowthData = neighborhoodGrowthData;
+        window.danceMartialArtsData = danceMartialArtsData;
         window.totalNewStudios = statsData.totalNewStudios || 0;
 
         // Update summary stat cards
         updateSummaryStats();
+
+        // Populate dance & martial arts section
+        if (danceMartialArtsData) {
+          const dmaTotal = document.getElementById('dma-total');
+          const dmaPure = document.getElementById('dma-pure');
+          const dmaDance = document.getElementById('dma-dance-count');
+          const dmaMa = document.getElementById('dma-ma-count');
+          const total = (danceMartialArtsData.danceOnly || 0) + (danceMartialArtsData.martialArtsOnly || 0) + (danceMartialArtsData.both || 0);
+          if (dmaTotal) dmaTotal.textContent = (danceMartialArtsData.total || total).toLocaleString();
+          if (dmaPure) dmaPure.textContent = (danceMartialArtsData.total || total).toLocaleString();
+          if (dmaDance) dmaDance.textContent = ((danceMartialArtsData.danceOnly || 0) + (danceMartialArtsData.both || 0)).toLocaleString();
+          if (dmaMa) dmaMa.textContent = ((danceMartialArtsData.martialArtsOnly || 0) + (danceMartialArtsData.both || 0)).toLocaleString();
+        }
 
         // Initialize all charts after data is loaded
         initializeAllCharts();
@@ -1019,6 +1070,7 @@
 
       const totalStudios = cumulativeCounts.length ? cumulativeCounts[cumulativeCounts.length - 1] : 0;
       const subtitleEl = document.getElementById('year-chart-subtitle');
+      if (subtitleEl) subtitleEl.textContent = `${totalStudios} studios with dates · Each location counted separately`;
       const btnOpenings = document.getElementById('year-chart-mode-openings');
       const btnCumulative = document.getElementById('year-chart-mode-cumulative');
 
@@ -1117,6 +1169,15 @@
 
       const locationLabels = locationData.map(d => d.locations === 1 ? '1 location' : `${d.locations} locations`);
       const locationBrands = locationData.map(d => d.studioBrands);
+
+      // Update subtitle with real counts
+      const locSubEl = document.getElementById('location-chart-subtitle');
+      if (locSubEl) {
+        const stats = window.stats || {};
+        const totalLocs = stats.totalBoutiqueStudios || locationData.reduce((s, d) => s + d.studioBrands * d.locations, 0);
+        const brands = stats.totalBrands || locationData.reduce((s, d) => s + d.studioBrands, 0);
+        locSubEl.textContent = `${brands.toLocaleString()} unique brands · ${totalLocs.toLocaleString()} total locations`;
+      }
 
       const locationCtx = document.getElementById('locationChart').getContext('2d');
       const locationGradient = locationCtx.createLinearGradient(0, 0, 600, 0);
@@ -1637,6 +1698,46 @@
           const modalityName = topModality.modality.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
           topModalityLabelEl.textContent = `Top Modality: ${modalityName}`;
         }
+      }
+
+      // Independent studios %
+      const indepEl = document.getElementById('independent-pct');
+      if (indepEl) {
+        const chainData = window.chainPercentageData || {};
+        const overall = chainData.overall || {};
+        const chainPct = overall.chainPercentage || 0;
+        indepEl.textContent = `${(100 - chainPct).toFixed(1)}%`;
+      }
+
+      // Single / multi modality %
+      const singleEl = document.getElementById('single-mod-pct');
+      const multiEl  = document.getElementById('multi-mod-pct');
+      if (singleEl) singleEl.textContent = `${stats.singleModalityPct || '—'}%`;
+      if (multiEl)  multiEl.textContent  = `${stats.multiModalityPct  || '—'}%`;
+
+      // Year chart subtitle (studios with dates)
+      const yearSubEl = document.getElementById('year-chart-subtitle');
+      if (yearSubEl && stats.studiosWithDates) {
+        yearSubEl.textContent = `${stats.studiosWithDates.toLocaleString()} studios with dates · Each location counted separately`;
+      }
+
+      // Location chart subtitle (brands + total locations)
+      const locSubEl = document.getElementById('location-chart-subtitle');
+      if (locSubEl && stats.totalBrands) {
+        locSubEl.textContent = `${stats.totalBrands.toLocaleString()} unique brands · ${(stats.totalBoutiqueStudios || 0).toLocaleString()} total locations`;
+      }
+
+      // Recent growth % for reformer and stretching
+      const growthData = window.growthData || [];
+      const reformerEl    = document.getElementById('reformer-growth-pct');
+      const stretchingEl  = document.getElementById('stretching-growth-pct');
+      if (reformerEl) {
+        const r = growthData.find(m => m.modality === 'reformer-pilates');
+        if (r) reformerEl.textContent = `${r.pctOfModality}% of reformer studios`;
+      }
+      if (stretchingEl) {
+        const s2 = growthData.find(m => m.modality === 'stretching');
+        if (s2) stretchingEl.textContent = `${s2.pctOfModality}% of stretching studios`;
       }
     }
 
