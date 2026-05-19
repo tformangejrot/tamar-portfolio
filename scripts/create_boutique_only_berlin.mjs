@@ -344,6 +344,7 @@ const NAME_EXCLUSIONS = [
 
   // ── TRAVELLING INSTRUCTOR / NO FIXED STUDIO ──────────────────────────────────
   /^krav maga department/i, // itinerant instructor renting space at other venues ("bei X")
+  /^beat81\s*-\s*office$/i, // corporate office listing, not a studio
 
   // ── ONLINE / VIRTUAL / MEETUP (no physical studio) ──────────────────────────
   /^element yoga tv/i,      // online yoga streaming service (elementyoga.vhx.tv)

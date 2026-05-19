@@ -1,7 +1,7 @@
 {
   "overall": {
-    "totalStudios": 1358,
-    "chainStudios": 294,
+    "totalStudios": 1357,
+    "chainStudios": 293,
     "chainPercentage": 21.6,
     "independentStudios": 1064
   },
@@ -50,9 +50,9 @@
     },
     {
       "modality": "strength-training",
-      "totalStudios": 156,
-      "chainStudios": 49,
-      "chainPercentage": 31.4,
+      "totalStudios": 155,
+      "chainStudios": 48,
+      "chainPercentage": 31,
       "independentStudios": 107
     },
     {
