@@ -1,11 +1,11 @@
 {
-  "totalBoutiqueStudios": 1372,
-  "studiosWithDates": 937,
-  "pctOpenedRecent": 5.9,
+  "totalBoutiqueStudios": 1358,
+  "studiosWithDates": 928,
+  "pctOpenedRecent": 6,
   "totalModalityCategories": 15,
-  "pilatesPct": "16.6",
+  "pilatesPct": "8.9",
   "totalNewStudios": 81,
-  "singleModalityPct": 60,
-  "multiModalityPct": 40,
-  "totalBrands": 1170
+  "singleModalityPct": 67,
+  "multiModalityPct": 33,
+  "totalBrands": 1169
 }

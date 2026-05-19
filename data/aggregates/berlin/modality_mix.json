@@ -1,77 +1,77 @@
 [
   {
     "modality": "yoga",
-    "count": 401,
-    "pct": "29.2"
-  },
-  {
-    "modality": "pilates",
-    "count": 228,
-    "pct": "16.6"
+    "count": 240,
+    "pct": "17.7"
   },
   {
     "modality": "strength-training",
-    "count": 188,
-    "pct": "13.7"
+    "count": 156,
+    "pct": "11.5"
   },
   {
     "modality": "boxing",
-    "count": 184,
-    "pct": "13.4"
+    "count": 122,
+    "pct": "9.0"
   },
   {
-    "modality": "barre",
-    "count": 89,
-    "pct": "6.5"
-  },
-  {
-    "modality": "reformer-pilates",
-    "count": 81,
-    "pct": "5.9"
+    "modality": "pilates",
+    "count": 121,
+    "pct": "8.9"
   },
   {
     "modality": "low-impact-training",
-    "count": 57,
-    "pct": "4.2"
-  },
-  {
-    "modality": "outdoors",
-    "count": 57,
-    "pct": "4.2"
-  },
-  {
-    "modality": "electrical-muscle-stimulation",
-    "count": 57,
-    "pct": "4.2"
-  },
-  {
-    "modality": "aerial",
-    "count": 46,
-    "pct": "3.4"
-  },
-  {
-    "modality": "cycling",
-    "count": 40,
-    "pct": "2.9"
-  },
-  {
-    "modality": "running",
-    "count": 39,
-    "pct": "2.8"
+    "count": 81,
+    "pct": "6.0"
   },
   {
     "modality": "stretching",
-    "count": 26,
-    "pct": "1.9"
+    "count": 70,
+    "pct": "5.2"
+  },
+  {
+    "modality": "reformer-pilates",
+    "count": 68,
+    "pct": "5.0"
+  },
+  {
+    "modality": "aerial",
+    "count": 61,
+    "pct": "4.5"
+  },
+  {
+    "modality": "electrical-muscle-stimulation",
+    "count": 56,
+    "pct": "4.1"
+  },
+  {
+    "modality": "barre",
+    "count": 54,
+    "pct": "4.0"
+  },
+  {
+    "modality": "outdoors",
+    "count": 50,
+    "pct": "3.7"
+  },
+  {
+    "modality": "running",
+    "count": 47,
+    "pct": "3.5"
+  },
+  {
+    "modality": "cycling",
+    "count": 23,
+    "pct": "1.7"
   },
   {
     "modality": "trampoline",
-    "count": 19,
-    "pct": "1.4"
+    "count": 21,
+    "pct": "1.5"
   },
   {
     "modality": "personal-training",
-    "count": 5,
-    "pct": "0.4"
+    "count": 19,
+    "pct": "1.4"
   }
 ]

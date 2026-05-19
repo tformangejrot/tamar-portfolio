@@ -342,6 +342,9 @@ const NAME_EXCLUSIONS = [
   /^kinderyoga berlin/i,    // children's yoga service (not a studio)
   /^tobeins?el\b/i,
 
+  // ── TRAVELLING INSTRUCTOR / NO FIXED STUDIO ──────────────────────────────────
+  /^krav maga department/i, // itinerant instructor renting space at other venues ("bei X")
+
   // ── ONLINE / VIRTUAL / MEETUP (no physical studio) ──────────────────────────
   /^element yoga tv/i,      // online yoga streaming service (elementyoga.vhx.tv)
   /^international salsa meetup/i, // Meetup.com group, not a physical studio

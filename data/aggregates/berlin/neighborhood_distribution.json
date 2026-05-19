@@ -1,7 +1,7 @@
 [
   {
     "neighborhood": "Kreuzberg",
-    "count": 188,
+    "count": 186,
     "center": [
       52.499,
       13.403
@@ -9,7 +9,7 @@
   },
   {
     "neighborhood": "Prenzlauer Berg",
-    "count": 140,
+    "count": 139,
     "center": [
       52.538,
       13.42
@@ -25,7 +25,7 @@
   },
   {
     "neighborhood": "Friedrichshain",
-    "count": 88,
+    "count": 86,
     "center": [
       52.516,
       13.454
@@ -41,7 +41,7 @@
   },
   {
     "neighborhood": "Charlottenburg",
-    "count": 75,
+    "count": 73,
     "center": [
       52.516,
       13.304
@@ -57,7 +57,7 @@
   },
   {
     "neighborhood": "Steglitz",
-    "count": 68,
+    "count": 66,
     "center": [
       52.459,
       13.323
@@ -65,7 +65,7 @@
   },
   {
     "neighborhood": "Neukoelln",
-    "count": 53,
+    "count": 52,
     "center": [
       52.481,
       13.435
@@ -73,7 +73,7 @@
   },
   {
     "neighborhood": "Wedding",
-    "count": 52,
+    "count": 51,
     "center": [
       52.551,
       13.362
@@ -97,7 +97,7 @@
   },
   {
     "neighborhood": "Pankow",
-    "count": 32,
+    "count": 31,
     "center": [
       52.569,
       13.402
@@ -128,19 +128,19 @@
     ]
   },
   {
-    "neighborhood": "Marzahn",
-    "count": 22,
-    "center": [
-      52.539,
-      13.563
-    ]
-  },
-  {
     "neighborhood": "Zehlendorf",
     "count": 21,
     "center": [
       52.431,
       13.258
+    ]
+  },
+  {
+    "neighborhood": "Marzahn",
+    "count": 21,
+    "center": [
+      52.539,
+      13.563
     ]
   },
   {

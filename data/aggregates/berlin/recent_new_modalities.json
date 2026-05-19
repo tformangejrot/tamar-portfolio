@@ -1,62 +1,62 @@
 [
   {
-    "modality": "yoga",
-    "count": 27,
-    "pctOfAllNew": 33.3,
-    "pctOfModality": 6.7
-  },
-  {
-    "modality": "pilates",
-    "count": 24,
-    "pctOfAllNew": 29.6,
-    "pctOfModality": 10.5
-  },
-  {
     "modality": "strength-training",
-    "count": 18,
-    "pctOfAllNew": 22.2,
-    "pctOfModality": 9.6
+    "count": 22,
+    "pctOfAllNew": 27.2,
+    "pctOfModality": 14.1
   },
   {
     "modality": "boxing",
-    "count": 17,
-    "pctOfAllNew": 21,
-    "pctOfModality": 9.2
+    "count": 16,
+    "pctOfAllNew": 19.8,
+    "pctOfModality": 13.1
   },
   {
-    "modality": "reformer-pilates",
-    "count": 9,
-    "pctOfAllNew": 11.1,
-    "pctOfModality": 11.1
+    "modality": "yoga",
+    "count": 14,
+    "pctOfAllNew": 17.3,
+    "pctOfModality": 5.8
+  },
+  {
+    "modality": "pilates",
+    "count": 10,
+    "pctOfAllNew": 12.3,
+    "pctOfModality": 8.3
   },
   {
     "modality": "aerial",
+    "count": 7,
+    "pctOfAllNew": 8.6,
+    "pctOfModality": 11.5
+  },
+  {
+    "modality": "low-impact-training",
+    "count": 6,
+    "pctOfAllNew": 7.4,
+    "pctOfModality": 7.4
+  },
+  {
+    "modality": "reformer-pilates",
     "count": 5,
     "pctOfAllNew": 6.2,
-    "pctOfModality": 10.9
+    "pctOfModality": 7.4
   },
   {
     "modality": "stretching",
-    "count": 5,
-    "pctOfAllNew": 6.2,
-    "pctOfModality": 19.2
-  },
-  {
-    "modality": "barre",
     "count": 4,
     "pctOfAllNew": 4.9,
-    "pctOfModality": 4.5
+    "pctOfModality": 5.7
   },
   {
-    "modality": "cycling",
+    "modality": "running",
     "count": 4,
     "pctOfAllNew": 4.9,
-    "pctOfModality": 10
+    "pctOfModality": 8.5
   },
   {
-    "modality": "outdoors",
+    "modality": "personal-training",
     "count": 3,
     "pctOfAllNew": 3.7,
-    "pctOfModality": 5.3
+    "pctOfModality": 15.8
   }
 ]
