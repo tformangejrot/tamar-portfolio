@@ -1,77 +1,77 @@
 [
   {
     "modality": "yoga",
-    "count": 240,
-    "pct": "17.7"
-  },
-  {
-    "modality": "strength-training",
-    "count": 155,
-    "pct": "11.4"
-  },
-  {
-    "modality": "boxing",
-    "count": 122,
-    "pct": "9.0"
+    "count": 401,
+    "pct": "29.6"
   },
   {
     "modality": "pilates",
-    "count": 121,
-    "pct": "8.9"
+    "count": 228,
+    "pct": "16.8"
   },
   {
-    "modality": "low-impact-training",
+    "modality": "strength-training",
+    "count": 187,
+    "pct": "13.8"
+  },
+  {
+    "modality": "boxing",
+    "count": 184,
+    "pct": "13.6"
+  },
+  {
+    "modality": "barre",
+    "count": 89,
+    "pct": "6.6"
+  },
+  {
+    "modality": "reformer-pilates",
     "count": 81,
     "pct": "6.0"
   },
   {
-    "modality": "stretching",
-    "count": 70,
-    "pct": "5.2"
-  },
-  {
-    "modality": "reformer-pilates",
-    "count": 68,
-    "pct": "5.0"
-  },
-  {
-    "modality": "aerial",
-    "count": 61,
-    "pct": "4.5"
-  },
-  {
-    "modality": "electrical-muscle-stimulation",
-    "count": 56,
-    "pct": "4.1"
-  },
-  {
-    "modality": "barre",
-    "count": 54,
-    "pct": "4.0"
+    "modality": "low-impact-training",
+    "count": 57,
+    "pct": "4.2"
   },
   {
     "modality": "outdoors",
-    "count": 50,
-    "pct": "3.7"
+    "count": 57,
+    "pct": "4.2"
+  },
+  {
+    "modality": "electrical-muscle-stimulation",
+    "count": 57,
+    "pct": "4.2"
+  },
+  {
+    "modality": "aerial",
+    "count": 46,
+    "pct": "3.4"
   },
   {
     "modality": "running",
-    "count": 47,
-    "pct": "3.5"
+    "count": 39,
+    "pct": "2.9"
   },
   {
     "modality": "cycling",
-    "count": 23,
-    "pct": "1.7"
+    "count": 39,
+    "pct": "2.9"
+  },
+  {
+    "modality": "stretching",
+    "count": 26,
+    "pct": "1.9"
   },
   {
     "modality": "trampoline",
-    "count": 21,
-    "pct": "1.5"
+    "count": 19,
+    "pct": "1.4"
   },
   {
     "modality": "personal-training",
-    "count": 19,
-    "pct": "1.4"
+    "count": 5,
+    "pct": "0.4"
   }
 ]

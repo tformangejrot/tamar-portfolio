@@ -1,8 +1,8 @@
 {
-  "total": 461,
-  "danceOnly": 253,
-  "martialArtsOnly": 208,
-  "both": 0,
-  "mixedWithOtherModalities": 106,
+  "total": 351,
+  "danceOnly": 186,
+  "martialArtsOnly": 157,
+  "both": 8,
+  "mixedWithOtherModalities": 303,
   "note": "Studios whose ONLY categories are dance and/or martial-arts. Studios with dance/MA plus yoga/pilates/etc. are counted in the main analysis under those other modalities."
 }
